@@ -1,0 +1,198 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#7B43A0;">Approximation and Estimation - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="AE_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br><br>
+	{% endif %}
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:5px;vertical-align:top;">
+			<div>A floor area of 9 m<sup>2</sup> was laid with 83 ceramic tiles and 6 marble tiles. The ceramic tiles covered a total area of 5.2 m<sup>2</sup> while the marble tiles covered the rest of the area. Find the area of each ceramic tile and each marble tile, correct to 4 decimal places.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div>Area of each ceramic tile</div>
+			<div>= &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="AETT1_1_1_answer" value='{{AETT1_1_1_answer}}' readonly style="background-color:#DFDFDF;width:50px;"> m<sup>2</sup>&nbsp;
+				{% if AETT1_1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="AETT1_1_1_answer" value='{{AETT1_1_1_answer}}' style="width:50px;"> m<sup>2</sup> <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div>Area of each marble tile</div>
+			<div>= &nbsp; 
+			{% if test_status == 'Completed' %}
+				<input id="AETT1_1_2_answer" value='{{AETT1_1_2_answer}}' readonly style="background-color:#DFDFDF;width:50px;"> m<sup>2</sup>&nbsp;
+				{% if AETT1_1_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="AETT1_1_2_answer" value='{{AETT1_1_2_answer}}' style="width:50px;"> m<sup>2</sup> <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">The annual number of visitors at a National Park in Arizona in 2009 was approximately 3.2 million. This value has been rounded to the nearest 100 000. Find the maximum and minimum possible number of visitors in 2009.</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;">Maximum Visitors:</div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				 <input id="AETT1_2_1_answer" value='{{AETT1_2_1_answer}}' readonly style="background-color:#DFDFDF;width:60px;">&nbsp;
+				{% if AETT1_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 2)</font>					
+				{% endif %}
+
+			{% else %}
+				 <input id="AETT1_2_1_answer" value='{{AETT1_2_1_answer}}' style="width:60px;"><font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<br>	
+			<div style="display:inline-block;margin-top:10px;">Minimum Visitors:</div>
+			<div style="display:inline-block;margin-top:10px;"> 
+			{% if test_status == 'Completed' %}
+				 <input id="AETT1_2_2_answer" value='{{AETT1_2_2_answer}}' readonly style="background-color:#DFDFDF;width:60px;">&nbsp;
+				{% if AETT1_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore"  style="margin-left:10px;">(Mark: 2 / 2)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore"  style="margin-left:10px;">(Mark: 0 / 2)</font>					
+				{% endif %}
+
+			{% else %}
+				 <input id="AETT1_2_2_answer" value='{{AETT1_2_2_answer}}' style="width:60px;"><font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+				
+		</div>
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#AE_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#AE_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Approximation-Estimation');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#AETT1_1_1_answer").change(function()
+	{
+		question_id = "AETT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "AETT1_1_1_answer";
+		entered_answer = $("#AETT1_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 2;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("#AETT1_1_2_answer").change(function()
+		{
+			question_id = "AETT1_1";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_1_2_answer";
+			entered_answer = $("#AETT1_1_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#AETT1_2_1_answer").change(function()
+		{
+			question_id = "AETT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_2_1_answer";
+			entered_answer = $("#AETT1_2_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#AETT1_2_2_answer").change(function()
+		{
+			question_id = "AETT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_2_2_answer";
+			entered_answer = $("#AETT1_2_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

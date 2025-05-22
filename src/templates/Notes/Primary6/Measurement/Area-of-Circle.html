@@ -1,0 +1,202 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyNumGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;<span style="text-decoration:line-through">{{N}}</span><sup style="color:red">{{S}}</sup></td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyDenGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><sub style="color:red">{{S}}</sub><span style="text-decoration:line-through">{{D}}</span></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyNumDenGen(N,P,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td><sub style="color:red">{{P}}</sub><span style="text-decoration:line-through">{{N}}</span></td>
+	</tr>
+	<tr style='text-align: center;'>
+		<td><sub style="color:red">{{S}}</sub><span style="text-decoration:line-through">{{D}}</span></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Measuring Area of Circle with Examples | Home Campus</title>
+<meta name="description" content="Understanding Area of Circle" />
+<meta name="keywords" content='formula of area of circle, formula of area of semicircle, formula of area of quadrant, circle area problems, area problems, homework help,area of circle, formula diameter of circle, radius, diameter, Primary 6, "grade 6 math", "Singapore math", "math for kids", elementary math, math tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+
+<h2 class="learn-heading">Understanding Area of Circle with Examples</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Area Questions</a></div>
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>What is Area of Circle?</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<strong>Area of a cirlce &nbsp; = &nbsp; &pi; &nbsp; &times; &nbsp; r<sup>2</sup></strong><br><br>
+				The space occupied by a circle in 2-dimensional space is the area of a circle. For derivation of the formula see the section below.<br><br>
+				Use this area calculator for more formulas and ready answers.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Calculator-Area-of-Circle-Grade-6-Elementary-Math">Area Calculator</a></div>
+	</div>
+</div>
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>Derivation of the formula for area of a circle.</h4>
+		</div>
+		<div class="learn-set__answer">			
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_1.png" alt="area of circle" title="area of circle" />
+				Trace a circular shape on paper and cut it along the edge. Fold it in half, then fold it 3 more times so you have 16 folding lines meeting at the centre like below.<br /><br />
+			</div>
+			<div class="col-10 col-off-1">
+				Cut the circle along the folding lines to get 16 slices (sectors) and arrange them as below.<br /><br />
+				<img src="/images/notes/P6_area_of_circle_2.png" alt="area of circle" title="area of circle" />
+			</div>
+			<div class="col-10 col-off-1">
+				The circle is roughly arranged into a rectangle so their areas are now the same.<br /><br />
+				Area of the circle = Area of the rectangle<br>
+				= Length &times; Breadth<br>
+				= &pi; &times; Radius &times; Radius
+			</div>
+			<div class="col-5 col-off-1 hint-box">
+				Area of Circle = &pi; &times; Radius &times; Radius
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Calculator-Area-of-Circle-Grade-6-Elementary-Math">Area Calculator</a></div>
+	</div>
+</div>	
+	
+<h2 class="learn-heading">Area of a Circle - Solved Examples</h2>
+	
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. What is the area of a circular field of radius 49 m? </h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_problem_1.png" alt="find area of circle" title="find area of circle" /><br>
+				Area&nbsp; =&nbsp; {{ frSimplifyDenGen(22,7,1) }} &nbsp;&times;&nbsp; <del>49</del><sup><font color=red>7</font></sup> &times; 49<br />
+				<b>= &nbsp;7546 m<sup>2</sup></b>				
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. The diameter of a circular frisbee is 24 cm. Find its area. Give your answer in terms of &pi;. </h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_problem_2.png" alt="find area of circle" title="find area of circle" /><br>
+					Diameter&nbsp; = &nbsp;24 cm<br>
+					Radius&nbsp; = &nbsp;24 &divide; 2<br>
+					= &nbsp;12 cm<br>
+					Area&nbsp; = &nbsp;&pi; &times; 12 &times; 12<br>
+					= &nbsp;144 &pi; cm<sup>2</sup></b><br>		
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. The diameter of a semicircle is 5 cm. What is its area? </h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_problem_3.png" alt="find area of circle" title="find area of circle" /><br>
+				Radius&nbsp; = &nbsp;5 cm &divide; 2<br>
+				= &nbsp;2.5 cm<br><br>
+				Area of a semicircle&nbsp; = &nbsp;Half of the area of the circle<br>
+				= &nbsp;{{ frGen(1,2) }}&times; 3.14 &times; 2.5 &times; 2.5<br>
+				= &nbsp;<b>9.81 cm<sup>2</sup></b><br>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+      
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. Find the area of a quadrant whose radius is 7 m. </h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_problem_4.png" alt="find area of quadrant" title="find area of quadrant" /><br>
+				Area of a quadrant&nbsp; = &nbsp;A quarter of the area of the circle<br>
+				= &nbsp;{{ frSimplifyDenGen(1,4,2) }}&nbsp;&times;&nbsp;{{ frSimplifyNumDenGen(22,11,7,1) }}&nbsp;&times;&nbsp;<del>7</del><sup><font color=red>1</font></sup>&nbsp;&times;&nbsp;7<br>
+				= &nbsp;38.5 m<sup>2</sup></b>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. Find the area of the fan below made of 4 identical quadrants and a circle. </h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_of_circle_problem_5.png" alt="find area of figure" title="find area of figure" /><br>
+				Area of the middle circle&nbsp; = &nbsp;3.14 &times; 6 &times; 6<br>
+				= &nbsp;<b>113.04 cm<sup>2</sup></b><br>
+				4 quadrants of radius 12 cm together make 1 circle of radius 12 cm.<br /><br>
+				Area of 4 quadrants&nbsp; = &nbsp;Area of 1 circle<br>
+				= &nbsp;3.14 &times; 12 &times; 12<br>
+				= &nbsp;<b>452.16 cm<sup>2</sup></b><br><br>
+				Area of fan&nbsp; = &nbsp;113.04 + 452.16<br>
+				= &nbsp;<b>565.2 cm<sup>2</sup></b>						
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Area">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula to calculate area of a circle?","acceptedAnswer":{"@type":"Answer","text":"Formula for the area of a circle depends on what is given to you.<br><br>\n1) Given: Diameter of a circle<br><br>\nThen, Area  =  &pi;  &times; (Diameter/2)<sup>2</sup><br><br>\n2) Given: Radius of a circle<br><br>\nThen, Area  = &pi; &times; (Radius)<sup>2</sup><br><br>\n3) Given: Circumference of a circle<br><br>\nThen, Area  =  (Circumference)<sup>2</sup>/(&pi; &times; 4)<br><br>"}},{"@type":"Question","name":"What is the area of a circle of circumference 32 cm?","acceptedAnswer":{"@type":"Answer","text":"Area  =  (Circumference)<sup>2</sup>/(&pi; &times; 4)<br><br>\n= (32)<sup>2</sup>/(4*3.14)<br><br>\n= 81.49 cm<sup>2</sup><br><br>\n\nAlternatively,<br><br>\nFind the radius first,<br><br>\nCircumference = 2 &times; &pi; &times; radius<br><br>\nradius = (Circumference)/(2 &times; &pi;)<br><br>\n= 32/(2 &times; 3.14)<br><br>\nradius = 5.10 cm<br><br>\nArea =  &pi; &times; radius<sup>2</sup><br><br>\n= 3.14 &times; 5.10 &times; 5.10<br><br>\nArea = 81.67 cm"}},{"@type":"Question","name":"What is the area of a circle of radius 2 cm?","acceptedAnswer":{"@type":"Answer","text":"Area = &pi; &times; radius<sup>2</sup><br><br>\n= 3.14 &times; 2 &times; 2<br><br>\nArea = 12.57 cm<br><br>\n\nFun Fact: Area and Circumference are equal for a circle of radius 2 cm."}},{"@type":"Question","name":"What is the area of a circle of diameter 8 cm?","acceptedAnswer":{"@type":"Answer","text":"Area  =  &pi;  &times; (Diameter/2)<sup>2</sup><br><br>\n= 3.14 &times; 8<br><br>\nCircumference = 50.27 cm"}}]}</script>
+
+{% endblock %}

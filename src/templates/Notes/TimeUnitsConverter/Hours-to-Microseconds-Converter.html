@@ -1,0 +1,188 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Microseconds Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to Microseconds">
+<meta name="description" content="Converter Hours to Microseconds" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Microseconds?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Convert Hours to Microseconds:</h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToMicroseconds" onclick="ConvertToMicroseconds()">Convert To Microseconds</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="MicrosecondsAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			<h4><strong>1 hour &nbsp;=&nbsp; 3,600,000,000 or 3.6 &times; 10<sup>9</sup> microseconds.</strong>
+				<br><br>To convert hours to  microseconds simply multiply the hours by 3600000000 to get microseconds.
+				<br><br>1 hour &nbsp;=&nbsp; 60 minutes
+				<br><br>1 minute &nbsp;=&nbsp; 60 seconds
+				<br><br>1 second &nbsp;=&nbsp; 1000 milliseconds
+				<br><br>1 millisecond &nbsp;=&nbsp; 1000 microseconds
+				<br><br>So, 1 hour &nbsp;=&nbsp; 60 &nbsp;&times;&nbsp; 60 &nbsp;&times;&nbsp; 1000 &nbsp;&times;&nbsp; 1000 &nbsp;=&nbsp; 3600000000 microseconds				  
+			</h4>
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 2 hours to microseconds.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiply 2 by 3600000000
+				<br><br>Total microseconds in 2 hours &nbsp;=&nbsp; 2 &nbsp;&times;&nbsp; 3600000000 &nbsp;=&nbsp; 7.2 &times; 10<sup>9</sup>
+				<br><br>Hence, there are <strong>7.2 &times; 10<sup>9</sup> microseconds in 2 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 0.00000008 hours to microseconds</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Multiply 0.00000008 by 3600000000
+				<br><br>Total microseconds in 0.00000008 hours &nbsp;=&nbsp; 0.00000008 &nbsp;&times;&nbsp; 3600000000 &nbsp;=&nbsp; 288
+				<br><br>Hence, there are <strong>288 microseconds in 0.00000008 hours.</strong>
+			</div>
+		</div>							
+
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliseconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times;10<sup>-5</sup> decade<br><br>
+				1.1416 &times;10<sup>-6</sup> century<br><br>
+				1.1416 &times;10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+
+<!-- Hour Microseconds Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Microseconds Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Microseconds Chart -->
+
+
+<script>
+
+function ConvertToMicroseconds() {
+	var hours = document.getElementById("hour").value;
+	var microseconds = hours*3600000000;
+	document.getElementById("MicrosecondsAnswer").innerHTML = "There are "+microseconds+" microseconds in "+hours+" hours."
+}
+
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 36000000000 microseconds<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*36000000000 + ' microseconds<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000000 + ' microseconds<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000000 + ' microseconds<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000000 + ' microseconds<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+
+</script>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many microseconds are there in an hour?","acceptedAnswer":{"@type":"Answer","text":"An hour has 3600000000 microseconds."}},{"@type":"Question","name":"How to convert hours to microseconds?","acceptedAnswer":{"@type":"Answer","text":"Multiply hours by 3600000000 to convert it to microseconds."}}]}</script>
+
+{% endblock %}

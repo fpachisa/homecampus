@@ -1,0 +1,105 @@
+{% extends 'PracticePageFractionSkeleton.html' %}
+   
+   {% block content%}
+
+	<table class="FractionsTable" style="color: #2B7657">
+		<tr>
+			<td valign='middle'>
+    			<input type="radio" name="answer" value='{{value1}}'
+    			{% if answer_submitted == value1%}} 
+    				checked="checked"
+    			{%endif%}
+    			/>
+    		</td>
+    		{% if answerM1 and answerM1 != '0' %}
+    		<td >
+    			{{answerM1}}
+    		</td>
+    		{% endif %}
+    		{% if answerN1 != 0 %}
+			<td >
+				{% if answerD1 != 1 and answerD1 != '1' %}
+				   <u>{{'&nbsp;'|safe*(answerD1|length)//2}}{{answerN1}}{{'&nbsp;'|safe*(answerD1|length)//2}}</u><br>{{'&nbsp;'|safe*(answerN1|length)//2}}{{answerD1}}
+				{% else %}
+				   {{answerN1}}
+				{% endif %}
+			</td>
+			{% endif %}
+		</tr>
+	</table>
+	<table class="FractionsTable" style="color: #2B7657">
+		<tr>
+			<td valign='middle'>
+    			<input type="radio" name="answer" value='{{value2}}'
+    			{% if answer_submitted == value2%}} 
+    				checked="checked"
+    			{%endif%}    			
+    			/>
+    		</td>
+    		{% if answerM2  and answerM2 != '0' %}
+    		<td >
+    			{{answerM2}}
+    		</td>
+    		{% endif %}
+    		{% if answerN2 != 0 %}
+			<td >
+				{% if answerD2 != 1 and answerD2 != '1' %}
+				   <u>{{'&nbsp;'|safe*(answerD2|length)//2}}{{answerN2}}{{'&nbsp;'|safe*(answerD2|length)//2}}</u><br>{{'&nbsp;'|safe*(answerN2|length)//2}}{{answerD2}}
+				{% else %}
+				   {{answerN2}}
+				{% endif %}
+			</td>
+			{% endif %}
+		</tr>
+	</table>
+	<table class="FractionsTable" style="color: #2B7657">
+		<tr>
+			<td>
+    			<input type="radio" name="answer" value='{{value3}}'
+    			{% if answer_submitted == value3%}} 
+    				checked="checked"
+    			{%endif%}    			
+    			/>
+    		</td>
+    		{% if answerM3  and answerM3 != '0' %}
+    		<td >
+    			{{answerM3}}
+    		</td>
+    		{% endif %}
+    		{% if answerN3 != 0 %}
+			<td >
+				{% if answerD3 != 1 and answerD3 != '1' %}
+				   <u>{{'&nbsp;'|safe*(answerD3|length)//2}}{{answerN3}}{{'&nbsp;'|safe*(answerD3|length)//2}}</u><br>{{'&nbsp;'|safe*(answerN3|length)//2}}{{answerD3}}
+				{% else %}
+				   {{answerN3}}
+				{% endif %}
+			</td>
+			{% endif %}
+		</tr>
+	</table>
+	<table class="FractionsTable" style="color: #2B7657">
+		<tr>
+			<td>
+    			<input type="radio" name="answer" value='{{value4}}'
+    			{% if answer_submitted == value4%}} 
+    				checked="checked"
+    			{%endif%}    			
+    			/>
+    		</td>
+    		{% if answerM4  and answerM4 != '0' %}
+    		<td >
+    			{{answerM4}}
+    		</td>
+    		{% endif %}
+    		{% if answerN4 != 0 %}
+			<td >
+				{% if answerD4 != 1 and answerD4 != '1' %}
+				   <u>{{'&nbsp;'|safe*(answerD4|length)//2}}{{answerN4}}{{'&nbsp;'|safe*(answerD4|length)//2}}</u><br>{{'&nbsp;'|safe*(answerN4|length)//2}}{{answerD4}}
+				{% else %}
+				   {{answerN4}}
+				{% endif %}
+			</td>
+			{% endif %}
+		</tr>
+	</table>
+	{% endblock %}

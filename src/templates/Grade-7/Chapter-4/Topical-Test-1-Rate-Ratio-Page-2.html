@@ -1,0 +1,159 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#79DA4D;margin-left:48%;">Rate, Ratio and Proportion - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			A plumber charged $54 to finish a certain job in 2 hours.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:15px;margin-top:0px;vertical-align:top;">a)</div>
+			<div style="display:inline-block;width:350px;margin-top:0px;vertical-align:top;">
+				What was his rate of service per hour?
+			</div>
+			<br>
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">Answer = &nbsp;$
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_4_1_answer" value='{{RRPTT1_4_1_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> /hour
+			{% else %}
+				<input id="RRPTT1_4_1_answer" value='{{RRPTT1_4_1_answer}}' style="width:30px;"> /hour <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_4_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;margin-left:15px;margin-top:20px;vertical-align:top;">b)</div>
+			<div style="display:inline-block;width:350px;margin-top:20px;vertical-align:top;">
+				If it took him 2 more hours to do another job at the same rate, how much would he charge?
+			</div>
+			<br>
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">Answer = &nbsp;$
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_4_2_answer" value='{{RRPTT1_4_2_answer}}' readonly style="background-color:#DFDFDF;width:30px;">
+			{% else %}
+				<input id="RRPTT1_4_2_answer" value='{{RRPTT1_4_2_answer}}' style="width:30px;"> <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>												
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			A box contains white and dark chocolates. The ratio of the number of white chocolates to that of dark chocolates is 3 : 7. If there are 12 more dark chocolates than white chocolates, find the total number of chocolates in the box.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_5_answer" value='{{RRPTT1_5_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> chocolates
+			{% else %}
+				<input id="RRPTT1_5_answer" value='{{RRPTT1_5_answer}}' style="width:30px;"> chocolates <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:20px;margin-left:5px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% endif %}
+			</div>												
+		</div>		
+		
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="RRP_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+$("#RRP_TT_1_Continue").button({label:">>"});
+$("#RRP_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-3.html';
+		rightPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-4.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$'
+		answer_ids = 'RRPTT1_1_answer'+separatorText+'RRPTT1_2_1_answer'+separatorText+'RRPTT1_2_2_answer'+separatorText
+		answer_ids = answer_ids + 'RRPTT1_3_answer'+separatorText+'RRPTT1_4_1_answer'+separatorText+'RRPTT1_4_2_answer'+separatorText+'RRPTT1_5_answer'
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#RRPTT1_4_1_answer").change(function()
+		{
+			question_id = "RRPTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_4_1_answer";
+			entered_answer = $("#RRPTT1_4_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_4_2_answer").change(function()
+		{
+			question_id = "RRPTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_4_2_answer";
+			entered_answer = $("#RRPTT1_4_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_5_answer").change(function()
+		{
+			question_id = "RRPTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_5_answer";
+			entered_answer = $("#RRPTT1_5_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+</script>
+

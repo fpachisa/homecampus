@@ -1,0 +1,200 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:25%;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:14px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				<div>The cost of constructing a brick wall is $30/m<sup>2</sup>. The cost of flooring a room with marble tiles is $150/m<sup>2</sup>. The length of the wall is the same as the length of the floor and is equal to (2<font class="grade7Variables">x</font> + 2) metres. The height of the wall is the same as the breadth of the floor and is equal to half its length.</div>
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) Express the cost of constructing the wall in terms of <font class="grade7Variables">x</font>.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if RWAAdvanced_1_1_answer_correct is defined %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_1_answer" value='{{RWAAdvanced_1_1_answer}}' readonly style="width:20px;background-color:#DFDFDF;" ></div>
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_2_answer" value='{{RWAAdvanced_1_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;" ></div>
+					<div style="display:inline-block;vertical-align:top;margin-top:-10px;margin-left:-2px;"><input id="RWAAdvanced_1_3_answer" value='{{RWAAdvanced_1_3_answer}}' readonly style="width:20px;background-color:#DFDFDF;"></div>					
+				{% else %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_1_answer" value='{{RWAAdvanced_1_1_answer}}' style="width:20px;" ></div>
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_2_answer" value='{{RWAAdvanced_1_2_answer}}' style="width:30px;" ></div>
+					<div style="display:inline-block;vertical-align:top;margin-top:-10px;margin-left:-2px;"><input id="RWAAdvanced_1_3_answer" value='{{RWAAdvanced_1_3_answer}}' style="width:20px;" ></div>				
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAAdvanced_1_1_answer_correct is defined %}
+					{% if RWAAdvanced_1_1_answer_correct and RWAAdvanced_1_2_answer_correct and RWAAdvanced_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">Express the cost of flooring the room in terms of <font class="grade7Variables">x</font>.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if RWAAdvanced_1_4_answer_correct is defined %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_4_answer" value='{{RWAAdvanced_1_4_answer}}' readonly style="width:35px;background-color:#DFDFDF;" ></div>
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_5_answer" value='{{RWAAdvanced_1_5_answer}}' readonly style="width:30px;background-color:#DFDFDF;" ></div>
+					<div style="display:inline-block;vertical-align:top;margin-top:-10px;margin-left:-2px;"><input id="RWAAdvanced_1_6_answer" value='{{RWAAdvanced_1_6_answer}}' readonly style="width:20px;background-color:#DFDFDF;"></div>					
+				{% else %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_4_answer" value='{{RWAAdvanced_1_4_answer}}' style="width:35px;" ></div>
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_5_answer" value='{{RWAAdvanced_1_5_answer}}' style="width:30px;" ></div>
+					<div style="display:inline-block;vertical-align:top;margin-top:-10px;margin-left:-2px;"><input id="RWAAdvanced_1_6_answer" value='{{RWAAdvanced_1_6_answer}}' style="width:20px;" ></div>				
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAAdvanced_1_4_answer_correct is defined %}
+					{% if RWAAdvanced_1_4_answer_correct and RWAAdvanced_1_5_answer_correct and RWAAdvanced_1_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAAdvanced_1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>			
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">c)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">If the cost of flooring was $4800, find the total cost of constructing the wall and flooring the room.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if RWAAdvanced_1_7_answer_correct is defined %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_7_answer" value='{{RWAAdvanced_1_7_answer}}' readonly style="width:40px;background-color:#DFDFDF;" ></div>
+				{% else %}
+					<div style="display:inline-block;"><input id="RWAAdvanced_1_7_answer" value='{{RWAAdvanced_1_7_answer}}' style="width:40px;" ></div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAAdvanced_1_7_answer_correct is defined %}
+					{% if RWAAdvanced_1_7_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAAdvanced_1_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>			
+
+
+		{% if RWAAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="RWAAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="RWAAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#RWAAdvanced_1_1_answer").change(function()
+	{
+		question_id = "RWAAdvanced_1";
+		question_type = "RealWorldAlgebra"
+		answer_id = "RWAAdvanced_1_1_answer";
+		entered_answer = $("#RWAAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RWAAdvanced_1_2_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_2_answer";
+				entered_answer = $("#RWAAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_1_3_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_3_answer";
+				entered_answer = $("#RWAAdvanced_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_1_4_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_4_answer";
+				entered_answer = $("#RWAAdvanced_1_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_1_5_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_5_answer";
+				entered_answer = $("#RWAAdvanced_1_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_1_6_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_6_answer";
+				entered_answer = $("#RWAAdvanced_1_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_1_7_answer").change(function()
+			{
+				question_id = "RWAAdvanced_1";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_1_7_answer";
+				entered_answer = $("#RWAAdvanced_1_7_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#RWAAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#RWAAdvanced_1_Retry").button({label:"Retry"});
+	$("#RWAAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RealWorldAlgebra"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_1_answer"+"#%$"+$("#RWAAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_2_answer"+"#%$"+$("#RWAAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_3_answer"+"#%$"+$("#RWAAdvanced_1_3_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_4_answer"+"#%$"+$("#RWAAdvanced_1_4_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_5_answer"+"#%$"+$("#RWAAdvanced_1_5_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_6_answer"+"#%$"+$("#RWAAdvanced_1_6_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_1"+"#%$"+"RWAAdvanced_1_7_answer"+"#%$"+$("#RWAAdvanced_1_7_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RWAAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RWAAdvanced_1_1_answer,RWAAdvanced_1_2_answer,RWAAdvanced_1_3_answer,";
+		answer_ids = answer_ids + "RWAAdvanced_1_4_answer,RWAAdvanced_1_5_answer,RWAAdvanced_1_6_answer,RWAAdvanced_1_7_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -172,3 +172,16 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#ignore images folder
+images/
+jinja/
+tipfy/
+tipfyext/
+werkzeug/
+wtforms/
+jinja2/
+babel/
+pytz/
+blinker/
+cloudstorage/

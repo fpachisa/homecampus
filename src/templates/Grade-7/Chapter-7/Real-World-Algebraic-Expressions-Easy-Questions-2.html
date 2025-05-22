@@ -1,0 +1,99 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:25%;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">In a class, there are <font class="grade7Variables">c</font> boys and <font class="grade7Variables">d</font> girls. The average marks of the boys is <font class="grade7Variables">x</font> and the average marks of the girls is <font class="grade7Variables">y</font>. Find the average marks of all the students in the class.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Average marks &nbsp; = &nbsp;
+				{% if RWAEasy_4_1_answer_correct is defined %}
+					<input id="RWAEasy_4_1_answer" value='{{RWAEasy_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					&divide;
+					<input id="RWAEasy_4_2_answer" value='{{RWAEasy_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RWAEasy_4_1_answer" value='{{RWAEasy_4_1_answer}}' style="width:50px;" >
+					&divide;
+					<input id="RWAEasy_4_2_answer" value='{{RWAEasy_4_2_answer}}' style="width:50px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAEasy_4_1_answer_correct is defined %}
+					{% if RWAEasy_4_1_answer_correct and RWAEasy_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAEasy_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if RWAEasy_4_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RWAEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RWAEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#RWAEasy_4_1_answer").change(function()
+	{
+		question_id = "RWAEasy_4";
+		question_type = "RealWorldAlgebra"
+		answer_id = "RWAEasy_4_1_answer";
+		entered_answer = $("#RWAEasy_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RWAEasy_4_2_answer").change(function()
+			{
+				question_id = "RWAEasy_4";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAEasy_4_2_answer";
+				entered_answer = $("#RWAEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#RWAEasy_2_Submit").button({label:"Check Answers"});
+	$("#RWAEasy_2_Retry").button({label:"Retry"});
+	$("#RWAEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RealWorldAlgebra"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RWAEasy_4"+"#%$"+"RWAEasy_4_1_answer"+"#%$"+$("#RWAEasy_4_1_answer").val();
+		answers = answers + "#%$"+"RWAEasy_4"+"#%$"+"RWAEasy_4_2_answer"+"#%$"+$("#RWAEasy_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RWAEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RWAEasy_4_1_answer,RWAEasy_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

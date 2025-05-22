@@ -1,0 +1,133 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">291 students visited a fun park. Each student paid $20.50 to enter the park. Estimate the total amount paid by all the students by rounding off each number correct to 
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 1 significant figure &nbsp;&nbsp;&nbsp;
+			Answer: &nbsp; $ 
+			{% if AESTMedium_1_1_answer_correct is defined %}
+				<input id="AESTMedium_1_1_answer" value='{{AESTMedium_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTMedium_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_1_1_answer_correct and AESTMedium_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_1_1_answer" value='{{AESTMedium_1_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 2 significant figures &nbsp;&nbsp;&nbsp;
+			Answer: &nbsp; $ 
+			{% if AESTMedium_1_2_answer_correct is defined %}
+				<input id="AESTMedium_1_2_answer" value='{{AESTMedium_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTMedium_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_1_2_answer_correct and AESTMedium_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_1_2_answer" value='{{AESTMedium_1_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Peter ordered 5 regular-sized pizzas, each worth $24.91. He gave $150 to the cashier. Estimate the change he should receive.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer: &nbsp; $
+			{% if AESTMedium_2_answer_correct is defined %}
+				<input id="AESTMedium_2_answer" value='{{AESTMedium_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTMedium_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_2_answer_correct and AESTMedium_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_2_answer" value='{{AESTMedium_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		{% if AESTMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="AESTMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESTMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESTMedium_1_1_answer").change(function()
+	{
+		question_id = "AESTMedium_1";
+		question_type = "Estimation"
+		answer_id = "AESTMedium_1_1_answer";
+		entered_answer = $("#AESTMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESTMedium_1_2_answer").change(function()
+			{
+				question_id = "AESTMedium_1";
+				question_type = "Estimation"
+				answer_id = "AESTMedium_1_2_answer";
+				entered_answer = $("#AESTMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESTMedium_2_answer").change(function()
+			{
+				question_id = "AESTMedium_2";
+				question_type = "Estimation"
+				answer_id = "AESTMedium_2_answer";
+				entered_answer = $("#AESTMedium_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESTMedium_1_Submit").button({label:"Check Answers"});
+	$("#AESTMedium_1_Retry").button({label:"Retry"});
+	$("#AESTMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Estimation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESTMedium_1"+"#%$"+"AESTMedium_1_1_answer"+"#%$"+$("#AESTMedium_1_1_answer").val();
+		answers = answers + "#%$"+"AESTMedium_1"+"#%$"+"AESTMedium_1_2_answer"+"#%$"+$("#AESTMedium_1_2_answer").val();
+		answers = answers + "#%$"+"AESTMedium_2"+"#%$"+"AESTMedium_2_answer"+"#%$"+$("#AESTMedium_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESTMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESTMedium_1_1_answer,AESTMedium_1_2_answer,AESTMedium_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,176 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Given that <font class="grade7Variables">a</font> = 2, <font class="grade7Variables">b</font> = &minus;4 and <font class="grade7Variables">c</font> = 3, evaluate each of the following expressions (correct to 2 decimal places where applicable):
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">a)</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">b</font> + 2<font class="grade7Variables">a</font><br>_______<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">b</font> &minus; 2<font class="grade7Variables">a</font><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:4px;margin-left:5px;">&divide;</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">c</font> + <font class="grade7Variables">b</font><br>______<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">c</font> &minus; <font class="grade7Variables">b</font><br></p>
+			</div>		
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if EAEMedium_1_1_answer_correct is defined %}
+					<input id="EAEMedium_1_1_answer" value='{{EAEMedium_1_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="EAEMedium_1_1_answer" value='{{EAEMedium_1_1_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEMedium_1_1_answer_correct is defined %}
+					{% if EAEMedium_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">b)</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">bc</font> &minus; <font class="grade7Variables">a</font><br>_______<br></p>
+				<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">a</font> &minus; <font class="grade7Variables">bc</font><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:4px;margin-left:5px;">+ 2<font class="grade7Variables">abc</font></div>		
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if EAEMedium_1_2_answer_correct is defined %}
+					<input id="EAEMedium_1_2_answer" value='{{EAEMedium_1_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="EAEMedium_1_2_answer" value='{{EAEMedium_1_2_answer}}' style="width:40px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEMedium_1_2_answer_correct is defined %}
+					{% if EAEMedium_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">c)</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">a + b + c</font><br>__________<br></p>
+				<p style="line-height:20%;text-align:center;">(<font class="grade7Variables">a + b + c</font>)<sup>2</sup><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:4px;margin-left:5px;">&times;</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">(<font class="grade7Variables">abc</font>)<sup>2</sup><br>_____<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">abc</font><br></p>
+			</div>					
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if EAEMedium_1_3_answer_correct is defined %}
+					<input id="EAEMedium_1_3_answer" value='{{EAEMedium_1_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="EAEMedium_1_3_answer" value='{{EAEMedium_1_3_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEMedium_1_3_answer_correct is defined %}
+					{% if EAEMedium_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEMedium_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if EAEMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="EAEMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="EAEMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#EAEMedium_1_1_answer").change(function()
+	{
+		question_id = "EAEMedium_1";
+		question_type = "AlgebraicExpressions"
+		answer_id = "EAEMedium_1_1_answer";
+		entered_answer = $("#EAEMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#EAEMedium_1_2_answer").change(function()
+			{
+				question_id = "EAEMedium_1";
+				question_type = "AlgebraicExpressions"
+				answer_id = "EAEMedium_1_2_answer";
+				entered_answer = $("#EAEMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#EAEMedium_1_3_answer").change(function()
+			{
+				question_id = "EAEMedium_1";
+				question_type = "AlgebraicExpressions"
+				answer_id = "EAEMedium_1_3_answer";
+				entered_answer = $("#EAEMedium_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#EAEMedium_1_Submit").button({label:"Check Answers"});
+	$("#EAEMedium_1_Retry").button({label:"Retry"});
+	$("#EAEMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "EAEMedium_1"+"#%$"+"EAEMedium_1_1_answer"+"#%$"+$("#EAEMedium_1_1_answer").val();
+		answers = answers + "#%$"+"EAEMedium_1"+"#%$"+"EAEMedium_1_2_answer"+"#%$"+$("#EAEMedium_1_2_answer").val();
+		answers = answers + "#%$"+"EAEMedium_1"+"#%$"+"EAEMedium_1_3_answer"+"#%$"+$("#EAEMedium_1_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#EAEMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "EAEMedium_1_1_answer,EAEMedium_1_2_answer,EAEMedium_1_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

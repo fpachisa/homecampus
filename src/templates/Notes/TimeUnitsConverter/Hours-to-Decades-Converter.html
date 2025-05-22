@@ -1,0 +1,178 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Decades Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to decades">
+<meta name="description" content="Converter Hours to Decades" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Decades?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Decades Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=6><br><br>
+				<button class="btn-quiz" id="ConvertToDecades" onclick="ConvertToDecades()">Convert To Decades</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="DecadesAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			<a href="/Learn/Hours-to-Years-Converter">1 year &nbsp;=&nbsp; 365 &nbsp;&times;&nbsp; 24 &nbsp;=&nbsp; 8760 hours (1 leap year has 8784 hours)</a>
+			<br><br>1 decade &nbsp;=&nbsp; 10 years &nbsp;=&nbsp; 87600 hours
+			<br><br>1 hour &nbsp;=&nbsp; 1 &nbsp;&divide;&nbsp; 87600 &nbsp;=&nbsp; 0.00001146 or 1.1416 &times; 10<sup>-5</sup> decade
+			<br><br>To convert hours to decades, divide the hours by 87600 to get decades.			
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 100000 hours to decades.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Divide 100000 by 87600
+				<br><br>Total decades in 100000 hours &nbsp;=&nbsp; 100000 &nbsp;&divide;&nbsp; 87600 &nbsp;=&nbsp; 11.42
+				<br><br>Hence, there are <strong>11.42 decades in 100000 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 50000 hours to decades</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Divide 5000 by 87600
+				<br><br>Total decades in 5000 hours &nbsp;=&nbsp; 5000 &nbsp;&divide;&nbsp; 87600 &nbsp;=&nbsp; 0.058 decade
+				<br><br>Hence, there is <strong>0.058 decade in 5000 hours.</strong>
+			</div>
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times; 10<sup>-5</sup> decade<br><br>
+				1.1416 &times; 10<sup>-6</sup> century<br><br>
+				1.1416 &times; 10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Hour decades Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Decades Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour decades Chart -->
+
+<script>
+
+function ConvertToDecades() {
+	var hours = document.getElementById("hour").value;
+	var decades = hours/87600;
+	document.getElementById("DecadesAnswer").innerHTML = "There are "+decades.toFixed(2)+" decades in "+hours+" hours."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 0.0000114 or 1.1416 &times; 10<sup>-5</sup> decades<br><br/>';
+
+for (var i = 1000; i < 3000; i=i+100) {
+    HourR1C1HTML += (i)+ ' Hours &nbsp;=&nbsp; ' + ((i)/87600).toFixed(4) + ' decades<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 6000; i < 27001; i=i+1000) {
+    HourR1C2HTML += (i)+ ' Hours &nbsp;=&nbsp; ' + ((i)/87600).toFixed(4) + ' decades<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 60000; i < 900000; i=i+10000) {
+    HourR2C1HTML += (i)+ ' Hours &nbsp;=&nbsp; ' + ((i)/87600).toFixed(4) + ' decades<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 1000000; i < 6600001; i=i+100000) {
+    HourR2C2HTML += (i)+ ' Hours &nbsp;=&nbsp; ' + ((i)/87600).toFixed(4) + ' decades<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many hours are there in a decade?","acceptedAnswer":{"@type":"Answer","text":"A decade has 87600 hours."}},{"@type":"Question","name":"How to convert hours to decades?","acceptedAnswer":{"@type":"Answer","text":"Divide hours by 87600 to convert it to decades."}}]}</script>
+
+
+{% endblock %}

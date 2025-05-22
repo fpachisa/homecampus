@@ -1,0 +1,161 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.2 Reverse Percentages</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.2 Reverse Percentages</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Find the unknown value in each of the following:</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 50% of <font class="grade7Variables">x</font> = 90&deg; C</div>
+		<div style="margin-left:80px;margin-top:20px;"><font class="grade7Variables">x</font> = &nbsp;
+			{% if PRRPEasy_1_1_answer_correct is defined %}
+				<input id="PRRPEasy_1_1_answer" value='{{PRRPEasy_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &deg;C
+					{% if PRRPEasy_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_1_1_answer_correct and PRRPEasy_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_1_1_answer" value='{{PRRPEasy_1_1_answer}}' style="width:50px;" > &deg;C
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;">b)</div>
+        <div style="width:40px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:10px;">
+	        <p style="line-height:20%;text-align:center;">4<br>__<br></p>
+	        <p style="line-height:20%;text-align:center;">5<br></p>
+        </div>
+        <div style="margin-top:20px;display:inline-block;margin-left:-12px;">% of <font class="grade7Variables">y</font> = 100 seconds</div>	
+		<div style="margin-left:80px;margin-top:20px;"><font class="grade7Variables">y</font> = &nbsp;
+			{% if PRRPEasy_1_2_answer_correct is defined %}
+				<input id="PRRPEasy_1_2_answer" value='{{PRRPEasy_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> seconds
+					{% if PRRPEasy_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_1_2_answer_correct and PRRPEasy_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_1_2_answer" value='{{PRRPEasy_1_2_answer}}' style="width:50px;" > seconds
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">c) 200% of <font class="grade7Variables">z</font> = $75</div>	
+		<div style="margin-left:80px;margin-top:20px;"><font class="grade7Variables">z</font> = &nbsp;
+			{% if PRRPEasy_1_3_answer_correct is defined %}
+				$ <input id="PRRPEasy_1_3_answer" value='{{PRRPEasy_1_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					{% if PRRPEasy_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_1_3_answer_correct and PRRPEasy_1_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				$ <input id="PRRPEasy_1_3_answer" value='{{PRRPEasy_1_3_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;">d) 11</div>
+        <div style="width:40px;display:inline-block;vertical-align:top;margin-left:-12px;margin-top:10px;">
+	        <p style="line-height:20%;text-align:center;">3<br>__<br></p>
+	        <p style="line-height:20%;text-align:center;">4<br></p>
+        </div>
+        <div style="margin-top:20px;display:inline-block;margin-left:-14px;">% of <font class="grade7Variables">w</font> = 9400 cm</div>
+		<div style="margin-left:80px;margin-top:20px;"><font class="grade7Variables">w</font> = &nbsp;
+			{% if PRRPEasy_1_4_answer_correct is defined %}
+				<input id="PRRPEasy_1_4_answer" value='{{PRRPEasy_1_4_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> cm
+					{% if PRRPEasy_1_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_1_4_answer_correct and PRRPEasy_1_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_1_4_answer" value='{{PRRPEasy_1_4_answer}}' style="width:50px;" > cm
+			{% endif %}	
+		</div>
+
+		{% if PRRPEasy_1_1_answer_correct is defined %}
+			<div style="margin-top:-35px;margin-left:340px;"><button id="PRRP_Easy_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="PRRP_Easy_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRPEasy_1_1_answer").change(function()
+	{
+		question_id = "PRRPEasy_1";
+		question_type = "ReversePercentages"
+		answer_id = "PRRPEasy_1_1_answer";
+		entered_answer = $("#PRRPEasy_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRPEasy_1_2_answer").change(function()
+			{
+				question_id = "PRRPEasy_1";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_1_2_answer";
+				entered_answer = $("#PRRPEasy_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRRPEasy_1_3_answer").change(function()
+			{
+				question_id = "PRRPEasy_1";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_1_3_answer";
+				entered_answer = $("#PRRPEasy_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRRPEasy_1_4_answer").change(function()
+			{
+				question_id = "PRRPEasy_1";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_1_4_answer";
+				entered_answer = $("#PRRPEasy_1_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRRP_Easy_1_submit").button({label:"Check Answers"});
+	$("#PRRP_Easy_1_retry").button({label:"Retry"});
+	$("#PRRP_Easy_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ReversePercentages"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRPEasy_1"+"#%$"+"PRRPEasy_1_1_answer"+"#%$"+$("#PRRPEasy_1_1_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_1"+"#%$"+"PRRPEasy_1_2_answer"+"#%$"+$("#PRRPEasy_1_2_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_1"+"#%$"+"PRRPEasy_1_3_answer"+"#%$"+$("#PRRPEasy_1_3_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_1"+"#%$"+"PRRPEasy_1_4_answer"+"#%$"+$("#PRRPEasy_1_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRP_Easy_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRPEasy_1_1_answer,PRRPEasy_1_2_answer,PRRPEasy_1_3_answer,PRRPEasy_1_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

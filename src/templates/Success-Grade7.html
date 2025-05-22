@@ -1,0 +1,35 @@
+<!-- Use result of DoEC to send the buyer to the correct page -->
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+<title></title>
+<script>
+	if(isiApple())
+	{
+		window.location.href = 'http://my.homecampus.com.sg/Secondary-1-Grade-7-Mathematics';	
+	}
+	else
+	{
+		parent.location='/Secondary-1-Grade-7-Mathematics';
+	}
+	function isiApple()
+	{
+		var ua = navigator.userAgent.toLowerCase();
+	    return (
+	        //Detect iPhone
+	        (navigator.platform.indexOf("iPhone") != -1) ||
+	        //Detect iPad
+	        (navigator.platform.indexOf("iPad") != -1) ||
+	        //Detect iPod
+	        (navigator.platform.indexOf("iPod") != -1) ||
+			//Detect Android
+	        (ua.indexOf("android") > -1)
+	    );
+	} 
+</script>
+</head>
+<body>
+</body>
+</html>

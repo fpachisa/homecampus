@@ -1,0 +1,125 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>What is a Fraction - Home Campus</title>
+<meta name="keywords" content="what is a fraction, fraction, fraction word problems, fraction problem sums, P5 maths, 5th grade math, fraction worksheets, free math worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, math homeschooling">
+<meta name="description" content="Introduction to Fractions. What is a Fraction? - A fraction is a part of a whole." />
+{% endblock %}
+{% block content %}
+
+	<!-- InstanceBeginEditable name="maincontent" -->
+	
+	<h2 class="learn-heading">Introduction to Fractions</h2><br>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/What_is_a_Fraction">Practice Unlimited Questions</a></div>
+	<!-- QUES 1 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>1. What is a fraction?</h4>
+			</div>
+			
+			<div class="learn-set__video">
+				<div>
+					<embed src="https://www.youtube.com/v/m9I-ER9j_Ac?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" allowfullscreen="true" allowScriptAccess="always"  width="380" height="242" />
+				</div>
+			</div>
+
+			<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/free-math-worksheets-what-is-a-fraction">Download Free Worksheets</a></div>
+			
+			<div class="learn-set__answer">		
+				<div class="col-8 col-off-1" >
+					<br />
+					A fraction is a part of a whole.
+				</div>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/fraction_definition_1.png" />
+				</div><br>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/fraction_definition_2.png" />
+				</div><br>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/fraction_definition_3.png" />
+				</div><br>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/fraction_definition_4.png" />
+				</div><br>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/What_is_a_Fraction">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 1 -->
+
+
+	<!-- QUES 2 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>2. What are numerator and denominator?</h4>
+			</div>
+			
+			<div class="learn-set__answer">		
+				<div class="col-8 col-off-1" >
+					A fraction has got two numbers.<br />
+					The top number is called the <b>numerator</b>.<br />
+					The bottom number is called the <b>denominator</b>.
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/What_is_a_Fraction">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 2 -->
+
+
+	<!-- QUES 3 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>3. Annie, Betty and Charlie shared a pizza that was cut into 4 slices. Annie got 1 slice, Betty got 2 slices and Charlie got 1 slice. What fraction of the pizza did each of them receive?</h4>
+			</div>
+			
+			<div class="learn-set__answer">
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/fraction_numerator_denominator.png" />
+				</div>
+				<br>
+				<div class="col-7 col-off-1" >
+					<div style="background-color: rgb(255, 201, 182);">{{ frGen(1,4) }} is read as "1 upon 4" or "1 over 4" or "1 out of 4".</div>
+					<br>
+					<b>Annie:</b><br />
+					Annie received 1 slice.<br />
+					So, her share of the pizza was {{ frGen(1,4) }}.<br />
+					The numerator, which is 1, tells us how many slices Annie got.<br />
+					The denominator, which is 4, tells us how many equal slices the pizza was cut into.
+				</div>
+				<div class="col-11 col-off-1" >
+					<b>Betty:</b><br />
+					Betty received 2 slices of the pizza.<br />
+					Betty's share of the pizza was {{ frGen(2,4) }}.<br />
+					{{ frGen(2,4) }} can be <a href="/Learn/Primary-Grade-3/Simplifying-Fractions">simplified</a> to {{ frGen(1,2) }}.<br /> 
+					So, Betty's share of the pizza was {{ frGen(2,4) }} or {{ frGen(1,2) }}.
+				</div>
+				<div class="col-11 col-off-1" >
+					<b>Charlie:</b><br />
+					Charlie received 1 out of the 4 slices that the pizza was cut into.<br />
+					Charlie's share of the pizza was {{ frGen(1,4) }}.
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/What_is_a_Fraction">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 3 -->
+	
+	
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":" What is a Fraction?","acceptedAnswer":{"@type":"Answer","text":"A fraction is a part of a whole. "}},{"@type":"Question","name":"What is a numerator?","acceptedAnswer":{"@type":"Answer","text":"A fraction has got two numbers. The top number is called the numerator."}},{"@type":"Question","name":"What is a denominator?","acceptedAnswer":{"@type":"Answer","text":"A fraction has got two numbers. The bottom number is called the denominator."}}]}</script>
+  
+ {% endblock %}

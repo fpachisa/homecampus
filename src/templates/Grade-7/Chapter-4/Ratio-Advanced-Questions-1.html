@@ -1,0 +1,212 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.1 Ratio</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.1 Ratio</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				A popcorn store sells different flavours of popcorns in three different sizes viz., cup, glass and bucket, in the order of increasing volumes. The ratio of the volume of the cup to that of the glass is 4 : 9. The volume of the cup to that of the bucket is 5 : 16. What is the ratio of the volume of the cup to that of the glass to that of the bucket?
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">cup : glass : bucket </div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;"> =
+				{% if RATIOAdvanced_1_1_a_answer_correct is defined or RATIOAdvanced_1_1_b_answer_correct is defined or RATIOAdvanced_1_1_c_answer_correct is defined %}
+					<input id="RATIOAdvanced_1_1_a_answer" value='{{RATIOAdvanced_1_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOAdvanced_1_1_b_answer" value='{{RATIOAdvanced_1_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOAdvanced_1_1_c_answer" value='{{RATIOAdvanced_1_1_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOAdvanced_1_1_a_answer" value='{{RATIOAdvanced_1_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOAdvanced_1_1_b_answer" value='{{RATIOAdvanced_1_1_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOAdvanced_1_1_c_answer" value='{{RATIOAdvanced_1_1_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_1_1_a_answer_correct is defined or RATIOAdvanced_1_1_b_answer_correct is defined  or RATIOAdvanced_1_1_c_answer_correct is defined %}
+					{% if RATIOAdvanced_1_1_a_answer_correct and RATIOAdvanced_1_1_b_answer_correct and RATIOAdvanced_1_1_c_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_1_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				The ratio of the marks in English to that in Science to that in Mathematics that Zoya scored was 5 : 7 : 11. If the difference between her marks in English and Mathematics was 36, how much did she score in each subject?
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">English marks = 
+				{% if RATIOAdvanced_2_1_answer_correct is defined %}
+					<input id="RATIOAdvanced_2_1_answer" value='{{RATIOAdvanced_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATIOAdvanced_2_1_answer" value='{{RATIOAdvanced_2_1_answer}}' style="width:30px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_2_1_answer_correct is defined %}
+					{% if RATIOAdvanced_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">Science marks = 
+				{% if RATIOAdvanced_2_2_answer_correct is defined %}
+					<input id="RATIOAdvanced_2_2_answer" value='{{RATIOAdvanced_2_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATIOAdvanced_2_2_answer" value='{{RATIOAdvanced_2_2_answer}}' style="width:30px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_2_2_answer_correct is defined %}
+					{% if RATIOAdvanced_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">Mathematics marks = 
+				{% if RATIOAdvanced_2_3_answer_correct is defined %}
+					<input id="RATIOAdvanced_2_3_answer" value='{{RATIOAdvanced_2_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATIOAdvanced_2_3_answer" value='{{RATIOAdvanced_2_3_answer}}' style="width:30px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_2_3_answer_correct is defined %}
+					{% if RATIOAdvanced_2_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>
+
+
+		{% if RATIOAdvanced_1_1_a_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:340px;"><button id="RATIOAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-40px;margin-left:280px;"><button id="RATIOAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATIOAdvanced_1_1_a_answer").change(function()
+	{
+		question_id = "RATIOAdvanced_1";
+		question_type = "Ratio"
+		answer_id = "RATIOAdvanced_1_1_a_answer";
+		entered_answer = $("#RATIOAdvanced_1_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOAdvanced_1_1_b_answer").change(function()
+	{
+		question_id = "RATIOAdvanced_1";
+		question_type = "Ratio"
+		answer_id = "RATIOAdvanced_1_1_b_answer";
+		entered_answer = $("#RATIOAdvanced_1_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOAdvanced_1_1_c_answer").change(function()
+		{
+			question_id = "RATIOAdvanced_1";
+			question_type = "Ratio"
+			answer_id = "RATIOAdvanced_1_1_c_answer";
+			entered_answer = $("#RATIOAdvanced_1_1_c_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	$("#RATIOAdvanced_2_1_answer").change(function()
+		{
+			question_id = "RATIOAdvanced_2";
+			question_type = "Ratio"
+			answer_id = "RATIOAdvanced_2_1_answer";
+			entered_answer = $("#RATIOAdvanced_2_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	$("#RATIOAdvanced_2_2_answer").change(function()
+			{
+				question_id = "RATIOAdvanced_2";
+				question_type = "Ratio"
+				answer_id = "RATIOAdvanced_2_2_answer";
+				entered_answer = $("#RATIOAdvanced_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATIOAdvanced_2_3_answer").change(function()
+			{
+				question_id = "RATIOAdvanced_2";
+				question_type = "Ratio"
+				answer_id = "RATIOAdvanced_2_3_answer";
+				entered_answer = $("#RATIOAdvanced_2_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+					
+	$("#RATIOAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#RATIOAdvanced_1_Retry").button({label:"Retry"});
+	$("#RATIOAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Ratio"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATIOAdvanced_1"+"#%$"+"RATIOAdvanced_1_1_a_answer"+"#%$"+$("#RATIOAdvanced_1_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_1"+"#%$"+"RATIOAdvanced_1_1_b_answer"+"#%$"+$("#RATIOAdvanced_1_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_1"+"#%$"+"RATIOAdvanced_1_1_c_answer"+"#%$"+$("#RATIOAdvanced_1_1_c_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_2"+"#%$"+"RATIOAdvanced_2_1_answer"+"#%$"+$("#RATIOAdvanced_2_1_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_2"+"#%$"+"RATIOAdvanced_2_2_answer"+"#%$"+$("#RATIOAdvanced_2_2_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_2"+"#%$"+"RATIOAdvanced_2_3_answer"+"#%$"+$("#RATIOAdvanced_2_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATIOAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATIOAdvanced_1_1_a_answer,RATIOAdvanced_1_1_b_answer,RATIOAdvanced_1_1_c_answer,";
+		answer_ids = answer_ids + "RATIOAdvanced_2_1_answer,RATIOAdvanced_2_2_answer,RATIOAdvanced_2_3_answer";
+
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

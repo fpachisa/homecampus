@@ -1,0 +1,130 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Home Campus - Primary Mathematics - Progress</title>
+<meta name="description" content="Learn primary school mathematics online. Monitor your progress." />
+{% endblock %}
+{% block body %}
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="/js/Reports.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    // Create the data table.
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    //google.setOnLoadCallback(drawChart);
+    </script>
+	<link href="/stylesheets/Reports.css" rel="stylesheet" type="text/css"  />
+<div style="background-image: url(/images/site/background.png);">	
+	<br>
+	<div id="NotesContent" style="min-height:500px;">
+		<br>
+		<h1>Progress Report</h1>
+		<div id="ReportList" style="background-color:#DDE872;">
+			<div>
+		   		{% if IsParent %}
+					<font style="font-weight:bold;color:#5E942A;">Child:</font>
+					<select id ='username'>
+						{% for child in Children %}
+							<option value='{{child.id}}'>{{child.name}}</option>
+						{% endfor %}
+					</select>&nbsp;&nbsp;&nbsp;&nbsp;					
+				{% else %}
+					<input type="hidden" id="username" value='{{ current_user.username|e }}'>
+				{% endif %}				
+				<font style="font-weight:bold;color:#5E942A;">Level:</font>						
+				<select id ='grade'>
+					{% if current_user.username == 'rayan'%}
+						<option value='P1'>Grade 1</option>
+					{% endif %}
+					
+					<option value='P4'>Grade 4</option>
+					<option value='P5'>Grade 5</option>
+					<option value='P6'>Grade 6</option>
+					<option value='P3'>Grade 3</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;				
+		   		<font style="font-weight:bold;color:#5E942A;">Report:</font>
+				<select id ='reports'>
+					<option value='SummaryReport'>Progress Report</option>
+					<option value='TestSummary'>HC Worksheets Report</option>
+					<option value='GoalsReport'>HC Goals Report</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<font id="topic" style="font-weight:bold;color:#5E942A;display:none;">Topic:</font>
+				<select id ='concept' style="display:none;">
+					<option value='P4DC'>Decimals</option>
+					<option value='P4FR'>Fractions</option>
+					<option value='P4MT'>Measurement</option>
+					<option value='P4WN'>Whole Numbers</option>
+					<option value='P4DA'>Data Analysis</option>
+				</select>				
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<button id="GenerateReport"></button>
+			</div>		   				   				
+		</div>
+		  					
+		<div id="ReportContent">		
+		</div><br> 	
+	</div><br>
+</div>
+<script type="text/javascript">
+	$("#GenerateReport").button({label:"Generate Report"});
+	$("#reports").change(function()
+	{
+		if ($("#reports").val()=='GoalsReport')
+		{
+			$("#topic").show("fast");
+			$("#concept").show("fast");
+		}
+		else
+		{
+			$("#topic").hide("fast");
+			$("#concept").hide("fast");
+		}
+	});
+	$("#grade").change(function()
+			{
+				$("#concept").html("");
+				if ($("#grade").val()=='P4')
+					{
+						$("<option value='P4DC'>Decimals</option>").appendTo("#concept");
+						$("<option value='P4FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P4MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P4WN'>Whole Numbers</option>").appendTo("#concept");
+						$("<option value='P4DA'>Data Analysis</option>").appendTo("#concept");
+					}
+				else if($("#grade").val()=='P5')
+					{
+						$("<option value='P5DA'>Data Analysis</option>").appendTo("#concept");
+						$("<option value='P5DC'>Decimals</option>").appendTo("#concept");
+						$("<option value='P5FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P5GT'>Geometry</option>").appendTo("#concept");
+						$("<option value='P5MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P5PR'>Percentage</option>").appendTo("#concept");
+						$("<option value='P5RT'>Ratio</option>").appendTo("#concept");
+						$("<option value='P5WN'>Whole Numbers</option>").appendTo("#concept");			
+					}
+				else if($("#grade").val()=='P6')
+					{
+						$("<option value='P6AG'>Algebra</option>").appendTo("#concept");
+						$("<option value='P6DA'>Data Analysis</option>").appendTo("#concept");
+						$("<option value='P6FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P6MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P6PR'>Percentage</option>").appendTo("#concept");
+						$("<option value='P6RT'>Ratio</option>").appendTo("#concept");
+						$("<option value='P6SP'>Speed</option>").appendTo("#concept");				
+					}
+				else if($("#grade").val()=='P3')
+				{
+					$("<option value='P3WN'>Whole Numbers</option>").appendTo("#concept");
+				}
+
+				else if($("#grade").val()=='P1')
+				{
+					$("<option value='P1WN'>Whole Numbers</option>").appendTo("#concept");
+				}
+			}
+	);			
+</script>
+{% endblock %}

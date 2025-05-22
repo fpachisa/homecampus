@@ -1,0 +1,104 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.2 Reverse Percentages</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.2 Reverse Percentages</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">78% of the students in a class got infected with conjunctivitis during a rainy season. If the number of students who got infected was 32, find</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;">a)</div>
+		<div style="margin-top:20px;display:inline-block;width:320px;vertical-align:top;">The total number of students in the class.</div>
+		<div style="margin-left:80px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRRPMedium_3_1_answer_correct is defined %}
+				<input id="PRRPMedium_3_1_answer" value='{{PRRPMedium_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					{% if PRRPMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPMedium_3_1_answer_correct and PRRPMedium_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					
+			{% else %}
+				<input id="PRRPMedium_3_1_answer" value='{{PRRPMedium_3_1_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;">b)</div>
+		<div style="margin-top:20px;display:inline-block;width:320px;vertical-align:top;">The number of students who were not infected by the disease.</div>
+		<div style="margin-left:80px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRRPMedium_3_2_answer_correct is defined %}
+				<input id="PRRPMedium_3_2_answer" value='{{PRRPMedium_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					{% if PRRPMedium_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPMedium_3_2_answer_correct and PRRPMedium_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPMedium_3_2_answer" value='{{PRRPMedium_3_2_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+
+		{% if PRRPMedium_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Medium_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Medium_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRPMedium_3_1_answer").change(function()
+	{
+		question_id = "PRRPMedium_3";
+		question_type = "ReversePercentages"
+		answer_id = "PRRPMedium_3_1_answer";
+		entered_answer = $("#PRRPMedium_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRPMedium_3_2_answer").change(function()
+			{
+				question_id = "PRRPMedium_3";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPMedium_3_2_answer";
+				entered_answer = $("#PRRPMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRRP_Medium_2_submit").button({label:"Check Answers"});
+	$("#PRRP_Medium_2_retry").button({label:"Retry"});
+	$("#PRRP_Medium_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ReversePercentages"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRPMedium_3"+"#%$"+"PRRPMedium_3_1_answer"+"#%$"+$("#PRRPMedium_3_1_answer").val();
+		answers = answers + "#%$"+"PRRPMedium_3"+"#%$"+"PRRPMedium_3_2_answer"+"#%$"+$("#PRRPMedium_3_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRP_Medium_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRPMedium_3_1_answer,PRRPMedium_3_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

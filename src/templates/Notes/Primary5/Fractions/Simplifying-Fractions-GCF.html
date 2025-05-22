@@ -1,0 +1,154 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Simplifying Fractions - Home Campus</title>
+<meta name="keywords" content="Simplifying Fractions Equivalent Greatest Common Factor GCF">
+<meta name="description" content="How to simplify fractions? What is a greatest common factor? What is an equivalent fractions?" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Equivalent Fractions, Simplifying Fractions, GCF</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 203, 255);">			
+		<div class="concept-set__question">
+			<h4>Concepts covered:</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				<a href="#Ques-1">1. How to simplify fractions?</a><br><br>
+				<a href="#Ques-1">2. What is the meaning of Greatest Common Factor (GCF)?</a><br><br>
+				<a href="#Ques-2">3. What are equivalent fractions?</a><br><br>
+				<a href="#Ques-3">4. Why should we simplify fractions?</a><br><br>
+				<a href="#Ques-4">5. Examles of simplifying fractions.</a><br><br>
+			</div>							
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Simplifying-Fractions-Calculator">Simplifying Fractions Calculator</a></div>
+	</div>
+</div><!-- End of concept 1-->
+
+
+
+	<!-- QUES 1 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-1">1. The video below explains how to simplify fractions and the meaning of Greatest Common Factor.<br /><br /></h4></div>			
+
+			<div class="learn-set__video">
+				<div><embed src="https://www.youtube.com/v/Td-o2lZFVHk?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+		</div>
+	</div> <!-- End of answer 1 -->
+
+
+	<!-- QUES 2 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-2">2. What are Equivalent Fractions?</h4></div>			
+			
+			<div class="learn-set__answer">
+				<div class="col-10 col-off-1">
+					Fractions that are equal to each other are called equivalent fractions.<br /><br />
+					<i>Example:</i><br />
+					<img src="/images/notes/equivalent_fractions.png" alt="square metre or square meter" /><br />
+					
+					It is clear from the images above that the yellow coloured portions of the 3 pizzas are equal to each other.<br />
+					So, {{ frGen(4,8) }} &nbsp;=&nbsp; {{ frGen(2,4) }} &nbsp;=&nbsp; {{ frGen(1,2) }}<br />
+					Therefore, Annie, Betty and Charlie each got {{ frGen(1,2) }} a pizza.<br /><br />
+					
+					When possible, we should simplify fractions.
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Equivalent-Fractions-Calculator">Equivalent Fractions Generator</a></div>	
+		</div>
+	</div> <!-- End of answer 2 -->
+
+
+ 	<!-- QUES 3 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-3">3. Why should we simplify fractions?</h4></div>			
+			
+			<div class="learn-set__answer">
+				<div class="col-10 col-off-1">
+					We should simplify fractions because simplified fractions are easier to understand.<br /><br />
+					<i>Example:</i><br />
+					So, though {{ frGen(51,85) }} is the same as {{ frGen(3,5) }}, it is much easier to understand {{ frGen(3,5) }} than {{ frGen(51,85) }}.<br />
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+		</div>
+	</div> <!-- End of answer 3 -->
+	
+	     
+ 	<!-- QUES 4 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question">
+				<h4  id="Ques-4">4. Simplify the fraction &nbsp;&nbsp;{{ frGen(4,8) }}.</h4>
+			</div>						
+
+			<div class="learn-set__answer">
+				<div class="col-10 col-off-1">
+					To simplify the fraction, keep dividing the numerator and the denominator by a <b>common factor</b> until you can't divide them any further.<br /><br />
+					
+					So, to simplify the fraction {{ frGen(4,8) }}, divide both 4 and 8 by 2 (as 2 is a common factor of 4 and 8).<br />
+					{{ frGen("4 / 2","8 / 2") }} &nbsp;=&nbsp; {{ frGen(2,4) }}<br /><br />
+					
+					2 and 4 can be divided further by 2.<br /><br />
+					{{ frGen("2 / 2","4 / 2") }} &nbsp;=&nbsp; {{ frGen(1,2) }}<br /><br />
+					
+					<b>{{ frGen(1,2) }}</b> is the simplest form of the fraction {{ frGen(4,8) }}.
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+		</div>
+	</div> <!-- End of answer 4 -->
+
+
+ 	<!-- QUES 5 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question">
+				<h4>5. Simplify the fraction &nbsp;&nbsp;{{ frGen(180,240) }}.</h4>
+			</div>						
+
+			<div class="learn-set__answer">
+				<div class="col-10 col-off-1">
+					To simplify the fraction {{ frGen(180,240) }}, divide both 180 and 240 by their common factors.<br /><br />
+					It is easy to see that both numbers can be divided by 10.<br /><br />
+					{{ frGen("180 / 10","240 / 10") }} &nbsp;=&nbsp; {{ frGen(18,24) }}<br /><br />
+					
+					18 and 24 can be divided further by 2.<br /><br />
+					{{ frGen("18 / 2","24 / 2") }} &nbsp;=&nbsp; {{ frGen(9,12) }}<br /><br />
+					
+					9 and 12 can be divided further by 3.<br /><br />
+					{{ frGen("9 / 3","12 / 3") }} &nbsp;=&nbsp; {{ frGen(3,4) }}<br /><br />
+
+					<b>{{ frGen(3,4) }}</b> is the simplest form of the fraction {{ frGen(180,240) }}.
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+		</div>
+	</div> <!-- End of answer 5 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is simplifying fractions?","acceptedAnswer":{"@type":"Answer","text":"Simplifying a fraction means writing its equivalent fraction in a simpler form."}},{"@type":"Question","name":"How to simplify a fraction?","acceptedAnswer":{"@type":"Answer","text":"To simplify a fraction, divide its numerator and denominator by the same number. Keep dividing numerator and denominator till they have a common factor. Once there are no more common factors between numerator and denominator, the fraction cannot be further simplified."}},{"@type":"Question","name":"What are equivalent fractions?","acceptedAnswer":{"@type":"Answer","text":"Equivalent fractions are fractions that represents the same part of a whole. They have different numerators and denominators but with equal fractional values."}},{"@type":"Question","name":"How to calculate Equivalent Fractions?","acceptedAnswer":{"@type":"Answer","text":"<strong>Method 1:</strong> Multiply the numerator and the denominator by the same number.<br><br>\\n<strong>Method 2:</strong> Divide the numerator and the denominator by the same number."}}]}</script>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div>During a laboratory experiment, students are given 3 cubes of silver, aluminium and platinum, respectively, along with the following details:</div>
+			<table style="border-collapse:collapse; margin-top:10px;">
+				<tr><td style="border: 1px solid black;"></td><td style="border: 1px solid black;">Cube 1</td><td style="border: 1px solid black;">Cube 2</td><td style="border: 1px solid black;">Cube 3</td></tr>
+				<tr><td style="border: 1px solid black;"><strong>Mass (gm)</strong></td><td style="border: 1px solid black;">171.6</td><td style="border: 1px solid black;">72.9</td><td style="border: 1px solid black;">596.48</td></tr>
+				<tr><td style="border: 1px solid black;"><strong>Cube Side (cm)</strong></td><td style="border: 1px solid black;">2</td><td style="border: 1px solid black;">3</td><td style="border: 1px solid black;">4</td></tr>
+			</table>
+			<table style="border-collapse:collapse; margin-top:10px;">
+				<tr><td style="border: 1px solid black;"><strong>Metal</strong></td><td style="border: 1px solid black;"><strong>Density (gm/cm<sup>3</sup>)</strong></td></tr>
+				<tr><td style="border: 1px solid black;"><strong>Silver</strong></td><td style="border: 1px solid black;">9.32</td></tr>
+				<tr><td style="border: 1px solid black;"><strong>Aluminium</strong></td><td style="border: 1px solid black;">2.7</td></tr>
+				<tr><td style="border: 1px solid black;"><strong>Platinum</strong></td><td style="border: 1px solid black;">21.45</td></tr>
+			</table>
+			<p>Which of the three cubes is silver?</p>
+			<p>[Hint: Density = Mass &divide; Volume]</p>
+						
+		</div>
+		<br>	
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if RATEAdvanced_3_answer_correct is defined %}
+				<input type=radio name="RATEAdvanced_3_answer" value='Cube 1' disabled
+				{% if RATEAdvanced_3_answer == 'Cube 1'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 1<br>
+				<input type=radio name="RATEAdvanced_3_answer" value='Cube 2' disabled
+				{% if RATEAdvanced_3_answer == 'Cube 2' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 2<br>
+				<input type=radio name="RATEAdvanced_3_answer" value='Cube 3' disabled
+				{% if RATEAdvanced_3_answer == 'Cube 3' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 3&nbsp;&nbsp;
+				{% if RATEAdvanced_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RATEAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RATEAdvanced_3_answer" value='Cube 1'
+				{% if RATEAdvanced_3_answer == 'Cube 1' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 1<br>
+				<input type=radio name="RATEAdvanced_3_answer" value='Cube 2'
+				{% if RATEAdvanced_3_answer == 'Cube 2'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 2<br>
+				 <input type=radio name="RATEAdvanced_3_answer" value='Cube 3'
+				{% if RATEAdvanced_3_answer == 'Cube 3'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Cube 3			 
+			{% endif %}	
+		</div>
+		
+
+		
+		{% if RATEAdvanced_3_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="RATEAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="RATEAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='RATEAdvanced_3_answer']").click(function()
+		{
+			question_id = "RATEAdvanced_3";
+			question_type = "Rate"
+			answer_id = "RATEAdvanced_3_answer";
+			entered_answer = $("input:radio[name=RATEAdvanced_3_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	
+	$("#RATEAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#RATEAdvanced_2_Retry").button({label:"Retry"});
+	$("#RATEAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEAdvanced_3"+"#%$"+"RATEAdvanced_3_answer"+"#%$"+$("input:radio[name=RATEAdvanced_3_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEAdvanced_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

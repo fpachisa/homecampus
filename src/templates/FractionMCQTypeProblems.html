@@ -1,0 +1,111 @@
+{% extends 'PracticePageFractionSkeleton.html' %}
+   
+   {% block content%}
+   	<div class="mcq__group">
+   		<div class="mcq__element">
+   			<input id="mc-1" type="radio" name="answer" value="{{value1}}" {% if answer_submitted == value1%}checked="checked"{%endif%}/>
+   			<label for="mc-1">
+   				<table style='display:inline-block'>
+   					{% if answerM1 and answerM1 != '0' %}
+    				<td >
+    					{{answerM1}}
+    				</td>
+    				{% endif %}
+    				
+   					{% if answerN1 != 0 %}
+   					{% if answerD1 != 1 and answerD1 != '1' %}
+   					<tr style='text-align: center;border-bottom: 1px solid;'>
+   						<td> {{ answerN1 }} </td>
+   					</tr>
+   					<tr>
+   						<td> {{ answerD1 }} </td>
+   					</tr>
+   					{% else %}
+				   		<tr><td>{{answerN1}}</td></tr>
+					{% endif %}
+					{% endif %}
+   				</table>
+   			</label>
+   		</div>
+   		
+   		<div class="mcq__element">
+   			<input id="mc-2" type="radio" name="answer" value="{{value2}}" {% if answer_submitted == value2%}checked="checked"{%endif%}/>
+   			<label for="mc-2">
+   				<table style='display:inline-block'>
+   					{% if answerM2 and answerM2 != '0' %}
+    				<td >
+    					{{answerM2}}
+    				</td>
+    				{% endif %}
+    				
+   					{% if answerN2 != 0 %}
+   					{% if answerD2 != 1 and answerD2 != '1' %}
+   					<tr style='text-align: center;border-bottom: 1px solid;'>
+   						<td> {{ answerN2 }} </td>
+   					</tr>
+   					<tr>
+   						<td> {{ answerD2 }} </td>
+   					</tr>
+   					{% else %}
+				   		<tr><td>{{answerN2}}</td></tr>
+					{% endif %}
+					{% endif %}
+   				</table>
+   			</label>
+   		</div>
+   	</div>
+   	
+   	   	<div class="mcq__group">
+   		<div class="mcq__element">
+   			<input id="mc-3" type="radio" name="answer" value="{{value3}}" {% if answer_submitted == value3%}checked="checked"{%endif%}/>
+   			<label for="mc-3">
+   				<table style='display:inline-block'>
+   					{% if answerM3 and answerM3 != '0' %}
+    				<td >
+    					{{answerM3}}
+    				</td>
+    				{% endif %}
+    				
+   					{% if answerN3 != 0 %}
+   					{% if answerD3 != 1 and answerD3 != '1' %}
+   					<tr style='text-align: center;border-bottom: 1px solid;'>
+   						<td> {{ answerN3 }} </td>
+   					</tr>
+   					<tr>
+   						<td> {{ answerD3 }} </td>
+   					</tr>
+   					{% else %}
+				   		<tr><td>{{answerN3}}</td></tr>
+					{% endif %}
+					{% endif %}
+   				</table>
+   			</label>
+   		</div>
+   		
+   		<div class="mcq__element">
+   			<input id="mc-4" type="radio" name="answer" value="{{value4}}" {% if answer_submitted == value4%}checked="checked"{%endif%}/>
+   			<label for="mc-4">
+   				<table style='display:inline-block'>
+   					{% if answerM4 and answerM4 != '0' %}
+    				<td >
+    					{{answerM4}}
+    				</td>
+    				{% endif %}
+    				
+   					{% if answerN4 != 0 %}
+   					{% if answerD4 != 1 and answerD4 != '1' %}
+   					<tr style='text-align: center;border-bottom: 1px solid;'>
+   						<td> {{ answerN4 }} </td>
+   					</tr>
+   					<tr>
+   						<td> {{ answerD4 }} </td>
+   					</tr>
+   					{% else %}
+				   		<tr><td>{{answerN4}}</td></tr>
+					{% endif %}
+					{% endif %}
+   				</table>
+   			</label>
+   		</div>
+   	</div>
+{% endblock %}

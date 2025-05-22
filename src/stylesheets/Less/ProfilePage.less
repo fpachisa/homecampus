@@ -1,0 +1,172 @@
+/*
+ * Parent's Profile Page
+ */
+
+//General Structure
+.my-profile {
+	.make-row();
+	//border: 1px solid red;
+	overflow: hidden;
+	
+	&-section {
+		.make-xs-column(12);
+		.make-sm-column(6);
+		
+		//border: 1px solid blue;
+		overflow: hidden;
+		
+		//this will not work in < ie9 !! 
+		@media screen and (min-width: @screen-sm-min) {
+			max-height: 50%;
+			
+			&:first-child {
+				max-height: 100%;
+			}
+		}
+		
+		//top-bottom padding
+		padding-bottom: (@grid-gutter-width / 2);
+		
+		&__container {
+			.panel;
+			margin-bottom: 0;
+			height: 100%;
+			border: 1px solid #ddd;
+			.shadow-2dp();
+		}
+		
+		&__title {
+			.panel-heading;
+			.text-uppercase;
+			//border:1px solid violet;
+			
+			> * {
+				margin-bottom: 0;	//for the headings
+			}
+		}
+		
+		&__body {
+			.panel-body;
+			overflow: hidden;
+		}
+		
+		&__footer {
+			.panel-body;
+		}
+		
+		//move to center
+		&.move-to-center {
+			.make-sm-column-offset(3);
+		}
+	}
+}
+
+//Add Child Form
+.add-child-form {
+	//.make-row();
+	
+	> div {
+		.form-group;
+		.make-xs-column(12);
+		
+		label {
+			.make-sm-column(3);
+			padding:0;
+		}
+		
+		input, select {
+			.make-sm-column(9);
+			.form-control;
+			.input-sm;
+		}
+		
+		button {
+			.make-sm-column-offset(3);
+		}
+		
+		.help-txt { display:none;} /* just to be safe */
+	}
+	
+	> div.error {
+		label { color: @brand-danger; }
+		input, select { border: 1px solid darken(@brand-danger, 10%); }
+		.help-txt { 
+			.make-sm-column-offset(3);	//to align with the text field
+			color: @brand-danger;
+			display:inline;
+		}
+	}
+}
+
+//Child-deatil table
+.child-detail-table {
+	.table-responsive;
+	//border: 1px solid green;
+	cursor: default;
+	height: 150px;
+	overflow-y: auto !important;
+	
+	> table {
+		.table;
+		.table-hover;
+		
+		> thead {
+			background-color: #11bf8f;
+			color: #FFF;
+		}
+		
+		a {
+			color: #000;
+			font-weight: bold;
+			text-decoration: underline;
+			
+			&:hover {
+				color: #000;
+			}
+		}
+		
+		> tbody {
+			height: 100px;
+			overflow: auto;
+		}
+	}
+}
+
+
+
+// Forgot Password Page Styles
+.forgot-password {
+	.make-row();
+	
+	&__container {
+		.make-sm-column(6);
+		.make-sm-column-offset(3);
+		.make-xs-column(12);
+	}
+	
+	.password-error {
+		.alert;
+		.alert-danger;
+		.alert-dismissible;
+		position: relative;
+		
+		> .close {
+			position: relative;
+			top: -2px;
+			right: -21px;
+			float: right;
+    		font-size: 21px;
+    		font-weight: 700;
+    		line-height: 1;
+    		color: #000;
+    		text-shadow: 0 1px 0 #fff;
+    		filter: alpha(opacity=20);
+    		opacity: .2;
+    		
+    		&:hover,
+    		&:focus {
+    			text-decoration: none;
+    		}
+		}
+	}
+}

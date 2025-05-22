@@ -1,0 +1,204 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.2 Interpreting Algebraic Notations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:50%;">7.2 Interpreting Algebraic Notations</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">In the algebraic expression, 3<font class="grade7Variables">p</font> + 4<font class="grade7Variables">q</font> &minus; <font class="grade7Variables">r</font> + 12<font class="grade7Variables">pqr</font> &minus; 23
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) How many algebraic terms are present?</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if IANEasy_1_1_answer_correct is defined %}
+					<input id="IANEasy_1_1_answer" value='{{IANEasy_1_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_1_1_answer" value='{{IANEasy_1_1_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_1_1_answer_correct is defined %}
+					{% if IANEasy_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) Mention the constant term present in the expression.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if IANEasy_1_2_answer_correct is defined %}
+					<input id="IANEasy_1_2_answer" value='{{IANEasy_1_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_1_2_answer" value='{{IANEasy_1_2_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_1_2_answer_correct is defined %}
+					{% if IANEasy_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">c) What are the coefficients of <font class="grade7Variables">p, q</font> and <font class="grade7Variables">r</font>?</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Coefficient of p = &nbsp;
+				{% if IANEasy_1_3_answer_correct is defined %}
+					<input id="IANEasy_1_3_answer" value='{{IANEasy_1_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_1_3_answer" value='{{IANEasy_1_3_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_1_3_answer_correct is defined %}
+					{% if IANEasy_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Coefficient of q = &nbsp;
+				{% if IANEasy_1_4_answer_correct is defined %}
+					<input id="IANEasy_1_4_answer" value='{{IANEasy_1_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_1_4_answer" value='{{IANEasy_1_4_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_1_4_answer_correct is defined %}
+					{% if IANEasy_1_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Coefficient of r = &nbsp;
+				{% if IANEasy_1_5_answer_correct is defined %}
+					<input id="IANEasy_1_5_answer" value='{{IANEasy_1_5_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_1_5_answer" value='{{IANEasy_1_5_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_1_5_answer_correct is defined %}
+					{% if IANEasy_1_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>				
+		{% if IANEasy_1_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="IANEasy_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="IANEasy_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#IANEasy_1_1_answer").change(function()
+	{
+		question_id = "IANEasy_1";
+		question_type = "AlgebraicNotations"
+		answer_id = "IANEasy_1_1_answer";
+		entered_answer = $("#IANEasy_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#IANEasy_1_2_answer").change(function()
+			{
+				question_id = "IANEasy_1";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_1_2_answer";
+				entered_answer = $("#IANEasy_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_1_3_answer").change(function()
+			{
+				question_id = "IANEasy_1";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_1_3_answer";
+				entered_answer = $("#IANEasy_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_1_4_answer").change(function()
+			{
+				question_id = "IANEasy_1";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_1_4_answer";
+				entered_answer = $("#IANEasy_1_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_1_5_answer").change(function()
+			{
+				question_id = "IANEasy_1";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_1_5_answer";
+				entered_answer = $("#IANEasy_1_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#IANEasy_1_Submit").button({label:"Check Answers"});
+	$("#IANEasy_1_Retry").button({label:"Retry"});
+	$("#IANEasy_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicNotations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "IANEasy_1"+"#%$"+"IANEasy_1_1_answer"+"#%$"+$("#IANEasy_1_1_answer").val();
+		answers = answers + "#%$"+"IANEasy_1"+"#%$"+"IANEasy_1_2_answer"+"#%$"+$("#IANEasy_1_2_answer").val();
+		answers = answers + "#%$"+"IANEasy_1"+"#%$"+"IANEasy_1_3_answer"+"#%$"+$("#IANEasy_1_3_answer").val();
+		answers = answers + "#%$"+"IANEasy_1"+"#%$"+"IANEasy_1_4_answer"+"#%$"+$("#IANEasy_1_4_answer").val();
+		answers = answers + "#%$"+"IANEasy_1"+"#%$"+"IANEasy_1_5_answer"+"#%$"+$("#IANEasy_1_5_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#IANEasy_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "IANEasy_1_1_answer,IANEasy_1_2_answer,IANEasy_1_3_answer,";
+		answer_ids = answer_ids + "IANEasy_1_4_answer,IANEasy_1_5_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

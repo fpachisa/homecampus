@@ -1,0 +1,133 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.2 Types of Speed and Unit Conversions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:50%;">6.2 Types of Speed and Unit Conversions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mark started from his home at 3.00 PM and reached a grocery store 180 m away at a speed of 1.5 m/s. He purchased a list of items and left the store after half an hour. On his way back home, his average speed was 1 m/s. At what time does he reach home?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPTUCMedium_3_answer_correct is defined %}
+				<input id="SPTUCMedium_3_answer" value='{{SPTUCMedium_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> PM &nbsp;
+					{% if SPTUCMedium_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCMedium_3_answer_correct and SPTUCMedium_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCMedium_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCMedium_3_answer" value='{{SPTUCMedium_3_answer}}' style="width:50px;" > PM &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Eva runs 1 km in 2 min 24 seconds. Find her average speed in:<br>(Round off your answer to 2 decimal places where applicable.)</div>
+		</div>
+		<br><br>
+		<div style="margin-top:10px;margin-left:40px;">a) &nbsp;
+			{% if SPTUCMedium_4_1_answer_correct is defined %}
+				<input id="SPTUCMedium_4_1_answer" value='{{SPTUCMedium_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPTUCMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCMedium_4_1_answer_correct and SPTUCMedium_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCMedium_4_1_answer" value='{{SPTUCMedium_4_1_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-top:10px;margin-left:40px;">b) &nbsp;
+			{% if SPTUCMedium_4_2_answer_correct is defined %}
+				<input id="SPTUCMedium_4_2_answer" value='{{SPTUCMedium_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> m/s &nbsp;
+					{% if SPTUCMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCMedium_4_2_answer_correct and SPTUCMedium_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCMedium_4_2_answer" value='{{SPTUCMedium_4_2_answer}}' style="width:50px;" > m/s &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPTUCMedium_3_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="SPTUC_Medium_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="SPTUC_Medium_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPTUCMedium_3_answer").change(function()
+	{
+		question_id = "SPTUCMedium_3";
+		question_type = "TypesOfSpeed"
+		answer_id = "SPTUCMedium_3_answer";
+		entered_answer = $("#SPTUCMedium_3_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPTUCMedium_4_1_answer").change(function()
+			{
+				question_id = "SPTUCMedium_4";
+				question_type = "TypesOfSpeed"
+				answer_id = "SPTUCMedium_4_1_answer";
+				entered_answer = $("#SPTUCMedium_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPTUCMedium_4_2_answer").change(function()
+			{
+				question_id = "SPTUCMedium_4";
+				question_type = "TypesOfSpeed"
+				answer_id = "SPTUCMedium_4_2_answer";
+				entered_answer = $("#SPTUCMedium_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#SPTUC_Medium_2_submit").button({label:"Check Answers"});
+	$("#SPTUC_Medium_2_retry").button({label:"Retry"});
+	$("#SPTUC_Medium_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "TypesOfSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPTUCMedium_3"+"#%$"+"SPTUCMedium_3_answer"+"#%$"+$("#SPTUCMedium_3_answer").val();
+		answers = answers + "#%$"+"SPTUCMedium_4"+"#%$"+"SPTUCMedium_4_1_answer"+"#%$"+$("#SPTUCMedium_4_1_answer").val();
+		answers = answers + "#%$"+"SPTUCMedium_4"+"#%$"+"SPTUCMedium_4_2_answer"+"#%$"+$("#SPTUCMedium_4_2_answer").val();
+
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPTUC_Medium_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPTUCMedium_3_answer,SPTUCMedium_4_1_answer,SPTUCMedium_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

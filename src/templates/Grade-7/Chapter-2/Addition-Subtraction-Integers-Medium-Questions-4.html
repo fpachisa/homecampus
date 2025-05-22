@@ -1,0 +1,101 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+	<div style="margin-left:40px;margin-top:20px;">b) How much profit or loss do the partners make by the end of the 3 years?
+		<div style="margin-left:20px;margin-top:20px;">Answer:&nbsp; = $
+		{% if RNASMedium_4_4_answer_correct is defined %}
+			<input id="RNASMedium_4_4_answer" value='{{RNASMedium_4_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+				{% if RNASMedium_4_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not RNASMedium_4_4_answer_correct and RNASMedium_4_4_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNASMedium_4_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="RNASMedium_4_4_answer" value='{{RNASMedium_4_4_answer}}' style="width:40px;" > &nbsp;
+		{% endif %}
+		</div>
+	</div>
+	<div style="margin-left:40px;margin-top:20px;">c) If the business suffers a net loss of $50500 in the fourth year, what would be the net profit or loss by the end of the 4 years?
+		<div style="margin-left:20px;margin-top:20px;">Answer:&nbsp; = $
+		{% if RNASMedium_4_5_answer_correct is defined %}
+			<input id="RNASMedium_4_5_answer" value='{{RNASMedium_4_5_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+				{% if RNASMedium_4_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not RNASMedium_4_5_answer_correct and RNASMedium_4_5_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNASMedium_4_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="RNASMedium_4_5_answer" value='{{RNASMedium_4_5_answer}}' style="width:40px;" > &nbsp;
+		{% endif %}
+		</div>
+	</div>
+	{% if RNASMedium_4_4_answer_correct is defined %}
+		<div style="margin-top:30px;margin-left:340px;"><button id="RNASMedium_4_Retry" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:30px;margin-left:260px;"><button id="RNASMedium_4_Submit" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#RNASMedium_4_4_answer").change(function()
+	{
+		question_id = "RNASMedium_4";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASMedium_4_4_answer";
+		entered_answer = $("#RNASMedium_4_4_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNASMedium_4_5_answer").change(function()
+			{
+				question_id = "RNASMedium_4";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_4_5_answer";
+				entered_answer = $("#RNASMedium_4_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNASMedium_4_Submit").button({label:"Check Answers"});
+	$("#RNASMedium_4_Retry").button({label:"Retry"});
+	$("#RNASMedium_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASMedium_4"+"#%$"+"RNASMedium_4_4_answer"+"#%$"+$("#RNASMedium_4_4_answer").val();
+		answers = answers + "#%$"+"RNASMedium_4"+"#%$"+"RNASMedium_4_5_answer"+"#%$"+$("#RNASMedium_4_5_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASMedium_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASMedium_4_4_answer,RNASMedium_4_5_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

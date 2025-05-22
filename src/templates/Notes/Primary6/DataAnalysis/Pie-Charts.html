@@ -1,0 +1,95 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Data Analysis - Pie Charts | Home Campus</title>
+<meta name="description" content="Pie Charts" />
+<meta name="keywords" content='Pie Charts, primary 6 maths, grade 6 math, Singapore math, math for kids, elementary, online tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+
+<h2 class="learn-heading">Pie Charts</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Data_Analysis_Pie_Chart">Practice Unlimited Questions</a></div>
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__video">
+			<div>
+				<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/xO2HptuN5Wg?html5=1" frameborder="0"> </iframe>
+			</div>
+		</div>	
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				A survey of a group of 360 people shows the brand of handphones they use. The results of the survey are presented in the table below.<br /><br />
+				<table border="1">
+				<tr>
+				  <td style="background:#F7AD1C; vertical-align:middle"><div align="center"><font color="#FFFFFF"><strong>&nbsp;Handphone brand&nbsp;</strong></font></div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">&nbsp;Apple iPhone&nbsp;</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">&nbsp;Samsung&nbsp;</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">&nbsp;Google Pixel&nbsp;</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">&nbsp;Others&nbsp;</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">&nbsp;No handphone&nbsp;</div></td>
+				</tr>
+				<tr>
+				  <td style="background:#F7AD1C; vertical-align:middle"><div align="center"><font color="#FFFFFF"><strong>Number of people</strong></font></div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">90</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">180</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">36</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">45</div></td>
+				  <td style="background:white; vertical-align:middle"><div align="center">9</div></td>
+				</tr>
+				</table>				
+			</div>
+			<div class="col-10 col-off-1">
+				From the above, the fraction of the group that uses:<br><br>
+				Apple iPhone: {{frGen(90,360)}} &nbsp;=&nbsp; {{frGen(1,4)}}<br><br>
+				Samsung: {{frGen(180,360)}} &nbsp;=&nbsp; {{frGen(1,2)}}<br><br>
+				Google Pixel: {{frGen(36,360)}} &nbsp;=&nbsp; {{frGen(1,10)}}<br><br>
+				Other handphones: {{frGen(45,360)}} &nbsp;=&nbsp; {{frGen(1,8)}}<br><br>
+				No handphone: {{frGen(9,360)}} &nbsp;=&nbsp; {{frGen(1,40)}}<br><br>
+				Now, let's take all these fractions and present them in a more readable form so they are easy to compare. We'll use what we call a pie chart as below.
+			</div>
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_pie_charts_explanation.png" /><br /><br />
+				The above circle graph known as a pie chart shows the popularity of handphone brands among the group.<br><br>
+				Now, let's answer some questions based on the above pie chart.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>a) Which was the most popular handphone brand? Explain.</strong><br><br>
+				Samsung; because it got the biggest pie in the pie chart - half the pie.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>b)  What percentage of the group used the Apple iPhone?</strong><br><br>
+				1 whole pie	 &nbsp;=&nbsp; 100%<br><br>
+				{{frGen(1,4)}}of a pie &nbsp;=&nbsp; 25%<br><br>
+				25% of the group used Apple iPhone.
+			</div>
+			<div class="col-6 col-off-1 hint-box">
+				{{frGen(1,4)}} or 25% is marked by a right angle in the pie chart.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>c)  How many times as many people used Samsumg handphones as compared to those who used Apple iPhone?</strong><br><br>
+				Samsung &nbsp; --> {{frGen(1,2)}}<br><br>
+				Apple iPhone &nbsp; --> {{frGen(1,4)}}<br><br>
+				{{frGen(1,2)}} &nbsp;&divide;&nbsp; {{frGen(1,4)}} &nbsp;=&nbsp; {{frGen(1,2)}} &nbsp;&times;&nbsp; {{frGen(4,1)}} &nbsp;=&nbsp; 2<br><br>
+				2 times as many people used Samsung handphones as compared to those who used Apple iPhone.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>d) What percentage of the people surveyed used Google Pixel?</strong><br><br>
+				{{frGen(1,10)}} &nbsp;&times;&nbsp;  100% &nbsp;&times;&nbsp; 10%<br><br>
+				10% of the people surveyed used Google Pixel.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Data_Analysis_Pie_Chart">Practice Unlimited Questions</a></div>		
+	</div>
+</div>
+
+{% endblock %}

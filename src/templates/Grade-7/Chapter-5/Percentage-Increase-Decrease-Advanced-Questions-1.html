@@ -1,0 +1,132 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.3 Percentage Increase and Decrease</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:54%;">5.3 Percentage Increase and Decrease</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mr. Zen got a reduction in his salary by 9% to $7280. However, his expenses remain the same as earlier which constitute 60% of his previous salary. Find</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) his previous salary</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;$
+			{% if PRIDAdvanced_1_1_answer_correct is defined %}
+				<input id="PRIDAdvanced_1_1_answer" value='{{PRIDAdvanced_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if PRIDAdvanced_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDAdvanced_1_1_answer_correct and PRIDAdvanced_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDAdvanced_1_1_answer" value='{{PRIDAdvanced_1_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) the percentage decrease in his savings</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if PRIDAdvanced_1_2_answer_correct is defined %}
+				<input id="PRIDAdvanced_1_2_answer" value='{{PRIDAdvanced_1_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDAdvanced_1_2_answer_correct and PRIDAdvanced_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDAdvanced_1_2_answer" value='{{PRIDAdvanced_1_2_answer}}' style="width:30px;" > % &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The selling price of a product is $1200, which is made up of 40% material costs, 30% labour cost and the rest is profit. The manufacturer outsources the production to a cheaper labour such that the labour cost is now reduced by 33.33%. The manufacturer however, continues to sell the product at the same price and earns more profit. Find the percentage change in the profit earned. (round off to 2 decimal places)</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">Percentage change:&nbsp;
+			{% if PRIDAdvanced_2_answer_correct is defined %}
+				<input id="PRIDAdvanced_2_answer" value='{{PRIDAdvanced_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDAdvanced_2_answer_correct and PRIDAdvanced_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDAdvanced_2_answer" value='{{PRIDAdvanced_2_answer}}' style="width:50px;" > % &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if PRIDAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:380px;"><button id="PRID_Advanced_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:320px;"><button id="PRID_Advanced_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRIDAdvanced_1_1_answer").change(function()
+	{
+		question_id = "PRIDAdvanced_1";
+		question_type = "PercentageIncreaseDecrease"
+		answer_id = "PRIDAdvanced_1_1_answer";
+		entered_answer = $("#PRIDAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRIDAdvanced_1_2_answer").change(function()
+			{
+				question_id = "PRIDAdvanced_1";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDAdvanced_1_2_answer";
+				entered_answer = $("#PRIDAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDAdvanced_2_answer").change(function()
+			{
+				question_id = "PRIDAdvanced_2";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDAdvanced_2_answer";
+				entered_answer = $("#PRIDAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#PRID_Advanced_1_submit").button({label:"Check Answers"});
+	$("#PRID_Advanced_1_retry").button({label:"Retry"});
+	$("#PRID_Advanced_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageIncreaseDecrease"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRIDAdvanced_1"+"#%$"+"PRIDAdvanced_1_1_answer"+"#%$"+$("#PRIDAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"PRIDAdvanced_1"+"#%$"+"PRIDAdvanced_1_2_answer"+"#%$"+$("#PRIDAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"PRIDAdvanced_2"+"#%$"+"PRIDAdvanced_2_answer"+"#%$"+$("#PRIDAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRID_Advanced_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRIDAdvanced_1_1_answer,PRIDAdvanced_1_2_answer,PRIDAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

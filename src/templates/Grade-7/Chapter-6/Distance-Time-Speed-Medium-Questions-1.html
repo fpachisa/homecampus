@@ -1,0 +1,160 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.1 Distance, Time and Speed</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:62%;">6.1 Distance, Time and Speed</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Singapore Marathon is a road running event of 42.195 km. In 2013, the record time for the men's event was 2 hours 15 min.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) Find the speed of the winner (correct to 2 decimal places).</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if SPDTSMedium_1_1_answer_correct is defined %}
+				<input id="SPDTSMedium_1_1_answer" value='{{SPDTSMedium_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPDTSMedium_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_1_1_answer_correct and SPDTSMedium_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_1_1_answer" value='{{SPDTSMedium_1_1_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;width:15px;">b)</div>
+		<div style="display:inline-block;margin-top:10px;width:380px;vertical-align:top;">Had he maintained a speed of 20 km/h, how much time would he take to complete the race? Find the answer correct to 1 decimal place.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if SPDTSMedium_1_2_answer_correct is defined %}
+				<input id="SPDTSMedium_1_2_answer" value='{{SPDTSMedium_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> h &nbsp;
+					{% if SPDTSMedium_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_1_2_answer_correct and SPDTSMedium_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_1_2_answer" value='{{SPDTSMedium_1_2_answer}}' style="width:50px;" > h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Iyer's walking speed is 1.5m/s. Find out the following:</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) Time taken to cover a distance of 33 m?</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if SPDTSMedium_2_1_answer_correct is defined %}
+				<input id="SPDTSMedium_2_1_answer" value='{{SPDTSMedium_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> seconds &nbsp;
+					{% if SPDTSMedium_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_2_1_answer_correct and SPDTSMedium_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_2_1_answer" value='{{SPDTSMedium_2_1_answer}}' style="width:50px;" > seconds &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) Distance covered in 30 s = 
+			{% if SPDTSMedium_2_2_answer_correct is defined %}
+				<input id="SPDTSMedium_2_2_answer" value='{{SPDTSMedium_2_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> m &nbsp;
+					{% if SPDTSMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_2_2_answer_correct and SPDTSMedium_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_2_2_answer" value='{{SPDTSMedium_2_2_answer}}' style="width:50px;" > m &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPDTSMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:320px;"><button id="SPDTS_Medium_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:220px;"><button id="SPDTS_Medium_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPDTSMedium_1_1_answer").change(function()
+	{
+		question_id = "SPDTSMedium_1";
+		question_type = "DistanceTimeSpeed"
+		answer_id = "SPDTSMedium_1_1_answer";
+		entered_answer = $("#SPDTSMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPDTSMedium_1_2_answer").change(function()
+			{
+				question_id = "SPDTSMedium_1";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_1_2_answer";
+				entered_answer = $("#SPDTSMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSMedium_2_1_answer").change(function()
+			{
+				question_id = "SPDTSMedium_2";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_2_1_answer";
+				entered_answer = $("#SPDTSMedium_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSMedium_2_2_answer").change(function()
+			{
+				question_id = "SPDTSMedium_2";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_2_2_answer";
+				entered_answer = $("#SPDTSMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#SPDTS_Medium_1_submit").button({label:"Check Answers"});
+	$("#SPDTS_Medium_1_retry").button({label:"Retry"});
+	$("#SPDTS_Medium_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "DistanceTimeSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPDTSMedium_1"+"#%$"+"SPDTSMedium_1_1_answer"+"#%$"+$("#SPDTSMedium_1_1_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_1"+"#%$"+"SPDTSMedium_1_2_answer"+"#%$"+$("#SPDTSMedium_1_2_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_2"+"#%$"+"SPDTSMedium_2_1_answer"+"#%$"+$("#SPDTSMedium_2_1_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_2"+"#%$"+"SPDTSMedium_2_2_answer"+"#%$"+$("#SPDTSMedium_2_2_answer").val();
+
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPDTS_Medium_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPDTSMedium_1_1_answer,SPDTSMedium_1_2_answer,SPDTSMedium_2_1_answer,SPDTSMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

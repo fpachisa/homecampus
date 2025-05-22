@@ -1,0 +1,128 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:40%;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			A marketing company hired sales representatives to work at a rate of $p per hour. Outperforming employees were entitled a commission of 2.5 times the hourly wage rate per unit of sales volume over and above the target volume. 
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">a)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				How much would an employee earn in a particular working week of 5 days if he worked for an average of 8 hours in a day and achieved a sales volume of 13 units above the target volume in that particular week.
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if ASLEAdvanced_4_1_answer_correct is defined %}
+					<input id="ASLEAdvanced_4_1_answer" value='{{ASLEAdvanced_4_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="ASLEAdvanced_4_1_answer" value='{{ASLEAdvanced_4_1_answer}}' style="width:40px;text-align:center;">
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_4_1_answer_correct is defined %}
+					{% if ASLEAdvanced_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">b)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				How much would he earn in that particular week if p=50
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if ASLEAdvanced_4_2_answer_correct is defined %}
+					<input id="ASLEAdvanced_4_2_answer" value='{{ASLEAdvanced_4_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="ASLEAdvanced_4_2_answer" value='{{ASLEAdvanced_4_2_answer}}' style="width:40px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_4_2_answer_correct is defined %}
+					{% if ASLEAdvanced_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if ASLEAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="ASLEAdvanced_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="ASLEAdvanced_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ASLEAdvanced_4_1_answer").change(function()
+	{
+		question_id = "ASLEAdvanced_4";
+		question_type = "AdditionSubtractionLinearExpressions"
+		answer_id = "ASLEAdvanced_4_1_answer";
+		entered_answer = $("#ASLEAdvanced_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#ASLEAdvanced_4_2_answer").change(function()
+			{
+				question_id = "ASLEAdvanced_4";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEAdvanced_4_2_answer";
+				entered_answer = $("#ASLEAdvanced_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#ASLEAdvanced_4_Submit").button({label:"Check Answers"});
+	$("#ASLEAdvanced_4_Retry").button({label:"Retry"});
+	$("#ASLEAdvanced_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionLinearExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ASLEAdvanced_4"+"#%$"+"ASLEAdvanced_4_1_answer"+"#%$"+$("#ASLEAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"ASLEAdvanced_4"+"#%$"+"ASLEAdvanced_4_2_answer"+"#%$"+$("#ASLEAdvanced_4_2_answer").val();
+		
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ASLEAdvanced_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ASLEAdvanced_4_1_answer,ASLEAdvanced_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,157 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="">World Health Organization's report on Diabetes in 2013 revealed that approximately 347 million people suffered from diabetes worldwide. This value has been rounded to the nearest million. What are the largest and smallest possible values of the occurrence of diabetes worldwide in 2013?
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">Largest possible value &nbsp; = &nbsp; 
+			{% if AEROAdvanced_1_1_answer_correct is defined %}
+				<input id="AEROAdvanced_1_1_answer" value='{{AEROAdvanced_1_1_answer}}' readonly style="width:70px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROAdvanced_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROAdvanced_1_1_answer" value='{{AEROAdvanced_1_1_answer}}' style="width:70px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">Smallest possible value &nbsp; = &nbsp; 
+			{% if AEROAdvanced_1_2_answer_correct is defined %}
+				<input id="AEROAdvanced_1_2_answer" value='{{AEROAdvanced_1_2_answer}}' readonly style="width:70px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROAdvanced_1_2_answer" value='{{AEROAdvanced_1_2_answer}}' style="width:70px;" > &nbsp;
+			{% endif %}
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="">The area of a rectangular football field is equal to 7140.54 m<sup>2</sup>. If the length of the field is 105.12 m, find
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) The breadth of the field, correct to 2 decimal places.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:
+			{% if AEROAdvanced_2_1_answer_correct is defined %}
+				<input id="AEROAdvanced_2_1_answer" value='{{AEROAdvanced_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> m&nbsp;
+					{% if AEROAdvanced_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROAdvanced_2_1_answer" value='{{AEROAdvanced_2_1_answer}}' style="width:50px;" > m&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) The perimeter of the field, correct to the nearest m.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:
+			{% if AEROAdvanced_2_2_answer_correct is defined %}
+				<input id="AEROAdvanced_2_2_answer" value='{{AEROAdvanced_2_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> m&nbsp;
+					{% if AEROAdvanced_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROAdvanced_2_2_answer" value='{{AEROAdvanced_2_2_answer}}' style="width:40px;" > m&nbsp;
+			{% endif %}	
+		</div>
+		
+		
+		{% if AEROAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:-30px;margin-left:340px;"><button id="AEROAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="AEROAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AEROAdvanced_1_1_answer").change(function()
+	{
+		question_id = "AEROAdvanced_1";
+		question_type = "RoundingOff"
+		answer_id = "AEROAdvanced_1_1_answer";
+		entered_answer = $("#AEROAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AEROAdvanced_1_2_answer").change(function()
+			{
+				question_id = "AEROAdvanced_1";
+				question_type = "RoundingOff"
+				answer_id = "AEROAdvanced_1_2_answer";
+				entered_answer = $("#AEROAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AEROAdvanced_2_1_answer").change(function()
+			{
+				question_id = "AEROAdvanced_2";
+				question_type = "RoundingOff"
+				answer_id = "AEROAdvanced_2_1_answer";
+				entered_answer = $("#AEROAdvanced_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AEROAdvanced_2_2_answer").change(function()
+			{
+				question_id = "AEROAdvanced_2";
+				question_type = "RoundingOff"
+				answer_id = "AEROAdvanced_2_2_answer";
+				entered_answer = $("#AEROAdvanced_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AEROAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#AEROAdvanced_1_Retry").button({label:"Retry"});
+	$("#AEROAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RoundingOff"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AEROAdvanced_1"+"#%$"+"AEROAdvanced_1_1_answer"+"#%$"+$("#AEROAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"AEROAdvanced_1"+"#%$"+"AEROAdvanced_1_2_answer"+"#%$"+$("#AEROAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"AEROAdvanced_2"+"#%$"+"AEROAdvanced_2_1_answer"+"#%$"+$("#AEROAdvanced_2_1_answer").val();
+		answers = answers + "#%$"+"AEROAdvanced_2"+"#%$"+"AEROAdvanced_2_2_answer"+"#%$"+$("#AEROAdvanced_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AEROAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AEROAdvanced_1_1_answer,AEROAdvanced_1_2_answer,AEROAdvanced_2_1_answer,AEROAdvanced_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

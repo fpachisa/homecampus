@@ -1,0 +1,104 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.2 Reverse Percentages</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.2 Reverse Percentages</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">I was experimenting with a recipe that contained 62% milk, 28% nuts and 10% sugar, all the ingredients measured by their masses. If the sum of the masses of nuts and sugar is 350 g, find</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:15px;display:inline-block;">a)</div>
+		<div style="display:inline-block;width:320px;vertical-align:top;margin-top:20px;">the mass of the prepared dish assuming there was no loss of ingredients during cooking (round off your answer to the nearest g.)</div>
+		<div style="margin-left:80px;margin-top:20px;">Answer:&nbsp;
+			{% if PRRPAdvanced_3_1_answer_correct is defined %}
+				<input id="PRRPAdvanced_3_1_answer" value='{{PRRPAdvanced_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> g &nbsp;
+					{% if PRRPAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPAdvanced_3_1_answer_correct and PRRPAdvanced_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPAdvanced_3_1_answer" value='{{PRRPAdvanced_3_1_answer}}' style="width:50px;" > g &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:15px;display:inline-block;">b)</div>
+		<div style="display:inline-block;width:320px;vertical-align:top;margin-top:20px;">the quantity of milk used in the recipe (round off your answer to the nearest g.)</div>
+		<div style="margin-left:80px;margin-top:20px;">Answer:&nbsp;
+			{% if PRRPAdvanced_3_2_answer_correct is defined %}
+				<input id="PRRPAdvanced_3_2_answer" value='{{PRRPAdvanced_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> g &nbsp;
+					{% if PRRPAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPAdvanced_3_2_answer_correct and PRRPAdvanced_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPAdvanced_3_2_answer" value='{{PRRPAdvanced_3_2_answer}}' style="width:50px;" > g &nbsp;
+			{% endif %}	
+		</div>
+
+		{% if PRRPAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:40px;margin-left:200px;"><button id="PRRP_Advanced_3_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:200px;"><button id="PRRP_Advanced_3_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRPAdvanced_3_1_answer").change(function()
+	{
+		question_id = "PRRPAdvanced_3";
+		question_type = "ReversePercentages"
+		answer_id = "PRRPAdvanced_3_1_answer";
+		entered_answer = $("#PRRPAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRPAdvanced_3_2_answer").change(function()
+			{
+				question_id = "PRRPAdvanced_3";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPAdvanced_3_2_answer";
+				entered_answer = $("#PRRPAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRRP_Advanced_3_submit").button({label:"Check Answers"});
+	$("#PRRP_Advanced_3_retry").button({label:"Retry"});
+	$("#PRRP_Advanced_3_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ReversePercentages"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRPAdvanced_3"+"#%$"+"PRRPAdvanced_3_1_answer"+"#%$"+$("#PRRPAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"PRRPAdvanced_3"+"#%$"+"PRRPAdvanced_3_2_answer"+"#%$"+$("#PRRPAdvanced_3_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRP_Advanced_3_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRPAdvanced_3_1_answer,PRRPAdvanced_3_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

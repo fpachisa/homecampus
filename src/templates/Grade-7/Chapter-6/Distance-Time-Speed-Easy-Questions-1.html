@@ -1,0 +1,136 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.1 Distance, Time and Speed</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:62%;">6.1 Distance, Time and Speed</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A fisherman covers a distance of 36 km in 1 hour 48 minutes on his boat. What is the speed of his boat?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPDTSEasy_1_answer_correct is defined %}
+				<input id="SPDTSEasy_1_answer" value='{{SPDTSEasy_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPDTSEasy_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSEasy_1_answer_correct and SPDTSEasy_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSEasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSEasy_1_answer" value='{{SPDTSEasy_1_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The speed limit on a bridge is 100 km/h. What is the time taken, in minutes, to cover the entire length of the bridge of 7.5 km if the speed maintained is equal to half of the maximum permissible speed limit?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPDTSEasy_2_answer_correct is defined %}
+				<input id="SPDTSEasy_2_answer" value='{{SPDTSEasy_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> min &nbsp;
+					{% if SPDTSEasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSEasy_2_answer_correct and SPDTSEasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSEasy_2_answer" value='{{SPDTSEasy_2_answer}}' style="width:50px;" > min &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The speed of an intercity train is 80 km/h. If it takes 4 hours 15 minutes to reach the destination, compute the distance between the two cities.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPDTSEasy_3_answer_correct is defined %}
+				<input id="SPDTSEasy_3_answer" value='{{SPDTSEasy_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km &nbsp;
+					{% if SPDTSEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSEasy_3_answer_correct and SPDTSEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSEasy_3_answer" value='{{SPDTSEasy_3_answer}}' style="width:50px;" > km &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPDTSEasy_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:320px;"><button id="SPDTS_Easy_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:220px;"><button id="SPDTS_Easy_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPDTSEasy_1_answer").change(function()
+	{
+		question_id = "SPDTSEasy_1";
+		question_type = "DistanceTimeSpeed"
+		answer_id = "SPDTSEasy_1_answer";
+		entered_answer = $("#SPDTSEasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPDTSEasy_2_answer").change(function()
+			{
+				question_id = "SPDTSEasy_2";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSEasy_2_answer";
+				entered_answer = $("#SPDTSEasy_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSEasy_3_answer").change(function()
+			{
+				question_id = "SPDTSEasy_3";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSEasy_3_answer";
+				entered_answer = $("#SPDTSEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#SPDTS_Easy_1_submit").button({label:"Check Answers"});
+	$("#SPDTS_Easy_1_retry").button({label:"Retry"});
+	$("#SPDTS_Easy_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "DistanceTimeSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPDTSEasy_1"+"#%$"+"SPDTSEasy_1_answer"+"#%$"+$("#SPDTSEasy_1_answer").val();
+		answers = answers + "#%$"+"SPDTSEasy_2"+"#%$"+"SPDTSEasy_2_answer"+"#%$"+$("#SPDTSEasy_2_answer").val();
+		answers = answers + "#%$"+"SPDTSEasy_3"+"#%$"+"SPDTSEasy_3_answer"+"#%$"+$("#SPDTSEasy_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPDTS_Easy_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPDTSEasy_1_answer,SPDTSEasy_2_answer,SPDTSEasy_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

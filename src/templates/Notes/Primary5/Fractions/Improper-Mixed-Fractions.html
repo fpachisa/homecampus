@@ -1,0 +1,216 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGenQ(W,N,D) %}
+&nbsp;&nbsp;<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">&nbsp;&nbsp;&nbsp;{{N}}</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Improper Fractions and Mixed Numbers - Home Campus</title>
+<meta name="keywords" content="Improper Fractions Mixed Numbers">
+<meta name="description" content="What is an improper fraction? What is a mixed number? How to convert mixed number to improper fraction?" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Improper Fractions and Mixed Numbers</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Mixed_Numbers_Improper_Fractions">Practice Unlimited Questions</a></div>
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(217, 255, 211);">			
+		<div class="concept-set__question">
+			<h4>What is an improper fraction?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				An <b>improper fraction</b> is a fraction in which the numerator is bigger than or equal to the denominator.<br /><br />
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept 1-->
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(255, 182, 182);">			
+		<div class="concept-set__question">
+			<h4>What is a mixed number?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				A <b>mixed number</b> is made up of two parts - a whole number and a proper fraction.<br /><br />
+			</div>
+		</div>
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/FzBz1IbrwGE?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded"  allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+					
+	</div>
+</div><!-- End of concept 2-->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>1. The video below explains what improper fractions and mixed numbers are.<br /><br /></h4></div>			
+
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/3vzMNQzUrw4?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-6 col-off-1">
+				<br />
+				
+				
+				
+				Improper fractions and mixed numbers are 2 different ways to represent the <b>same number</b>.<br /><br />
+				Therefore, improper fractions can be converted to mixed numbers and mixed numbers can be converted back to improper fractions.
+			</div>
+			<div class="col-4 hint-box" style="margin:30px;">
+				To write an improper fraction, you count the pizza slices.<br /><br />
+				To write a mixed number, you count the whole pizzas.
+			</div>
+			<div class="col-4 hint-box" style="margin:30px;">
+				<b>Denominator</b> means how many slices to cut each pizza into.<br /><br />
+				<b>Numerator</b> means how many slices you get.
+  			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Mixed_Numbers_Improper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. Convert &nbsp;&nbsp;{{ frGen(11,4) }} to a mixed number.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Let's represent the improper fraction {{ frGen(11,4) }} using pizza slices.<br /><br />
+				
+				The denominator 4 means that each pizza should be cut into 4 slices.<br />
+				The numerator 11 means that your share of the pizza is 11 slices.<br /><br />
+				
+				<img src="/images/notes/converting_improper_fraction_to_mixed_number.png" alt="square metre or square meter" /><br />
+				
+				To convert an improper fraction to a mixed number, divide the numerator by the denominator (11 divided by 4).<br><br>
+				
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(11,4) }}</b> <br />
+				=&nbsp; 11 &nbsp;&divide;&nbsp; <font color=green><b>4</b></font> <br />
+				=&nbsp; <font color=red><b>2</b></font> R <font color=blue><b>3</b></font> &nbsp; (<font color=red><b>2</b></font> whole pizzas and <font color=blue><b>3</b></font> slices out of <font color=green><b>4</b></font> of another pizza)<br />
+				=&nbsp; <b>{{ mixNumGen(2,3,4) }}</b>
+				
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Mixed_Numbers_Improper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Convert &nbsp;&nbsp;{{ mixNumGenQ(2,3,4) }} &nbsp; to an improper fraction.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-5 col-off-1">
+				Let's represent the mixed fraction {{ mixNumGen(2,3,4) }} using pizza slices.<br /><br />
+				
+				The whole number part 2 means there are 2 whole pizzas.<br /><br />
+				
+				The fractional part {{ frGen(3,4) }} means there are 3 slices out of 4 of another pizza.<br /><br />
+			</div>
+			<div class="col-4 hint-box" style="margin:30px;">
+				Converting a mixed number to an improper fraction means you are given whole pizzas and you have to find out how many pizza slices they will make.
+			</div>
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/converting_mixed_number_to_improper_fraction.png" alt="square metre or square meter" /><br />
+			</div>
+			<div class="col-6 col-off-1">
+				To convert a mixed number to an improper fraction, first, multiply the whole number part by the denominator of the fractional part, then add the numerator to the product.<br><br>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp; <b>{{ mixNumGen(2,3,4) }}</b> <br />
+				=&nbsp;&nbsp; 2 &nbsp;+&nbsp; {{ frGen(3,4) }} <br />
+				=&nbsp;{{ frGen("(2 x 4) + 3",4) }} <br />
+				=&nbsp;{{ frGen("8 + 3",4) }} <br />
+				=&nbsp;<b>{{ frGen(11,4) }}</b>
+			</div>
+			<div class="col-4 hint-box" style="margin:30px;">
+				If each pizza has got 4 slices then 2 whole pizzas will have 2 &times; 4 slices or 8 slices.
+  			</div>
+
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Mixed_Numbers_Improper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an improper fraction?","acceptedAnswer":{"@type":"Answer","text":"An improper fraction is a fraction in which the numerator is bigger than or equal to the denominator."}},{"@type":"Question","name":"What is a mixed number?","acceptedAnswer":{"@type":"Answer","text":"A mixed number is made up of two parts - a whole number and a proper fraction."}},{"@type":"Question","name":"How to convert mixed number to an improper fraction?","acceptedAnswer":{"@type":"Answer","text":"To convert a mixed number to an improper fraction, first, multiply the whole number part by the denominator of the fractional part, then add the numerator to the product."}}]}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "HowTo", 
+  "name": "Convert mixed number to an improper fractions",
+  "description": "Let's look at an example to understand this: Convert  2 3/4 to an improper fraction.",
+  "image": "https://my.homecampus.com.sg/images/notes/converting_mixed_number_to_improper_fraction.png",
+  "totalTime": "PT5M",
+  "supply": {
+    "@type": "HowToSupply",
+    "name": "Pen and Paper"
+  },
+  "tool": {
+    "@type": "HowToTool",
+    "name": "Not Required"
+  },
+  "step": [{
+    "@type": "HowToStep",
+    "text": "To convert a mixed number to an improper fraction, first, multiply the whole number part by the denominator of the fractional part, then add the numerator to the product.",
+    "image": "https://my.homecampus.com.sg/images/notes/converting_mixed_number_to_improper_fraction.png",
+    "name": "Convert mixed number to an improper fraction",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Mixed-Numbers-Improper-Fractions"
+  },{
+    "@type": "HowToStep",
+    "text": "2 3/4 = 2 + 3/4 = (2x4 + 3)/4 = (8 + 3)/4 = 11/4",
+    "image": "https://my.homecampus.com.sg/images/notes/converting_mixed_number_to_improper_fraction.png",
+    "name": "Convert mixed number to an improper fraction",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Mixed-Numbers-Improper-Fractions"
+  }]    
+}
+</script>
+
+{% endblock %}

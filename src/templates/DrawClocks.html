@@ -1,0 +1,34 @@
+{% extends 'PracticePageSkeleton.html' %}
+{% block HTML5Canvas %}    	
+	<div id="canvasCrossBrowserDiv" style="background-image: url(/images/P3ProblemImages/cface.png);width:388px;"></div>
+	<script type="text/javascript" src="/js/DrawClocks.js"></script>
+  	<script type="text/javascript">{{FunctionCall}};</script>
+	<br><br>
+{% endblock %}
+{% block content%}	
+	<table>
+	<tr>
+		<td>
+    	<div style="color: #2B7657">
+    	<b>
+   		{% if dollar_unit is not none and dollar_unit != "None" %}
+   			{{dollar_unit|safe}}
+   		{% endif %}
+    	</b>
+    	<input id="answer" size=4 onkeypress="var tl=this.value.length; this.size=tl;"
+		{% if answer_submitted is not none and answer_submitted != "None" %}
+		value='{{answer_submitted|safe}}'
+		{%endif%}    	
+    	><b>&nbsp;
+   		{% if unit is not none and unit != "None" %}
+   			{{unit|safe}}
+   		{% endif %}
+    	</b>
+    	</div>
+    	</td>
+    	
+    	<td><p id="correct" style="display: none"><img src="/images/correct.png" alt="Correct"></p></td>
+    </tr>
+    </table>
+	<br>
+{% endblock %}

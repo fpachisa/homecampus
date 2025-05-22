@@ -1,0 +1,224 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:40%;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A pipe drains water at a rate of 30 litres in 5 minutes. If it is used to drain away water from a tank of capacity <font class="grade7Variables">w</font> litres, find linear expressions for the following:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">a)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				Time taken, in seconds, to drain away water from the tank completely.
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ASLEAdvanced_2_1_answer_correct is defined %}
+					<input id="ASLEAdvanced_2_1_answer" value='{{ASLEAdvanced_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> seconds
+				{% else %}
+					<input id="ASLEAdvanced_2_1_answer" value='{{ASLEAdvanced_2_1_answer}}' style="width:30px;" > seconds
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_2_1_answer_correct is defined %}
+					{% if ASLEAdvanced_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">b)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				Volume of water, in litres, drained in (<font class="grade7Variables">t</font> + 21) minutes.
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ASLEAdvanced_2_2_answer_correct is defined %}
+					<input id="ASLEAdvanced_2_2_answer" value='{{ASLEAdvanced_2_2_answer}}' readonly style="width:45px;background-color:#DFDFDF;"> litres
+				{% else %}
+					<input id="ASLEAdvanced_2_2_answer" value='{{ASLEAdvanced_2_2_answer}}' style="width:45px;" > litres
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_2_2_answer_correct is defined %}
+					{% if ASLEAdvanced_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">c)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				Time taken, in minutes, to drain away (<font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font>) litres of water.
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ASLEAdvanced_2_3_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='A' disabled
+				{% if ASLEAdvanced_2_3_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='B' disabled
+				{% if ASLEAdvanced_2_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='C' disabled
+				{% if ASLEAdvanced_2_3_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">5(<font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font>)<br>_______<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+						
+
+				<div style="display:inline-block;margin-top:-10px;margin-left:20px;">	
+					{% if ASLEAdvanced_2_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='A'
+				{% if ASLEAdvanced_2_3_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='B'
+				{% if ASLEAdvanced_2_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEAdvanced_2_3_answer" value='C'
+				{% if ASLEAdvanced_2_3_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">5(<font class="grade7Variables">w</font> &minus; <font class="grade7Variables">x</font>)<br>_______<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+			{% endif %}	
+		</div>
+
+
+		{% if ASLEAdvanced_2_1_answer_correct is defined %}
+			<div style="margin-top:-20px;margin-left:340px;"><button id="ASLEAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-20px;margin-left:280px;"><button id="ASLEAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ASLEAdvanced_2_1_answer").change(function()
+	{
+		question_id = "ASLEAdvanced_2";
+		question_type = "AdditionSubtractionLinearExpressions"
+		answer_id = "ASLEAdvanced_2_1_answer";
+		entered_answer = $("#ASLEAdvanced_2_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#ASLEAdvanced_2_2_answer").change(function()
+			{
+				question_id = "ASLEAdvanced_2";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEAdvanced_2_2_answer";
+				entered_answer = $("#ASLEAdvanced_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='ASLEAdvanced_2_3_answer']").click(function()
+			{
+				question_id = "ASLEAdvanced_2";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEAdvanced_2_3_answer";
+				entered_answer = $("input:radio[name=ASLEAdvanced_2_3_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#ASLEAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#ASLEAdvanced_2_Retry").button({label:"Retry"});
+	$("#ASLEAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionLinearExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ASLEAdvanced_2"+"#%$"+"ASLEAdvanced_2_1_answer"+"#%$"+$("#ASLEAdvanced_2_1_answer").val();
+		answers = answers + "#%$"+"ASLEAdvanced_2"+"#%$"+"ASLEAdvanced_2_2_answer"+"#%$"+$("#ASLEAdvanced_2_2_answer").val();
+		answers = answers + "#%$"+"ASLEAdvanced_2"+"#%$"+"ASLEAdvanced_2_3_answer"+"#%$"+$("input:radio[name=ASLEAdvanced_2_3_answer]:checked").val();
+		
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ASLEAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ASLEAdvanced_2_1_answer,ASLEAdvanced_2_2_answer,ASLEAdvanced_2_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

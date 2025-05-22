@@ -1,0 +1,217 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Express 92.1870 correct to:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 1 s.f. &nbsp;&nbsp;&nbsp;
+			Answer:
+			{% if AESFEasy_1_1_answer_correct is defined %}
+				<input id="AESFEasy_1_1_answer" value='{{AESFEasy_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESFEasy_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESFEasy_1_1_answer_correct and AESFEasy_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESFEasy_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESFEasy_1_1_answer" value='{{AESFEasy_1_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 3 s.f. &nbsp;&nbsp;&nbsp;
+			Answer:
+			{% if AESFEasy_1_2_answer_correct is defined %}
+				<input id="AESFEasy_1_2_answer" value='{{AESFEasy_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESFEasy_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESFEasy_1_2_answer_correct and AESFEasy_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESFEasy_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESFEasy_1_2_answer" value='{{AESFEasy_1_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Select the scale reading that gives the most accurate measurement in each set of numbers:
+			</div>
+		</div>
+		<div style="display:inline-block;margin-left:40px;width:15px;margin-top:10px">a)</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;vertical-align:top;">
+			{% if AESFEasy_2_1_answer_correct is defined %}
+				<input type=radio name="AESFEasy_2_1_answer" value='a' disabled
+				{% if AESFEasy_2_1_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >5.1 m<br>
+				<input type=radio name="AESFEasy_2_1_answer" value='b' disabled
+				{% if AESFEasy_2_1_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5.10 m<br>
+				<input type=radio name="AESFEasy_2_1_answer" value='c' disabled
+				{% if AESFEasy_2_1_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5.095 m&nbsp;&nbsp;
+				{% if AESFEasy_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{AESFEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="AESFEasy_2_1_answer" value='a'
+				{% if AESFEasy_2_1_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5.1 m<br>
+				<input type=radio name="AESFEasy_2_1_answer" value='b'
+				{% if AESFEasy_2_1_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 >5.10 m<br>
+				 <input type=radio name="AESFEasy_2_1_answer" value='c'
+				{% if AESFEasy_2_1_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >5.095 m			 
+			{% endif %}	
+		</div>
+		<br>
+		<div style="display:inline-block;margin-left:40px;width:15px;margin-top:20px">b)</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;vertical-align:top;">
+			{% if AESFEasy_2_2_answer_correct is defined %}
+				<input type=radio name="AESFEasy_2_2_answer" value='a' disabled
+				{% if AESFEasy_2_2_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >7.8 litres<br>
+				<input type=radio name="AESFEasy_2_2_answer" value='b' disabled
+				{% if AESFEasy_2_2_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >0.0004 litres<br>
+				<input type=radio name="AESFEasy_2_2_answer" value='c' disabled
+				{% if AESFEasy_2_2_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >8.03 litres&nbsp;&nbsp;
+				{% if AESFEasy_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{AESFEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="AESFEasy_2_2_answer" value='a'
+				{% if AESFEasy_2_2_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >7.8 litres<br>
+				<input type=radio name="AESFEasy_2_2_answer" value='b'
+				{% if AESFEasy_2_2_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 >0.0004 litres<br>
+				 <input type=radio name="AESFEasy_2_2_answer" value='c'
+				{% if AESFEasy_2_2_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >8.03 litres			 
+			{% endif %}	
+		</div>
+		
+		
+		{% if AESFEasy_1_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="AESFEasy_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESFEasy_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESFEasy_1_1_answer").change(function()
+	{
+		question_id = "AESFEasy_1";
+		question_type = "SignificantFigures"
+		answer_id = "AESFEasy_1_1_answer";
+		entered_answer = $("#AESFEasy_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESFEasy_1_2_answer").change(function()
+			{
+				question_id = "AESFEasy_1";
+				question_type = "SignificantFigures"
+				answer_id = "AESFEasy_1_2_answer";
+				entered_answer = $("#AESFEasy_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("input[name='AESFEasy_2_1_answer']").click(function()			
+			{
+				question_id = "AESFEasy_2";
+				question_type = "SignificantFigures"
+				answer_id = "AESFEasy_2_1_answer";
+				entered_answer = $("input:radio[name=AESFEasy_2_1_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='AESFEasy_2_2_answer']").click(function()			
+			{
+				question_id = "AESFEasy_2";
+				question_type = "SignificantFigures"
+				answer_id = "AESFEasy_2_2_answer";
+				entered_answer = $("input:radio[name=AESFEasy_2_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESFEasy_1_Submit").button({label:"Check Answers"});
+	$("#AESFEasy_1_Retry").button({label:"Retry"});
+	$("#AESFEasy_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SignificantFigures"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESFEasy_1"+"#%$"+"AESFEasy_1_1_answer"+"#%$"+$("#AESFEasy_1_1_answer").val();
+		answers = answers + "#%$"+"AESFEasy_1"+"#%$"+"AESFEasy_1_2_answer"+"#%$"+$("#AESFEasy_1_2_answer").val();
+		answers = answers + "#%$"+"AESFEasy_2"+"#%$"+"AESFEasy_2_1_answer"+"#%$"+$("input:radio[name=AESFEasy_2_1_answer]:checked").val();
+		answers = answers + "#%$"+"AESFEasy_2"+"#%$"+"AESFEasy_2_2_answer"+"#%$"+$("input:radio[name=AESFEasy_2_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESFEasy_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESFEasy_1_1_answer,AESFEasy_1_2_answer,AESFEasy_2_1_answer,AESFEasy_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

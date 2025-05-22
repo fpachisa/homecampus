@@ -1,0 +1,428 @@
+/* 
+ * Homepage Styles
+ */
+ 
+.home {
+	.container-fluid;
+	padding: 0;		// Removing Default padding from container-fluid -- flag#1
+	//height: 100%;	//take full height of the body -- 5 * 100%
+}
+
+//A Single Screen 
+//---------------
+.screen {
+	.make-row();
+	margin: 0;
+	width: 100%;
+	
+	padding: 25px 15px;	//on mobiles devices	-- #1
+	min-height: 500px;
+	
+	@media screen and (min-width: @screen-sm-min){
+		min-height: 675px;	//thnx bhai ;P
+	}
+	
+	&__title {
+		width: 100%;
+		height: 25%;
+		margin-top: 1%;
+		text-align: center;
+		color: #fff;
+		//border: 1px solid #fff;
+		
+		&-head {
+			//border: 1px solid #fff;
+		}
+		
+		&-tag {
+		//	border: 1px solid #fff;
+		font-size: 25px;
+		}
+	}
+	
+	&__body {
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+		overflow: hidden;
+		//border: 1px solid #fff;
+		
+		a {
+			width: 80%;
+			margin: 20px auto;
+			
+			@media screen and (min-width: @screen-md-min){
+				width: 25%;
+			}
+		}
+	}
+	
+	&__footer {
+		width: 100%;
+		margin-top: 75px;
+		//border: 1px solid #fff;
+	}
+	
+	
+	//About #SingaporeMath
+	.hash-sg-math {
+		text-align: center;
+		@media screen and (min-width: @screen-md-min){
+			text-align: right;
+		}
+		
+		color: #fff;
+		
+		a {
+			color: #fff;
+			font-style: italic;
+			
+			&:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	// Per Screen Customisation
+	&.scr-1 {
+		background-color: @brand-primary;
+		overflow: hidden;
+		
+		.screen__title {
+			margin-top: 0%;	// A little extra
+		}
+		.screen__body {
+			margin-top: 4%;
+		}
+	}
+	
+	&.scr-2 {
+		background-color: #009688;
+	}
+	
+	&.scr-3 {
+		background-color: #fbb518;
+		
+		.screen__body {
+			margin: 50px -15px 0px -15px;
+			width: auto;
+		}
+	}
+	
+	&.scr-4 {
+		background-color: #389dfa;
+		
+		.screen__body {
+			margin: 50px -15px 0px -15px;
+			width: auto;
+		}
+	}
+	
+	&.scr-5 {
+		background-color: #e83789;
+		
+		.screen__title {
+			margin-top: 10%;
+		}
+		
+	}
+}
+
+// Grade Window
+//-------------
+.grade-window {
+	.make-row();
+	
+	&__block {
+		&-primary {
+			//.make-md-column-offset(1);
+			float: left;
+			
+			> div {
+				&:first-child {
+					.make-md-column-offset(1);
+				}
+			}
+		}
+		
+		&-secondary {
+			//.make-md-column-offset(3.5);
+			float: left;
+			
+			> div {
+				&:first-child {
+					.make-md-column-offset(3.5);
+				}
+			}
+		}
+	}
+}
+
+ 
+// Grade Box
+//----------
+.grade-box {
+	.make-xs-column(12);
+	.make-md-column(2.5);
+	
+	margin: 10px 0;
+	font-size: 14px;	
+	
+	&__container {
+		margin: 0 7.5px;
+		padding: 15px;
+		border-radius: 8px;
+		background-color: #fff;
+			
+		&.P3 {
+			border: 2px solid #fbb518;
+		}
+		&.P4 {
+			border: 2px solid #f36c26;
+		}
+		&.P5 {
+			border: 2px solid #d70d03;
+		}
+		&.P6 {
+			border: 2px solid #389dfa;
+		}
+		&.S1A {
+			border: 2px solid #993696;
+		}
+		&.S1B {
+			border: 2px solid #e83789;
+		}
+	}
+	&__heading {
+		margin: -15px -15px 11px -15px;
+		padding: 15px;
+		color: white;
+		text-align: center;
+		//letter-spacing: 2px;
+		//font-weight: bold;
+		&.P3 {
+			background-color: #fbb518;
+		}
+		&.P4 {
+			background-color: #f36c26;
+		}
+		&.P5 {
+			background-color: #d70d03;
+		}
+		&.P6 {
+			background-color: #389dfa;
+		}
+		&.S1A {
+			background-color: #993696;
+		}
+		&.S1B {
+			background-color: #e83789;
+		}
+		
+		a {
+			color: #FFF !important;
+			&:hover, &:focus {
+				color: #FFF;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__content {
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+	&__link {
+		text-align: right;
+		font-family: "Voltaire";
+	}
+}
+
+
+// Badges
+//-------
+.make-cut-left(){
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -50px;
+		border: 25px solid #fff;
+		border-top-color: transparent;
+		border-left-color: transparent;
+	}
+}
+
+.make-cut-right(){
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -50px;
+		border: 25px solid #fff;
+		border-top-color: transparent;
+		border-right-color: transparent;
+	}
+}
+
+.badge {
+	margin: 15px 0;
+	position: relative;
+	color: #fff;
+	
+	width: 100%;	//on mobiles
+	@media screen and (min-width: @screen-md-min){
+		width: 40%;
+	}
+	
+	&__title {
+		height: 50px;
+		background-color: #fff;
+		
+		h3 {
+			line-height: 50px;
+		}
+		
+		&.yellow {
+			color: #fbb518;
+		}
+		&.blue {
+			color: #389dfa;
+		}
+	}
+	
+	&:nth-child(even) {
+		@media screen and (min-width: @screen-md-min){ margin-left: 60%; }
+		
+		.badge__title {
+			@media screen and (min-width: @screen-md-min){
+				.make-cut-left();
+			}
+		}
+	}
+	
+	&:nth-child(odd) {
+		.badge__title {
+			@media screen and (min-width: @screen-md-min){
+				.make-cut-right();
+			}
+		}
+	}
+}
+
+
+.form-arena {
+	padding: 15px;
+	color: #fff;
+	
+	width: 100%;
+	@media screen and (min-width: @screen-md-min) {
+		width: 25%;
+		margin: 0 auto;
+	}
+	
+	&__title {
+		text-align: center;
+		text-decoration: underline;
+	}
+	
+	a {
+		color:  #fff;
+		text-decoration: underline;
+		&:hover {
+			color: #fff;
+			
+		}
+	}
+}
+
+.homepage-practice-call {
+	background-color: #fff;
+	border-radius: 8px;
+	position: relative;
+	display: none;
+	
+	&:after {
+		content: "";
+		display: block;
+		
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		
+		border: 10px solid transparent;
+		border-bottom-color: #fff;
+	}
+}
+
+
+/* Form Transform Animation */
+//taken from AnimateCSS - https://daneden.github.io/animate.css/
+.animated {
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+}
+.flipOutY {
+  backface-visibility: visible !important;
+  animation-name: flipOutY;
+}
+
+.flipInY {
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+}
+
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+
+
+
+
+
+
+
+
+

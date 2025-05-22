@@ -1,0 +1,123 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>How to Add Mixed Numbers and Fractions - Home Campus</title>
+<meta name="keywords" content="Add mixed fractions numbers grade 5 mathematics elementary math free tutorials">
+<meta name="description" content="How to Add Mixed Numbers and Fractions" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">How to Add Mixed Numbers and Fractions?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(88, 215, 105);" href="/Learn/Add-Fractions-Calculator">Add Fractions Calculator</a></div>
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 203, 255);">			
+		<div class="concept-set__question">
+			<h4>What is a mixed number?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				A mixed number or mixed fraction has two parts: a whole number and a proper fraction.<br><br>
+				Mixed number &nbsp;=&nbsp; whole number &nbsp;+&nbsp; proper fraction 
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept 1-->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. The video below explains how to add mixed fractions.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/yChIwpyinuM?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>	
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(88, 215, 105);" href="/Learn/Add-Fractions-Calculator">Add Fractions Calculator</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;2. How many pizzas do I have altogether if I have &nbsp;{{ mixNumGen(1,2,3) }}&nbsp; pepperoni pizzas and &nbsp;{{ mixNumGen(2,1,2) }}&nbsp; cheese pizzas?</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Pepperoni pizza &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(1,2,3) }}<br />
+				Cheese pizza &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(2,1,2) }}<br />
+				Total &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(1,2,3) }} &nbsp;+&nbsp; {{ mixNumGen(2,1,2) }}<br /><br />
+				
+				<img src="/images/notes/adding_mixed_numbers.png" alt="square metre or square meter" /><br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>{{ mixNumGen(1,2,3) }} &nbsp;+&nbsp; {{ mixNumGen(2,1,2) }}</b> <br />
+				=&nbsp; {{ frGen("(1 x 3) + 2",3) }} &nbsp;+&nbsp; {{ frGen("(2 x 2) + 1",2) }} &nbsp;&nbsp; (First, change both mixed numbers to improper fractions)<br />
+				=&nbsp; {{ frGen(5,3) }} &nbsp;+&nbsp; {{ frGen(5,2) }}<br />
+				=&nbsp; {{ frGen("5 x 2","3 x 2") }} &nbsp;+&nbsp; {{ frGen("5 x 3","2 x 3") }} &nbsp;&nbsp; (Second, change the fractions to like fractions)<br />
+				=&nbsp; {{ frGen(10,6) }}  &nbsp;+&nbsp; {{ frGen(15,6) }}<br />
+				=&nbsp; {{ frGen(25,6) }} &nbsp;&nbsp; (Next, add the two fractions)<br />
+				=&nbsp; 4 &nbsp;+&nbsp; {{ frGen(1,6) }} &nbsp;&nbsp; (Finally, change the improper fraction to a mixed number)<br />
+				=&nbsp; <b>{{ mixNumGen(4,1,6) }}</b><br />
+				I have &nbsp; <b>{{ mixNumGen(4,1,6) }}</b> &nbsp; pizzas altogether.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Mixed_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;3. What is &nbsp;&nbsp;{{ mixNumGen(3,1,4) }} &nbsp;+&nbsp;{{ frGen(1,2) }}?</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>{{ mixNumGen(3,1,4) }} &nbsp;+&nbsp; {{ frGen(1,2) }}</b> <br />
+				=&nbsp; {{ frGen("(3 x 4) + 1",4) }} &nbsp;+&nbsp; {{ frGen(1,2) }} &nbsp;&nbsp; (First, change both mixed numbers to improper fractions)<br />
+				=&nbsp; {{ frGen(13,4) }} &nbsp;+&nbsp; {{ frGen(1,2) }}<br />
+				=&nbsp; {{ frGen(13,4) }} &nbsp;+&nbsp; {{ frGen("1 x 2","2 x 2") }} &nbsp;&nbsp; (Second, change the fractions to like fractions)<br />
+				=&nbsp; {{ frGen(13,4) }}  &nbsp;+&nbsp; {{ frGen(2,4) }}<br />
+				=&nbsp; {{ frGen("13 + 2",4) }} &nbsp;&nbsp; (Next, add the two fractions)<br />
+				=&nbsp; {{ frGen(15,4) }}<br />
+				=&nbsp; 3 &nbsp;+&nbsp; {{ frGen(3,4) }} &nbsp;&nbsp; (Finally, change the improper fraction to a mixed number)<br />
+				=&nbsp; <b>{{ mixNumGen(3,3,4) }}</b>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Mixed_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a mixed number?","acceptedAnswer":{"@type":"Answer","text":"A mixed number or mixed fraction has two parts: a whole number and a proper fraction.\n\nMixed number  =  whole number  +  proper fraction "}},{"@type":"Question","name":"How do you add mixed numbers?","acceptedAnswer":{"@type":"Answer","text":"Step 1: change both mixed numbers to improper fractions\nStep 2: change the fractions to like fractions\nStep 3: add the two fractions\nStep 4: change the improper fraction to a mixed number"}},{"@type":"Question","name":"What is 2/4 as mixed number?","acceptedAnswer":{"@type":"Answer","text":"2/4 can be represented as 1/2 and it a proper fraction and it can't be represented as mixed number."}},{"@type":"Question","name":"What is 5/2 in mixed number?","acceptedAnswer":{"@type":"Answer","text":"5/2 can be represented as 2 1/2. So 2 is a whole number and 1/2 is a proper fraction. Together 2 1/2 is a mixed number which is equivalent to 5/2"}}]}</script>
+{% endblock %}

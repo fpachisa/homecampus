@@ -1,0 +1,155 @@
+/*
+ * HC Base Responsive Stylesheet
+ * 
+ * defines some basic and core styles
+ */
+ 
+ 
+//The Happy Sans Font file
+@font-face {
+	font-family: "Happy Sans";
+	src: url(fonts/Happy_Sans.ttf);
+	font-weight: 700;
+}
+
+//The Gloria Hallelujah Font file
+@font-face {
+	font-family: "Gloria";
+	src: url(fonts/GloriaHallelujah.ttf);
+}
+
+.font-gloria {
+	font-family: "Gloria", cursive;
+	
+	&.heavy {
+		font-weight: bolder;
+	}
+	
+	&.light {
+		font-weight: lighter;
+	}
+}
+
+.font-happy-sans {
+	font-family: "Happy Sans", Arial, sans-serif;
+	
+	&.heavy {
+		font-weight: bolder;
+	}
+	
+	&.light {
+		font-weight: lighter;
+	}
+}
+
+.sz-2x { font-size: 2em; }
+.sz-3x { font-size: 3em; }
+.sz-4x { font-size: 4em; }
+
+
+
+/* WRAP Trick */
+html, body{
+	height: 100%;
+	font-size: 18px;
+}
+
+#wrap {
+	min-height: 89%;
+	min-height: 89vh;
+	
+	height: 89%;
+	height: auto !important;
+	
+	background-color: lighten(#f7f5ee, 20%);
+}
+
+.default-bg {
+	background-image: url('/images/site/background_1.png');
+}
+
+/* Utilities */
+.center-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.hidden {
+	.hidden;
+}
+
+.hidden-xs {
+	.hidden-xs;
+}
+
+//make all images responsive
+img {
+	.img-responsive;
+}
+
+/* MainPage.html template styles */
+.main {
+	.container-fluid;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 100%;
+	//background-color: #fafbfd;
+}
+
+
+/* Explain Dialog Styles */
+.ExplainDialog {
+	color: #fff;
+	background-color: #285c00 !important;
+	border-radius: 2px;
+	
+	.modal-title {
+		background-color: #3a8104;
+		color: #fff;
+		font-weight: bold;
+		padding: 10px;
+		margin: -15px -15px 0;
+		
+		.modal-close {
+			padding: 10px;
+			a {
+				color: #eee;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	.modal-content {
+		height: 80%;
+		position: relative;
+		border: 0;
+		padding: .5em 1em;
+		background: none;
+		overflow: auto;
+		zoom: 1;
+		margin: 0 -15px;
+	}
+	
+	.modal-xtra {
+		border-top: 1px solid #72b42d;
+	}
+	
+	blockquote {
+		padding:0;
+		margin: 0;
+		font-size: @font-size-base;
+		border-left: none;
+	}
+}
+
+/* reseting blockquotes */
+blockquote {
+	padding:0;
+    margin: 0;
+    font-size: @font-size-base;
+    border-left: none;
+}

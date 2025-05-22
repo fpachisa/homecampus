@@ -1,0 +1,91 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F693CD;">Linear Equations - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="C9LE_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">12)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			<div>R1, R2 and R3 are three resistors.</div>
+			<div style="margin-top:10px;"><img src="/images/Grade7/G7_LE_TT9_12a.png"></div>
+			<div style="margin-top:10px;">In the image above, R1, R2 and R3 are connected in series. The total resistance when the resistors are connected in series, R<sub>Series</sub> is given by the formula,</div>
+			<div style="margin-top:10px;">R<sub>Series</sub> = R1 + R2 + R3</div>
+			<div style="margin-top:0px;"><img src="/images/Grade7/G7_LE_TT9_12b.png"></div>
+			<div style="margin-top:10px;">In the image above, R1, R2 and R3 are connected in parallel. The total resistance when the resistors are connected in parallel, R<sub>Parallel</sub>:</div>
+			<div style="margin-top:10px;">1/R<sub>Parallel</sub> = 1/R1 + 1/R2 + 1/R3</div>
+		</div>	
+
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="C9LE_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#C9LE_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#C9LE_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Linear-Equations');
+  	});	
+$("#C9LE_TT_1_back").button({label:"<<"});
+$("#C9LE_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-5.html';
+		rightPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-6.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

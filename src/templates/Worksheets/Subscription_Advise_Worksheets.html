@@ -1,0 +1,39 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Unlimited Math Worksheets on Fraction, Whole Numbers, Ratio, Percentage, Decimals, Data Analysis, Measurement, Pie Chart, Bar Graphs and many more topics for Grade 3, Grade 4, Grade 5 and Grade 6</title>
+<meta name="description" content="Auto generate unlimited worksheets on elementary math topics for Grade 3, Grade 4, Grade 5 and Grade 6." />
+{% endblock %}
+{% block body %}
+	<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+  	<link href="/stylesheets/jquery.gritter.css" rel="stylesheet" type="text/css" />
+ {% block practice %}
+<div id="HomeContent">
+	<div style="margin-left:230px;margin-top:30px;height:400px;">
+		<img src="/images/site/learning_is_every_childs_right.png">
+		<br><br>
+		<div style="margin-left:60px;margin-top:30px;">
+			<font class="legendText" >You've only scratched the surface of what's in store...<br><br>
+			<button id="Subscribe"></button></font><a href='/Elementary_Mathematics_Worksheets'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<font style="font-size=0.5em;text-decoration:underline;">No, thanks</font></a>
+		</div>
+	</div>
+	
+	
+	<!--below script is to create the jQuery button with default theming -->
+	<script type="text/javascript">
+		$("#Subscribe").button({label:"Yes, I want to solve more to excel"});
+		$("#Practice").button({label:"Solve Other Worksheets"});
+		$("#Subscribe").click(function()
+    		{
+				window.location.href = '/Subscribe';
+    		}
+    		);
+		$("#Practice").click(function()
+    		{
+				window.location.href = '/';
+    		}
+    		);
+	</script>
+</div><!-- end #homeContent --> 
+{% endblock %}
+{% endblock %}

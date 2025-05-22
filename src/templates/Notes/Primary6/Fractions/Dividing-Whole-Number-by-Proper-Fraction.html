@@ -1,0 +1,223 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Divide a Whole Number by a Proper Fraction - Home Campus</title>
+<meta name="description" content="Dividing a Whole Number by a Proper Fraction." />
+<meta name="keywords" content="fraction, division, whole number, primary 6, sixth grade, elementary 6, K-12, Singapore maths tuition, online maths test, online maths tutor">
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Dividing a Whole Number by a Proper Fraction</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P6">
+		
+		<div class="concept-set__question">
+			<h4>How to divide a whole number by a proper fraction?</h4>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				Dividing a whole number by a proper fraction is the same as multiplying the whole number by the inverse of the proper fraction. Here are the steps:<br /><br />
+				
+				<b>Step 1:</b> &nbsp; Change &nbsp;&divide;&nbsp; to &nbsp;&times;&nbsp;.<br />
+				<b>Step 2:</b> &nbsp; Invert the fraction.<br />
+				<b>Step 3:</b> &nbsp; Simplify the expression.<br /><br />
+				
+				<b><i>Example:</i></b><br />
+				Divide 8 by {{ frGen(4,5) }}.<br />
+				
+				8 &nbsp;&divide;&nbsp; {{ frGen(4,5) }} &nbsp;=&nbsp; 8 &nbsp;&times;&nbsp; {{ frGen(5,4) }} &nbsp;=&nbsp; 10<br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. If a pizza is cut into halves, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_1.png" alt="dividing a number by a fraction"/><br />
+				1 &nbsp;&divide;&nbsp; {{ frGen(1,2) }} &nbsp;=&nbsp; 2<br /><br />
+				
+				You get <b>2</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. If 1 whole pizza is cut into one-thirds, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_2.png" alt="dividing a number by a fraction"/><br />
+				1 &nbsp;&divide;&nbsp; {{ frGen(1,3) }} &nbsp;=&nbsp; 3<br /><br />
+				
+				You get <b>3</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. If 2 pizzas are cut into two-thirds, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_3.png" alt="dividing a number by a fraction"/><br />
+				2 &nbsp;&divide;&nbsp; {{ frGen(2,3) }} &nbsp;=&nbsp; 3<br /><br />
+				
+				You get <b>3</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. How many two-thirds are there in 3 wholes?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_4.png" alt="dividing a number by a fraction"/><br />
+				3 &nbsp;&divide;&nbsp; {{ frGen(2,3) }} &nbsp;=&nbsp; {{ mixNumGen(4,1,2) }}<br /><br />
+				
+				There are &nbsp; <b>{{ mixNumGen(4,1,2) }}</b> &nbsp; two-thirds in 3 wholes.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. Nina had 2 m of lace that she used for making bows.<br />
+				If she needed &nbsp;&nbsp;&nbsp; {{ frGen(2,7) }}m of lace for each bow, how many bows did she make?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_5.png" alt="dividing a number by a fraction"/><br />
+				&nbsp;&nbsp;&nbsp; 2 &nbsp;&divide;&nbsp; {{ frGen(2,7) }} <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; {{ frGen(7,2) }} <br />
+				=&nbsp; 7<br /><br />
+				
+				She made <b>7</b> bows.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>6. Mr. Lee buys 25 kg of decorative shells from a wholesale market.<br />
+				He then repacks the shells into small bags of &nbsp;&nbsp;&nbsp; {{ frGen(1,4) }} kg each.<br />
+				a) &nbsp; How many bags does he get?<br />
+				b) &nbsp; If he sells each bag at $3.50, how much money does he collect from the sale of all bags?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_6.png" alt="dividing a number by a fraction"/><br />
+				a) &nbsp;&nbsp;&nbsp; 25 &nbsp;&divide;&nbsp; {{ frGen(1,4) }} <br />
+				&nbsp;&nbsp;&nbsp; =&nbsp; 25 &nbsp;&times;&nbsp; {{ frGen(4,1) }} <br />
+				&nbsp;&nbsp;&nbsp; =&nbsp; 100<br /><br />
+				
+				&nbsp;&nbsp;&nbsp; He gets <b>100</b> bags.<br /><br />
+				
+				b) &nbsp;&nbsp;&nbsp; $3.50 &nbsp;&times;&nbsp; 100 &nbsp;=&nbsp; $350 <br /><br />
+				
+				&nbsp;&nbsp;&nbsp; He collects <b>$350</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>7. A chemist fills 5 litres of perfume into bottles that have a capacity of &nbsp;&nbsp;&nbsp; {{ frGen(2,11) }} litre each.<br />
+				a) &nbsp; What is the greatest number of bottles that he can fill completely?<br />
+				b) &nbsp; In the end, there is one bottle that is not completely filled. How much perfume does that bottle contain?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_number_by_fraction_7.png" alt="dividing a number by a fraction"/><br />
+				a) &nbsp;&nbsp;&nbsp; 5 &nbsp;&divide;&nbsp; {{ frGen(2,11) }}<br />
+				 	&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp; 5 &nbsp;&times;&nbsp; {{ frGen(11,2) }}<br />
+				 	&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp; {{ mixNumGen(27,1,2) }}<br /><br />
+				 
+					&nbsp;&nbsp;&nbsp; He can fill 27 bottles completely.<br /><br />
+				
+				b) &nbsp;&nbsp;&nbsp; 27 &nbsp;&times;&nbsp; {{ frGen(2,11) }} &nbsp;=&nbsp; {{ frGen(54,11) }}<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are {{ frGen(54,11) }} litres of perfume in the 27 bottles altogether.<br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 &nbsp;&minus;&nbsp; {{ frGen(54,11) }} <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; {{ frGen("55 - 54",11) }}<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; {{ frGen(1,11) }} litre<br />
+					
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The bottle contains <b>{{ frGen(1,11) }}</b> litre of perfume.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Whole_Number_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 7 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to divide whole number by a proper fraction?","acceptedAnswer":{"@type":"Answer","text":"Dividing a whole number by a proper fraction is the same as multiplying the whole number by the inverse of the proper fraction. Here are the steps:\n\nStep 1:   Change  ÷  to  × .\nStep 2:   Invert the fraction.\nStep 3:   Simplify the expression."}},{"@type":"Question","name":"How many two-thirds are there in 3 wholes?","acceptedAnswer":{"@type":"Answer","text":"There are 4 1/2 two-thirds in 3 wholes. Learn more at https://my.homecampus.com.sg/Learn/Primary-Grade-6/Fractions/Dividing-Whole-Number-by-Proper-Fraction"}}]}</script>
+{% endblock %}

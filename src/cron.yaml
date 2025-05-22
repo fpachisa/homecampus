@@ -1,0 +1,50 @@
+cron:
+- description: daily subscription expiry check
+  url: /Subscribe/EndSubscriptionCheck
+  schedule: every day 12:00
+  timezone: Asia/Singapore
+
+- description: deleting dummy problems
+  url: /MISC/Delete_DUMMY_Questions
+  schedule: every 3 hours
+
+- description: Sending 3rd day email comm
+  url: /Communication/Day3
+  schedule: every day 12:10
+  timezone: Asia/Singapore
+
+- description: Sending 7th day email comm
+  url: /Communication/Day7
+  schedule: every day 12:20
+  timezone: Asia/Singapore
+
+- description: Sending 14th day email comm
+  url: /Communication/Day14
+  schedule: every day 12:30
+  timezone: Asia/Singapore
+
+- description: Sending 20th day email comm
+  url: /Communication/Day20
+  schedule: every day 12:40
+  timezone: Asia/Singapore
+
+- description: User Count for today
+  url: /MISC/Generate_Register_Report
+  schedule: every day 21:30
+  timezone: Asia/Singapore
+
+- description: Fortnightly Progress Report
+  url: /Communication/ReportForActiveUnsubscribedUsers
+  schedule: every day 18:00
+  timezone: Asia/Singapore
+
+- description: Unfinished Worksheet Report
+  url: /Communication/ReportForUnfinishedWorksheets
+  schedule: every day 17:00
+  timezone: Asia/Singapore
+
+- description: Incomplete Transactions
+  url: /Communication/IncompleteTransactionReminder
+  schedule: every day 16:00
+  timezone: Asia/Singapore
+

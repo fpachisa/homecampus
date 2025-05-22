@@ -1,0 +1,71 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculator to Calculate Circumference of a Circle when Radius, Diameter or Area is Given - Home Campus</title>
+<meta name="keywords" content="Radius Circumference Area Circle Calculator">
+<meta name="description" content="Calculate Radius, Circumference and Area of a Circle" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">Calculator: Circumference of Circle</h2>
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Circumference of a Circle</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the circumference of a circle depends on what is given to you.
+			</div>
+			<div class="col-10 col-off-1">
+				1) Given: <strong>Diameter of a circle</strong><br><br>
+				Then, Circumference &nbsp;=&nbsp; &pi; &nbsp;&times;&nbsp;Diameter<br><br>
+				2) Given: <strong>Radius of a circle</strong><br><br>
+				Then, Circumference &nbsp;=&nbsp; 2&nbsp;&times;&nbsp;&pi;&nbsp;&times;&nbsp;Radius<br><br>
+				3) Given: <strong>Area of a circle</strong><br><br>
+				Then, Circumference &nbsp;=&nbsp; 2&nbsp;&times;&nbsp;&radic;(&pi;&nbsp;&times;&nbsp;Area)<br><br>
+			</div>
+			<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(213, 167, 215);" href="/Free-Math-Worksheets/Circumference-of-Cirlce">FREE Circumference Worksheets</a></div><br><br>
+			<div class="concept-set__container" style="background:rgb(239, 255, 216);">
+				<label for="given">Given,</label><br><br>
+				<select name="given" id="given">
+					<option value="Diameter">Diameter</option>
+					<option value="Radius">Radius</option>
+					<option value="Area">Area</option>
+				</select> 
+				&nbsp;=&nbsp; <input id="givenValue"  type="number" size=4><br><br>
+				<button class="btn-quiz" id="calcCircumference" onclick="calcCircumference()">Calculate Circumference</button><br><br>
+				<div class="col-10 col-off-1" id="circumference"></div>
+			</div>
+			
+			
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Primary-Grade-6/Measurement/Circumference-of-Circle">Learn More</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<script>
+
+function calcCircumference() {
+	var e = document.getElementById("given");
+	var givenText = e.options[e.selectedIndex].text;
+	var givenValue = document.getElementById("givenValue").value;
+	var circumference;
+	
+	if (givenText=="Diameter") {
+		circumference = givenValue*3.14;
+	} else if (givenText=="Radius"){
+		circumference = givenValue*(2*3.14);
+	} else if (givenText=="Area"){
+		circumference = 2*Math.sqrt(givenValue*3.14)
+	}
+	
+	document.getElementById("circumference").innerHTML = "Circumference of the circle &nbsp;=&nbsp; "+circumference.toFixed(2); 
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula to calculate circumference of a circle?","acceptedAnswer":{"@type":"Answer","text":"Formula for the circumference of a circle depends on what is given to you.<br><br>\n1) Given: Diameter of a circle<br><br>\nThen, Circumference  =  &pi;  &times; Diameter<br><br>\n2) Given: Radius of a circle<br><br>\nThen, Circumference  =  2 &times; &pi; &times; Radius<br><br>\n3) Given: Area of a circle<br><br>\nThen, Circumference  =  2 &times;  &radic;(&pi; &times; Area)<br><br>"}},{"@type":"Question","name":"What is the circumference of a circle of area 32 cm<sup>2</sup>?","acceptedAnswer":{"@type":"Answer","text":"Circumference  =  2 &times;  &radic;(&pi; &times; Area)<br><br>\n= 2 &times; &radic;(3.14 &times; 32)<br><br>\n= 20.05 cm<br><br>\n\nAlternatively,<br><br>\nFind the radius first,<br><br>\nArea = &pi;&times;(radius)<sup>2</sup><br><br>\nradius = &radic;(Area/&pi;)<br><br>\n= &radic;(32/3.14)<br><br>\nradius = 3.19 cm<br><br>\nCircumference = 2 &times; &pi; &times; radius<br><br>\n= 2 &times; 3.14 &times; 3.19<br><br>\nCircumference = 20.05 cm"}},{"@type":"Question","name":"What is the circumference of a circle of radius 2 cm?","acceptedAnswer":{"@type":"Answer","text":"Circumference = 2&times;&pi;&times;radius<br><br>\n= 2&times;3.14&times;2<br><br>\nCircumference = 12.57 cm"}},{"@type":"Question","name":"What is the circumference of a circle of diameter 8 cm?","acceptedAnswer":{"@type":"Answer","text":"Circumference  =  &pi;  &times; Diameter<br><br>\n= 3.14 &times; 8<br><br>\nCircumference = 25.13 cm"}}]}</script>
+
+{% endblock %}

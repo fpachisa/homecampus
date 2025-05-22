@@ -1,0 +1,152 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.2 Reverse Percentages</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.2 Reverse Percentages</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">14% of the apples in a carton were rotten. Find the total number of apples in the carton, if 7 of them were rotten.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Total apples in the carton =
+			{% if PRRPEasy_2_answer_correct is defined %}
+				<input id="PRRPEasy_2_answer" value='{{PRRPEasy_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					{% if PRRPEasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_2_answer_correct and PRRPEasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_2_answer" value='{{PRRPEasy_2_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Tom had a mass of 27 kg when he was 10 years old. His mass then was 45% of his current mass. What is Tom's current mass?</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Current mass of Tom =
+			{% if PRRPEasy_3_answer_correct is defined %}
+				<input id="PRRPEasy_3_answer" value='{{PRRPEasy_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> kg
+					{% if PRRPEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_3_answer_correct and PRRPEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_3_answer" value='{{PRRPEasy_3_answer}}' style="width:50px;" > kg
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Sam is 20% older than Bella. Find their ages if they have an age difference of 5 years.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Age of Sam is
+			{% if PRRPEasy_4_1_answer_correct is defined %}
+				<input id="PRRPEasy_4_1_answer" value='{{PRRPEasy_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> years
+					{% if PRRPEasy_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_4_1_answer_correct and PRRPEasy_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+			{% else %}
+				<input id="PRRPEasy_4_1_answer" value='{{PRRPEasy_4_1_answer}}' style="width:50px;" > years
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Age of Bella is
+			{% if PRRPEasy_4_2_answer_correct is defined %}
+				<input id="PRRPEasy_4_2_answer" value='{{PRRPEasy_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> years
+					{% if PRRPEasy_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPEasy_4_2_answer_correct and PRRPEasy_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPEasy_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPEasy_4_2_answer" value='{{PRRPEasy_4_2_answer}}' style="width:50px;" > years
+			{% endif %}	
+		</div>
+		{% if PRRPEasy_2_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Easy_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Easy_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRPEasy_2_answer").change(function()
+	{
+		question_id = "PRRPEasy_2";
+		question_type = "ReversePercentages"
+		answer_id = "PRRPEasy_2_answer";
+		entered_answer = $("#PRRPEasy_2_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRPEasy_3_answer").change(function()
+			{
+				question_id = "PRRPEasy_3";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_3_answer";
+				entered_answer = $("#PRRPEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRRPEasy_4_1_answer").change(function()
+			{
+				question_id = "PRRPEasy_4";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_4_1_answer";
+				entered_answer = $("#PRRPEasy_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRRPEasy_4_2_answer").change(function()
+			{
+				question_id = "PRRPEasy_4";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPEasy_4_2_answer";
+				entered_answer = $("#PRRPEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRRP_Easy_2_submit").button({label:"Check Answers"});
+	$("#PRRP_Easy_2_retry").button({label:"Retry"});
+	$("#PRRP_Easy_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ReversePercentages"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRPEasy_2"+"#%$"+"PRRPEasy_2_answer"+"#%$"+$("#PRRPEasy_2_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_3"+"#%$"+"PRRPEasy_3_answer"+"#%$"+$("#PRRPEasy_3_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_4_1"+"#%$"+"PRRPEasy_4_1_answer"+"#%$"+$("#PRRPEasy_4_1_answer").val();
+		answers = answers + "#%$"+"PRRPEasy_4_2"+"#%$"+"PRRPEasy_4_2_answer"+"#%$"+$("#PRRPEasy_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRP_Easy_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRPEasy_2_answer,PRRPEasy_3_answer,PRRPEasy_4_1_answer,PRRPEasy_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

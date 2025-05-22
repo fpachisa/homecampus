@@ -1,0 +1,178 @@
+/*
+ * LearnPage Stylesheet
+ */
+ 
+ 
+.NotesPageContainer {	// see: NotesPage.html
+	.make-row();
+}
+
+.learn-heading {
+	.make-xs-column(12);
+	.text-center;
+	.text-uppercase;
+	font-weight: 600;
+	//color: lighten(@brand-primary, 20%);
+	color: rgb(54, 51, 48);
+}
+
+
+/* ******************* Learn Set Unit *********************** */
+.learn-set {
+	.make-xs-column(12);
+	.make-row();
+	margin: 15px 0;
+	//border: 1px solid red;
+	
+	&__container {
+		.make-xs-column(12);
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
+		.make-row();
+		margin: 0; 
+		border-radius: 2px;
+		border: 1px solid #ddd;
+		//.shadow();
+		background-color: #fff;
+		padding-top: (@grid-gutter-width / 2);
+		padding-bottom: (@grid-gutter-width / 2);
+		
+		> div {	// minimum gaping between holder divs
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	
+	&__question {
+		//border: 1px solid green;
+		font-size: @font-size-base +  2;
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+	
+	&__video {
+		border: 1px solid green;
+		
+		//sizing the video
+		width: 100%;	//xs devices
+		@media screen and (min-width: @screen-sm-min) {
+			width: percentage(8 / @grid-columns);		// 8 columns width
+			margin-left: percentage(2 / @grid-columns);	// 2 columns margin
+		}
+		
+		> div {
+			position: relative; 
+			padding-bottom: 56.25%; 
+			height: 0; 
+			overflow: hidden;
+			width: 100%;
+			//max-width: 100%;
+			
+			> embed, > iframe {
+				position: absolute; 
+				top: 0; 
+				left: 0; 
+				width: 100%; 
+				height: 100%;	
+			}    	
+    	}
+	}
+	
+	&__answer {
+		//border: 1px solid violet;
+		.make-row();
+	}
+	
+	&__nest {
+		.make-row();
+		margin: 0;
+		//border: 1px solid violet;
+	}
+}
+
+.concept-set{
+	.learn-set;
+	&__container{
+		//color: #fff;
+		&.P3{
+			background-color: #fbb518
+		}
+		&.P4{
+			background-color: #fd8e55
+		}
+		&.P5{
+			background-color: #ee9c98
+		}
+		&.P6{
+			background-color: #389dfa
+		}
+	}
+}
+
+/* ** ANSWER SECTION GRID GENERATOR ** */
+.homecampus-mini-grid(@col; @index: 1) when (@index =< @col){
+	.homecampus-mini-grid(@col; (@index + 1) );	//next iteration
+	
+//grid styles
+	// width
+	.col-@{index} {
+		//border: 1px dashed red;
+		
+		//taken from bootstrap
+		min-height: 1px;
+		padding-left:  (@grid-gutter-width / 2);
+		padding-right: (@grid-gutter-width / 2);
+		
+		//allocating width -custom
+		margin-top: (@grid-gutter-width / 2);
+		margin-bottom: (@grid-gutter-width / 2);
+		
+		width: 100%;	//mobile - devices
+		
+		@media screen and (min-width: @screen-sm-min){
+		width: percentage(@index / @col);
+		//float left
+		& when (@index < @col) {
+			float: left;
+		}
+	  }
+	}
+
+	//offset
+	@media screen and (min-width: @screen-sm-min){
+	& when ( @index < @col ){
+		
+		.col-off-@{index} {
+			margin-left: percentage( @index / @col );
+		}
+	}
+	}
+}
+
+//launch grid creation!
+.homecampus-mini-grid(12);
+
+
+
+/* ********** The Utility classes ******************** */
+.red-color {
+	color: #F00;
+}
+
+.ul-dashed {
+	list-style-type: none;
+	
+	> li {
+		&:before {
+			content: '\2014\a0';
+		}
+	}
+}
+
+.alpha-list {
+	list-style-type: lower-alpha;
+}
+
+.hint-box {
+	background-color:#99e4ee;
+}

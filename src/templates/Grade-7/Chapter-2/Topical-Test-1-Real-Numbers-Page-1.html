@@ -1,0 +1,193 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F36D27;">Rational and Real Numbers - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="RRN_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br><br>
+	{% endif %}
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">Mindi walked 2.5 km on a straight road in the North direction to reach her office. In the evening, she took the same road to reach a hypermarket 3.8 km South from her office. How far was the hypermarket from her home on that road? </div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="RRNTT1_1_answer" size=3 value='{{RRNTT1_1_answer}}' readonly style="background-color:#DFDFDF;"> km&nbsp;
+				{% if RRNTT1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="RRNTT1_1_answer" size=3 value='{{RRNTT1_1_answer}}'> km <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">Messi owes $10 to Sam. Martina owes $5 to Sam. If they decide to settle their dues, express the change in the amount of money that would be left with each of them using positive and negative numbers.</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;width:80px;">Messi:</div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				$ <input id="RRNTT1_2_1_answer" size=3 value='{{RRNTT1_2_1_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if RRNTT1_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+
+			{% else %}
+				$ <input id="RRNTT1_2_1_answer" size=3 value='{{RRNTT1_2_1_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<br>	
+			<div style="display:inline-block;width:80px;margin-top:10px;">Martina:</div>
+			<div style="display:inline-block;margin-top:10px;"> 
+			{% if test_status == 'Completed' %}
+				$ <input id="RRNTT1_2_2_answer" size=3 value='{{RRNTT1_2_2_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if RRNTT1_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+
+			{% else %}
+				$ <input id="RRNTT1_2_2_answer" size=3 value='{{RRNTT1_2_2_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;width:80px;margin-top:10px;">Sam:</div>
+			<div style="display:inline-block;margin-top:10px;"> 
+			{% if test_status == 'Completed' %}
+				$ <input id="RRNTT1_2_3_answer" size=3 value='{{RRNTT1_2_3_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if RRNTT1_2_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+
+			{% else %}
+				$ <input id="RRNTT1_2_3_answer" size=3 value='{{RRNTT1_2_3_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#RRN_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#RRN_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Real-Numbers');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#RRNTT1_1_answer").change(function()
+	{
+		question_id = "RRNTT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "RRNTT1_1_answer";
+		entered_answer = $("#RRNTT1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 2;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("#RRNTT1_2_1_answer").change(function()
+		{
+			question_id = "RRNTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_2_1_answer";
+			entered_answer = $("#RRNTT1_2_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRNTT1_2_2_answer").change(function()
+		{
+			question_id = "RRNTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_2_2_answer";
+			entered_answer = $("#RRNTT1_2_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRNTT1_2_3_answer").change(function()
+		{
+			question_id = "RRNTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_2_3_answer";
+			entered_answer = $("#RRNTT1_2_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

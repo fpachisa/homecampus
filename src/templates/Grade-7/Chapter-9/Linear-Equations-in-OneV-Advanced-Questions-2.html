@@ -1,0 +1,167 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.1 Linear Equations in One Variable</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:60%;">9.1 Linear Equations in One Variable</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The cost of a dining table is 82% more than the cost of a chair.
+			</div>
+		</div>
+
+		<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:40px;">a)</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:10px;width:360px;">
+			Find the total cost of a dining table set consisting of 1 table and 6 chairs, if each chair costs $125.
+		</div>
+		<div style="margin-left:60px;margin-top:5px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Total cost&nbsp;= $
+				{% if C9LEOVAdvanced_2_1_answer_correct is defined %}
+					<input id="C9LEOVAdvanced_2_1_answer" value='{{C9LEOVAdvanced_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C9LEOVAdvanced_2_1_answer" value='{{C9LEOVAdvanced_2_1_answer}}' style="width:50px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9LEOVAdvanced_2_1_answer_correct is defined %}
+					{% if C9LEOVAdvanced_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9LEOVAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		<div style="display:inline-block;vertical-align:top;margin-top:20px;margin-left:40px;">b)</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:20px;width:360px;">
+			A retailer has a budget of $5865. How many such sets could he buy?
+		</div>
+		<div style="margin-left:60px;margin-top:5px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer:&nbsp;
+				{% if C9LEOVAdvanced_2_2_answer_correct is defined %}
+					<input id="C9LEOVAdvanced_2_2_answer" value='{{C9LEOVAdvanced_2_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> sets
+				{% else %}
+					<input id="C9LEOVAdvanced_2_2_answer" value='{{C9LEOVAdvanced_2_2_answer}}' style="width:30px;text-align:center;" > sets
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9LEOVAdvanced_2_2_answer_correct is defined %}
+					{% if C9LEOVAdvanced_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9LEOVAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">
+			The displacement, <font class=grade7Variables>S</font>, in metres, of an object moving at an initial velocity of <font class=grade7Variables>u</font> m/s and at a constant acceleration of <font class=grade7Variables>a</font> m/s<sup>2</sup> in time t seconds is given by the formula:<br>
+			<font class=grade7Variables>S</font> = <font class=grade7Variables>ut</font> + &frac12; <font class=grade7Variables>at</font><sup>2</sup><br>
+			If a car travelling at 25 m/s accelerates at 2.5 m/s<sup>2</sup> for 50 seconds, find the displacement of the car in the given time.
+
+			</div>
+		</div>
+
+		<div style="margin-left:60px;margin-top:5px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer:&nbsp;
+				{% if C9LEOVAdvanced_3_answer_correct is defined %}
+					<input id="C9LEOVAdvanced_3_answer" value='{{C9LEOVAdvanced_3_answer}}' readonly style="width:35px;background-color:#DFDFDF;text-align:center;"> m
+				{% else %}
+					<input id="C9LEOVAdvanced_3_answer" value='{{C9LEOVAdvanced_3_answer}}' style="width:35	px;text-align:center;" > m
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9LEOVAdvanced_3_answer_correct is defined %}
+					{% if C9LEOVAdvanced_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9LEOVAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+
+		{% if C9LEOVAdvanced_2_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="C9LEOVAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="C9LEOVAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#C9LEOVAdvanced_2_1_answer").change(function()
+	{
+		question_id = "C9LEOVAdvanced_2";
+		question_type = "LinearEquationsInOneV"
+		answer_id = "C9LEOVAdvanced_2_1_answer";
+		entered_answer = $("#C9LEOVAdvanced_2_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#C9LEOVAdvanced_2_2_answer").change(function()
+			{
+				question_id = "C9LEOVAdvanced_2";
+				question_type = "LinearEquationsInOneV"
+				answer_id = "C9LEOVAdvanced_2_2_answer";
+				entered_answer = $("#C9LEOVAdvanced_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#C9LEOVAdvanced_3_answer").change(function()
+			{
+				question_id = "C9LEOVAdvanced_3";
+				question_type = "LinearEquationsInOneV"
+				answer_id = "C9LEOVAdvanced_3_answer";
+				entered_answer = $("#C9LEOVAdvanced_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#C9LEOVAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#C9LEOVAdvanced_2_Retry").button({label:"Retry"});
+	$("#C9LEOVAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "LinearEquationsInOneV"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C9LEOVAdvanced_2"+"#%$"+"C9LEOVAdvanced_2_1_answer"+"#%$"+$("#C9LEOVAdvanced_2_1_answer").val();
+		answers = answers + "#%$"+"C9LEOVAdvanced_2"+"#%$"+"C9LEOVAdvanced_2_2_answer"+"#%$"+$("#C9LEOVAdvanced_2_2_answer").val();
+		answers = answers + "#%$"+"C9LEOVAdvanced_3"+"#%$"+"C9LEOVAdvanced_3_answer"+"#%$"+$("#C9LEOVAdvanced_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C9LEOVAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C9LEOVAdvanced_2_1_answer,C9LEOVAdvanced_2_2_answer,C9LEOVAdvanced_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

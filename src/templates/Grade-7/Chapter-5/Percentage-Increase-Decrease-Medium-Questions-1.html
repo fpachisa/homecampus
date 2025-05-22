@@ -1,0 +1,157 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.3 Percentage Increase and Decrease</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:54%;">5.3 Percentage Increase and Decrease</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Rainfall recorded in a region this year was 20% above average. If the average rainfall in the region is 200 mm,</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) How much rain fell this year?</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if PRIDMedium_1_1_answer_correct is defined %}
+				<input id="PRIDMedium_1_1_answer" value='{{PRIDMedium_1_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> mm &nbsp;
+					{% if PRIDMedium_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_1_1_answer_correct and PRIDMedium_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_1_1_answer" value='{{PRIDMedium_1_1_answer}}' style="width:30px;" > mm &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) The meteorological department has forecasted that the region will face a drought next year with 60% below average rainfall. How much rainfall has been forecasted for next year?</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if PRIDMedium_1_2_answer_correct is defined %}
+				<input id="PRIDMedium_1_2_answer" value='{{PRIDMedium_1_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> mm &nbsp;
+					{% if PRIDMedium_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_1_2_answer_correct and PRIDMedium_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_1_2_answer" value='{{PRIDMedium_1_2_answer}}' style="width:30px;" > mm &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A bush was 1 m tall.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) It was trimmed down by 12%. Find its height now.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer (in cm):&nbsp;
+			{% if PRIDMedium_2_1_answer_correct is defined %}
+				<input id="PRIDMedium_2_1_answer" value='{{PRIDMedium_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> cm &nbsp;
+					{% if PRIDMedium_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_2_1_answer_correct and PRIDMedium_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_2_1_answer" value='{{PRIDMedium_2_1_answer}}' style="width:30px;" > cm &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) Find the percentage decrease in the height of the bush if it is currently 80 cm tall.</div>
+		<div style="margin-left:60px;margin-top:10px;">Percent change:&nbsp;
+			{% if PRIDMedium_2_2_answer_correct is defined %}
+				<input id="PRIDMedium_2_2_answer" value='{{PRIDMedium_2_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_2_2_answer_correct and PRIDMedium_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_2_2_answer" value='{{PRIDMedium_2_2_answer}}' style="width:30px;" > % &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if PRIDMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:380px;"><button id="PRID_Medium_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="PRID_Medium_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRIDMedium_1_1_answer").change(function()
+	{
+		question_id = "PRIDMedium_1";
+		question_type = "PercentageIncreaseDecrease"
+		answer_id = "PRIDMedium_1_1_answer";
+		entered_answer = $("#PRIDMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRIDMedium_1_2_answer").change(function()
+			{
+				question_id = "PRIDMedium_1";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_1_2_answer";
+				entered_answer = $("#PRIDMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDMedium_2_1_answer").change(function()
+			{
+				question_id = "PRIDMedium_2";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_2_1_answer";
+				entered_answer = $("#PRIDMedium_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDMedium_2_2_answer").change(function()
+			{
+				question_id = "PRIDMedium_2";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_2_2_answer";
+				entered_answer = $("#PRIDMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#PRID_Medium_1_submit").button({label:"Check Answers"});
+	$("#PRID_Medium_1_retry").button({label:"Retry"});
+	$("#PRID_Medium_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageIncreaseDecrease"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRIDMedium_1"+"#%$"+"PRIDMedium_1_1_answer"+"#%$"+$("#PRIDMedium_1_1_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_1"+"#%$"+"PRIDMedium_1_2_answer"+"#%$"+$("#PRIDMedium_1_2_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_2"+"#%$"+"PRIDMedium_2_1_answer"+"#%$"+$("#PRIDMedium_2_1_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_2"+"#%$"+"PRIDMedium_2_2_answer"+"#%$"+$("#PRIDMedium_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRID_Medium_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRIDMedium_1_1_answer,PRIDMedium_1_2_answer,PRIDMedium_2_1_answer,PRIDMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

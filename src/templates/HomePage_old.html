@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+{% block title %}
+<title>Learn and Practice Primary / Elementary Mathematics Online</title>
+<meta name="description" content="Learn primary / elementary school mathematics online. Solve math problems for grade 4, grade 5 and grade 6 based on Singapore syllabus. Monitor your progress. Take maths tests. Share your results." />
+<meta name="keywords" content="5th grade, 6th grade, 4th grade, math tutorial, free math online, elementary math, primary math, Singapore math, elementary school math, free math lessons, free maths lessons, math lesson videos, maths lesson videos, math tutor online" />
+{% endblock %}
+    <link href="/stylesheets/homeCampus_styles.css" rel="homeCampus_styles" />
+	<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+	<script src="/js/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script>
+	<script src="/js/livevalidation.js" type="text/javascript"></script>
+	<link rel="icon" href='/images/site/favicon.ico'>
+	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
+	<link href="/stylesheets/jquery.gritter.css" rel="stylesheet" type="text/css"  />
+    <link href="/stylesheets/homeCampus_styles.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/jquery.ymenu.css">
+    <link rel="stylesheet" href="/stylesheets/nivo/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/nivo/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/nivo/style.css" type="text/css" media="screen" />    
+	<script type="text/javascript" src="/js/jquery.ymenu.js"></script>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/jqModal.css"/>
+	
+
+	<script type="text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-2509774-2', 'homecampus.com.sg');
+		  ga('send', 'pageview');
+	</script>
+	
+</head>
+
+<body>               
+  {% block body %}
+		<div class="home-page-header">
+			<div class="home-page-logo"><img src='/images/site/home_page_logo.png'></img></div>
+            <div class="home-page-user-status">	
+                <p style="margin-right:30px;">{% if current_user or auth_session -%}
+                     {% if current_user -%}
+                         <span><font style="color:green">Hello {{ current_user.first_name|e }} |</font></span>
+                {% if current_user.IsParent %}
+                	<span><font style="color:green"><a href="/MyProfile" style="color:green">My profile</a>|</font></span>
+                {% elif current_user.IsTeacher %}
+	            	<span><font style="color:green"><a href="/Teacher/Manage_Classroom" style="color:green">Manage Classroom</a>|</font></span>
+                {% endif %}	                            
+                     {%- endif %}
+                     <a href="{{ logout_url }}" style="color:green">Sign out</a>
+                 {% if UnfinishedWorksheetsCount != 0 %}
+                 	| <img id="notification_bell" style="display:none;" src="/images/site/notification_bell.png"></img><a href="/Unfinished-Worksheets">
+                 	<font id="worksheet_notification_callout" style="text-decoration:underline;color:white;">
+                 	{% if UnfinishedWorksheetsCount == 1 %}	
+                 		You have {{UnfinishedWorksheetsCount}} unfinished worksheet
+                 	{% else %}
+                 		You have {{UnfinishedWorksheetsCount}} unfinished worksheets
+                 	{% endif %}
+                 	</font></a>
+                 {% endif %}                     
+                     <br>
+                 {% else %}
+                     <font style="color:green;"><a href="{{ login_url }}" style="color:green">Sign in</a> | </font> <button id="member" onclick="chooseRegistration()"></button>
+                 {% endif %}
+                </p> 
+                 <link type="text/css" rel="stylesheet" href="/stylesheets/jquery-ui-1.8.9.custom.css"/>
+                 <script type="text/javascript"> 
+                 	$("#member").button({label:"Become a member"});
+				</script>                  
+				
+				<!-- START: facebook and google plugins -->
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<div class="fb-like" data-href="http://www.facebook.com/homecampus" data-send="false" data-layout="standard" data-show-faces="false" data-action="like" data-font="lucida grande"></div>
+				</div>
+				<div class="home-page-fb-position"></div>
+				<!-- 25-Jan-2014 Removing Google plus button for now. -->
+				<!-- &nbsp;&nbsp;  --><!-- Place this tag where you want the +1 button to render. -->
+				<!-- <div style="display: inline-block;"><div class="g-plusone" data-size="medium" data-href="http://my.homecampus.com.sg"></div></div>
+				<!-- Place this tag after the last +1 button tag. -->
+				<!-- <script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+				<!-- END: facebook and google plugins -->
+           
+	</div>
+           <div style="margin-top:-6px;background-image:url('/images/site/green_divider.png');background-repeat:repeat-x;">&nbsp;</div>
+           <div style="background-image:url('/images/site/background_1.png');background-repeat:repeat-x;">
+	           <div style="margin-left:200px;margin-top:30px;"><img src="/images/site/primary_levels.png"></img></div>
+	           <div class="home-page-student" id="">
+					<div class="home-page-enter-classroom"><a href="/Primary_Grade_3_Mathematics"><img alt="Primary 3 / Grade 3" src="/images/site/enter_grade_3.png"></img></a></div>
+					<div class="home-page-enter-classroom"><a href="/Primary_Grade_4_Mathematics"><img alt="Primary 4 / Grade 4" src="/images/site/enter_grade_4.png"></img></a></div>
+	 				<div class="home-page-enter-classroom"><a href="/Primary_Grade_5_Mathematics"><img alt="Primary 5 / Grade 5" src="/images/site/enter_grade_5.png"></img></a></div>
+	 				<div class="home-page-enter-classroom"><a href="/Primary_Grade_6_Mathematics"><img alt="Primary 6 / Grade 6" src="/images/site/enter_grade_6.png"></img></a></div>				           
+	           </div>
+	           <div style="margin-left:200px;margin-top:30px;"><img src="/images/site/secondary_levels.png"></img></div>
+	           <div class="home-page-student">
+					<div class=""><a href="/Secondary-1-Grade-7-Mathematics"><img alt="Secondary 1 / Grade 7" src="/images/site/enter_grade_7.png"></img></a></div>
+	           </div>           
+		   </div>
+  {% endblock %}
+
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+
+	$("#notification_bell").delay(1000).fadeIn(5000);
+	setInterval(function()
+		 	{
+			$("#worksheet_notification_callout").css({"color":"green"});
+		 	}, 2000);
+	});
+function chooseRegistration()
+{
+	window.location.href = '/Register';
+}
+
+</script>		
+</body>
+</html>

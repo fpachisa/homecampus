@@ -1,0 +1,32 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Practice Primary 1 / Grade 1 Mathematics Online at Home Campus</title>
+<meta name="description" content="Practice primary school mathematics online. Solve unlimited randomly generated problems on all primary mathematics concepts." />
+{% endblock %}
+{% block body %}
+	<script src="/js/Practice.js" type="text/javascript"></script>
+	<script src="/js/submit.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/jquery.gritter.min.js"></script> 
+	<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+  	<link href="/stylesheets/jquery.gritter.css" rel="stylesheet" type="text/css" />
+
+ {% block practice %}
+ <div id="HomeContent">
+ <div style="text-align:center"><h2>Grade 1 Practice</h2></div>
+ 	<div id="P1ConceptDisplay">
+        <div class="P5FirstRowConceptListDisplay" style="width:300px;">	
+	   	<p><img alt="Whole Numbers" src="/images/site/whole_numbers_box.png"></p>
+	   		<ol>
+	   			<li class="file" id="P1WNAddition"><a href="javascript:void(null)" id="P1WNAddition" class="preview">Addition</a></li>
+			</ol>
+   		</div>
+ 	</div>
+ 	
+ </div><!-- end #homeContent --> 
+<div style="background-image: url(/images/site/background.png);">
+ <div id="NotesContent" style="display:none;width:1200px;min-height:400px;">
+</div> 
+</div>  
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,21 @@
+<h2>{{child }}'s HC Worksheet Scores for Grade {{grade}}:</h2><br>
+{% if TestStats|length == 0 %}
+	<h3>No data to generate the report.</h3>
+{% endif %}
+<table class='Reports' style="margin-left:50px;cursor:pointer;">
+<tr><th>Worksheet*</th><th>Topic</th><th>Date Completed</th><th>Score</th><th>% achieved</th></tr>
+	{% for tests in TestStats %}
+		<tr id={{tests.test_id|e}} onclick="DetailTestReport(this)">
+		<td align='left'><font style="text-decoration:underline;font-weight:bold;">{{tests.test_name}}</font></td><td>{{tests.topic}}</td><td>{{tests.date_finished}}</td>
+		<td>{{tests.correct}} out of {{tests.question}}</td><td>{{tests.acheived}} %</td>
+		</tr>
+	{% endfor %}
+</table>
+<br>
+<font style="margin-left:50px;">*Click on Worksheet Name to get detailed report.</font>
+<div id='barChart' style="margin-left:50px;margin-top:30px;"></div>
+<div id='piechart' style="margin-left:50px;margin-top:30px;"></div>
+<script type="text/javascript">
+	{{FunctionCall1|safe}}
+	{{FunctionCall2|safe}}
+</script>

@@ -1,0 +1,179 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.3 Factorization</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:77%;">8.3 Factorization</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Factorize each of the following expressions completely:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">c) &minus;30 &minus; 35<font class="grade7Variables">t</font></div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAEasy_4_3_answer_correct is defined %}
+					<input id="ALFAEasy_4_3_answer" value='{{ALFAEasy_4_3_answer}}' readonly style="width:55px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAEasy_4_3_answer" value='{{ALFAEasy_4_3_answer}}' style="width:55px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAEasy_4_3_answer_correct is defined %}
+					{% if ALFAEasy_4_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAEasy_4_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">d) 19<font class="grade7Variables">pq</font> + 76<font class="grade7Variables">q</font></div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAEasy_4_4_answer_correct is defined %}
+					<input id="ALFAEasy_4_4_answer" value='{{ALFAEasy_4_4_answer}}' readonly style="width:65px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAEasy_4_4_answer" value='{{ALFAEasy_4_4_answer}}' style="width:65px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAEasy_4_4_answer_correct is defined %}
+					{% if ALFAEasy_4_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAEasy_4_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">e) &minus;2<font class="grade7Variables">kg</font> &minus; 54<font class="grade7Variables">hk</font> &minus; 24<font class="grade7Variables">gh</font></div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAEasy_4_5_answer_correct is defined %}
+					<input id="ALFAEasy_4_5_answer" value='{{ALFAEasy_4_5_answer}}' readonly style="width:100px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAEasy_4_5_answer" value='{{ALFAEasy_4_5_answer}}' style="width:100px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAEasy_4_5_answer_correct is defined %}
+					{% if ALFAEasy_4_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAEasy_4_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">f) 27<font class="grade7Variables">b</font> &minus; 12<font class="grade7Variables">a</font> + 9<font class="grade7Variables">c</font></div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAEasy_4_6_answer_correct is defined %}
+					<input id="ALFAEasy_4_6_answer" value='{{ALFAEasy_4_6_answer}}' readonly style="width:85px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAEasy_4_6_answer" value='{{ALFAEasy_4_6_answer}}' style="width:85px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAEasy_4_6_answer_correct is defined %}
+					{% if ALFAEasy_4_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAEasy_4_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if ALFAEasy_4_3_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="ALFAEasy_5_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="ALFAEasy_5_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ALFAEasy_4_3_answer").change(function()
+			{
+				question_id = "ALFAEasy_4";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAEasy_4_3_answer";
+				entered_answer = $("#ALFAEasy_4_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#ALFAEasy_4_4_answer").change(function()
+			{
+				question_id = "ALFAEasy_4";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAEasy_4_4_answer";
+				entered_answer = $("#ALFAEasy_4_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#ALFAEasy_4_5_answer").change(function()
+			{
+				question_id = "ALFAEasy_4";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAEasy_4_5_answer";
+				entered_answer = $("#ALFAEasy_4_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#ALFAEasy_4_6_answer").change(function()
+			{
+				question_id = "ALFAEasy_4";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAEasy_4_6_answer";
+				entered_answer = $("#ALFAEasy_4_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	
+	
+	$("#ALFAEasy_5_Submit").button({label:"Check Answers"});
+	$("#ALFAEasy_5_Retry").button({label:"Retry"});
+	$("#ALFAEasy_5_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraFactorisation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ALFAEasy_4"+"#%$"+"ALFAEasy_4_3_answer"+"#%$"+$("#ALFAEasy_4_3_answer").val();
+		answers = answers + "#%$"+"ALFAEasy_4"+"#%$"+"ALFAEasy_4_4_answer"+"#%$"+$("#ALFAEasy_4_4_answer").val();
+		answers = answers + "#%$"+"ALFAEasy_4"+"#%$"+"ALFAEasy_4_5_answer"+"#%$"+$("#ALFAEasy_4_5_answer").val();
+		answers = answers + "#%$"+"ALFAEasy_4"+"#%$"+"ALFAEasy_4_6_answer"+"#%$"+$("#ALFAEasy_4_6_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ALFAEasy_5_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ALFAEasy_4_3_answer,ALFAEasy_4_4_answer,ALFAEasy_4_5_answer,ALFAEasy_4_6_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

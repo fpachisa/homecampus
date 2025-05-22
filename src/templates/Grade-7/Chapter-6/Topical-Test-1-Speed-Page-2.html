@@ -1,0 +1,143 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:70%;">Speed - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Fred rides his bike at a speed of 60 km/h.</div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:10px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:370px;vertical-align:top;">Find the distance covered by him in 30 min.</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_4_1_answer" size=3 value='{{SPTT1_4_1_answer}}' readonly style="background-color:#DFDFDF;"> km&nbsp;
+				{% if SPTT1_4_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_4_1_answer" size=3 value='{{SPTT1_4_1_answer}}'> km<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:20px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:370px;vertical-align:top;">How much time, in minutes, does he take to cover 15 km if he rides the bike at a speed of 75 km/h?</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_4_2_answer" size=3 value='{{SPTT1_4_2_answer}}' readonly style="background-color:#DFDFDF;"> minutes&nbsp;
+				{% if SPTT1_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_4_2_answer" size=3 value='{{SPTT1_4_2_answer}}'> minutes<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">Two cars start from point Z towards points A and B, respectively, in opposite directions at the same time. After how much time will they be 180 km apart?</div>
+		<div style="margin-top:10px;margin-left:100px;"><img src="/images/Grade7/G7_SP_TT_5.png"></div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_5_answer" size=3 value='{{SPTT1_5_answer}}' readonly style="background-color:#DFDFDF;"> hours&nbsp;
+				{% if SPTT1_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_5_answer" size=3 value='{{SPTT1_5_answer}}'> hours<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="SP_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+
+$("#SP_TT_1_Continue").button({label:">>"});
+$("#SP_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-3.html';
+		rightPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-4.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$';
+		answer_ids = 'SPTT1_1_answer'+separatorText+'SPTT1_2_answer'+separatorText+'SPTT1_3_answer'+separatorText;
+		answer_ids = answer_ids +'SPTT1_4_1_answer'+separatorText+'SPTT1_4_2_answer'+separatorText+'SPTT1_5_answer';
+
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#SPTT1_4_1_answer").change(function()
+		{
+			question_id = "SPTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_4_1_answer";
+			entered_answer = $("#SPTT1_4_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_4_2_answer").change(function()
+		{
+			question_id = "SPTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_4_2_answer";
+			entered_answer = $("#SPTT1_4_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_5_answer").change(function()
+		{
+			question_id = "SPTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_5_answer";
+			entered_answer = $("#SPTT1_5_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+</script>
+

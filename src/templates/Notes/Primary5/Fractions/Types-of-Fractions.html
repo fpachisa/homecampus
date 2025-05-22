@@ -1,0 +1,157 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Types of Fractions - Home Campus</title>
+<meta name="keywords" content="Fractions Types Proper Improper Mixed">
+<meta name="description" content="What are different types of fractions? Define proper, improper and mixed fractions." />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Types of Fractions?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 203, 255);">			
+		<div class="concept-set__question">
+			<h4>Concepts covered:</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				<a href="#Ques-1">1. What are the different types of Fractions?</a><br><br>
+				<a href="#Ques-2">2. What are Proper Fractions?</a><br><br>
+				<a href="#Ques-3">3. What are Improper Fractions?</a><br><br>
+				<a href="#Ques-4">4. What are Mixed Numbers or Mixed Fractions?</a><br><br>
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept 1-->
+
+	<!-- QUES 1 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-1">1. What are the different types of fractions?</h4></div>			
+			
+			<div class="learn-set__video">
+				<div><embed src="https://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+			</div>
+				
+			<div class="learn-set__answer">
+				<div class="col-11 col-off-1">
+					There are 3 different types of fractions:<br />
+					<ol><li>Proper fractions</li>
+						<li>Improper fractions</li>
+						<li>Mixed numbers or mixed fractions</li>
+					</ol>
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>	
+		</div>
+	</div> <!-- End of answer 1 -->
+
+
+	<!-- QUES 2 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-2">2. What are Proper Fractions?</h4></div>			
+			
+			<div class="learn-set__answer">
+				<div class="col-11 col-off-1">
+					In a proper fraction, the numerator (top number) is smaller than the denominator (bottom number).<br /><br />
+					<i>Examples:</i><br />
+					{{ frGen(3,4) }} &nbsp;,&nbsp; {{ frGen(4,5) }} &nbsp;,&nbsp; {{ frGen(12,17) }} &nbsp;,&nbsp; etc.<br /><br />
+					<img src="/images/notes/proper_fraction.png" alt="square metre or square meter" /><br />
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>	
+		</div>
+	</div> <!-- End of answer 2 -->
+
+
+	<!-- QUES 3 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-3">3. What are Improper Fractions?</h4></div>			
+			
+			<div class="learn-set__answer">
+				<div class="col-11 col-off-1">
+					In an improper fraction, the numerator (top number) is bigger than or equal to the denominator (bottom number).<br /><br />
+					<i>Examples:</i><br />
+					{{ frGen(4,3) }} &nbsp;,&nbsp; {{ frGen(6,5) }} &nbsp;,&nbsp; {{ frGen(10,7) }} &nbsp;,&nbsp; {{ frGen(4,4) }} &nbsp;,&nbsp; etc.<br /><br />
+					<img src="/images/notes/improper_fraction.png" alt="square metre or square meter" /><br />
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>	
+		</div>
+	</div> <!-- End of answer 3 -->
+
+
+	<!-- QUES 4 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			<div class="learn-set__question"><h4 id="Ques-4">4. What are Mixed Numbers or Mixed Fractions?</h4></div>			
+			
+			<div class="learn-set__answer">
+				<div class="col-11 col-off-1">
+					A mixed number is made up of two parts - a whole number and a proper fraction.<br /><br />
+					<i>Examples:</i><br />
+					{{ mixNumGen(5,2,3) }} &nbsp;,&nbsp; {{ mixNumGen(1,1,4) }} &nbsp;,&nbsp; {{ mixNumGen(3,5,12) }} &nbsp;,&nbsp; {{ mixNumGen(2,1,2) }} &nbsp;,&nbsp; etc.<br /><br />
+					<img src="/images/notes/mixed_fraction.png" alt="square metre or square meter" /><br />
+				</div>
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>	
+		</div>
+	</div> <!-- End of answer 4 -->
+
+ 
+ 	<!-- Concept Explanation -->
+	<div class="concept-set">
+		<div class="concept-set__container P4">
+			
+			<div class="concept-set__question">
+				<h4>Notes:</h4>
+			</div>
+						
+			<div class="concept-set__answer">					
+				<div class="col-11" style="margin-top: 2%;">
+					<ul><li>Improper fractions can be converted to mixed numbers and mixed numbers can be converted back to improper fractions. Improper fractions and mixed numbers are 2 different ways to represent the same number.</li><br />
+					<li>Improper fractions are useful when writing mathematical formulae. Compared to a mixed number, it's easier to write, use and operate upon a number written as an improper fraction and not be confused.</li><br />
+					<li>Mixed numbers have their utility when talking about quantities in day-to-day life. For example, you say, <br/>
+					<i>"I need {{ mixNumGen(2,1,2) }} cups of sugar for the cake."</i> instead of <br />
+					<i>"I need {{ frGen(5,2) }} cups of sugar for the cake."</i><br /><br />
+					
+					Although they both mean the same amount of sugar, {{ mixNumGen(2,1,2) }} cups of sugar makes more sense than {{ frGen(5,2) }} cups of sugar. 
+				</div>				
+			</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>	
+		</div>
+	</div><!-- End of concept -->
+	
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the different types of fractions?","acceptedAnswer":{"@type":"Answer","text":"There are 3 different types of fractions:<br><br>\n    Proper fractions<br>\n    Improper fractions<br>\n    Mixed numbers or mixed fractions<br>\n"}},{"@type":"Question","name":"What are Proper Fractions?","acceptedAnswer":{"@type":"Answer","text":"In a proper fraction, the numerator (top number) is smaller than the denominator (bottom number).<br>\nExamples: 1/2, 3/4, 11/25"}},{"@type":"Question","name":"What are Improper Fractions?","acceptedAnswer":{"@type":"Answer","text":"In an improper fraction, the numerator (top number) is bigger than or equal to the denominator (bottom number).<br>\nExamples: 4/3, 7/5, 51/4"}},{"@type":"Question","name":"What are Mixed Numbers or Mixed Fractions?","acceptedAnswer":{"@type":"Answer","text":"A mixed number is made up of two parts - a whole number and a proper fraction.<br>\nExamples: 1 1/2, 3 5/6, 7 5/31"}}]}</script>	
+ 
+{% endblock %}

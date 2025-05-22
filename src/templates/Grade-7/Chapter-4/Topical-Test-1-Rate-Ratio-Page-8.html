@@ -1,0 +1,109 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#7B43A0;margin-left:48%;">Rate, Ratio and Proportion - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">15)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			A delivery boy delivers 1-litre and 500-ml milk cartons in the ratio of 1 : 2, in a locality every day. One day, he replaced one 1-litre milk carton by 500-ml milk cartons; such that the ratio of the number of 1-litre milk cartons to that of 500-ml milk cartons changed to 1 : 4. Find the volume of milk he delivered each day?
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_15_answer" value='{{RRPTT1_15_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> litres
+			{% else %}
+				<input id="RRPTT1_15_answer" value='{{RRPTT1_15_answer}}' style="width:30px;"> litres <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:20px;margin-left:15px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_15_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% endif %}
+			</div>												
+		</div>		
+		
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="RRP_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="RRP_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#RRP_TT_1_Submit").button({label:"Submit"});
+$("#RRP_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#RRP_TT_1_Done").button({label:"Done"});
+$("#RRP_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+
+$("#RRPTT1_15_answer").change(function()
+		{
+			question_id = "RRPTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_15_answer";
+			entered_answer = $("#RRPTT1_15_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'RRPTT1_14_1_answer'+separatorText+'RRPTT1_14_2_answer'+separatorText+'RRPTT1_14_3_answer'+separatorText+'RRPTT1_15_answer'
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+
+

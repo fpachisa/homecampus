@@ -1,0 +1,134 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A table cover was sold at $29.50 with a 10% discount at shop A. Another shop, B, sold the same table cover at $40.10 with 20% discount. Which shop sold it for a lower price? Estimate the answer without using a calculator.  
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if AESTAdvanced_3_answer_correct is defined %}
+				<input type=radio name="AESTAdvanced_3_answer" value='A' disabled
+				{% if AESTAdvanced_3_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Shop A<br>
+				<input type=radio name="AESTAdvanced_3_answer" value='B' disabled
+				{% if AESTAdvanced_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Shop B&nbsp;&nbsp;
+				{% if AESTAdvanced_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{AESTAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="AESTAdvanced_3_answer" value='A'
+				{% if AESTAdvanced_3_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Shop A<br>
+				<input type=radio name="AESTAdvanced_3_answer" value='B'
+				{% if AESTAdvanced_3_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Shop B		 
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Charlotte bought the following items from a supermarket:
+			</div>
+			<table style="margin-top:10px;border-collapse:collapse">
+				<tr><td style="border:1px solid black;">Item</td><td style="border:1px solid black;">Quantity</td><td style="border:1px solid black;">Cost</td></tr>
+				<tr><td style="border:1px solid black;">Mangoes</td><td style="border:1px solid black;">5</td><td style="border:1px solid black;">2 for $10</td></tr>
+				<tr><td style="border:1px solid black;">Carrots</td><td style="border:1px solid black;">16</td><td style="border:1px solid black;">4 for 99 cents</td></tr>
+				<tr><td style="border:1px solid black;">Green Chillies</td><td style="border:1px solid black;">1.3 kg</td><td style="border:1px solid black;">$1.60 per kg</td></tr>
+				<tr><td style="border:1px solid black;">Tomatoes</td><td style="border:1px solid black;">2.5 kg</td><td style="border:1px solid black;">$2.40 per kg</td></tr>
+			</table>
+			<div style="margin-top:10px;">Estimate the total amount of money that she paid, giving your answer correct to the nearest dollar.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; $
+			{% if AESTAdvanced_4_answer_correct is defined %}
+				<input id="AESTAdvanced_4_answer" value='{{AESTAdvanced_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTAdvanced_4_answer_correct and AESTAdvanced_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTAdvanced_4_answer" value='{{AESTAdvanced_4_answer}}' style="width:30px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		{% if AESTAdvanced_3_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="AESTAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:5px;margin-left:280px;"><button id="AESTAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='AESTAdvanced_3_answer']").click(function()
+	{
+		question_id = "AESTAdvanced_3";
+		question_type = "Estimation"
+		answer_id = "AESTAdvanced_3_answer";
+		entered_answer = $("input:radio[name=AESTAdvanced_3_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	$("#AESTAdvanced_4_answer").change(function()
+			{
+				question_id = "AESTAdvanced_4";
+				question_type = "Estimation"
+				answer_id = "AESTAdvanced_4_answer";
+				entered_answer = $("#AESTAdvanced_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESTAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#AESTAdvanced_2_Retry").button({label:"Retry"});
+	$("#AESTAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Estimation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESTAdvanced_3"+"#%$"+"AESTAdvanced_3_answer"+"#%$"+$("input:radio[name=AESTAdvanced_3_answer]:checked").val();
+		answers = answers + "#%$"+"AESTAdvanced_4"+"#%$"+"AESTAdvanced_4_answer"+"#%$"+$("#AESTAdvanced_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESTAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESTAdvanced_3_answer,AESTAdvanced_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

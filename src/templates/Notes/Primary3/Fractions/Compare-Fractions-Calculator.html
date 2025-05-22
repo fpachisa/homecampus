@@ -1,0 +1,106 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Compare Fractions Calculator - Home Campus</title>
+<meta name="keywords" content="Compare Fractions Equivalent Lowest Commond Denominator">
+<meta name="description" content="How to compare fractions?" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">How to Compare Fractions?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Comparing-and-Ordering-Fractions">Practice Unlimited Questions</a></div>
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">		
+		<div class="concept-set__question">
+			<h4>Compare Two Fractions: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter First Fraction&nbsp;=&nbsp; <input id="fraction1" size=6><br><br>
+				Enter Second Fraction&nbsp;=&nbsp; <input id="fraction2" size=6><br><br>
+				<button class="btn-quiz" id="CompareFractions" onclick="CompareFractions()">Compare Fractions</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="CompareFractionsHTML"></div>
+		</div>		
+	</div>
+</div> <!-- End of calculator 1 -->
+
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/comparing-and-ordering-fractions-free-math-worksheets">Download Free Worksheets</a></div>
+
+
+<script>
+
+function CompareFractions() {
+	//getting first fraction
+	var fraction1 = document.getElementById("fraction1").value;
+	var fractions1 = fraction1.split("/");
+	var numerator1 = parseInt(fractions1[0]);
+	var denominator1 = parseInt(fractions1[1]);
+	//getting second fraction
+	var fraction2 = document.getElementById("fraction2").value;
+	var fractions2 = fraction2.split("/");
+	var numerator2 = parseInt(fractions2[0]);
+	var denominator2 = parseInt(fractions2[1]);
+
+	//check the data input quality
+	if (isNaN(numerator1) || isNaN(denominator1) || isNaN(denominator2) || isNaN(denominator2))
+	{
+		document.getElementById("CompareFractionsHTML").innerHTML = "<font color='red'>Please input correct fractions. For e.g. 4/16 and 3/8</font>";
+		return false;
+	}
+		
+	//find LCM
+	var LCM = lcm_two_numbers(denominator1,denominator2);
+
+	
+	//Find the number to be multiplied to both numerator and denominator
+	var multiplier1 = LCM/denominator1;
+	var multiplier2 = LCM/denominator2;
+	
+	var numerator11 = numerator1*multiplier1;
+	var numerator22 = numerator2*multiplier2;
+	var denominator11 = denominator1*multiplier1;
+	var denominator22 = denominator2*multiplier2;
+	
+	var CompareFractionsHTML = "";
+	
+	CompareFractionsHTML = "Given fractions can be represented in their equivalent form as: <br>";
+	CompareFractionsHTML += numerator11+"/"+denominator11+ " and "+numerator22+"/"+denominator22+"<br><br>"
+
+
+	if(numerator11>numerator22){
+		CompareFractionsHTML += "Since "+numerator11+" greater than "+numerator22+"<br><br>";
+		CompareFractionsHTML += "<strong>"+numerator1+"/"+denominator1+ " is greater than "+numerator2+"/"+denominator2+"</strong>";
+		CompareFractionsHTML += " &nbsp;or&nbsp; <strong>"+numerator2+"/"+denominator2+ " is less than "+numerator1+"/"+denominator1+"</strong>";
+	}
+	else if(numerator11<numerator22){
+		CompareFractionsHTML += "Since "+numerator11+" less than "+numerator22+"<br><br>";
+		CompareFractionsHTML += "<strong>"+numerator1+"/"+denominator1+ " is less than "+numerator2+"/"+denominator2+"</strong>";
+		CompareFractionsHTML += " &nbsp;or&nbsp; <strong>"+numerator2+"/"+denominator2+ " is greater than "+numerator1+"/"+denominator1+"</strong>";
+	}
+	else{
+		CompareFractionsHTML += "The given fractions are equivalent fractions.<br><br>";
+		CompareFractionsHTML += "Hence <strong>both are equal</strong>";
+	}
+	
+	document.getElementById("CompareFractionsHTML").innerHTML = CompareFractionsHTML;
+	
+}
+
+function lcm_two_numbers(x, y) {
+   if ((typeof x !== 'number') || (typeof y !== 'number')) 
+    return false;
+  return (!x || !y) ? 0 : Math.abs((x * y) / gcd_two_numbers(x, y));
+}
+
+function gcd_two_numbers(k, n) {
+    return k ? gcd_two_numbers(n % k, k) : n;
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to compare fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Express the fractions using a common denominator. For this you need to find out lowest common denominator.<br>\nStep 2: Create equivalent fractions by making the denominator common.<br>\nStep 3: The fraction with the smallest numerator is the smallest fraction while the fraction with the biggest numerator is the biggest fraction."}},{"@type":"Question","name":"Which is greater 2/3 or 3/4?","acceptedAnswer":{"@type":"Answer","text":"2/3 can be expressed as 8/12<br>\nand 3/4 can be expressed as 9/12<br>\nNow, compare 8/12 and 9/12<br>\nSince, 9 is greater than 8 hence 3/4 is greater than 2/3"}}]}</script>
+
+{% endblock %}

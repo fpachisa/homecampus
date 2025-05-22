@@ -1,0 +1,286 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>What is Average? - Home Campus</title>
+<meta name="description" content="What is meant by average and how do we calculate it?" />
+<meta name="keywords" content="finding average, average definition, math average, average, word problems, free math videos, free math lesson, online maths, homeschooling, lesson plans, math tutor">
+{% endblock %}
+{% block content %}
+      
+<!-- InstanceBeginEditable name="maincontent" -->
+
+<h2 class="learn-heading">What is Average?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+
+<!-- Concept Covered -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 237, 255);">			
+		<div class="concept-set__question">
+			<h4><strong>Formula to Calculate Average:</strong></h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				<div class="col-10 col-off-1">
+					<b><i>Step 1:</i></b> Find the sum or total of all items.<br />
+					<b><i>Step 2:</i></b> Divide the total by the number of items.
+				</div>
+				<div class="col-10 col-off-2">
+					<b>Average &nbsp;=&nbsp; {{ frGen("total of all items","number of items") }}</b>
+				</div>
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept Covered-->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				1.&nbsp; Joe uses building blocks to make 3 towers of different heights as shown below.<br />
+				Find the average height of each tower.
+			</h4>
+		</div>
+
+		<div class="learn-set__video">
+			<div>
+				<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/veBH8H9dWX4?html5=1" frameborder="0"> </iframe>
+				
+				<!-- <embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /> -->
+			</div>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/data_analysis_finding_average_1.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					<ul>
+						<li>Tower A has <b>8</b> blocks</li>
+						<li>Tower B has <b>1</b> block</li>
+						<li>Tower C has <b>3</b> blocks</li>
+					</ul>
+				
+					8 &nbsp;+&nbsp; 1 &nbsp;+&nbsp; 3 &nbsp=&nbsp; 12<br />
+					Joe has 12 blocks in all.<br /><br />
+					
+					He distributes them <b>unequally</b> to get 3 towers of different heights (as in the figure above).<br /><br />
+					
+					However, if he redistributes the 12 blocks <b>equally</b> so that each tower has the same height, then he would have found the <b>average</b> height of the towers (as in the figure below).<br /><br />
+
+					<img src="/images/notes/data_analysis_finding_average_2.png" />
+				</div>
+				<div class="col-6 col-off-1">
+					Now,
+					<ul>
+						<li>Tower A has <b>4</b> blocks</li>
+						<li>Tower B has <b>4</b> block</li>
+						<li>Tower C has <b>4</b> blocks</li>
+					</ul>
+					<br />
+					So, the <b>average</b> of 8, 1 and 3 is <b>4</b>.<br /><br />
+					
+					We say,<br />
+					&nbsp;&nbsp;&nbsp; <b>On the average, each tower has 4 blocks.</b><br /><br />
+					
+					Or,<br />
+					&nbsp;&nbsp;&nbsp; <b>The average number of blocks per tower is 4.</b><br />
+					
+				</div>
+				<div class="col-3 hint-box">
+					Redistributing the blocks does not change the total number of blocks.<br />
+					4 &nbsp;+&nbsp; 4 &nbsp;+&nbsp; 4 &nbsp;=&nbsp; 12
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				2. The table below shows the books that Louis borrowed from the library.<br />
+				What is the average number of pages that each book has?
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/P5_Finding_Average_2.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					Total number of pages &nbsp;=&nbsp; 256 &nbsp;+&nbsp; 64 &nbsp;+&nbsp; 448 &nbsp;+&nbsp; 32 &nbsp;+&nbsp; 50 &nbsp;=&nbsp; 850<br />
+					Number of books &nbsp;=&nbsp; 5<br />
+					Average number of pages per book &nbsp;=&nbsp; 850 &nbsp;&divide;&nbsp; 5 &nbsp;=&nbsp; 170<br /><br />
+					
+					Each book has an average of <b>170</b> pages.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+      
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				3. The average age of 3 girls is 11 years.<br />
+				The average age of 2 of the girls is 12 years.<br />
+				What is the age of the third girl?
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/data_analysis_average_word_problem_2.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					3 &nbsp;&times;&nbsp; 11 years &nbsp;=&nbsp; 33 years<br />
+					The total age of the 3 girls is 33 years.<br /><br />
+					
+					2 &nbsp;&times;&nbsp; 12 years &nbsp;=&nbsp; 24 years<br />
+					The total age of 2 of the girls is 24 years.<br /><br />
+					
+					33 years &nbsp;&minus;&nbsp; 24 years &nbsp;=&nbsp; 9 years<br />
+					The age of the third girl is <b>9</b> years.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 3 -->
+  
+  
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				4. A team of 5 friends gets an average pocket money of $15 per week.<br />
+				A sixth friend who gets $21 as pocket money per week joins their team.<br />
+				What is the average pocket money of the team now?
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/data_analysis_average_word_problem_3.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					5 &nbsp;&times;&nbsp; $15 &nbsp;=&nbsp; $75<br />
+					The total pocket money of 5 friends is $75.<br /><br />
+					
+					$75 &nbsp;+&nbsp; $21 &nbsp;=&nbsp; $96<br />
+					The total pocket money of 6 friends is $96.<br /><br />
+					
+					$96 &nbsp;&divide;&nbsp; 6 &nbsp;=&nbsp; $16<br />
+					The average pocket money of the team now is <b>$16</b>.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				5. Amy, Dennis and Ruby have an average salary of $2650 per month.<br />
+				Amy earns twice as much as Dennis and Ruby earns $260 more than Amy each month.<br />
+				What is Ruby's monthly salary?
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/data_analysis_average_word_problem_4.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					3 &nbsp;&times;&nbsp; $2650 &nbsp;=&nbsp; $7950<br />
+					The total monthly salary of Amy, Dennis and Ruby is $7950.<br /><br />
+					
+					5 units &nbsp;-&gt;&nbsp; $7950 &nbsp;&minus;&nbsp; $260 &nbsp;=&nbsp; $7690<br />
+					1 unit &nbsp;&nbsp;-&gt;&nbsp; $7690 &nbsp;&divide;&nbsp; 5 &nbsp;=&nbsp; $1538<br /><br />
+					
+					2 &nbsp;&times;&nbsp; $1538 &nbsp;+&nbsp; $260 &nbsp;=&nbsp; $3336<br />
+					Ruby's monthly salary is <b>$3336</b>.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>
+				6. The following graph shows the number of children in 205 families in a township in the year 2009.<br />
+				a)&nbsp; What was the total number of children in the township in 2009?<br />
+				b)&nbsp; What was the average number of children per family in 2009? Round off your answer to 1 decimal place.<br />
+				c)&nbsp; In the year 2010, the number of children in the township increased by 56 while the total number of families remained unchanged. What was the average number of children per family in the township in 2010? Round off your answer to 1 decimal place.
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/data_analysis_average_word_problem_5.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					<b>a)</b>&nbsp; (39 &nbsp;&times;&nbsp; 0) &nbsp;+&nbsp; (29 &nbsp;&times;&nbsp; 1) &nbsp;+&nbsp; (73 &nbsp;&times;&nbsp; 2) &nbsp;+&nbsp; (46 &nbsp;&times;&nbsp; 3) &nbsp;+&nbsp; (18 &nbsp;&times;&nbsp; 4) &nbsp;=&nbsp; 385<br />
+					&nbsp;&nbsp;&nbsp;&nbsp; The total number of children in the township in 2009 was <b>385</b>.
+				</div>
+				<div class="col-10 col-off-1">
+					<b>b)</b>&nbsp; 385 &nbsp;&divide;&nbsp; 205 &nbsp;=&nbsp; 1.87 &nbsp;&asymp;&nbsp; 1.9<br />
+					&nbsp;&nbsp;&nbsp;&nbsp; The average number of children per family in the township in 2009 was <b>1.9</b>.
+				</div>
+				<div class="col-10 col-off-1">
+					<b>c)</b>&nbsp; 385 &nbsp;+&nbsp; 50 &nbsp;=&nbsp; 435<br />
+					&nbsp;&nbsp;&nbsp;&nbsp; Total number of children in the township in the year 2010 was 435.<br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; 435 &nbsp;&divide;&nbsp; 205 &nbsp;=&nbsp; 2.12 &nbsp;&asymp;&nbsp; 2.1<br />
+					&nbsp;&nbsp;&nbsp;&nbsp; The average number of children per family in the township in 2010 was <b>2.1</b>.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Data_Analysis_Find_Average">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 6 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula to calculate average?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Find the sum or total of all items.\nStep 2: Divide the total by the number of items.\nAverage  =  total of all items / number of items"}}]}</script>
+{% endblock %}

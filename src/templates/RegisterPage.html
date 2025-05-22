@@ -1,0 +1,58 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+	 {# <!-- Google Code for HCRegister Conversion Page -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1013517337;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "006600";
+		var google_conversion_label = "ofSICI_f-QIQmZik4wM";
+		var google_conversion_value = 0;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1013517337/?value=0&amp;label=ofSICI_f-QIQmZik4wM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript> #}
+		
+
+<div class="HC-Register">
+	<div class="HC-Register__container">
+		<div class="HC-Register__container--body">
+			<!--
+			<div class="social-login">
+				<button class="btn-facebook" id="sign-in--fb"><i class="fa fa-facebook"></i> Facebook</button> 
+				<button class="btn-google" id="sign-in--gp"><i class="fa fa-google-plus"></i> Google</button>
+			</div>
+			
+			<div class="or-separator"><span>or</span></div>	
+			-->
+			<h2>Register with HomeCampus</h2>
+			<!-- Email signup -->
+			<form id="SubscriptionPage" method="post" action="{{ current_url }}" class="register-form" id="register-form">
+				<div><label for="parent_first_name">Firstname:</label><input name="parent_first_name" id="parent_first_name" type="text" placeholder="Enter Firstname"/></div>
+				<div><label for="parent_last_name">Lastname:</label><input name="parent_last_name" id="parent_last_name" type="text" placeholder="Enter Lastname"></div>
+				<div><label for="email">Email:</label><input name="email" id="email" type="email" size=25 placeholder="Enter Email"></div>
+				<div><label for="password">Password:</label><input name="parent_password" id="parent_password" type="password"  placeholder="Enter Password"></div>
+				
+				<div class="register-form__ctrl">
+					<button type="submit" class="btn-primary btn-block">Sign Up</button>
+					<div class="register-form__ctrl-a">Already a member? <a href="/SignIn?continue=%2F" id="trigger-login">Sign In now</a></div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+		{% if registration_messages %}
+		<script>
+			$(document).ready(function(){
+				login_failed("{{ registration_messages }}");		//defined in account.js
+				});
+		</script>
+		{% endif %}
+{% endblock body %}

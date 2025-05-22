@@ -1,0 +1,43 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div style="background-image: url(/images/site/background.png);">
+<div id="NotesContent" style="width:90%;min-height:720px;" >
+	<br><br>
+    <form id="SubscriptionPage" method="post" action="{{ current_url }}" enctype="multipart/form-data">
+	<fieldset>
+		<legend>Waiver Form:</legend>
+		<ol>		
+			<li>
+				<fieldset>
+				<legend>User Id:</legend>
+				<input id=user_id name=user_id type=text>
+				</fieldset>				
+				<fieldset>
+				<legend>Transaction Id:</legend>
+				<input id=trans_id name=trans_id type=text>
+				</fieldset>
+				<fieldset>
+				<legend>Refund Type:</legend>
+				<input id=refund_type name=refund_type type=text>
+				</fieldset>
+				<fieldset>
+				<legend>Amount:</legend>
+				<input id=amount name=amount type=text>
+				</fieldset>				
+				<fieldset>
+				<legend>Note:</legend>
+				<textarea id=note name=note></textarea>
+				</fieldset>
+			</li>
+			<li>
+				<button id="Refund" ></button>
+			</li>
+		</ol>		
+	</fieldset>
+<script type="text/javascript">              		            
+	$("#Refund").button({label:"Refund"});
+</script> 
+</form>
+</div>
+</div>
+{% endblock %}

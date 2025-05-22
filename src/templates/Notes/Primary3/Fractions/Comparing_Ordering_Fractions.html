@@ -1,0 +1,229 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Comparing and Ordering Fractions - Home Campus</title>
+<meta name="keywords" content="Comparing Ordering Fractions Equivalent Fractions Simplifying Fractions">
+<meta name="description" content="How to compare and order fractions?" />
+{% endblock %}
+{% block content %}
+
+	<!-- InstanceBeginEditable name="maincontent" -->
+	
+	<h2 class="learn-heading">Comparing and Ordering Fractions</h2>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Comparing-and-Ordering-Fractions">Practice Unlimited Questions</a></div>
+
+
+	<!-- Concept 1 Explanation -->
+	<div class="concept-set">
+		<div class="concept-set__container" style="background-color: rgb(191, 199, 255);">
+			
+			<div class="concept-set__question">
+				<h4>How to compare fractions?</h4>
+			</div>
+						
+			<div class="concept-set__answer">					
+				<div class="col-11 col-off-1">
+					<strong>Step 1:</strong> Express the fractions using a common denominator. For this you need to find out lowest common denominator.<br>
+					<strong>Step 2:</strong> Create equivalent fractions by making the denominator common.<br>
+					<strong>Step 3:</strong> The fraction with the smallest numerator is the smallest fraction while the fraction with the biggest numerator is the biggest fraction.<br><br>
+					For better understanding follow the <a href="#Ques-3">example below.</a> 
+				</div>
+			</div>			
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(54, 215, 76);" href="/Learn/Compare-Fractions-Calculator">Compare Fractions Calculator</a></div>
+		</div>
+	</div><!-- End of concept 1 -->
+
+
+	<!-- QUES 1 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>
+				1. &nbsp; Lewis got {{ frGen(3,4) }} of a pizza.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Melody got {{ frGen(1,3) }} of a similar pizza.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sonia got {{ frGen(1,4) }} of another similar pizza.<br />
+				</h4>
+			</div>
+			
+			<!-- Uncomment this once the video link is available 
+			<div class="learn-set__video">
+				<div>
+					<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+				</div>
+			</div>
+			 -->
+
+			<div class="learn-set__answer">		
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_CompareOrder_1.png" />
+				</div>
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						a. Who got a bigger portion than Melody?
+					</div>
+					{{ frGen(3,4) }} is greater than {{ frGen(1,3) }}.<br />
+					Lewis got a bigger portion than Melody.<br /><br />
+				</div>
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						b. Who got a smaller portion than Melody?
+					</div>
+					{{ frGen(1,4) }} is smaller than {{ frGen(1,3) }}.<br />
+					Sonia got a smaller portion than Melody.<br /><br />
+				</div>
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						c. Who got the biggest portion?
+					</div>
+					{{ frGen(3,4) }} is greater than both {{ frGen(1,3) }} and {{ frGen(1,4) }}.<br />
+					Lewis got the biggest portion.<br /><br />
+				</div>
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						d. Who got the smallest portion?
+					</div>
+					{{ frGen(1,4) }} is smaller than both {{ frGen(3,4) }} and {{ frGen(1,3) }}.<br />
+					Sonia got the smallest portion.
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/comparing-and-ordering-fractions-free-math-worksheets">Download Free Worksheets</a></div>
+		</div>
+	</div><!-- End of answer 1 -->
+
+
+	<!-- QUES 2 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>
+				2. Which is greater: {{ frGen(2,9) }} or {{ frGen(1,3) }}?
+				</h4>
+			</div>
+			
+			<!-- Uncomment this once the video link is available 
+			<div class="learn-set__video">
+				<div>
+					<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+				</div>
+			</div>
+			 -->
+
+			<div class="learn-set__answer">		
+				<div class="col-8 col-off-1" >
+					To compare the fractions, we must first express them using a common denominator.<br />
+					So, we express {{ frGen(1,3) }} as its equivalent fraction, which is {{ frGen(3,9) }}. 
+				</div>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_CompareOrder_2.png" />
+				</div>
+				<div class="col-8 col-off-1" >
+					{{ frGen(1,3) }} is greater than {{ frGen(2,9) }}. 
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Comparing-and-Ordering-Fractions">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 2 -->
+
+
+	<!-- QUES 3 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4 id="Ques-3">
+				3. Arrange the following fractions in order, beginning with the smallest.<br /> 
+				<div class="col-11 col-off-1" >
+					{{ frGen(1,2) }} , {{ frGen(3,4) }} , {{ frGen(3,8) }} 
+				</div>
+				</h4>
+			</div>
+			
+			<!-- Uncomment this once the video link is available 
+			<div class="learn-set__video">
+				<div>
+					<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+				</div>
+			</div>
+			 -->
+
+			<div class="learn-set__answer">		
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						Method 1:
+					</div>
+					Let's compare the fractions using fraction strips as shown below. 
+				</div>
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_CompareOrder_3.png" />
+				</div>
+				<div class="col-11 col-off-1" >
+					Beginning with the smallest, the fractions should be arranged in the following order:
+					<div class="col-off-1" >
+						{{ frGen(3,8) }}, {{ frGen(1,2) }} and {{ frGen(3,4) }}<br /><br />
+					</div>
+				</div>
+				
+				<div class="col-8 col-off-1" >
+					<div style="font-weight:900;">
+						Method 2:
+					</div>
+					To compare the fractions, we must first express them using a common denominator.
+				</div>
+				<div class="col-11 col-off-1" >
+					Fraction 1: {{ frGen(1,2) }} = {{ frGen(2,4) }} = {{ frGen(4,8) }}<br />
+					Fraction 2: {{ frGen(3,4) }} = {{ frGen(6,8) }}<br />
+					Fraction 3: {{ frGen(3,8) }}<br /><br />
+					
+					The fraction with the smallest numerator is the smallest fraction while the fraction with the biggest numerator is the biggest fraction.<br /><br />
+					
+					So, beginning with the smallest, the fractions should be arranged in the following order:
+					<div class="col-off-1" >
+						{{ frGen(3,8) }}, {{ frGen(1,2) }} and {{ frGen(3,4) }}
+					</div>
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Compare-Fractions-Calculator">Compare Fractions Calculator</a></div>
+		</div>
+	</div><!-- End of answer 3 -->
+
+
+	<!-- Tips -->
+	<div class="concept-set">
+		<div class="concept-set__container P3">
+			
+			<div class="concept-set__question">
+				<h4>Tip:</h4>
+			</div>
+						
+			<div class="concept-set__answer">					
+				<div class="col-12">
+					When two or more fractions have the same numerator, example: {{ frGen(2,3) }} and {{ frGen(2,5) }}, it is easy to compare them.
+				</div>
+				<div class="col-12">
+					<img src="/images/notes/P3FR_CompareOrder_0.png" />
+				</div>
+				<div class="col-12">
+					The greater fraction is the one with the smaller denominator.<br />
+					Or,<br />
+					The smaller fraction is the one with the greater denominator.
+				</div>
+			</div>			
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Comparing-and-Ordering-Fractions">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of concept -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to compare fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Express the fractions using a common denominator. For this you need to find out lowest common denominator.<br>\nStep 2: Create equivalent fractions by making the denominator common.<br>\nStep 3: The fraction with the smallest numerator is the smallest fraction while the fraction with the biggest numerator is the biggest fraction."}},{"@type":"Question","name":"Which is bigger 1/2 or 3/4?","acceptedAnswer":{"@type":"Answer","text":"1/2 can be expressed as 2/4<br>\nNow, compare 2/4 and 3/4<br>\nSince, 3 is bigger than 2 hence 3/4 is bigger than 1/2"}}]}</script>
+
+{% endblock %}

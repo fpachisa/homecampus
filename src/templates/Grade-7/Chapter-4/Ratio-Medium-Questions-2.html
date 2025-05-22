@@ -1,0 +1,393 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.1 Ratio</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.1 Ratio</div>
+	{% endif %}
+	{% if current_user -%}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Two circular discs of blue and orange colors have radii of 0.4 m and 1.2 m, respectively. Find the ratio of:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">			
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">a) their radii = 
+				{% if RATIOMedium_2_1_a_answer_correct is defined or RATIOMedium_2_1_b_answer_correct is defined%}
+					<input id="RATIOMedium_2_1_a_answer" value='{{RATIOMedium_2_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_2_1_b_answer" value='{{RATIOMedium_2_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_2_1_a_answer" value='{{RATIOMedium_2_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_2_1_b_answer" value='{{RATIOMedium_2_1_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOMedium_2_1_a_answer_correct is defined or RATIOMedium_2_1_b_answer_correct is defined%}
+					{% if RATIOMedium_2_1_a_answer_correct and RATIOMedium_2_1_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_2_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">b) their circumferences =
+				{% if RATIOMedium_2_2_a_answer_correct is defined or RATIOMedium_2_2_b_answer_correct is defined%}
+					<input id="RATIOMedium_2_2_a_answer" value='{{RATIOMedium_2_2_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_2_2_b_answer" value='{{RATIOMedium_2_2_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_2_2_a_answer" value='{{RATIOMedium_2_2_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_2_2_b_answer" value='{{RATIOMedium_2_2_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if RATIOMedium_2_2_a_answer_correct is defined or RATIOMedium_2_2_b_answer_correct is defined%}
+					{% if RATIOMedium_2_2_a_answer_correct and RATIOMedium_2_2_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_2_2_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>					
+			<br>			
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">c) their areas =
+				{% if RATIOMedium_2_3_a_answer_correct is defined or RATIOMedium_2_3_b_answer_correct is defined%}
+					<input id="RATIOMedium_2_3_a_answer" value='{{RATIOMedium_2_3_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_2_3_b_answer" value='{{RATIOMedium_2_3_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_2_3_a_answer" value='{{RATIOMedium_2_3_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_2_3_b_answer" value='{{RATIOMedium_2_3_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if RATIOMedium_2_3_a_answer_correct is defined or RATIOMedium_2_3_b_answer_correct is defined%}
+					{% if RATIOMedium_2_3_a_answer_correct and RATIOMedium_2_3_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_2_3_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>					
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Find x: y: z in the following:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div>a)	x : y = 4 : 7, y : z = 3 : 2</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:40px;margin-top:10px;">x : y : z =  
+				{% if RATIOMedium_3_1_a_answer_correct is defined or RATIOMedium_3_1_b_answer_correct is defined or RATIOMedium_3_1_c_answer_correct is defined %}
+					<input id="RATIOMedium_3_1_a_answer" value='{{RATIOMedium_3_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_3_1_b_answer" value='{{RATIOMedium_3_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOMedium_3_1_c_answer" value='{{RATIOMedium_3_1_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_3_1_a_answer" value='{{RATIOMedium_3_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_3_1_b_answer" value='{{RATIOMedium_3_1_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOMedium_3_1_c_answer" value='{{RATIOMedium_3_1_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if RATIOMedium_3_1_a_answer_correct is defined or RATIOMedium_3_1_b_answer_correct is defined or RATIOMedium_3_1_c_answer_correct is defined %}
+					{% if RATIOMedium_3_1_a_answer_correct and RATIOMedium_3_1_b_answer_correct  and RATIOMedium_3_1_c_answer_correct%}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_3_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<div style="margin-top:20px;">b) x : z = 2012 : 11 , y : z = 103 : 11</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:40px;margin-top:10px;">x : y : z =  
+				{% if RATIOMedium_3_2_a_answer_correct is defined or RATIOMedium_3_2_b_answer_correct is defined or RATIOMedium_3_2_c_answer_correct is defined %}
+					<input id="RATIOMedium_3_2_a_answer" value='{{RATIOMedium_3_2_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_3_2_b_answer" value='{{RATIOMedium_3_2_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOMedium_3_2_c_answer" value='{{RATIOMedium_3_2_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_3_2_a_answer" value='{{RATIOMedium_3_2_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_3_2_b_answer" value='{{RATIOMedium_3_2_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOMedium_3_2_c_answer" value='{{RATIOMedium_3_2_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if RATIOMedium_3_2_a_answer_correct is defined or RATIOMedium_3_2_b_answer_correct is defined or RATIOMedium_3_2_c_answer_correct is defined %}
+					{% if RATIOMedium_3_2_a_answer_correct and RATIOMedium_3_2_b_answer_correct and RATIOMedium_3_2_c_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_3_2_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">c) x : y =</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				<p style="line-height:20%;text-align:center;">15<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>			
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				<p style="line-height:20%;text-align:center;">27<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:20px;">, y : z =</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				<p style="line-height:20%;text-align:center;">14<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				<p style="line-height:20%;text-align:center;">21<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>			
+			<br>		
+			<div style="display:inline-block;vertical-align:top;margin-left:40px;margin-top:10px;">x : y : z =  
+				{% if RATIOMedium_3_3_a_answer_correct is defined or RATIOMedium_3_3_b_answer_correct is defined or RATIOMedium_3_3_c_answer_correct is defined %}
+					<input id="RATIOMedium_3_3_a_answer" value='{{RATIOMedium_3_3_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOMedium_3_3_b_answer" value='{{RATIOMedium_3_3_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOMedium_3_3_c_answer" value='{{RATIOMedium_3_3_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOMedium_3_3_a_answer" value='{{RATIOMedium_3_3_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOMedium_3_3_b_answer" value='{{RATIOMedium_3_3_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOMedium_3_3_c_answer" value='{{RATIOMedium_3_3_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOMedium_3_3_a_answer_correct is defined or RATIOMedium_3_3_b_answer_correct is defined or RATIOMedium_3_3_c_answer_correct is defined %}
+					{% if RATIOMedium_3_3_a_answer_correct and RATIOMedium_3_3_b_answer_correct and RATIOMedium_3_3_c_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOMedium_3_3_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>
+
+		
+		{% if RATIOMedium_2_1_a_answer_correct is defined %}
+			<div style="margin-top:-20px;margin-left:380px;"><button id="RATIOMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:300px;"><button id="RATIOMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+	{% else %}
+		<div style="margin-left:30px;margin-top:40px;"><a href="/SignIn?continue=%2FSecondary-1-Grade-7-Mathematics?pageName=Ratio-Medium-Questions-1"><img src="/images/g7_lock.png"></a></div>
+		<div style="margin-top:20px;text-align:center;">Or learn the next topic..</div>
+		<div style="margin-top:20px;text-align:center;"><a href="javascript:Grade7BookPageLoadByName('Addition-of-Integers-2')">Addition and Subtraction of Integers</a></div>
+	{% endif %}	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATIOMedium_2_1_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_1_a_answer";
+		entered_answer = $("#RATIOMedium_2_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_2_1_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_1_b_answer";
+		entered_answer = $("#RATIOMedium_2_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_2_2_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_2_a_answer";
+		entered_answer = $("#RATIOMedium_2_2_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_2_2_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_2_b_answer";
+		entered_answer = $("#RATIOMedium_2_2_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_2_3_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_3_a_answer";
+		entered_answer = $("#RATIOMedium_2_3_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_2_3_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_2";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_2_3_b_answer";
+		entered_answer = $("#RATIOMedium_2_3_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_1_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_1_a_answer";
+		entered_answer = $("#RATIOMedium_3_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_1_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_1_b_answer";
+		entered_answer = $("#RATIOMedium_3_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_1_c_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_1_c_answer";
+		entered_answer = $("#RATIOMedium_3_1_c_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_2_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_2_a_answer";
+		entered_answer = $("#RATIOMedium_3_2_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_2_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_2_b_answer";
+		entered_answer = $("#RATIOMedium_3_2_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_2_c_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_2_c_answer";
+		entered_answer = $("#RATIOMedium_3_2_c_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_3_a_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_3_a_answer";
+		entered_answer = $("#RATIOMedium_3_3_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_3_b_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_3_b_answer";
+		entered_answer = $("#RATIOMedium_3_3_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOMedium_3_3_c_answer").change(function()
+	{
+		question_id = "RATIOMedium_3";
+		question_type = "Ratio"
+		answer_id = "RATIOMedium_3_3_c_answer";
+		entered_answer = $("#RATIOMedium_3_3_c_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+					
+	$("#RATIOMedium_2_Submit").button({label:"Check Answers"});
+	$("#RATIOMedium_2_Retry").button({label:"Retry"});
+	$("#RATIOMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Ratio"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATIOMedium_2"+"#%$"+"RATIOMedium_2_1_a_answer"+"#%$"+$("#RATIOMedium_2_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_2"+"#%$"+"RATIOMedium_2_1_b_answer"+"#%$"+$("#RATIOMedium_2_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_2"+"#%$"+"RATIOMedium_2_2_a_answer"+"#%$"+$("#RATIOMedium_2_2_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_2"+"#%$"+"RATIOMedium_2_2_b_answer"+"#%$"+$("#RATIOMedium_2_2_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_2"+"#%$"+"RATIOMedium_2_3_a_answer"+"#%$"+$("#RATIOMedium_2_3_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_2"+"#%$"+"RATIOMedium_2_3_b_answer"+"#%$"+$("#RATIOMedium_2_3_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_1_a_answer"+"#%$"+$("#RATIOMedium_3_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_1_b_answer"+"#%$"+$("#RATIOMedium_3_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_1_c_answer"+"#%$"+$("#RATIOMedium_3_1_c_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_2_a_answer"+"#%$"+$("#RATIOMedium_3_2_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_2_b_answer"+"#%$"+$("#RATIOMedium_3_2_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_2_c_answer"+"#%$"+$("#RATIOMedium_3_2_c_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_3_a_answer"+"#%$"+$("#RATIOMedium_3_3_a_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_3_b_answer"+"#%$"+$("#RATIOMedium_3_3_b_answer").val();
+		answers = answers + "#%$"+"RATIOMedium_3"+"#%$"+"RATIOMedium_3_3_c_answer"+"#%$"+$("#RATIOMedium_3_3_c_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATIOMedium_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATIOMedium_2_1_a_answer,RATIOMedium_2_1_b_answer,";
+		answer_ids = answer_ids + "RATIOMedium_2_2_a_answer,RATIOMedium_2_2_b_answer,";
+		answer_ids = answer_ids + "RATIOMedium_2_3_a_answer,RATIOMedium_2_3_b_answer,";
+		answer_ids = answer_ids + "RATIOMedium_3_1_a_answer,RATIOMedium_3_1_b_answer,RATIOMedium_3_1_c_answer,";
+		answer_ids = answer_ids + "RATIOMedium_3_2_a_answer,RATIOMedium_3_2_b_answer,RATIOMedium_3_2_c_answer,";
+		answer_ids = answer_ids + "RATIOMedium_3_3_a_answer,RATIOMedium_3_3_b_answer,RATIOMedium_3_3_c_answer,";
+
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

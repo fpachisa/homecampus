@@ -1,0 +1,105 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Practice Primary 5 / 5th Grade Mathematics Online at Home Campus</title>
+<meta name="description" content="Practice primary school mathematics online. Solve unlimited randomly generated problems on all primary mathematics concepts." />
+{% endblock %}
+{% block body %}
+
+	<script src="/js/Practice.js" type="text/javascript"></script>
+	<script src="/js/submit.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/DrawCircles.js"></script>
+	<script type="text/javascript" src="/js/jquery.gritter.min.js"></script> 
+	<script type="text/javascript" src="/js/DrawAngles.js"></script>
+	<script type="text/javascript" src="/js/DrawCompositeFigures.js"></script>
+	<script type="text/javascript" src="/js/DrawShapes.js"></script>
+	<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+  	<link href="/stylesheets/jquery.gritter.css" rel="stylesheet" type="text/css" />
+ {% block practice %}
+ <div id="HomeContent">
+ <div style="text-align:center"><h2>Grade 5 Practice</h2></div>
+ 	<div id="P5ConceptDisplay">
+        <div class="P5FirstRowConceptListDisplay">	
+	   	<p><img alt="Whole Numbers" src="/images/site/whole_numbers_box.png"></p>
+	   		<ol>
+	   			<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Write_Words" >Figures to words</a></li>
+	    		<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Write_Figures" >Words to figures</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Place_Values" >Place values</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Comparing_Ordering" >Comparing and ordering</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Find_Pattern" >Find pattern</a></li>        			
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Approximation_Estimation" >Approximation and estimation</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Multiplication_Division" >Multiply and divide</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Order_Operations" >Order of operations</a></li>
+				<li class="file" id=""><a href="/Grade_5_Math_Practice/Whole_Numbers_Word_Problems" >Word problems</a></li>        			
+			</ol>
+   		</div>
+        <div class="P5FirstRowConceptListDisplay" style="width:300px">	
+	   	<p><img alt="Fractions" src="/images/site/fractions_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions" >Add/Sub proper fractions</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Add_Subtract_Mixed_Fractions" >Add/Sub mixed fractions</a></li>
+    			<li class="file" id=""><a href="/Grade_5_Math_Practice/Multiply_Proper_Improper_Fractions" >Multiply proper/improper fractions</a></li>
+    			<li class="file" id=""><a href="/Grade_5_Math_Practice/Multiply_Mixed_Fraction_Whole_Number" >Multiply mixed fraction/whole number</a></li>
+    			<li class="file" id=""><a href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number" >Divide proper fraction/whole number</a></li>
+    			<li class="file" id=""><a href="/Grade_5_Math_Practice/Fractions_Word_Problems" >Word Problems</a></li>
+			</ol>
+   		</div>
+        <div class="P5FirstRowConceptListDisplay" style="width:200px">	
+	   	<p><img alt="Decimals" src="/images/site/decimals_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Decimals_Multiply_Divide" >Multiply and divide</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Decimals_Rounding_Off" >Rounding off</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Decimals_Word_Problems" >Word Problems</a></li>			
+            </ol>
+   		</div>
+        <div class="P5FirstRowConceptListDisplay">	
+	   	<p><img alt="Percentage" src="/images/site/percentage_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Express_as_Percentage" >Express as percentage</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Express_as_Decimal" >Express as decimal</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Express_as_Fraction" >Express as fraction</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Percentage_Word_Problems" >Word Problems</a></li>
+			</ol>
+   		</div>
+   		
+        <div class="P5SecondRowConceptListDisplay" style="width:250px;">	
+	   	<p><img alt="Ratio" src="/images/site/ratio_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Ratio_Simplest_Form" >Ratio in simplest form</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Ratio_Missing_Number" >Find the missing number</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Ratio_Word_Problems" >Word Problems</a></li>
+			</ol>
+   		</div>
+        <div class="P5SecondRowConceptListDisplay" style="width:250px">	
+	   	<p><img alt="Measurement" src="/images/site/measurement_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Measurement_Unit_Conversion" >Conversion of unit</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Measurement_Area_Triangle" >Area of a triangle</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Measurement_Volume_Cube_Cuboid" >Volume of a cube/cuboid</a></li>
+        		<li class="file" id=""><a href="/Grade_5_Math_Practice/Measurement_Word_Problems" >Word Problems</a></li>
+            </ol>
+   		</div>
+        <div class="P5SecondRowConceptListDisplay" style="width:200px;">	
+	   	<p><img alt="Geometry" src="/images/site/geometry_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Geometry_Find_Unknown_Angles" >Angles</a></li>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Triangles_Find_Unknown_Angles" >Triangles</a></li>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Find_Unknown_Angles_in_Four_Sided_Figures" >Four sided figures</a></li>
+			</ol>
+   		</div>
+        <div class="P5SecondRowConceptListDisplay" style="width:200px;">	
+	   	<p><img alt="Data Analysis" src="/images/site/data_analysis_box.png"></p>	
+	   		<ol>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Data_Analysis_Find_Average" >Find the average</a></li>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Data_Analysis_Find_Total" >Find the total</a></li>
+       			<li class="file" id=""><a href="/Grade_5_Math_Practice/Data_Analysis_Word_Problems" >Word Problems</a></li>
+            </ol>
+   		</div>
+ 	</div>
+ 	
+ </div><!-- end #homeContent --> 
+<div style="background-image: url(/images/site/background.png);">
+ <div id="NotesContent" style="display:none;width:1200px;min-height:400px;">
+</div> 
+</div> 
+{% endblock %}
+{% endblock %}

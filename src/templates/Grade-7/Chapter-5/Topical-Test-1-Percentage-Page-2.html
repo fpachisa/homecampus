@@ -1,0 +1,139 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;margin-left:70%;">Percentage - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">A construction worker receives a daily wage of $110. After a year of service, his daily wage is raised by 30%. Find his new daily wage.</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;">Answer: $</div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_4_answer" size=3 value='{{PRTT1_4_answer}}' readonly style="background-color:#DFDFDF;"> &nbsp;
+				{% if PRTT1_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_4_answer" size=3 value='{{PRTT1_4_answer}}'><font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">0.1% of the students who took a competitive exam passed it. If 220 students passed the exam, find the number of students who took the exam.</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_5_answer" size=3 value='{{PRTT1_5_answer}}' readonly style="background-color:#DFDFDF;"> &nbsp;
+				{% if PRTT1_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_5_answer" size=3 value='{{PRTT1_5_answer}}'><font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">6)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">Jenny gets a monthly allowance of $250. She spends $50 on food, $70 on entertainment and $100 on shopping. What percentage of her allowance does she save monthly?</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_6_answer" size=3 value='{{PRTT1_6_answer}}' readonly style="background-color:#DFDFDF;"> % &nbsp;
+				{% if PRTT1_6_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_6_answer" size=3 value='{{PRTT1_6_answer}}'> %<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="PR_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+
+$("#PR_TT_1_Continue").button({label:">>"});
+$("#PR_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-5/Topical-Test-1-Percentage-Page-3.html';
+		rightPage = '/Grade-7/Chapter-5/Topical-Test-1-Percentage-Page-4.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$';
+		answer_ids = 'PRTT1_1_answer'+separatorText+'PRTT1_2_answer'+separatorText+'PRTT1_3_answer'+separatorText;
+		answer_ids = answer_ids +'PRTT1_4_answer'+separatorText+'PRTT1_5_answer'+separatorText+'PRTT1_6_answer';
+
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#PRTT1_4_answer").change(function()
+		{
+			question_id = "PRTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_4_answer";
+			entered_answer = $("#PRTT1_4_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#PRTT1_5_answer").change(function()
+		{
+			question_id = "PRTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_5_answer";
+			entered_answer = $("#PRTT1_5_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#PRTT1_6_answer").change(function()
+		{
+			question_id = "PRTT1_6";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_6_answer";
+			entered_answer = $("#PRTT1_6_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+</script>
+

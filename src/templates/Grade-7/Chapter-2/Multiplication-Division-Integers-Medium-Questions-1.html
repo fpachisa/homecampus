@@ -1,0 +1,220 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:10px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Solve the following:
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">a) [&minus;3 + (&minus;4)<sup>2</sup> + (&minus;20)] &times; [(&minus;5)<sup>3</sup> + 100 &minus; 2] = 
+			{% if RNMDMedium_1_1_answer_correct is defined %}
+				<input id="RNMDMedium_1_1_answer" value='{{RNMDMedium_1_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_1_answer" value='{{RNMDMedium_1_1_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">b) 1200 &divide; [(&minus;9)<sup>3</sup>+ (&minus;10)<sup>2</sup> + 29] =
+			{% if RNMDMedium_1_2_answer_correct is defined %}
+				<input id="RNMDMedium_1_2_answer" value='{{RNMDMedium_1_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_2_answer_correct and RNMDMedium_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_2_answer" value='{{RNMDMedium_1_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">c) 54 &times; (&minus;2)<sup>2</sup> &divide; (6 &times; 4) = 
+			{% if RNMDMedium_1_3_answer_correct is defined %}
+				<input id="RNMDMedium_1_3_answer" value='{{RNMDMedium_1_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_3_answer_correct and RNMDMedium_1_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_3_answer" value='{{RNMDMedium_1_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">d) (&minus;60) &divide; (&minus;4) &divide; (&minus;3) = 
+			{% if RNMDMedium_1_4_answer_correct is defined %}
+				<input id="RNMDMedium_1_4_answer" value='{{RNMDMedium_1_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_4_answer_correct and RNMDMedium_1_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_4_answer" value='{{RNMDMedium_1_4_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>		
+		<div style="margin-left:60px;margin-top:20px;">e) (&minus; <font style="font-size:1.1em;">&radic;</font><span style="text-decoration:overline">16&nbsp;</span> + <font style="font-size:1.1em;">&#8731;</font><span style="text-decoration:overline">&minus;512&nbsp;</span>) &times; (&minus;3 + 8)  = 
+			{% if RNMDMedium_1_5_answer_correct is defined %}
+				<input id="RNMDMedium_1_5_answer" value='{{RNMDMedium_1_5_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_5_answer_correct and RNMDMedium_1_5_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_5_answer" value='{{RNMDMedium_1_5_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>		
+		<div style="margin-left:60px;margin-top:20px;">f) (&minus;44) &times; 11 &divide; 121 = 
+			{% if RNMDMedium_1_6_answer_correct is defined %}
+				<input id="RNMDMedium_1_6_answer" value='{{RNMDMedium_1_6_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_6_answer_correct and RNMDMedium_1_6_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_6_answer" value='{{RNMDMedium_1_6_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">g) 23 &minus; (&minus;2) &times; 42 + 36 &divide; 2 = 
+			{% if RNMDMedium_1_7_answer_correct is defined %}
+				<input id="RNMDMedium_1_7_answer" value='{{RNMDMedium_1_7_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDMedium_1_7_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDMedium_1_7_answer_correct and RNMDMedium_1_7_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDMedium_1_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDMedium_1_7_answer" value='{{RNMDMedium_1_7_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+
+
+		{% if RNMDMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:-15px;margin-left:380px;"><button id="RNMDMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNMDMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNMDMedium_1_1_answer").change(function()
+	{
+		question_id = "RNMDMedium_1";
+		question_type = "MultiplicationDivisionIntegers"
+		answer_id = "RNMDMedium_1_1_answer";
+		entered_answer = $("#RNMDMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNMDMedium_1_2_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_2_answer";
+				entered_answer = $("#RNMDMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDMedium_1_3_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_3_answer";
+				entered_answer = $("#RNMDMedium_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDMedium_1_4_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_4_answer";
+				entered_answer = $("#RNMDMedium_1_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDMedium_1_5_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_5_answer";
+				entered_answer = $("#RNMDMedium_1_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDMedium_1_6_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_6_answer";
+				entered_answer = $("#RNMDMedium_1_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDMedium_1_7_answer").change(function()
+			{
+				question_id = "RNMDMedium_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDMedium_1_7_answer";
+				entered_answer = $("#RNMDMedium_1_7_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNMDMedium_1_Submit").button({label:"Check Answers"});
+	$("#RNMDMedium_1_Retry").button({label:"Retry"});
+	$("#RNMDMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDMedium_1"+"#%$"+"RNMDMedium_1_1_answer"+"#%$"+$("#RNMDMedium_1_1_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_2_answer"+"#%$"+$("#RNMDMedium_1_2_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_3_answer"+"#%$"+$("#RNMDMedium_1_3_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_4_answer"+"#%$"+$("#RNMDMedium_1_4_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_5_answer"+"#%$"+$("#RNMDMedium_1_5_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_6_answer"+"#%$"+$("#RNMDMedium_1_6_answer").val();
+		answers = answers + "#%$"+"RNMDMedium_1"+"#%$"+"RNMDMedium_1_7_answer"+"#%$"+$("#RNMDMedium_1_7_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDMedium_1_1_answer,RNMDMedium_1_2_answer,RNMDMedium_1_3_answer,";
+		answer_ids = answer_ids + "RNMDMedium_1_4_answer,RNMDMedium_1_5_answer,RNMDMedium_1_6_answer,RNMDMedium_1_7_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,12 @@
+{% extends 'Goals/Goals_Template.html' %}
+{% block jsHeader%}
+<script type="text/javascript"> 
+	$("#grade").val('4');
+	$("#concept").val('P4DC');
+	$("#child").val('{{ChildId}}');	
+</script>
+{% endblock %}
+
+{% block GoalsTitle %}
+<h3><b>{{child }}'s Goals on Decimals for Grade 4:</b></h3>
+{% endblock %}

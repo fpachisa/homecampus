@@ -1,0 +1,29 @@
+{% block bottom %}
+	
+    <div style="margin-left:230px;margin-top:30px;">
+		<img src="/images/site/learning_is_every_childs_right.png">
+		<br><br>
+		<div style="margin-left:60px;margin-top:30px;">
+			<font class="legendText" style="font-size:18px;color:#25acc3;">How well is your child performing?</font><br><br>
+			<font class="legendText" style="font-size:18px;color:#25acc3;">Identify areas of strengths and weaknesses</font><br><br>
+			<button id="SubscribeButton" class="btn-primary">Yes, show me the detailed reports</button>
+			<a href="/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<font style="font-size:1em;text-decoration:underline;">No, thanks</font>
+			</a>
+		</div>
+	</div>
+	
+	
+	<!--below script is to create the jQuery button with defaul theming -->
+
+	<script type="text/javascript">
+ 		
+			//$("#SubscribeButton").button({label:"Yes, show me the detailed reports"});
+			$("#SubscribeButton").click(function()
+	    		{
+					window.location.href = '/Subscribe';
+	    		}
+	    		);
+			$("#ReportList").hide();
+	</script>
+{% endblock %}

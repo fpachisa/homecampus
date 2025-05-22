@@ -1,0 +1,185 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>How to Subtract Like and Unlike Proper Fractions? - Home Campus</title>
+<meta name="keywords" content="Subtract Like Unlike Proper Fractions">
+<meta name="description" content="How to subtract like fractions? How to subtract unlike fractions?" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Subtracting Like and Unlike Proper Fractions</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(255, 245, 225);">			
+		<div class="concept-set__question">
+			<h4>How to subtract like fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Step 1: Subtract all the numerators. (Denominator will remain the same.)<br>
+				Step 2: Simplify if required.<br><br>
+				<a href="#Ques-2">See the example below</a>
+			</div>							
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Subtract-Fractions-Calculator">Subtract Fractions Calculator</a></div>
+	</div>
+</div><!-- End of concept 1 -->
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(249, 199, 255);">			
+		<div class="concept-set__question">
+			<h4>How to subtract unlike fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Step 1: Change unlike fractions to like fractions. i.e. find a common denominator.<br>
+				Step 2: Subtract all the numerators.<br>
+				Step 3: Simplify if required.<br><br>
+				<a href="#Ques-3">See the example below</a>
+			</div>							
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Subtract-Fractions-Calculator">Subtract Fractions Calculator</a></div>
+	</div>
+</div><!-- End of concept 2-->
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4 id="Ques-1">1. The video below explains how to subtract proper fractions.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/zoXhiHBMpi0?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				A proper fraction is a fraction in which the numerator is smaller than the denominator.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4 id="Ques-2">2. Monica had &nbsp;&nbsp;{{ frGen(1,4) }} of a pie and Sarah had &nbsp;&nbsp;{{ frGen(3,4) }} of the pie.<br />
+				How much more of the pie had Sarah than Monica?
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Sarah &nbsp;=>&nbsp;&nbsp; {{ frGen(3,4) }}<br />
+				Monica &nbsp;=>&nbsp;&nbsp; {{ frGen(1,4) }}<br />
+				Sarah &nbsp;&minus;&nbsp; Monica &nbsp;=>&nbsp;&nbsp; {{ frGen(3,4) }} &nbsp;&minus;&nbsp; {{ frGen(1,4) }}<br />
+				
+				<img src="/images/notes/subtracting_proper_fractions.png" alt="square metre or square meter" /><br />
+				
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(3,4) }} &nbsp;&minus;&nbsp; {{ frGen(1,4) }}</b> <br />
+				=&nbsp; {{ frGen("3 - 1",4) }} <br />
+				=&nbsp; {{ frGen(2,4) }} <br />
+				=&nbsp; {{ frGen("2 / 2","4 / 2") }} (simplify) <br />
+				=&nbsp; <b>{{ frGen(1,2) }}</b><br />
+				Sarah had <b>{{ frGen(1,2) }}</b> a pie more than Monica.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4 id="Ques-3">3. Elly gives &nbsp;&nbsp;{{ frGen(1,2) }} of a pizza to Charlie and &nbsp;&nbsp;{{ frGen(1,3) }} of the pizza to Derek. <br />
+				How much more of the pizza does Elly give to Charlie than Derek?<br />
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-7 col-off-1">
+				Charlie &nbsp;=>&nbsp;&nbsp; {{ frGen(1,2) }}<br />
+				Derek &nbsp;=>&nbsp;&nbsp; {{ frGen(1,3) }}<br />
+				Charlie &nbsp;&minus;&nbsp; Derek &nbsp;=>&nbsp;&nbsp; {{ frGen(1,2) }} &nbsp;&minus;&nbsp; {{ frGen(1,3) }}<br /><br />
+				
+				<img src="/images/notes/subtracting_unlike_proper_fractions.png" alt="square metre or square meter" /><br />
+			</div>
+			<div class="col-3 hint-box" style="margin:10px;">
+				Both Charlie and Derek had 1 slice each but Charlie's slice was bigger than Derek's slice because Charlie's pizza was cut into 2 while Derek's pizza was cut into 3.<br /><br />
+				
+				To compare the two slices, first cut both pizzas into equal number of slices.
+			</div>
+			<div class="col-6 col-off-1">
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(1,2) }} &nbsp;&minus;&nbsp; {{ frGen(1,3) }}</b> <br />
+				=&nbsp; {{ frGen("1 x 3","2 x 3") }} &nbsp;&minus;&nbsp; {{ frGen("1 x 2","3 x 2") }}<br />
+				=&nbsp; {{ frGen(3,6) }} &nbsp;&minus;&nbsp; {{ frGen(2,6) }} &nbsp; (changed the denominator to 6)<br />
+				=&nbsp; <b>{{ frGen(1,6) }}</b><br /><br />
+				
+				Elly gives <b>{{ frGen(1,6) }}</b> of a pizza more to Charlie than to Derek.
+			</div>
+			<div class="col-4 hint-box" style="margin:30px;">
+				Since the two fractions, {{ frGen(1,2) }} and {{ frGen(1,3) }} are unlike fractions (as the denominators are different), we must first change them to like fractions before we can subtract them (that is, find a common denominator).<br /><br />
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to subtract like fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Subtract all the numerators. (Denominator will remain the same.)<br>\nStep 2: Simplify if required.\n"}}]}</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "HowTo", 
+  "name": "Subtract Unlike Fractions",
+  "description": "Let's look at an example. Subtract 1/3 from 1/2.",
+  "image": "https://my.homecampus.com.sg/images/notes/subtracting_unlike_proper_fractions.png",
+  "totalTime": "PT5M",
+  "supply": {
+    "@type": "HowToSupply",
+    "name": "Pen and Paper"
+  },
+  "tool": {
+    "@type": "HowToTool",
+    "name": "Not required"
+  },
+  "step": [{
+    "@type": "HowToStep",
+    "text": "Since the two fractions, 1/2 and 1/3 are unlike fractions (as the denominators are different), we must first change them to like fractions before we can add them (that is, find a common denominator). 1/2 - 1/3 = (1x3)/(2x3) - (1x2)/(2x3) = 3/6 - 2/6 (Changed the denominators to 6)",
+    "image": "https://my.homecampus.com.sg/images/notes/subtracting_unlike_proper_fractions.png",
+    "name": "subtract unlike fractions",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Subtraction-Proper-Fractions"
+  },{
+    "@type": "HowToStep",
+    "text": "Subtract the numerators. (3-2)/6 = 1/6. Hence, 1/2 - 1/3 = 1/6",
+    "image": "https://my.homecampus.com.sg/images/notes/subtracting_unlike_proper_fractions.png",
+    "name": "subtract unlike fractions",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Subtraction-Proper-Fractions"
+  }]    
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,171 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.3 Factorization</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:77%;">8.3 Factorization</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+			A confectioner bought 160 eggs at $<font class="grade7Variables">a</font> each, 80 oranges at $<font class="grade7Variables">b</font> each and 4 kg sugar at $<font class="grade7Variables">c</font> per 100 grams. He required 4 eggs, 2 oranges and 100 grams of sugar to make 1 orange pie. He sold each orange pie at<br> $(5<font class="grade7Variables">a</font> + 3<font class="grade7Variables">b</font> + 3<font class="grade7Variables">c</font>). He used up all the ingredients bought in making the orange pies.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;display:inline-block;vertical-align:top;">a)</div>
+		<div style="margin-top:10px;display:inline-block;vertical-align:top;width:380px;">How much did the ingredients cost him?</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ALFAAdvanced_2_1_answer_correct is defined %}
+			<div style="display:inline-block;">	
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='A' disabled
+				{% if ALFAAdvanced_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >160<font class="grade7Variables">a</font> + 80<font class="grade7Variables">b</font> + 4<font class="grade7Variables">c</font><br>
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='B' disabled
+				{% if ALFAAdvanced_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='C' disabled
+				{% if ALFAAdvanced_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(4<font class="grade7Variables">a</font> + 2<font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)			
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:20px;">	
+				{% if ALFAAdvanced_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ALFAAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='A'
+				{% if ALFAAdvanced_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >160<font class="grade7Variables">a</font> + 80<font class="grade7Variables">b</font> + 4<font class="grade7Variables">c</font><br>
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='B'
+				{% if ALFAAdvanced_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_1_answer" value='C'
+				{% if ALFAAdvanced_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(4<font class="grade7Variables">a</font> + 2<font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;vertical-align:top;">b)</div>
+		<div style="margin-top:20px;display:inline-block;vertical-align:top;width:380px;">How much profit did he earn from selling all the orange pies?</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ALFAAdvanced_2_2_answer_correct is defined %}
+			<div style="display:inline-block;">	
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='A' disabled
+				{% if ALFAAdvanced_2_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + 2<font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='B' disabled
+				{% if ALFAAdvanced_2_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='C' disabled
+				{% if ALFAAdvanced_2_2_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ><font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + 2<font class="grade7Variables">c</font>
+			
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:20px;">	
+				{% if ALFAAdvanced_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ALFAAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='A'
+				{% if ALFAAdvanced_2_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + 2<font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='B'
+				{% if ALFAAdvanced_2_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >40(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + <font class="grade7Variables">c</font>)<br>
+				<input type=radio name="ALFAAdvanced_2_2_answer" value='C'
+				{% if ALFAAdvanced_2_2_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ><font class="grade7Variables">a</font> + <font class="grade7Variables">b</font> + 2<font class="grade7Variables">c</font>
+			{% endif %}	
+		</div>
+
+		{% if ALFAAdvanced_2_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="ALFAAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="ALFAAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+$("input[name='ALFAAdvanced_2_1_answer']").click(function()
+		{
+			question_id = "ALFAAdvanced_2";
+			question_type = "AlgebraFactorisation"
+			answer_id = "ALFAAdvanced_2_1_answer";
+			entered_answer = $("input:radio[name=ALFAAdvanced_2_1_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("input[name='ALFAAdvanced_2_2_answer']").click(function()
+		{
+			question_id = "ALFAAdvanced_2";
+			question_type = "AlgebraFactorisation"
+			answer_id = "ALFAAdvanced_2_2_answer";
+			entered_answer = $("input:radio[name=ALFAAdvanced_2_2_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#ALFAAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#ALFAAdvanced_2_Retry").button({label:"Retry"});
+	$("#ALFAAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraFactorisation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ALFAAdvanced_2"+"#%$"+"ALFAAdvanced_2_1_answer"+"#%$"+$("input:radio[name=ALFAAdvanced_2_1_answer]:checked").val();
+		answers = answers + "#%$"+"ALFAAdvanced_2"+"#%$"+"ALFAAdvanced_2_2_answer"+"#%$"+$("input:radio[name=ALFAAdvanced_2_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ALFAAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ALFAAdvanced_2_1_answer,ALFAAdvanced_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

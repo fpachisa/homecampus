@@ -1,0 +1,179 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Minutes Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to minutes">
+<meta name="description" content="Converter Hours to Minutes" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Minutes?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Minutes Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToMinutes" onclick="ConvertToMinutes()">Convert To Minutes</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="MinutesAnswer"></div>
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(27, 215, 38);" href="/Learn/Primary-Grade-3/Time-Conversion-Hours-Minutes">Learn More Here</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			<h4><strong>1 hour &nbsp;=&nbsp; 60 minutes.</strong>
+				<br><br>To convert hours to  minutes simply multiply the hours by 60 to get minutes.	
+			</h4>
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 103, 203);" href="/Free-Math-Worksheets/Hours-to-Minutes-Converter-Worksheets">Download Free Worksheets</a></div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 5 hours to minutes.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiply 5 by 60
+				<br><br>Total minutes in 5 hours &nbsp;=&nbsp; 5 &nbsp;&times;&nbsp; 60 &nbsp;=&nbsp; 300
+				<br><br>Hence, there are <strong>300 minutes in 5 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 0.004 hours to minutes</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Multiply 0.004 by 60
+				<br><br>Total minutes in 0.004 hours &nbsp;=&nbsp; 0.004 &nbsp;&times;&nbsp; 60 &nbsp;=&nbsp; 0.24
+				<br><br>Hence, there are <strong>0.24 minutes in 0.004 hours.</strong>
+			</div>
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Time_Conversion_Hours_Minutes">Practice Unlimited Questions</a></div>						
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliSeconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times;10<sup>-5</sup> decade<br><br>
+				1.1416 &times;10<sup>-6</sup> century<br><br>
+				1.1416 &times;10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Hour Minutes Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Minutes Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Minutes Chart -->
+
+<script>
+
+function ConvertToMinutes() {
+	var hours = document.getElementById("hour").value;
+	var minutes = hours*60;
+	document.getElementById("MinutesAnswer").innerHTML = "There are "+minutes+" minutes in "+hours+" hours."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 60 minutes<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*60 + ' minutes<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*60 + ' minutes<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*60 + ' minutes<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*60 + ' minutes<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many minutes are there in an hour?","acceptedAnswer":{"@type":"Answer","text":"1 hour has 60 minutes"}},{"@type":"Question","name":"How to convert hours to minutes?","acceptedAnswer":{"@type":"Answer","text":"Multiply hours by 60 to convert it to minutes."}}]}</script>
+
+{% endblock %}

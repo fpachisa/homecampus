@@ -1,0 +1,132 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.1 Percentage Review</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.1 Percentage Review</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			Two brands of 990 ml packets of orange juice are priced such that a packet of brand X costs $5 and a packet of brand Y costs 20% more compared to brand X.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) Find the price of a packet of juice of brand Y.</div>
+		<div style="margin-left:40px;margin-top:10px;">Answer:&nbsp;&nbsp;
+			{% if PRRAdvanced_3_1_answer_correct is defined %}
+				$ <input id="PRRAdvanced_3_1_answer" value='{{PRRAdvanced_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if PRRAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRAdvanced_3_1_answer_correct and PRRAdvanced_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				$ <input id="PRRAdvanced_3_1_answer" value='{{PRRAdvanced_3_1_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) By what percentage (correct to 2 decimal places) is the price of a packet of juice of brand X less than that of brand Y?</div>
+		<div style="margin-left:40px;margin-top:10px;">Answer:&nbsp;&nbsp;
+			{% if PRRAdvanced_3_2_answer_correct is defined %}
+				<input id="PRRAdvanced_3_2_answer" value='{{PRRAdvanced_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRRAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRAdvanced_3_2_answer_correct and PRRAdvanced_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRAdvanced_3_2_answer" value='{{PRRAdvanced_3_2_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">4)</font>
+			Consider 2 stores A and B with areas 45 m<sup>2</sup> and 60 m<sup>2</sup>. The amount of space used for display of products in store B is twice that used in store A. If 30% area of store A is occupied with displayed products, find the percentage of display area in store B.
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRRAdvanced_4_answer_correct is defined %}
+				<input id="PRRAdvanced_4_answer" value='{{PRRAdvanced_4_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRRAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRAdvanced_4_answer_correct and PRRAdvanced_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRAdvanced_4_answer" value='{{PRRAdvanced_4_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+
+
+
+		{% if PRRAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:200px;"><button id="PRRAdvanced_3_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:200px;"><button id="PRRAdvanced_3_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+$("#PRRAdvanced_3_1_answer").change(function()
+		{
+			question_id = "PRRAdvanced_3";
+			question_type = "PercentageReview"
+			answer_id = "PRRAdvanced_3_1_answer";
+			entered_answer = $("#PRRAdvanced_3_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#PRRAdvanced_3_2_answer").change(function()
+		{
+			question_id = "PRRAdvanced_3";
+			question_type = "PercentageReview"
+			answer_id = "PRRAdvanced_3_2_answer";
+			entered_answer = $("#PRRAdvanced_3_2_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#PRRAdvanced_4_answer").change(function()
+			{
+				question_id = "PRRAdvanced_4";
+				question_type = "PercentageReview"
+				answer_id = "PRRAdvanced_4_answer";
+				entered_answer = $("#PRRAdvanced_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#PRRAdvanced_3_submit").button({label:"Check Answers"});
+	$("#PRRAdvanced_3_retry").button({label:"Retry"});
+	$("#PRRAdvanced_3_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageReview"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRAdvanced_3"+"#%$"+"PRRAdvanced_3_1_answer"+"#%$"+$("#PRRAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"PRRAdvanced_3"+"#%$"+"PRRAdvanced_3_2_answer"+"#%$"+$("#PRRAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"PRRAdvanced_4"+"#%$"+"PRRAdvanced_4_answer"+"#%$"+$("#PRRAdvanced_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRAdvanced_3_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRAdvanced_3_1_answer,PRRAdvanced_3_2_answer,PRRAdvanced_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:600
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

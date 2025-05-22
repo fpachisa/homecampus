@@ -1,0 +1,21 @@
+<div style="height:280px;">
+	<div style="text-align:center;margin-top:200px;"><button id="ownTheBook"></button></div>
+	<div style="text-align:center;margin-top:30px;">Or...</div>
+	<div style="text-align:center;margin-top:30px;"><a href="javascript:goToFreePractice()"><font>Practice Free Questions</font></a></div>
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>	
+
+<script>
+function goToFreePractice()
+{
+	pageName = "Secondary-1-Grade-7-Mathematics#!Factors-and-Multiples-Easy-Questions-1";
+	window.location.href = pageName;
+	location.reload();
+}
+$("#ownTheBook").button({label:"<font style='font-size:0.8em;'>Own The Book</font>"});
+$("#ownTheBook").click(function()
+	{
+		window.location.href = '/Subscribe/Grade7';
+	}
+);	
+</script>

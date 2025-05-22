@@ -1,0 +1,158 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F693CD;margin-left:62%;">Linear Equations - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">8)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			For every quiz question that a student answered correctly, she was rewarded with a sweet. In the first half of the quiz, Sarah got 2 more than thrice the number of sweets that Elena got.
+		</div>
+		<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:40px;">a)</div>
+		<div style="display:inline-block;vertical-align:top;margin-top:10px;width:360px;">
+			How many correct answers did Sarah give as a fraction of the number of correct answers given by Elena in the first half of the quiz?
+		</div>						
+		<div style="margin-left:60px;margin-top:30px;">		
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;vertical-align:top;">Answer:</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:-20px;">
+				{% if test_status == 'Completed' %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_8_1_answer" value='{{C9LETT1_8_1_answer}}' readonly style="width:70px;background-color:#DFDFDF;text-align:center;"><br>_______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_8_2_answer" value='{{C9LETT1_8_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;"></div>			
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_8_1_answer" value='{{C9LETT1_8_1_answer}}' style="width:70px;text-align:center;" ><br>_______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_8_2_answer" value='{{C9LETT1_8_2_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;"></div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if C9LETT1_8_1_answer_correct and C9LETT1_8_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+
+		<div style="display:inline-block;vertical-align:top;margin-top:30px;margin-left:40px;">b)</div>
+		<div style="display:inline-block;vertical-align:top;margin-top:30px;width:360px;">
+			In the remaining half of the quiz, Sarah did not win any sweets while Elena won 3 sweets. As a result, the total number of correct answers given by Sarah as a fraction of the total number of correct answers 
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">given by Elena in the quiz was</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">11<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">. Find the</div>
+			<div style="margin-top:-10px;">number of correct answers given by Elena in the first half of the quiz.</div>
+		</div>						
+		<div style="margin-left:60px;margin-top:10px;">		
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;">Answer:</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="C9LETT1_8_3_answer" value='{{C9LETT1_8_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">			
+				{% else %}
+					<input id="C9LETT1_8_3_answer" value='{{C9LETT1_8_3_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if C9LETT1_8_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_8_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_8_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+
+		
+			
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="C9LE_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+$("#C9LE_TT_1_Continue").button({label:">>"});
+$("#C9LE_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-5.html';
+		rightPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-6.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$'
+		answer_ids = 'C9LETT1_6_answer'+separatorText+'C9LETT1_7_answer'+separatorText;
+		answer_ids = answer_ids + 'C9LETT1_8_1_answer'+separatorText+'C9LETT1_8_2_answer'+separatorText+'C9LETT1_8_3_answer';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#C9LETT1_8_1_answer").change(function()
+		{
+			question_id = "C9LETT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_8_1_answer";
+			entered_answer = $("#C9LETT1_8_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 4;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+$("#C9LETT1_8_2_answer").change(function()
+		{
+			question_id = "C9LETT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_8_2_answer";
+			entered_answer = $("#C9LETT1_8_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 0;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#C9LETT1_8_3_answer").change(function()
+		{
+			question_id = "C9LETT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_8_3_answer";
+			entered_answer = $("#C9LETT1_8_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 4;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+</script>
+

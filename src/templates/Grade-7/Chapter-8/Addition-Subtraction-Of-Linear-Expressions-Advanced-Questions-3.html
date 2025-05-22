@@ -1,0 +1,156 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:40%;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A strong pack donkey in good condition should not carry a load more than a third of its body weight. The owner loaded 3 logs of wood on its back. Two logs of wood 
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:0px;">weighed</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">x</font><br>___<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:3px;">kg and</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">x</font><br>___<br></p>
+				<p style="line-height:20%;text-align:center;">10<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:3px;">kg respectively.</div>
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">a)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				What should be the maximum weight of the third log of wood so as not to overload the donkey; given that the weight of the donkey was <font class="grade7Variables">x</font> kg.
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:30px;">Answer: &nbsp;</div>
+				{% if ASLEAdvanced_3_1_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><input id="ASLEAdvanced_3_1_answer" value='{{ASLEAdvanced_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br>______<br></p>
+					<p style="line-height:20%;text-align:center;"><input id="ASLEAdvanced_3_2_answer" value='{{ASLEAdvanced_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+				</div>
+				{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><input id="ASLEAdvanced_3_1_answer" value='{{ASLEAdvanced_3_1_answer}}'  style="width:30px;text-align:center;"><br>______<br></p>
+					<p style="line-height:20%;text-align:center;"><input id="ASLEAdvanced_3_2_answer" value='{{ASLEAdvanced_3_2_answer}}'  style="width:30px;text-align:center;"><br></p>
+				</div>
+				{% endif %}
+			<div style="display:inline-block;margin-left:15px;margin-top:30px;">kg</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_3_1_answer_correct is defined %}
+					{% if ASLEAdvanced_3_1_answer_correct and ASLEAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">b)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				If the donkey weighed 150 kg, find the total weight wood loaded on it. 
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ASLEAdvanced_3_3_answer_correct is defined %}
+					<input id="ASLEAdvanced_3_3_answer" value='{{ASLEAdvanced_3_3_answer}}' readonly style="width:25px;background-color:#DFDFDF;text-align:center;"> kg
+				{% else %}
+					<input id="ASLEAdvanced_3_3_answer" value='{{ASLEAdvanced_3_3_answer}}' style="width:25px;text-align:center;" > kg
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEAdvanced_3_3_answer_correct is defined %}
+					{% if ASLEAdvanced_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEAdvanced_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if ASLEAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="ASLEAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="ASLEAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ASLEAdvanced_3_1_answer").change(function()
+	{
+		question_id = "ASLEAdvanced_3";
+		question_type = "AdditionSubtractionLinearExpressions"
+		answer_id = "ASLEAdvanced_3_1_answer";
+		entered_answer = $("#ASLEAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#ASLEAdvanced_3_2_answer").change(function()
+			{
+				question_id = "ASLEAdvanced_3";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEAdvanced_3_2_answer";
+				entered_answer = $("#ASLEAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#ASLEAdvanced_3_3_answer").change(function()
+			{
+				question_id = "ASLEAdvanced_3";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEAdvanced_3_3_answer";
+				eentered_answer = $("#ASLEAdvanced_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#ASLEAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#ASLEAdvanced_3_Retry").button({label:"Retry"});
+	$("#ASLEAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionLinearExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ASLEAdvanced_3"+"#%$"+"ASLEAdvanced_3_1_answer"+"#%$"+$("#ASLEAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"ASLEAdvanced_3"+"#%$"+"ASLEAdvanced_3_2_answer"+"#%$"+$("#ASLEAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"ASLEAdvanced_3"+"#%$"+"ASLEAdvanced_3_3_answer"+"#%$"+$("#ASLEAdvanced_3_3_answer").val();
+		
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ASLEAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ASLEAdvanced_3_1_answer,ASLEAdvanced_3_2_answer,ASLEAdvanced_3_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

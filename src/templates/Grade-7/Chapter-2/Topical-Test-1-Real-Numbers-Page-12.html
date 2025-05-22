@@ -1,0 +1,213 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F36D27;margin-left:48%;">Rational and Real Numbers - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">15)</font></div>		
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			A man distributed a piece of land among his three    
+			<div style="display:inline-block;margin-left:0px;">sons, Eli, Pete and Russ. Eli got</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">4<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">9<br></p>
+			</div>
+			<div style="display:inline-block;margin-left:5px;">of the total land,</div>
+			<br>
+			<div style="display:inline-block;margin-left:0px;">Pete got</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">7<br></p>
+			</div>
+			<div style="display:inline-block;margin-left:5px;">of the land and Russ got the remaining</div>
+			<br>
+			portion of the land.		
+		</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;width:20px;vertical-align:top;">a)</div>
+			<div style="display:inline-block;width:300px;vertical-align:top;">What fraction of the total land did Russ get?</div>
+			<br>
+			<div style="display:inline-block;margin-left:25px;margin-top:30px;vertical-align:top;">Answer: &nbsp;</div>		
+			<div style="display:inline-block;margin-top:20px;vertical-align:top;"> 
+			{% if test_status == 'Completed' %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-20px;">
+					<p style="line-height:20%;text-align:center;">
+						&nbsp; <input id="RRNTT1_15_1_answer" value='{{RRNTT1_15_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					<br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">
+						&nbsp; <input id="RRNTT1_15_2_answer" value='{{RRNTT1_15_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					<br></p>				
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:10px;">
+					{% if RRNTT1_15_1_answer and RRNTT1_15_2_answer %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{RRNTT1_15_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{RRNTT1_15_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+					{% endif %}
+				</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-20px;">
+					<p style="line-height:20%;text-align:center;">
+						<input id="RRNTT1_15_1_answer" value='{{RRNTT1_15_1_answer}}' style="width:30px;" >
+					<br>_____<br></p>
+					<p style="line-height:20%;text-align:center;">
+						<input id="RRNTT1_15_2_answer" value='{{RRNTT1_15_2_answer}}' style="width:30px;" >
+					<br></p>				
+				</div>				  
+				<div style="display:inline-block;vertical-align:top;"><font class="grade7TestMark">(Mark: 2)</font></div>
+			{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;width:20px;vertical-align:top;margin-top:10px;">b)</div>
+			<div style="display:inline-block;width:300px;vertical-align:top;margin-top:10px;">Who got the largest share of the land?</div>
+			<br>
+			<div style="margin-top:10px;margin-left:30px;">
+				{% if test_status == 'Completed' %}
+					<input type=radio name="RRNTT1_15_3_answer" value='Eli' disabled
+					{% if RRNTT1_15_3_answer == 'Eli'%} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Eli<br>			 
+					<input type=radio name="RRNTT1_15_3_answer" value='Pete' disabled
+					{% if RRNTT1_15_3_answer == 'Pete' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Pete<br>			 
+					<input type=radio name="RRNTT1_15_3_answer" value='Russ' disabled
+					{% if RRNTT1_15_3_answer == 'Russ' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Russ&nbsp;&nbsp;
+					{% if RRNTT1_15_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{RRNTT1_15_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+						<font class="grade7TestScore">(Mark: 1 / 1)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{RRNTT1_15_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+					{% endif %}
+					
+				{% else %}
+					<input type=radio name="RRNTT1_15_3_answer" value='Eli'
+					{% if RRNTT1_15_3_answer == 'Eli' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Eli<br>				 
+					<input type=radio name="RRNTT1_15_3_answer" value='Pete'
+					{% if RRNTT1_15_3_answer == 'Pete' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Pete<br>				 
+					<input type=radio name="RRNTT1_15_3_answer" value='Russ'
+					{% if RRNTT1_15_3_answer == 'Russ' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Russ<font class="grade7TestMark">(Mark: 1)</font>		 
+				{% endif %}	
+			</div>
+
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="RRN_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="RRN_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#RRN_TT_1_Submit").button({label:"Submit"});
+$("#RRN_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#RRN_TT_1_Done").button({label:"Done"});
+$("#RRN_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+$("#RRNTT1_15_1_answer").change(function()
+		{
+			question_id = "RRNTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_15_1_answer";
+			entered_answer = $("#RRNTT1_15_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 0;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRNTT1_15_2_answer").change(function()
+		{
+			question_id = "RRNTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_15_2_answer";
+			entered_answer = $("#RRNTT1_15_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='RRNTT1_15_3_answer']").click(function()		
+		{
+			question_id = "RRNTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_15_3_answer";
+			entered_answer = $("input:radio[name=RRNTT1_15_3_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'RRNTT1_14_1_answer'+separatorText+'RRNTT1_14_2_answer'+separatorText+'RRNTT1_14_3_answer'+separatorText;
+	answer_ids = answer_ids + 'RRNTT1_15_1_answer'+separatorText+'RRNTT1_15_2_answer'+separatorText+'RRNTT1_15_3_answer';
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+
+

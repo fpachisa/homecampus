@@ -1,0 +1,301 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.3 Factorization</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:77%;">8.3 Factorization</div>
+	{% endif %}
+
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:5px;margin-left:0px;">e)</div>	
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">&minus;</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">4(3<font class="grade7Variables">k</font> &minus; <font class="grade7Variables">m</font>)<br>________<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">&minus;</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">[</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">5(2<font class="grade7Variables">k</font> + 4<font class="grade7Variables">m</font>)<br>_________<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">&minus;</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">3(7<font class="grade7Variables">k</font> &minus; 2<font class="grade7Variables">m</font>)<br>_________<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:0px;">]</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ALFAMedium_3_5_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='A' disabled
+				{% if ALFAMedium_3_5_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">39<font class="grade7Variables">k</font> &minus; 102<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='B' disabled
+				{% if ALFAMedium_3_5_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">&minus;39<font class="grade7Variables">k</font> + 118<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='C' disabled
+				{% if ALFAMedium_3_5_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">&minus;39<font class="grade7Variables">k</font> &minus; 102<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>								 
+				<div style="display:inline-block;margin-top:-10px;margin-left:10px;">	
+					{% if ALFAMedium_3_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAMedium_3_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='A'
+				{% if ALFAMedium_3_5_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">39<font class="grade7Variables">k</font> &minus; 102<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='B'
+				{% if ALFAMedium_3_5_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">&minus;39<font class="grade7Variables">k</font> + 118<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_5_answer" value='C'
+				{% if ALFAMedium_3_5_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">&minus;39<font class="grade7Variables">k</font> &minus; 102<font class="grade7Variables">m</font><br>___________<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>							 
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:5px;margin-left:0px;">f)</div>	
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">2<font class="grade7Variables">a</font> &minus; 7<font class="grade7Variables">c</font><br>_______<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">+</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">a</font> + 3<font class="grade7Variables">b</font><br>______<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">&minus;</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">4(4<font class="grade7Variables">b</font> &minus; 3<font class="grade7Variables">c</font>)<br>_________<br></p>
+				<p style="line-height:20%;text-align:center;">8<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:5px;">+ 2<font class="grade7Variables">c</font>(&minus;6)</div>			
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ALFAMedium_3_6_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='A' disabled
+				{% if ALFAMedium_3_6_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">5<font class="grade7Variables">a</font> &minus; 5<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='B' disabled
+				{% if ALFAMedium_3_6_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">10<font class="grade7Variables">a</font> &minus; 10<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='C' disabled
+				{% if ALFAMedium_3_6_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">5<font class="grade7Variables">a</font> &minus; 5<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>							 
+
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">	
+				{% if ALFAMedium_3_6_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ALFAMedium_3_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='A'
+				{% if ALFAMedium_3_6_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">5<font class="grade7Variables">a</font> &minus; 5<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='B'
+				{% if ALFAMedium_3_6_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">10<font class="grade7Variables">a</font> &minus; 10<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ALFAMedium_3_6_answer" value='C'
+				{% if ALFAMedium_3_6_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">5<font class="grade7Variables">a</font> &minus; 5<font class="grade7Variables">b</font> &minus; 56<font class="grade7Variables">c</font><br>_____________<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>							 
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">
+			A bird flies (5d + 9t &minus; 3)m up from the ground, then flies down by (2d &minus; 2t + 6)m, and finally flies up by <br>(d + 7t &minus; 5)m. How high is the bird from the ground?
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAMedium_4_answer_correct is defined %}
+					<input id="ALFAMedium_4_answer" value='{{ALFAMedium_4_answer}}' readonly style="width:85px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAMedium_4_answer" value='{{ALFAMedium_4_answer}}' style="width:85px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAMedium_4_answer_correct is defined %}
+					{% if ALFAMedium_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAMedium_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		{% if ALFAMedium_3_5_answer_correct is defined %}
+			<div style="margin-top:-15px;margin-left:340px;"><button id="ALFAMedium_6_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-15px;margin-left:280px;"><button id="ALFAMedium_6_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+$("input[name='ALFAMedium_3_5_answer']").click(function()
+		{
+			question_id = "ALFAMedium_3";
+			question_type = "AlgebraFactorisation"
+			answer_id = "ALFAMedium_3_5_answer";
+			entered_answer = $("input:radio[name=ALFAMedium_3_5_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("input[name='ALFAMedium_3_6_answer']").click(function()
+		{
+			question_id = "ALFAMedium_3";
+			question_type = "AlgebraFactorisation"
+			answer_id = "ALFAMedium_3_6_answer";
+			entered_answer = $("input:radio[name=ALFAMedium_3_6_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#ALFAMedium_4_answer").change(function()
+		{
+			question_id = "ALFAMedium_4";
+			question_type = "AlgebraFactorisation"
+			answer_id = "ALFAMedium_4_answer";
+			entered_answer = $("#ALFAMedium_4_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+
+	$("#ALFAMedium_6_Submit").button({label:"Check Answers"});
+	$("#ALFAMedium_6_Retry").button({label:"Retry"});
+	$("#ALFAMedium_6_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraFactorisation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ALFAMedium_3"+"#%$"+"ALFAMedium_3_5_answer"+"#%$"+$("input:radio[name=ALFAMedium_3_5_answer]:checked").val();
+		answers = answers + "#%$"+"ALFAMedium_3"+"#%$"+"ALFAMedium_3_6_answer"+"#%$"+$("input:radio[name=ALFAMedium_3_6_answer]:checked").val();
+		answers = answers + "#%$"+"ALFAMedium_4"+"#%$"+"ALFAMedium_4_answer"+"#%$"+$("#ALFAMedium_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ALFAMedium_6_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ALFAMedium_3_5_answer,ALFAMedium_3_6_answer,ALFAMedium_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

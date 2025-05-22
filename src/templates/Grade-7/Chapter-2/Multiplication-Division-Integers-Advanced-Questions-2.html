@@ -1,0 +1,118 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A delivery boy started from a restaurant to deliver packets of food ordered by customers. He travelled 6 km due North to drop off the first packet. He then travelled South at a speed of 30 km/h for 15 min to deliver the second order. Finally he drove further South at a speed of 25 km/h and delivered the parcel to the last customer in 12 min. What is the final position of the delivery boy from the restaurant?
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:20px;">
+			{% if RNMDAdvanced_2_answer_correct is defined %}
+				<input type=radio name="RNMDAdvanced_2_answer" value='a' disabled
+				{% if RNMDAdvanced_2_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >18.5 km due North<br><br>
+				<input type=radio name="RNMDAdvanced_2_answer" value='b' disabled
+				{% if RNMDAdvanced_2_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >18.5 km due South<br><br>
+				<input type=radio name="RNMDAdvanced_2_answer" value='c' disabled
+				{% if RNMDAdvanced_2_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >6.5 Km due North<br><br>
+				<input type=radio name="RNMDAdvanced_2_answer" value='d' disabled
+				{% if RNMDAdvanced_2_answer == 'd' %} 
+   					checked="checked"
+   				{%endif%}
+				 >6.5 Km due South&nbsp;&nbsp;
+				{% if RNMDAdvanced_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNMDAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RNMDAdvanced_2_answer" value='a'
+				{% if RNMDAdvanced_2_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >18.5 km due North<br><br>
+				<input type=radio name="RNMDAdvanced_2_answer" value='b'
+				{% if RNMDAdvanced_2_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 >18.5 km due South<br><br>
+				 <input type=radio name="RNMDAdvanced_2_answer" value='c'
+				{% if RNMDAdvanced_2_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >6.5 Km due North<br><br>
+				 <input type=radio name="RNMDAdvanced_2_answer" value='d'
+				{% if RNMDAdvanced_2_answer == 'd'%} 
+   					checked="checked"
+   				{%endif%}
+				 >6.5 Km due South				 	 
+			{% endif %}	
+		</div>
+
+
+		{% if RNMDAdvanced_2_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:300px;"><button id="RNMDAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNMDAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='RNMDAdvanced_2_answer']").click(function()
+	{
+		question_id = "RNMDAdvanced_2";
+		question_type = "MultiplicationDivisionIntegers"
+		answer_id = "RNMDAdvanced_2_answer";
+		entered_answer = $("input:radio[name=RNMDAdvanced_2_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	
+	$("#RNMDAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#RNMDAdvanced_2_Retry").button({label:"Retry"});
+	$("#RNMDAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDAdvanced_2"+"#%$"+"RNMDAdvanced_2_answer"+"#%$"+$("input:radio[name=RNMDAdvanced_2_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

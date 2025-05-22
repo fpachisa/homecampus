@@ -1,0 +1,150 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Add Fractions Calculator - Home Campus</title>
+<meta name="keywords" content="Subtract Fractions Equivalent Lowest Commond Denominator">
+<meta name="description" content="How to subtract fractions?" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">How to Subtract Fractions?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Subtract Two Fractions: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				<input id="fraction1" size=6> &nbsp;&minus;&nbsp; <input id="fraction2" size=6> &nbsp;=&nbsp; <input id="answerHTML" disabled size=6><br><br>
+				<button class="btn-quiz" id="SubtractFractions" onclick="SubtractFractions()">Subtract Fractions</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="SubtractFractionsHTML"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/how-to-subtract-fractions-singapore-math-free-math-worksheets">Download Free Worksheets</a></div>
+
+<script>
+
+function SubtractFractions() {
+	var SubtractFractionsHTML = "";
+	var answerHTML = "";
+	document.getElementById("answerHTML").value = answerHTML;
+	//getting first fraction
+	var fraction1 = document.getElementById("fraction1").value;
+	var fractions1 = fraction1.split("/");
+	var denominator1 = parseInt(fractions1[1]);
+	//checking if there is a whole number before fraction
+	var wholeNumerator1 = fractions1[0].split(" ");
+	var numerator1;
+	if(wholeNumerator1[1] == undefined){
+		numerator1 = parseInt(wholeNumerator1[0]);	
+	}
+	else{
+		numerator1 = parseInt(wholeNumerator1[0])*denominator1+parseInt(wholeNumerator1[1]);
+	}
+	
+	
+	
+	//getting second fraction
+	var fraction2 = document.getElementById("fraction2").value;
+	var fractions2 = fraction2.split("/");
+	var denominator2 = parseInt(fractions2[1]);
+	//checking if there is a whole number before fraction
+	var wholeNumerator2 = fractions2[0].split(" ");
+	var numerator2;
+	if(wholeNumerator2[1] == undefined){
+		numerator2 = parseInt(wholeNumerator2[0]);	
+	}
+	else{
+		numerator2 = parseInt(wholeNumerator2[0])*denominator2+parseInt(wholeNumerator2[1]);
+	}
+
+	//check the data input quality
+	if (isNaN(numerator1) || isNaN(denominator1) || isNaN(denominator2) || isNaN(denominator2))
+	{
+		document.getElementById("SubtractFractionsHTML").innerHTML = "<font color='red'>Please input correct fractions. For e.g. 4/16 and 3/8</font>";
+		return false;
+	}
+		
+	//find LCM
+	var LCM = lcm_two_numbers(denominator1,denominator2);
+
+	
+	//Find the number to be multiplied to both numerator and denominator
+	var multiplier1 = LCM/denominator1;
+	var multiplier2 = LCM/denominator2;
+	
+	var numerator11 = numerator1*multiplier1;
+	var numerator22 = numerator2*multiplier2;
+	var denominator11 = denominator1*multiplier1;
+	var denominator22 = denominator2*multiplier2;
+	
+	
+	var answerNumerator = numerator11-numerator22;
+	var answerDenominator = denominator11
+	var wholeNumber;
+	
+	if(denominator1!=denominator2){
+		SubtractFractionsHTML += "Given fractions can be represented in their equivalent form as: <br>";
+		SubtractFractionsHTML += numerator1+"/"+denominator1+" &nbsp;=&nbsp; "+numerator11+"/"+denominator11+"<br>";
+		SubtractFractionsHTML += numerator2+"/"+denominator2+" &nbsp;=&nbsp; "+numerator22+"/"+denominator22+"<br><br>";
+	}
+	
+	SubtractFractionsHTML += numerator11+"/"+denominator11+ " &minus; "+numerator22+"/"+denominator22+" &nbsp;=&nbsp; ("+numerator11+" &minus; "+numerator22+")/"+answerDenominator+"&nbsp;=&nbsp;"+answerNumerator+"/"+answerDenominator+"<br><br>"
+
+	if(answerNumerator%answerDenominator==0)
+	{
+		finalAnswerNumerator = answerNumerator/answerDenominator;
+		SubtractFractionsHTML += "Hence, the difference of "+fraction1+" and "+fraction2+" = <strong>"+finalAnswerNumerator+"</strong>";
+		answerHTML = finalAnswerNumerator;
+	}
+	else{
+		var commonFactor = gcd_two_numbers(Math.abs(answerNumerator),answerDenominator);
+		if(commonFactor!=1){
+			answerNumerator = answerNumerator / commonFactor;
+			answerDenominator = answerDenominator / commonFactor;
+			SubtractFractionsHTML += "This fraction can be further simplified to:<br><br>";
+			SubtractFractionsHTML += answerNumerator+"/"+answerDenominator+"<br><br>";			
+		}
+	
+		SubtractFractionsHTML += "Hence, the difference of "+fraction1+" and "+fraction2+" = <strong>"+answerNumerator+"/"+answerDenominator+"</strong>";
+		answerHTML = answerNumerator+"/"+answerDenominator;		
+		if(Math.abs(answerNumerator)>answerDenominator){
+			wholeNumber = Math.floor(Math.abs(answerNumerator)/answerDenominator);			
+			if (answerNumerator<0){
+				answerNumerator = Math.abs(answerNumerator)%answerDenominator;
+				SubtractFractionsHTML += " or <strong>&minus;"+wholeNumber+" "+answerNumerator+"/"+answerDenominator+"</strong>";
+			}
+			else{
+				answerNumerator = Math.abs(answerNumerator)%answerDenominator;
+				SubtractFractionsHTML += " or <strong>"+wholeNumber+" "+answerNumerator+"/"+answerDenominator+"</strong>";	
+			}
+			
+		}
+		
+	}
+	document.getElementById("SubtractFractionsHTML").innerHTML = SubtractFractionsHTML;
+	document.getElementById("answerHTML").value = answerHTML;
+	
+}
+
+function lcm_two_numbers(x, y) {
+   if ((typeof x !== 'number') || (typeof y !== 'number')) 
+    return false;
+  return (!x || !y) ? 0 : Math.abs((x * y) / gcd_two_numbers(x, y));
+}
+
+function gcd_two_numbers(k, n) {
+    return k ? gcd_two_numbers(n % k, k) : n;
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to subtract fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Express the fractions using a common denominator. For this you need to find the lowest common denominator.<br>\nStep 2: Create equivalent fractions by making the denominator common.<br>\nStep 3: Subtract the numerators and leave the denominator as is.<br>\nStep 4: Simplify fractions if required."}}]}</script>
+
+{% endblock %}

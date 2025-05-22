@@ -1,0 +1,232 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.2 Interpreting Algebraic Notations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:50%;">7.2 Interpreting Algebraic Notations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">The price of a bottle of olive oil is $12 more than</div>		
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div>of the price of a bottle of canola oil. Find the price of a bottle of olive oil if the price of a bottle of canola oil is</div>
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) $5</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Olive oil = $ 
+				{% if IANEasy_2_1_answer_correct is defined %}
+					<input id="IANEasy_2_1_answer" value='{{IANEasy_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_2_1_answer" value='{{IANEasy_2_1_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_2_1_answer_correct is defined %}
+					{% if IANEasy_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) $<font class="grade7Variables">x</font></div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Olive oil = $  </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-20px;">
+				{% if IANEasy_2_2_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_2_2_answer" value='{{IANEasy_2_2_answer}}' readonly style="width:45px;background-color:#DFDFDF;text-align:center;"><br>________<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_2_3_answer" value='{{IANEasy_2_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_2_2_answer" value='{{IANEasy_2_2_answer}}' style="width:45px;text-align:center;" ><br>________<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_2_3_answer" value='{{IANEasy_2_3_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_2_2_answer_correct is defined or IANEasy_2_3_answer_correct is defined %}
+					{% if IANEasy_2_2_answer_correct and IANEasy_2_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">
+				Amir works 5 days a week. His daily wages are $125. Find the wages earned by Amir in
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">a) 2 weeks = $
+				{% if IANEasy_3_1_answer_correct is defined %}
+					<input id="IANEasy_3_1_answer" value='{{IANEasy_3_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_3_1_answer" value='{{IANEasy_3_1_answer}}' style="width:40px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_3_1_answer_correct is defined %}
+					{% if IANEasy_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">b) x working days = $
+				{% if IANEasy_3_2_answer_correct is defined %}
+					<input id="IANEasy_3_2_answer" value='{{IANEasy_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_3_2_answer" value='{{IANEasy_3_2_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_3_2_answer_correct is defined %}
+					{% if IANEasy_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">c) n weeks = $
+				{% if IANEasy_3_3_answer_correct is defined %}
+					<input id="IANEasy_3_3_answer" value='{{IANEasy_3_3_answer}}' readonly style="width:35px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANEasy_3_3_answer" value='{{IANEasy_3_3_answer}}' style="width:35px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_3_3_answer_correct is defined %}
+					{% if IANEasy_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		{% if IANEasy_2_1_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="IANEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="IANEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#IANEasy_2_1_answer").change(function()
+	{
+		question_id = "IANEasy_2";
+		question_type = "AlgebraicNotations"
+		answer_id = "IANEasy_2_1_answer";
+		entered_answer = $("#IANEasy_2_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#IANEasy_2_2_answer").change(function()
+			{
+				question_id = "IANEasy_2";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_2_2_answer";
+				entered_answer = $("#IANEasy_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_2_3_answer").change(function()
+			{
+				question_id = "IANEasy_2";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_2_3_answer";
+				entered_answer = $("#IANEasy_2_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_3_1_answer").change(function()
+			{
+				question_id = "IANEasy_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_3_1_answer";
+				entered_answer = $("#IANEasy_3_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_3_2_answer").change(function()
+			{
+				question_id = "IANEasy_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_3_2_answer";
+				entered_answer = $("#IANEasy_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_3_3_answer").change(function()
+			{
+				question_id = "IANEasy_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_3_3_answer";
+				entered_answer = $("#IANEasy_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#IANEasy_2_Submit").button({label:"Check Answers"});
+	$("#IANEasy_2_Retry").button({label:"Retry"});
+	$("#IANEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicNotations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "IANEasy_2"+"#%$"+"IANEasy_2_1_answer"+"#%$"+$("#IANEasy_2_1_answer").val();
+		answers = answers + "#%$"+"IANEasy_2"+"#%$"+"IANEasy_2_2_answer"+"#%$"+$("#IANEasy_2_2_answer").val();
+		answers = answers + "#%$"+"IANEasy_2"+"#%$"+"IANEasy_2_3_answer"+"#%$"+$("#IANEasy_2_3_answer").val();
+		answers = answers + "#%$"+"IANEasy_3"+"#%$"+"IANEasy_3_1_answer"+"#%$"+$("#IANEasy_3_1_answer").val();
+		answers = answers + "#%$"+"IANEasy_3"+"#%$"+"IANEasy_3_2_answer"+"#%$"+$("#IANEasy_3_2_answer").val();
+		answers = answers + "#%$"+"IANEasy_3"+"#%$"+"IANEasy_3_3_answer"+"#%$"+$("#IANEasy_3_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#IANEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "IANEasy_2_1_answer,IANEasy_2_2_answer,IANEasy_2_3_answer,";
+		answer_ids = answer_ids + "IANEasy_3_1_answer,IANEasy_3_2_answer,IANEasy_3_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

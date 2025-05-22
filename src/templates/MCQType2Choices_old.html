@@ -1,0 +1,24 @@
+{% extends 'PracticePageSkeleton.html' %}
+   
+   {% block content%}	
+
+	<table id="MCQ" style="color: #2B7657">
+        <tr>
+        <td align="left">
+        	<h3>
+            <input type="radio" name="answer" value='{{value1}}' 
+   			{% if answer_submitted == value1%}} 
+   				checked="checked"
+   			{%endif%}            
+            />{{answer1|safe}}<br/>
+		   	<input type="radio" name="answer" value='{{value2}}' 
+   			{% if answer_submitted == value2%}} 
+   				checked="checked"
+   			{%endif%}		   	
+		   	/>{{answer2|safe}}<br/>
+			</h3>
+	   </td>
+        <td><p id="correct" style="display: none"><img src="/images/correct.png" alt="Correct"></p>
+	</td></tr></table>
+	<br>
+{% endblock %}

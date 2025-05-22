@@ -1,0 +1,13 @@
+{% extends 'Goals/Goals_Template.html' %}
+{% block jsHeader%}
+<script type="text/javascript"> 
+	$("#grade").val('5');
+	setP5Concepts();
+	$("#concept").val('P5MT');
+	$("#child").val('{{ChildId}}');	
+</script>
+{% endblock %}
+
+{% block GoalsTitle %}
+<h3><b>{{child }}'s Goals on Measurement for Grade 5:</b></h3>
+{% endblock %}

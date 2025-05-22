@@ -1,0 +1,108 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.1 Factors and Multiples</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:70%;">1.1 Factors and Multiples</div>
+	{% endif %}
+	<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+	<div style="margin-left:20px;margin-top:20px;display:inline-block;"><font class="grade7PracticeQuestionNumber">1</font></div>
+	<div style="margin-left:5px;margin-top:20px;display:inline-block;width:440px;vertical-align:top;">
+	Mia has 32 flowers that she is arranging into bouquets. What is the number of possible ways she can divide the flowers so that each bouquet has the same number of flowers and there are no leftovers?
+	</div>
+	<div style="margin-left:40px;margin-top:10px;">
+		{% if FMAdvanced_1_answer_correct is defined %}
+			<input id="FMAdvanced_1_answer" size=4 value='{{FMAdvanced_1_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if FMAdvanced_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not FMAdvanced_1_answer_correct and FMAdvanced_1_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{FMAdvanced_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="FMAdvanced_1_answer" size=4 value='{{FMAdvanced_1_answer}}'>
+		{% endif %}	
+	</div>
+	<div style="margin-left:20px;margin-top:30px;display:inline-block;"><font class="grade7PracticeQuestionNumber">2</font></div>
+	<div style="margin-left:5px;margin-top:30px;display:inline-block;width:440px;vertical-align:top;">
+	A certain short-period comet is visible from Earth in years that are multiples of 76 years. It was last visible in 1976. In which years will it be visible the next three times?
+	<div style="margin-top:10px;">(Enter your answer separated by commas)</div>
+	</div>
+	<div style="margin-left:40px;margin-top:10px;">
+		{% if FMAdvanced_2_answer_correct is defined %}
+			<input id="FMAdvanced_2_answer" size=12 value='{{FMAdvanced_2_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if FMAdvanced_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not FMAdvanced_2_answer_correct and FMAdvanced_2_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{FMAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="FMAdvanced_2_answer" size=12 value='{{FMAdvanced_2_answer}}'>
+		{% endif %}	
+	</div>
+
+
+	{% if FMAdvanced_1_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="retry" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="submit" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>
+	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#FMAdvanced_1_answer").change(function()
+	{
+		question_id = "FMAdvanced_1";
+		question_type = "FactorsMultiples"
+		answer_id = "FMAdvanced_1_answer";
+		entered_answer = $("#FMAdvanced_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#FMAdvanced_2_answer").change(function()
+			{
+				question_id = "FMAdvanced_2";
+				question_type = "FactorsMultiples"
+				answer_id = "FMAdvanced_2_answer";
+				entered_answer = $("#FMAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#submit").button({label:"Check Answers"});
+	$("#retry").button({label:"Retry"});
+	$("#submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "FactorsMultiples"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "FMAdvanced_1"+"#%$"+"FMAdvanced_1_answer"+"#%$"+$("#FMAdvanced_1_answer").val();
+		answers = answers + "#%$"+"FMAdvanced_2"+"#%$"+"FMAdvanced_2_answer"+"#%$"+$("#FMAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "FMAdvanced_1_answer,FMAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

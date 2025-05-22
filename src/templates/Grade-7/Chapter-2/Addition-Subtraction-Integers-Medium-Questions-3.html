@@ -1,0 +1,165 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A bird ascends to an altitude of 350 feet from sea level. It then descends 110 feet in search of food. It ascends 527 feet and then hovers in the sky. At what altitude does the bird hover?
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if RNASMedium_3_answer_correct is defined %}
+				<input id="RNASMedium_3_answer" value='{{RNASMedium_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> feet&nbsp;
+					{% if RNASMedium_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_3_answer_correct and RNASMedium_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_3_answer" value='{{RNASMedium_3_answer}}' style="width:40px;" > feet&nbsp;
+			{% endif %}
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Two partners run a business from distinct geographic locations. The table below shows the profits (positive) and losses (negative) of two offices A and B for 3 consecutive years.
+			</div>
+			<div style="margin-top:10px;margin-left:30px;">
+			<table class="grade7RNASMedium3">
+				<tr><th>Year</th><th>A</th><th>B</th></tr>
+				<tr><td>1</td><td>&minus;$500</td><td>$20090</td></tr>
+				<tr><td>2</td><td>$37000</td><td>&minus;$2100</td></tr>
+				<tr><td>3</td><td>$20230</td><td>&minus;$24700</td></tr>
+			</table>
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) What is the net profit or loss of the combined business in each year?
+			<div style="margin-left:20px;margin-top:0px;">Year 1&nbsp; = $
+			{% if RNASMedium_4_1_answer_correct is defined %}
+				<input id="RNASMedium_4_1_answer" value='{{RNASMedium_4_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_4_1_answer_correct and RNASMedium_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_4_1_answer" value='{{RNASMedium_4_1_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+			<div style="margin-left:20px;margin-top:0px;">Year 2&nbsp; = $
+			{% if RNASMedium_4_2_answer_correct is defined %}
+				<input id="RNASMedium_4_2_answer" value='{{RNASMedium_4_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_4_2_answer_correct and RNASMedium_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_4_2_answer" value='{{RNASMedium_4_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+			<div style="margin-left:20px;margin-top:0px;">Year 3&nbsp; = $
+			{% if RNASMedium_4_3_answer_correct is defined %}
+				<input id="RNASMedium_4_3_answer" value='{{RNASMedium_4_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_4_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_4_3_answer_correct and RNASMedium_4_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_4_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_4_3_answer" value='{{RNASMedium_4_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>
+
+		{% if RNASMedium_4_1_answer_correct is defined %}
+			<div style="margin-top:-35px;margin-left:340px;"><button id="RNASMedium_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-25px;margin-left:260px;"><button id="RNASMedium_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+$("#RNASMedium_3_answer").change(function()
+		{
+			question_id = "RNASMedium_3";
+			question_type = "AdditionSubtractionIntegers"
+			answer_id = "RNASMedium_3_answer";
+			entered_answer = $("#RNASMedium_3_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#RNASMedium_4_1_answer").change(function()
+	{
+		question_id = "RNASMedium_4";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASMedium_4_1_answer";
+		entered_answer = $("#RNASMedium_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNASMedium_4_2_answer").change(function()
+			{
+				question_id = "RNASMedium_4";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_4_2_answer";
+				entered_answer = $("#RNASMedium_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNASMedium_4_3_answer").change(function()
+			{
+				question_id = "RNASMedium_4";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_4_3_answer";
+				entered_answer = $("#RNASMedium_4_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNASMedium_3_Submit").button({label:"Check Answers"});
+	$("#RNASMedium_3_Retry").button({label:"Retry"});
+	$("#RNASMedium_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASMedium_3"+"#%$"+"RNASMedium_3_answer"+"#%$"+$("#RNASMedium_3_answer").val();
+		answers = answers + "#%$"+"RNASMedium_4"+"#%$"+"RNASMedium_4_1_answer"+"#%$"+$("#RNASMedium_4_1_answer").val();
+		answers = answers + "#%$"+"RNASMedium_4"+"#%$"+"RNASMedium_4_2_answer"+"#%$"+$("#RNASMedium_4_2_answer").val();
+		answers = answers + "#%$"+"RNASMedium_4"+"#%$"+"RNASMedium_4_3_answer"+"#%$"+$("#RNASMedium_4_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASMedium_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASMedium_3_answer,RNASMedium_4_1_answer,RNASMedium_4_2_answer,RNASMedium_4_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,108 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.1 Percentage Review</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.1 Percentage Review</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			There are 2 cartons of electric bulbs. Carton P contains 50 bulbs of which 10% are defective. Carton Q has an equal number of defective bulbs as Carton P. If Carton Q contains 75 bulbs, find the percentage of non-defective bulbs in it. (write your answer correct to 2 decimal places)
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRRAdvanced_1_answer_correct is defined %}
+				<input id="PRRAdvanced_1_answer" value='{{PRRAdvanced_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRRAdvanced_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRAdvanced_1_answer_correct and PRRAdvanced_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRAdvanced_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRAdvanced_1_answer" value='{{PRRAdvanced_1_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			At a certain coaching institute, 60% of all students are male and 20% of all students are enrolled in the IT program. If 25% of male students are enrolled in the IT program, what percentage of IT students are male?
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRRAdvanced_2_answer_correct is defined %}
+				<input id="PRRAdvanced_2_answer" value='{{PRRAdvanced_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRRAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRAdvanced_2_answer_correct and PRRAdvanced_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRAdvanced_2_answer" value='{{PRRAdvanced_2_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+
+
+
+		{% if PRRAdvanced_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:200px;"><button id="PRR_Advanced_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:200px;"><button id="PRR_Advanced_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRAdvanced_1_answer").change(function()
+	{
+		question_id = "PRRAdvanced_1";
+		question_type = "PercentageReview"
+		answer_id = "PRRAdvanced_1_answer";
+		entered_answer = $("#PRRAdvanced_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRAdvanced_2_answer").change(function()
+			{
+				question_id = "PRRAdvanced_2";
+				question_type = "PercentageReview"
+				answer_id = "PRRAdvanced_2_answer";
+				entered_answer = $("#PRRAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRR_Advanced_1_submit").button({label:"Check Answers"});
+	$("#PRR_Advanced_1_retry").button({label:"Retry"});
+	$("#PRR_Advanced_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageReview"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRAdvanced_1"+"#%$"+"PRRAdvanced_1_answer"+"#%$"+$("#PRRAdvanced_1_answer").val();
+		answers = answers + "#%$"+"PRRAdvanced_2"+"#%$"+"PRRAdvanced_2_answer"+"#%$"+$("#PRRAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRR_Advanced_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRAdvanced_1_answer,PRRAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

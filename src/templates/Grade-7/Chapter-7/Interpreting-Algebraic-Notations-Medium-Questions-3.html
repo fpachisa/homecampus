@@ -1,0 +1,224 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.2 Interpreting Algebraic Notations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:50%;">7.2 Interpreting Algebraic Notations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			Write down an algebraic expression for each of the following statements:
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:15px;display:inline-block;vertical-align:top;">a)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;vertical-align:top;width:360px;"><div>Multiply the cube of <font class="grade7Variables">x</font> by the square of <font class="grade7Variables">y</font> and divide the product by <font class="grade7Variables">x</font><sup>2</sup><font class="grade7Variables">y</font>.</div></div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				{% if IANMedium_3_1_answer_correct is defined %}
+					<input id="IANMedium_3_1_answer" value='{{IANMedium_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="IANMedium_3_1_answer" value='{{IANMedium_3_1_answer}}' style="width:30px;">
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANMedium_3_1_answer_correct is defined %}
+					{% if IANMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:23px;width:15px;display:inline-block;vertical-align:top;">b)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;vertical-align:top;width:360px;">
+			<div>Multiply the quotient of <font class="grade7Variables">a</font><sup>3</sup><font class="grade7Variables">b</font><sup>4</sup> divided by <font class="grade7Variables">a</font><sup>2</sup><font class="grade7Variables">b</font><sup>3</sup> by 4<font class="grade7Variables">ab</font>.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				{% if IANMedium_3_2_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_2_answer" value='{{IANMedium_3_2_answer}}' readonly style="width:20px;background-color:#DFDFDF;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_3_answer" value='{{IANMedium_3_3_answer}}' readonly style="width:20px;background-color:#DFDFDF;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-14px;">
+						<input id="IANMedium_3_4_answer" value='{{IANMedium_3_4_answer}}' readonly style="width:20px;background-color:#DFDFDF;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_5_answer" value='{{IANMedium_3_5_answer}}' readonly style="width:20px;background-color:#DFDFDF;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-14px;">
+						<input id="IANMedium_3_6_answer" value='{{IANMedium_3_6_answer}}' readonly style="width:20px;background-color:#DFDFDF;">
+					</div>
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_2_answer" value='{{IANMedium_3_2_answer}}' style="width:20px;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_3_answer" value='{{IANMedium_3_3_answer}}' style="width:20px;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-14px;">
+						<input id="IANMedium_3_4_answer" value='{{IANMedium_3_4_answer}}' style="width:20px;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+						<input id="IANMedium_3_5_answer" value='{{IANMedium_3_5_answer}}' style="width:20px;">
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-14px;">
+						<input id="IANMedium_3_6_answer" value='{{IANMedium_3_6_answer}}' style="width:20px;">
+					</div>
+
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANMedium_3_2_answer_correct is defined %}
+					{% if IANMedium_3_2_answer_correct and IANMedium_3_3_answer_correct and IANMedium_3_4_answer_correct and IANMedium_3_5_answer_correct and IANMedium_3_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANMedium_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:15px;display:inline-block;vertical-align:top;">c)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;vertical-align:top;width:360px;">Sum of heights of Ally and Cyra such that Ally is 2 times taller than Borita and Cyra is 4 times taller than Dora, given that Borita is <font class="grade7Variables">n</font> cm tall and Dora is <font class="grade7Variables">m</font> cm tall.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+				{% if IANMedium_3_7_answer_correct is defined %}
+					<input id="IANMedium_3_7_answer" value='{{IANMedium_3_7_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> cm
+				{% else %}
+					<input id="IANMedium_3_7_answer" value='{{IANMedium_3_7_answer}}' style="width:50px;"> cm
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANMedium_3_7_answer_correct is defined %}
+					{% if IANMedium_3_7_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANMedium_3_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		{% if IANMedium_3_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="IANMedium_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="IANMedium_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#IANMedium_3_1_answer").change(function()
+	{
+		question_id = "IANMedium_3";
+		question_type = "AlgebraicNotations"
+		answer_id = "IANMedium_3_1_answer";
+		entered_answer = $("#IANMedium_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#IANMedium_3_2_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_2_answer";
+				entered_answer = $("#IANMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANMedium_3_3_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_3_answer";
+				entered_answer = $("#IANMedium_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANMedium_3_4_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_4_answer";
+				entered_answer = $("#IANMedium_3_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANMedium_3_5_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_5_answer";
+				entered_answer = $("#IANMedium_3_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANMedium_3_6_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_6_answer";
+				entered_answer = $("#IANMedium_3_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANMedium_3_7_answer").change(function()
+			{
+				question_id = "IANMedium_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANMedium_3_7_answer";
+				entered_answer = $("#IANMedium_3_7_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#IANMedium_3_Submit").button({label:"Check Answers"});
+	$("#IANMedium_3_Retry").button({label:"Retry"});
+	$("#IANMedium_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicNotations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "IANMedium_3"+"#%$"+"IANMedium_3_1_answer"+"#%$"+$("#IANMedium_3_1_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_2_answer"+"#%$"+$("#IANMedium_3_2_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_3_answer"+"#%$"+$("#IANMedium_3_3_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_4_answer"+"#%$"+$("#IANMedium_3_4_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_5_answer"+"#%$"+$("#IANMedium_3_5_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_6_answer"+"#%$"+$("#IANMedium_3_6_answer").val();
+		answers = answers + "#%$"+"IANMedium_3"+"#%$"+"IANMedium_3_7_answer"+"#%$"+$("#IANMedium_3_7_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#IANMedium_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "IANMedium_3_1_answer,IANMedium_3_2_answer,IANMedium_3_3_answer,";
+		answer_ids = answer_ids + "IANMedium_3_4_answer,IANMedium_3_5_answer,IANMedium_3_6_answer,IANMedium_3_7_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

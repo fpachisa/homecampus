@@ -1,0 +1,146 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Equivalent Fractions and Ratios - Home Campus</title>
+<meta name="description" content="Equivalent Fractions and Ratios" />
+<meta name="keywords" content='equivalent fractions, equivalent ratios'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Equivalent Fractions and Ratios</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Leela adds fertilizer to her flower pots which are all of the same size. <br />
+				She uses 3 tablespoons of fertilizer for every 9 flower pots. </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<b>a) &nbsp; Express the number of tablepoons of fertilizer as a fraction of the number of flower pots in the simplest form. </b><br />
+				<div class="col-10 col-off-1">
+					{{ frGen(3,9) }} &nbsp;=&nbsp; {{ frGen(1,3) }} 
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>b) &nbsp; If she has 6 flower pots, how many tablespoons of fertilizer does she need? </b><br />
+				<div class="col-10 col-off-1">
+					{{ frGen(1,3) }} &nbsp;=&nbsp; {{ frGen("?",6) }} <br />
+					{{ frGen(1,3) }} &nbsp;=&nbsp; {{ frGen("1 x 2","3 x 2") }} &nbsp;=&nbsp; {{ frGen(2,6) }} <br /><br />
+					
+					She needs 2 tablespoons of fertilizer.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>c) &nbsp; How many flower pots are needed if 5 tablespoons of fertilizer is used? </b><br />
+				<div class="col-10 col-off-1">
+					{{ frGen(1,3) }} &nbsp;=&nbsp; {{ frGen("1 x 5","3 x 5") }} &nbsp;=&nbsp; {{ frGen(5,15) }} <br /><br />
+					
+					15 flower pots are needed if 5 tablespoons of fertilizer are used.
+				</div>
+			</div>
+
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. Larry is making a pattern with 14 green tiles for every 70 blue tiles. </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<b>a) &nbsp; Find the ratio of the number of green tiles to the number of blue tiles in the simplest form. </b><br />
+				<div class="col-10 col-off-1">
+					14 : 70 &nbsp;=&nbsp; 7 : 35 &nbsp;=&nbsp; 1 : 5 <br /><br />
+					
+					The ratio of the number of green tiles to the number of blue tiles is <b>1 : 5</b>. 
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>b) &nbsp; Find the ratio of the number of blue tiles to the number of green tiles. </b><br />
+				<div class="col-10 col-off-1">
+					70 : 14 &nbsp;=&nbsp; 35 : 7 &nbsp;=&nbsp; 5 : 1 <br /><br />
+					
+					The ratio of the number of blue tiles to the number of green tiles is <b>5 : 1</b>.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>c) &nbsp; If he uses 35 green tiles, how many blue tiles does he use? </b><br />
+				<div class="col-11 col-off-1">
+					The number of green tiles and blue tiles used are in the ratio 1 : 5. <br /><br />
+					
+					<img src="/images/notes/P6_ratio_equivalent_fraction_word_problem_2a.png" alt="ratio and fraction"/><br />
+					
+					1 unit &nbsp;&nbsp;=&nbsp; 35 <br />
+					5 units &nbsp;=&nbsp; 35 &nbsp;&times;&nbsp; 5 &nbsp;=&nbsp; 175 <br /><br />
+					
+					He uses <b>175</b> blue tiles.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>d) &nbsp; If he uses a total of 120 tiles, how many of them are blue? </b><br />
+				<div class="col-11 col-off-1">
+					Again, the ratio of the number of green tiles to the number of blue tiles is 1 : 5. <br /><br />
+					
+					<img src="/images/notes/P6_ratio_equivalent_fraction_word_problem_2b.png" alt="ratio and fraction"/><br />
+					
+					6 units &nbsp;=&nbsp; 120 <br />
+					1 unit &nbsp;&nbsp;=&nbsp; 120 &nbsp;&divide;&nbsp; 6 &nbsp;=&nbsp; 20 <br />
+					6 units &nbsp;=&nbsp; 20 &nbsp;&times;&nbsp; 5 &nbsp;=&nbsp; 100 <br /><br />
+					
+					There are <b>100</b> blue tiles.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>e) &nbsp; He adds red tiles to the pattern so the ratio of the number of green tiles to the number of blue tiles to the number of red tiles is 1:5:2. If he uses 240 tiles altogether, how many of them are red? </b><br />
+				<div class="col-11 col-off-1">
+					The ratio of the number of green tiles to the blue tiles to red tiles is 1 : 5 : 2. <br /><br />
+					
+					<img src="/images/notes/P6_ratio_equivalent_fraction_word_problem_2c.png" alt="ratio and fraction"/><br />
+					
+					8 units &nbsp;=&nbsp; 240 <br />
+					1 unit &nbsp;&nbsp;=&nbsp; 240 &nbsp;&divide;&nbsp; 8 &nbsp;=&nbsp; 30 <br />
+					2 units &nbsp;=&nbsp; 30 &nbsp;&times;&nbsp; 2 &nbsp;=&nbsp; 60 <br /><br />
+					
+					There are <b>60</b> red tiles.
+				</div>
+			</div>
+
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+{% endblock %}

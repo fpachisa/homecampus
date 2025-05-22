@@ -1,0 +1,158 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mrs. Parker gave a quiz to her class. There were 5 questions in the quiz. Students received 5 marks for each question answered correctly while &minus;3 marks for each question answered incorrectly. Unanswered questions were marked 0. 
+			</div>
+		</div>
+		<br>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">Rick got the highest possible marks. How many marks did he get?</div>		
+		<div style="margin-left:60px;margin-top:10px;">Answer: &nbsp; 
+			{% if RNMDAdvanced_5_1_answer_correct is defined %}
+				<input id="RNMDAdvanced_5_1_answer" value='{{RNMDAdvanced_5_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> marks&nbsp;
+					{% if RNMDAdvanced_5_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_5_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_5_1_answer" value='{{RNMDAdvanced_5_1_answer}}' style="width:40px;" > marks&nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">b)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">Susan got the lowest possible marks. How many marks did she get?</div>		
+		<div style="margin-left:60px;margin-top:10px;">Answer: &nbsp;
+			{% if RNMDAdvanced_5_2_answer_correct is defined %}
+				<input id="RNMDAdvanced_5_2_answer" value='{{RNMDAdvanced_5_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> marks&nbsp;
+					{% if RNMDAdvanced_5_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_5_2_answer_correct and RNMDAdvanced_5_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_5_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_5_2_answer" value='{{RNMDAdvanced_5_2_answer}}' style="width:40px;" > marks&nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">c)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">Tina answered all the questions and got 9 marks. How many questions did she answer correctly?</div>		
+		<div style="margin-left:60px;margin-top:10px;">Answer: &nbsp;
+			{% if RNMDAdvanced_5_3_answer_correct is defined %}
+				<input id="RNMDAdvanced_5_3_answer" value='{{RNMDAdvanced_5_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDAdvanced_5_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_5_3_answer_correct and RNMDAdvanced_5_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_5_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_5_3_answer" value='{{RNMDAdvanced_5_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">d)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">Venessa answered one question correctly and received &minus;1 mark. How many questions did she leave unanswered? </div>		
+		<div style="margin-left:60px;margin-top:10px;">Answer: &nbsp;
+			{% if RNMDAdvanced_5_4_answer_correct is defined %}
+				<input id="RNMDAdvanced_5_4_answer" value='{{RNMDAdvanced_5_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDAdvanced_5_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_5_4_answer_correct and RNMDAdvanced_5_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_5_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_5_4_answer" value='{{RNMDAdvanced_5_4_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+
+
+		{% if RNMDAdvanced_5_1_answer_correct is defined %}
+			<div style="margin-top:-35px;margin-left:320px;"><button id="RNMDAdvanced_5_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="RNMDAdvanced_5_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNMDAdvanced_5_1_answer").change(function()
+	{
+		question_id = "RNMDAdvanced_5";
+		question_type = "MultiplicationDivisionIntegers"
+		answer_id = "RNMDAdvanced_5_1_answer";
+		entered_answer = $("#RNMDAdvanced_5_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNMDAdvanced_5_2_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_5";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_5_2_answer";
+				entered_answer = $("#RNMDAdvanced_5_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDAdvanced_5_3_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_5";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_5_3_answer";
+				entered_answer = $("#RNMDAdvanced_5_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDAdvanced_5_4_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_5";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_5_4_answer";
+				entered_answer = $("#RNMDAdvanced_5_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNMDAdvanced_5_Submit").button({label:"Check Answers"});
+	$("#RNMDAdvanced_5_Retry").button({label:"Retry"});
+	$("#RNMDAdvanced_5_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDAdvanced_5"+"#%$"+"RNMDAdvanced_5_1_answer"+"#%$"+$("#RNMDAdvanced_5_1_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_5"+"#%$"+"RNMDAdvanced_5_2_answer"+"#%$"+$("#RNMDAdvanced_5_2_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_5"+"#%$"+"RNMDAdvanced_5_3_answer"+"#%$"+$("#RNMDAdvanced_5_3_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_5"+"#%$"+"RNMDAdvanced_5_4_answer"+"#%$"+$("#RNMDAdvanced_5_4_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDAdvanced_5_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDAdvanced_5_1_answer,RNMDAdvanced_5_2_answer,RNMDAdvanced_5_3_answer,RNMDAdvanced_5_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

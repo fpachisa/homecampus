@@ -1,0 +1,103 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;">Percentage - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;"><font class="grade7PracticeQuestionNumber">15)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:360px;vertical-align:top;">The ratio of female:male employees in a certain company is 2:3. 20% male employees leave the company. How many percent female employees should be recruited so as to maintain a balanced ratio of 1:1?</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:80px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_15_answer" size=3 value='{{PRTT1_15_answer}}' readonly style="background-color:#DFDFDF;"> % &nbsp;
+				{% if PRTT1_15_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 4 / 4)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 4)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_15_answer" size=3 value='{{PRTT1_15_answer}}'> %<font class="grade7TestMark">(Mark: 4)</font>
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="PR_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="PR_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#PR_TT_1_Submit").button({label:"Submit"});
+$("#PR_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#PR_TT_1_Done").button({label:"Done"});
+$("#PR_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+$("#PRTT1_15_answer").change(function()
+		{
+			question_id = "PRTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_15_answer";
+			entered_answer = $("#PRTT1_15_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'PRTT1_14_1_answer'+separatorText+'PRTT1_14_2_answer'+separatorText+'PRTT1_15_answer';	
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+

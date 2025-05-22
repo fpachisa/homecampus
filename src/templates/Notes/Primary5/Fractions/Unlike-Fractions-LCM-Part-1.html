@@ -1,0 +1,269 @@
+{% macro frGen(N,D) %}
+<table style='display:inline-block;padding:0 6px;vertical-align:middle;'>
+	<tr style='text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>What are Unlike Fractions and LCM (Least Common Multiple)? - Home Campus</title>
+<meta name="description" content="Like fractions are two or more fractions that have the same denominator." />
+<meta name="keywords" content="fractions, like fractions, unlike fractions, comparing fractions, least common multiple, LCM, free fraction lessons, fraction lesson videos, comparing fractions using LCM, common multiples, LCM for fractions" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Comparing Unlike Fractions and Least Common Multiple Part 1</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P5">
+		
+		<div class="concept-set__question">
+			<h4>LESSON AT A GLANCE</h4>
+		</div>
+
+		<div class="learn-set__video">
+			<div>
+				<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/nFJ48n5R3Xc?html5=1" frameborder="0"> </iframe>
+				
+				<!-- <embed src="https://www.youtube.com/v/yDODrzIg40A?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /> -->
+			</div>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-11 col-off-1" style="margin-top: 2%;">
+				This lesson covers the following:<br /><br />
+				
+				<ol>
+					<li><a href="#concept-1">What are like fractions?</a></li>
+					<li><a href="#concept-2">What are unlike fractions?</a></li>
+					<li><a href="#concept-3">How do you compare unlike fractions?</a></li>
+					<li><a href="#concept-4">What is LCM or Least Common Multiple?</a></li>
+				</ol>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-1">1. What are Like Fractions?</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<b>Like Fractions</b> are two or more fractions that have the same denominator.<br /><br />
+				<b><i>Example:</i></b>
+				{{ frGen(1,5) }} and {{ frGen(2,5) }} are like fractions. Both these fractions have the same denominator of 5.<br /><br />
+				
+				<img src="/images/notes/like_fractions.png" alt="like fractions" /><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-2">2. What are Unlike Fractions?</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<b>Unlike Fractions</b> are two or more fractions that do not have the same denominator.<br /><br />
+				<b><i>Example:</i></b>
+				{{ frGen(1,3) }} and {{ frGen(1,4) }} are unlike fractions. The denominators of these two fractions are different.<br /><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-3">3. Which of the following fractions is greater?<br /></h4>
+		</div>
+		<div class="learn-set__answer">&nbsp;&nbsp; {{ frGen(1,3) }} &nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,4) }}</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				{{ frGen(1,3) }} and {{ frGen(1,4) }} can be represented pictorially as below, on two different fraction strips.<br /><br />
+			
+				<img src="/images/notes/unlike_fractions.png" alt="unlike fractions" /><br />
+				
+				In order to compare the two fractions, we must be able to represent them on a single fraction strip. This means we should first change them to like fractions using the following steps:<br /><br />
+				
+				<b>Step 1:</b><br />
+				Find the product of 3 and 4 (the two denominators).<br />
+				3 &nbsp;&times;&nbsp; 4 &nbsp;=&nbsp; <font color=red>12</font><br /><br />
+
+				<b>Step 2:</b><br />
+				Change each of the two fractions to its equivalent fraction so that the new denominator is <font color=red>12</font>.<br />
+				{{ frGen(1,3) }} &nbsp;=&nbsp; {{ frGen("?",12) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 4","3 x 4") }} &nbsp;=&nbsp; {{ frGen(4,12) }}<br />
+				{{ frGen(1,4) }} &nbsp;=&nbsp; {{ frGen("?",12) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 3","4 x 3") }} &nbsp;=&nbsp; {{ frGen(3,12) }}<br /><br />
+				
+				Now that both the fractions have the same denominator, we can show them on one fraction strip as below.<br /><br />
+				
+				<img src="/images/notes/unlike_fractions_to_like_fractions.png" alt="unlike fractions to like fractions" /><br /><br />
+				
+				<b>Comparing the two fractions</b>
+			</div>
+			<div class="col-10 col-off-2">
+				From the above figure, it is clear that, <br />
+				{{ frGen(4,12) }} is greater than {{ frGen(3,12) }}<br /><br />
+				&nbsp; Or,<br /><br />
+				{{ frGen(1,3) }} is greater than {{ frGen(1,4) }}
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(91, 215, 101);" href="/Learn/Compare-Fractions-Calculator">Compare Fractions</a></div>
+	</div>
+</div><!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>4. Which of the following fractions is greater?<br />
+				&nbsp;&nbsp; {{ frGen(1,6) }} &nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,4) }}
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<b>Step 1:</b><br />
+				Find the product of 6 and 4 (the two denominators).<br />
+				6 &nbsp;&times;&nbsp; 4 &nbsp;=&nbsp; <font color=red>24</font><br /><br />
+
+				<b>Step 2:</b><br />
+				Change each of the two unlike fractions to its equivalent so that the new denominator is <font color=red>24</font>.<br />
+				{{ frGen(1,6) }} &nbsp;=&nbsp; {{ frGen("?",24) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 4","6 x 4") }} &nbsp;=&nbsp; {{ frGen(4,24) }}<br />
+				{{ frGen(1,4) }} &nbsp;=&nbsp; {{ frGen("?",24) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 6","4 x 6") }} &nbsp;=&nbsp; {{ frGen(6,24) }}<br /><br />
+				
+				The two fractions can be shown pictorially as below:<br /><br />
+				
+				<img src="/images/notes/comparing_unlike_fractions.png" alt="comparing unlike fractions" /><br /><br />
+				
+				<b>Comparing the two fractions</b>
+			</div>
+			<div class="col-10 col-off-2">
+				From the above figure, it is clear that, <br />
+				{{ frGen(6,24) }} is greater than {{ frGen(4,24) }}<br /><br />
+				&nbsp; Or,<br /><br />
+				{{ frGen(1,4) }} is greater than {{ frGen(1,6) }}
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-4">5. What is LCM or Least Common Multiple?<br />
+				&nbsp;&nbsp; {{ frGen(1,6) }} &nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,4) }}
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				While the above method of converting unlike fractions to like fractions works perfectly with small numbers, there is another method we use when dealing with more than two numbers or with bigger numbers. It is known as <b>LCM</b> or <b>least common multiple</b>.
+			</div>
+			<div class="col-7 col-off-1">
+				<b>Example:</b> To find the LCM of 6 and 4, we follow the steps below.<br /><br />
+				
+				<b>Step 1:</b><br />
+				Find the multiples of 6 and the multiples of 4.<br />
+				6 &nbsp;=&gt;&nbsp; 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, ...<br />
+				4 &nbsp;=&gt;&nbsp; 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, ...<br /><br />
+
+				<b>Step 2:</b><br />
+				Find the common multiples of 6 and 4.<br />
+				They are: 12, 24, 36, ...<br /><br />
+
+				<b>Step 3:</b><br />
+				Find the least (or smallest) of the common multiples of 6 and 4.<br />
+				It is <font color=red>12</font>.<br />
+				So, the <b>LCM of 6 and 4 is <font color=red>12</font></b>.
+			</div>
+			<div class="col-3 hint-box">
+				To find out the multiples of a number, think of the multiplication table of that number.<br /><br />
+				The multiplication table of 6 is:<br />
+				6 &nbsp;&times;&nbsp; 1 = <b>6</b><br />
+				6 &nbsp;&times;&nbsp; 2 = <b>12</b><br />
+				6 &nbsp;&times;&nbsp; 3 = <b>18</b><br />
+				6 &nbsp;&times;&nbsp; 4 = <b>24</b><br />
+				6 &nbsp;&times;&nbsp; 5 = <b>30</b><br />
+				...<br /><br />
+				Therefore, the multiples of 6 are:<br />
+				6, 12, 18, 24, 30, ...
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>6. Using LCM, find which of the following fractions is greater:<br />
+				&nbsp;&nbsp; {{ frGen(1,6) }} &nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,4) }}
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				LCM or least common multiple, as we mentioned above, is a way to find out a new common denominator for the given unlike fractions so they can be changed to like fractions.<br /><br />
+				<b>Step 1:</b><br />
+				Take the two unlike denominators, 6 and 4, and find a new common denominator using LCM.<br /><br />
+
+				<b>Step 2:</b><br />
+				We know from above that the LCM of 6 and 4 = <font color=red>12</font>.
+			</div>
+			<div class="col-6 col-off-1">
+				<b>Step 3:</b><br />
+				Change the two unlike fractions so each has a denominator of <font color=red>12</font>.<br /><br />
+				{{ frGen(1,6) }} &nbsp;=&nbsp; {{ frGen("?",12) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 2","6 x 2") }} &nbsp;=&nbsp; {{ frGen(2,12) }}<br />
+				{{ frGen(1,4) }} &nbsp;=&nbsp; {{ frGen("?",12) }}  &nbsp;=&gt;&nbsp; {{ frGen("1 x 3","4 x 3") }} &nbsp;=&nbsp; {{ frGen(3,12) }}<br /><br />
+
+				<img src="/images/notes/comparing_unlike_fractions_using_LCM.png" alt="LCM or lowest common denominator"/>
+			</div>
+			<div class="col-4 hint-box">
+				This tells us we need not cut the fraction strip into 24 pieces (6 &nbsp;&times;&nbsp; 4).<br /><br />
+				It is sufficient to cut it up into 12 pieces and still be able to mark the unlike fractions {{ frGen(1,6) }} and {{ frGen (1,4) }} on it for comparison.<br /><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Add_Like_Related_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 6 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Like Fractions?","acceptedAnswer":{"@type":"Answer","text":"Like Fractions are two or more fractions that have the same denominator."}},{"@type":"Question","name":"What are Unlike Fractions?","acceptedAnswer":{"@type":"Answer","text":"Unlike Fractions are two or more fractions that do not have the same denominator."}},{"@type":"Question","name":"Which is greater 1/3 or 1/4?","acceptedAnswer":{"@type":"Answer","text":"1/3 is greater than 1/4"}},{"@type":"Question","name":"Which is greater 1/3 or 1/2?","acceptedAnswer":{"@type":"Answer","text":"1/2 is greater than 1/3"}}]}</script>
+{% endblock %}

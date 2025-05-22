@@ -1,0 +1,147 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.3 Applications of Linear Equations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:60%;">9.3 Applications of Linear Equations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">Following is the image of a wooden bookshelf consisting of shelves stacked above each other. The height of the bookshelf is 2.5 times the length of a shelf. A 30 cm by 750 cm wooden sheet was used to make the bookshelf. Find the length and the height of the bookshelf if its depth was 30 cm?</div>
+		<br>
+		<div style="display:inline-block;margin-top:10px;margin-left:20px;"><img src="/images/Grade7/G7_LE_Applications_of_Linear_Equations_Advanced_3.png"></div>
+		<div style="display:inline-block;margin-left:-40px;margin-top:0px;">
+			<div style="margin-left:20px;margin-top:10px;">
+				<div style="display:inline-block;margin-left:25px;margin-top:0px;">Length: &nbsp;
+					{% if C9ALEAdvanced_3_1_answer_correct is defined %}
+						<input id="C9ALEAdvanced_3_1_answer" value='{{C9ALEAdvanced_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">&nbsp;cm
+					{% else %}
+						<input id="C9ALEAdvanced_3_1_answer" value='{{C9ALEAdvanced_3_1_answer}}' style="width:30px;text-align:center;" >&nbsp;cm
+					{% endif %}
+				</div>
+				<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+					{% if C9ALEAdvanced_3_1_answer_correct is defined %}
+						{% if C9ALEAdvanced_3_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% else %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{C9ALEAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					{% endif %}
+				</div>				
+			</div>
+			<div style="margin-left:20px;margin-top:10px;">
+				<div style="display:inline-block;margin-left:25px;margin-top:0px;">Height: &nbsp;
+					{% if C9ALEAdvanced_3_2_answer_correct is defined %}
+						<input id="C9ALEAdvanced_3_2_answer" value='{{C9ALEAdvanced_3_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;text-align:center;">&nbsp;cm
+					{% else %}
+						<input id="C9ALEAdvanced_3_2_answer" value='{{C9ALEAdvanced_3_2_answer}}' style="width:40px;text-align:center;" >&nbsp;cm
+					{% endif %}
+				</div>
+				<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+					{% if C9ALEAdvanced_3_2_answer_correct is defined %}
+						{% if C9ALEAdvanced_3_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% else %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{C9ALEAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					{% endif %}
+				</div>				
+			</div>
+		</div>
+		<br>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">Pipe A can fill a tank in 3 hours. Pipe B can fill the same tank in 2 hours. How long would it take them to fill up the tank together? <br>(Express your answer in decimal form)</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Answer: &nbsp;
+				{% if C9ALEAdvanced_4_answer_correct is defined %}
+					<input id="C9ALEAdvanced_4_answer" value='{{C9ALEAdvanced_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">&nbsp;hours
+				{% else %}
+					<input id="C9ALEAdvanced_4_answer" value='{{C9ALEAdvanced_4_answer}}' style="width:30px;text-align:center;" >&nbsp;hours
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9ALEAdvanced_4_answer_correct is defined %}
+					{% if C9ALEAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9ALEAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+
+		{% if C9ALEAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="C9ALEAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="C9ALEAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+$("#C9ALEAdvanced_3_1_answer").change(function()
+		{
+			question_id = "C9ALEAdvanced_3";
+			question_type = "ApplicationOfLinearEquations"
+			answer_id = "C9ALEAdvanced_3_1_answer";
+			entered_answer = $("#C9ALEAdvanced_3_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#C9ALEAdvanced_3_2_answer").change(function()
+		{
+			question_id = "C9ALEAdvanced_3";
+			question_type = "ApplicationOfLinearEquations"
+			answer_id = "C9ALEAdvanced_3_2_answer";
+			entered_answer = $("#C9ALEAdvanced_3_2_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#C9ALEAdvanced_4_answer").change(function()
+		{
+			question_id = "C9ALEAdvanced_4";
+			question_type = "ApplicationOfLinearEquations"
+			answer_id = "C9ALEAdvanced_4_answer";
+			entered_answer = $("#C9ALEAdvanced_4_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+
+	$("#C9ALEAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#C9ALEAdvanced_2_Retry").button({label:"Retry"});
+	$("#C9ALEAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ApplicationOfLinearEquations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C9ALEAdvanced_3"+"#%$"+"C9ALEAdvanced_3_1_answer"+"#%$"+$("#C9ALEAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"C9ALEAdvanced_3"+"#%$"+"C9ALEAdvanced_3_2_answer"+"#%$"+$("#C9ALEAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"C9ALEAdvanced_4"+"#%$"+"C9ALEAdvanced_4_answer"+"#%$"+$("#C9ALEAdvanced_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C9ALEAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C9ALEAdvanced_3_1_answer,C9ALEAdvanced_3_2_answer,C9ALEAdvanced_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

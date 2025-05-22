@@ -1,0 +1,154 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Meter to Feet and Inches Conversion - Home Campus</title>
+<meta name="keywords" content="Convert meter to feet and inches">
+<meta name="description" content="Converter Metres to Feet and Inches" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Length-Units-Converter"><u>Length</u></a> >> <a href="/Learn/Meter-Unit-Converter"><u>Meter Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Meters to Feet and Inches?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Meters to Feet and Inches Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Meters&nbsp;=&nbsp; <input id="meter" type="number" size=6><br><br>
+				<button class="btn-quiz" id="ConvertToFeetInches" onclick="ConvertToFeetInches()">Convert To Feet and Inches</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="FeetInchesAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+				1 meter &nbsp;=&nbsp; 39.3701 inches<br><br>
+				12 inches &nbsp;=&nbsp; 1 foot		
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 10 meters to feet and inches.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				<strong>Step 1: Convert meters to inches.</strong><br><br>
+				&nbsp;&nbsp;&nbsp;Multiply 10 meters by 39.3701 to get inches<br><br>
+				&nbsp;&nbsp;&nbsp;Inches in 10 meters &nbsp;=&nbsp; 10 &nbsp;&times;&nbsp; 39.3701 &nbsp;=&nbsp; 393.701<br><br>
+				<strong>Step 2: Convert inches to feet and inches (if it is not completely divisible by 12)</strong><br><br>
+				&nbsp;&nbsp;&nbsp;Divide 393.701 inches by 12 to get feet<br><br>
+				&nbsp;&nbsp;&nbsp;Feet and inches in 393.701 inches &nbsp;=&nbsp; 393.701 &nbsp;&divide;&nbsp; 12 &nbsp;=&nbsp; 32 feet and 9.7 inches
+				
+				<br><br>Hence, there are <strong>32 feet and 9.7 inches in 10 meters.</strong>
+			</div>				  
+		</div>							
+		<div class="concept-set__question">
+			<strong>Example 2: my height in meters is 1.8. How much is it feet and inches?</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiple 1.8 by 39.3701 to get inches
+				<br><br>Inches in 1.8 meters &nbsp;=&nbsp; 1.8 &nbsp;&times;&nbsp; 39.3701 &nbsp;=&nbsp; 70.866 inches
+				<br><br>Convert 70.866 inches to feet and inches
+				<br><br>Feet and inches in 70.866 inches &nbsp;=&nbsp; 70.866 &nbsp;&divide;&nbsp; 12 &nbsp;=&nbsp; 5 feet 11 inches
+				<br><br>Hence, I'm <strong>5 feet 11 inches</strong> tall
+			</div>				  
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Meter &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				100 centimeters<br><br>
+				1000 millimeters<br><br>
+				0.001 kilometer<br><br>
+				0.0006214 mile<br><br>
+				1.09361 yards<br><br>
+				3.28084 feet<br><br>
+				39.3701 inches
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Meter Millimeter Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Meters to Feet and Inches Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-5 col-off-1" id="MeterR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-5 col-off-1" id="MeterR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Meter Millimeter Chart -->
+
+<script>
+
+function ConvertToFeetInches() {
+	var meter = document.getElementById("meter").value;
+	var totaInches = meter*39.3701
+	var feet = Math.floor(totaInches/12);
+	var inches = totaInches % 12;
+	document.getElementById("FeetInchesAnswer").innerHTML = "There are <strong>"+feet+" feet and "+inches.toFixed(2)+" inches "+"</strong> in "+meter+" meters."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var MeterR1C1HTML = '<br>0.1 meter &nbsp;=&nbsp; 0 foot and 3.93 inches<br><br/>';
+
+for (var i = 1; i <= 50; i=i+1) {
+	totalInchesR1C1 = i*39.3701
+	feetR1C1 = Math.floor(totalInchesR1C1/12);
+	inchesR1C1 = totalInchesR1C1 % 12;	
+    MeterR1C1HTML += (i)+ ' meters &nbsp;=&nbsp; ' + feetR1C1 + ' feet and '+ inchesR1C1.toFixed(2) +' inches<br/><br/>';
+  }
+document.getElementById("MeterR1C1").innerHTML = MeterR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var MeterR1C2HTML = '<br>';
+
+for (var i = 100; i <= 5000; i=i+100) {
+	totalInchesR1C2 = i*39.3701
+	feetR1C2 = Math.floor(totalInchesR1C2/12);
+	inchesR1C2 = totalInchesR1C2 % 12;	
+    MeterR1C2HTML += (i)+ ' meters &nbsp;=&nbsp; ' + feetR1C2 + ' feet and '+ inchesR1C2.toFixed(2) +' inches<br/><br/>';
+  }
+document.getElementById("MeterR1C2").innerHTML = MeterR1C2HTML;
+
+/* R1C2 Ends */
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many inches is 1 foot?","acceptedAnswer":{"@type":"Answer","text":"1 foot = 12 inches"}}]}</script>
+
+{% endblock %}

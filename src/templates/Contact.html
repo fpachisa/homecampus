@@ -1,0 +1,64 @@
+{% extends 'MainPage.html' %}
+
+{% block body %}
+<div class="contact-us">
+
+	<!-- Contact Details -->
+    <div class="contact-us__details">
+    	<h2>Get in Touch</h2>
+    	
+    	<p>
+    		Got something to share? Have a query? You can always reach out for us and we will get back to you as soon as possible!
+    	</p>
+    	
+       	<div class="contact-us__details--means">
+       		<div class="mean"><i class="fa fa-map-marker" style="color:red;"></i> <span>2 Venture Drive #11-03,<br>Vision Exchange,<br>Singapore 608526</span></div>
+       		
+       		<div class="mean"><i class="fa fa-envelope-o" style=""></i> <span><a class="neutral-link" href="mailto:admin@homecampus.com.sg" target="_blank">admin@homecampus.com.sg</a></span></div>
+       		
+       		<div class="mean"><i class="fa fa-facebook" style="color:#3b5998"></i> <span><a class="neutral-link" href="https://www.facebook.com/homecampus" target="_blank">/homecampus</a></span></div>
+		</div>    
+    </div>
+    
+    <!-- Feedback form -->
+    <div class="contact-us__feedback">
+    	<h2 class="hut-window">Leave us a Comment!</h2>
+    	<form class="form" method="post" action="{{ current_url }}" enctype="multipart/form-data">           
+    		<div class="form-group">
+    			<label for="first_name">Name</label>
+    			<input class="form-control" name="first_name" id="first_name" type="text"  value='{{first_name}}' />
+    		</div>
+    		
+    		<div class="form-group">
+    			<label for="email">Email</label>
+    			<input class="form-control" name="email" id="email" type="email" size=25 placeholder="example@domain.com" value='{{email}}' />
+    		</div>
+    		
+    		<div class="form-group">
+    			<label for="comment">Comment</label>
+    			<textarea class="form-control" name="comment" id="comment" rows="5" cols="40"></textarea>
+			</div>
+    		
+    		<div class="form-group">
+    			<button type="submit" class="btn-primary">Submit</button>
+    		</div> 		
+       	</form>
+    </div>
+
+</div>
+
+
+<script>
+	{% if thank %}
+	 console.log({
+			// (string | mandatory) the heading of the notification
+			title: 'Thank You!',
+			// (string | mandatory) the text inside the notification
+			text: '{{thank}}',
+			// (bool | optional) if you want it to fade out on its own or just sit there
+			sticky: false,
+		 	time: 2000,
+		});
+	 {% endif %}
+</script>
+{% endblock %}

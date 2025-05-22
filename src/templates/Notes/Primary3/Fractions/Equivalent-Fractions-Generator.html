@@ -1,0 +1,82 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Equivalent Fractions Calculator - Home Campus</title>
+<meta name="keywords" content="Calculate Equivalent Fractions">
+<meta name="description" content="Equivalent Fractions Generator" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">Equivalent Fractions Generator</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Equivalent Fractions Calculator: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter a Fraction&nbsp;=&nbsp; <input id="fraction" size=6><br><br>
+				<button class="btn-quiz" id="GenerateFractions" onclick="GenerateFractions()">Generate Equivalent Fractions</button><br><br> 
+			</div>
+			<div class="col-4 col-off-1" id="EquivalentFractions"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+	
+<!-- Concept 1 Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		
+		<div class="concept-set__question">
+			<h4>How to generate Equivalent Fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-9 col-off-1">
+				<strong>Method 1:</strong> Multiply the numerator and the denominator by the same number.<br><br>
+				<strong>Method 2:</strong> Divide the numerator and the denominator by the same number.<br><br>
+				As long as you multiply or divide both numerator and denominator by the same number, the fractional value will not change.
+			</div>
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/what-are-equivalent-fractions-free-math-worksheets">Download Free Worksheets</a></div>	
+	</div>
+</div><!-- End of concept 1 -->
+
+<script>
+
+function GenerateFractions() {
+	var fraction = document.getElementById("fraction").value;
+	var fractions = fraction.split("/");
+	var numerator = parseInt(fractions[0]);
+	var denominator = parseInt(fractions[1]);
+	var EquivalentFractionsHTML = "";
+
+	if (isNaN(numerator) || isNaN(denominator))
+	{
+		document.getElementById("EquivalentFractions").innerHTML = "<font color='red'>Please input correct fraction. For e.g. 1/2</font>"
+	}
+	else{
+		EquivalentFractionsHTML = "To generate Equivalent Fractions, multiply the numerator and denominator with the same number. Here we are multiplying the giving fraction by 2 to 100 to generate 99 Equivalent Fractions.<br><br>";
+		EquivalentFractionsHTML += fraction+" &nbsp;=&nbsp; ";
+		for (i=2;i<100;i=i+1){			
+			EquivalentFractionsHTML += numerator*i+"/"+denominator*i;
+			if (i%3==0){
+				EquivalentFractionsHTML += "</br></br>";
+			}
+			else{
+				EquivalentFractionsHTML += " &nbsp=&nbsp; ";
+			}
+		}
+		document.getElementById("EquivalentFractions").innerHTML = EquivalentFractionsHTML;
+	}
+	
+}
+
+</script>
+
+
+
+{% endblock %}

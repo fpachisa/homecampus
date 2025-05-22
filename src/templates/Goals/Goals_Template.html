@@ -1,0 +1,83 @@
+{% extends 'Goals/Goals.html' %}
+{% block goals %}
+{% block jsHeader%}
+{% endblock %}
+{%if Error%}
+	<h3><b>{{Error}}</b></h3>
+{% else %}
+	{% block GoalsTitle %}
+	{% endblock %}
+	{% if IsParent %}
+	<div style="float:right;margin-right:50px;margin-top:-50px;"><button id="SaveGoals" title='Change the goals value below to enable this button.'></button></div>
+	{% endif %}
+	<br>
+	<div class="GoalsList" style="background-color:#A7C942;">
+		<div style="margin-left:150px;margin-top:-10px;float:left;"><b>Topic</b></div>
+		<div style="margin-left:150px;margin-top:-10px;float:left;"><b>Goal (Number of correct questions)</b></div>
+		<div style="margin-left:70px;margin-top:-10px;float:left;"><b>Status (% complete)</b></div>
+	</div>
+
+	<div class="GoalsList">	
+
+	{% for g in GradeStats %}
+		<div class="Goals">{{g.concept}}
+			{% if IsParent %}
+				<div style="margin-right:400px;margin-top:-10px;float:right;"><input id='{{g.concept_id}}' size=2 value={{g.goal}} onchange="enableSaveButton(this)"></div>
+			{% else %}
+				<div style="margin-right:450px;margin-top:-10px;float:right;">{{g.goal}}</div>
+			{% endif %}
+			<div style="float:right;margin-right:-450px;">
+				<progress max="100" value={{g.correct*100/g.goal}} title='{{g.correct*100//g.goal}}% completed.'>
+		  		<strong>Progress: {{g.correct*100//g.goal}}% completed.</strong>
+				</progress>
+			</div>
+		</div>
+	{% endfor %}
+	<div id="error_dialog"></div>
+	</div><br>
+{% endif %}
+
+
+<script type="text/javascript">
+$("#SaveGoals").button({label:"Save Goals",disabled:true});
+var DataArray = new Array();
+var counter = 0;
+{% for g in GradeStats %}
+	DataArray[counter] = ['{{g.concept_id}}','{{g.goal}}'];
+	counter = counter + 1;
+{% endfor %}
+
+function enableSaveButton(item)
+{
+	if ($(item).val() == "" || isNaN($(item).val()) || $(item).val()==0)
+	{
+		$("#error_dialog").html("<br>Please enter a number > 0.");
+		$("#error_dialog").dialog("open");
+		$(item).val("");
+		$("#SaveGoals").button("option","disabled",true);
+	}
+	else
+	{
+		$("#SaveGoals").button("option","disabled",false);
+	
+		for (i=0;i<DataArray.length;i++)
+		{
+			if (DataArray[i][0]==$(item).attr("id"))
+			{
+				DataArray[i][1] = $(item).val();
+			}
+		}
+	}
+}
+
+$("#error_dialog").dialog
+({
+	autoOpen: false,
+	title:"Oops!!",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true
+});
+</script>
+{% endblock %}
+

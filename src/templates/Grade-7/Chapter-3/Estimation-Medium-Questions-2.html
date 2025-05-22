@@ -1,0 +1,158 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A car travels 1010 km. It travels an average of 10.32 km on a litre of petrol. Without doing the actual calculation, estimate the total volume of petrol used in litres. 
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer: &nbsp;  
+			{% if AESTMedium_3_answer_correct is defined %}
+				<input id="AESTMedium_3_answer" value='{{AESTMedium_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> litres&nbsp;
+					{% if AESTMedium_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_3_answer_correct and AESTMedium_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_3_answer" value='{{AESTMedium_3_answer}}' style="width:30px;" > litres&nbsp;
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">An essay consisted of 7 paragraphs. Each paragraph consisted of 12 lines which in turn had 8 words each.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a)	Find the approximate number of words in the essay.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer: &nbsp; 
+			{% if AESTMedium_4_1_answer_correct is defined %}
+				<input id="AESTMedium_4_1_answer" value='{{AESTMedium_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> words&nbsp;
+					{% if AESTMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_4_1_answer_correct and AESTMedium_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_4_1_answer" value='{{AESTMedium_4_1_answer}}' style="width:30px;" > words&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b)	What is the actual number of words in the essay?</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; 
+			{% if AESTMedium_4_2_answer_correct is defined %}
+				<input id="AESTMedium_4_2_answer" value='{{AESTMedium_4_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> words&nbsp;
+					{% if AESTMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_4_2_answer_correct and AESTMedium_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_4_2_answer" value='{{AESTMedium_4_2_answer}}' style="width:30px;" > words&nbsp;
+			{% endif %}	
+		</div>		
+		<div style="margin-left:40px;margin-top:20px;">c)	What is the magnitude of rounding error?</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; 
+			{% if AESTMedium_4_3_answer_correct is defined %}
+				<input id="AESTMedium_4_3_answer" value='{{AESTMedium_4_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> words&nbsp;
+					{% if AESTMedium_4_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTMedium_4_3_answer_correct and AESTMedium_4_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTMedium_4_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTMedium_4_3_answer" value='{{AESTMedium_4_3_answer}}' style="width:30px;" > words&nbsp;
+			{% endif %}	
+		</div>		
+
+		{% if AESTMedium_3_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="AESTMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESTMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESTMedium_3_answer").change(function()
+	{
+		question_id = "AESTMedium_3";
+		question_type = "Estimation"
+		answer_id = "AESTMedium_3_answer";
+		entered_answer = $("#AESTMedium_3_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESTMedium_4_1_answer").change(function()
+			{
+				question_id = "AESTMedium_4";
+				question_type = "Estimation"
+				answer_id = "AESTMedium_4_1_answer";
+				entered_answer = $("#AESTMedium_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+	$("#AESTMedium_4_2_answer").change(function()
+			{
+				question_id = "AESTMedium_4";
+				question_type = "Estimation"
+				answer_id = "AESTMedium_4_2_answer";
+				entered_answer = $("#AESTMedium_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESTMedium_4_3_answer").change(function()
+			{
+				question_id = "AESTMedium_4";
+				question_type = "Estimation"
+				answer_id = "AESTMedium_4_3_answer";
+				entered_answer = $("#AESTMedium_4_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	
+	$("#AESTMedium_2_Submit").button({label:"Check Answers"});
+	$("#AESTMedium_2_Retry").button({label:"Retry"});
+	$("#AESTMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Estimation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESTMedium_3"+"#%$"+"AESTMedium_3_answer"+"#%$"+$("#AESTMedium_3_answer").val();
+		answers = answers + "#%$"+"AESTMedium_4"+"#%$"+"AESTMedium_4_1_answer"+"#%$"+$("#AESTMedium_4_1_answer").val();
+		answers = answers + "#%$"+"AESTMedium_4"+"#%$"+"AESTMedium_4_2_answer"+"#%$"+$("#AESTMedium_4_2_answer").val();
+		answers = answers + "#%$"+"AESTMedium_4"+"#%$"+"AESTMedium_4_3_answer"+"#%$"+$("#AESTMedium_4_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESTMedium_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESTMedium_3_answer,AESTMedium_4_1_answer,AESTMedium_4_2_answer,AESTMedium_4_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

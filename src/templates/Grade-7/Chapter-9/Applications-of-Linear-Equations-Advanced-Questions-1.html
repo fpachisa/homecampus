@@ -1,0 +1,124 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.3 Applications of Linear Equations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:60%;">9.3 Applications of Linear Equations</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">A two-digit number is such that its ones digit is 
+			<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">3<br>_<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:0px;">times</div>
+		</div>
+		<div style="margin-left:43px;margin-top:-6px;width:390px;vertical-align:top;">its tens digit. If the difference between the number and the number obtained by reversing its digits is 18, find the number.</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Answer: &nbsp;
+				{% if C9ALEAdvanced_1_answer_correct is defined %}
+					<input id="C9ALEAdvanced_1_answer" value='{{C9ALEAdvanced_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C9ALEAdvanced_1_answer" value='{{C9ALEAdvanced_1_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9ALEAdvanced_1_answer_correct is defined %}
+					{% if C9ALEAdvanced_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9ALEAdvanced_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:40px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:40px;display:inline-block;width:390px;vertical-align:top;">A wholesaler bought 7 packs of 3 T-shirts from a supplier. He marked up the price of each T-shirt by $2 and sold 5 packs of 3 T-shirts to a retailer. The revenue he generated from this sale was equal to the amount he paid to his supplier. How much did the wholesaler buy each T-shirt for?</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Answer: &nbsp;$
+				{% if C9ALEAdvanced_2_answer_correct is defined %}
+					<input id="C9ALEAdvanced_2_answer" value='{{C9ALEAdvanced_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C9ALEAdvanced_2_answer" value='{{C9ALEAdvanced_2_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9ALEAdvanced_2_answer_correct is defined %}
+					{% if C9ALEAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9ALEAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+
+
+		{% if C9ALEAdvanced_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="C9ALEAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="C9ALEAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+
+$("#C9ALEAdvanced_1_answer").change(function()
+		{
+			question_id = "C9ALEAdvanced_1";
+			question_type = "ApplicationOfLinearEquations"
+			answer_id = "C9ALEAdvanced_1_answer";
+			entered_answer = $("#C9ALEAdvanced_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	$("#C9ALEAdvanced_2_answer").change(function()
+			{
+				question_id = "C9ALEAdvanced_2";
+				question_type = "ApplicationOfLinearEquations"
+				answer_id = "C9ALEAdvanced_2_answer";
+				entered_answer = $("#C9ALEAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#C9ALEAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#C9ALEAdvanced_1_Retry").button({label:"Retry"});
+	$("#C9ALEAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ApplicationOfLinearEquations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C9ALEAdvanced_1"+"#%$"+"C9ALEAdvanced_1_answer"+"#%$"+$("#C9ALEAdvanced_1_answer").val();
+		answers = answers + "#%$"+"C9ALEAdvanced_2"+"#%$"+"C9ALEAdvanced_2_answer"+"#%$"+$("#C9ALEAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C9ALEAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C9ALEAdvanced_1_answer,C9ALEAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

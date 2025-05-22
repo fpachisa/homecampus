@@ -1,0 +1,224 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The table below compares Harry's body weight to that of his family members. Study the table and answer the questions that follow.
+			</div>
+		</div>
+		<table style="border-collapse:collapse;margin-top:20px;margin-left:20px;width:380px;">
+			<tr>
+				<td style="border:1px solid #8064A2;"><strong>Members</strong></td>
+				<td style="border:1px solid #8064A2;"><strong>Father</strong></td>
+				<td style="border:1px solid #8064A2;"><strong>Mother</strong></td>
+				<td style="border:1px solid #8064A2;"><strong>Brother</strong></td>
+				<td style="border:1px solid #8064A2;"><strong>Sister</strong></td>
+			</tr>
+			<tr>
+				<td style="border:1px solid #8064A2;text-align:left;">Body weight relative to Harry's (kg)</td>
+				<td style="border:1px solid #8064A2;">+10</td>
+				<td style="border:1px solid #8064A2;">&minus;3</td>
+				<td style="border:1px solid #8064A2;">+7</td>
+				<td style="border:1px solid #8064A2;">&minus;13</td>
+			</tr>
+		</table>		
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;">a)</div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Who had the lowest body weight?
+			</div>
+		</div>
+		<div style="margin-left:35px;margin-top:10px;">
+			{% if RNASAdvanced_2_1_answer_correct is defined %}
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Harry' disabled
+				{% if RNASAdvanced_2_1_answer == 'Harry'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Harry&nbsp;
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Father' disabled
+				{% if RNASAdvanced_2_1_answer == 'Father' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Father&nbsp;
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Mother' disabled
+				{% if RNASAdvanced_2_1_answer == 'Mother' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Mother&nbsp;
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Brother' disabled
+				{% if RNASAdvanced_2_1_answer == 'Brother' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Brother&nbsp;				 
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Sister' disabled
+				{% if RNASAdvanced_2_1_answer == 'Sister' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Sister&nbsp;&nbsp;
+				{% if RNASAdvanced_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNASAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Harry'
+				{% if RNASAdvanced_2_1_answer == 'Harry' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Harry&nbsp;
+				<input type=radio name="RNASAdvanced_2_1_answer" value='Father'
+				{% if RNASAdvanced_2_1_answer == 'Father'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Father&nbsp;
+				 <input type=radio name="RNASAdvanced_2_1_answer" value='Mother'
+				{% if RNASAdvanced_2_1_answer == 'Mother'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Mother
+				 <input type=radio name="RNASAdvanced_2_1_answer" value='Brother'
+				{% if RNASAdvanced_2_1_answer == 'Brother'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Brother				 
+				 <input type=radio name="RNASAdvanced_2_1_answer" value='Sister'
+				{% if RNASAdvanced_2_1_answer == 'Sister'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Sister			 
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;">b)</div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">If the body weights of all the family members were ranked in ascending order, what would be the position of Harry?
+			</div>
+		</div>
+		<div style="margin-left:35px;margin-top:10px;">
+			{% if RNASAdvanced_2_2_answer_correct is defined %}
+				<input type=radio name="RNASAdvanced_2_2_answer" value='1' disabled
+				{% if RNASAdvanced_2_2_answer == '1'%} 
+   					checked="checked"
+   				{%endif%}
+				 >1<sup>st</sup>&nbsp;
+				<input type=radio name="RNASAdvanced_2_2_answer" value='2' disabled
+				{% if RNASAdvanced_2_2_answer == '2' %} 
+   					checked="checked"
+   				{%endif%}
+				 >2<sup>nd</sup>&nbsp;
+				<input type=radio name="RNASAdvanced_2_2_answer" value='3' disabled
+				{% if RNASAdvanced_2_2_answer == '3' %} 
+   					checked="checked"
+   				{%endif%}
+				 >3<sup>rd</sup>&nbsp;
+				<input type=radio name="RNASAdvanced_2_2_answer" value='4' disabled
+				{% if RNASAdvanced_2_2_answer == '4' %} 
+   					checked="checked"
+   				{%endif%}
+				 >4<sup>th</sup>&nbsp;				 
+				<input type=radio name="RNASAdvanced_2_2_answer" value='5' disabled
+				{% if RNASAdvanced_2_2_answer == '5' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5<sup>th</sup>&nbsp;&nbsp;
+				{% if RNASAdvanced_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNASAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RNASAdvanced_2_2_answer" value='1'
+				{% if RNASAdvanced_2_2_answer == '1' %} 
+   					checked="checked"
+   				{%endif%}
+				 >1<sup>st</sup>&nbsp;
+				<input type=radio name="RNASAdvanced_2_2_answer" value='2'
+				{% if RNASAdvanced_2_2_answer == '2'%} 
+   					checked="checked"
+   				{%endif%}
+				 >2<sup>nd</sup>&nbsp;
+				 <input type=radio name="RNASAdvanced_2_2_answer" value='3'
+				{% if RNASAdvanced_2_2_answer == '3'%} 
+   					checked="checked"
+   				{%endif%}
+				 >3<sup>rd</sup>
+				 <input type=radio name="RNASAdvanced_2_2_answer" value='4'
+				{% if RNASAdvanced_2_2_answer == '4'%} 
+   					checked="checked"
+   				{%endif%}
+				 >4<sup>th</sup>				 
+				 <input type=radio name="RNASAdvanced_2_2_answer" value='5'
+				{% if RNASAdvanced_2_2_answer == '5'%} 
+   					checked="checked"
+   				{%endif%}
+				 >5<sup>th</sup>			 
+			{% endif %}	
+		</div>
+		
+		{% if RNASAdvanced_2_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RNASAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNASAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='RNASAdvanced_2_1_answer']").click(function()
+	{
+		question_id = "RNASAdvanced_2";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASAdvanced_2_1_answer";
+		entered_answer = $("input:radio[name=RNASAdvanced_2_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='RNASAdvanced_2_2_answer']").click(function()
+			{
+				question_id = "RNASAdvanced_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASAdvanced_2_2_answer";
+				entered_answer = $("input:radio[name=RNASAdvanced_2_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNASAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#RNASAdvanced_2_Retry").button({label:"Retry"});
+	$("#RNASAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASAdvanced_2"+"#%$"+"RNASAdvanced_2_1_answer"+"#%$"+$("input:radio[name=RNASAdvanced_2_1_answer]:checked").val();
+		answers = answers + "#%$"+"RNASAdvanced_2"+"#%$"+"RNASAdvanced_2_2_answer"+"#%$"+$("input:radio[name=RNASAdvanced_2_2_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASAdvanced_2_1_answer,RNASAdvanced_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

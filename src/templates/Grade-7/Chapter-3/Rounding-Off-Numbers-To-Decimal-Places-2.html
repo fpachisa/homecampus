@@ -1,0 +1,32 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+	<div class="grade7PageMargin">	
+		<div style="margin-top:20px;width:90px;display:inline-block;"><font class="grade7ExampleNumber">Example 3:</font></div>
+		<div style="margin-top:20px;display:inline-block;width:310px;vertical-align:top;">Round off 89.451 to the nearest: 
+			<div style="margin-top:5px;">a)	tenth &nbsp; b) hundredth</div>
+		</div>
+		<br>
+		<div style="margin-top:15px;width:90px;display:inline-block;"><font class="grade7ExampleSolution">Solution 3:</font></div>
+		<div style="margin-top:15px;display:inline-block;width:310px;vertical-align:top;">
+			<div>a)	Rounding off a number to the nearest tenth means rounding off to 1 decimal place.</div>
+			<div style="margin-top:10px;">89.<font style="color:red;">4</font>51</div>
+			<div style="margin-top:10px;">Rounding digit = 4</div>
+			<div style="margin-top:10px;">Digit to the right of rounding digit = 5</div>
+			<div style="margin-top:10px;">Since 5 &ge; 5, add 1 to the rounding digit.</div>
+			<div style="margin-top:10px;">&there4; 89.451 is rounded up to 89.5.</div>		
+			<div style="margin-top:20px;">b) Rounding off a number to the nearest hundredth means rounding off to 2 decimal places.</div>
+			<div style="margin-top:10px;">89.4<font style="color:red;">5</font>1</div>
+			<div style="margin-top:10px;">Rounding digit = 5</div>
+			<div style="margin-top:10px;">Digit to the right of rounding digit = 1</div>
+			<div style="margin-top:10px;">Since 1 &lt; 5, the rounding digit is unchanged.</div>
+			<div style="margin-top:10px;">&there4; 89.451 is rounded down to 89.45.</div>		
+		</div>
+			
+	</div>
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+

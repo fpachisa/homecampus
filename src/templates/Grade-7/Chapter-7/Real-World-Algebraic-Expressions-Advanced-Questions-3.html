@@ -1,0 +1,155 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:25%;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			The average speed, S  km/h, of a car is given by the formula S = D &divide; T, where D  is the distance travelled by the car in km and T is the time taken in hours.
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">a)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">
+			<div>If the distance travelled by a car is equal to</div> 
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">1<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">3w<br></p>
+			</div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">+</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">1<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">9v<br></p>
+			</div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">km and time taken to cover the </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">distance is </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">1<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">wv<br></p>
+			</div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">hours, find the average speed of</div>			
+			<div>the car in terms of v and w.</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;vertical-align:top;">Answer:</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:-20px;">
+				{% if RWAAdvanced_3_1_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="RWAAdvanced_3_1_answer" value='{{RWAAdvanced_3_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;text-align:center;"><br>_______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="RWAAdvanced_3_2_answer" value='{{RWAAdvanced_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;">km/h</div>					
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="RWAAdvanced_3_1_answer" value='{{RWAAdvanced_3_1_answer}}' style="width:40px;text-align:center;" ><br>_______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="RWAAdvanced_3_2_answer" value='{{RWAAdvanced_3_2_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;">km/h</div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:-10px;">
+				{% if RWAAdvanced_3_1_answer_correct is defined %}
+					{% if RWAAdvanced_3_1_answer_correct and RWAAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>			
+		<div style="margin-left:40px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">b)</div> 
+		<div style="margin-left:0px;margin-top:10px;display:inline-block;width:360px;">In part (a), if w=648 and v = 24, find the average speed of the car.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if RWAAdvanced_3_3_answer_correct is defined %}
+					<input id="RWAAdvanced_3_3_answer" value='{{RWAAdvanced_3_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;" > km/h
+				{% else %}
+					<input id="RWAAdvanced_3_3_answer" value='{{RWAAdvanced_3_3_answer}}' style="width:30px;" > km/h
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAAdvanced_3_3_answer_correct is defined %}
+					{% if RWAAdvanced_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAAdvanced_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		{% if RWAAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="RWAAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="RWAAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#RWAAdvanced_3_1_answer").change(function()
+	{
+		question_id = "RWAAdvanced_3";
+		question_type = "RealWorldAlgebra"
+		answer_id = "RWAAdvanced_3_1_answer";
+		entered_answer = $("#RWAAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RWAAdvanced_3_2_answer").change(function()
+			{
+				question_id = "RWAAdvanced_3";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_3_2_answer";
+				entered_answer = $("#RWAAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RWAAdvanced_3_3_answer").change(function()
+			{
+				question_id = "RWAAdvanced_3";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAAdvanced_3_3_answer";
+				entered_answer = $("#RWAAdvanced_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#RWAAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#RWAAdvanced_3_Retry").button({label:"Retry"});
+	$("#RWAAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RealWorldAlgebra"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RWAAdvanced_3"+"#%$"+"RWAAdvanced_3_1_answer"+"#%$"+$("#RWAAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_3"+"#%$"+"RWAAdvanced_3_2_answer"+"#%$"+$("#RWAAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"RWAAdvanced_3"+"#%$"+"RWAAdvanced_3_3_answer"+"#%$"+$("#RWAAdvanced_3_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RWAAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RWAAdvanced_3_1_answer,RWAAdvanced_3_2_answer,RWAAdvanced_3_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

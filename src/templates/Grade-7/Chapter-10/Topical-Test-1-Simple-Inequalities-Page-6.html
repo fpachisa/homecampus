@@ -1,0 +1,73 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:60%;">Simple Inequalities - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+				<div style="text-align:center;margin-top:200px;">BLANK PAGE</div>
+				
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="C10SI_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="C10SI_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#C10SI_TT_1_Submit").button({label:"Submit"});
+$("#C10SI_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#C10SI_TT_1_Done").button({label:"Done"});
+$("#C10SI_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'C10SITT1_9_answer'+separatorText+'C10SITT1_10_answer';
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+
+

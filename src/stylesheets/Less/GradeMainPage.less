@@ -1,0 +1,170 @@
+/*
+ * Grade Main Page --{ where the Table of Content / Index  is shown! }
+ */
+ 
+ 
+/********************  Ninja Rank Table *************************/
+.ninja-rank {
+	
+	> span {
+		font-weight: bold;
+		color: #555;
+	}
+	
+	&__progress {
+		.progress();
+		background-color: #eee;
+		position: relative;
+		font-size: 11px;
+		line-height: @line-height-computed;
+		color: darken(@progress-bar-color, 30%);
+		color: rgba(0, 0, 0, 0.7);
+		
+		&-indicator {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
+		
+		&-bar {
+			.progress-bar();
+			background-color: #6d9a27;
+		}
+	}
+	
+	&__legend {
+		margin-bottom: 20px;
+		font-size: 13px;
+		color: #555;
+		
+		> div {
+			display: inline-block;
+			width: 49%;
+		}
+		
+		> div:nth-child(1) {
+			text-align: left;
+		}
+		> div:nth-child(2) {
+			text-align: right;
+		}
+	}
+	
+	table {
+		.table;
+		.table-striped;
+		.table-condensed;
+		
+		
+		margin-bottom: 0;
+		
+		tbody {
+			font-size: 15px;
+			
+			td{
+				&:nth-child(2){
+					text-indent: 1em;
+				}
+			}
+			
+		}
+	}
+}
+
+
+/* ********** The Page Styles ********** */
+.chapter-link-color(@color){
+	.chapter__topic {
+		color: @color;
+		
+		&:hover, 
+		&:focus,
+		&:active {
+			color: #fff;
+			background-color: @color;
+			text-decoration: none;		
+		}
+	}
+	
+	.chapter__name {
+		background-color: @color;
+		color: #fff;
+	}
+}
+
+.index-table {
+	.make-row();
+}
+
+.chapter {
+	.make-xs-column(12);
+	.make-sm-column(4);
+	
+	//border: 1px dashed blue;
+	
+	&__name {
+		display: block;
+		text-align: center;
+		
+		padding: 10px;
+		margin: 10px 0;
+		
+		transform: skewY(-2deg);
+		box-shadow: -3px 3px 6px #ddd;
+		
+		font-family: "Happy Sans", "Voltaire", sans-serif;
+	}
+	
+	&__topic {
+		font-family: "Happy Sans", sans-serif;
+		font-size: @font-size-base + 2px;
+		display: block;
+		
+		//indenting
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+	
+	//Color-indexes for different sections
+	//&.P###{ .chapter-link-color(######); } -- USAGE
+	
+	/* PRIMARY-3 */
+	&.P3WN{ .chapter-link-color(#fbb518); }		
+	&.P3MO{ .chapter-link-color(#E16414); }
+	&.P3TI{ .chapter-link-color(#b8056f); }
+   &.P3LMV{ .chapter-link-color(#3000a3); }
+	&.P3FR{ .chapter-link-color(#9f4885); }
+	&.P3AP{ .chapter-link-color(#047604); }
+	&.P3AN{ .chapter-link-color(#b2002e); }
+	&.P3BG{ .chapter-link-color(#9e005d); }
+	&.P3PP{ .chapter-link-color(#368ac1); }
+	
+	/* PRIMARY-4 */
+	&.P4WN{ .chapter-link-color(#fbb518); }
+	&.P4FR{ .chapter-link-color(#9f4885); }
+	&.P4DA{ .chapter-link-color(#d35e9b); }
+	&.P4MA{ .chapter-link-color(#b2002e); }
+	&.P4DC{ .chapter-link-color(#3000a3); }
+	&.P4GM{ .chapter-link-color(#369136); }
+	
+	/* Primary-5 */
+	&.P5WN{ .chapter-link-color(#fbb518); }
+	&.P5FR{ .chapter-link-color(#9f4885); }
+	&.P5DC{ .chapter-link-color(#3000a3); }
+	&.P5PR{ .chapter-link-color(#ee1d99); }
+	&.P5DA{ .chapter-link-color(#d35e9b); }
+	&.P5GM{ .chapter-link-color(#369136); }
+	&.P5MA{ .chapter-link-color(#b2002e); }
+	&.P5RT{ .chapter-link-color(#f47b32); }
+	
+	/* Primary 6 */
+	&.P6AG{ .chapter-link-color(#cec840); }
+	&.P6FR{ .chapter-link-color(#a36ebd); }
+	&.P6SP{ .chapter-link-color(#2685ae); }
+	&.P6RT{ .chapter-link-color(#f4772f); }
+	&.P6MT{ .chapter-link-color(#fc5f57); }
+	&.P6DA{ .chapter-link-color(#ac186d); }
+	&.P6PR{ .chapter-link-color(#f362b8); }
+	&.P6GT{ .chapter-link-color(#73cd50); }
+	
+}

@@ -1,0 +1,207 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>How to Add Like and Unlike Fractions? - Home Campus</title>
+<meta name="keywords" content="Add Proper Like Unlike Fractions">
+<meta name="description" content="What are like fractions? What are unlike fractions? How to add like fractions? How to add unlike fractions?" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Adding Like and Unlike Fractions</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 203, 255);">			
+		<div class="concept-set__question">
+			<h4>What are like fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Fractions with same denominators are called like fractions.
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept 1-->
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(229, 255, 243);">			
+		<div class="concept-set__question">
+			<h4>What are unlike fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Fractions with different denominators are called unlike fractions.
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept 2-->
+
+<!-- Concept 3 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(255, 245, 225);">			
+		<div class="concept-set__question">
+			<h4>How to add like fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Step 1: Add all the numerators. (Denominator will remain the same.)<br>
+				Step 2: Simplify if required.<br><br>
+				<a href="#Ques-2">See the example below</a>
+			</div>							
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Add-Fractions-Calculator">Add Fractions Calculator</a></div>
+	</div>
+</div><!-- End of concept 3 -->
+
+<!-- Concept 4 -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(249, 199, 255);">			
+		<div class="concept-set__question">
+			<h4>How to add unlike fractions?</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				Step 1: Change unlike fractions to like fractions. i.e. find a common denominator.<br>
+				Step 2: Add all the numerators.<br>
+				Step 3: Simplify if required.<br><br>
+				<a href="#Ques-3">See the example below</a>
+			</div>							
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Add-Fractions-Calculator">Add Fractions Calculator</a></div>
+	</div>
+</div><!-- End of concept 4-->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. The video below explains how to add proper fractions.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/j6zai-_TbY8?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				A proper fraction is a fraction in which the numerator is smaller than the denominator.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4 id="Ques-2">2. Jen and Fred each had &nbsp;&nbsp;{{ frGen(1,4) }} of a pie.<br />
+				What fraction of the pie did they have together?
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Jen &nbsp;=>&nbsp;&nbsp; {{ frGen(1,4) }}<br />
+				Fred &nbsp;=>&nbsp;&nbsp; {{ frGen(1,4) }}<br />
+				Jen &nbsp;+&nbsp; Fred &nbsp;=>&nbsp;&nbsp; {{ frGen(1,4) }} &nbsp;+&nbsp; {{ frGen(1,4) }}<br />
+				
+				<img src="/images/notes/adding_proper_fractions.png" alt="square metre or square meter" /><br />
+				
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(1,4) }} &nbsp;+&nbsp; {{ frGen(1,4) }}</b> <br />
+				=&nbsp; {{ frGen("1 + 1",4) }} <br />
+				=&nbsp; {{ frGen(2,4) }} <br />
+				=&nbsp; {{ frGen("2 / 2","4 / 2") }} (simplify) <br />
+				=&nbsp; <b>{{ frGen(1,2) }}</b><br />
+				Jen and Fred had <b>{{ frGen(1,2) }}</b> a pie together.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4 id="Ques-3">3. Charlie gives &nbsp;&nbsp;{{ frGen(1,2) }} of a pizza to Alfred and &nbsp;&nbsp;{{ frGen(1,3) }} of a pizza to Beatrice. <br />How much of the pizza does Charlie give to Alfred and Beatrice together?<br />
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Alfred &nbsp;=>&nbsp;&nbsp; {{ frGen(1,2) }}<br />
+				Beatrice &nbsp;=>&nbsp;&nbsp; {{ frGen(1,3) }}<br />
+				Alfred &nbsp;+&nbsp; Beatrice &nbsp;=>&nbsp;&nbsp; {{ frGen(1,2) }} &nbsp;+&nbsp; {{ frGen(1,3) }}<br /><br />
+				
+				<img src="/images/notes/adding_unlike_proper_fractions.png" alt="square metre or square meter" /><br />
+			</div>
+			<div class="col-5 col-off-1">
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(1,2) }} &nbsp;+&nbsp; {{ frGen(1,3) }}</b> <br />
+				=&nbsp; {{ frGen("1 x 3","2 x 3") }} &nbsp;+&nbsp; {{ frGen("1 x 2","3 x 2") }}<br />
+				=&nbsp; {{ frGen(3,6) }} &nbsp;+&nbsp; {{ frGen(2,6) }} &nbsp; (changed the denominator to 6)<br />
+				=&nbsp; <b>{{ frGen(5,6) }}</b><br /><br />
+				
+				Charlie gives <b>{{ frGen(5,6) }}</b> of the pizza to Alfred and Beatrice together.
+			</div>
+			<div class="col-5 hint-box">
+				Since the two fractions, {{ frGen(1,2) }} and {{ frGen(1,3) }}, are unlike fractions (as the denominators are different), we must first change them to like fractions before we can add them (that is, find a common denominator).<br /><br />
+			</div>
+			<div class="col-5 hint-box">
+				In other words, at first, the pizzas are cut into different number of slices. To add them, we must cut them into same number of slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Proper_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are like fractions?","acceptedAnswer":{"@type":"Answer","text":"Fractions with same denominators are called like fractions.\n"}},{"@type":"Question","name":"What are unlike fractions?","acceptedAnswer":{"@type":"Answer","text":"Fractions with different denominators are called unlike fractions. "}}]}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "HowTo", 
+  "name": "Add Unlike Fractions",
+  "description": "Let's look at an example. Add 1/2 and 1/3.",
+  "image": "https://my.homecampus.com.sg/images/notes/adding_unlike_proper_fractions.png",
+  "totalTime": "PT5M",
+  "supply": {
+    "@type": "HowToSupply",
+    "name": "Pen and Paper"
+  },
+  "tool": {
+    "@type": "HowToTool",
+    "name": "Not required"
+  },
+  "step": [{
+    "@type": "HowToStep",
+    "text": "Since the two fractions, 1/2 and 1/3 are unlike fractions (as the denominators are different), we must first change them to like fractions before we can add them (that is, find a common denominator). 1/2 + 1/3 = (1x3)/(2x3) + (1x2)/(2x3) = 3/6 + 2/6 (Changed the denominators to 6)",
+    "image": "https://my.homecampus.com.sg/images/notes/adding_unlike_proper_fractions.png",
+    "name": "add unlike fractions",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Addition-Proper-Fractions"
+  },{
+    "@type": "HowToStep",
+    "text": "Add the numerators. (3+2)/6 = 5/6. Hence, 1/2 + 1/3 = 5/6",
+    "image": "https://my.homecampus.com.sg/images/notes/adding_unlike_proper_fractions.png",
+    "name": "add unlike fractions",
+    "url": "https://my.homecampus.com.sg/Learn/Primary-Grade-4/Fractions/Addition-Proper-Fractions"
+  }]    
+}
+</script>
+{% endblock %}

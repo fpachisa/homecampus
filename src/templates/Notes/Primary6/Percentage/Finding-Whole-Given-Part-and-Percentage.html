@@ -1,0 +1,243 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Finding Whole Given Part and Percentage | Home Campus</title>
+<meta name="description" content="Finding Whole Given Part and Percentage" />
+<meta name="keywords" content='percentage, "primary 6 maths", "grade 6 math", "Singapore math", elementary, math, word, problems, free, worksheets, online, tutor, answers'>
+{% endblock %}
+{% block content %}
+
+<h2 class="learn-heading">Finding the Whole given a Part and the Percentage</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Sherry bought a book shelf, a washing machine and a flower vase in a sale.<br /><br />
+				<img src="/images/notes/percentage_finding_whole_given_percentage_and_part.png" /><br /><br />
+				a) How much money did she save on the three items altogether?<br /><br />
+  				b) What was the percentage discount on all the items together?
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<strong>Solution:</strong><br><br>
+				Let's calculate the usual prices of the items.<br /><br />
+				<strong>Book shelf</strong><br /><br>
+				<img src="/images/notes/percentage_whole_part_model_1.png" /><br /><br />
+				Sherry paid 65% of the usual price for the book shelf.<br /><br>
+				65% &nbsp;&#8594;&nbsp; $78<br /><br>
+				1% &nbsp;&#8594;&nbsp; $78 &nbsp;&divide;&nbsp; 65<br /><br>
+				100% &nbsp;&#8594;&nbsp; $78 &nbsp;&divide;&nbsp; 65 &nbsp;&times;&nbsp; 100<br /><br>
+ 				= &nbsp;$120<br /><br>
+				The usual price of the book shelf is $120.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>Washing Machine</strong><br /><br>
+				<img src="/images/notes/percentage_whole_part_model_2.png" /><br /><br />
+				Discount &nbsp;=&nbsp; 30%<br /><br />
+				100% &nbsp;&minus;&nbsp; 30% &nbsp; = &nbsp; 70%<br /><br />
+				Sherry paid 70% of the usual price for the washing machine.<br /><br />				
+				70%	&nbsp;&#8594;&nbsp; $140<br /><br />
+				1% &nbsp;&#8594;&nbsp; $140 &nbsp;&divide;&nbsp; 70<br /><br />
+				= &nbsp;$2<br /><br />
+				100% &nbsp;&#8594;&nbsp; $2 &nbsp;&times;&nbsp; 100<br /><br />
+				= &nbsp;$200<br /><br />
+				The usual price of the washing machine is $200.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>Flower Vase</strong><br /><br>
+				<img src="/images/notes/percentage_whole_part_model_3.png" /><br /><br />
+				Discount or off &nbsp;=&nbsp; 60%<br /><br />
+				100% &nbsp;&minus;&nbsp; 60% &nbsp; = &nbsp; 40%<br /><br />
+				Sherry paid 40% of the usual price for the flower vase.<br /><br />				
+				40%	&nbsp;&#8594;&nbsp; $22<br /><br />
+				1% &nbsp;&#8594;&nbsp; $22 &nbsp;&divide;&nbsp; 40<br /><br />
+				100% &nbsp;&#8594;&nbsp; $22 &nbsp;&divide;&nbsp; 40 &nbsp;&times;&nbsp; 100<br /><br />
+				= &nbsp;$55<br /><br />
+				The usual price of the flower vase is $55.
+			</div>
+			<div class="col-10 col-off-1">
+				a)  The usual price of the three items together	 &nbsp;=&nbsp; 	$120 &nbsp;+&nbsp; $200 &nbsp;+&nbsp; $55<br><br>
+				= &nbsp; $375<br><br>
+				The sale price of the three items together &nbsp;=&nbsp; $78 &nbsp;+&nbsp; $140 &nbsp;+&nbsp; $22<br><br>
+ 	 	 		= &nbsp; $240<br><br>
+				Money saved on the three items together	 &nbsp;=&nbsp; 	$375 &nbsp;&minus;&nbsp; $240<br><br>
+ 	 	 		= &nbsp; $135<br><br>
+				<strong>She saved $135 on the three items altogether.</strong>
+			</div>
+			<div class="col-10 col-off-1">
+				b)  Percentage discount on the 3 items	&nbsp;=&nbsp; {{frGen("Amount Saved","Actual Price")}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp;{{frGen("$135","$375")}}  &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 36%<br><br>
+				<strong>The percentage discount on the 3 items together is 36%.</strong>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+<!-- Problem 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 1: In an auto show, 42.5% of the cars are used cars. Given that 714 cars are used cars, what is the total number of cars in the show?<br /><br />
+				<img src="/images/notes/percentage_whole_part_word_problem_11.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				42.5%	&nbsp;&#8594;&nbsp;  	714<br><br>
+				1%	 &nbsp;&#8594;&nbsp; 	714 &nbsp;&divide;&nbsp; 42.5<br><br>
+				100%	&nbsp;&#8594;&nbsp;  	714 &nbsp;&divide;&nbsp; 42.5 &nbsp;&times;&nbsp; 100<br><br>
+				=&nbsp; 1680<br><br>				
+				The total number of cars in the show is 1680.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+<!-- Problem 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 2: Emily was 32 cm taller than Chloe. If Emily stood at 125% of Chloe's height, how tall was Emily? <br /><br />
+				<img src="/images/notes/percentage_whole_part_word_problem_21.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				25%	&nbsp;&#8594;&nbsp; 32 cm<br><br>
+				1% &nbsp;&#8594;&nbsp; 32 cm &nbsp;&divide;&nbsp; 25<br><br>
+				100% &nbsp;&#8594;&nbsp; 32 cm &nbsp;&divide;&nbsp; 25 &nbsp;&times;&nbsp; 100<br><br>
+				=&nbsp; 128 cm<br><br>
+				Chloe was 128 cm tall.<br><br>				
+				128 cm &nbsp;+&nbsp; 32 cm  =  160 cm<br><br>
+				Emily was 160 cm tall.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+<!-- Problem 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 3: After a 15% service tax, Lisa's restaurant bill was $41.40. Find the amount of service tax she paid.<br /><br />
+				<img src="/images/notes/percentage_whole_part_word_problem_31.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				115% &nbsp;&#8594;&nbsp; $41.40<br><br>
+				1% &nbsp;&#8594;&nbsp; $41.40 &nbsp;&divide;&nbsp; 115<br><br>
+				100% &nbsp;&#8594;&nbsp; $41.40 &nbsp;&divide;&nbsp; 115 &nbsp;&times;&nbsp; 100<br><br>
+				= &nbsp; $36<br><br>
+				Lisa's bill before tax was $36.<br><br>								
+				$41.40 &nbsp;&minus;&nbsp;  $36  &nbsp;=&nbsp;  $4.40<br><br>
+				She paid $4.40 of service tax.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+<!-- Problem 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 4: Emma painted {{frGen(1,8)}} of her 40 keyrings red, 30% of them blue and the rest of them green. How many keyrings did she paint green?<br /><br />
+				<img src="/images/notes/percentage_whole_part_word_problem_41.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<strong>Method 1</strong><br><br>
+				{{frGen(1,8)}} of 40 &nbsp;=&nbsp;  {{frGen(1,8)}} &nbsp;&times;&nbsp; 40<br><br>
+	     	 	= &nbsp;5<br><br>
+    			She painted 5 keyrings red.
+			</div>
+			<div class="col-10 col-off-1">
+				30% of 40 &nbsp;=&nbsp; {{frGen(30,100)}} &nbsp;&times;&nbsp; 40<br><br>
+				= &nbsp;12<br><br>
+				She painted 12 keyrings blue.
+			</div>
+			<div class="col-10 col-off-1">
+				40 &nbsp;&minus;&nbsp; 5 &nbsp;&minus;&nbsp; 12  &nbsp;=&nbsp;  23<br><br>
+				She painted 23 keyrings green.
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>Method 2 (changing fraction to percentage)</strong><br><br>
+				{{frGen(1,8)}} of 100% &nbsp;&#8594;&nbsp;  {{frGen(1,8)}} &nbsp;&times;&nbsp; 100%<br><br>
+	     	 	= &nbsp;12.5%<br><br>
+    			She painted 12.5% of the keyrings red.<br><br>
+				12.5%  &nbsp;+&nbsp;  30%  &nbsp;=&nbsp;  42.5%<br><br>
+				She painted 42.5% of the keyrings either red or blue.<br><br>
+				100%  &nbsp;&minus;&nbsp;  42.5%  &nbsp;=&nbsp;  57.5%<br><br>
+				She painted 57.5% of the keyrings green.
+			</div>
+			<div class="col-10 col-off-1">
+				100% &nbsp;&#8594;&nbsp; 40<br><br>
+				1% &nbsp;&#8594;&nbsp; 40 &nbsp;&divide;&nbsp; 100<br><br>
+				57.5% &nbsp;&#8594;&nbsp; 40 &nbsp;&divide;&nbsp; 100 &nbsp;&times;&nbsp; 57.5<br><br>
+				= &nbsp; 23<br><br>
+				She painted 23 keyrings green.			
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+<!-- Problem 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 5: Michael had a collection of hip-hop, rock and jazz music songs. He had 168 hip-hop songs. Hip-hop and rock made 70% of his collection. For every 3 hip-hop songs in his collection he had 5 rock songs. How many songs did he have in his collection? <br /><br />
+				<img src="/images/notes/percentage_whole_part_word_problem_51.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Ratio of the number of hip-hop songs to the number of rock songs is 3 : 5.<br><br>
+				3 units	 &nbsp;=&nbsp; 	168<br><br>
+				1 unit	 &nbsp;=&nbsp; 	168 &nbsp;&divide;&nbsp; 3<br><br>
+				= &nbsp; 56<br><br>
+				5 units	 &nbsp;=&nbsp; 	56 &nbsp;&times;&nbsp; 5<br><br>
+				= &nbsp; 280<br><br>
+				He had 280 rock songs.
+			</div>
+			<div class="col-10 col-off-1">
+				168  &nbsp;+&nbsp;  280  &nbsp;=&nbsp;  448<br><br>
+				He had 448 hip-hop and rock songs together.
+			</div>
+			<div class="col-10 col-off-1">
+				70% &nbsp;&#8594;&nbsp; 448<br><br>
+				1% &nbsp;&#8594;&nbsp; 448 &nbsp;&divide;&nbsp; 70<br><br>
+				100% &nbsp;&#8594;&nbsp; 448 &nbsp;&divide;&nbsp; 70 &nbsp;&times;&nbsp; 100<br><br>
+				= &nbsp; 640<br><br>
+				He had 640 songs in his collection.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Find_Whole_Given_Part">Practice Unlimited Questions</a></div>	
+	</div>
+</div>
+
+
+{% endblock %}

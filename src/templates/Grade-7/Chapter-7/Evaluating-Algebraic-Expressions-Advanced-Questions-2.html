@@ -1,0 +1,163 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The present age of a father is 3 times that of his son. 5 years later, the sum of their ages will be 74. Find their present ages.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Son &nbsp; = &nbsp;
+				{% if EAEAdvanced_3_1_answer_correct is defined %}
+					<input id="EAEAdvanced_3_1_answer" value='{{EAEAdvanced_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> years
+				{% else %}
+					<input id="EAEAdvanced_3_1_answer" value='{{EAEAdvanced_3_1_answer}}' style="width:30px;" > years
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEAdvanced_3_1_answer_correct is defined %}
+					{% if EAEAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Father &nbsp; = &nbsp;
+				{% if EAEAdvanced_3_2_answer_correct is defined %}
+					<input id="EAEAdvanced_3_2_answer" value='{{EAEAdvanced_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> years
+				{% else %}
+					<input id="EAEAdvanced_3_2_answer" value='{{EAEAdvanced_3_2_answer}}' style="width:30px;" > years
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEAdvanced_3_2_answer_correct is defined %}
+					{% if EAEAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Which of the two geometric figures has a larger perimeter -a circle with radius 7<font class="grade7Variables">x</font> cm or a triangle with sides 3<font class="grade7Variables">x</font> cm, 4<font class="grade7Variables">x</font> cm and 5<font class="grade7Variables">x</font> cm?
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if EAEAdvanced_4_answer_correct is defined %}
+				<div style="display:inline-block;">
+					<div><input type=radio name="EAEAdvanced_4_answer" value='A' disabled
+					{% if EAEAdvanced_4_answer == 'A'%} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Circle</div>
+					<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_4_answer" value='B' disabled
+					{% if EAEAdvanced_4_answer == 'B' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >Triangle</div>
+				 </div>			 
+				<div style="display:inline-block;margin-top:20px;margin-left:30px;">
+					{% if EAEAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div><input type=radio name="EAEAdvanced_4_answer" value='A'
+				{% if EAEAdvanced_4_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Circle</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_4_answer" value='B'
+				{% if EAEAdvanced_4_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Triangle</div>			 
+			{% endif %}	
+		</div>
+
+		{% if EAEAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="EAEAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="EAEAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#EAEAdvanced_3_1_answer").change(function()
+	{
+		question_id = "EAEAdvanced_3";
+		question_type = "AlgebraicExpressions"
+		answer_id = "EAEAdvanced_3_1_answer";
+		entered_answer = $("#EAEAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#EAEAdvanced_3_2_answer").change(function()
+			{
+				question_id = "EAEAdvanced_3";
+				question_type = "AlgebraicExpressions"
+				answer_id = "EAEAdvanced_3_2_answer";
+				entered_answer = $("#EAEAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='EAEAdvanced_4_answer']").click(function()
+			{
+				question_id = "EAEAdvanced_4";
+				question_type = "AlgebraicExpressions"
+				answer_id = "EAEAdvanced_4_answer";
+				entered_answer = $("input:radio[name=EAEAdvanced_4_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#EAEAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#EAEAdvanced_2_Retry").button({label:"Retry"});
+	$("#EAEAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "EAEAdvanced_3"+"#%$"+"EAEAdvanced_3_1_answer"+"#%$"+$("#EAEAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"EAEAdvanced_3"+"#%$"+"EAEAdvanced_3_2_answer"+"#%$"+$("#EAEAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"EAEAdvanced_4"+"#%$"+"EAEAdvanced_4_answer"+"#%$"+$("input:radio[name=EAEAdvanced_4_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#EAEAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "EAEAdvanced_3_1_answer,EAEAdvanced_3_2_answer,EAEAdvanced_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

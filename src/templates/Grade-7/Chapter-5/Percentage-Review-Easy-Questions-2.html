@@ -1,0 +1,173 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.1 Percentage Review</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.1 Percentage Review</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">3)</font> a) 300 m<sup>3</sup> as a percentage of 150 m<sup>3</sup> &nbsp; = &nbsp;		  
+			{% if PRREasy_3_1_answer_correct is defined %}
+				<input id="PRREasy_3_1_answer" value='{{PRREasy_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRREasy_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_3_1_answer_correct and PRREasy_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_3_1_answer" value='{{PRREasy_3_1_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			b) 56% of 25 years &nbsp; = &nbsp;  
+			{% if PRREasy_3_2_answer_correct is defined %}
+				<input id="PRREasy_3_2_answer" value='{{PRREasy_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> years
+					{% if PRREasy_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_3_2_answer_correct and PRREasy_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_3_2_answer" value='{{PRREasy_3_2_answer}}' style="width:50px;" > years
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:40px;margin-top:20px;">
+			c) 35% of 300 &nbsp; = &nbsp;  
+			{% if PRREasy_3_3_answer_correct is defined %}
+				<input id="PRREasy_3_3_answer" value='{{PRREasy_3_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;">
+					{% if PRREasy_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_3_3_answer_correct and PRREasy_3_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_3_3_answer" value='{{PRREasy_3_3_answer}}' style="width:50px;" >
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			d) What percentage of 30 is 30?  
+			{% if PRREasy_3_4_answer_correct is defined %}
+				<input id="PRREasy_3_4_answer" value='{{PRREasy_3_4_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRREasy_3_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_3_4_answer_correct and PRREasy_3_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_3_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_3_4_answer" value='{{PRREasy_3_4_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">Paracetamol content in a certain 570-mg tablet is 500 mg. What is the percentage of the drug content in the tablet?	Write your answer correct to 1 decimal place.	  
+		<div style="margin-left:0px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRREasy_4_answer_correct is defined %}
+				<input id="PRREasy_4_answer" value='{{PRREasy_4_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRREasy_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_4_answer_correct and PRREasy_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_4_answer" value='{{PRREasy_4_answer}}' style="width:50px;" > %
+			{% endif %}
+		</div>	
+		</div>
+
+		{% if PRREasy_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Easy_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Easy_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+$("#PRREasy_3_1_answer").change(function()
+		{
+			question_id = "PRREasy_3";
+			question_type = "PercentageReview"
+			answer_id = "PRREasy_3_1_answer";
+			entered_answer = $("#PRREasy_3_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#PRREasy_3_2_answer").change(function()
+		{
+			question_id = "PRREasy_3";
+			question_type = "PercentageReview"
+			answer_id = "PRREasy_3_2_answer";
+			entered_answer = $("#PRREasy_3_2_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+$("#PRREasy_3_3_answer").change(function()
+			{
+				question_id = "PRREasy_3";
+				question_type = "PercentageReview"
+				answer_id = "PRREasy_3_3_answer";
+				entered_answer = $("#PRREasy_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+$("#PRREasy_3_4_answer").change(function()
+		{
+			question_id = "PRREasy_3";
+			question_type = "PercentageReview"
+			answer_id = "PRREasy_3_4_answer";
+			entered_answer = $("#PRREasy_3_4_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+$("#PRREasy_4_answer").change(function()
+		{
+			question_id = "PRREasy_4";
+			question_type = "PercentageReview"
+			answer_id = "PRREasy_4_answer";
+			entered_answer = $("#PRREasy_4_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#PRR_Easy_2_submit").button({label:"Check Answers"});
+	$("#PRR_Easy_2_retry").button({label:"Retry"});
+	$("#PRR_Easy_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageReview"
+		//getting question id, answer id and entered answer in form of a string
+		answers = "PRREasy_3"+"#%$"+"PRREasy_3_1_answer"+"#%$"+$("#PRREasy_3_1_answer").val();
+		answers = answers + "#%$"+"PRREasy_3"+"#%$"+"PRREasy_3_2_answer"+"#%$"+$("#PRREasy_3_2_answer").val();
+		answers = answers + "#%$"+"PRREasy_3"+"#%$"+"PRREasy_3_3_answer"+"#%$"+$("#PRREasy_3_3_answer").val();
+		answers = answers + "#%$"+"PRREasy_3"+"#%$"+"PRREasy_3_4_answer"+"#%$"+$("#PRREasy_3_4_answer").val();
+		answers = answers + "#%$"+"PRREasy_4"+"#%$"+"PRREasy_4_answer"+"#%$"+$("#PRREasy_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRR_Easy_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRREasy_3_1_answer,PRREasy_3_2_answer,PRREasy_3_3_answer,PRREasy_3_4_answer,PRREasy_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

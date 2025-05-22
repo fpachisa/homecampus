@@ -1,0 +1,152 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.2 Simple Fractional Equations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:63%;">9.2 Simple Fractional Equations</div>
+	{% endif %}		
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">
+			<div>The distance, <i>S</i> metres, of an object moving with an initial velocity of <font class="grade7Variables">u</font> m/s and accelerating at a rate of <font class="grade7Variables">a</font> m/s<sup>2</sup> to
+			reach final velocity of <font class="grade7Variables">v</font> m/s can be found by:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:50px;margin-top:15px;"><i>S</i> = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">v</font><sup>2</sup> &minus; <font class="grade7Variables">u</font><sup>2</sup><br>_________<br></p>
+				<p style="line-height:20%;text-align:center;">2<font class="grade7Variables">a</font><br></p>
+			</div>
+			<br>
+			A stone is thrown vertically upwards with an initial velocity of 30 m/s. It covers a vertical distance of 45 metres, just before it begins to fall down.
+		</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:43px;margin-top:15px;">a)</div>
+		<div style="display:inline-block;width:360px;vertical-align:top;margin-left:2px;margin-top:15px;">Find the value of acceleration with which the velocity of the stone decreases to 0 m/s at the maximum height.</div>
+		<div style="margin-left:60px;margin-top:15px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Answer: &nbsp;
+				{% if C9SFEAdvanced_4_1_answer_correct is defined %}
+					<input id="C9SFEAdvanced_4_1_answer" value='{{C9SFEAdvanced_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">&nbsp; m/s<sup>2</sup>
+				{% else %}
+					<input id="C9SFEAdvanced_4_1_answer" value='{{C9SFEAdvanced_4_1_answer}}' style="width:30px;text-align:center;" >&nbsp; m/s<sup>2</sup>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C9SFEAdvanced_4_1_answer_correct is defined %}
+					{% if C9SFEAdvanced_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9SFEAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:43px;margin-top:20px;">b)</div>
+		<div style="display:inline-block;width:360px;vertical-align:top;margin-left:2px;margin-top:20px;">What is the significance of the sign of the answer obtained in part (a)?</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C9SFEAdvanced_4_2_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='A' disabled
+				{% if C9SFEAdvanced_4_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;It is a calculation error.<br>
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='B' disabled
+				{% if C9SFEAdvanced_4_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >It is a decreasing acceleration.<br>
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='C' disabled
+				{% if C9SFEAdvanced_4_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;The sign has no significance and can be omitted.
+			</div>
+			<div style="display:inline-block;margin-top:10px;">
+				{% if C9SFEAdvanced_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C9SFEAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='A'
+				{% if C9SFEAdvanced_4_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;It is a calculation error.<br>
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='B'
+				{% if C9SFEAdvanced_4_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;It is a decreasing acceleration.<br>
+				<input type=radio name="C9SFEAdvanced_4_2_answer" value='C'
+				{% if C9SFEAdvanced_4_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;The sign has no significance and can be omitted.
+			{% endif %}	
+		</div>
+
+
+		{% if C9SFEAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:-25px;margin-left:340px;"><button id="C9SFEAdvanced_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="C9SFEAdvanced_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+$("#C9SFEAdvanced_4_1_answer").change(function()
+		{
+			question_id = "C9SFEAdvanced_4";
+			question_type = "SimpleFractionalEquations"
+			answer_id = "C9SFEAdvanced_4_1_answer";
+			entered_answer = $("#C9SFEAdvanced_4_1_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});	
+
+	$("input[name='C9SFEAdvanced_4_2_answer']").click(function()
+			{
+				question_id = "C9SFEAdvanced_4";
+				question_type = "SimpleFractionalEquations"
+				answer_id = "C9SFEAdvanced_4_2_answer";
+				entered_answer = $("input:radio[name=C9SFEAdvanced_4_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#C9SFEAdvanced_4_Submit").button({label:"Check Answers"});
+	$("#C9SFEAdvanced_4_Retry").button({label:"Retry"});
+	$("#C9SFEAdvanced_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SimpleFractionalEquations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C9SFEAdvanced_4"+"#%$"+"C9SFEAdvanced_4_1_answer"+"#%$"+$("#C9SFEAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"C9SFEAdvanced_4"+"#%$"+"C9SFEAdvanced_4_2_answer"+"#%$"+$("input:radio[name=C9SFEAdvanced_4_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C9SFEAdvanced_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C9SFEAdvanced_4_1_answer,C9SFEAdvanced_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

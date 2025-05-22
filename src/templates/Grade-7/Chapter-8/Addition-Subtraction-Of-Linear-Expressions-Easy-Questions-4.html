@@ -1,0 +1,335 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:40%;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+
+				<div style="display:inline-block;vertical-align:top;margin-top:00px;margin-left:0px;">Find the sum of (</div>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-15px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">p</font><br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">+</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-15px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">q</font><br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">) and (</div>						
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">2<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">&minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">)</div>						
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ASLEEasy_4_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEEasy_4_answer" value='A' disabled
+				{% if ASLEEasy_4_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">&minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">2<font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_4_answer" value='B' disabled
+				{% if ASLEEasy_4_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">+</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_4_answer" value='C' disabled
+				{% if ASLEEasy_4_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">9<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">&minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>	
+
+			<div style="display:inline-block;margin-top:-10px;margin-left:20px;">
+				{% if ASLEEasy_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ASLEEasy_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEEasy_4_answer" value='A'
+				{% if ASLEEasy_4_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">&minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">2<font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_4_answer" value='B'
+				{% if ASLEEasy_4_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">3<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">+</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_4_answer" value='C'
+				{% if ASLEEasy_4_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">9<font class="grade7Variables">p</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">10<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">&minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">q</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">6<br></p>
+				</div>
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+
+				<div style="display:inline-block;vertical-align:top;margin-top:00px;margin-left:0px;">Subtract &minus;7<font class="grade7Variables">t</font> + 8<font class="grade7Variables">s</font> &minus;</div>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">4<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">from</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;">&minus;7<font class="grade7Variables">t</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">&minus; 2<font class="grade7Variables">s</font> +</div>						
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>						
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ASLEEasy_5_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEEasy_5_answer" value='A' disabled
+				{% if ASLEEasy_5_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;">&minus;14<font class="grade7Variables">t</font><br>____<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">+ 6<font class="grade7Variables">s</font> &minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_5_answer" value='B' disabled
+				{% if ASLEEasy_5_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">49<font class="grade7Variables">t</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">&minus; 10<font class="grade7Variables">s</font> +</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_5_answer" value='C' disabled
+				{% if ASLEEasy_5_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">49<font class="grade7Variables">t</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">+ 6<font class="grade7Variables">s</font> &minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>	
+
+			<div style="display:inline-block;margin-top:-10px;margin-left:20px;">
+				{% if ASLEEasy_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ASLEEasy_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="ASLEEasy_5_answer" value='A'
+				{% if ASLEEasy_5_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-12px;">
+					<p style="line-height:20%;">&minus;14<font class="grade7Variables">t</font><br>____<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:2px;">+ 6<font class="grade7Variables">s</font> &minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_5_answer" value='B'
+				{% if ASLEEasy_5_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">49<font class="grade7Variables">t</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">&minus; 10<font class="grade7Variables">s</font> +</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>				
+				<br>		
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">
+				<input type=radio name="ASLEEasy_5_answer" value='C'
+				{% if ASLEEasy_5_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-2px;">
+					<p style="line-height:20%;text-align:center;">49<font class="grade7Variables">t</font><br>___<br></p>
+					<p style="line-height:20%;text-align:center;">8<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:2px;">+ 6<font class="grade7Variables">s</font> &minus;</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">17<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">15<br></p>
+				</div>	
+			{% endif %}	
+		</div>
+
+		{% if ASLEEasy_4_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="ASLEEasy_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="ASLEEasy_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='ASLEEasy_4_answer']").click(function()
+	{
+		question_id = "ASLEEasy_4";
+		question_type = "AdditionSubtractionLinearExpressions"
+		answer_id = "ASLEEasy_4_answer";
+		entered_answer = $("input:radio[name=ASLEEasy_4_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='ASLEEasy_5_answer']").click(function()
+			{
+				question_id = "ASLEEasy_5";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEEasy_5_answer";
+				entered_answer = $("input:radio[name=ASLEEasy_5_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#ASLEEasy_4_Submit").button({label:"Check Answers"});
+	$("#ASLEEasy_4_Retry").button({label:"Retry"});
+	$("#ASLEEasy_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionLinearExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ASLEEasy_4"+"#%$"+"ASLEEasy_4_answer"+"#%$"+$("input:radio[name=ASLEEasy_4_answer]:checked").val();
+		answers = answers + "#%$"+"ASLEEasy_5"+"#%$"+"ASLEEasy_5_answer"+"#%$"+$("input:radio[name=ASLEEasy_5_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ASLEEasy_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ASLEEasy_4_answer,ASLEEasy_5_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

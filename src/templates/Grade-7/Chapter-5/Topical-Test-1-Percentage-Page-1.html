@@ -1,0 +1,198 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;">Percentage - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="PR_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">In the figure below, Point O is the center of the circle. What percentage of the figure is shaded?</div>
+		<div style="text-align:center;margin-top:10px;"><img src="/images/Grade7/G7_PR_TT_1_1.png"></div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_1_answer" size=3 value='{{PRTT1_1_answer}}' readonly style="background-color:#DFDFDF;"> % &nbsp;
+				{% if PRTT1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_1_answer" size=3 value='{{PRTT1_1_answer}}'> %<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			20% of 10 g is __________ 10% of 20 g?
+		</div>
+		<div style="margin-left:45px;margin-top:20px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="PRTT1_2_answer" value='greater than' disabled
+				{% if PRTT1_2_answer == 'greater than'%} 
+   					checked="checked"
+   				{%endif%}
+				 >is greater than<br>
+				<input type=radio name="PRTT1_2_answer" value='equal to' disabled
+				{% if PRTT1_2_answer == 'equal to'%} 
+   					checked="checked"
+   				{%endif%}
+				 >equal to<br>
+				<input type=radio name="PRTT1_2_answer" value='less than' disabled
+				{% if PRTT1_2_answer == 'less than' %} 
+   					checked="checked"
+   				{%endif%}
+				 >less than&nbsp;&nbsp;
+
+				{% if PRTT1_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="PRTT1_2_answer" value='greater than'
+				{% if PRTT1_2_answer == 'greater than' %} 
+   					checked="checked"
+   				{%endif%}
+				 >greater than<br>
+				<input type=radio name="PRTT1_2_answer" value='equal to'
+				{% if PRTT1_2_answer == 'equal to' %} 
+   					checked="checked"
+   				{%endif%}
+				 >equal to<br>
+				<input type=radio name="PRTT1_2_answer" value='less than'
+				{% if PRTT1_2_answer == 'less than' %} 
+   					checked="checked"
+   				{%endif%}
+				 >less than<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Five feet are cut from an 20-foot long rod. Find the percentage decrease in the rod's length.</div>
+		<div style="margin-left:50px;margin-top:15px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_3_answer" size=3 value='{{PRTT1_3_answer}}' readonly style="background-color:#DFDFDF;"> % &nbsp;
+				{% if PRTT1_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_3_answer" size=3 value='{{PRTT1_3_answer}}'> %<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#PR_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#PR_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Percentage');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#PRTT1_1_answer").change(function()
+	{
+		question_id = "PRTT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "PRTT1_1_answer";
+		entered_answer = $("#PRTT1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 2;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("input[name='PRTT1_2_answer']").click(function()
+		{
+			question_id = "PRTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_2_answer";
+			entered_answer = $("input:radio[name=PRTT1_2_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#PRTT1_3_answer").change(function()
+	{
+		question_id = "PRTT1_3";
+		test_id = '{{test_id}}';
+		answer_id = "PRTT1_3_answer";
+		entered_answer = $("#PRTT1_3_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 2;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

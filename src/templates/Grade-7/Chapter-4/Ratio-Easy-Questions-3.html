@@ -1,0 +1,248 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.1 Ratio</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.1 Ratio</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;"><font class="grade7Variables">a</font> : <font class="grade7Variables">b</font> : <font class="grade7Variables">c</font> = 7.5 : 9 : 10.5
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div>Simplify:</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">a : b : c</font> = 
+				{% if RATIOEasy_5_1_a_answer_correct is defined or RATIOEasy_5_1_b_answer_correct is defined or RATIOEasy_5_1_c_answer_correct is defined%}
+					<input id="RATIOEasy_5_1_a_answer" value='{{RATIOEasy_5_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_5_1_b_answer" value='{{RATIOEasy_5_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOEasy_5_1_c_answer" value='{{RATIOEasy_5_1_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_5_1_a_answer" value='{{RATIOEasy_5_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_5_1_b_answer" value='{{RATIOEasy_5_1_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOEasy_5_1_c_answer" value='{{RATIOEasy_5_1_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_5_1_a_answer_correct is defined or RATIOEasy_5_1_b_answer_correct is defined or RATIOEasy_5_1_c_answer_correct is defined%}
+					{% if RATIOEasy_5_1_a_answer_correct and RATIOEasy_5_1_b_answer_correct and RATIOEasy_5_1_c_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_5_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">a : b</font> = 
+				{% if RATIOEasy_5_2_a_answer_correct is defined or RATIOEasy_5_2_b_answer_correct is defined%}
+					<input id="RATIOEasy_5_2_a_answer" value='{{RATIOEasy_5_2_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_5_2_b_answer" value='{{RATIOEasy_5_2_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_5_2_a_answer" value='{{RATIOEasy_5_2_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_5_2_b_answer" value='{{RATIOEasy_5_2_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_5_2_a_answer_correct is defined or RATIOEasy_5_2_b_answer_correct is defined%}
+					{% if RATIOEasy_5_2_a_answer_correct and RATIOEasy_5_2_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_5_2_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">b : c</font> = 
+				{% if RATIOEasy_5_3_a_answer_correct is defined or RATIOEasy_5_3_b_answer_correct is defined%}
+					<input id="RATIOEasy_5_3_a_answer" value='{{RATIOEasy_5_3_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_5_3_b_answer" value='{{RATIOEasy_5_3_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_5_3_a_answer" value='{{RATIOEasy_5_3_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_5_3_b_answer" value='{{RATIOEasy_5_3_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_5_3_a_answer_correct is defined or RATIOEasy_5_3_b_answer_correct is defined%}
+					{% if RATIOEasy_5_3_a_answer_correct and RATIOEasy_5_3_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_5_3_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">a : c</font> = 
+				{% if RATIOEasy_5_4_a_answer_correct is defined or RATIOEasy_5_4_b_answer_correct is defined%}
+					<input id="RATIOEasy_5_4_a_answer" value='{{RATIOEasy_5_4_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_5_4_b_answer" value='{{RATIOEasy_5_4_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_5_4_a_answer" value='{{RATIOEasy_5_4_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_5_4_b_answer" value='{{RATIOEasy_5_4_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_5_4_a_answer_correct is defined or RATIOEasy_5_4_b_answer_correct is defined%}
+					{% if RATIOEasy_5_4_a_answer_correct and RATIOEasy_5_4_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_5_4_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		
+		
+		{% if RATIOEasy_5_1_a_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="RATIOEasy_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:40px;margin-left:280px;"><button id="RATIOEasy_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATIOEasy_5_1_a_answer").change(function()
+	{
+		question_id = "RATIOEasy_5";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_5_1_a_answer";
+		entered_answer = $("#RATIOEasy_5_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_5_1_b_answer").change(function()
+	{
+		question_id = "RATIOEasy_5";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_5_1_b_answer";
+		entered_answer = $("#RATIOEasy_5_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_5_1_c_answer").change(function()
+	{
+		question_id = "RATIOEasy_5";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_5_1_c_answer";
+		entered_answer = $("#RATIOEasy_5_1_c_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_5_2_a_answer").change(function()
+	{
+		question_id = "RATIOEasy_5";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_5_2_a_answer";
+		entered_answer = $("#RATIOEasy_5_2_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_5_2_b_answer").change(function()
+	{
+		question_id = "RATIOEasy_5";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_5_2_b_answer";
+		entered_answer = $("#RATIOEasy_5_2_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_5_3_a_answer").change(function()
+		{
+			question_id = "RATIOEasy_5";
+			question_type = "Ratio"
+			answer_id = "RATIOEasy_5_3_a_answer";
+			entered_answer = $("#RATIOEasy_5_3_a_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+		$("#RATIOEasy_5_3_b_answer").change(function()
+		{
+			question_id = "RATIOEasy_5";
+			question_type = "Ratio"
+			answer_id = "RATIOEasy_5_3_b_answer";
+			entered_answer = $("#RATIOEasy_5_3_b_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+		$("#RATIOEasy_5_4_a_answer").change(function()
+				{
+					question_id = "RATIOEasy_5";
+					question_type = "Ratio"
+					answer_id = "RATIOEasy_5_4_a_answer";
+					entered_answer = $("#RATIOEasy_5_4_a_answer").val();
+					student_id = '{{current_user.username}}';
+					Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+				});
+				$("#RATIOEasy_5_4_b_answer").change(function()
+				{
+					question_id = "RATIOEasy_5";
+					question_type = "Ratio"
+					answer_id = "RATIOEasy_5_4_b_answer";
+					entered_answer = $("#RATIOEasy_5_4_b_answer").val();
+					student_id = '{{current_user.username}}';
+					Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+				});
+
+					
+	$("#RATIOEasy_3_Submit").button({label:"Check Answers"});
+	$("#RATIOEasy_3_Retry").button({label:"Retry"});
+	$("#RATIOEasy_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Ratio"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATIOEasy_5"+"#%$"+"RATIOEasy_5_1_a_answer"+"#%$"+$("#RATIOEasy_5_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_1_b_answer"+"#%$"+$("#RATIOEasy_5_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_1_c_answer"+"#%$"+$("#RATIOEasy_5_1_c_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_2_a_answer"+"#%$"+$("#RATIOEasy_5_2_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_2_b_answer"+"#%$"+$("#RATIOEasy_5_2_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_3_a_answer"+"#%$"+$("#RATIOEasy_5_3_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_3_b_answer"+"#%$"+$("#RATIOEasy_5_3_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_4_a_answer"+"#%$"+$("#RATIOEasy_5_4_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_5"+"#%$"+"RATIOEasy_5_4_b_answer"+"#%$"+$("#RATIOEasy_5_4_b_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATIOEasy_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATIOEasy_5_1_a_answer,RATIOEasy_5_1_b_answer,RATIOEasy_5_1_c_answer,";
+		answer_ids = answer_ids + "RATIOEasy_5_2_a_answer,RATIOEasy_5_2_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_5_3_a_answer,RATIOEasy_5_3_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_5_4_a_answer,RATIOEasy_5_4_b_answer,";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

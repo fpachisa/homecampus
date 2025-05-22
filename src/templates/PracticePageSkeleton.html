@@ -1,0 +1,194 @@
+
+	<form id="_data">
+		<input type="hidden" name="student_id" id="student_id" value='{{ current_user.username|e }}''>
+		<input type="hidden" name="IsParent" id="IsParent" value={{ current_user.IsParent|e }}>
+		<input type="hidden" name="grade" id="grade" value={{ grade|e }}>
+		<input type="hidden" name="complexity_level" id="complexity_level" value={{ complexity_level|e }}>
+		<input type="hidden" name="HCScore" id="HCScore" value={{ HCScore|e }}>
+		<input type="hidden" name="problems_attempted" id="problems_attempted" value={{ problems_attempted|e }}>
+		<input type="hidden" name="ConceptID" id="ConceptID" value={{ ConceptID|e }}>
+		<input type="hidden" name="TestId" id="TestId" value={{ test_id|e }}>
+		<input type="hidden" name="counter" id="counter" value={{ counter|e }}>
+	</form>
+	
+<!-- start section="PROBLEM" -->
+<div class="problem {%if from_test == 'Y'%}is-worksheet-container{%endif%}">
+	{% if from_test == "Y"%}
+			<div class="question-indicator">
+				{% for number in range(questions) %}
+				{% if number+1 == counter%}
+					<a class="question-indicator__active">{{number+1}}</a>
+				{% elif TestIndicator[number] == "1" %}
+					<a href="javascript:void(null)" class="question-indicator__unattempted" title ="Unattempted" onclick="GetClickedProblem({{number+1}})">{{number+1}}</a>
+				{% elif TestIndicator[number] == "2"%}
+					<a href="javascript:void(null)" class="question-indicator__attempted" onclick="GetClickedProblem({{number+1}})">{{number+1}}</a>
+				{% endif %}
+				{% endfor %}
+			</div>
+	{% endif %}
+			
+	<div class="problem__container">
+		
+		<div class="problem__heading">
+			<span class="problem__heading--lg">{{ concept_display_full|safe }}</span>
+			<span class="problem__heading--sm" style="text-align:center;">{{ concept_display|safe }}</span>
+		</div>
+		
+		<div class="problem__overlay"></div>
+	
+	{% if from_test == "Y"%}Question {{counter}} of {{questions}}:{% endif %}
+	
+	<div class="problem__question">{{problem|safe}} </div>
+	
+	<div class="problem__html5canvas">
+	{% block HTML5Canvas %}
+		{# Any Graphic element that needs to be drawn goes in here#}
+	{% endblock HTML5Canvas %}
+	</div>
+	
+	<!-- For teachers we are not showing the answer input box -->
+	{% if not current_user.IsTeacher %}
+		<div class="problem__answer">
+		{% block content %}
+			{# answer goes in here; it comes from the template that extends this template! #}
+		{% endblock content %}		
+		</div>
+	{% endif %}
+	
+{% block bottom %}
+	<div class="problem__button-group mb-nil">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	{% if from_test == "Y"%}
+		
+		{% if current_user.IsParent %}
+			<button class="btn-quiz " id="noSubmitTest" disabled>Sign in with child id to solve</button>
+		{% else %}
+			{% if counter > 1 %}	
+				<button class="btn-quiz " id="tryPrevious"><i class="fa fa-arrow-left"></i></button>
+			{% endif %}			
+			{% if counter < questions %}	
+				<button class="btn-quiz " id="tryNext"><i class="fa fa-arrow-right"></i></button>
+			{% endif %}
+		{% endif %}
+		{% if questions==counter %}
+			{% if current_user.IsParent %}
+				<button class="btn-quiz " id="noSubmitTest" disabled>Sign in with child id to solve</button>
+			{% else %}
+				<button class="btn-quiz " id="submitTest">Submit</button>
+			{% endif %}
+		{% endif %}
+		
+	{% else %}
+	
+		{% if current_user.IsParent %}
+			<button class="btn-quiz " id="noSubmitPractice" disabled>Sign in with child id to submit</button>
+		{% elif current_user.IsTeacher %}
+			Answer: {{dollar_unit}}{{answer|safe}} {{unit|safe}}<br><br>
+			{% if current_user.authorized %}
+				<button class="btn-quiz " id="close">Next Question</button>
+			{% else %}
+				<a class="btn-quiz " href="/Subscribe/Teacher" id="teacher_subscribe">Want to view more questions?</a>
+			{% endif %}
+		{% else %}				
+			<button class="btn-quiz" id="submit">Submit</button>
+			<!-- Code to submit the answer on enter key -->
+			<script type="text/javascript">
+			$("#answer").keypress(function(event) {
+    		if (event.which == 13)
+        	{
+        		event.preventDefault();
+        		$("#submit").click();
+        		$("#answer").blur();
+    		}
+			});
+			</script>
+		{% endif %}
+		
+	{% endif %}
+	</div>
+	
+	<div class="problem__info-graph">
+		<span id="problem-loader" class="problem__loader"><i class="fa fa-spinner fa-spin"></i></span>
+		<span id="problem-correct" class="problem__correct"><i class="fa fa-check"></i></span>
+	</div>
+	
+	</div>	
+</div>
+<!-- end section="PROBLEM" -->
+
+{% if not from_test == "Y"%}
+
+<div class="practice-decorator">
+	<!-- Rank Info -->
+	<div class="practice-decorator__element">
+		<div class="practice-decorator__element--heading hc1">HC Rank 
+			&nbsp;<span class="tooltip"><i class="fa fa-question-circle"></i> <span class="tooltip__text rank-table"><img src="/images/HCRank.png" /></span> </span>
+		</div>
+		
+		<div class="practice-decorator__element--body hc1">
+			{% if Concept_HCScore < 1001 %}
+			<div class="ninja-rank__progress" style="margin: 0;">
+				<span class="ninja-rank__progress-indicator">{{ Ninja_title }}</span>
+				<div class="ninja-rank__progress-bar" title="{{ Ninja_title }}" style="width:{{ Ninja_Percentage }}%;"></div>
+			</div>
+			
+			<div class="ninja-rank__legend" style="margin:0;">
+				<div>{{Ninja_Start}}</div>
+				<div>{{Ninja_End}}</div>
+			</div>
+			
+			{% else %}
+			<div class="ninja-rank__progress">
+				<div class="ninja-rank__progress-bar" style="width: 100%;">
+					{{ Ninja_title }}
+				</div>
+			</div>
+			{% endif %}
+			
+		</div>
+	</div>
+	
+	
+	<!-- Ques. Correct  / Attempted -->
+	<div class="practice-decorator__element">
+		<div class="practice-decorator__element--heading hc2">Correct Answers</div>
+		<div class="practice-decorator__element--body hc2">{{ correct_problems }} out of {{ problems_attempted }}</div>
+	</div>
+	
+	<!-- Total and NinjaRank -->
+	<div class="practice-decorator__element">
+		<div class="practice-decorator__element--heading hc3">HC Score</div>
+		<div class="practice-decorator__element--body hc3">{{ Concept_HCScore }}</div>
+	</div>
+</div>
+<span id="showTime" class="hidden"></span>
+
+	<!-- Call for subscription -->
+	{% if SubscribeMessage == 'Y'%}
+		<script type="text/javascript">
+			$(function(){ _b(); });			
+			function _b(){
+				//boot - popie can be undefined under certain circumstances so checking here
+				if( popie == undefined || window.popie == undefined )
+					setTimeout(_b, 1000);
+				_i();
+			}
+			function _i(){
+				var _s = popie({
+						sticky: true,
+						title: "<h4>{{concept_display_full|safe}}</h4>",
+						modalClass: "ExplainDialog",
+						buttons: { "Yes, give me that chance": {'class': 'btn-modal', 'handle': function(){ location.href= "/Subscribe" } },
+								   "No, thanks": {'class': 'btn-link', 'handle': function(){ location.href= "{{practice_page}}" } },
+						},
+						buttonGroupClass: "btn-group",
+					});
+				_s.setContent("Only {{Ninja_max-Ninja_value}} more points to the next Ninja level... Don't give up now!!<br /><br />");
+				_s.show();	
+			}
+		</script>
+	{% endif %}	
+	
+{% endif %}
+{% endblock bottom %}

@@ -1,0 +1,165 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;">Factors, Multiples and Roots - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="FMR_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br><br>
+	{% endif %}
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">1)</font> Find the sum of all composite numbers less than 20.</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_1_answer" size=3 value='{{FMRTT1_1_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if FMRTT1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% else %}
+				<input id="FMRTT1_1_answer" size=3 value='{{FMRTT1_1_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">Find the smallest number that has all prime numbers between 1 and 10 as its factors.</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_2_answer" size=3 value='{{FMRTT1_2_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if FMRTT1_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+
+			{% else %}
+				<input id="FMRTT1_2_answer" size=3 value='{{FMRTT1_2_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>		
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:40px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			<img src="/images/Grade7/G7_FMR_Test_Q3.png">
+		</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_3_answer" size=3 value='{{FMRTT1_3_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if FMRTT1_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% else %}
+				<input id="FMRTT1_3_answer" size=3 value='{{FMRTT1_3_answer}}'><font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>		
+		</div>
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#FMR_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#FMR_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Factors-Multiples-Roots');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#FMRTT1_1_answer").change(function()
+	{
+		question_id = "FMRTT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "FMRTT1_1_answer";
+		entered_answer = $("#FMRTT1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 1;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("#FMRTT1_2_answer").change(function()
+		{
+			question_id = "FMRTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "FMRTT1_2_answer";
+			entered_answer = $("#FMRTT1_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#FMRTT1_3_answer").change(function()
+		{
+			question_id = "FMRTT1_3";
+			test_id = '{{test_id}}';
+			answer_id = "FMRTT1_3_answer";
+			entered_answer = $("#FMRTT1_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

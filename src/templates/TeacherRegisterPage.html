@@ -1,0 +1,85 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+	<!-- Google Code for HCRegister Conversion Page -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1013517337;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "006600";
+		var google_conversion_label = "ofSICI_f-QIQmZik4wM";
+		var google_conversion_value = 0;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1013517337/?value=0&amp;label=ofSICI_f-QIQmZik4wM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+<div>
+<br>
+<div id="NotesContent" style="width:85%;min-height:500px;" ><br>
+   
+    <div style="display:inline-block;margin-left:20px;width:400px;">
+		<img src="/images/site/why_register_teacher.png" alt="Home Campus Benefits" title="Benefits of Registration as a Teacher"/>
+	</div>
+    <div style="display:inline-block;vertical-align:top;">
+    <form id="SubscriptionPage" style="width:400px;" method="post" action="{{ current_url }}" enctype="multipart/form-data">           
+       	<div style="display: inline-block;vertical-align:top;">
+       	<fieldset>
+       		<legend><font style="color:#237caa">Teacher's Particulars</font></legend>
+       		<fieldset>
+				<legend>First Name:</legend>
+				<input name="teacher_first_name" id="teacher_first_name" type="text" value='{{teacher_first_name}}'><br>
+				<legend>Last Name:</legend>
+				<input name="teacher_last_name" id="teacher_last_name" type="text"  value='{{teacher_last_name}}'><br>
+				<legend>Email (This will be your id):</legend>
+				<input name="email" id="email" type="text" size=25 placeholder="example@domain.com" value='{{email}}'><br>
+				<legend>Re-enter Email:</legend>
+				<input name="email_confirm" id="email_confirm" type="text" size=25 placeholder="example@domain.com" value='{{email}}'><br>
+				<legend>Password:</legend>
+				<input name="teacher_password" id="teacher_password" type="password"><br>
+			</fieldset>
+       	</fieldset>
+       	<button id="register" style="margin-left:30px;" value="{{ _('Register') }}"></button><br><br>
+       	</div>
+        
+        
+
+        <script type="text/javascript">
+        			$("#register").button({label:"Register<sup>&nbsp;<font style='color:red;font-size:1em;'>Free</font></sup>"});
+        			$("#school_country").val('{{school_country}}');
+					var teacher_first_name = new LiveValidation('teacher_first_name',{validMessage:" "});
+					teacher_first_name.add(Validate.Presence,{failureMessage:"Please enter your first name."});
+					var teacher_last_name = new LiveValidation('teacher_last_name',{validMessage:" ", wait:10000});
+			        teacher_last_name.add(Validate.Presence,{failureMessage:"Please enter your last name."});
+					var email = new LiveValidation('email',{validMessage:" ", wait:10000});
+			        email.add(Validate.Email,{failureMessage:"Please enter a valid email address."});
+			        email.add(Validate.Presence,{failureMessage:"Please enter an email address."});
+		            var email_confirm = new LiveValidation('email_confirm',{validMessage:" ", wait:10000});
+		            email_confirm.add(Validate.Confirmation,{failureMessage:"Both emails should match.", match:'email'});
+		            var teacher_password = new LiveValidation('teacher_password',{validMessage:" ", wait:10000});
+		            teacher_password.add(Validate.Presence,{failureMessage:"Please enter a password."});
+		</script>		
+    </form>
+    </div>
+<br>
+</div>
+<br>
+</div>
+	<script src="/js/jquery.gritter.min.js"></script>
+	<script>
+	{% if registration_messages %}
+	 $.gritter.add({
+			// (string | mandatory) the heading of the notification
+			title: 'Registration Message!',
+			// (string | mandatory) the text inside the notification
+			text: '{{registration_messages|safe}}',
+			// (bool | optional) if you want it to fade out on its own or just sit there
+			sticky: true,
+		});
+	 {% endif %}
+	</script>
+{% endblock %}

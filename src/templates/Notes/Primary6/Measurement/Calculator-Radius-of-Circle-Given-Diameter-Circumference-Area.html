@@ -1,0 +1,71 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculator to Calculate Radius of a Circle when Diameter, Circumference or Area is Given - Home Campus</title>
+<meta name="keywords" content="Radius Circumference Area Circle Calculator">
+<meta name="description" content="Calculate Radius, Circumference and Area of a Circle" />
+{% endblock %}
+{% block content %}
+	
+
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">Calculator: Radius of Circle</h2>
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Radius of a Circle</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the radius of a circle depends on what is given to you.
+			</div>
+			<div class="col-10 col-off-1">
+				1) Given: <strong>Diameter of a circle</strong><br><br>
+				Then, Radius &nbsp;=&nbsp; Diameter &nbsp;&divide;&nbsp; 2<br><br>
+				<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(211, 155, 210);" href="/Free-Math-Worksheets/Diameter-Radius-of-Circle">Download FREE Worksheets</a></div><br><br>
+				2) Given: <strong>Circumference of a circle</strong><br><br>
+				Then, Radius &nbsp;=&nbsp; Circumference &nbsp;&divide;&nbsp; (2&nbsp;&times;&nbsp;&pi;)<br><br>
+				3) Given: <strong>Area of a circle</strong><br><br>
+				Then, Radius &nbsp;=&nbsp; &radic;(Area &nbsp;&divide;&nbsp; &pi;)<br><br>
+				
+				<div class="concept-set__container" style="background:rgb(239, 255, 216);">
+				<label for="given">Given,</label><br><br>
+				<select name="given" id="given">
+					<option value="Diameter">Diameter</option>
+					<option value="Circumference">Circumference</option>
+					<option value="Area">Area</option>
+				</select> 
+				&nbsp;=&nbsp; <input id="givenValue"  type="number" size=4><br><br>
+				<button class="btn-quiz" id="calcRadius" onclick="calcRadius()">Calculate Radius</button><br><br>
+				<div class="col-10 col-off-1" id="radius"></div></div>
+			</div>
+			
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Radius_Diameter">Practice Radius Questions</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<script>
+
+function calcRadius() {
+	var e = document.getElementById("given");
+	var givenText = e.options[e.selectedIndex].text;
+	var givenValue = document.getElementById("givenValue").value;
+	var radius;
+	
+	if (givenText=="Diameter") {
+		radius = givenValue/2;
+	} else if (givenText=="Circumference"){
+		radius = givenValue/(2*3.14);
+	} else if (givenText=="Area"){
+		radius = Math.sqrt(givenValue/3.14)
+	}
+	
+	document.getElementById("radius").innerHTML = "Radius of the circle &nbsp;=&nbsp; "+radius.toFixed(2); 
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula to calculate radius of a circle?","acceptedAnswer":{"@type":"Answer","text":" Formula for the radius of a circle depends on what is given to you.<br><br>\n1) Given: Diameter of a circle<br><br>\nThen, Radius  =  Diameter  &divide;  2<br><br>\n2) Given: Circumference of a circle<br><br>\nThen, Radius  =  Circumference  &divide;  (2 &times; &pi;)<br><br>\n3) Given: Area of a circle<br><br>\nThen, Radius  =  &radic;(Area  &divide;  &pi;)\n"}}]}</script>
+
+{% endblock %}

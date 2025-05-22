@@ -1,0 +1,132 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.3 Percentage Increase and Decrease</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:54%;">5.3 Percentage Increase and Decrease</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Last year 5000 applicants passed a competitive exam. This time only 3700 could pass it. Find the percentage decrease in the number of applicants passing the examination?</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Percent decrease = &nbsp;
+			{% if PRIDEasy_2_answer_correct is defined %}
+				<input id="PRIDEasy_2_answer" value='{{PRIDEasy_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDEasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDEasy_2_answer_correct and PRIDEasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDEasy_2_answer" value='{{PRIDEasy_2_answer}}' style="width:50px;" > % &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Andy got 58 marks less than Sandy. If Sandy scored 660, by what percentage should Andy's marks increase so that their scores are equal? (Give your answer correct to 1 decimal place)</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Percent increase = &nbsp;
+			{% if PRIDEasy_3_answer_correct is defined %}
+				<input id="PRIDEasy_3_answer" value='{{PRIDEasy_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDEasy_3_answer_correct and PRIDEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDEasy_3_answer" value='{{PRIDEasy_3_answer}}' style="width:50px;" > % &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The annual tuition fee at a school was increased by 15% from last year. If the annual fee this year is $10000, what was the annual fee last year? (Give your answer correct to 2 decimal places)</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Annual fee last year was $&nbsp;
+			{% if PRIDEasy_4_answer_correct is defined %}
+				<input id="PRIDEasy_4_answer" value='{{PRIDEasy_4_answer}}' readonly style="width:60px;background-color:#DFDFDF;"> &nbsp;
+					{% if PRIDEasy_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDEasy_4_answer_correct and PRIDEasy_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDEasy_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDEasy_4_answer" value='{{PRIDEasy_4_answer}}' style="width:60px;" >  &nbsp;
+			{% endif %}	
+		</div>
+
+		{% if PRIDEasy_2_answer_correct is defined %}
+			<div style="margin-top:-0px;margin-left:320px;"><button id="PRID_Easy_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:320px;"><button id="PRID_Easy_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRIDEasy_2_answer").change(function()
+	{
+		question_id = "PRIDEasy_2";
+		question_type = "PercentageIncreaseDecrease"
+		answer_id = "PRIDEasy_2_answer";
+		entered_answer = $("#PRIDEasy_2_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRIDEasy_3_answer").change(function()
+			{
+				question_id = "PRIDEasy_3";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDEasy_3_answer";
+				entered_answer = $("#PRIDEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDEasy_4_answer").change(function()
+			{
+				question_id = "PRIDEasy_4";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDEasy_4_answer";
+				entered_answer = $("#PRIDEasy_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#PRID_Easy_2_submit").button({label:"Check Answers"});
+	$("#PRID_Easy_2_retry").button({label:"Retry"});
+	$("#PRID_Easy_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageIncreaseDecrease"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRIDEasy_2"+"#%$"+"PRIDEasy_2_answer"+"#%$"+$("#PRIDEasy_2_answer").val();
+		answers = answers + "#%$"+"PRIDEasy_3"+"#%$"+"PRIDEasy_3_answer"+"#%$"+$("#PRIDEasy_3_answer").val();
+		answers = answers + "#%$"+"PRIDEasy_4"+"#%$"+"PRIDEasy_4_answer"+"#%$"+$("#PRIDEasy_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRID_Easy_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRIDEasy_2_answer,PRIDEasy_3_answer,PRIDEasy_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,152 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.4 Rational Numbers and Real Numbers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.4 Rational Numbers and Real Numbers</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:10px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:12px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:0px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;">Ryan, George and Charlie share the rent of an</div>
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;">apartment. Ryan pays</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;">of the rent. George pays</div>
+				<br>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-top:2px;margin-left:0px;">of the remainder. Charlie pays the rest of the rent.</div>
+			</div>
+			<br>
+			<div style="margin-top:10px;">a) What fraction of the rent does Charlie pay?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">Answer:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-20px;">
+				<p style="line-height:20%;text-align:center;">
+					{% if RNRNAdvanced_1_1_answer_correct is defined %}
+						&nbsp; <input id="RNRNAdvanced_1_1_answer" value='{{RNRNAdvanced_1_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					{% else %}
+						<input id="RNRNAdvanced_1_1_answer" value='{{RNRNAdvanced_1_1_answer}}' style="width:30px;" >
+					{% endif %}
+				<br>_____<br></p>
+				<p style="line-height:20%;text-align:center;">
+					{% if RNRNAdvanced_1_2_answer_correct is defined %}
+						&nbsp; <input id="RNRNAdvanced_1_2_answer" value='{{RNRNAdvanced_1_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					{% else %}
+						<input id="RNRNAdvanced_1_2_answer" value='{{RNRNAdvanced_1_2_answer}}' style="width:30px;" >
+					{% endif %}
+				<br></p>				
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:5px;">
+				{% if RNRNAdvanced_1_1_answer_correct is defined %}
+					{% if RNRNAdvanced_1_1_answer_correct and RNRNAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNRNAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>		
+		<div style="margin-left:20px;margin-top:12px;display:inline-block;width:20px;"></div>
+		<div style="margin-top:0px;display:inline-block;width:390px;vertical-align:top;">
+			<div>b)	If Charlie pays $1200, how much is the total rent of the apartment?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: $
+			{% if RNRNAdvanced_1_3_answer_correct is defined %}
+			<div style="display:inline-block;vertical-align:top;margin-top:-8px;margin-left:4px;">
+				<input id="RNRNAdvanced_1_3_answer" value='{{RNRNAdvanced_1_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNRNAdvanced_1_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNRNAdvanced_1_3_answer_correct and RNRNAdvanced_1_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNRNAdvanced_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:4px;">	
+				<input id="RNRNAdvanced_1_3_answer" value='{{RNRNAdvanced_1_3_answer}}' style="width:40px;" > &nbsp;
+			</div>
+			{% endif %}
+		</div>		
+		{% if RNRNAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="RNRNAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="RNRNAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNRNAdvanced_1_1_answer").change(function()
+	{
+		question_id = "RNRNAdvanced_1";
+		question_type = "RationalRealNumbers"
+		answer_id = "RNRNAdvanced_1_1_answer";
+		entered_answer = $("#RNRNAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNRNAdvanced_1_2_answer").change(function()
+			{
+				question_id = "RNRNAdvanced_1";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNAdvanced_1_2_answer";
+				entered_answer = $("#RNRNAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNRNAdvanced_1_3_answer").change(function()
+			{
+				question_id = "RNRNAdvanced_1";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNAdvanced_1_3_answer";
+				entered_answer = $("#RNRNAdvanced_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNRNAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#RNRNAdvanced_1_Retry").button({label:"Retry"});
+	$("#RNRNAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RationalRealNumbers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNRNAdvanced_1"+"#%$"+"RNRNAdvanced_1_1_answer"+"#%$"+$("#RNRNAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"RNRNAdvanced_1"+"#%$"+"RNRNAdvanced_1_2_answer"+"#%$"+$("#RNRNAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"RNRNAdvanced_1"+"#%$"+"RNRNAdvanced_1_3_answer"+"#%$"+$("#RNRNAdvanced_1_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNRNAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNRNAdvanced_1_1_answer,RNRNAdvanced_1_2_answer,RNRNAdvanced_1_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

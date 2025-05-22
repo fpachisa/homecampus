@@ -1,0 +1,177 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Months Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to months">
+<meta name="description" content="Converter Hours to Months" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Months?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Months Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToMonths" onclick="ConvertToMonths()">Convert To Months</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="MonthsAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			Different months have different number of hours. For e.g. months which have 30 days have 720 hours where months which have 31 days have 744 hours. For month of February it again depends whether its a leap year or not.
+			<br><br>Hence, on an average a month has 730 hours.
+			<br><br>1 hour &nbsp;=&nbsp; 1 &nbsp;&divide;&nbsp; 730 &nbsp;=&nbsp; 0.00137 month
+			<br><br>To convert hours to months, divide the hours by 730 to get months.			
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 4000 hours to months.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Divide 4000 by 730
+				<br><br>Total months in 4000 hours &nbsp;=&nbsp; 4000 &nbsp;&divide;&nbsp; 730 &nbsp;=&nbsp; 5.48 
+				<br><br>Hence, there are <strong>5.48 months in 4000 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 100 hours to months</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Divide 100 by 730
+				<br><br>Total months in 100 hours &nbsp;=&nbsp; 100 &nbsp;&divide;&nbsp; 730 &nbsp;=&nbsp; 0.137 months
+				<br><br>Hence, there is <strong>0.137 month in 100 hours.</strong>
+			</div>
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliseconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times; 10<sup>-5</sup> decade<br><br>
+				1.1416 &times; 10<sup>-6</sup> century<br><br>
+				1.1416 &times; 10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Hour Months Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Months Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Months Chart -->
+
+<script>
+
+function ConvertToMonths() {
+	var hours = document.getElementById("hour").value;
+	var months = hours/730;
+	document.getElementById("MonthsAnswer").innerHTML = "There are "+months.toFixed(2)+" months in "+hours+" hours."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 0.00137 months<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/730).toFixed(4) + ' months<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/730).toFixed(4) + ' months<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/730).toFixed(4) + ' months<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/730).toFixed(4) + ' months<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many hours are there in a month?","acceptedAnswer":{"@type":"Answer","text":"On an average there are 740 hours in a month. Exact number will depend on how many days are there in that particular month."}},{"@type":"Question","name":"How to convert hours to months?","acceptedAnswer":{"@type":"Answer","text":"Divide hours by 730 to convert it to months."}}]}</script>
+
+{% endblock %}

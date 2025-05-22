@@ -1,0 +1,45 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Unfinished Worksheets</title>
+<meta name="description" content="Worksheets, Homework" />
+{% endblock %}
+{% block body %}
+<div>
+	<h1>Incomplete Worksheets</h1>
+	<div>
+	{% if worksheet_data|length == 0 %}
+		You don't have any incomplete worksheet.
+	{% else %}
+	{% if worksheet_data|length == 1 %}
+		Following is your incomplete worksheet. Click on the link to complete it.
+	{% else %}
+		Following are your incomplete worksheets. Click on the links to complete them.
+	{% endif %}
+	</div>
+	
+	<div class="unfinished-worksheets-table">
+	<table>
+		<thead style="text-align:left;">
+			<tr>
+				<th></th>
+				<th>Topic</th>
+				<th>Sub Topic</th>
+				<th></th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		{% for w in worksheet_data %}
+			<tr>
+				<td>{{w[0]}}</td>
+				<td>{{w[1]}}</td>
+				<td>{{w[3]}}</td>
+				<td><a href="{{w[2]}}">SOLVE</a></td>
+			</tr>
+		{% endfor %} 
+		</tbody>
+	</table>
+	</div>
+	{% endif %}
+ </div><br>
+{% endblock %}

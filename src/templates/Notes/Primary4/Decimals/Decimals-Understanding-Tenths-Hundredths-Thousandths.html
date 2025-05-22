@@ -1,0 +1,693 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Decimals - Tenths, Hundredths and Thousandths - Home Campus</title>
+<meta name="keywords" content="Perimeter, Square, Rectangle, Square Centimetres, Square Metres, word problems, problem sums, P3 maths, 3rd grade math, Area in Square Centimetres worksheets, free math worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, P3 math tuition, math tuition at home">
+<meta name="description" content="Perimeter of Squares and Rectangles" />
+{% endblock %}
+{% block content %}
+	
+<h2 class="learn-heading">Decimals: Tenths, Hundredths and Thousandths</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Tenths">Practice Unlimited Questions</a></div>
+
+
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		
+		<div class="concept-set__question">
+			<h4>1 Whole</h4>
+		</div>
+					
+		<div class="concept-set__answer">					
+			<div class="col-11 col-off-1" style="margin-top: 2%;">
+				1 &nbsp;=&nbsp; {{ frGen(10,10) }} &nbsp;=&nbsp; {{ frGen(100,100) }} &nbsp;=&nbsp; {{ frGen(1000,1000) }} <br /><br />
+				
+				Or, <br /><br />
+				
+				1 whole &nbsp;=&nbsp; 10 tenths<br />
+				1 whole &nbsp;=&nbsp; 100 hundredths<br />
+				1 whole &nbsp;=&nbsp; 1000 thousandths<br /><br />
+				
+				1 tenth &nbsp;=&nbsp; 0.1<br />
+				1 hundredth &nbsp;=&nbsp; 0.01<br />
+				1 thousandth &nbsp;=&nbsp; 0.001
+			</div>				
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>	
+	</div>
+</div><!-- End of concept -->
+
+<!-- Concept 1 -->
+<div class="learn-set">
+	<div class="learn-set__container" style="background-color: rgb(255, 218, 245);">
+		<div class="learn-set__question"><h4>Understanding Tenths</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_1.png" alt="square metre or square meter" /><br />
+				
+				0.5, 0.7 and 0.2 are <b>decimals</b> or <b>decimal numbers</b>.<br /><br />
+				Divide 1 whole into 10 equal parts.<br /><br />
+
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_2.png" alt="square metre or square meter" /><br />
+				
+				In the <i>fraction form</i>, each part has a value equal to {{ frGen(1,10) }} or 1 tenth.
+			</div>
+			<div class="col-7 col-off-1">
+				In the <i>decimal form</i>, each part has a value equal to 0.1 (read as <b>zero point one</b>).<br /><br />
+				
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_3.png" alt="square metre or square meter" /><br />
+				
+				Two parts are {{ frGen(2,10) }} or 2 tenths or 0.2.
+			</div>
+			<div class="col-3 hint-box">
+				The <i>dot</i> in a decimal number is called a <b>decimal point</b>.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Tenths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of concept 1 -->
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>1. What decimals do the following shaded parts represent?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				a)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_4.png" alt="square metre or square meter" /><br />
+				4 tenths <br />
+				{{ frGen(4,10) }} = 0.4
+			</div>
+			<div class="col-11 col-off-1">
+				b)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_5.png" alt="square metre or square meter" /><br />
+				
+				3 tenths<br />
+				{{ frGen(3,10) }} &nbsp;=&nbsp; 0.3
+			</div>
+			<div class="col-3 col-off-1">
+				c)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_6.png" alt="square metre or square meter" /><br />
+				
+				10 tenths<br />
+				10 tenths &nbsp;=&nbsp; 1 whole<br />
+				<span style="margin-left:76px;">=&nbsp; 1</span>
+			</div>
+			<div class="col-3 hint-box">
+				10 tenths make 1 whole.
+			</div>
+			<div class="col-11 col-off-1">
+				d)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_7.png" alt="square metre or square meter" /><br />
+				
+				{{ mixNumGen(2,3,10) }} &nbsp;&nbsp;=&nbsp;&nbsp; 2 &nbsp;+&nbsp; {{ frGen(3,10) }}<br />
+				<span style="margin-left:44px;">=&nbsp; 2 &nbsp;+&nbsp; 0.3</span><br />
+				<span style="margin-left:44px;">=&nbsp; 2.3</span>
+			</div>
+			<div class="col-3 col-off-1">
+				e)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_8.png" alt="square metre or square meter" /><br />
+				
+				2 fifths<br />
+				{{ frGen(2,5) }} &nbsp;&nbsp;=&nbsp;&nbsp; {{ frGen(4,10) }}<br />
+				<span style="margin-left:32px;">=&nbsp;&nbsp;&nbsp; 0.4</span>
+			</div>
+			<div class="col-3 hint-box">
+				2 fifths &nbsp;=&nbsp; 4 tenths
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Tenths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>2. What fractions or mixed numbers do the following decimals represent? Express in the simplest form.</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				a) &nbsp; <b>0.3</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.3 &nbsp;=&nbsp; {{ frGen(3,10) }}
+			</div>
+			<div class="col-11 col-off-1">
+				b) &nbsp; <b>0.5</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5 &nbsp;=&nbsp; {{ frGen(5,10) }}<br />
+				<span style="margin-left:54px;">=&nbsp; {{ frGen(1,2) }}</span>
+			</div>
+			<div class="col-11 col-off-1">
+				c) &nbsp; <b>1.6</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6 &nbsp;=&nbsp;&nbsp; {{ mixNumGen(1,6,10) }}<br />
+				<span style="margin-left:54px;">=&nbsp;&nbsp; {{ mixNumGen(1,3,5) }}</span>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Tenths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>3. What is the value of each digit in 736.5?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_Q4.png" alt="square metre or square meter" /><br />
+				
+				In 736.5,<br />
+				<ul>
+					<li>the digit 7 is in the <b><font color="#3BA600">hundreds</font></b> place, its value is 7 &times; 100 or <b><font color="#3BA600">700</font></b></li>
+					<li>the digit 3 is in the <b><font color="#00A0E2">tens</font></b> place, its value is 3 &times; 10 or <b><font color="#00A0E2">30</font></b></li>
+					<li>the digit 6 is in the <b><font color="#F06EAA">ones</font></b> place, its value is 6 &times; 1 or <b><font color="#F06EAA">6</font></b></li>
+					<li>the digit 5 is in the <b><font color="#2FC4FF">tenths</font></b> place, its value is 5 &times; 0.1 or <b><font color="#2FC4FF">0.5</font></b></li>
+				</ul>
+				<b><font color="#3BA600">700</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#00A0E2">30</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#F06EAA">6</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#2FC4FF">0.5</font> &nbsp;=&nbsp; <font color="#3BA600">7</font><font color="#00A0E2">3</font><font color="#F06EAA">6</font><font color="#2FC4FF">.5</font></b><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Tenths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- Concept 2 -->
+<div class="learn-set">
+	<div class="learn-set__container" style="background-color: rgb(255, 214, 223);">
+		<div class="learn-set__question"><h4>Understanding Hundredths</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				Divide 1 whole into 100 equal parts.<br /><br />
+
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_9.png" alt="square metre or square meter" /><br />
+				
+				In the <i>fraction form</i>, each part has a value equal to {{ frGen(1,100) }} or 1 hundredth.<br /><br />
+
+				In the <i>decimal form</i>, each part has a value equal to 0.01 (read as <b>zero point zero one</b>).
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>4. What decimals do the following shaded parts represent?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				a)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_10.png" alt="square metre or square meter" /><br />
+				4 hundredths <br />
+				{{ frGen(4,100) }} &nbsp;=&nbsp;&nbsp; 0.04
+			</div>
+			<div class="col-11 col-off-1">
+				b)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_11.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-3 col-off-1">
+				10 hundredths<br />
+				10 hundredths &nbsp;=&nbsp; 1 tenth<br />
+				<span style="margin-left:115px;">=&nbsp; 0.1</span>
+			</div>
+			<div class="col-3 hint-box">
+				10 hundredths make 1 tenth.
+			</div>
+			<div class="col-11 col-off-1">
+				c)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_12.png" alt="square metre or square meter" /><br />
+				
+				50 hundredths<br />
+				{{ frGen(50,100) }} &nbsp;&nbsp;=&nbsp;&nbsp; 0.50<br /><br />
+				<span style="margin-left:32px;">Or,</span><br /><br />
+				{{ frGen(50,100) }} &nbsp;&nbsp;=&nbsp;&nbsp; {{ frGen(5,10) }}<br />
+				<span style="margin-left:52px;">=&nbsp;&nbsp;&nbsp; 0.5</span><br /><br />
+				The decimals 0.5 and 0.50 have the same value.
+			</div>
+			<div class="col-11 col-off-1">
+				d)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_13.png" alt="square metre or square meter" /><br />
+				
+				{{ mixNumGen(1,23,100) }} &nbsp;&nbsp;=&nbsp;&nbsp; 1 &nbsp;+&nbsp; {{ frGen(23,100) }}<br />
+				<span style="margin-left:54px;">=&nbsp; 1 &nbsp;+&nbsp; 0.23</span><br />
+				<span style="margin-left:54px;">=&nbsp; 1.23</span>
+			</div>
+			<div class="col-11 col-off-1">
+				e)<br />
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_14.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-3 col-off-1">	
+				{{ mixNumGen(3,12,25) }} &nbsp;&nbsp;=&nbsp;&nbsp; 3 &nbsp;+&nbsp;{{ frGen(12,25) }}<br />
+				<span style="margin-left:44px;">=&nbsp;&nbsp; 3 &nbsp;+&nbsp;{{ frGen(48,100) }}</span><br />
+				<span style="margin-left:44px;">=&nbsp;&nbsp; 3 &nbsp;+&nbsp; 0.48</span><br />
+				<span style="margin-left:44px;">=&nbsp;&nbsp; 3.48</span>
+			</div>
+			<div class="col-3 hint-box">
+				Change the denominator to a multiple of 10.<br /><br />
+				25 &nbsp;&times;&nbsp; <b>4</b> = 100
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>5. What fractions or mixed numbers do the following decimals represent? Express in the simplest form.</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				a) &nbsp; <b>0.03</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.03 &nbsp;=&nbsp; {{ frGen(3,100) }}
+			</div>
+			<div class="col-11 col-off-1">
+				b) &nbsp; <b>0.5</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25 &nbsp;=&nbsp; {{ frGen(25,100) }}<br />
+				<span style="margin-left:64px;">=&nbsp; {{ frGen(1,4) }}</span>
+			</div>
+			<div class="col-11 col-off-1">
+				c) &nbsp; <b>1.55</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.55 &nbsp;=&nbsp;&nbsp; {{ mixNumGen(1,55,100) }}<br />
+				<span style="margin-left:64px;">=&nbsp;&nbsp; {{ mixNumGen(1,11,20) }}</span>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>6. What is the value of each digit in 73.65?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_Q5.png" alt="square metre or square meter" /><br />
+				
+				In 73.65,<br />
+				<ul>
+					<li>the digit 7 is in the <b><font color="#00A0E2">tens</font></b> place, its value is 7 &times; 10 or <b><font color="#00A0E2">70</font></b></li>
+					<li>the digit 3 is in the <b><font color="#F06EAA">ones</font></b> place, its value is 3 &times; 1 or <b><font color="#F06EAA">3</font></b></li>
+					<li>the digit 6 is in the <b><font color="#2FC4FF">tenths</font></b> place, its value is 6 &times; 0.1 or <b><font color="#2FC4FF">0.6</font></b></li>
+					<li>the digit 5 is in the <b><font color="#42B800">hundredths</font></b> place, its value is 5 &times; 0.01 or <b><font color="#42B800">0.05</font></b></li>
+				</ul>
+				<b><font color="#00A0E2">70</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#F06EAA">3</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#2FC4FF">0.6</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#42B800">0.05</font> &nbsp;=&nbsp; <font color=#00A0E2>7</font><font color="#F06EAA">3</font><font color="#2FC4FF">.6</font><font color="#42B800">5</font></b><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>7. What is the value of each digit in 73.65?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Number_Line_1.png" alt="square metre or square meter" /><br />
+				
+				A &nbsp;=&nbsp; 2.82<br />
+				B &nbsp;=&nbsp; 2.95<br />
+				C &nbsp;=&nbsp; 3.03
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 7 -->
+
+
+<!-- QUES 8 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>8. Do the following.</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-5 col-off-1">
+				<b>a) &nbsp; Change $10 and 35 &cent; to dollars.</b><br /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $10 &nbsp; and &nbsp; 35 &cent; &nbsp;=&nbsp; $10 &nbsp;+&nbsp; $0.35<br />
+				<span style="margin-left:143px;">=&nbsp; $10.35</span>
+			</div>
+			<div class="col-4 hint-box">
+				100 &cent; &nbsp;=&nbsp; $1<br />
+				1 &cent; <span style="margin-left:18px;">&nbsp;=&nbsp; {{ frGen(1,100) }} of $1</span><br />
+				<span style="margin-left:50px;">=&nbsp; $0.01</span><br /><br />
+			</div>
+			<div class="col-5 col-off-1">
+				<b>b) &nbsp; Write 4 m 65 cm in m.</b><br /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 m &nbsp; 65 cm &nbsp;=&nbsp; 4 m &nbsp;+&nbsp; 65 cm<br />
+				<span style="margin-left:115px;">=&nbsp; 4.65 m</span>
+			</div>
+			<div class="col-4 hint-box">
+				100 cm &nbsp;=&nbsp; 1 m<br />
+				1 cm <span style="margin-left:18px;">&nbsp;=&nbsp; {{ frGen(1,100) }}m</span><br />
+				<span style="margin-left:62px;">=&nbsp; 0.01 m</span>
+			</div>
+			<div class="col-11 col-off-1">
+				<b>c) &nbsp; Express {{ mixNumGen(9,3,100) }} litres in decimal.</b><br /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(9,3,100) }} &nbsp; L &nbsp;&nbsp;=&nbsp;&nbsp; 9 L &nbsp;+&nbsp;{{ frGen(3,100) }} L<br />
+				<span style="margin-left:98px;">=&nbsp;&nbsp; 9 L &nbsp;&nbsp;+&nbsp;&nbsp; 0.03 L</span><br />
+				<span style="margin-left:98px;">=&nbsp;&nbsp; 9.03 L</span>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Hundredths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 8 -->
+
+
+<!-- Concept 3 -->
+<div class="learn-set">
+	<div class="learn-set__container" style="background-color: rgb(255, 239, 226);">
+		<div class="learn-set__question"><h4>Understanding Thousandths</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				Divide 1 whole into 1000 equal parts.<br /><br />
+
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_15.png" alt="square metre or square meter" /><br />
+				
+				In the <i>fraction form</i>, each part has a value equal to {{ frGen(1,1000) }} or 1 thousandth.<br /><br />
+
+				In the <i>decimal form</i>, each part has a value equal to 0.001 (read as <b>zero point zero zero one</b>).
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of concept 3 -->
+
+
+<!-- QUES 9 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>9. What decimals do the following fractions or mixed numbers represent?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<b>a) &nbsp; 8 thousandths</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 thousandths &nbsp;=&nbsp; {{ frGen(8,1000) }} &nbsp;=&nbsp; <b>0.008</b>
+			</div>
+			<div class="col-11 col-off-1">
+				<b>b) &nbsp; {{ frGen(2607,1000) }}</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(2607,1000) }} &nbsp;=&nbsp; {{ frGen(2000,1000) }} &nbsp;+&nbsp; {{ frGen(607,1000) }}<br />
+				<span style="margin-left:76px;"> &nbsp;=&nbsp; 2 &nbsp;+&nbsp; 0.607</span><br />
+				<span style="margin-left:76px;"> &nbsp;=&nbsp; <b>2.607</b></span>
+			</div>
+			<div class="col-11 col-off-1">
+				<b>c) &nbsp; {{ mixNumGen(5,300,1000) }}</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(5,300,1000) }} &nbsp;&nbsp;=&nbsp;&nbsp; 5 &nbsp;+&nbsp; {{ frGen(300,1000) }}<br />
+				<span style="margin-left:80px;"> &nbsp;=&nbsp;&nbsp; 5 &nbsp;+&nbsp; 0.300</span><br />
+				<span style="margin-left:80px;"> &nbsp;=&nbsp;&nbsp; <b>5.300</b></span><br /><br />
+
+				<span style="margin-left:25px;"><b>Or,</b></span><br /><br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(5,300,1000) }} &nbsp;&nbsp;=&nbsp;&nbsp; 5 &nbsp;+&nbsp; {{ frGen(300,1000) }}<br />
+				<span style="margin-left:80px;"> &nbsp;=&nbsp;&nbsp; 5 &nbsp;+&nbsp; {{ frGen(3,10) }}</span><br />
+				<span style="margin-left:80px;"> &nbsp;=&nbsp;&nbsp; 5 &nbsp;+&nbsp; 0.3</span><br />
+				<span style="margin-left:80px;"> &nbsp;=&nbsp;&nbsp; <b>5.3</b></span><br /><br />
+				
+				The decimals 5.300 and 5.3 have the same value.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 9 -->
+
+
+<!-- QUES 10 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>10. What fractions or mixed numbers do the following decimals represent? Express in the simplest form.</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<b>a) &nbsp; 0.003</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.003 &nbsp;&nbsp;=&nbsp; <b>{{ frGen(3,1000) }}</b>
+			</div>
+			<div class="col-11 col-off-1">
+				<b>b) &nbsp; 0.250</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.250 &nbsp;&nbsp;=&nbsp; {{ frGen(250,1000) }}<br />
+				<span style="margin-left:75px;"> &nbsp;=&nbsp; {{ frGen(25,100) }}</span><br />
+				<span style="margin-left:75px;"> &nbsp;=&nbsp; {{ frGen(1,4) }}</span>
+			</div>
+			<div class="col-11 col-off-1">
+				<b>c) &nbsp; 1.775</b><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.775 &nbsp;&nbsp;=&nbsp; {{ mixNumGen(1,775,1000) }}<br />
+				<span style="margin-left:75px;"> &nbsp;=&nbsp; {{ mixNumGen(1,33,40) }}</span>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 10 -->
+
+
+<!-- QUES 11 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>11. What is the value of each digit in 7.365?</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_Q6.png" alt="square metre or square meter" /><br />
+				
+				In 7.365,<br />
+				<ul>
+					<li>the digit 7 is in the <b><font color="#F06EAA">ones</font></b> place, its value is 7 &times; 1 or <b><font color="#F06EAA">7</font></b></li>
+					<li>the digit 3 is in the <b><font color="#2FC4FF">tenths</font></b> place, its value is 3 &times; 0.1 or <b><font color="#2FC4FF">0.3</font></b></li>
+					<li>the digit 6 is in the <b><font color="#42B800">hundredths</font></b> place, its value is 6 &times; 0.01 or <b><font color="#42B800">0.06</font></b></li>
+					<li>the digit 5 is in the <b><font color="#B276B2">thousandths</font></b> place, its value is 5 &times; 0.001 or <b><font color="#B276B2">0.005</font></b></li>
+				</ul>
+				<b><font color="#F06EAA">7</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#2FC4FF">0.3</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#42B800">0.06</font> &nbsp;&nbsp;+&nbsp;&nbsp; <font color="#B276B2">0.005</font> &nbsp;&nbsp;=&nbsp;&nbsp; <font color="#F06EAA">7</font><font color="#2FC4FF">.3</font><font color="#42B800">6</font><font color="#B276B2">5</font></b><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 11 -->
+
+
+<!-- QUES 12 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>12. Write a decimal for each letter on the number line below.</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Number_Line_2.png" alt="square metre or square meter" /><br />
+				
+				A &nbsp;=&nbsp; 2.973<br />
+				B &nbsp;=&nbsp; 2.988<br />
+				C &nbsp;=&nbsp; 2.995<br />
+				D &nbsp;=&nbsp; 3
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 12 -->
+
+<!-- QUES 13 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>13. Compare the numbers 3.687, 3.678 and 3.876 and 3.786.<br />
+				a) Which number is the smallest?<br />
+				b) Which number is the greatest?<br />
+				c) Arrange the numbers in increasing order.<br />
+				d) Arrange the numbers in decreasing order.
+			</h4>
+		</div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Understanding_Tenths_Hundredths_Thousandths_Q7.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-5 col-off-1">
+				a) &nbsp; 3.678 is the smallest number.<br /><br />
+				
+				b) &nbsp; 3.876 is the greatest number.<br /><br />
+				
+				c) &nbsp; Increasing order:<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.678, &nbsp;&nbsp; 3.687, &nbsp;&nbsp; 3.786, &nbsp;&nbsp; 3.876<br /><br />
+				
+				d) &nbsp; Decreasing order:<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.876, &nbsp;&nbsp; 3.786, &nbsp;&nbsp; 3.687, &nbsp;&nbsp; 3.678
+			</div>
+			<div class="col-3 hint-box">
+				Compare the numbers digit by digit starting with the digit in the highest place value.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 13 -->
+
+
+<!-- QUES 14 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>14. Complete the number patterns below.<br /><br />
+				a) &nbsp;&nbsp; 3.591, &nbsp;&nbsp; 3.594, &nbsp;&nbsp; ______, &nbsp;&nbsp; 3.6, &nbsp;&nbsp; ______</h4>
+		</div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Number_Pattern_1.png" alt="square metre or square meter" /><br />
+				
+				
+				<b>Rule:</b> Add 0.003 to get the next decimal number.<br /><br />
+			</div>
+		</div>
+
+		<div class="learn-set__question">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp; b) &nbsp;&nbsp; 14.72, &nbsp;&nbsp; 13.62, &nbsp;&nbsp; ______, &nbsp;&nbsp; 11.42, &nbsp;&nbsp; ______, &nbsp;&nbsp; 9.22</h4>
+		</div>			
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_Decimals_Number_Pattern_2.png" alt="square metre or square meter" /><br />
+				
+				
+				<b>Rule:</b> Subtract 1.1 to get the next decimal.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Decimals_Thousandths">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 14 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a decimal number?","acceptedAnswer":{"@type":"Answer","text":"A decimal number is a number which is not whole. It consists of an integer and a fraction and represented by a dot. For e.g: 9.10, 10.345, 0.001"}},{"@type":"Question","name":"What is a decimal point?","acceptedAnswer":{"@type":"Answer","text":"The dot in a decimal number is called a decimal point. "}},{"@type":"Question","name":"What are some examples of decimal number in daily life?","acceptedAnswer":{"@type":"Answer","text":"1. Expressing money: 10 dollars and 40 cents can we written as $10.40\n2. Expressing distance: a marathon distance in km is expressed as 42.195 km"}},{"@type":"Question","name":"How much is one tenth?","acceptedAnswer":{"@type":"Answer","text":"When you divide one whole in 10 equal parts you get one tenth. In decimal it is written as 0.1"}},{"@type":"Question","name":"How much is one hundredth?","acceptedAnswer":{"@type":"Answer","text":"When you divide one whole in 100 equal parts you get one tenth. In decimal it is written as 0.01"}},{"@type":"Question","name":"What is one thousandth?","acceptedAnswer":{"@type":"Answer","text":"When you divide one whole in 1000 equal parts you get one tenth. In decimal it is written as 0.001"}}]}</script>
+{% endblock %}

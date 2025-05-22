@@ -1,0 +1,85 @@
+<script src="/js/DrawCompositeRectanglesSquares.js" type="text/javascript"></script>
+<script src="/js/DrawAngles.js" type="text/javascript"></script>
+<script src="/js/DrawShapes.js" type="text/javascript"></script>
+<script src="/js/DrawCircles.js" type="text/javascript"></script>
+<script src="/js/DrawCompositeFigures.js" type="text/javascript"></script>
+<script src="/js/AreaOfTriangle.js" type="text/javascript"></script>
+<script src="/js/DrawPieCharts.js" type="text/javascript"></script>
+<script src="/js/DrawBarCharts.js" type="text/javascript"></script>
+<script src="/js/DrawClocks.js" type="text/javascript"></script>
+<script src="/js/P3DrawAngles.js" type="text/javascript"></script>
+<script src="/js/P3DrawRightAngles.js" type="text/javascript"></script>
+<script src="/js/DrawLineGraphs.js" type="text/javascript"></script>
+<script src="/js/new-report-animation.js" type="text/javascript"></script>
+<script type="text/javascript">
+function DummyFunction()
+{
+	//Does nothing.
+}
+</script>
+
+
+<div class="reports__container">
+
+	<div class="reports__intro-box">
+		<h1>Result</h1>
+		<p style="padding-left:1em;">
+			Questions Attempted: <b>{{ total_questions }}</b><br /> 
+			Correct Answers: <b>{{ correct_answers }}</b><br />
+			Score: <b>{{ score }}%</b><br/>
+		</p>
+	</div>
+	
+	<div class="reports__question-container">
+	{% for p in problems %}
+		<div id='TestProblem' class="question-card">
+			<div class="question-card__container">
+				
+				<div class="question-card__title {%if p.correct%}correct{%else%}in-correct{%endif%}">
+					{{p.counter}}
+				</div>
+				
+			<div class="question-card__body">
+				<div class="question-card__question">
+					{{p.question|safe}}
+					{% if p.FunctionCall != "DummyFunction()"%}
+						<div id="{{p.counter+10000}}" style="height:410px;"></div>
+					{% endif %}
+				</div>
+				
+				<div class="question-card__answer">
+				{% if not IsTeacher %}
+					<div><b>Your answer:</b> {{p.dollar_unit|safe}}{{p.answer_submitted|safe}} {{p.unit|safe}}</div>
+					{%if not p.correct%}
+						<div><b>Correct answer:</b> {{p.qdollar_unit|safe}}{{p.answer|safe}}</div>
+						<button data-explain-tag="explain-for-{{p.counter}}" class="btn-exp"><i class="fa fa-check-square-o"></i></button>
+					{%endif%}
+				{% else %}
+					<div><b>Answer:</b> {{p.qdollar_unit|safe}}{{p.answer|safe}}</div>
+				{% endif %}
+				</div>
+				
+				<!-- @riyaz: don't know what its used for!!!
+							will remove after confirming
+				{% if p.FractionAnswer != 'Y' %}
+					{{p.qunit|safe}}
+				{% endif %}
+				 -->
+			</div>
+			
+			
+			<script type="text/javascript">
+				//This function call is for drawing figures in html 5
+				SetDivID({{p.counter+10000}});
+				{{p.FunctionCall|safe}};
+			</script>
+			
+			</div>
+		</div>
+		
+		<div id="explain-for-{{p.counter}}" style="display:none">
+			{{p.explain|safe}}
+		</div>
+	{% endfor%}
+	</div>
+</div>

@@ -1,0 +1,78 @@
+<div style="height:460px;">
+	<div class="grade7TOC">TABLE OF CONTENTS</div>
+	<div id="grade7bTopics">
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 7</div>
+		<div class="grade7TOCChapterTopic" id="ChapterAG" style="cursor:pointer;">Introduction to Algebra</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 8</div>
+		<div class="grade7TOCChapterTopic" id="ChapterAM" style="cursor:pointer;">Algebraic Manipulation</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 10</div>
+		<div class="grade7TOCChapterTopic" id="ChapterSI" style="cursor:pointer;">Simple Inequalities</div>		
+	</div>
+
+	<div style="display:none;cursor:pointer;color:grey;margin-top:30px;float:right;margin-right:40px;" id="backButton">Go back</div>
+	<div id="AGSubTopics" style="display:none;margin-top:10px;">
+		<div class="grade7TOCChapterTopic" style="display:inline-block;width:300px;"><a href="javascript:Grade7BookPageLoadByName('Introduction-to-Algebra')">Introduction to Algebra</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Using-Letters-to-Represent-Numbers-1')">7.1 Using Letters to Represent Numbers</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Interpreting-Algebraic-Notations-1')">7.2 Interpreting Algebraic Notations</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Interpreting-Algebraic-Notations-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Evaluating-Algebraic-Expressions-1')">7.3 Evaluating Algebraic Expressions</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Evaluating-Algebraic-Expressions-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Real-World-Algebraic-Expressions-1')">7.4 Translating Real-World Situations into Algebraic Expressions</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Real-World-Algebraic-Expressions-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Topical-Test-1-Introduction-to-Algebra')">Topical Test</a></div>
+	</div>
+	<div id="AMSubTopics" style="display:none;margin-top:10px;">
+		<div class="grade7TOCChapterTopic" style="display:inline-block;width:300px;"><a href="javascript:Grade7BookPageLoadByName('Algebraic-Manipulation')">Algebraic Manipulation</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Addition-Subtraction-Of-Linear-Expressions-1')">8.1 Addition and Subtraction of Linear Expressions</a></div>	
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Addition-Subtraction-Of-Linear-Expressions-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Simplifying-Linear-Expressions-1')">8.2 Simplifying Linear Expressions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Algebra-Factorisation-1')">8.3 Factorisation</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Algebra-Factorisation-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Topical-Test-1-Algebraic-Manipulations')">Topical Test</a></div>
+	</div>
+	<div id="SISubTopics" style="display:none;margin-top:10px;">
+		<div class="grade7TOCChapterTopic" style="display:inline-block;width:300px;"><a href="javascript:Grade7BookPageLoadByName('Simple-Inequalities')">Simple Inequalities</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Simple-Inequalities-1')">10.1 Introduction to Simple Inequalities</a></div>	
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Simple-Inequalities-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Applications-Of-Simple-Inequalities-1')">10.2 Applications Of Simple Inequalities</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Applications-Of-Simple-Inequalities-Easy-Questions-1')">Practice Questions</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Topical-Test-1-Simple-Inequalities')">Topical Test</a></div>
+		
+	</div>						
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+
+<script>
+$("#backButton").click(function()
+		{
+			$("#AGSubTopics").fadeOut();
+			$("#AMSubTopics").fadeOut();
+			$("#SISubTopics").fadeOut();
+			
+			$("#backButton").fadeOut();
+			$("#grade7bTopics").delay(1000).fadeIn();
+		});
+
+$("#ChapterAG").click(function()
+		{
+			$("#grade7bTopics").fadeOut();
+			$("#AGSubTopics").delay(1000).fadeIn();
+			$("#backButton").delay(1000).fadeIn();
+	  	});
+
+$("#ChapterAM").click(function()
+		{
+			$("#grade7bTopics").fadeOut();
+			$("#AMSubTopics").delay(1000).fadeIn();
+			$("#backButton").delay(1000).fadeIn();
+	  	});
+$("#ChapterSI").click(function()
+		{
+			$("#grade7bTopics").fadeOut();
+			$("#SISubTopics").delay(1000).fadeIn();
+			$("#backButton").delay(1000).fadeIn();
+	  	});
+</script>

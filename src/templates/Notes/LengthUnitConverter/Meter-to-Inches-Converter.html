@@ -1,0 +1,141 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Meter to Inches Conversion - Home Campus</title>
+<meta name="keywords" content="Convert meter to inches">
+<meta name="description" content="Converter Metres to Inches" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Length-Units-Converter"><u>Length</u></a> >> <a href="/Learn/Meter-Unit-Converter"><u>Meter Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Meters to Inches?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Meters to Inches Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Meters&nbsp;=&nbsp; <input id="meter" type="number" size=6><br><br>
+				<button class="btn-quiz" id="ConvertToInches" onclick="ConvertToInches()">Convert To Inches</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="InchesAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+				1 meter &nbsp;=&nbsp; 39.3701 inches<br><br>
+				1 inch &nbsp;=&nbsp; 0.0254 meters		
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 10 meters to inches.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiple 10 by 39.3701
+				<br><br>Inches in 10 meters &nbsp;=&nbsp; 10 &nbsp;&times;&nbsp; 39.3701 &nbsp;=&nbsp; 393.7
+				<br><br>Hence, there are <strong>393.7 inches in 10 meters.</strong>
+			</div>				  
+		</div>							
+		<div class="concept-set__question">
+			<strong>Example 2: my height in meters is 2.1. How much is it inches?</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiple 2.1 by 39.3701
+				<br><br>Inches in 2.1 meters &nbsp;=&nbsp; 2.1 &nbsp;&times;&nbsp; 39.3701 &nbsp;=&nbsp; 82.68
+				<br><br>Hence, I'm <strong>82.68 inches</strong> tall
+			</div>				  
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Meter &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				100 centimeters<br><br>
+				1000 millimeters<br><br>
+				0.001 kilometer<br><br>
+				0.0006214 mile<br><br>
+				1.09361 yards<br><br>
+				3.281 feet<br><br>
+				39.3701 inches
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Meter Millimeter Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Meters to Inches Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="MeterR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-5 col-off-1" id="MeterR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Meter Millimeter Chart -->
+
+<script>
+
+function ConvertToInches() {
+	var meter = document.getElementById("meter").value;
+	var inches = meter*39.3701;
+	document.getElementById("InchesAnswer").innerHTML = "There are <strong>"+inches.toFixed(2)+" inches</strong> in "+meter+" meters."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var MeterR1C1HTML = '<br>0.01 meter &nbsp;=&nbsp; 0.3937 inches<br><br/>';
+MeterR1C1HTML = MeterR1C1HTML + '0.1 meter &nbsp;=&nbsp; 3.937 inches<br><br/>';
+
+for (var i = 1; i <= 50; i=i+1) {
+    MeterR1C1HTML += (i)+ ' meters &nbsp;=&nbsp; ' + (i*39.3701).toFixed(2) + ' inches<br/><br/>';
+  }
+document.getElementById("MeterR1C1").innerHTML = MeterR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var MeterR1C2HTML = '<br>';
+
+for (var i = 100; i <= 5000; i=i+100) {
+    MeterR1C2HTML += (i)+ ' meters &nbsp;=&nbsp; ' + (i*39.3701).toFixed(2) + ' inches<br/><br/>';
+  }
+document.getElementById("MeterR1C2").innerHTML = MeterR1C2HTML;
+
+/* R1C2 Ends */
+
+</script>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to convert metres to inches?","acceptedAnswer":{"@type":"Answer","text":"Multiply metres by 39.3701 to get inches."}},{"@type":"Question","name":"How many inches is 1 meter?","acceptedAnswer":{"@type":"Answer","text":"1 metre = 39.3701 inches"}},{"@type":"Question","name":"How many metres(m) is 1 inch?","acceptedAnswer":{"@type":"Answer","text":"1 inch = 0.0254 meters"}}]}</script>
+
+{% endblock %}

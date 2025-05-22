@@ -1,0 +1,256 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">10.1 Introduction to Simple Inequalities</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:55%;">10.1 Introduction to Simple Inequalities</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">For each of the following inequalities, check if the given value of <font class="grade7Variables">x</font> is one of the correct solutions.
+			</div>
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;vertical-align:top;">a)</div>
+		<div style="display:inline-block;width:360px;margin-top:10px;">2<font class="grade7Variables">x</font> &gt; &minus;6; <font class="grade7Variables">x</font> = &minus;7</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_3_1_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_3_1_answer" value='A' disabled
+				{% if C10SIEasy_3_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_1_answer" value='B' disabled
+				{% if C10SIEasy_3_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect<br>
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_3_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_3_1_answer" value='A'
+				{% if C10SIEasy_3_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_1_answer" value='B'
+				{% if C10SIEasy_3_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect<br>
+			{% endif %}	
+		</div>
+
+		<div style="display:inline-block;margin-left:40px;margin-top:30px;vertical-align:top;">b) &minus;</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:-1px;margin-top:20px;">
+			<p style="line-height:20%;text-align:center;">&nbsp;<font class="grade7Variables">x</font>&nbsp;<br>__<br></p>
+			<p style="line-height:20%;text-align:center;">2<br></p>
+		</div>
+		<div style="display:inline-block;width:20px;margin-top:30px;">&nbsp;&gt;&nbsp;</div>
+		<div style="display:inline-block;vertical-align:top;margin-left:-1px;margin-top:20px;">
+			<p style="line-height:20%;text-align:center;">&nbsp;3&nbsp;<br>__<br></p>
+			<p style="line-height:20%;text-align:center;">2<br></p>
+		</div>
+		<div style="display:inline-block;width:100px;margin-top:30px;">; &nbsp; <font class="grade7Variables">x</font> = &minus;3</div>
+		<div style="margin-left:65px;margin-top:5px;">
+			{% if C10SIEasy_3_2_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_3_2_answer" value='A' disabled
+				{% if C10SIEasy_3_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_2_answer" value='B' disabled
+				{% if C10SIEasy_3_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_3_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_3_2_answer" value='A'
+				{% if C10SIEasy_3_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_2_answer" value='B'
+				{% if C10SIEasy_3_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			{% endif %}	
+		</div>
+
+
+		<div style="display:inline-block;margin-left:40px;margin-top:30px;vertical-align:top;">c)</div>
+		<div style="display:inline-block;width:360px;margin-top:30px;"><font class="grade7Variables">x</font> + 4 &lt; &minus;1; <font class="grade7Variables">x</font> = &minus;6</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_3_3_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_3_3_answer" value='A' disabled
+				{% if C10SIEasy_3_3_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_3_answer" value='B' disabled
+				{% if C10SIEasy_3_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_3_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_3_3_answer" value='A'
+				{% if C10SIEasy_3_3_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_3_answer" value='B'
+				{% if C10SIEasy_3_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			{% endif %}	
+		</div>
+
+		<div style="display:inline-block;margin-left:40px;margin-top:30px;vertical-align:top;">d)</div>
+		<div style="display:inline-block;width:360px;margin-top:30px;"><font class="grade7Variables">x</font> &le; 1; <font class="grade7Variables">x</font> = &minus;5</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_3_4_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_3_4_answer" value='A' disabled
+				{% if C10SIEasy_3_4_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_4_answer" value='B' disabled
+				{% if C10SIEasy_3_4_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_3_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_3_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_3_4_answer" value='A'
+				{% if C10SIEasy_3_4_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Correct &nbsp;&nbsp;
+				<input type=radio name="C10SIEasy_3_4_answer" value='B'
+				{% if C10SIEasy_3_4_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;Incorrect &nbsp;&nbsp;<br>
+			{% endif %}	
+		</div>
+
+		{% if C10SIEasy_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="C10SIEasy_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="C10SIEasy_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='C10SIEasy_3_1_answer']").click(function()
+	{
+		question_id = "C10SIEasy_3";
+		question_type = "SimpleInequalities"
+		answer_id = "C10SIEasy_3_1_answer";
+		entered_answer = $("input:radio[name=C10SIEasy_3_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='C10SIEasy_3_2_answer']").click(function()
+			{
+				question_id = "C10SIEasy_3";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIEasy_3_2_answer";
+				entered_answer = $("input:radio[name=C10SIEasy_3_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='C10SIEasy_3_3_answer']").click(function()
+			{
+				question_id = "C10SIEasy_3";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIEasy_3_3_answer";
+				entered_answer = $("input:radio[name=C10SIEasy_3_3_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='C10SIEasy_3_4_answer']").click(function()
+			{
+				question_id = "C10SIEasy_4";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIEasy_3_4_answer";
+				entered_answer = $("input:radio[name=C10SIEasy_3_4_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#C10SIEasy_3_Submit").button({label:"Check Answers"});
+	$("#C10SIEasy_3_Retry").button({label:"Retry"});
+	$("#C10SIEasy_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SimpleInequalities"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C10SIEasy_3"+"#%$"+"C10SIEasy_3_1_answer"+"#%$"+$("input:radio[name=C10SIEasy_3_1_answer]:checked").val();
+		answers = answers + "#%$"+"C10SIEasy_3"+"#%$"+"C10SIEasy_3_2_answer"+"#%$"+$("input:radio[name=C10SIEasy_3_2_answer]:checked").val();
+		answers = answers + "#%$"+"C10SIEasy_3"+"#%$"+"C10SIEasy_3_3_answer"+"#%$"+$("input:radio[name=C10SIEasy_3_3_answer]:checked").val();
+		answers = answers + "#%$"+"C10SIEasy_3"+"#%$"+"C10SIEasy_3_4_answer"+"#%$"+$("input:radio[name=C10SIEasy_3_4_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C10SIEasy_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C10SIEasy_3_1_answer,C10SIEasy_3_2_answer,C10SIEasy_3_3_answer,C10SIEasy_3_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

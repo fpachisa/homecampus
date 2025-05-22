@@ -1,0 +1,13 @@
+{% extends 'Goals/Goals_Template.html' %}
+{% block jsHeader%}
+<script type="text/javascript"> 
+	$("#grade").val('6');
+	setP6Concepts();
+	$("#concept").val('P6RT');
+	$("#child").val('{{ChildId}}');	
+</script>
+{% endblock %}
+
+{% block GoalsTitle %}
+<h3><b>{{child }}'s Goals on Ratio for Grade 6:</b></h3>
+{% endblock %}

@@ -1,0 +1,277 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Speed - Advanced Word Problems - Home Campus</title>
+<meta name="description" content="Advanced Word Problems on Speed" />
+<meta name="keywords" content='"primary 6 maths", "grade 6 math", "Singapore math", "math for kids", elementary, math, story, problems, free, help, online, tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Speed: Advanced Word Problems</h2>
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. In a 10-km race, Grace ran the first 2 km in &nbsp;&nbsp;&nbsp; {{ frGen(1,5) }} h, the next 6 km at a speed of 9 km /h and the last stretch at 12 km/h.<br />
+			What was her average speed for the run?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_11.png" alt="average speed word problems"/><br />
+					Total distance &nbsp;=&nbsp; <b>10 km</b><br /><br />
+					
+					Let's calculate the total time taken:<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken for the first 2 km &nbsp;--&gt;&nbsp; {{ frGen(1,5) }} h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken for the next 6 km &nbsp;--&gt;&nbsp; {{ frGen(6,9) }} h &nbsp;=&nbsp; {{ frGen(2,3) }} h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken for the last 2 km &nbsp;--&gt;&nbsp; {{ frGen(2,12) }} h &nbsp;=&nbsp; {{ frGen(1,6) }} h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total time taken &nbsp;=&nbsp; {{ frGen(1,5) }} h &nbsp;+&nbsp; {{ frGen(2,3) }} h &nbsp;+&nbsp; {{ frGen(1,6) }} h &nbsp;=&nbsp; <b>{{ frGen(31,30) }} h</b> <br /><br />
+					
+					<b>Average speed</b> &nbsp;=&nbsp; 10 km &nbsp;&divide;&nbsp; {{ frGen(31,30) }} h &nbsp;=&nbsp; 10 km &nbsp;&times;&nbsp; {{ frGen(30,31) }} h &nbsp;=&nbsp; 9.67 km/h<br /><br />
+					
+					Her average speed for the run was <b>9.67 km/h</b>.
+			</div>
+		</div>		
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. Bella is taking an adventurous trip through a jungle. <br />
+				First, she trekked for 30 minutes into the thick jungle at an average speed of 6 km/h. <br />
+				Next, she took a boat to cross a lake which rode her at an average speed of 20 km/h for 12 minutes. <br />
+				For the last part of her trip, she hiked for 2 hours at an average speed of 4 km/h. <br />
+				Find the total distance she covered on her trip.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_21.png" alt="average speed word problems"/><br />
+				<b>Distance travelled during the first part</b><br />
+				<div class="col-10 col-off-1">
+					Average speed &nbsp;=&nbsp; 6 km/h<br />
+					Time taken &nbsp;=&nbsp; 30 min &nbsp;=&nbsp; {{ frGen(1,2) }} h<br />
+					Distance travelled &nbsp;=&nbsp; 6 km/h &nbsp;&times;&nbsp; {{ frGen(1,2) }}h &nbsp;=&nbsp; 3 km
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>Distance travelled during the second part</b>
+				<div class="col-10 col-off-1">
+					Average speed &nbsp;=&nbsp; 20 km/h<br />
+					Time taken &nbsp;=&nbsp; 12 min &nbsp;=&nbsp; {{ frGen(1,5) }} h<br />
+					Distance travelled &nbsp;=&nbsp; 20 km/h &nbsp;&times;&nbsp; {{ frGen(1,5) }}h &nbsp;=&nbsp; 4 km
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>Distance travelled during the last part</b>
+				<div class="col-10 col-off-1">
+					Average speed &nbsp;=&nbsp; 4 km/h<br />
+					Time taken &nbsp;=&nbsp; 2 h &nbsp;=&nbsp; {{ frGen(1,5) }} h<br />
+					Distance travelled &nbsp;=&nbsp; 4 km/h &nbsp;&times;&nbsp; 2 h &nbsp;=&nbsp; 8 km
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>Total distance travelled</b> &nbsp;=&nbsp; 3 km &nbsp;+&nbsp; 4 km &nbsp;+&nbsp; 8 km &nbsp;=&nbsp; 15 km<br /> <br />
+				She covered a total distance of <b>15 km</b> on her trip.
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Eric walked at an average pace of 65 m/min for the first half of the distance to his friend's house. <br />
+				Calculate his average speed for the second half of the distance if he took a total of 18 minutes to reach his friend's house which was 1.3 km away.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_31.png" alt="average speed word problems"/><br />
+				<b>For the first half</b><br />
+				<div class="col-10 col-off-1">
+					Distance covered &nbsp;=&nbsp; 1.3 km &nbsp;&divide;&nbsp; 2 &nbsp;=&nbsp; 0.65 km &nbsp;=&nbsp; 650 m<br />
+					Average speed &nbsp;=&nbsp; 65 m/min <br />
+					Time taken &nbsp;=&nbsp; 650 m &nbsp;&divide;&nbsp; 65 m/min &nbsp;=&nbsp; 10 min
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>For the second half</b><br />
+				<div class="col-10 col-off-1">
+					Distance covered &nbsp;=&nbsp; 650 m <br />
+					Time taken &nbsp;=&nbsp; 18 min &nbsp;&minus;&nbsp; 10 min &nbsp;=&nbsp; 8 min <br />
+					Average speed &nbsp;=&nbsp; 650 m &nbsp;&divide;&nbsp; 8 min &nbsp;=&nbsp; 81.25 m/min 
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				His average speed for the second half of the distance was <b>81.25 m/min</b>.
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. Sally and Molly started from the same point at the same time in two different cars and drove on the same route to reach the same destination at average speeds of 40 km/h and 45 km/h respectively. <br />
+				If the route was 270 kilometres long and if Molly arrived at the destination at 5:30 pm, when did Sally arrive there?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_41.png" alt="average speed word problems"/><br />
+				<b>Time taken by Sally</b> <br />
+				=&nbsp; 270 km &nbsp;&divide;&nbsp; 40 km/h <br />
+				=&nbsp; 6.75 h <br />
+				=&nbsp; 6 h &nbsp;+&nbsp; 0.75 h<br />
+				=&nbsp; 6 h &nbsp;+&nbsp; (0.75 &times; 60) min<br />
+				=&nbsp; 6 h &nbsp;+&nbsp; 45 min<br />
+				=&nbsp; 6 h 45 min<br /><br />
+				
+				<b>Time taken by Molly</b> <br />
+				=&nbsp; 270 km &nbsp;&divide;&nbsp; 45 km/h <br />
+				=&nbsp; 6 h <br /><br />
+				
+				Sally took 45 min more than Molly. <br />
+				45 min after 5:30 pm is 6:15 pm. <br />
+				Sally arrived at the destination at <b>6:15 pm.</b>
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. Carol and Maya took part in a 20-km cycle race. Carol rode at an average speed of 22 km/h while Maya rode at an average speed of 25 km/h. <br />
+				How far apart will the two girls be when Maya has covered half the distance?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_51.png" alt="average speed word problems"/><br />
+				Time taken by Maya to cover half the distance &nbsp;=&nbsp; 10 km &nbsp;&divide;&nbsp; 25 km/h &nbsp;=&nbsp; {{ frGen(2,5) }} h<br /><br />
+				
+				Distance covered by Carol in {{ frGen(2,5) }} h &nbsp;=&nbsp; 22 km/h &nbsp;&times;&nbsp; {{ frGen(2,5) }} h &nbsp;=&nbsp; 8.8 km <br /><br />
+				
+				Distance between Maya and Carol after {{ frGen(2,5) }} h &nbsp;=&nbsp; 10 km &nbsp;&minus;&nbsp; 8.8 km &nbsp;=&nbsp; 1.2 km<br /><br />
+				
+				The girls will be <b>1.2 km</b> apart when Maya has covered half the distance.
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>6. James and Lily, who were standing 29.25 km apart, started running towards each other at 0915. <br />
+				James ran at an average speed of 5.5 km/h while Lily ran at an average speed of 7.5 km/h. <br />
+				a) &nbsp; At what time did they meet? <br />
+				b) &nbsp; How much distance had Lily run when they both met?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_word_problem_61.png" alt="average speed word problems"/><br />
+				
+				a) &nbsp; Distance covered by James in 1 h &nbsp;=&nbsp; 5.5 km <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Distance covered by Lily in 1 h &nbsp;=&nbsp; 7.5 km <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total distance covered by James and Lily in 1 h &nbsp;=&nbsp; 5.5 km &nbsp;+&nbsp; 7.5 km &nbsp;=&nbsp; 13 km <br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken to cover 13 km &nbsp;=&nbsp; 1 h <br /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken to cover 29.25 km <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 2.25 h <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 2 h &nbsp;+&nbsp; 0.25 h <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 2 h &nbsp;+&nbsp; (0.25 &times; 60) min <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 2 h + 15 min <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 2 h 15 min <br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 h 15 min after 0915 is 1130.<br /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; James and Lily met at <b>1130</b>. <br /><br />
+				
+				b) &nbsp; Distance run by Lily in 2 h 15 min <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 7.5 km/h &nbsp;&times;&nbsp; (2 h 15 min) <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 7.5 km/h &nbsp;&times;&nbsp; 2.25 h <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp; 16.875 km <br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lily had run <b>16.875 km</b> when they both met.
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>7. What is the speed at which the Earth revolves around the Sun? <br /> 
+				Note: Assume the Earth's orbit around the Sun to be circular instead of elliptical.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-7 col-off-1">
+				<img src="/images/notes/P6_speed_advanced_problem_earth_revolution.png" alt="average speed word problems"/>
+			</div>
+			<div class="col-3 hint-box">
+				The radius is the average distance of the Earth from the Sun <br />
+				&asymp;&nbsp; 150 000 000 km <br />
+				=&nbsp; 150 million kilometres
+			</div>
+			<div class="col-10 col-off-1">	
+				Time taken by the Earth to make one revolution around the Sun &nbsp;=&nbsp; 1 year <br /><br />
+				Distance travelled by the Earth around the Sun in 1 year <br />
+				=&nbsp; the orbit of the Earth <br />
+				=&nbsp; circumference of the circle or the orbit <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; &pi; &nbsp;&times;&nbsp; radius <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; 3.14 &nbsp;&times;&nbsp; 150 000 000 km <br />
+				=&nbsp; 942 000 000 km <br /><br />
+				
+				Speed &nbsp;=&nbsp; {{ frGen("Distance travelled","Time taken") }} <br />
+				=&nbsp; {{ frGen("942 000 000 km","1 year") }} <br />
+				=&nbsp; {{ frGen("942 000 000 km","365 days") }} <br />
+				=&nbsp; {{ frGen("2 580 822 km","1 day") }} <br />
+				=&nbsp; {{ frGen("2 580 822 km","24 hours") }} <br />
+				=&nbsp; 107 534 km/h <br />
+				&asymp;&nbsp; 100 000 km/h <br /><br />
+				
+				So, the Earth revolves around the sun at a speed of about <b>100 000 km/h</b>. <br />
+				At this speed, it will take only 9 minutes to travel from Singapore to New York!
+			</div>
+		</div>
+	</div>		
+</div> <!-- End of answer 7 -->
+
+
+{% endblock %}

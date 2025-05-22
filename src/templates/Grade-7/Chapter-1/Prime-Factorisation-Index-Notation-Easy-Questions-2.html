@@ -1,0 +1,374 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.3 Prime Factorisation and Index Notation</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:48%;">1.3 Prime Factorisation and Index Notation</div>
+	{% endif %}
+	<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:180px;">
+			c) 5 &times; 7 &times; 7 &times; 11 &times; 11
+		</div>
+		<div style="display:inline-block;">
+			=&nbsp;
+			{% if PFEasy_6_1_answer_correct is defined %}
+				<input id="PFEasy_6_1_answer" size=2 value='{{PFEasy_6_1_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_6_1_answer" size=2 value='{{PFEasy_6_1_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+			&times;
+		</div>
+		<div style="display:inline-block;">
+			{% if PFEasy_6_2_answer_correct is defined %}
+				<input id="PFEasy_6_2_answer" size=2 value='{{PFEasy_6_2_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_6_2_answer" size=2 value='{{PFEasy_6_2_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if PFEasy_6_3_answer_correct is defined %}
+				<input id="PFEasy_6_3_answer" size=1 value='{{PFEasy_6_3_answer}}' readonly style="width:10px;height:10px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="PFEasy_6_3_answer" size=1 value='{{PFEasy_6_3_answer}}' style="width:10px;height:14px;">
+			{% endif %}
+		</div>
+		<div style="display:inline-block;">
+			&times;
+			{% if PFEasy_6_4_answer_correct is defined %}
+				<input id="PFEasy_6_4_answer" size=2 value='{{PFEasy_6_4_answer}}' readonly style="width:15px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_6_4_answer" size=2 value='{{PFEasy_6_4_answer}}' style="width:15px;text-align:center;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if PFEasy_6_5_answer_correct is defined %}
+				<input id="PFEasy_6_5_answer" size=1 value='{{PFEasy_6_5_answer}}' readonly style="width:10px;height:10px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="PFEasy_6_5_answer" size=1 value='{{PFEasy_6_5_answer}}' style="width:10px;height:14px;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-left:30px;">
+		{% if PFEasy_6_1_answer_correct is defined %}
+			{% if PFEasy_6_1_answer_correct and PFEasy_6_2_answer_correct and PFEasy_6_3_answer_correct and PFEasy_6_4_answer_correct and PFEasy_6_5_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not (PFEasy_6_1_answer_correct and PFEasy_6_2_answer_correct and PFEasy_6_3_answer_correct and PFEasy_6_4_answer_correct and PFEasy_6_5_answer_correct) and PFEasy_6_1_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{PFEasy_6_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% endif %}
+		</div>			
+	</div>
+	<div style="margin-left:50px;margin-top:30px;">
+		<div style="display:inline-block;width:180px;">
+			d) 2 &times; 3 &times; 3 &times; 7 &times; 7 &times; 7
+		</div>
+		<div style="display:inline-block;">				
+			=&nbsp;
+			{% if PFEasy_7_1_answer_correct is defined %}
+				<input id="PFEasy_7_1_answer" size=2 value='{{PFEasy_7_1_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_7_1_answer" size=2 value='{{PFEasy_7_1_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+			&times;
+		</div>
+		<div style="display:inline-block;">
+			{% if PFEasy_7_2_answer_correct is defined %}
+				<input id="PFEasy_7_2_answer" size=2 value='{{PFEasy_7_2_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_7_2_answer" size=2 value='{{PFEasy_7_2_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if PFEasy_7_3_answer_correct is defined %}
+				<input id="PFEasy_7_3_answer" size=1 value='{{PFEasy_7_3_answer}}' readonly style="width:10px;height:10px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="PFEasy_7_3_answer" size=1 value='{{PFEasy_7_3_answer}}' style="width:10px;height:14px;">
+			{% endif %}
+		</div>
+		<div style="display:inline-block;">
+			&times;
+			{% if PFEasy_7_4_answer_correct is defined %}
+				<input id="PFEasy_7_4_answer" size=2 value='{{PFEasy_7_4_answer}}' readonly style="width:15px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="PFEasy_7_4_answer" size=2 value='{{PFEasy_7_4_answer}}' style="width:15px;text-align:center;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if PFEasy_7_5_answer_correct is defined %}
+				<input id="PFEasy_7_5_answer" size=1 value='{{PFEasy_7_5_answer}}' readonly style="width:10px;height:10px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="PFEasy_7_5_answer" size=1 value='{{PFEasy_7_5_answer}}' style="width:10px;height:14px;">
+			{% endif %}
+		</div>			
+		<div style="display:inline-block;margin-left:30px;">
+		{% if PFEasy_7_1_answer_correct is defined %}
+			{% if PFEasy_7_1_answer_correct and PFEasy_7_2_answer_correct and PFEasy_7_3_answer_correct and PFEasy_7_4_answer_correct and PFEasy_7_5_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not (PFEasy_7_1_answer_correct and PFEasy_7_2_answer_correct and PFEasy_7_3_answer_correct and PFEasy_7_4_answer_correct and PFEasy_7_5_answer_correct) and PFEasy_7_1_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{PFEasy_7_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% endif %}
+		</div>			
+	</div>
+	<div style="margin-left:20px;margin-top:40px;"><font class="grade7PracticeQuestionNumber">3)</font> What is the value of each of the following?</div> 
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:80px;">
+			a) 13<sup>2</sup>
+		</div>
+		<div style="display:inline-block;">	
+			= &nbsp;
+			{% if PFEasy_8_answer_correct is defined %}
+				<input id="PFEasy_8_answer" size=4 value='{{PFEasy_8_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if PFEasy_8_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not PFEasy_8_answer_correct and PFEasy_8_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{PFEasy_8_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+			{% else %}
+				<input id="PFEasy_8_answer" size=4 value='{{PFEasy_8_answer}}' style="">
+			{% endif %}
+		</div>
+	</div>
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:80px;">
+			b) 4<sup>4</sup>
+		</div>
+		<div style="display:inline-block;">
+			 = &nbsp;	
+			{% if PFEasy_9_answer_correct is defined %}
+				<input id="PFEasy_9_answer" size=4 value='{{PFEasy_9_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if PFEasy_9_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not PFEasy_9_answer_correct and PFEasy_9_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{PFEasy_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+			{% else %}
+				<input id="PFEasy_9_answer" size=4 value='{{PFEasy_9_answer}}' style="">
+			{% endif %}
+		</div>
+	</div>
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:80px;">
+			c) 3<sup>2</sup> &times; 9<sup>2</sup>
+		</div>
+		<div style="display:inline-block;">	
+			 = &nbsp;
+			{% if PFEasy_10_answer_correct is defined %}
+				<input id="PFEasy_10_answer" size=4 value='{{PFEasy_10_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if PFEasy_10_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not PFEasy_10_answer_correct and PFEasy_10_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{PFEasy_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+			{% else %}
+				<input id="PFEasy_10_answer" size=4 value='{{PFEasy_10_answer}}' style="">
+			{% endif %}
+		</div>
+	</div>
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:80px;">
+			d) 3<sup>2</sup> + 9<sup>2</sup>
+		</div>
+		<div style="display:inline-block;">	
+		 	= &nbsp;	
+			{% if PFEasy_11_answer_correct is defined %}
+				<input id="PFEasy_11_answer" size=4 value='{{PFEasy_11_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if PFEasy_11_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not PFEasy_11_answer_correct and PFEasy_11_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{PFEasy_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+			{% else %}
+				<input id="PFEasy_11_answer" size=4 value='{{PFEasy_11_answer}}' style="">
+			{% endif %}
+		</div>
+	</div>
+
+	{% if PFEasy_6_1_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:200px;"><button id="retry_PFEasy_2" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:30px;margin-left:200px;"><button id="submit_PFEasy_2" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#PFEasy_6_1_answer").change(function()
+	{
+		question_id = "PFEasy_6";
+		question_type = "PrimeFactorisation"
+		answer_id = "PFEasy_6_1_answer";
+		entered_answer = $("#PFEasy_6_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PFEasy_6_2_answer").change(function()
+			{
+				question_id = "PFEasy_6";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_6_2_answer";
+				entered_answer = $("#PFEasy_6_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_6_3_answer").change(function()
+			{
+				question_id = "PFEasy_6";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_6_3_answer";
+				entered_answer = $("#PFEasy_6_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_6_4_answer").change(function()
+			{
+				question_id = "PFEasy_6";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_6_4_answer";
+				entered_answer = $("#PFEasy_6_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_6_5_answer").change(function()
+			{
+				question_id = "PFEasy_6";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_6_5_answer";
+				entered_answer = $("#PFEasy_6_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_7_1_answer").change(function()
+			{
+				question_id = "PFEasy_7";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_7_1_answer";
+				entered_answer = $("#PFEasy_7_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_7_2_answer").change(function()
+			{
+				question_id = "PFEasy_7";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_7_2_answer";
+				entered_answer = $("#PFEasy_7_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_7_3_answer").change(function()
+			{
+				question_id = "PFEasy_7";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_7_3_answer";
+				entered_answer = $("#PFEasy_7_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_7_4_answer").change(function()
+			{
+				question_id = "PFEasy_7";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_7_4_answer";
+				entered_answer = $("#PFEasy_7_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_7_5_answer").change(function()
+			{
+				question_id = "PFEasy_7";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_7_5_answer";
+				entered_answer = $("#PFEasy_7_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_8_answer").change(function()
+			{
+				question_id = "PFEasy_8";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_8_answer";
+				entered_answer = $("#PFEasy_8_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_9_answer").change(function()
+			{
+				question_id = "PFEasy_9";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_9_answer";
+				entered_answer = $("#PFEasy_9_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_10_answer").change(function()
+			{
+				question_id = "PFEasy_10";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_10_answer";
+				entered_answer = $("#PFEasy_10_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PFEasy_11_answer").change(function()
+			{
+				question_id = "PFEasy_11";
+				question_type = "PrimeFactorisation"
+				answer_id = "PFEasy_11_answer";
+				entered_answer = $("#PFEasy_11_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#submit_PFEasy_2").button({label:"Check Answers"});
+	$("#retry_PFEasy_2").button({label:"Retry"});
+	$("#submit_PFEasy_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PrimeFactorisation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PFEasy_6"+"#%$"+"PFEasy_6_1_answer"+"#%$"+$("#PFEasy_6_1_answer").val();	
+		answers = answers + "#%$"+"PFEasy_6"+"#%$"+"PFEasy_6_2_answer"+"#%$"+$("#PFEasy_6_2_answer").val();
+		answers = answers + "#%$"+"PFEasy_6"+"#%$"+"PFEasy_6_3_answer"+"#%$"+$("#PFEasy_6_3_answer").val();
+		answers = answers + "#%$"+"PFEasy_6"+"#%$"+"PFEasy_6_4_answer"+"#%$"+$("#PFEasy_6_4_answer").val();
+		answers = answers + "#%$"+"PFEasy_6"+"#%$"+"PFEasy_6_5_answer"+"#%$"+$("#PFEasy_6_5_answer").val();
+		answers = answers + "#%$"+"PFEasy_7"+"#%$"+"PFEasy_7_1_answer"+"#%$"+$("#PFEasy_7_1_answer").val();
+		answers = answers + "#%$"+"PFEasy_7"+"#%$"+"PFEasy_7_2_answer"+"#%$"+$("#PFEasy_7_2_answer").val();
+		answers = answers + "#%$"+"PFEasy_7"+"#%$"+"PFEasy_7_3_answer"+"#%$"+$("#PFEasy_7_3_answer").val();
+		answers = answers + "#%$"+"PFEasy_7"+"#%$"+"PFEasy_7_4_answer"+"#%$"+$("#PFEasy_7_4_answer").val();
+		answers = answers + "#%$"+"PFEasy_7"+"#%$"+"PFEasy_7_5_answer"+"#%$"+$("#PFEasy_7_5_answer").val();
+		answers = answers + "#%$"+"PFEasy_8"+"#%$"+"PFEasy_8_answer"+"#%$"+$("#PFEasy_8_answer").val();
+		answers = answers + "#%$"+"PFEasy_9"+"#%$"+"PFEasy_9_answer"+"#%$"+$("#PFEasy_9_answer").val();
+		answers = answers + "#%$"+"PFEasy_10"+"#%$"+"PFEasy_10_answer"+"#%$"+$("#PFEasy_10_answer").val();
+		answers = answers + "#%$"+"PFEasy_11"+"#%$"+"PFEasy_11_answer"+"#%$"+$("#PFEasy_11_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry_PFEasy_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PFEasy_6_1_answer,PFEasy_6_2_answer,PFEasy_6_3_answer,PFEasy_6_4_answer,PFEasy_6_5_answer,";
+		answer_ids = answer_ids + "PFEasy_7_1_answer,PFEasy_7_2_answer,PFEasy_7_3_answer,PFEasy_7_4_answer,PFEasy_7_5_answer,";
+		answer_ids = answer_ids + "PFEasy_8_answer,PFEasy_9_answer,PFEasy_10_answer,PFEasy_11_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:450
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

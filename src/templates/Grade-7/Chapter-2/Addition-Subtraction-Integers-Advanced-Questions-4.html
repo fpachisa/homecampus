@@ -1,0 +1,154 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				A sonic depth finder was used to trace a shark's activity. A fathogram showed 5 readings that were taken at different points in time which indicated the distance of the shark from the surface of the ocean.
+				<div style="margin-top:10px;">
+				1<sup>st</sup> reading: 519 fathom<br>
+				2<sup>nd</sup> reading: 765 fathom<br>
+				3<sup>rd</sup> reading: 298 fathom<br>
+				4<sup>th</sup> reading: 371 fathom<br>
+				5<sup>th</sup> reading: 990 fathom
+
+				</div> 				
+			</div>
+		</div>
+		<div style="margin-left:30px;margin-top:10px;">a) At what depth was the shark farthest from the surface of the ocean?
+			<div style="margin-left:40px;margin-top:10px;">Answer:&nbsp;
+			{% if RNASAdvanced_4_1_answer_correct is defined %}
+				<input id="RNASAdvanced_4_1_answer" value='{{RNASAdvanced_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> fathoms&nbsp;
+					{% if RNASAdvanced_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASAdvanced_4_1_answer" value='{{RNASAdvanced_4_1_answer}}' style="width:30px;" > fathoms&nbsp;
+			{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:30px;margin-top:20px;">b) How much distance did the shark cover while moving from the 2<sup>nd</sup> reading to the 3<sup>rd</sup> reading?
+		</div>
+		<div style="margin-left:35px;margin-top:10px;">
+			{% if RNASAdvanced_4_2_answer_correct is defined %}
+				<input type=radio name="RNASAdvanced_4_2_answer" value='a' disabled
+				{% if RNASAdvanced_4_2_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >467 fathoms up&nbsp;
+				<input type=radio name="RNASAdvanced_4_2_answer" value='b' disabled
+				{% if RNASAdvanced_4_2_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >1063 fathoms up<br>
+				<input type=radio name="RNASAdvanced_4_2_answer" value='c' disabled
+				{% if RNASAdvanced_4_2_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >467 fathoms down&nbsp;
+				<input type=radio name="RNASAdvanced_4_2_answer" value='d' disabled
+				{% if RNASAdvanced_4_2_answer == 'd' %} 
+   					checked="checked"
+   				{%endif%}
+				 >1063 fathoms down&nbsp;				 
+				{% if RNASAdvanced_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNASAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RNASAdvanced_4_2_answer" value='a'
+				{% if RNASAdvanced_4_2_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >467 fathoms up&nbsp;
+				<input type=radio name="RNASAdvanced_4_2_answer" value='b'
+				{% if RNASAdvanced_4_2_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 >1063 fathoms up<br>
+				 <input type=radio name="RNASAdvanced_4_2_answer" value='c'
+				{% if RNASAdvanced_4_2_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >467 fathoms down
+				 <input type=radio name="RNASAdvanced_4_2_answer" value='d'
+				{% if RNASAdvanced_4_2_answer == 'Brother'%} 
+   					checked="checked"
+   				{%endif%}
+				 >1063 fathoms down			 
+			{% endif %}	
+		</div>
+
+
+		{% if RNASAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="RNASAdvanced_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNASAdvanced_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNASAdvanced_4_1_answer").change(function()
+	{
+		question_id = "RNASAdvanced_4";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASAdvanced_4_1_answer";
+		entered_answer = $("#RNASAdvanced_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='RNASAdvanced_4_2_answer']").click(function()
+	{
+		question_id = "RNASAdvanced_4";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASAdvanced_4_2_answer";
+		entered_answer = $("input:radio[name=RNASAdvanced_4_2_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	
+	$("#RNASAdvanced_4_Submit").button({label:"Check Answers"});
+	$("#RNASAdvanced_4_Retry").button({label:"Retry"});
+	$("#RNASAdvanced_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASAdvanced_4"+"#%$"+"RNASAdvanced_4_1_answer"+"#%$"+$("#RNASAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"RNASAdvanced_4"+"#%$"+"RNASAdvanced_4_2_answer"+"#%$"+$("input:radio[name=RNASAdvanced_4_2_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASAdvanced_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASAdvanced_4_1_answer,RNASAdvanced_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

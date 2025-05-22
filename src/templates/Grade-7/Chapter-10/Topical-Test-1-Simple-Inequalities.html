@@ -1,0 +1,115 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">Simple Inequalities - Topical Test</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:60%;">Simple Inequalities - Topical Test</div>
+	{% endif %}
+	<div class="grade7TopicName">Simple Inequalities - Topical Test</div>
+	{% if current_user -%}
+		<div class="grade7PageMargin">
+		{% if current_user.IsParent %}
+			{% if childData | length == 0 %}
+				<div style="margin-top:30px;margin-left:20px;">No child account has been created yet. Create an account to attempt tests.</div>
+				<div style="margin-top:30px;margin-left:20px;"><button id="add_child_account" style="outline:none;"></button></div>
+				<script>
+					$("#add_child_account").button({label:"Create Child Account"});
+					$("#add_child_account").click(function()
+						{
+							window.location.href = '/MyProfile';
+					  	});				
+				</script>
+			{% else %}
+				<div style="margin-top:30px;margin-left:20px;">
+					<table class="Reports" style="cursor:pointer">
+						<tr>
+							<th>Name</th><th>Attempt</th><th>Start Date</th><th>Time Taken</th><th>Status</th><th>Score</th>
+						</tr>			
+				{% if test_data | length == 0 %}
+					<tr><td>{{childData[0][1]}}</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+					</table>
+					<div style="margin-top:30px;margin-left:20px;">Login as child to attempt the test.</div>
+				{% else %}
+					{% for t in test_data %}
+						<tr id={{t.test_id|e}} onclick="callTestPageLoad('{{t.attempt}}','{{t.student_id}}')">
+							<td>{{t.student_name}}
+							<td>{{t.attempt}}</td>
+							<td>{{t.start_date}}</td>
+							<td>{{t.time_taken}}</td>
+							<td>{{t.status}}</td>
+							<td>{{t.score}}</td>
+						</tr>
+					{% endfor %}					
+					</table>
+				{% endif %}
+				</div>
+			{% endif %}		
+		{% else %}		
+			{% if test_data | length == 0 %}
+				<div style="margin-top:30px;margin-left:80px;"><button id="C10SI_TT_Start_Test" style="outline:none;"></button></div>
+			{% else %}
+				<div style="margin-top:30px;margin-left:20px;">
+				<table class="Reports" style="cursor:pointer">
+					<tr>
+						<th>Attempt</th><th>Start Date</th><th>Time Taken</th><th>Status</th><th>Score</th>
+					</tr>
+					{% for t in test_data %}
+						<tr id={{t.test_id|e}} onclick="callTestPageLoad('{{t.attempt}}','{{t.student_id}}')">
+							<td>{{t.attempt}}</td>
+							<td>{{t.start_date}}</td>
+							<td>{{t.time_taken}}</td>
+							<td>{{t.status}}</td>
+							<td>{{t.score}}</td>
+						</tr>
+					{% endfor %}					
+				</table>
+				</div>
+				{% if showTryAgainButton == 'Y' %}
+					<div style="margin-top:30px;margin-left:80px;"><button id="C10SI_TT_Try_Again" style="outline:none;"></button></div>
+				{% endif %}
+			{% endif %}			
+		{% endif %}
+		</div>
+	{% else %}
+		<div style="margin-left:30px;margin-top:40px;"><a href="/SignIn?continue=%2FSecondary-1-Grade-7-Mathematics?pageName=Topical-Test-1-Simple-Inequalities"><img src="/images/g7_lock.png"></a></div>
+	{% endif %}			
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#C10SI_TT_Start_Test").button({label:"Start Test"});
+	$("#C10SI_TT_Start_Test").click(function()
+		{
+			student_id = '{{current_user.username}}';
+			leftPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-1.html';
+			rightPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-2.html';
+			testTopic = 'C10SI_Topical_Test_1';
+			attempt = 1;
+			testStart = 'Y';
+			testName = 'Topical-Test-1-Simple-Inequalities';
+			total_marks = 50;
+			Grade7TopicalTestLoadByName(student_id,leftPage,rightPage,testTopic,attempt,testStart,testName,total_marks);
+	  	});
+	$("#C10SI_TT_Try_Again").button({label:"Try Again"});
+	$("#C10SI_TT_Try_Again").click(function()
+			{
+				student_id = '{{current_user.username}}';
+				leftPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-1.html';
+				rightPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-2.html';
+				testTopic = 'C10SI_Topical_Test_1';
+				attempt = {{test_attempt}};
+				testStart = 'Y';
+				testName = 'Topical-Test-1-Simple-Inequalities';
+				total_marks = 50;
+				Grade7TopicalTestLoadByName(student_id,leftPage,rightPage,testTopic,attempt,testStart,testName,total_marks);
+		  	});	
+	function callTestPageLoad(attempt,student_id)
+	{
+		leftPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-1.html';
+		rightPage = '/Grade-7/Chapter-10/Topical-Test-1-Simple-Inequalities-Page-2.html';
+		testTopic = 'C10SI_Topical_Test_1';
+		attempt = attempt;
+		testStart = 'N';
+		testPageName = 'Topical-Test-1-Simple-Inequalities';
+		total_marks = 50;
+		Grade7TopicalTestLoadByName(student_id,leftPage,rightPage,testTopic,attempt,testStart,testPageName,total_marks);
+	}		
+</script>

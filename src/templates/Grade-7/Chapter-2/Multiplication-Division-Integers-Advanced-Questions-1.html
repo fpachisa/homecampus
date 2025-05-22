@@ -1,0 +1,109 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:10px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The roof of a building is 206 m above ground level. The building has 3 levels of underground carparks. The base of the lowest carpark is 28 m below ground level.
+			</div>
+		</div>
+		<br>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">Find the vertical distance between the roof of the building and the base of the lowest carpark.</div>		
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; 
+			{% if RNMDAdvanced_1_1_answer_correct is defined %}
+				<input id="RNMDAdvanced_1_1_answer" value='{{RNMDAdvanced_1_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> m&nbsp;
+					{% if RNMDAdvanced_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_1_1_answer" value='{{RNMDAdvanced_1_1_answer}}' style="width:40px;" > m&nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:10px;">b)</div>
+		<div style="display:inline-block;margin-top:10px;width:390px;vertical-align:top;">A restaurant is located vertically midway between the roof of the building and the base of the lowest carpark. At what height is the restaurant above the ground level?</div>		
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp;
+			{% if RNMDAdvanced_1_2_answer_correct is defined %}
+				<input id="RNMDAdvanced_1_2_answer" value='{{RNMDAdvanced_1_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> m&nbsp;
+					{% if RNMDAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_1_2_answer_correct and RNMDAdvanced_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_1_2_answer" value='{{RNMDAdvanced_1_2_answer}}' style="width:40px;" > m&nbsp;
+			{% endif %}
+		</div>
+
+
+		{% if RNMDAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:-15px;margin-left:380px;"><button id="RNMDAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNMDAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNMDAdvanced_1_1_answer").change(function()
+	{
+		question_id = "RNMDAdvanced_1";
+		question_type = "MultiplicationDivisionIntegers"
+		answer_id = "RNMDAdvanced_1_1_answer";
+		entered_answer = $("#RNMDAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNMDAdvanced_1_2_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_1";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_1_2_answer";
+				entered_answer = $("#RNMDAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNMDAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#RNMDAdvanced_1_Retry").button({label:"Retry"});
+	$("#RNMDAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDAdvanced_1"+"#%$"+"RNMDAdvanced_1_1_answer"+"#%$"+$("#RNMDAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_1"+"#%$"+"RNMDAdvanced_1_2_answer"+"#%$"+$("#RNMDAdvanced_1_2_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDAdvanced_1_1_answer,RNMDAdvanced_1_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

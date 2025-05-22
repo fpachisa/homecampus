@@ -1,0 +1,207 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.4 Highest Common Factor</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:64%;">1.4 Highest Common Factor</div>
+	{% endif %}
+	<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">1) </font>Find the HCF of the following pairs of numbers.</div> 
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">a) 12 and 24</div>
+		<div style="display:inline-block;"> 
+		{% if HCFEasy_1_answer_correct is defined %}
+			<input id="HCFEasy_1_answer" size=3 value='{{HCFEasy_1_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_1_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_1_answer_correct and HCFEasy_1_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_1_answer" size=3 value='{{HCFEasy_1_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">b) 30 and 42</div>
+		<div style="display:inline-block;">
+		{% if HCFEasy_2_answer_correct is defined %}
+			<input id="HCFEasy_2_answer" size=3 value='{{HCFEasy_2_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_2_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_2_answer_correct and HCFEasy_2_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_2_answer" size=3 value='{{HCFEasy_2_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">c) 64 and 81</div>
+		<div style="display:inline-block;">
+		{% if HCFEasy_3_answer_correct is defined %}
+			<input id="HCFEasy_3_answer" size=3 value='{{HCFEasy_3_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_3_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_3_answer_correct and HCFEasy_3_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_3_answer" size=3 value='{{HCFEasy_3_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">d) 182 and 195</div>
+		<div style="display:inline-block;">
+		{% if HCFEasy_4_answer_correct is defined %}
+			<input id="HCFEasy_4_answer" size=3 value='{{HCFEasy_4_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_4_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_4_answer_correct and HCFEasy_4_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_4_answer" size=3 value='{{HCFEasy_4_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">e) 462 and 495</div>
+		<div style="display:inline-block;">{% if HCFEasy_5_answer_correct is defined %}
+			<input id="HCFEasy_5_answer" size=3 value='{{HCFEasy_5_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_5_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_5_answer_correct and HCFEasy_5_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_5_answer" size=3 value='{{HCFEasy_5_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	<div style="margin-left:50px;margin-top:10px;">
+		<div style="display:inline-block;width:120px;">f) 289 and 867</div> 
+		<div style="display:inline-block;">
+		{% if HCFEasy_6_answer_correct is defined %}
+			<input id="HCFEasy_6_answer" size=3 value='{{HCFEasy_6_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if HCFEasy_6_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not HCFEasy_6_answer_correct and HCFEasy_6_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{HCFEasy_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="HCFEasy_6_answer" size=3 value='{{HCFEasy_6_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+	
+
+	{% if HCFEasy_1_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:200px;"><button id="retry_HCFEasy_1" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:20px;margin-left:200px;"><button id="submit_HCFEasy_1" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#HCFEasy_1_answer").change(function()
+	{
+		question_id = "HCFEasy_1";
+		question_type = "HCF"
+		answer_id = "HCFEasy_1_answer";
+		entered_answer = $("#HCFEasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#HCFEasy_2_answer").change(function()
+			{
+				question_id = "HCFEasy_2";
+				question_type = "HCF"
+				answer_id = "HCFEasy_2_answer";
+				entered_answer = $("#HCFEasy_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#HCFEasy_3_answer").change(function()
+			{
+				question_id = "HCFEasy_3";
+				question_type = "HCF"
+				answer_id = "HCFEasy_3_answer";
+				entered_answer = $("#HCFEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#HCFEasy_4_answer").change(function()
+			{
+				question_id = "HCFEasy_4";
+				question_type = "HCF"
+				answer_id = "HCFEasy_4_answer";
+				entered_answer = $("#HCFEasy_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#HCFEasy_5_answer").change(function()
+			{
+				question_id = "HCFEasy_5";
+				question_type = "HCF"
+				answer_id = "HCFEasy_5_answer";
+				entered_answer = $("#HCFEasy_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#HCFEasy_6_answer").change(function()
+			{
+				question_id = "HCFEasy_6";
+				question_type = "HCF"
+				answer_id = "HCFEasy_6_answer";
+				entered_answer = $("#HCFEasy_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#submit_HCFEasy_1").button({label:"Check Answers"});
+	$("#retry_HCFEasy_1").button({label:"Retry"});
+	$("#submit_HCFEasy_1").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "HCF"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "HCFEasy_1"+"#%$"+"HCFEasy_1_answer"+"#%$"+$("#HCFEasy_1_answer").val();
+		answers = answers + "#%$"+"HCFEasy_2"+"#%$"+"HCFEasy_2_answer"+"#%$"+$("#HCFEasy_2_answer").val();
+		answers = answers + "#%$"+"HCFEasy_3"+"#%$"+"HCFEasy_3_answer"+"#%$"+$("#HCFEasy_3_answer").val();
+		answers = answers + "#%$"+"HCFEasy_4"+"#%$"+"HCFEasy_4_answer"+"#%$"+$("#HCFEasy_4_answer").val();
+		answers = answers + "#%$"+"HCFEasy_5"+"#%$"+"HCFEasy_5_answer"+"#%$"+$("#HCFEasy_5_answer").val();
+		answers = answers + "#%$"+"HCFEasy_6"+"#%$"+"HCFEasy_6_answer"+"#%$"+$("#HCFEasy_6_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry_HCFEasy_1").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "HCFEasy_1_answer,HCFEasy_2_answer,HCFEasy_3_answer,HCFEasy_4_answer,HCFEasy_5_answer,HCFEasy_6_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:550
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

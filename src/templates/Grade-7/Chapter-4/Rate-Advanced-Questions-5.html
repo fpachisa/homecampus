@@ -1,0 +1,130 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div style="margin-left:40px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-top:10px;display:inline-block;width:380px;">
+			His annual tax payable based on the tax rate table below.
+			<table style="margin-top:10px;border-collapse:collapse;">
+				<tr><td style="border:1px solid black;"><strong>Taxable Income ($)</strong></td><td style="border:1px solid black;"><strong>Rate (%)</strong></td><td style="border:1px solid black;"><strong>Gross Tax Payable ($)</strong></td></tr>
+				<tr><td style="border:1px solid black;">First 20 000</td><td style="border:1px solid black;">0</td><td style="border:1px solid black;">0</td></tr>
+				<tr><td style="border:1px solid black;">Next 10 000</td><td style="border:1px solid black;">2</td><td style="border:1px solid black;">200</td></tr>
+				<tr><td style="border:1px solid black;">First 30 000</td><td style="border:1px solid black;">-</td><td style="border:1px solid black;">200</td></tr>
+				<tr><td style="border:1px solid black;">Next 10 000</td><td style="border:1px solid black;">3.5</td><td style="border:1px solid black;">350</td></tr>
+				<tr><td style="border:1px solid black;">First 40 000</td><td style="border:1px solid black;">-</td><td style="border:1px solid black;">550</td></tr>
+				<tr><td style="border:1px solid black;">Next 40 000</td><td style="border:1px solid black;">7</td><td style="border:1px solid black;">2800</td></tr>
+				<tr><td style="border:1px solid black;">First 80 000</td><td style="border:1px solid black;">-</td><td style="border:1px solid black;">3350</td></tr>
+				<tr><td style="border:1px solid black;">Next 40 000</td><td style="border:1px solid black;">11.5</td><td style="border:1px solid black;">4600</td></tr>
+			</table>
+			Source: www.iras.gov.sg
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp; $
+				{% if RATEAdvanced_5_2_answer_correct is defined %}
+					<input id="RATEAdvanced_5_2_answer" value='{{RATEAdvanced_5_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATEAdvanced_5_2_answer" value='{{RATEAdvanced_5_2_answer}}' style="width:40px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEAdvanced_5_2_answer_correct is defined %}
+					{% if RATEAdvanced_5_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEAdvanced_5_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">c)</div>
+		<div style="margin-top:10px;display:inline-block;width:380px;">
+			Ratio of tax payable to his taxable income, expressed in percentage, correct to 2 decimal places.
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp; 
+				{% if RATEAdvanced_5_3_answer_correct is defined %}
+					<input id="RATEAdvanced_5_3_answer" value='{{RATEAdvanced_5_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> %
+				{% else %}
+					<input id="RATEAdvanced_5_3_answer" value='{{RATEAdvanced_5_3_answer}}' style="width:30px;" > %
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEAdvanced_5_3_answer_correct is defined %}
+					{% if RATEAdvanced_5_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEAdvanced_5_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		
+		{% if RATEAdvanced_5_2_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="RATEAdvanced_5_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="RATEAdvanced_5_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATEAdvanced_5_2_answer").change(function()
+	{
+		question_id = "RATEAdvanced_5";
+		question_type = "Rate"
+		answer_id = "RATEAdvanced_5_2_answer";
+		entered_answer = $("#RATEAdvanced_5_2_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATEAdvanced_5_3_answer").change(function()
+			{
+				question_id = "RATEAdvanced_5";
+				question_type = "Rate"
+				answer_id = "RATEAdvanced_5_3_answer";
+				entered_answer = $("#RATEAdvanced_5_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	
+	$("#RATEAdvanced_5_Submit").button({label:"Check Answers"});
+	$("#RATEAdvanced_5_Retry").button({label:"Retry"});
+	$("#RATEAdvanced_5_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEAdvanced_5"+"#%$"+"RATEAdvanced_5_2_answer"+"#%$"+$("#RATEAdvanced_5_2_answer").val();
+		answers = answers + "#%$"+"RATEAdvanced_5"+"#%$"+"RATEAdvanced_5_3_answer"+"#%$"+$("#RATEAdvanced_5_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEAdvanced_5_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEAdvanced_5_2_answer,RATEAdvanced_5_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

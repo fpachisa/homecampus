@@ -1,0 +1,188 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:40%;">8.1 Addition and Subtraction of Linear Expressions</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Susan paid a service tax of 12% on a bill of $T in a restaurant. Represent the total amount paid as a linear algebraic expression.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if ASLEMedium_1_answer_correct is defined %}
+					<input id="ASLEMedium_1_answer" value='{{ASLEMedium_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ASLEMedium_1_answer" value='{{ASLEMedium_1_answer}}' style="width:40px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEMedium_1_answer_correct is defined %}
+					{% if ASLEMedium_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEMedium_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Daisy had a collection of <font class="grade7Variables">y</font> 5-cent coins and (2<font class="grade7Variables">y</font> + 700) 10-cent coins. 
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">a)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				Find the total value of the coins in her collection.
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ASLEMedium_2_1_answer_correct is defined %}
+			<div style="display:inline-block;">	
+				<input type=radio name="ASLEMedium_2_1_answer" value='A' disabled
+				{% if ASLEMedium_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >$(3<font class="grade7Variables">y</font> + 700)<br>
+				<input type=radio name="ASLEMedium_2_1_answer" value='B' disabled
+				{% if ASLEMedium_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$(0.25<font class="grade7Variables">y</font> + 70)<br>
+				<input type=radio name="ASLEMedium_2_1_answer" value='C' disabled
+				{% if ASLEMedium_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$(1.2<font class="grade7Variables">y</font> + 70)&nbsp;&nbsp;
+			</div>
+			<div style="display:inline-block;margin-top:-10px;">	
+				{% if ASLEMedium_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ASLEMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="ASLEMedium_2_1_answer" value='A'
+				{% if ASLEMedium_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >$(3<font class="grade7Variables">y</font> + 700)<br>
+				<input type=radio name="ASLEMedium_2_1_answer" value='B'
+				{% if ASLEMedium_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$(0.25<font class="grade7Variables">y</font> + 70)<br>
+				<input type=radio name="ASLEMedium_2_1_answer" value='C'
+				{% if ASLEMedium_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$(1.2<font class="grade7Variables">y</font> + 70)&nbsp;&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;width:15px;">b)</div>
+			<div style="display:inline-block;vertical-align:top;width:360px;">
+				Find the total value of the coins if the number of <br>5-cent coins was 1200.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Total Value of Coins = &nbsp;$
+				{% if ASLEMedium_2_2_answer_correct is defined %}
+					<input id="ASLEMedium_2_2_answer" value='{{ASLEMedium_2_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ASLEMedium_2_2_answer" value='{{ASLEMedium_2_2_answer}}' style="width:40px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ASLEMedium_2_2_answer_correct is defined %}
+					{% if ASLEMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ASLEMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if ASLEMedium_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="ASLEMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="ASLEMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ASLEMedium_1_answer").change(function()
+	{
+		question_id = "ASLEMedium_1";
+		question_type = "AdditionSubtractionLinearExpressions"
+		answer_id = "ASLEMedium_1_answer";
+		entered_answer = $("#ASLEMedium_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='ASLEMedium_2_1_answer']").click(function()
+			{
+				question_id = "ASLEMedium_1";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEMedium_2_1_answer";
+				entered_answer = $("input:radio[name=ASLEMedium_2_1_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#ASLEMedium_2_2_answer").change(function()
+			{
+				question_id = "ASLEMedium_2";
+				question_type = "AdditionSubtractionLinearExpressions"
+				answer_id = "ASLEMedium_2_2_answer";
+				entered_answer = $("#ASLEMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#ASLEMedium_1_Submit").button({label:"Check Answers"});
+	$("#ASLEMedium_1_Retry").button({label:"Retry"});
+	$("#ASLEMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionLinearExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ASLEMedium_1"+"#%$"+"ASLEMedium_1_answer"+"#%$"+$("#ASLEMedium_1_answer").val();
+		answers = answers + "#%$"+"ASLEMedium_2"+"#%$"+"ASLEMedium_2_1_answer"+"#%$"+$("input:radio[name=ASLEMedium_2_1_answer]:checked").val();
+		answers = answers + "#%$"+"ASLEMedium_2"+"#%$"+"ASLEMedium_2_2_answer"+"#%$"+$("#ASLEMedium_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ASLEMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ASLEMedium_1_answer,ASLEMedium_2_1_answer,ASLEMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

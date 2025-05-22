@@ -1,0 +1,221 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.1 Factors and Multiples</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:70%;">1.1 Factors and Multiples</div>
+	{% endif %}
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">4)</font> Alex has some neckties in his shop. Let the number of neckties be &nbsp;&nbsp;&nbsp;&nbsp;N. For any number N, answer whether each of the following is &nbsp;&nbsp;&nbsp;&nbsp;true or false.
+	</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">a)</font> If 2 and 5 are both factors of N, then 10 is also a factor of N.</div>
+	<div style="margin-left:30px;margin-top:10px;">
+		{% if FMMedium_9_answer_correct is defined %}
+			<input type=radio name="FMMedium_9_answer" value='True' disabled
+			{% if FMMedium_9_answer == 'True'%} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_9_answer" value='False' disabled
+			{% if FMMedium_9_answer == 'False' %} 
+  					checked="checked"
+  				{%endif%}
+			 >False&nbsp;&nbsp;
+			{% if FMMedium_9_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not FMMedium_9_answer_correct and FMMedium_9_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{FMMedium_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input type=radio name="FMMedium_9_answer" value='True'
+			{% if FMMedium_9_answer == 'True' %} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_9_answer" value='False'
+			{% if FMMedium_9_answer == 'False'%} 
+  					checked="checked"
+  				{%endif%}
+			 >False			 
+		{% endif %}	
+	</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">b)</font> If 10 is a factor of N, then 5 is also a factor of N.</div>
+	<div style="margin-left:30px;margin-top:10px;">
+		{% if FMMedium_10_answer_correct is defined %}
+			<input type=radio name="FMMedium_10_answer" value='True' disabled
+			{% if FMMedium_10_answer == 'True'%} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_10_answer" value='False' disabled
+			{% if FMMedium_10_answer == 'False' %} 
+  					checked="checked"
+  				{%endif%}
+			 >False&nbsp;&nbsp;
+			{% if FMMedium_10_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not FMMedium_10_answer_correct and FMMedium_10_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{FMMedium_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input type=radio name="FMMedium_10_answer" value='True'
+			{% if FMMedium_10_answer == 'True' %} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_10_answer" value='False'
+			{% if FMMedium_10_answer == 'False'%} 
+  					checked="checked"
+  				{%endif%}
+			 >False			 
+		{% endif %}	
+	</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">c)</font> If 5 is a factor of N, then 10 is also a factor of N.</div>
+	<div style="margin-left:30px;margin-top:10px;">
+		{% if FMMedium_11_answer_correct is defined %}
+			<input type=radio name="FMMedium_11_answer" value='True' disabled
+			{% if FMMedium_11_answer == 'True'%} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_11_answer" value='False' disabled
+			{% if FMMedium_11_answer == 'False' %} 
+  					checked="checked"
+  				{%endif%}
+			 >False&nbsp;&nbsp;
+			{% if FMMedium_11_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not FMMedium_11_answer_correct and FMMedium_11_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{FMMedium_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input type=radio name="FMMedium_11_answer" value='True'
+			{% if FMMedium_11_answer == 'True' %} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_11_answer" value='False'
+			{% if FMMedium_11_answer == 'False'%} 
+  					checked="checked"
+  				{%endif%}
+			 >False			 
+		{% endif %}	
+	</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">d)</font> If 2 and 4 are both factors of N, then 8 is also a factor of N.</div>
+	<div style="margin-left:30px;margin-top:10px;">
+		{% if FMMedium_12_answer_correct is defined %}
+			<input type=radio name="FMMedium_12_answer" value='True' disabled
+			{% if FMMedium_12_answer == 'True'%} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_12_answer" value='False' disabled
+			{% if FMMedium_12_answer == 'False' %} 
+  					checked="checked"
+  				{%endif%}
+			 >False&nbsp;&nbsp;
+			{% if FMMedium_12_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not FMMedium_12_answer_correct and FMMedium_12_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{FMMedium_12_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input type=radio name="FMMedium_12_answer" value='True'
+			{% if FMMedium_12_answer == 'True' %} 
+  					checked="checked"
+  				{%endif%}
+			 >True
+			<input type=radio name="FMMedium_12_answer" value='False'
+			{% if FMMedium_12_answer == 'False'%} 
+  					checked="checked"
+  				{%endif%}
+			 >False			 
+		{% endif %}	
+	</div>
+
+
+	{% if FMMedium_9_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="retry" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="submit" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='FMMedium_9_answer']").click(function()
+	{
+		question_id = "FMMedium_9";
+		question_type = "FactorsMultiples"
+		answer_id = "FMMedium_9_answer";
+		entered_answer = $("input:radio[name=FMMedium_9_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='FMMedium_10_answer']").click(function()
+			{
+				question_id = "FMMedium_10";
+				question_type = "FactorsMultiples"
+				answer_id = "FMMedium_10_answer";
+				entered_answer = $("input:radio[name=FMMedium_10_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='FMMedium_11_answer']").click(function()
+			{
+				question_id = "FMMedium_11";
+				question_type = "FactorsMultiples"
+				answer_id = "FMMedium_11_answer";
+				entered_answer = $("input:radio[name=FMMedium_11_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+	$("input[name='FMMedium_12_answer']").click(function()
+			{
+				question_id = "FMMedium_12";
+				question_type = "FactorsMultiples"
+				answer_id = "FMMedium_12_answer";
+				entered_answer = $("input:radio[name=FMMedium_12_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+	
+	$("#submit").button({label:"Check Answers"});
+	$("#retry").button({label:"Retry"});
+	$("#submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "FactorsMultiples"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "FMMedium_9"+"#%$"+"FMMedium_9_answer"+"#%$"+$("input:radio[name=FMMedium_9_answer]:checked").val();
+		answers = answers + "#%$"+"FMMedium_10"+"#%$"+"FMMedium_10_answer"+"#%$"+$("input:radio[name=FMMedium_10_answer]:checked").val();
+		answers = answers + "#%$"+"FMMedium_11"+"#%$"+"FMMedium_11_answer"+"#%$"+$("input:radio[name=FMMedium_11_answer]:checked").val();
+		answers = answers + "#%$"+"FMMedium_12"+"#%$"+"FMMedium_12_answer"+"#%$"+$("input:radio[name=FMMedium_12_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "FMMedium_9_answer,FMMedium_10_answer,FMMedium_11_answer,FMMedium_12_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

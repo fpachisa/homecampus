@@ -1,0 +1,39 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div>
+<div id="NotesContent" style="width:90%;min-height:720px;" >
+	<br><br>
+    <form id="SubscriptionPage" method="post" action="{{ current_url }}" enctype="multipart/form-data">
+	<fieldset>
+		<legend>Manual Subscription:</legend>
+		<ol>		
+			<li>
+				<fieldset>
+				<legend>Email:</legend>
+				<input id=email name=email type=text>
+				</fieldset>
+			</li>
+			<li>
+				<fieldset>
+				<legend>Child Username:</legend>
+				<input id=username name=username type=text>
+				</fieldset>
+			</li>
+			<li>
+				<fieldset>
+				<legend>Period: (in days)</legend>
+				<input id=period name=period type=text>
+				</fieldset>
+			</li>
+			<li>
+				<button id="Waiver" ></button>
+			</li>
+		</ol>		
+	</fieldset>
+<script type="text/javascript">              		            
+	$("#Waiver").button({label:"Create"});
+</script> 
+</form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<!-- Google Code for Grade 7 Lead Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1013517337;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "54BaCMnbulYQmZik4wM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1013517337/?label=54BaCMnbulYQmZik4wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<div style="background-image: url(/images/site/background.png);">
+<div id="HomeContent">
+<script type="text/javascript" src="/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.lightbox-0.5.css" media="screen" />
+
+	{% if child_info | length == 0 %}
+		<link type="text/css" rel="stylesheet" href="/stylesheets/jqModal.css"/>
+		<script src="/js/jqModal.js" type="text/javascript"></script>
+		<div style="width:400px;" class="jqmWindow" id="CreateUser">
+			<div style="text-align:center;"><font class="legendText" style="font-size:18px;color:#25acc3;">Create your child account first.</font></div>
+			<div style="text-align:center;margin-top:20px;"><button id="AddUser" style="outline:none;"></button></div>
+		</div>
+		<script type="text/javascript">
+		$('#CreateUser').jqm({modal:true});
+		$('#CreateUser').jqmShow();
+		$("#AddUser").button({label:"Add Child"});
+		$("#AddUser").blur();
+		$("#AddUser").click(function()
+    		{
+				window.location.href = '/MyProfile';
+    		}
+    		); 		
+		</script>
+	{% else %}
+	    <div style="display: inline-block;vertical-align:top;margin-left:100px;margin-top:20px;">	
+			<div>
+				{% if child_info | length == 1%}
+					<legend><b>Child Name:</b>  {{child_info[0][0]}}</legend>
+					<input type="hidden" id="username" value='{{child_info[0][1]}}'>
+				{% else %}
+					<legend><b>Child Name:</b></legend>
+					<select id ='username'>
+						{% for child in child_info %}
+							<option value='{{child[1]}}'>{{child[0]}}</option>
+						{% endfor %}
+					</select>
+				{% endif %}
+				<div style="background-image:url('/images/site/green_line.png');background-repeat:repeat-x;">&nbsp;</div>
+			</div>
+		</div>
+		<div style="margin-top:0px;margin-left:100px;">
+			<p>Books Contents:</p>
+			<ul>
+				<li><p style="font-size: 12px; line-height: 1.7em; font-family:Verdana; color: #333333;"><font color="#D92118"><b>Learn</b></font><br />Detailed explanation of concepts with 155 solved examples</p></li>
+				<li><p style="font-size: 12px; line-height: 1.7em; font-family:Verdana; color: #333333;"><font color="#2A91E1"><b>Practice</b></font><br />350+ practice questions of varying complexities with step-by-step solutions</p></li>
+				<li><p style="font-size: 12px; line-height: 1.7em; font-family:Verdana; color: #333333;"><font color="#0E820E"><b>Topical Tests</b></font><br />Topical tests or worksheets to assess your knowledge and understanding of concepts in real life</p></li>
+				<li><p style="font-size: 12px; line-height: 1.7em; font-family:Verdana; color: #333333;"><font color="#F6B937"><b>Progress</b></font><br />Instant grading of practice questions and topical tests<br>Multiple topical test attempts to monitor progress </p></li>
+			</ul>
+		</div>
+	    <div style="display: inline-block;vertical-align:top;margin-left:100px;margin-top:10px;">
+		    <form id="SubscriptionPage">
+			<fieldset>
+				<div>
+				<fieldset><legend><b>Grade 7 Combo</b><br>Book A: Numbers<br>Book B: Introduction to Algebra</legend></fieldset>
+				<img src="/images/Grade7/Grade-7AB-Bundle-Subscribe-Thumbnail.png">
+				<fieldset>
+					<div style="margin-left:40px;">USD 9.88</div>
+				</fieldset>
+				<a href="javascript:purchaseBook('ALL')" ><img src='https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif' border='0' /></a>   
+				</div>
+			</fieldset>
+			</form>
+		</div>		
+	    <div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:10px;width:260px;">
+		    <form id="SubscriptionPage">
+		    	<div style="text-align:center;">
+					<fieldset>
+						<fieldset><legend><b>Grade 7 Book A: Numbers</b></legend></fieldset>
+						<div style="margin-top:30px;"><img src="/images/Grade7/Grade-7A-Subscribe-Thumbnail.png"></div>
+						<fieldset>
+							<div style="margin-left:20px;margin-top:20px;">USD 7.88</div>
+						</fieldset>
+						<div style="margin-top:0px;"><a href="javascript:purchaseBook('7A')" ><img src='https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif' border='0' /></a></div>
+					</fieldset>
+					
+				</div>
+			</form>
+		</div>
+	    <div style="display: inline-block;vertical-align:top;margin-left:30px;margin-top:10px;width:260px;">
+		    <form id="SubscriptionPage">
+			    <div style="text-align:center;">
+					<fieldset>
+						<fieldset><legend><b>Grade 7 Book B: Introduction to Algebra</b></legend></fieldset>
+						<div style="margin-top:30px;"><img src="/images/Grade7/Grade-7B-Subscribe-Thumbnail.png"></div>
+						<fieldset>
+							<div style="margin-left:20px;margin-top:20px;">USD 7.88</div>
+						</fieldset>
+						<div style="margin-top:0px;"><a href="javascript:purchaseBook('7B')" ><img src='https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif' border='0' /></a></div>
+					</fieldset>
+				</div>
+			</form>
+		</div>
+		<br><br>
+	{% endif %}
+<div id="error_dialog" style="diplay:none"></div>
+<div id="apple_dialog" style="diplay:none;"></div>
+</div>
+		<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+        <script type="text/javascript">
+			var dgFlow = new PAYPAL.apps.DGFlow({trigger:null,expType:"light"});
+        	function purchaseBook(bookCode)
+        	{
+        		if (bookCode=="7A" || bookCode=="7B")
+        		{
+        			amount = parseFloat("7.88");
+        		}
+        		else if(bookCode=="ALL")
+        		{
+        			amount = parseFloat("9.88");
+        		}
+        		if(isiApple())
+        		{
+           			var URLText = "/Subscribe/Grade7/Start"
+   	       			var data = {total_amount:amount,
+       							username:$("#username").val(),
+       							book_code:bookCode};
+   	       			$.ajax(
+   	       			{
+   	       				url: URLText,
+   	       				data: data,
+   	       				success: function(responseText)
+   	    				{
+   	       					location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token='+responseText;
+   	    				}
+   	       			});
+            	}
+        		else //non-apple goes here
+        		{
+           			var URLText = "/Subscribe/Grade7/Start"
+   	       			var data = {total_amount:amount,
+       							username:$("#username").val(),
+       							book_code:bookCode};
+   	       			$.ajax(
+   	       			{
+   	       				url: URLText,
+   	       				data: data,
+   	       				success: function(responseText)
+   	    				{
+   	       					dgFlow.startFlow('https://www.paypal.com/incontext?token='+responseText);
+   	    				}
+   	       			});
+        		}
+            }
+        	
+        	function isiApple()
+        	{
+        		var ua = navigator.userAgent.toLowerCase();
+        	    return (
+        	        //Detect iPhone
+        	        (navigator.platform.indexOf("iPhone") != -1) ||
+        	        //Detect iPad
+        	        (navigator.platform.indexOf("iPad") != -1) ||
+        	        //Detect iPod
+        	        (navigator.platform.indexOf("iPod") != -1) ||
+					//Detect Android
+        	        (ua.indexOf("android") > -1)
+        	    );
+        	}       	        	
+		</script>
+</div>
+{% endblock %}

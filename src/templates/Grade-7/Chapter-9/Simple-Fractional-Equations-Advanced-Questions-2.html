@@ -1,0 +1,53 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.2 Simple Fractional Equations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:63%;">9.2 Simple Fractional Equations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">The focal length of a lens is given by the formula</div>
+		<div style="margin-left:43px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:50px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">f</font><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:3px;">=</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">u</font><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:3px;">+</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">v</font><br></p>
+			</div>
+			<div style="vertical-align:top;margin-left:0px;margin-top:-10px;">where,</div>
+			<div style="vertical-align:top;margin-left:30px;margin-top:5px;"><font class="grade7Variables">u</font> = distance of the object from the lens</div>
+			<div style="vertical-align:top;margin-left:30px;margin-top:5px;"><font class="grade7Variables">v</font> = distance of the image from the lens</div>
+			<div style="vertical-align:top;margin-left:30px;margin-top:5px;"><font class="grade7Variables">f</font> = focal length of the lens</div>
+			<div style="margin-top:15px;"><img src="images/Grade7/G7_LE_Simple_Fractional_Equations_Advanced_4.png" /></div>
+		</div>
+		
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

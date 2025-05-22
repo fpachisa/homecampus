@@ -1,0 +1,263 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+
+<div class="my-profile">
+
+{% if ChildUserData | length == 0 %}
+	<!-- Add Child Section -->
+	<div class="my-profile-section move-to-center">
+	<div class="my-profile-section__container">
+	
+		<div class="my-profile-section__title"><h2>Add Child</h2></div>
+		
+		{# for error definitions see Contact.MyProfile#post @223 - 236 #}
+		<div class="my-profile-section__body">
+			<form class="add-child-form" method="post" action="/MyProfile"> 
+				<div class="{%if form_error == -1%}error{%endif%}">
+					<label for="child_first_name">First Name: </label>
+					<input name="child_first_name" id="child_first_name" type="text" value="{{first_name_val}}"/> 
+					{%if form_error == -1%}
+						<span class="help-txt">First Name is required</span>
+					{%endif%}
+				</div>
+				
+				<div class="{%if form_error == -2%}error{%endif%}">
+					<label for="child_last_name">Last Name: </label>
+					<input name="child_last_name" id="child_last_name" type="text" value="{{last_name_val}}"/>
+					{%if form_error == -2%}
+						<span class="help-txt">Last Name is required</span>
+					{%endif%}
+				</div>
+				
+				<div class="{%if form_error == -3%}error{%endif%}">
+					<label for="skill_grade">Select Grade: </label>
+					<select name='skill_grade' id='skill_grade'>
+						<option value='P3'>Primary 3 / Grade 3</option>	
+						<option value='P4'>Primary 4 / Grade 4</option>
+						<option value='P5'>Primary 5 / Grade 5</option>
+						<option value='P6'>Primary 6 / Grade 6</option>
+						<option value='P7'>Secondary 1 / Grade 7</option>
+					</select>
+					{%if form_error == -3%}
+						<span class="help-txt">Grade is required</span>
+					{%endif%}
+				</div>
+				
+				<!-- Removing School Promo Code for now -->
+				<!-- div>
+					<label for="school_code">School Promo Code: </label>
+					<input name="school_code" id="school_code" type="text" />
+				</div-->
+				
+				<div>
+					<button type="submit" class="btn-primary">Add Child</button>
+				</div>
+		</form>
+		
+		</div>
+	</div>
+</div>
+</div>	
+
+{% else %}
+	
+		<div class="my-profile-section">
+			<div class="my-profile-section__container">
+				
+				<div class="my-profile-section__title">
+					<h2>{% if ChildUserData | length == 1%} Child Details {% else %} Children Details {% endif %}</h2>
+				</div>
+				
+				<div class="my-profile-section__body">
+					<div class="child-detail-table">
+					<table>
+						<thead>
+						<tr>
+							<th>Name</th><th>Username</th><th>Subscription Status<sup>#</sup></th><th>Subscription Expiry<sup>#</sup></th>
+						</tr>
+						</thead>
+						
+						<tbody>
+						
+						{% for c in ChildUserData %}
+						<tr>
+						<td><a data-username="{{c[1]}}" href="javascript:void(0);" class="LoginAsChild" title="Login as {{ c[0] }}">{{c[0]}}</a></td>
+						<td>{{c[1]}}</td>
+						<td>{{c[2]}}</td>
+						<td>{{c[3]}}</td>
+						</tr>
+						{% endfor %}
+						
+						</tbody>
+					</table>
+					</div>
+				</div>
+				
+				<div class="my-profile-section__footer">
+					{% if Subscribe == "Y" %}
+						<a class="btn-primary btn-embossed btn-block-xs" href="/Subscribe">Subscribe</a>
+					{% endif %}
+					{% if Cancel == "Y" %}
+						<a class="btn-primary btn-embossed btn-block-xs" href="/Subscribe/CancelSubscription">Cancel Subscription</a>
+					{% endif %}
+				</div>
+				
+				
+	<div class="or-separator" style="margin: 10px auto;width: 75%;"></div>
+		
+		<div class="my-profile-section__title">
+			<h3 style="margin-top: 0px;">Add Child</h3>
+			{% if not current_user.authorized and BooksData | length == 0%}<small>(Subscribe or purchase book to add more children)</small>{%endif%}
+		</div>
+		
+		{# for error definitions see Contact.MyProfile#post @223 - 236 #}
+		<div class="my-profile-section__body">
+			<form class="add-child-form" method="post" action="/MyProfile"> 
+				<div class="{%if form_error == -1%}error{%endif%}">
+					<label for="child_first_name">First Name: </label>
+					<input name="child_first_name" id="child_first_name" type="text" value="{{first_name_val}}"/> 
+					{%if form_error == -1%}
+						<span class="help-txt">First Name is required</span>
+					{%endif%}
+				</div>
+				
+				<div class="{%if form_error == -2%}error{%endif%}">
+					<label for="child_last_name">Last Name: </label>
+					<input name="child_last_name" id="child_last_name" type="text" value="{{last_name_val}}"/>
+					{%if form_error == -2%}
+						<span class="help-txt">Last Name is required</span>
+					{%endif%}
+				</div>
+				
+				<div class="{%if form_error == -3%}error{%endif%}">
+					<label for="skill_grade">Select Grade: </label>
+					<select name='skill_grade' id='skill_grade'>
+						<option value='P3'>Primary 3 / Grade 3</option>	
+						<option value='P4'>Primary 4 / Grade 4</option>
+						<option value='P5'>Primary 5 / Grade 5</option>
+						<option value='P6'>Primary 6 / Grade 6</option>
+						<option value='P7'>Secondary 1 / Grade 7</option>
+					</select>
+					{%if form_error == -3%}
+						<span class="help-txt">Grade is required</span>
+					{%endif%}
+				</div>
+				
+				<div>
+					{% if not current_user.authorized and BooksData | length == 0%}
+						<button type="button" onclick="javascript:return false;" class="btn-primary btn-embossed disabled">Add Child</button>
+					{% else %}
+						<button type="submit" class="btn-primary btn-embossed">Add Child</button>
+					{% endif %}
+				</div>
+			</form>
+		
+		</div>
+		
+			</div>
+		</div>
+		
+		
+		<div class="my-profile-section">
+			<div class="my-profile-section__container">
+			
+				<div class="my-profile-section__title"><h2>Payment History</h2></div>
+				
+				<div class="my-profile-section__body">
+				
+				{% if PaymentData | length != 0%}
+				<div class="child-detail-table">
+					<table>
+						<thead>
+							<tr><th>Payment Date</th><th>Paid For</th><th>Amount</th><th>Subscription Period</th></tr>
+						</thead>
+						
+						<tbody>
+							{% for p in PaymentData %}
+							<tr>
+								<td>{{p[0]}}</td>
+								<td>{{p[1]}}</td>
+								<td>{{p[2]}}</td>
+								<td>{{p[3]}} month(s)</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+						
+					</table>
+				</div>
+				
+				{% else %}
+				
+				<p>No Payment History Found!</p>
+				
+				{% endif %}
+				
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="my-profile-section">
+			<div class="my-profile-section__container">
+			
+				<div class="my-profile-section__title"><h2>Books Bought</h2></div>
+				
+				<div class="my-profile-section__body">
+				
+				{% if BooksData | length != 0%}
+				<div class="child-detail-table">
+					<table>
+						<thead>
+							<tr><th>Purchase Date</th><th>Purchased For</th><th>Amount</th><th>Book Name</th></tr>
+						</thead>
+						
+						<tbody>
+							{% for b in BooksData %}
+							<tr>
+								<td>{{b[0]}}</td>
+								<td>{{b[1]}}</td>
+								<td>{{b[2]}}</td>
+								<td>{{b[3]}}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				
+					{% else %}
+				
+					<p>No Data Found!</p>
+				
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		
+{% endif %}
+{% endblock body %}
+
+{% block xtra_scripts %}
+{% if UserAdded is defined and UserAdded == "Y" %}
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var x = popie({
+				addCloseButton: true,
+				title: "<h3>Child Added</h3>",
+				sticky: true,
+				buttons: {
+					"Ok": {
+						'class': 'btn-modal',
+						'handle': function(evt){ x.hide(); }
+					},
+					"Login As Child": {
+						'class': 'btn-modal',
+						'handle': function(evt){ LoginAsChild("{{child_username}}"); } 
+					}
+				},
+				buttonGroupClass: "btn-group"
+			}).setContent("Child account has been created successfully.<br />Username: {{child_username}} <br />Password: {{child_username}}<br />").show();
+		});
+		</script>
+{% endif %}
+{% endblock xtra_scripts %}

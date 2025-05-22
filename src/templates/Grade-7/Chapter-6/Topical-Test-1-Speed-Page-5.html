@@ -1,0 +1,174 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;">Speed - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="SP_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">10)</font></div>		
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">A car travels at an average speed of <font class="grade7Variables">p</font> km/h for the first 2.5 hours and travels 145 km at an average speed of <font class="grade7Variables">q</font> km/h for the next 2 hours. If its average speed for the whole journey is 60 km/h, find <font class="grade7Variables">p</font> and <font class="grade7Variables">q</font>.</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;"><font class="grade7Variables">p</font>: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_10_1_answer" size=3 value='{{SPTT1_10_1_answer}}' readonly style="background-color:#DFDFDF;"> km/h &nbsp;
+				{% if SPTT1_10_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_10_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_10_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_10_1_answer" size=3 value='{{SPTT1_10_1_answer}}'> km/h<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;"><font class="grade7Variables">q</font>: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_10_2_answer" size=3 value='{{SPTT1_10_2_answer}}' readonly style="background-color:#DFDFDF;"> km/h &nbsp;
+				{% if SPTT1_10_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_10_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_10_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_10_2_answer" size=3 value='{{SPTT1_10_2_answer}}'> km/h<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">11)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">Mira walks at a speed of 0.002km/s to reach a bus stop which is two and a half kilometres away from her house. She reaches there just in time to catch the bus which arrives at the bus stop at 1 pm every day. Yesterday, she started 5 minutes late from her house. At what speed, in m/s, did she walk if she was able to catch the bus just in time? Round off your answer to 2 decimal places.</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_11_answer" size=3 value='{{SPTT1_11_answer}}' readonly style="background-color:#DFDFDF;"> m/s&nbsp;
+				{% if SPTT1_11_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_11_answer" size=3 value='{{SPTT1_11_answer}}'> m/s<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="SP_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#SP_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#SP_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Speed');
+  	});	
+$("#SP_TT_1_back").button({label:"<<"});
+$("#SP_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-3.html';
+		rightPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-4.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#SPTT1_10_1_answer").change(function()
+		{
+			question_id = "SPTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_10_1_answer";
+			entered_answer = $("#SPTT1_10_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_10_2_answer").change(function()
+		{
+			question_id = "SPTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_10_2_answer";
+			entered_answer = $("#SPTT1_10_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_11_answer").change(function()
+		{
+			question_id = "SPTT1_11";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_11_answer";
+			entered_answer = $("#SPTT1_11_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

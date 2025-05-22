@@ -1,0 +1,104 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% endif %}	
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="">The length and breadth of a rectangular carpet is 7.2 m and 9.3 m respectively, correct to 2 significant figures.  </div>
+			<div style="margin-left:0px;margin-top:10px;">a) Find the area of the carpet correct to 3 s.f.</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+				{% if AESFAdvanced_4_1_answer_correct is defined %}
+					<input id="AESFAdvanced_4_1_answer" value='{{AESFAdvanced_4_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> m<sup>2</sup>&nbsp;
+						{% if AESFAdvanced_4_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFAdvanced_4_1_answer_correct and AESFAdvanced_4_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFAdvanced_4_1_answer" value='{{AESFAdvanced_4_1_answer}}' style="width:40px;" > m<sup>2</sup>&nbsp;
+				{% endif %}	
+			</div>
+			<div style="margin-left:0px;margin-top:10px;">b) Find the perimeter of the carpet correct to 3 s.f.</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+				{% if AESFAdvanced_4_2_answer_correct is defined %}
+					<input id="AESFAdvanced_4_2_answer" value='{{AESFAdvanced_4_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> m&nbsp;
+						{% if AESFAdvanced_4_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFAdvanced_4_2_answer_correct and AESFAdvanced_4_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFAdvanced_4_2_answer" value='{{AESFAdvanced_4_2_answer}}' style="width:40px;" > m&nbsp;
+				{% endif %}	
+			</div>					
+		</div>
+
+		
+		{% if AESFAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:320px;"><button id="AESFAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESFAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#AESFAdvanced_4_1_answer").change(function()
+			{
+				question_id = "AESFAdvanced_4";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_4_1_answer";
+				entered_answer = $("#AESFAdvanced_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFAdvanced_4_2_answer").change(function()
+			{
+				question_id = "AESFAdvanced_4";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_4_2_answer";
+				entered_answer = $("#AESFAdvanced_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESFAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#AESFAdvanced_2_Retry").button({label:"Retry"});
+	$("#AESFAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SignificantFigures"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESFAdvanced_4"+"#%$"+"AESFAdvanced_4_1_answer"+"#%$"+$("#AESFAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"AESFAdvanced_4"+"#%$"+"AESFAdvanced_4_2_answer"+"#%$"+$("#AESFAdvanced_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESFAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESFAdvanced_4_1_answer,AESFAdvanced_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

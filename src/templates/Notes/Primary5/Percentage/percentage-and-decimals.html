@@ -1,0 +1,195 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frGenDel(N,D,Q) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><del>{{D}}</del><font color=red><sup>{{Q}}</sup></font></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>How to Convert Percentage to Decimals and Decimals to Percentage? - Home Campus</title>
+<meta name="description" content="Notes on how to convert Percentage and Decimals based on Primary 5 syllabus set by MOE Singapore" />
+<meta name="keywords" content="convert percentage, percent, decimals, maths sums, examples, maths worksheets, grade 5 math, P5 maths, Singapore maths, math home tuition">
+{% endblock %}
+{% block content %}
+      
+<!-- InstanceBeginEditable name="maincontent" -->
+
+<h2 class="learn-heading">How to Convert Percentage to Decimals and Decimals to Percentage?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Decimal">Practice Unlimited Questions</a></div>
+
+<!-- Concept Covered -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 237, 255);">			
+		<div class="concept-set__question">
+			<h4>Concepts Explained</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				1. <a href="#concept-1">How to convert percentage to decimals?</a><br><br>
+				2. <a href="#concept-2">How to convert decimals to percentage?</a>
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept Covered-->
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P5">
+		
+		<div class="concept-set__question">
+			<h4>Converting a percent value to a decimal number and vice versa</h4>
+		</div>
+
+		<div class="learn-set__video">
+			<div>
+				<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/4M4i9iZYsaE?html5=1" frameborder="0"> </iframe>
+				
+				<!-- <embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /> -->
+			</div>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-11 col-off-1" style="margin-top: 2%;">
+				Percentages and decimals are related to each other and can be converted from one form to the other.<br />
+				The video tutorial above explains the steps in detail.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Decimal">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-1">
+				1.&nbsp; Following is a cookie box containing 100 assorted cookies of 2 different shapes.<br />
+				40% of the whole box of cookies is round-shaped cookies.<br />
+				Convert this percentage to a decimal.
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/change_percentage_to_decimal.png" /><br />
+					If the whole box of cookies has a value of 100% then 40% of that is round cookies.<br /><br />
+					
+					<img src="/images/notes/convert_percent_to_decimal_model.png" />
+				</div>
+				<div class="col-3 col-off-2">
+					40% &nbsp;=&nbsp; {{ frGen(40,100) }}<br />
+					=&nbsp; 40 &nbsp;&divide;&nbsp; 100<br />
+					=&nbsp; <b>0.4</b> 
+				</div>
+				<div class="col-3 hint-box">
+					If the whole box of cookies has a decimal value of 1.0, then 0.4 of it is round cookies.
+				</div>
+				<div class="col-10 col-off-1">
+					<b>ANSWER CHECK</b>
+					
+					<div class="col-10 col-off-1">
+						<b>Using percent value:</b><br />
+						Number of round cookies<br />
+						&nbsp; =&nbsp; 40% of 100 cookies<br />
+						&nbsp; =&nbsp; {{ frGenDel(40,100,1) }} &nbsp;&times;&nbsp; <del>100</del><font color=red><sup>1</sup></font> cookies<br />
+						&nbsp; =&nbsp; <b>40 cookies</b><br /><br />
+	
+						<b>Using decimal value:</b><br />
+						Number of round cookies<br />
+						&nbsp; =&nbsp; 0.4 of 100 cookies<br />
+						&nbsp; =&nbsp; 0.4 &nbsp;&times;&nbsp; 100 cookies<br />
+						&nbsp; =&nbsp; <b>40 cookies</b><br /><br />
+					
+						<b>Answers match!</b>
+					</div>
+				</div>
+				<div class="col-9 col-off-1 hint-box">
+					<b>Quick trick:</b><br />
+					To convert a percentage to decimal, simply divide the number by 100.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Decimal">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-2">
+				2.&nbsp; Following is a cookie box containing 100 assorted cookies of 2 different shapes.<br />
+				0.6 of the whole box of cookies is square-shaped cookies.<br />
+				Convert this decimal number to a percentage.
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/change_decimal_to_percentage.png" /><br />
+					If the whole box of cookies has a value of 1.0 then 0.6 of that is square-shaped cookies.<br /><br />
+					
+					<img src="/images/notes/convert_decimal_to_percent_model.png" />
+				</div>
+				<div class="col-3 col-off-2">
+					0.6 &nbsp;=&nbsp; 6 &nbsp;&divide;&nbsp; 10<br />
+					&nbsp; =&nbsp; {{ frGen(6,10) }}<br />
+					&nbsp; =&nbsp; {{ frGen(60,100) }}<br />
+					&nbsp; =&nbsp; 60%
+				</div>
+				<div class="col-3 hint-box">
+					If the whole box of cookies has a percent value of 100%, then 60% of it is square-shaped cookies.
+				</div>
+				<div class="col-10 col-off-1">
+					<b>ANSWER CHECK</b>
+					
+					<div class="col-10 col-off-1">
+						<b>Using decimal value:</b><br />
+						Number of square cookies<br />
+						&nbsp; =&nbsp; 0.6 of 100 cookies<br />
+						&nbsp; =&nbsp; 0.6 &nbsp;&times;&nbsp; 100 cookies<br />
+						&nbsp; =&nbsp; <b>60 cookies</b><br /><br />
+	
+						<b>Using percentage value:</b><br />
+						Number of square cookies<br />
+						&nbsp; =&nbsp; 60% of 100 cookies<br />
+						&nbsp; =&nbsp; {{ frGenDel(60,100,1) }} &nbsp;&times;&nbsp; <del>100</del><font color=red><sup>1</sup></font> cookies<br />
+						&nbsp; =&nbsp; <b>60 cookies</b><br /><br />
+					
+						<b>Answers match!</b>
+					</div>
+				</div>
+				<div class="col-9 col-off-1 hint-box">
+					<b>Quick trick:</b><br />
+					To convert a decimal to percentage, simply multiply the number by 100%.
+				</div>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Decimal">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to convert percentage to decimals?","acceptedAnswer":{"@type":"Answer","text":"To convert a percentage to decimal, simply divide the number by 100. E.g.: 40% = 40/100 = 0.4"}},{"@type":"Question","name":"How to convert decimals to percentage?","acceptedAnswer":{"@type":"Answer","text":"To convert a decimal to percentage, simply multiply the number by 100%. E.g.: 0.4 = 0.4x100% = 40%"}}]}</script>
+{% endblock %}

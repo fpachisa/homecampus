@@ -1,0 +1,356 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.1 Ratio</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.1 Ratio</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Find the ratio <font class="grade7Variables">p</font> : <font class="grade7Variables">q</font> and simplify to its integer value.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">a)</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">5<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;"><font class="grade7Variables">p</font> = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;"><font class="grade7Variables">q</font></div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">p : q</font> = 
+				{% if RATIOEasy_2_1_a_answer_correct is defined or RATIOEasy_2_1_b_answer_correct is defined%}
+					<input id="RATIOEasy_2_1_a_answer" value='{{RATIOEasy_2_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_2_1_b_answer" value='{{RATIOEasy_2_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_2_1_a_answer" value='{{RATIOEasy_2_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_2_1_b_answer" value='{{RATIOEasy_2_1_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_2_1_a_answer_correct is defined or RATIOEasy_2_1_b_answer_correct is defined%}
+					{% if RATIOEasy_2_1_a_answer_correct and RATIOEasy_2_1_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_2_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="margin-top:10px;">b) 0.27 <font class="grade7Variables">p</font> &minus; 3 <font class="grade7Variables">q</font> = 0</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:30px;margin-top:0px;"><font class="grade7Variables">p : q</font> = 
+				{% if RATIOEasy_2_2_a_answer_correct is defined or RATIOEasy_2_2_b_answer_correct is defined%}
+					<input id="RATIOEasy_2_2_a_answer" value='{{RATIOEasy_2_2_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_2_2_b_answer" value='{{RATIOEasy_2_2_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_2_2_a_answer" value='{{RATIOEasy_2_2_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_2_2_b_answer" value='{{RATIOEasy_2_2_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_2_2_a_answer_correct is defined or RATIOEasy_2_2_b_answer_correct is defined%}
+					{% if RATIOEasy_2_2_a_answer_correct and RATIOEasy_2_2_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_2_2_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				Nora's mass is 1.5 times that of her mother. Find the ratio of the mother's mass to that of Nora's mass.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Mother's mass : Nora's mass = 
+				{% if RATIOEasy_3_a_answer_correct is defined or RATIOEasy_3_b_answer_correct is defined%}
+					<input id="RATIOEasy_3_a_answer" value='{{RATIOEasy_3_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_3_b_answer" value='{{RATIOEasy_3_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_3_a_answer" value='{{RATIOEasy_3_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_3_b_answer" value='{{RATIOEasy_3_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_3_a_answer_correct is defined or RATIOEasy_3_b_answer_correct is defined%}
+					{% if RATIOEasy_3_a_answer_correct and RATIOEasy_3_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_3_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				If <font class="grade7Variables">a</font> = 13 and <font class="grade7Variables">b</font> = 78, find
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">a) <font class="grade7Variables">a : b</font> = 
+				{% if RATIOEasy_4_1_a_answer_correct is defined or RATIOEasy_4_1_b_answer_correct is defined%}
+					<input id="RATIOEasy_4_1_a_answer" value='{{RATIOEasy_4_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_4_1_b_answer" value='{{RATIOEasy_4_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_4_1_a_answer" value='{{RATIOEasy_4_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_4_1_b_answer" value='{{RATIOEasy_4_1_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_4_1_a_answer_correct is defined or RATIOEasy_4_1_b_answer_correct is defined%}
+					{% if RATIOEasy_4_1_a_answer_correct and RATIOEasy_4_1_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_4_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">b) <font class="grade7Variables">b + a : b &minus; a</font> = 
+				{% if RATIOEasy_4_2_a_answer_correct is defined or RATIOEasy_4_2_b_answer_correct is defined%}
+					<input id="RATIOEasy_4_2_a_answer" value='{{RATIOEasy_4_2_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_4_2_b_answer" value='{{RATIOEasy_4_2_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_4_2_a_answer" value='{{RATIOEasy_4_2_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_4_2_b_answer" value='{{RATIOEasy_4_2_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_4_2_a_answer_correct is defined or RATIOEasy_4_2_b_answer_correct is defined%}
+					{% if RATIOEasy_4_2_a_answer_correct and RATIOEasy_4_2_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_4_2_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">c)</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">a</font><br>__<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">b</font><br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">b</font><br>__<br></p>
+				<p style="line-height:20%;text-align:center;"><font class="grade7Variables">a</font><br></p>
+			</div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">= 
+				{% if RATIOEasy_4_3_a_answer_correct is defined or RATIOEasy_4_3_b_answer_correct is defined%}
+					<input id="RATIOEasy_4_3_a_answer" value='{{RATIOEasy_4_3_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOEasy_4_3_b_answer" value='{{RATIOEasy_4_3_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOEasy_4_3_a_answer" value='{{RATIOEasy_4_3_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOEasy_4_3_b_answer" value='{{RATIOEasy_4_3_b_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATIOEasy_4_3_a_answer_correct is defined or RATIOEasy_4_3_b_answer_correct is defined%}
+					{% if RATIOEasy_4_3_a_answer_correct and RATIOEasy_4_3_b_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOEasy_4_3_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		
+		
+		{% if RATIOEasy_2_1_a_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:360px;"><button id="RATIOEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-40px;margin-left:300px;"><button id="RATIOEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATIOEasy_2_1_a_answer").change(function()
+	{
+		question_id = "RATIOEasy_2";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_2_1_a_answer";
+		entered_answer = $("#RATIOEasy_2_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_2_1_b_answer").change(function()
+	{
+		question_id = "RATIOEasy_2";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_2_1_b_answer";
+		entered_answer = $("#RATIOEasy_2_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_2_2_a_answer").change(function()
+	{
+		question_id = "RATIOEasy_2";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_2_2_a_answer";
+		entered_answer = $("#RATIOEasy_2_2_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_2_2_b_answer").change(function()
+	{
+		question_id = "RATIOEasy_2";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_2_2_b_answer";
+		entered_answer = $("#RATIOEasy_2_2_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_3_a_answer").change(function()
+	{
+		question_id = "RATIOEasy_3";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_3_a_answer";
+		entered_answer = $("#RATIOEasy_3_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_3_b_answer").change(function()
+	{
+		question_id = "RATIOEasy_3";
+		question_type = "Ratio"
+		answer_id = "RATIOEasy_3_b_answer";
+		entered_answer = $("#RATIOEasy_3_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOEasy_4_1_a_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_1_a_answer";
+				entered_answer = $("#RATIOEasy_4_1_a_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+			$("#RATIOEasy_4_1_b_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_1_b_answer";
+				entered_answer = $("#RATIOEasy_4_1_b_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATIOEasy_4_2_a_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_2_a_answer";
+				entered_answer = $("#RATIOEasy_4_2_a_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+			$("#RATIOEasy_4_2_b_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_2_b_answer";
+				entered_answer = $("#RATIOEasy_4_2_b_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATIOEasy_4_3_a_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_3_a_answer";
+				entered_answer = $("#RATIOEasy_4_3_a_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+			$("#RATIOEasy_4_3_b_answer").change(function()
+			{
+				question_id = "RATIOEasy_4";
+				question_type = "Ratio"
+				answer_id = "RATIOEasy_4_3_b_answer";
+				entered_answer = $("#RATIOEasy_4_3_b_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+					
+	$("#RATIOEasy_2_Submit").button({label:"Check Answers"});
+	$("#RATIOEasy_2_Retry").button({label:"Retry"});
+	$("#RATIOEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Ratio"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATIOEasy_2"+"#%$"+"RATIOEasy_2_1_a_answer"+"#%$"+$("#RATIOEasy_2_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_2"+"#%$"+"RATIOEasy_2_1_b_answer"+"#%$"+$("#RATIOEasy_2_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_2"+"#%$"+"RATIOEasy_2_2_a_answer"+"#%$"+$("#RATIOEasy_2_2_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_2"+"#%$"+"RATIOEasy_2_2_b_answer"+"#%$"+$("#RATIOEasy_2_2_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_3"+"#%$"+"RATIOEasy_3_a_answer"+"#%$"+$("#RATIOEasy_3_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_3"+"#%$"+"RATIOEasy_3_b_answer"+"#%$"+$("#RATIOEasy_3_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_1_a_answer"+"#%$"+$("#RATIOEasy_4_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_1_b_answer"+"#%$"+$("#RATIOEasy_4_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_2_a_answer"+"#%$"+$("#RATIOEasy_4_2_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_2_b_answer"+"#%$"+$("#RATIOEasy_4_2_b_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_3_a_answer"+"#%$"+$("#RATIOEasy_4_3_a_answer").val();
+		answers = answers + "#%$"+"RATIOEasy_4"+"#%$"+"RATIOEasy_4_3_b_answer"+"#%$"+$("#RATIOEasy_4_3_b_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATIOEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATIOEasy_2_1_a_answer,RATIOEasy_2_1_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_2_2_a_answer,RATIOEasy_2_2_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_3_a_answer,RATIOEasy_3_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_4_1_a_answer,RATIOEasy_4_1_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_4_2_a_answer,RATIOEasy_4_2_b_answer,";
+		answer_ids = answer_ids + "RATIOEasy_4_3_a_answer,RATIOEasy_4_3_b_answer,";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

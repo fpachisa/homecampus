@@ -1,0 +1,152 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">A money lender charged interest at a rate of 5% per annum.
+			</div>
+		</div>
+		<br>
+		<div style="margin-left:60px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">a)</div>
+		<div style="margin-top:10px;display:inline-block;width:360px;vertical-align:top;">
+			A neighbour borrowed $12500 for 30 months. If the lender withdrew interest at the end of each year, find the total interest that he earned after:
+		</div>			
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">i) 2 years =  $
+				{% if RATEMedium_5_1_answer_correct is defined %}
+					<input id="RATEMedium_5_1_answer" value='{{RATEMedium_5_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATEMedium_5_1_answer" value='{{RATEMedium_5_1_answer}}' style="width:40px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEMedium_5_1_answer_correct is defined %}
+					{% if RATEMedium_5_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_5_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">ii) 30 months =  $
+				{% if RATEMedium_5_2_answer_correct is defined %}
+					<input id="RATEMedium_5_2_answer" value='{{RATEMedium_5_2_answer}}' readonly style="width:45px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATEMedium_5_2_answer" value='{{RATEMedium_5_2_answer}}' style="width:45px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:10px;">
+				{% if RATEMedium_5_2_answer_correct is defined %}
+					{% if RATEMedium_5_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_5_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>						
+		</div>
+		<div style="margin-left:60px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-top:20px;display:inline-block;width:360px;vertical-align:top;">
+			If the lender wants to earn an interest of $1875 in 1 year on the same amount of money lent, how much interest rate should he charge now?
+		</div>			
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if RATEMedium_5_3_answer_correct is defined %}
+					<input id="RATEMedium_5_3_answer" value='{{RATEMedium_5_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> %
+				{% else %}
+					<input id="RATEMedium_5_3_answer" value='{{RATEMedium_5_3_answer}}' style="width:30px;" > %
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEMedium_5_3_answer_correct is defined %}
+					{% if RATEMedium_5_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_5_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		
+		{% if RATEMedium_5_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RATEMedium_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RATEMedium_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATEMedium_5_1_answer").change(function()
+	{
+		question_id = "RATEMedium_5";
+		question_type = "Rate"
+		answer_id = "RATEMedium_5_1_answer";
+		entered_answer = $("#RATEMedium_5_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATEMedium_5_2_answer").change(function()
+			{
+				question_id = "RATEMedium_5";
+				question_type = "Rate"
+				answer_id = "RATEMedium_5_2_answer";
+				entered_answer = $("#RATEMedium_5_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATEMedium_5_3_answer").change(function()
+			{
+				question_id = "RATEMedium_5";
+				question_type = "Rate"
+				answer_id = "RATEMedium_5_3_answer";
+				entered_answer = $("#RATEMedium_5_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RATEMedium_3_Submit").button({label:"Check Answers"});
+	$("#RATEMedium_3_Retry").button({label:"Retry"});
+	$("#RATEMedium_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEMedium_5"+"#%$"+"RATEMedium_5_1_answer"+"#%$"+$("#RATEMedium_5_1_answer").val();
+		answers = answers + "#%$"+"RATEMedium_5"+"#%$"+"RATEMedium_5_2_answer"+"#%$"+$("#RATEMedium_5_2_answer").val();
+		answers = answers + "#%$"+"RATEMedium_5"+"#%$"+"RATEMedium_5_3_answer"+"#%$"+$("#RATEMedium_5_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEMedium_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEMedium_5_1_answer,RATEMedium_5_2_answer,";
+		answer_ids = answer_ids + "RATEMedium_5_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

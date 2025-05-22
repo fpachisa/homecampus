@@ -1,0 +1,187 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;">Speed - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="SP_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Two friends start cycling at the same time from the same point to a common destination. One friend cycles at a uniform speed of 40 km/h and the other friend cycles at a uniform speed of 54 km/h. After how long will one move ahead of the other by 14 km?</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_1_answer" size=3 value='{{SPTT1_1_answer}}' readonly style="background-color:#DFDFDF;"> hour &nbsp;
+				{% if SPTT1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_1_answer" size=3 value='{{SPTT1_1_answer}}'> hour<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			A father and his son were walking at a speed of 1.75 m/s and 17.5 km/h respectively. Who was the first to reach the destination in a given time interval?
+		</div>
+		<div style="margin-left:45px;margin-top:20px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="SPTT1_2_answer" value='father' disabled
+				{% if SPTT1_2_answer == 'father'%} 
+   					checked="checked"
+   				{%endif%}
+				 >father<br>
+				<input type=radio name="SPTT1_2_answer" value='son' disabled
+				{% if SPTT1_2_answer == 'son' %} 
+   					checked="checked"
+   				{%endif%}
+				 >son&nbsp;&nbsp;
+
+				{% if SPTT1_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="SPTT1_2_answer" value='father'
+				{% if SPTT1_2_answer == 'father' %} 
+   					checked="checked"
+   				{%endif%}
+				 >father<br>
+				<input type=radio name="SPTT1_2_answer" value='son'
+				{% if SPTT1_2_answer == 'son' %} 
+   					checked="checked"
+   				{%endif%}
+				 >son<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">The average speed of a train from station A to B was 60 km/h. The average speed of the train for the return journey was 80 km/h. What was the average speed of the train for the whole journey? (Round off your answer to 2 decimal places)</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_3_answer" size=3 value='{{SPTT1_3_answer}}' readonly style="background-color:#DFDFDF;"> km/h &nbsp;
+				{% if SPTT1_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_3_answer" size=3 value='{{SPTT1_3_answer}}'> km/h<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#SP_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#SP_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Speed');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#SPTT1_1_answer").change(function()
+	{
+		question_id = "SPTT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "SPTT1_1_answer";
+		entered_answer = $("#SPTT1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 2;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("input[name='SPTT1_2_answer']").click(function()
+		{
+			question_id = "SPTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_2_answer";
+			entered_answer = $("input:radio[name=SPTT1_2_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_3_answer").change(function()
+	{
+		question_id = "SPTT1_3";
+		test_id = '{{test_id}}';
+		answer_id = "SPTT1_3_answer";
+		entered_answer = $("#SPTT1_3_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 3;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

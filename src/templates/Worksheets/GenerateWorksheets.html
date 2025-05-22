@@ -1,0 +1,180 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Home Campus - Primary Mathematics - Worksheets</title>
+<meta name="description" content="Generate worksheets for yourself and assess your skills on various elementary math / primary mathematics concept." />
+{% endblock %}
+
+{% block body %}		
+<div id="TestPage" class="worksheet-container">
+   	
+   	<input type="hidden" id="create_user" value='{{ current_user.username|e }}'>
+   	<input type="hidden" id="concept" value='{{ concept|e }}'>
+   	<input type="hidden" id="SubTopics" value='{{ SubTopics|e }}'>
+   	<input type="hidden" id="display_concept" value='{{ display_concept|e }}'>
+   	<input type="hidden" id="grade" value='{{ grade|e }}'>
+   	<input type="hidden" id="worksheet_generated" value='{{ WorksheetGenerated }}'>
+   		
+<div class="worksheet">
+   		<div class="worksheet__create-new" >
+		
+		<h3>{{header|safe}}</h3>
+		
+		{% if current_user.IsParent %}
+			{% if Children|length==0 %}
+				{% set NoUserCreated = "Y" %}
+				<h4>Please create a child account first.</h4>
+			{% else %}
+				<span>For:</span>
+				<select id="child">
+					{% for username,firstname in Children %}
+						<option value='{{username}}'>{{firstname}}</option>
+					{% endfor %}
+				</select>
+			{% endif %}
+			
+		{% elif current_user.IsTeacher %}
+		
+			{% if ClassInfo|length == 0 %}
+				{% set NoClassCreated = "Y" %}
+				<h4>Create a classroom for this grade first and add students to it.</h4>
+			{% else %}
+				<span>Class: </span>
+				<select id="class_name">
+		   		{% for c in ClassInfo %}
+		   			<option value='{{c.class_name}}'>{{c.class_name}}</option>
+				{% endfor %}
+				</select>
+			{% endif %}
+					
+		{% else %}		
+	   		{% for username,firstname in Children %}
+	          	<input type="hidden" id="child" value='{{username}}' />
+			{% endfor %}		
+		{% endif %}
+		
+		{% if NoClassCreated == "Y" %}
+			<a class="btn-primary" href="/Teacher/Manage_Classroom" id="CreateClassroom">Create Classroom</a>
+		{% elif NoUserCreated == "Y" %}
+			<a class="btn-primary" href="/MyProfile" id="CreateUser">Add Child</a>
+		{% else %}			
+			{% if StopGeneratingWorksheets == "Y" %}
+				{% if current_user.IsTeacher %}
+					<a class="btn-primary" href="/Subscribe/Teacher" id="NoCreateTestTeacher">Want more worksheets?</a>
+				{% else %}
+					<a class="btn-primary" href="/Subscribe" id="NoCreateTest">Want more worksheets?</a>
+				{% endif %}					
+			{% else %}
+				<button class="btn-primary" id="CreateTest">Get Worksheet</button>
+			{% endif %}
+		{% endif %}
+		
+		</div>
+	
+	
+	<div class="worksheet-details">
+		
+		{% if current_user.IsTeacher %}
+	 		
+	 		{% if NoClassCreated != "Y" %}
+		 		<div class="worksheet-details__section">
+		 			{% if TeacherWorksheets|length == 0 %}
+						There are no worksheets. Use above button to generate worksheets.<br><br>
+					{% else %}
+			 			<table class="Reports" style="cursor:pointer">
+							<tr>
+								<th>Worksheet</th><th>Topic</th><th>Class</th><th>Create Date</th>
+							</tr>
+			 			{% for tw in TeacherWorksheets %}
+			 				<tr id='{{tw.test_id|e}},TestPage' onclick="CompletedTestClick(this)">
+			 					<td>{{tw.test_name}}</td><td>{{tw.sub_topic}}</td><td>{{tw.class_name}}</td><td>{{tw.create_date}}</td>
+			 				</tr>
+			 			{% endfor %}
+			 			</table>
+			 		{% endif %}
+		 		</div>
+		 	{% endif %}
+	 	
+	 	{% else %}
+	 	
+	 		{% if NoUserCreated != "Y" %}
+			<div class="worksheet-details__section">
+		   		<h3>In Progress</h3>
+					
+					{% for username,firstname in Children %}
+					<div class="worksheet-report__container">
+							{% if current_user.IsParent %}
+								For <b>{{firstname}}</b>:<br />
+							{% endif %}
+							{% if NewTest|length == 0 and InProgressTest|length == 0 %}
+								There are no new worksheets. Use above button to generate worksheets.<br><br>
+							{% else %}
+							<table class="worksheet-report">
+								<thead><tr><th>Name</th><th>Topic</th><th>Create Date</th></tr></thead>
+								<tbody>
+								{% for t in NewTest %}
+									{% if t.username == username%}
+											<tr id={{t.test_id|e}} onclick="TestClick(this)">
+												<td>{{t.test_name}}<sup><font style="color:red;font-size:0.75em;">NEW!</font></sup></td>
+												<td>{{t.sub_topic}}</td>
+												<td>{{t.create_date}}</td>
+											</tr>
+						    		{% endif %}
+								{% endfor %}
+								{% for t in InProgressTest %}
+									{% if t.username == username%}
+											<tr id={{t.test_id|e}} onclick="TestClick(this)">
+												<td>{{t.test_name}}</td><td>{{t.sub_topic}}</td><td>{{t.update_date}}</td>
+											</tr>
+						    		{% endif %}
+								{% endfor %}
+								</tbody>						
+							</table>
+							{% endif %}
+					</div>
+					{% endfor %}
+			</div>
+			
+			<div class="worksheet-details__section">
+		   		<h3>Completed</h3>
+					{% for username,firstname in Children %}
+					<div class="worksheet-report__container">
+						{% if current_user.IsParent %}
+							For <b>{{firstname}}</b>:<br />
+						{% endif %}
+						{% if CompletedTest|length == 0 %}
+							There are no worksheets completed for this topic.<br><br>
+						{% else %}
+							<table class="worksheet-report">
+								<thead><tr><th>Test</th><th>Completed Date</th><th>Score<span style="display:block; font-size:0.75em;font-weight:100;">(out of 100)</span></th></tr></thead>
+								
+								<tbody>
+								{% for t in CompletedTest %}
+									{% if t.username == username%}
+											<tr id='{{t.test_id|e}},TestPage' onclick="CompletedTestClick(this)">
+												<td>{{ loop.index }}</td><td>{{t.complete_date}}</td><td style="text-align:center;">{{t.score}}</td>
+											</tr>
+						    		{% endif %}
+								{% endfor %}
+								</tbody>						
+							</table>
+						{% endif %}
+					</div>
+					{% endfor %}
+			</div>
+			{% endif %}
+		
+		{% endif %}
+	</div>
+
+<div id="TestContent" style="display:none;"></div><br>
+<div id="TestReport" style="display:none;"></div>
+
+</div>
+</div>
+{% endblock body %}
+
+
+{% block xtra_scripts %}
+	<script src="/js/Tests.js" type="text/javascript"></script>
+	<script src="/js/SubmitTest.js" type="text/javascript"></script>
+{% endblock xtra_scripts %}

@@ -1,0 +1,110 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.1 Percentage Review</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.1 Percentage Review</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mr. Zhang is 6 feet tall. Mrs. Zhang's height is 84</div>
+	        <div style="width:40px;display:inline-block;vertical-align:top;margin-top:-10px;margin-left:-12px;">
+		        <p style="line-height:20%;text-align:center;">3<br>__<br></p>
+		        <p style="line-height:20%;text-align:center;">5<br></p>
+	        </div>
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:-15px;">%</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;margin-left:0px;">of her husband's height. Find the height of Mrs. Zhang, correct to 1 decimal place.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRREasy_1_answer_correct is defined %}
+				<input id="PRREasy_1_answer" value='{{PRREasy_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> feet
+					{% if PRREasy_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_1_answer_correct and PRREasy_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_1_answer" value='{{PRREasy_1_answer}}' style="width:50px;" > feet
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			120 customers visited a hair salon on a certain day of which 50 received a haircut while the rest availed of other services. Find the percentage of customers who visited the salon for a haircut, correct to 2 decimal places.
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:&nbsp;&nbsp;
+			{% if PRREasy_2_answer_correct is defined %}
+				<input id="PRREasy_2_answer" value='{{PRREasy_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRREasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRREasy_2_answer_correct and PRREasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRREasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRREasy_2_answer" value='{{PRREasy_2_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+		{% if PRREasy_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Easy_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Easy_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRREasy_1_answer").change(function()
+	{
+		question_id = "PRREasy_1";
+		question_type = "PercentageReview"
+		answer_id = "PRREasy_1_answer";
+		entered_answer = $("#PRREasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRREasy_2_answer").change(function()
+			{
+				question_id = "PRREasy_2";
+				question_type = "PercentageReview"
+				answer_id = "PRREasy_2_answer";
+				entered_answer = $("#PRREasy_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRR_Easy_1_submit").button({label:"Check Answers"});
+	$("#PRR_Easy_1_retry").button({label:"Retry"});
+	$("#PRR_Easy_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageReview"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRREasy_1"+"#%$"+"PRREasy_1_answer"+"#%$"+$("#PRREasy_1_answer").val();
+		answers = answers + "#%$"+"PRREasy_2"+"#%$"+"PRREasy_2_answer"+"#%$"+$("#PRREasy_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRR_Easy_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRREasy_1_answer,PRREasy_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

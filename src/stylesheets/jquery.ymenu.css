@@ -1,0 +1,86 @@
+ /* Menu container */
+
+.ymenu ul {
+    width: 150px; /* sets the width of the main root menu */
+    position: relative; /*Relative to the containing division */
+    z-index: 10; /*We need to adjust the z-index values in order to display the successive lists properly */
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Removes the dots from the default Bullet styles */
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    background-color: ; 	 /* Menu background color #66839f*/
+	border-top: 1px ;
+	border-left: 1px ;
+	font-size: 0.81em;
+	margin-top: -1px;
+	padding-bottom: 0.05em;
+	padding-left: 4.5em;
+	padding-right: 4.5em;
+	line-height: 1.2em;
+	color: #74A337;
+}
+.ymenu ul li {
+
+	background: ;/* menu items background*/
+    text-align: left;
+    position: relative;
+    z-index: 12;
+    margin: 0px;
+    padding: 0px 0px;
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ymenu ul li ul {
+    background:#D9EDA3;
+    display: none;
+    position: absolute;
+    z-index: 15;
+    top: -1px;
+    left: 120px; /* set this to the same as the width of the menus*/
+    margin: 0px;
+    text-align: left;
+    width: 280px; /* Set the width of the sub menus */
+}
+
+.ymenu ul li a:link, .ymenu ul li a:visited, .ymenu ul li a:active {
+    padding: 8px; /* sets the height of the menu items*/
+	overflow: auto; /*force hasLayout in IE7 */
+    color: #5E942A; /*menu items links text color */
+	font: 110% Verdana, Arial, Helvetica, sans-serif;
+    margin: 0px;
+    text-decoration: none;
+    z-index: 15;
+    display: block;
+}
+
+.ymenu ul li:hover {
+	background:  ; /* hover menu item background color */
+    font: 110% Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ymenu ul li a:hover {
+	color: #B93D1C;
+	font: 110% Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+.ymenu-folder {
+	background: url(../images/site/ymenu-arrow-right.gif) no-repeat scroll 98% center ;
+}
+.ymenu-folder-hover {
+	background: url(../images/site/ymenu-arrow-right-open.gif) no-repeat scroll 98% center ;
+}
+
+.ymenu ul li ul li {
+    text-align: left;
+}
+
+.ymenu ul li:hover > ul {
+    display: block;
+}
+
+/* Fix for Space between list items in IE 6 */
+.ymenu a, .ymenu ul li a {display: inline-block;} 
+.ymenu a{display: block;}
+
+/* yMenu ends */

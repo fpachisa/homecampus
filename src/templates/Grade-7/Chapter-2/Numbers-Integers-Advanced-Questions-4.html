@@ -1,0 +1,159 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:40%;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% endif %}	
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">On a certain day, maximum temperatures in different cities across the world were recorded. The temperature readings in each of those cities compared to that in Kyoto are presented below:
+			</div>
+			<table style="border-collapse:collapse;margin-top:10px;margin-left:20px;">
+				<tr><td style="border:1px solid;">Amsterdam</td><td style="border:1px solid;">4.3<font class="grade7Variables">t</font> cooler</td></tr>
+				<tr><td style="border:1px solid;">Bangkok</td><td style="border:1px solid;">8.9<font class="grade7Variables">t</font> warmer</td></tr>
+				<tr><td style="border:1px solid;">Abu Dhabi</td><td style="border:1px solid;">14.1<font class="grade7Variables">t</font> warmer</td></tr>
+				<tr><td style="border:1px solid;">Brasilia</td><td style="border:1px solid;">9.5<font class="grade7Variables">t</font> cooler</td></tr>
+				<tr><td style="border:1px solid;">Dallas</td><td style="border:1px solid;">2<font class="grade7Variables">t</font> warmer</td></tr>
+				<tr><td style="border:1px solid;">Toronto</td><td style="border:1px solid;">7.8<font class="grade7Variables">t</font> cooler</td></tr>
+			</table>
+			<div style="margin-top:10px;">a) If &minus;1<font class="grade7Variables">t</font> stands for 1&deg;C cooler than Kyoto, express the temperature of the following cities relative to Kyoto using positive and negative numbers.</div> 
+		</div>
+		<div style="margin-left:20px;margin-top:20px;">
+			Amsterdam
+			{% if RNNIAdvanced_4_1_answer_correct is defined %}
+				<input id="RNNIAdvanced_4_1_answer" value='{{RNNIAdvanced_4_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNNIAdvanced_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIAdvanced_4_1_answer" value='{{RNNIAdvanced_4_1_answer}}' style="width:40px;" > &deg;C&nbsp;
+			{% endif %}	
+			&nbsp;&nbsp;Bangkok
+			{% if RNNIAdvanced_4_2_answer_correct is defined %}
+				<input id="RNNIAdvanced_4_2_answer" value='{{RNNIAdvanced_4_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNNIAdvanced_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIAdvanced_4_2_answer" value='{{RNNIAdvanced_4_2_answer}}' style="width:40px;" > &deg;C&nbsp;
+			{% endif %}	
+		</div>		
+		<div style="margin-left:20px;margin-top:20px;">
+			Brasilia
+			{% if RNNIAdvanced_4_3_answer_correct is defined %}
+				<input id="RNNIAdvanced_4_3_answer" value='{{RNNIAdvanced_4_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNNIAdvanced_4_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIAdvanced_4_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIAdvanced_4_3_answer" value='{{RNNIAdvanced_4_3_answer}}' style="width:40px;" > &deg;C&nbsp;
+			{% endif %}	
+			&nbsp;&nbsp;Dallas
+			{% if RNNIAdvanced_4_4_answer_correct is defined %}
+				<input id="RNNIAdvanced_4_4_answer" value='{{RNNIAdvanced_4_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNNIAdvanced_4_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIAdvanced_4_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIAdvanced_4_4_answer" value='{{RNNIAdvanced_4_4_answer}}' style="width:40px;" > &deg;C&nbsp;
+			{% endif %}	
+		</div>		
+		
+		
+		
+		{% if RNNIAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="RNNIAdvanced_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:10px;margin-left:280px;"><button id="RNNIAdvanced_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNNIAdvanced_4_1_answer").change(function()
+	{
+		question_id = "RNNIAdvanced_4";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIAdvanced_4_1_answer";
+		entered_answer = $("#RNNIAdvanced_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNNIAdvanced_4_2_answer").change(function()
+			{
+				question_id = "RNNIAdvanced_4";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIAdvanced_4_2_answer";
+				entered_answer = $("#RNNIAdvanced_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIAdvanced_4_3_answer").change(function()
+			{
+				question_id = "RNNIAdvanced_4";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIAdvanced_4_3_answer";
+				entered_answer = $("#RNNIAdvanced_4_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIAdvanced_4_4_answer").change(function()
+			{
+				question_id = "RNNIAdvanced_4";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIAdvanced_4_4_answer";
+				entered_answer = $("#RNNIAdvanced_4_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNNIAdvanced_4_Submit").button({label:"Check Answers"});
+	$("#RNNIAdvanced_4_Retry").button({label:"Retry"});
+	$("#RNNIAdvanced_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "NumbersIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNNIAdvanced_4"+"#%$"+"RNNIAdvanced_4_1_answer"+"#%$"+$("#RNNIAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"RNNIAdvanced_4"+"#%$"+"RNNIAdvanced_4_2_answer"+"#%$"+$("#RNNIAdvanced_4_2_answer").val();
+		answers = answers + "#%$"+"RNNIAdvanced_4"+"#%$"+"RNNIAdvanced_4_3_answer"+"#%$"+$("#RNNIAdvanced_4_3_answer").val();
+		answers = answers + "#%$"+"RNNIAdvanced_4"+"#%$"+"RNNIAdvanced_4_4_answer"+"#%$"+$("#RNNIAdvanced_4_4_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNNIAdvanced_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNNIAdvanced_4_1_answer,RNNIAdvanced_4_2_answer,RNNIAdvanced_4_3_answer,RNNIAdvanced_4_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

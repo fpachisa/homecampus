@@ -1,0 +1,41 @@
+{% extends 'MainPage.html' %}
+
+{% block body %}
+<div class="topical-ui">
+	
+	<!-- Main Content Area -->
+	<section class="topical-ui__prime">
+		<h2 class="topical-ui__heading">{{ heading }}</h2>
+		
+		<div class="topical-ui__content">
+		{% block content %}
+			<!-- Content is Empty -->
+		{% endblock content %}
+		</div>
+		
+	</section>
+	<!-- end of Main Content Area -->
+	
+	<!-- Side Navigation Bar -->
+	<aside class="topical-ui__sidebar">
+		
+		{% for topic in LinkMap %}
+		<div class="topical-ui__links{%if GroupID == topic[0]%} active {%endif%}">
+			<h3 class="topical-ui__links-trigger">{{ topic[1] }}</h3>
+			<ul>
+				{% set i = 1 %}
+				{% for nameTuple in topic[2] %}
+					<li class="{%if selfAtPosition == i and GroupID == topic[0]%}active{%endif%}"><a href="{{ nameTuple[1] }}">{{ nameTuple[0] }}</a>
+					{% set i = i + 1 %}
+				{% endfor %}
+			</ul>
+		</div>
+		{% endfor %}
+	</aside>
+	<!-- end of Side Navigation Bar -->
+</div>
+{% endblock body %}
+
+{% block xtra_scripts %}
+<script type="text/javascript" src="/js/TopicalUI.js"></script>
+{% endblock xtra_scripts %}

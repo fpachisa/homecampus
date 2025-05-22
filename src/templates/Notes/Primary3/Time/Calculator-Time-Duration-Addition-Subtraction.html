@@ -1,0 +1,198 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculate Time Duration - Add Time - Subtract Time - Home Campus</title>
+<meta name="keywords" content="Calculate Time Duration Add Time Subtract Time Elementary Math">
+<meta name="description" content="Time Duration Calculator" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Hours-Unit-Converter">More Time Calculators</a></div>
+<h2 class="learn-heading">Calculator: Time Duration - Add Subtract Time</h2>
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Time Duration Calculator</h4></div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 146, 204);" href="/Free-Math-Worksheets/Calculate-Time-Duration-Start-Finish-Time">Download Free Worksheets</a></div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">				
+				<div class="concept-set__container" style="background:rgb(239, 255, 216);">
+					<div class="col-10 col-off-1" id="error"></div>
+					<label for="startTime">Start Time:</label><br>
+					<input id="startHours"  type="number" size=2> h
+					<input id="startMinutes"  type="number" size=2> m
+					<input id="startSeconds"  type="number" size=2> s
+					<select name="startAMPM" id="startAMPM">
+						<option value="am">a.m.</option>
+						<option value="pm">p.m.</option>
+					</select><br><br>
+					<label for="endTime">End Time:</label><br>
+					<input id="endHours"  type="number" size=2> h
+					<input id="endMinutes"  type="number" size=2> m
+					<input id="endSeconds"  type="number" size=2> s
+					<select name="endAMPM" id="endAMPM">
+						<option value="am">a.m.</option>
+						<option value="pm">p.m.</option>
+					</select>
+					<br><br><button class="btn-quiz" id="calcDuration" onclick="calcDuration()">Calculate Time Duration</button><br>
+					<a href="javascript:clearAll();">Clear</a><br><br>
+					<div class="col-10 col-off-1" id="timeDuration"></div>
+				</div>
+			</div>
+			
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Primary-Grade-3/Time-Finding-Duration-Start-Finish">Read More</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>How to Calculate Time Duration?</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				<strong>Step 1: Identify Start Time and End Time</strong><br><br>
+				
+				For e.g.: <br><br>
+				
+				Start Time: 9:45 a.m<br>
+				End Time: 1:25 p.m.<br><br>
+				
+				<strong>Step 2: Convert to 24-hour clock</strong><br><br>
+				
+				It times are given in 12-hour clock, then convert it to 24-hour clock notation.<br><br>
+				
+				12-hour clock time in AM is the same as 24-hour clock time. For 12-hour clock time in p.m., we add 12 hours to change it to 24-hour clock time. Only exception is if it is 12pm then it stays 12 in 24-hour clock as well.<br><br>
+				
+				Start Time (in 24-hour clock): 09 45 hrs<br>
+				End Time (in 24-hour clock): 1+12 = 13 = 13 25 hrs<br><br>
+				
+				<strong>Step 3: Subtract Minutes</strong><br><br>
+				
+				If minutes in the end time is greater than minutes in the start time, then subtract normally to get the minutes duration. If minutes in end time is less than minutes in the start time then add 60 to the end time minutes and reduce the hour by 1. Then proceed to subtract minutes from the start time.<br><br>
+				
+				In our example:<br>
+				End Time Minutes = 25<br>
+				Start Time Minutes = 45<br><br>
+				
+				Since end time minutes is less than start time minutes, we make end time minutes = 25 + 60 = 85 (remember to reduce 1 from hour time i.e. make it 13 - 1 = 12).<br><br>
+				
+				Minutes Duration = 85 - 45 = 40<br><br>
+				
+				<strong>Step 4: Subtract Hours</strong><br><br>
+				
+				End Time Hours = 12 (Since we already borrowed 60 minutes from it hence it reduced by 1)<br>
+				Start Time Hours = 09<br><br>
+				
+				Hours Duration = 12 - 9 = 3<br><br>
+				
+				Hence, the duration between 9:45 a.m. and 1:25 p.m. is 3 hours and 40 minutes.				
+			</div>			
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Time_Finding_Duration_Start_Finish">Practice Duration Questions</a></div>
+	</div>
+</div> <!-- End of concept 1 -->
+
+
+<script>
+
+function calcDuration() {
+	
+	//get start time
+	var startHours = parseInt(document.getElementById("startHours").value);
+	var startMinutes = parseInt(document.getElementById("startMinutes").value);
+	var startSeconds = parseInt(document.getElementById("startSeconds").value);
+	var eStart = document.getElementById("startAMPM");
+	var startAMPM = eStart.options[eStart.selectedIndex].text;
+	
+	//get end time
+	var endHours = parseInt(document.getElementById("endHours").value);
+	var endMinutes = parseInt(document.getElementById("endMinutes").value);
+	var endSeconds = parseInt(document.getElementById("endSeconds").value);
+	var eEnd = document.getElementById("endAMPM");
+	var endAMPM = eEnd.options[eEnd.selectedIndex].text;
+
+	var durationMinutes;
+	var durationSeconds;
+	var durationHours;
+	
+	//Data Sanity Check
+	if (1 > startHours || startHours > 12 || isNaN(startHours)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid Start Hour</font>";
+		return;
+	}
+	if (0 > startMinutes || startMinutes > 59 || isNaN(startMinutes)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid Start Minute</font>";
+		return;
+	}
+	if (0 > startSeconds || startSeconds > 59 || isNaN(startSeconds)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid Start Second</font>";
+		return;
+	}
+			
+	if (1 > endHours || endHours > 12 || isNaN(endHours)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid End Hour</font>";
+		return;
+	}
+	if (0 > endMinutes || endMinutes > 59 || isNaN(endMinutes)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid End Minute</font>";
+		return;
+	}
+	if (0 > endSeconds || endSeconds > 59 || isNaN(endSeconds)) {
+		document.getElementById("timeDuration").innerHTML = "<font color=red>Please provide valid End Second</font>";
+		return;
+	}
+
+	//converting start/end hours to 24-hour clock
+	if (startAMPM=="p.m." && startHours!=12) {
+		startHours = parseInt(startHours) + 12;		
+	}
+	if (endAMPM=="p.m." && endHours!=12) {
+		endHours = parseInt(endHours) + 12;		
+	}
+	if (startAMPM=="a.m." && startHours==12) {
+		startHours = 0;		
+	}
+	if (endAMPM=="a.m." && endHours==12) {
+		endHours = 0;		
+	}
+	
+
+	//Check end seconds is less than or greater than start seconds and calculate the duration
+	if (endSeconds >= startSeconds) {
+		durationSeconds = endSeconds - startSeconds;
+	} else {
+		durationSeconds = endSeconds - startSeconds + 60;
+		endMinutes = endMinutes - 1;
+	}
+
+	//Check end minutes is less than or greater than start minutes and calculate the duration
+	if (endMinutes >= startMinutes) {
+		durationMinutes = endMinutes - startMinutes;
+		durationHours = endHours - startHours;
+	} else {
+		durationMinutes = endMinutes - startMinutes + 60;
+		endHours = endHours - 1;
+		durationHours = endHours - startHours;
+	}
+	if (durationHours < 0){
+		durationHours = durationHours + 24;
+	}	
+		
+	timeDuration = 	" Time Duration is ";
+	timeDuration = timeDuration + durationHours+" hours "+durationMinutes+" minutes and "+durationSeconds+" seconds";
+	document.getElementById("timeDuration").innerHTML = timeDuration;
+}
+
+function clearAll(){
+	document.getElementById("startHours").value = "";
+	document.getElementById("startMinutes").value = "";
+	document.getElementById("startSeconds").value = "";
+	document.getElementById("endHours").value = "";
+	document.getElementById("endMinutes").value = "";
+	document.getElementById("endSeconds").value = "";
+}
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.7 Cubes and Cube Roots</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:64%;">1.7 Cubes and Cube Roots</div>
+	{% endif %}
+	<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">2)</font> Find the cube root of 2<sup>9</sup> &times; 3<sup>6</sup> &times; 5<sup>3</sup>. Write your answer in index &nbsp;&nbsp;&nbsp;&nbsp;notation.</div> 
+	<div style="margin-left:40px;margin-top:20px;">
+		Answer: 
+		<div style="display:inline-block;">
+			{% if CCREasy_7_1_answer_correct is defined %}
+				<input id="CCREasy_7_1_answer" size=2 value='{{CCREasy_7_1_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="CCREasy_7_1_answer" size=2 value='{{CCREasy_7_1_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if CCREasy_7_1_answer_correct is defined %}
+				<input id="CCREasy_7_2_answer" size=1 value='{{CCREasy_7_2_answer}}' readonly style="width:10px;height:12px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="CCREasy_7_2_answer" size=1 value='{{CCREasy_7_2_answer}}' style="width:10px;height:10px;">
+			{% endif %}			
+		</div>	
+		<div style="display:inline-block;">
+			&times; 
+			{% if CCREasy_7_1_answer_correct is defined %}
+				<input id="CCREasy_7_3_answer" size=2 value='{{CCREasy_7_3_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">
+			{% else %}
+				<input id="CCREasy_7_3_answer" size=2 value='{{CCREasy_7_3_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-top:-10px;margin-left:-4px;vertical-align:top;width:10px;">
+			{% if CCREasy_7_1_answer_correct is defined %}
+				<input id="CCREasy_7_4_answer" size=1 value='{{CCREasy_7_4_answer}}' readonly style="width:10px;height:12px;background-color:#DFDFDF;">			
+			{% else %}
+				<input id="CCREasy_7_4_answer" size=1 value='{{CCREasy_7_4_answer}}' style="width:10px;height:10px;">
+			{% endif %}			
+		</div>	
+		<div style="display:inline-block;">
+			&times; 
+			{% if CCREasy_7_1_answer_correct is defined %}
+				<input id="CCREasy_7_5_answer" size=2 value='{{CCREasy_7_5_answer}}' readonly style="width:12px;background-color:#DFDFDF;text-align:center;">&nbsp;
+				{% if CCREasy_7_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not CCREasy_7_1_answer_correct and CCREasy_7_1_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{CCREasy_7_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+			{% else %}
+				<input id="CCREasy_7_5_answer" size=2 value='{{CCREasy_7_5_answer}}' style="width:12px;text-align:center;">
+			{% endif %}
+		</div>
+	</div>
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">3)</font> Given that the prime factorisation of 85184 is 2<sup>6</sup> &times; 11<sup>3</sup>, find the &nbsp;&nbsp;&nbsp;&nbsp;value of &#8731;<span style="text-decoration:overline">85184&nbsp;</span>.</div> 
+	<div style="margin-left:50px;margin-top:20px;">
+		<div style="display:inline-block;width:60px;">&#8731;<span style="text-decoration:overline">85184&nbsp;</span></div>
+		<div style="display:inline-block;">=&nbsp;</div>
+		<div style="display:inline-block;"> 
+		{% if CCREasy_8_answer_correct is defined %}
+			<input id="CCREasy_8_answer" size=3 value='{{CCREasy_8_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+			{% if CCREasy_8_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not CCREasy_8_answer_correct and CCREasy_8_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{CCREasy_8_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="CCREasy_8_answer" size=3 value='{{CCREasy_8_answer}}'>
+		{% endif %}
+		</div>		
+	</div>
+
+	{% if CCREasy_7_1_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:200px;"><button id="retry_CCREasy_2" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:20px;margin-left:200px;"><button id="submit_CCREasy_2" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#CCREasy_7_1_answer").change(function()
+	{
+		question_id = "CCREasy_7";
+		question_type = "CCR"
+		answer_id = "CCREasy_7_1_answer";
+		entered_answer = $("#CCREasy_7_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#CCREasy_7_2_answer").change(function()
+			{
+				question_id = "CCREasy_7";
+				question_type = "CCR"
+				answer_id = "CCREasy_7_2_answer";
+				entered_answer = $("#CCREasy_7_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#CCREasy_7_3_answer").change(function()
+			{
+				question_id = "CCREasy_7";
+				question_type = "CCR"
+				answer_id = "CCREasy_7_3_answer";
+				entered_answer = $("#CCREasy_7_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#CCREasy_7_4_answer").change(function()
+			{
+				question_id = "CCREasy_7";
+				question_type = "CCR"
+				answer_id = "CCREasy_7_4_answer";
+				entered_answer = $("#CCREasy_7_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#CCREasy_7_5_answer").change(function()
+			{
+				question_id = "CCREasy_7";
+				question_type = "CCR"
+				answer_id = "CCREasy_7_5_answer";
+				entered_answer = $("#CCREasy_7_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#CCREasy_8_answer").change(function()
+			{
+				question_id = "CCREasy_8";
+				question_type = "CCR"
+				answer_id = "CCREasy_8_answer";
+				entered_answer = $("#CCREasy_8_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#submit_CCREasy_2").button({label:"Check Answers"});
+	$("#retry_CCREasy_2").button({label:"Retry"});
+	$("#submit_CCREasy_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "CCR"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "CCREasy_7"+"#%$"+"CCREasy_7_1_answer"+"#%$"+$("#CCREasy_7_1_answer").val();
+		answers = answers + "#%$"+"CCREasy_7"+"#%$"+"CCREasy_7_2_answer"+"#%$"+$("#CCREasy_7_2_answer").val();
+		answers = answers + "#%$"+"CCREasy_7"+"#%$"+"CCREasy_7_3_answer"+"#%$"+$("#CCREasy_7_3_answer").val();
+		answers = answers + "#%$"+"CCREasy_7"+"#%$"+"CCREasy_7_4_answer"+"#%$"+$("#CCREasy_7_4_answer").val();
+		answers = answers + "#%$"+"CCREasy_7"+"#%$"+"CCREasy_7_5_answer"+"#%$"+$("#CCREasy_7_5_answer").val();
+		answers = answers + "#%$"+"CCREasy_8"+"#%$"+"CCREasy_8_answer"+"#%$"+$("#CCREasy_8_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry_CCREasy_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "CCREasy_7_1_answer,CCREasy_7_2_answer,CCREasy_7_3_answer,CCREasy_7_4_answer,CCREasy_7_5_answer,CCREasy_8_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:400
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

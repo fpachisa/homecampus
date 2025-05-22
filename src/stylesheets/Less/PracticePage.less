@@ -1,0 +1,337 @@
+/*
+ * Styles for the Practice section!
+ * 
+ * @added: 28-07-2015
+ * @author: Riyaz Ali
+ */
+ 
+.practice-container {
+ 	.make-row();
+ 	//border: 1px solid blue;
+}
+
+.practice__heading {
+	.make-xs-column(12);
+	.make-sm-column(3);
+	.make-sm-column-offset(1);
+	//border: 1px dashed red;
+}
+
+.timer {
+	.text-center;
+	
+	&__heading {
+		.text-uppercase;
+	}
+	
+	&__time {
+		font-size: 3em;
+		font-weight: bold;
+	}
+	
+	&__time--unit {
+		
+	}
+}
+
+
+.create-tri(@c){
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -24px;
+		display: block;
+		border-left: 12px solid @c;
+		border-bottom: 13px solid @c;
+		border-top: 12px solid transparent;
+		border-right: 12px solid transparent;
+	}
+}
+
+.practice__ninja-rank {
+	.make-xs-column(12);
+	.make-sm-column(3);
+	
+	&__container {
+		.make-xs-column(12);
+		//.make-sm-column(4);
+		//.make-sm-column-offset(3);
+		.panel;
+		.panel-body;
+		border: 1px solid #ddd;
+	}
+}
+
+//decorators
+.practice-decorator {
+	.make-xs-column(12);
+	.make-sm-column(5);
+	.make-md-column(3);
+	//.text-center;
+	
+	&__element {
+		.make-xs-column(12);
+		.make-sm-column(10);
+		margin-top: 7.5px;
+		margin-bottom: 7.5px;
+		
+		&:first-child{
+			margin-top: 0;
+		}
+		
+		//height: 100px;
+		//background-color: cornflowerblue;
+		//border: 1px solid #ddd;
+		
+		&--heading {
+			padding-left: 15px;
+			color: #fff;
+			position: relative;
+			width: ~"calc(100% - 24px)";
+			
+			&.hc1 {
+				background-color: #e83f34;
+				.create-tri(#e83f34);
+			}
+			
+			&.hc2 {
+				background-color: #2cc6dc;
+				.create-tri(#2cc6dc);
+			}
+			
+			&.hc3{
+				background-color: #ff9800;
+				.create-tri(#ff9800);
+			}
+		}
+		
+		&--body {
+			border: 1px solid #ddd;
+			border-top: none;
+			padding: 15px;
+			
+			&.hc1 {
+				background-color: #fbd5d3;
+				
+				.ninja-rank__legend {
+					font-weight: bold;
+					color: #555;
+				}
+			}
+			&.hc2 {
+				background-color: #d4f2f7;
+				.text-center;
+				font-weight: bold;
+				color: #555;
+				font-size: 22px;
+			}
+			&.hc3 {
+				background-color: #fbc97f;
+				.text-center;
+				font-weight: bold;
+				color: #555;
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+
+.problem {
+	.make-xs-column(12);
+	.make-sm-column(6);
+	.make-sm-column-offset(1);
+	
+	&__container {
+		//.make-sm-column(4);
+		//.make-sm-column-offset(4);
+		.panel;
+		.panel-body;
+		//.shadow-2dp();
+		
+		position: relative;
+		
+		border: 1px solid #ccc;
+		
+		> * {
+			margin: 15px 0;
+		}
+	}
+	
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 999;
+		display: none;
+		background-color: #eee;
+		background-color: rgba(255,255,255, 0.5);
+	}
+	
+	.mb-nil {
+		margin-bottom: 0 !important;
+	}
+	
+	&__heading {
+		background-color: @brand-primary;
+		color: #fff;
+    	margin: -15px;
+    	margin-bottom: 15px;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	border-bottom: 1px solid #ddd;
+    	font-size: 15px;
+    	font-weight: bold;
+    	
+    	a {
+    		color: #fff;
+    		text-decoration: underline;
+    	}
+    	
+    	&--lg {
+    		.hidden-xs;
+    	}
+    	
+    	&--sm {
+    		.visible-xs;
+    	}
+	}
+	
+	&__question {
+		//Multiline question indentation
+		//padding-left: 1em;
+		//text-indent: 0em;
+		color: #2B7657;
+	}
+	
+	&__answer {
+		color: #2B7657;
+	}
+	
+	&__button-group {
+		//indent the buttons accordingly
+		text-indent: 1em;
+		//display: inline-block;
+		
+		& .right-aligned {
+			@media screen and (min-width: @screen-xs-min){
+				float: right;
+			}
+		}
+		
+	}
+	
+	&__info-graph {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-bottom: 0;
+		padding: 5px;
+		display: inline-block;
+		color: @brand-primary;
+	}
+	
+	&__loader {
+		display: none;
+		font-size: 1.25em;
+	}
+	
+	&__correct {
+		display: none;
+		font-size: 1.25em;
+	}
+}
+
+//MCQs
+.mcq {
+	&__group {
+		.make-xs-column(12);
+		padding: 0;
+	}
+	
+	&__element {
+		position: relative;
+		overflow: hidden;
+		display: inline;
+		
+		//general label style
+		> label {
+			.make-xs-column(12);
+			.make-sm-column(5);
+			
+			@media (min-width: @screen-sm-min) {
+				margin-left: percentage( (1 / @grid-columns) / 2 );
+				margin-right: percentage( (1 / @grid-columns) / 2 );
+			}
+			
+			.text-uppercase;
+			.text-center;
+			
+			border-radius: 5px;
+			padding: 15px;
+			
+			cursor: pointer;
+		}
+		
+		//general radio-input style
+		> input[type="radio"] {
+			display: none;
+		}
+		
+		//for checked and unchecked states
+		> input[type="radio"] + label {
+			border:  1px solid @brand-primary;
+		} 
+		
+		> input[type="radio"]:checked + label {
+			background-color: lighten(@brand-primary, 25%);
+			border: 1px solid darken(@brand-primary, 20%);
+			color: #FFF;
+		} 
+	}
+}
+
+
+//TOOLTIP
+.tooltip {
+	i {
+		font-size: 0.75em;
+	}
+	
+	&__text {
+		visibility: hidden;
+		width: 120px;
+    	background-color: black;
+    	color: #fff;
+    	text-align: center;
+    	border-radius: 6px;
+    	padding: 5px 0;
+    	position: absolute;
+    	z-index: 1;
+    	top: 150%;
+    	left: 50%;
+    	margin-left: -60px;
+    	
+    	&.rank-table {
+    		width: auto;
+    		padding:0;
+    		
+    		
+    	}
+	}
+	
+	&:hover &__text {
+		visibility: visible;
+	}
+}
+
+
+// input.answer-box
+input.answer-box {
+	.form-control;
+	display: inline-block;
+	width: auto  !important;
+}

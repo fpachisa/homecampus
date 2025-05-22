@@ -1,0 +1,41 @@
+{% extends 'MainPage.html' %}
+
+{% block body %}
+<div class="HC-SignIn"><!-- InstanceBeginEditable name="maincontent" -->
+	<div class="HC-SignIn__container">
+		<div class="HC-SignIn__container--body">
+		
+			<!--
+			<div class="social-login">
+				<button class="btn-facebook" id="sign-in--fb"><i class="fa fa-facebook"></i></button>
+				<button class="btn-google" id="sign-in--gp"><i class="fa fa-google-plus"></i></button>
+			</div>
+			
+			<div class="or-separator"><span>or</span></div>
+			-->
+			<h2>Login to HomeCampus</h2>
+			<form class="sign-in-form" id="login" method="post" action="{{ current_url }}">
+				<div><label for="username">Username:</label><input name="username" id="username" type="text" placeholder="Enter username" /></div>
+				<div><label for="password">Password:</label><input name="password" id="password" type="password" placeholder="Enter password"></div>
+				
+				<div class="sign-in-form__ctrl">
+					<button type="submit" class="btn-primary" style="display:block; margin: 0;">Sign In</button>
+					<a class="sign-in-form__ctrl--alt" href="/Register">Not a member?</a>
+					<a class="sign-in-form__ctrl--alt right" href="/ForgotPassword">Forgot Password?</a>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+	
+	{% if login_error %}
+	<script>
+		$(document).ready(function(){
+			login_failed("{{ login_error }}");		//defined in account.js
+		});
+	</script>
+	{% endif %}
+
+{% endblock body %}

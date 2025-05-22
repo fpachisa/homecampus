@@ -1,0 +1,103 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.1 Percentage Review</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.1 Percentage Review</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			In a Weightlifting competition, Mike lifts weights up to 170 lb while Jack lifts weights up to 155 lb. (lb = pounds)
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:390px;">a) What percentage of additional weights did Mike lift as compared to Jack? (enter your answer correct to 2 decimal places)</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:
+			{% if PRRMedium_2_1_answer_correct is defined %}
+				<input id="PRRMedium_2_1_answer" value='{{PRRMedium_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRRMedium_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRMedium_2_1_answer_correct and PRRMedium_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRMedium_2_1_answer" value='{{PRRMedium_2_1_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;width:390px;">b) By how many percent did Jack lag? (enter your answer correct to 2 decimal places)</div>
+		<div style="margin-left:40px;margin-top:20px;">Answer:
+			{% if PRRMedium_2_2_answer_correct is defined %}
+				<input id="PRRMedium_2_2_answer" value='{{PRRMedium_2_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> %
+					{% if PRRMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRMedium_2_2_answer_correct and PRRMedium_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRMedium_2_2_answer" value='{{PRRMedium_2_2_answer}}' style="width:50px;" > %
+			{% endif %}	
+		</div>
+
+
+		{% if PRRMedium_2_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Medium_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRR_Medium_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRMedium_2_1_answer").change(function()
+	{
+		question_id = "PRRMedium_2";
+		question_type = "PercentageReview"
+		answer_id = "PRRMedium_2_1_answer";
+		entered_answer = $("#PRRMedium_2_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRMedium_2_2_answer").change(function()
+			{
+				question_id = "PRRMedium_2";
+				question_type = "PercentageReview"
+				answer_id = "PRRMedium_2_2_answer";
+				entered_answer = $("#PRRMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRR_Medium_2_submit").button({label:"Check Answers"});
+	$("#PRR_Medium_2_retry").button({label:"Retry"});
+	$("#PRR_Medium_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageReview"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRMedium_2"+"#%$"+"PRRMedium_2_1_answer"+"#%$"+$("#PRRMedium_2_1_answer").val();
+		answers = answers + "#%$"+"PRRMedium_2"+"#%$"+"PRRMedium_2_2_answer"+"#%$"+$("#PRRMedium_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRR_Medium_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRMedium_2_1_answer,PRRMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

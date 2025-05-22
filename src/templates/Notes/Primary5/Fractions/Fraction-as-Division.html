@@ -1,0 +1,75 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Concept of Fraction as a Division - Home Campus</title>
+<meta name="keywords" content="fraction as division, problem sums, P3 maths, 3rd grade math, fraction worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, P3 math tuition, math tuition at home">
+<meta name="description" content="Notes on Concept of Fraction as a Division based on Primary 5 syllabus set by MOE Singapore" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Concept of Fraction as a Division</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Fraction and division are related to each other. The video below explains in detail.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/bbDRdQGJOLM?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;2. Show that 3 divided by 4 is {{ frGen(3,4) }}.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Let's suppose we have 3 pizzas that are divided equally among 4 friends &nbsp;=&gt;&nbsp; 3 &nbsp;&divide;&nbsp; 4.<br />
+				
+				We will show that each friend gets &nbsp;=&gt;&nbsp; {{ frGen(3,4) }} of a pizza.<br /><br />
+				
+				<img src="/images/notes/fraction_is_division.png" alt="fraction is division" /><br />
+			</div>
+			<div class="col-3 col-off-1">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3 &nbsp;&divide;&nbsp; 4</b> <br />
+				=&nbsp; {{ frGen(1,4) }} &nbsp; of &nbsp; 3 (pizzas)<br />
+				=&nbsp; {{ frGen(1,4) }} &nbsp;&times;&nbsp; 3<br />
+				=&nbsp; {{ frGen(1,4) }} &nbsp;&times;&nbsp; {{ frGen(3,1) }}<br />
+				=&nbsp; {{ frGen("1 x 3","4 x 1") }} <br />
+				=&nbsp; <b>{{ frGen(3,4) }}</b>
+			</div>
+			<div class="col-6 hint-box" style="margin:10px;">
+				3 pizzas are divided among 4 friends.<br /><br />
+				So, each of the friend gets {{ frGen(1,4) }} of each of the 3 pizzas.
+			</div>
+			<div class="col-10 col-off-1">
+				Therefore, each friend gets <b>{{ frGen(3,4) }}</b> of the pizza.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+{% endblock %}

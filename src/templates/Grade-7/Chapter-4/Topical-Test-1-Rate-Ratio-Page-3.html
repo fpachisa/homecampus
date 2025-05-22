@@ -1,0 +1,173 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#79DA4D;">Rate, Ratio and Proportion - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="RRP_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">6)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			Best Bakery and Fresh Bakery had 50 and 35 tarts, respectively. The latter got an order to fill but fell short of some tarts. Best Bakery helped Fresh Bakery by giving away the deficit number of tarts. After that, the ratio of the number of tarts left at Best Bakery to that at Fresh Bakery was 2 : 3. Find the number of tarts that Fresh Bakery received from Best Bakery?
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_6_answer" value='{{RRPTT1_6_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> tarts&nbsp;
+			{% else %}
+				<input id="RRPTT1_6_answer" value='{{RRPTT1_6_answer}}' style="width:30px;"> tarts <font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_6_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">7)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			A student, working on Water Wheel Science Project, observes that Wheel A makes 230 rotations in 10 min. He notices that Wheel B rotates 300 times in 15 min. He must use the one that spins faster. Which one should he choose?
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;">
+			{% if RRPTT1_7_answer_correct is defined %}
+				<input type=radio name="RRPTT1_7_answer" value='Wheel A' disabled
+				{% if RRPTT1_7_answer == 'Wheel A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Wheel A<br>
+				<input type=radio name="RRPTT1_7_answer" value='Wheel B' disabled
+				{% if RRPTT1_7_answer == 'Wheel B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Wheel B&nbsp;&nbsp;
+			{% else %}
+				<input type=radio name="RRPTT1_7_answer" value='Wheel A'
+				{% if RRPTT1_7_answer == 'Wheel A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Wheel A<br>
+				<input type=radio name="RRPTT1_7_answer" value='Wheel B'
+				{% if RRPTT1_7_answer == 'Wheel B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Wheel B <font class="grade7TestMark">(Mark: 1)</font>			 
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_7_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="RRP_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#RRP_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#RRP_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Rate-Ratio');
+  	});	
+$("#RRP_TT_1_back").button({label:"<<"});
+$("#RRP_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-1.html';
+		rightPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-2.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#RRPTT1_6_answer").change(function()
+		{
+			question_id = "RRPTT1_6";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_6_answer";
+			entered_answer = $("#RRPTT1_6_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='RRPTT1_7_answer']").click(function()		
+		{
+			question_id = "RRPTT1_7";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_7_answer";
+			entered_answer = $("input:radio[name=RRPTT1_7_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

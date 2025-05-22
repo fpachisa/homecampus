@@ -1,0 +1,29 @@
+<h2>Report for {{child }}:</h2>
+{% if Stats|length == 0 %}
+	<h3>No data to generate the report.</h3>
+{% endif %}
+
+{% for concepts in Stats %}
+ 			{% if loop.index is divisibleby(2) %}
+  			<h3 style="margin-left:500px; margin-top:-150px;">{{ concepts.concept }} </h3>
+  			<table class='Reports' style="margin-left:500px;">
+  			<tr><td>Problems Attempted:</td><td>{{concepts.attempted}}</td></tr>
+  			<tr><td>Correct:</td><td>{{concepts.correct}}</td></tr>
+  			<tr><td>HCScore:</td><td>{{concepts.HCScore}}</td></tr>
+  			<tr><td>Score out of 100:</td><td>{{concepts.Score100}}</td></tr>
+  			<tr><td>Total time spent(mins):</td><td>{{concepts.time_spent}}</td></tr>
+  			<tr><td>HCRank:</td><td>{{concepts.HCRank}}</td></tr>
+  			</table>
+  		{% else %}
+  			<h3>{{ concepts.concept }} </h3>
+  			<table class='Reports' style="margin-left:100px;">
+  			<tr><td>Problems Attempted:</td><td>{{concepts.attempted}}</td></tr>
+  			<tr><td>Correct:</td><td>{{concepts.correct}}</td></tr>
+  			<tr><td>HCScore:</td><td>{{concepts.HCScore}}</td></tr>
+  			<tr><td>Score out of 100:</td><td>{{concepts.Score100}}</td></tr>
+  			<tr><td>Total time spent(mins):</td><td>{{concepts.time_spent}}</td></tr>
+  			<tr><td>HCRank:</td><td>{{concepts.HCRank}}</td></tr>
+  			</table>
+  		{% endif %}
+{% endfor %}
+

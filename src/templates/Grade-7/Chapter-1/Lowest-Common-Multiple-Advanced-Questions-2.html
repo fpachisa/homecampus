@@ -1,0 +1,107 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.5 Lowest Common Multiple</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:64%;">1.5 Lowest Common Multiple</div>
+	{% endif %}
+	<div style="margin-left:20px;margin-top:20px;display:inline-block;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+	<div style="display:inline-block;vertical-align:top;width:380px;margin-top:20px;">
+		A traffic light on a road turns green once every 35 seconds. Another traffic light on the road turns green once every 42 seconds. If both the traffic lights are green together now, how long will it take for them to be green together next? Give your answer in seconds.
+	</div> 
+	<div style="margin-left:50px;margin-top:15px;">
+		<div style="display:inline-block;"> 
+		{% if LCMAdvanced_2_answer_correct is defined %}
+			<input id="LCMAdvanced_2_answer" size=3 value='{{LCMAdvanced_2_answer}}' readonly style="background-color:#DFDFDF;">seconds &nbsp;
+			{% if LCMAdvanced_2_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not LCMAdvanced_2_answer_correct and LCMAdvanced_2_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{LCMAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="LCMAdvanced_2_answer" size=3 value='{{LCMAdvanced_2_answer}}'> seconds
+		{% endif %}
+		</div>	
+	</div>
+
+	<div style="margin-left:20px;margin-top:20px;display:inline-block;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+	<div style="display:inline-block;vertical-align:top;width:380px;margin-top:20px;">
+		As seen from the earth, Planet A, Planet B and Planet C take 12 years, 9 years and 10 years respectively, to complete a revolution. If they are in a straight line today, how many years later will they be a straight line again?
+	</div>
+	<div style="margin-left:50px;margin-top:20px;">
+		{% if LCMAdvanced_3_answer_correct is defined %}
+			<input id="LCMAdvanced_3_answer" size=3 value='{{LCMAdvanced_3_answer}}' readonly style="background-color:#DFDFDF;"> years &nbsp;
+			{% if LCMAdvanced_3_answer_correct %}
+				<img src="/images/g7_correct.png">
+			{% elif not LCMAdvanced_3_answer_correct and LCMAdvanced_3_answer_correct is defined %}
+				<img src="/images/g7_incorrect.png">
+			{% endif %}
+			<a href ="javascript:ShowExplanation('{{LCMAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="LCMAdvanced_3_answer" size=3 value='{{LCMAdvanced_3_answer}}'> years
+		{% endif %}	
+	</div>
+
+	{% if LCMAdvanced_2_answer_correct is defined %}
+		<div style="margin-top:30px;margin-left:200px;"><button id="retry_LCMAdvanced_2" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:30px;margin-left:200px;"><button id="submit_LCMAdvanced_2" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+$("#LCMAdvanced_2_answer").change(function()
+		{
+			question_id = "LCMAdvanced_2";
+			question_type = "LCM"
+			answer_id = "LCMAdvanced_2_answer";
+			entered_answer = $("#LCMAdvanced_2_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#LCMAdvanced_3_answer").change(function()
+	{
+		question_id = "LCMAdvanced_3";
+		question_type = "LCM"
+		answer_id = "LCMAdvanced_3_answer";
+		entered_answer = $("#LCMAdvanced_3_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	$("#submit_LCMAdvanced_2").button({label:"Check Answers"});
+	$("#retry_LCMAdvanced_2").button({label:"Retry"});
+	$("#submit_LCMAdvanced_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "LCM"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "LCMAdvanced_2"+"#%$"+"LCMAdvanced_2_answer"+"#%$"+$("#LCMAdvanced_2_answer").val();
+		answers = answers + "#%$"+"LCMAdvanced_3"+"#%$"+"LCMAdvanced_3_answer"+"#%$"+$("#LCMAdvanced_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry_LCMAdvanced_2").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "LCMAdvanced_2_answer,LCMAdvanced_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:550
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

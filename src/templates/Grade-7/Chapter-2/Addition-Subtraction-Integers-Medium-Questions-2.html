@@ -1,0 +1,206 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Find the unknown variable, <font class="grade7Variables">x</font>, in each of the following:
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">a) &minus; 9 + <font class="grade7Variables">x</font> &minus; (&minus;12) = &minus;7
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> = 
+			{% if RNASMedium_2_1_answer_correct is defined %}
+				<input id="RNASMedium_2_1_answer" value='{{RNASMedium_2_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_1_answer_correct and RNASMedium_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_1_answer" value='{{RNASMedium_2_1_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">b) <font class="grade7Variables">x</font> &minus; 13 &minus; 8 = 9
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> = 
+			{% if RNASMedium_2_2_answer_correct is defined %}
+				<input id="RNASMedium_2_2_answer" value='{{RNASMedium_2_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_2_answer_correct and RNASMedium_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_2_answer" value='{{RNASMedium_2_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">c) 3 &minus; (&minus;1) &minus; 5 + <font class="grade7Variables">x</font> = &minus;15
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> = 
+			{% if RNASMedium_2_3_answer_correct is defined %}
+				<input id="RNASMedium_2_3_answer" value='{{RNASMedium_2_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_3_answer_correct and RNASMedium_2_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_3_answer" value='{{RNASMedium_2_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">d) [(&minus;6) + <font class="grade7Variables">x</font>] &minus; [(&minus;3) &minus; <font class="grade7Variables">x</font>] = &minus;1
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> =
+			{% if RNASMedium_2_4_answer_correct is defined %}
+				<input id="RNASMedium_2_4_answer" value='{{RNASMedium_2_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_4_answer_correct and RNASMedium_2_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_4_answer" value='{{RNASMedium_2_4_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">e) 11 &minus; [<font class="grade7Variables">x</font> &minus; (&minus;9)] = 102
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> =
+			{% if RNASMedium_2_5_answer_correct is defined %}
+				<input id="RNASMedium_2_5_answer" value='{{RNASMedium_2_5_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_5_answer_correct and RNASMedium_2_5_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_5_answer" value='{{RNASMedium_2_5_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:60px;margin-top:10px;">f) <font class="grade7Variables">x</font> + 23 &minus; 41 = 41 &minus; 23
+			<div style="margin-left:20px;margin-top:10px;"><font class="grade7Variables">x</font> =
+			{% if RNASMedium_2_6_answer_correct is defined %}
+				<input id="RNASMedium_2_6_answer" value='{{RNASMedium_2_6_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNASMedium_2_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNASMedium_2_6_answer_correct and RNASMedium_2_6_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASMedium_2_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASMedium_2_6_answer" value='{{RNASMedium_2_6_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+			</div>
+		</div>
+		{% if RNASMedium_2_1_answer_correct is defined %}
+			<div style="margin-top:-25px;margin-left:340px;"><button id="RNASMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:220px;"><button id="RNASMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNASMedium_2_1_answer").change(function()
+	{
+		question_id = "RNASMedium_2";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASMedium_2_1_answer";
+		entered_answer = $("#RNASMedium_2_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNASMedium_2_2_answer").change(function()
+			{
+				question_id = "RNASMedium_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_2_2_answer";
+				entered_answer = $("#RNASMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNASMedium_2_3_answer").change(function()
+			{
+				question_id = "RNASMedium_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_2_3_answer";
+				entered_answer = $("#RNASMedium_2_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNASMedium_2_4_answer").change(function()
+			{
+				question_id = "RNASMedium_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_2_4_answer";
+				entered_answer = $("#RNASMedium_2_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNASMedium_2_5_answer").change(function()
+			{
+				question_id = "RNASMedium_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_2_5_answer";
+				entered_answer = $("#RNASMedium_2_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNASMedium_2_6_answer").change(function()
+			{
+				question_id = "RNASMedium_2";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASMedium_2_6_answer";
+				entered_answer = $("#RNASMedium_2_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNASMedium_2_Submit").button({label:"Check Answers"});
+	$("#RNASMedium_2_Retry").button({label:"Retry"});
+	$("#RNASMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASMedium_2"+"#%$"+"RNASMedium_2_1_answer"+"#%$"+$("#RNASMedium_2_1_answer").val();
+		answers = answers + "#%$"+"RNASMedium_2"+"#%$"+"RNASMedium_2_2_answer"+"#%$"+$("#RNASMedium_2_2_answer").val();
+		answers = answers + "#%$"+"RNASMedium_2"+"#%$"+"RNASMedium_2_3_answer"+"#%$"+$("#RNASMedium_2_3_answer").val();
+		answers = answers + "#%$"+"RNASMedium_2"+"#%$"+"RNASMedium_2_4_answer"+"#%$"+$("#RNASMedium_2_4_answer").val();
+		answers = answers + "#%$"+"RNASMedium_2"+"#%$"+"RNASMedium_2_5_answer"+"#%$"+$("#RNASMedium_2_5_answer").val();
+		answers = answers + "#%$"+"RNASMedium_2"+"#%$"+"RNASMedium_2_6_answer"+"#%$"+$("#RNASMedium_2_6_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASMedium_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASMedium_2_1_answer,RNASMedium_2_2_answer,RNASMedium_2_3_answer,";
+		answer_ids = answer_ids + "RNASMedium_2_4_answer,RNASMedium_2_5_answer,RNASMedium_2_6_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

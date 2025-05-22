@@ -1,0 +1,210 @@
+{
+		"P3WNPlaceValues": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Number-Notations-Place-Values-Up-to-10000",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Number_Notation_Place_Values",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Number_Notation_Place_Values"
+	                    ],
+	    "P3WNFiguresToWords": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Writing-Numbers-from-Figures-to-Words-Up-to-10000",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Figures_to_Words",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Figures_to_Words"
+	                    ],
+	    "P3WNWordsToFigures": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Writing-Numbers-from-Words-to-Figures-Up-to-10000",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Words_to_Figures",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Words_to_Figures"
+	                    ],
+	    "P3WNNumberPatterns": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Number-Patterns",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Patterns",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Patterns"
+	                    ],
+	    "P3WNComparingOrdering": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Comparing-Ordering",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Comparing_Ordering",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Comparing_Ordering"
+	                    ],
+	    "P3WNAddition": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Addition",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Addition",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Addition"
+	                    ],
+	    "P3WNSubtraction": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/Subtraction",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Subtraction",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Subtraction"
+	                    ],
+	    "P3WNMultiplication": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers-Multiplication",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Multiplication",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Multiplication"
+	                    ],
+	    "P3WNDivision": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers-Division",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Division",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Division"
+	                    ],
+	    "P3WNWordProblems": [
+	                     "/Learn/Primary-Grade-3/Whole-Numbers/2-Step-Word-Problems",
+	                     "/Grade_3_Math_Practice/Whole_Numbers_Word_Problems",
+	                     "/Grade_3_Math_Worksheets/Whole_Numbers_Word_Problems"
+	                    ],
+	                    
+	     "P3MOAddition": [
+	                      "/Learn/Primary-Grade-3/Addition-of-Money",
+	                      "/Grade_3_Math_Practice/Money_Addition",
+	                      "/Grade_3_Math_Worksheets/Money_Addition"
+	                    ],
+	     "P3MOSubtraction": [
+	                         "/Learn/Primary-Grade-3/Subtraction-of-Money",
+	                         "/Grade_3_Math_Practice/Money_Subtraction",
+	                         "/Grade_3_Math_Worksheets/Money_Subtraction"
+	                       ],
+	     "P3MOWordProblems": [
+	                          "/Learn/Primary-Grade-3/Money-Word-Problems",
+	                          "/Grade_3_Math_Practice/Money_Word_Problems",
+	                          "/Grade_3_Math_Worksheets/Money_Word_Problems"
+	                        ],
+	                        
+	     "P3TITellingTime": [
+	                         "/Learn/Primary-Grade-3/Telling-Time",
+	                         "/Grade_3_Math_Practice/Telling_Time",
+	                         "/Grade_3_Math_Worksheets/Telling_Time"
+	                       ],
+	     "P3TIConversionTime": [
+	                        "/Learn/Primary-Grade-3/Time-Conversion-Hours-Minutes",
+	                        "/Grade_3_Math_Practice/Time_Conversion_Hours_Minutes",
+	                        "/Grade_3_Math_Worksheets/Time_Conversion_Hours_Minutes"
+	                       ],
+	     "P3TIAddition": [
+	                      "/Learn/Primary-Grade-3/Time-Addition",
+	                      "/Grade_3_Math_Practice/Time_Addition",
+	                      "/Grade_3_Math_Worksheets/Time_Addition"
+	                     ],
+	     "P3TISubtraction": [
+	                         "/Learn/Primary-Grade-3/Time-Subtraction",
+	                         "/Grade_3_Math_Practice/Time_Subtraction",
+	                         "/Grade_3_Math_Worksheets/Time_Subtraction"
+	                        ],
+	     "P3TIDuration": [
+	                      "/Learn/Primary-Grade-3/Time-Finding-Duration-Start-Finish",
+	                      "/Grade_3_Math_Practice/Time_Finding_Duration_Start_Finish",
+	                      "/Grade_3_Math_Worksheets/Time_Finding_Duration_Start_Finish"
+	                     ],
+	     "P3TIWordProblems": [
+	                          "/Learn/Primary-Grade-3/Time-Problem-Sums",
+	                          "/Grade_3_Math_Practice/Time_Word_Problems",
+	                          "/Grade_3_Math_Worksheets/Time_Word_Problems"
+	                         ],
+	     
+	     "P3LMMetreCentiMetre": [
+	                            "/Learn/Primary-Grade-3/Metres-Centimetres",
+	                            "/Grade_3_Math_Practice/Metres_Centimetres",
+	                            "/Grade_3_Math_Worksheets/Metres_Centimetres"
+	                          ],
+	     "P3LMKiloMetre":  [
+	                        "/Learn/Primary-Grade-3/KiloMetres-Metres",
+	                        "/Grade_3_Math_Practice/Kilometres_Metres",
+	                        "/Grade_3_Math_Worksheets/Kilometres_Metres"
+	                       ],
+	     "P3LMKiloGram": [
+	                     "/Learn/Primary-Grade-3/Kilograms-Grams",
+	                     "/Grade_3_Math_Practice/Kilograms_Grams",
+	                     "/Grade_3_Math_Worksheets/Kilograms_Grams"
+	                    ],
+	    "P3LMLitresMilli": [
+	                        "/Learn/Primary-Grade-3/Litres-Millilitres",
+	                        "/Grade_3_Math_Practice/Litres_Millilitres",
+	                        "/Grade_3_Math_Worksheets/Litres_Millilitres"
+	                       ],
+	    "P3LMWordProblems": [
+	                         "/Learn/Primary-Grade-3/Length-Mass-Volume-1-Step-Story-Sums",
+	                         "/Grade_3_Math_Practice/Length_Mass_Volume_1-Step_Word_Problems",
+	                         "/Grade_3_Math_Worksheets/Length_Mass_Volume_1-Step_Word_Problems"
+	                        ],
+	    "P3LMWordProblems_2Steps": [
+	                                "/Learn/Primary-Grade-3/Length-Mass-Volume-2-Step-Story-Sums",
+	                                "/Grade_3_Math_Practice/Length_Mass_Volume_2-Step_Word_Problems",
+	                                "/Grade_3_Math_Worksheets/Length_Mass_Volume_2-Step_Word_Problems"
+	                               ],
+	    
+	    "P3FRWhatIsFractions": [
+	                            "/Learn/Primary-Grade-3/Fractions/What-Is-a-Fraction",
+	                            "/Grade_3_Math_Practice/What_is_a_Fraction",
+	                            "/Grade_3_Math_Worksheets/What_is_a_Fraction"
+	                           ],
+	    "P3FREquivalentFractions": [
+	                                "/Learn/Primary-Grade-3/Equivalent-Fractions",
+	                                "/Grade_3_Math_Practice/Equivalent-Fraction",
+	                                "/Grade_3_Math_Worksheets/Equivalent-Fraction"
+	                               ],
+	    "P3FRSimplifyingFractions": [
+	                                 "/Learn/Primary-Grade-3/Simplifying-Fractions",
+	                                 "/Grade_3_Math_Practice/Simplifying-Fractions",
+	                                 "/Grade_3_Math_Worksheets/Simplifying-Fractions"
+	                                ],
+	    "P3FRComparingOrdering": [
+	                     "/Learn/Primary-Grade-3/Comparing-and-Ordering-Fractions",
+	                     "/Grade_3_Math_Practice/Comparing-and-Ordering-Fractions",
+	                     "/Grade_3_Math_Worksheets/Comparing-and-Ordering-Fractions"
+	                    ],
+	    "P3FRAddition": [
+	                     "/Learn/Primary-Grade-3/Adding-Fractions",
+	                     "/Grade_3_Math_Practice/Adding-Fractions",
+	                     "/Grade_3_Math_Worksheets/Adding-Fractions"
+	                    ],
+	    "P3FRSubtraction": [
+	                        "/Learn/Primary-Grade-3/Subtracting-Fractions",
+	                        "/Grade_3_Math_Practice/Subtracting-Fractions",
+	                        "/Grade_3_Math_Worksheets/Subtracting-Fractions"
+	                       ],
+	    
+	    "P3APSquareUnits": [
+	                      "/Learn/Primary-Grade-3/Area-in-Square-Units",
+	                      "/Grade_3_Math_Practice/Area_in_Square_Units",
+	                      "/Grade_3_Math_Worksheets/Area_in_Square_Units"
+	                     ],
+	    "P3APSquareCmM": [
+	                      "/Learn/Primary-Grade-3/Area-in-Square-Centimetres-Square-Metres",
+	                      "/Grade_3_Math_Practice/Area_in_Square_cm_Square_m",
+	                      "/Grade_3_Math_Worksheets/Area_in_Square_cm_Square_m"
+	                     ],
+	    "P3APPerimeter": [
+	                      "/Learn/Primary-Grade-3/Perimeter-of-Squares-and-Rectangles",
+	                      "/Grade_3_Math_Practice/Perimeter_of_Squares_Rectangles",
+	                      "/Grade_3_Math_Worksheets/Perimeter_of_Squares_Rectangles"
+	                     ],
+	    "P3APArea": [
+	                 "/Learn/Primary-Grade-3/Area-of-Squares-and-Rectangles",
+	                 "/Grade_3_Math_Practice/Area_of_Squares_Rectangles",
+	                 "/Grade_3_Math_Worksheets/Area_of_Squares_Rectangles"
+	                ],
+	    "P3APWordProblems": [
+	                         "/Learn/Primary-Grade-3/Area-Perimeter-Problem-Sums",
+	                         "/Grade_3_Math_Practice/Area_Perimeter_Word_Problems",
+	                         "/Grade_3_Math_Worksheets/Area_Perimeter_Word_Problems"
+	                        ],
+		
+		"P3ANIdentifying": [
+		                    "/Learn/Primary-Grade-3/Identifying-Angles-in-Figures",
+		                    "/Grade_3_Math_Practice/Identifying_Angles_in_Figures",
+		                    "/Grade_3_Math_Worksheets/Identifying_Angles_in_Figures"
+		                   ],
+		"P3ANRightAngle": [
+		                   "/Learn/Primary-Grade-3/Right-Angles",
+		                   "/Grade_3_Math_Practice/Right_Angles",
+		                   "/Grade_3_Math_Worksheets/Right_Angles"
+		                  ],
+
+		"P3BGBarGraphs": [
+		     "/Learn/Primary-Grade-3/Bar-Graphs",
+		     "/Grade_3_Math_Practice/Bar_Graphs",
+		     "/Grade_3_Math_Worksheets/Bar_Graphs"
+		    ],
+		    
+		"P3PPPerpendicularParallel": [
+		                              "/Learn/Primary-Grade-3/Identifying-Perpendicular-Parallel-Lines",
+		                              "/Grade_3_Math_Practice/Identifying_Perpendicular_Parallel_Lines",
+		                              "/Grade_3_Math_Worksheets/Identifying_Perpendicular_Parallel_Lines"
+		                             ]
+}

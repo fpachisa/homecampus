@@ -1,0 +1,194 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Solve the following:
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">a) (&minus;98) &divide; (&minus;7)&nbsp; = 
+			{% if RNMDEasy_2_1_answer_correct is defined %}
+				<input id="RNMDEasy_2_1_answer" value='{{RNMDEasy_2_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDEasy_2_1_answer_correct and RNMDEasy_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_1_answer" value='{{RNMDEasy_2_1_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">b) 0 &divide; (&minus;329)&nbsp; = 
+			{% if RNMDEasy_2_2_answer_correct is defined %}
+				<input id="RNMDEasy_2_2_answer" value='{{RNMDEasy_2_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDEasy_2_2_answer_correct and RNMDEasy_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_2_answer" value='{{RNMDEasy_2_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">c) 253 &divide; (&minus;11)&nbsp; = 
+			{% if RNMDEasy_2_3_answer_correct is defined %}
+				<input id="RNMDEasy_2_3_answer" value='{{RNMDEasy_2_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDEasy_2_3_answer_correct and RNMDEasy_2_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_3_answer" value='{{RNMDEasy_2_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">d) (&minus;729) &divide; (9)<sup>3</sup>&nbsp; = 
+			{% if RNMDEasy_2_4_answer_correct is defined %}
+				<input id="RNMDEasy_2_4_answer" value='{{RNMDEasy_2_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDEasy_2_4_answer_correct and RNMDEasy_2_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_4_answer" value='{{RNMDEasy_2_4_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">e) 42 &divide; (&minus;7)&nbsp; = 
+			{% if RNMDEasy_2_5_answer_correct is defined %}
+				<input id="RNMDEasy_2_5_answer" value='{{RNMDEasy_2_5_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_5_answer" value='{{RNMDEasy_2_5_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">f) 125 &divide; (&minus;5)<sup>3</sup>&nbsp; = 
+			{% if RNMDEasy_2_6_answer_correct is defined %}
+				<input id="RNMDEasy_2_6_answer" value='{{RNMDEasy_2_6_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDEasy_2_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDEasy_2_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDEasy_2_6_answer" value='{{RNMDEasy_2_6_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		{% if RNMDEasy_2_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RNMDEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:260px;"><button id="RNMDEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNMDEasy_2_1_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_1_answer";
+				entered_answer = $("#RNMDEasy_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDEasy_2_2_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_2_answer";
+				entered_answer = $("#RNMDEasy_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDEasy_2_3_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_3_answer";
+				entered_answer = $("#RNMDEasy_2_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDEasy_2_4_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_4_answer";
+				entered_answer = $("#RNMDEasy_2_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDEasy_2_5_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_5_answer";
+				entered_answer = $("#RNMDEasy_2_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDEasy_2_6_answer").change(function()
+			{
+				question_id = "RNMDEasy_2";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDEasy_2_6_answer";
+				entered_answer = $("#RNMDEasy_2_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNMDEasy_2_Submit").button({label:"Check Answers"});
+	$("#RNMDEasy_2_Retry").button({label:"Retry"});
+	$("#RNMDEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDEasy_2"+"#%$"+"RNMDEasy_2_1_answer"+"#%$"+$("#RNMDEasy_2_1_answer").val();
+		answers = answers + "#%$"+"RNMDEasy_2"+"#%$"+"RNMDEasy_2_2_answer"+"#%$"+$("#RNMDEasy_2_2_answer").val();
+		answers = answers + "#%$"+"RNMDEasy_2"+"#%$"+"RNMDEasy_2_3_answer"+"#%$"+$("#RNMDEasy_2_3_answer").val();
+		answers = answers + "#%$"+"RNMDEasy_2"+"#%$"+"RNMDEasy_2_4_answer"+"#%$"+$("#RNMDEasy_2_4_answer").val();
+		answers = answers + "#%$"+"RNMDEasy_2"+"#%$"+"RNMDEasy_2_5_answer"+"#%$"+$("#RNMDEasy_2_5_answer").val();
+		answers = answers + "#%$"+"RNMDEasy_2"+"#%$"+"RNMDEasy_2_6_answer"+"#%$"+$("#RNMDEasy_2_6_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDEasy_2_1_answer,RNMDEasy_2_2_answer,RNMDEasy_2_3_answer,RNMDEasy_2_4_answer,RNMDEasy_2_5_answer,RNMDEasy_2_6_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

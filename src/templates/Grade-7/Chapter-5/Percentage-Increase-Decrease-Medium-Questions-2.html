@@ -1,0 +1,155 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.3 Percentage Increase and Decrease</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:54%;">5.3 Percentage Increase and Decrease</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Ali scored 15 points in the second level of a game. This was 50% more than his score in the previous level. His score improved further by 20% in the third level.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) His score in the first level = 
+			{% if PRIDMedium_3_1_answer_correct is defined %}
+				<input id="PRIDMedium_3_1_answer" value='{{PRIDMedium_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> points &nbsp;
+					{% if PRIDMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_3_1_answer_correct and PRIDMedium_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_3_1_answer" value='{{PRIDMedium_3_1_answer}}' style="width:30px;" > points &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">b) His score in the third level = 
+			{% if PRIDMedium_3_2_answer_correct is defined %}
+				<input id="PRIDMedium_3_2_answer" value='{{PRIDMedium_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> points &nbsp;
+					{% if PRIDMedium_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_3_2_answer_correct and PRIDMedium_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_3_2_answer" value='{{PRIDMedium_3_2_answer}}' style="width:30px;" > points &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:10px;width:390px;">c) Find the percentage change in his score from the first to the third level.</div>
+		<div style="margin-left:60px;margin-top:10px;">Percentage change &nbsp;
+			{% if PRIDMedium_3_3_answer_correct is defined %}
+				<input id="PRIDMedium_3_3_answer" value='{{PRIDMedium_3_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> % &nbsp;
+					{% if PRIDMedium_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_3_3_answer_correct and PRIDMedium_3_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_3_3_answer" value='{{PRIDMedium_3_3_answer}}' style="width:30px;" > % &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">There will be a hike in the petrol price by 7% starting from next month. Ryan's monthly petrol expense is $35. If his petrol consumption stays the same every month, how much more should he expect to pay from next month?</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp; $ 
+			{% if PRIDMedium_4_answer_correct is defined %}
+				<input id="PRIDMedium_4_answer" value='{{PRIDMedium_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;">  &nbsp;
+					{% if PRIDMedium_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRIDMedium_4_answer_correct and PRIDMedium_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRIDMedium_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRIDMedium_4_answer" value='{{PRIDMedium_4_answer}}' style="width:30px;" >  &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if PRIDMedium_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRID_Medium_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRID_Medium_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRIDMedium_3_1_answer").change(function()
+	{
+		question_id = "PRIDMedium_3";
+		question_type = "PercentageIncreaseDecrease"
+		answer_id = "PRIDMedium_3_1_answer";
+		entered_answer = $("#PRIDMedium_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRIDMedium_3_2_answer").change(function()
+			{
+				question_id = "PRIDMedium_3";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_3_2_answer";
+				entered_answer = $("#PRIDMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDMedium_3_3_answer").change(function()
+			{
+				question_id = "PRIDMedium_3";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_3_3_answer";
+				entered_answer = $("#PRIDMedium_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRIDMedium_4_answer").change(function()
+			{
+				question_id = "PRIDMedium_4";
+				question_type = "PercentageIncreaseDecrease"
+				answer_id = "PRIDMedium_4_answer";
+				entered_answer = $("#PRIDMedium_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#PRID_Medium_2_submit").button({label:"Check Answers"});
+	$("#PRID_Medium_2_retry").button({label:"Retry"});
+	$("#PRID_Medium_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "PercentageIncreaseDecrease"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRIDMedium_3"+"#%$"+"PRIDMedium_3_1_answer"+"#%$"+$("#PRIDMedium_3_1_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_3"+"#%$"+"PRIDMedium_3_2_answer"+"#%$"+$("#PRIDMedium_3_2_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_3"+"#%$"+"PRIDMedium_3_3_answer"+"#%$"+$("#PRIDMedium_3_3_answer").val();
+		answers = answers + "#%$"+"PRIDMedium_4"+"#%$"+"PRIDMedium_4_answer"+"#%$"+$("#PRIDMedium_4_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRID_Medium_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRIDMedium_3_1_answer,PRIDMedium_3_2_answer,PRIDMedium_3_3_answer,PRIDMedium_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

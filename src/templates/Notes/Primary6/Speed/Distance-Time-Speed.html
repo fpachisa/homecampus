@@ -1,0 +1,238 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Distance, Time and Speed - Home Campus</title>
+<meta name="description" content="Distance, Time and Speed" />
+<meta name="keywords" content='"primary 6 maths", "grade 6 math", "Singapore math", "math for kids", elementary, math, story, problems, free, help, online, tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Distance, Time and Speed</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P6">
+		
+		<div class="concept-set__question">
+			<h4>What is Speed?</h4>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				Speed describes how fast an object is moving. In other words, speed tells us the distance an object travels per unit of time.<br /><br />
+				
+				The various units of speed are:
+				<ul>
+					<li>cm/s (read as, centimetres per second)</li>
+					<li>m/min (read as, metres per minute)</li>
+					<li>m/s (read as, metres per second)</li>
+					<li>km/h (read as, kilometres per hour)</li>
+				</ul>
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(149, 255, 156);">
+		
+		<div class="concept-set__question">
+			<h4>Important formulas:</h4>
+		</div>		
+		
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				<b>Speed</b> &nbsp;=&nbsp; {{ frGen("Distance travelled","Time taken") }}<br /><br />
+				
+				<b>Distance travelled</b> &nbsp;=&nbsp; Speed &nbsp;&times;&nbsp; Time taken<br /><br />
+				
+				<b>Time taken</b> &nbsp;=&nbsp; {{ frGen("Distance travelled","Speed") }}
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. The ant below crawls from Anthill A to Anthill B in 100 seconds. Find its speed.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_distance_time_speed_explanation_1.png" alt="finding speed, distance, time"/><br />
+				The ant crawls 200 cm in 100 seconds.<br />
+				In 1 s, the ant crawls 2 cm.<br />
+				The ant's crawling speed is <b>2 cm/s</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. The girl below walks from home to school in 12 minutes. Find its speed.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_distance_time_speed_explanation_2.png" alt="finding speed, distance, time"/><br />
+				The girl walks 720 m in 12 minutes.<br />
+				The girl walks 60 m in 1 min.<br />
+				The girl's walking speed is <b>60 m/min</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. The soccer ball travels from Goalpost P to Goalpost S in 5 seconds. find its speed.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_distance_time_speed_explanation_3.png" alt="finding speed, distance, time"/><br />
+				The ball travels 90 m in 5 s.<br />
+				In 1 s, the ball travels 18 m.<br />
+				The ball travels at an speed of <b>18 m/s</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. The bus below travels from Town X to Town Y in 1 hour.<br />
+				a) &nbsp; At this speed, how long will it take to reach Town Z from Town Y?<br />
+				b) &nbsp; At this speed, how far will it be &nbsp;&nbsp;&nbsp; {{ frGen(1,2) }} hour after it leaves Town Z?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_distance_time_speed_explanation_4.png" alt="finding speed, distance, time"/><br />
+				In 1 hour, the bus travels 55 km.<br />
+				The bus is travelling at a speed of 55 km/h.<br /><br />
+				
+				a) &nbsp;&nbsp; 55 km &nbsp;&nbsp; --&gt; &nbsp; 1 h <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 110 km &nbsp; --&gt; &nbsp; 2 h <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The bus will take <b>2 hours</b> to reach Town Z from Town Y.<br /><br />
+				
+				b) &nbsp;&nbsp; 1 h &nbsp;&nbsp; --&gt; &nbsp; 55 km <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,2) }} h &nbsp; --&gt; &nbsp; {{ frGen(55,2) }} km &nbsp;=&nbsp; 27.5 km <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The bus will be <b>27.5 km</b> away {{ frGen(1,2) }} h after it leaves Town Z.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. A bird flies in search of food from her nest in a tree to a stream 1800 metres away in 3 minutes.<br />
+			What is the speed at which she flies?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Distance travelled &nbsp;=&nbsp; 1800 m<br /><br />
+				
+				Time taken &nbsp;=&nbsp; 3 min<br /><br />
+				
+				Speed &nbsp;=&nbsp; {{ frGen("1800 m","3 min") }} &nbsp;=&nbsp; 600 m/min<br /><br />
+				
+				The bird flies at a speed of <b>600 m/min</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>6. A lorry is going at a speed of 40 km/h.<br />
+			At this speed, how far can it go in &nbsp;&nbsp;&nbsp; {{ frGen(1,2) }}h?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Speed &nbsp;=&nbsp; 40 km/h	<br /><br />
+				
+				Time taken &nbsp;=&nbsp; {{ frGen(1,2) }} h<br /><br />
+				
+				Distance travelled &nbsp;=&nbsp; 40 km/h &nbsp;&times;&nbsp;{{ frGen(1,2) }} h &nbsp;=&nbsp; 20 km<br /><br />
+				
+				It can go <b>20 km</b> in {{ frGen(1,2) }} h.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>7. A train is running at a speed of 180 km/h.<br />
+			At this speed, how long will the train take to travel the 270-km long distance between Station A and Station B?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Speed &nbsp;=&nbsp; 180 km/h	<br /><br />
+				
+				Distance travelled &nbsp;=&nbsp; 270 km<br /><br />
+				
+				Time taken &nbsp;=&nbsp; {{ frGen("270 km","180 km/h") }} &nbsp;=&nbsp; {{ frGen(3,2) }} h &nbsp;=&nbsp; {{ mixNumGen(1,1,2) }} h<br /><br />
+				
+				The train will take &nbsp; <b>{{ mixNumGen(1,1,2) }} h</b> &nbsp; to travel the distance between Station A and Station B.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Distance_Time">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 7 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Speed?","acceptedAnswer":{"@type":"Answer","text":"Speed describes how fast an object is moving. In other words, speed tells us the distance an object travels per unit of time."}},{"@type":"Question","name":"What are various units of speed?","acceptedAnswer":{"@type":"Answer","text":"The various units of speed are:\n    cm/s (read as, centimetres per second)\n    m/min (read as, metres per minute)\n    m/s (read as, metres per second)\n    km/h (read as, kilometres per hour)\n"}},{"@type":"Question","name":"What is the formula to calculate speed?","acceptedAnswer":{"@type":"Answer","text":"Speed  =  Distance travelled / Time taken"}},{"@type":"Question","name":"What is the formula for distance travelled?","acceptedAnswer":{"@type":"Answer","text":"Distance travelled  =  Speed  ×  Time taken"}},{"@type":"Question","name":"What is the formula for time taken?","acceptedAnswer":{"@type":"Answer","text":"Time taken  =  Distance travelled / Speed"}}]}</script>
+{% endblock %}

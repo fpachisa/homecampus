@@ -1,0 +1,127 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">5.2 Reverse Percentages</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:70%;">5.2 Reverse Percentages</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A storybook contains both text and pictures. The space used for pictures is 25% more than that used for text. If the pictures occupy 40 pages of the book, find the total number of pages in the storybook.</div>
+		</div>
+		<div style="margin-left:80px;margin-top:20px;">Answer: &nbsp;
+			{% if PRRPMedium_1_answer_correct is defined %}
+				<input id="PRRPMedium_1_answer" value='{{PRRPMedium_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> pages
+					{% if PRRPMedium_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPMedium_1_answer_correct and PRRPMedium_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPMedium_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPMedium_1_answer" value='{{PRRPMedium_1_answer}}' style="width:50px;" > pages
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Two friends participated in "Hogathon - A food eating competition". Frank ate 20% fewer sandwiches than Ben. If Ben ate 2 sandwiches more than Frank, find the number of sandwiches that each of them ate.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Ben ate &nbsp;
+			{% if PRRPMedium_2_1_answer_correct is defined %}
+				<input id="PRRPMedium_2_1_answer" value='{{PRRPMedium_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> sandwiches.
+					{% if PRRPMedium_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPMedium_2_1_answer_correct and PRRPMedium_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+			{% else %}
+				<input id="PRRPMedium_2_1_answer" value='{{PRRPMedium_2_1_answer}}' style="width:50px;" > sandwiches.
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">Frank ate &nbsp;
+			{% if PRRPMedium_2_2_answer_correct is defined %}
+				<input id="PRRPMedium_2_2_answer" value='{{PRRPMedium_2_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> sandwiches.
+					{% if PRRPMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not PRRPMedium_2_2_answer_correct and PRRPMedium_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{PRRPMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="PRRPMedium_2_2_answer" value='{{PRRPMedium_2_2_answer}}' style="width:50px;" > sandwiches.
+			{% endif %}	
+		</div>
+
+		{% if PRRPMedium_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Medium_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="PRRP_Medium_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+	$("#PRRPMedium_1_answer").change(function()
+	{
+		question_id = "PRRPMedium_1";
+		question_type = "ReversePercentages"
+		answer_id = "PRRPMedium_1_answer";
+		entered_answer = $("#PRRPMedium_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#PRRPMedium_2_1_answer").change(function()
+			{
+				question_id = "PRRPMedium_2";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPMedium_2_1_answer";
+				entered_answer = $("#PRRPMedium_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#PRRPMedium_2_2_answer").change(function()
+			{
+				question_id = "PRRPMedium_2";
+				question_type = "ReversePercentages"
+				answer_id = "PRRPMedium_2_2_answer";
+				entered_answer = $("#PRRPMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#PRRP_Medium_1_submit").button({label:"Check Answers"});
+	$("#PRRP_Medium_1_retry").button({label:"Retry"});
+	$("#PRRP_Medium_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ReversePercentages"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "PRRPMedium_1"+"#%$"+"PRRPMedium_1_answer"+"#%$"+$("#PRRPMedium_1_answer").val();
+		answers = answers + "#%$"+"PRRPMedium_2"+"#%$"+"PRRPMedium_2_1_answer"+"#%$"+$("#PRRPMedium_2_1_answer").val();
+		answers = answers + "#%$"+"PRRPMedium_2"+"#%$"+"PRRPMedium_2_2_answer"+"#%$"+$("#PRRPMedium_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#PRRP_Medium_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "PRRPMedium_1_answer,PRRPMedium_2_1_answer,PRRPMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

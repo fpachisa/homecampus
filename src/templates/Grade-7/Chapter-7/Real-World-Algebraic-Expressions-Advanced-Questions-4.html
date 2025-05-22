@@ -1,0 +1,116 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:25%;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			In a certain year, the gas tariff for households was 21.08 cents per kWh (Kilowatt hour). The water tariff for households was calculated as per the table below:
+			<table style="border-collapse:collapse;margin-top:10px;">
+				<tr><td style="border:1px solid black;"><strong>Consumption</strong></td><td style="border:1px solid black;"><strong>Water Tariff</strong></td></tr>
+				<tr><td style="border:1px solid black;">First 40 m<sup>3</sup></td><td style="border:1px solid black;">$1.17 per cubic metre</td></tr>
+				<tr><td style="border:1px solid black;">Next 40 m<sup>3</sup></td><td style="border:1px solid black;">$1.40 per cubic metre</td></tr>
+			</table>
+			<div style="margin-top:10px;">Additionally, 7% tax was levied on the total charges of gas and water consumption.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">a)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">
+			In a particular month, a household consumes <font class="grade7Variables">x</font> kWh gas and <font class="grade7Variables">y</font> m<sup>3</sup> water (<font class="grade7Variables">y</font> &lt; 40 m<sup>3</sup>). Find the net charges of gas and water consumption inclusive of tax.
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if RWAAdvanced_4_1_answer_correct is defined %}
+				<input type=radio name="RWAAdvanced_4_1_answer" value='A' disabled
+				{% if RWAAdvanced_4_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >$1.07 &times; (21.08<font class="grade7Variables">x</font> + 1.17<font class="grade7Variables">y</font>)<br>
+				<input type=radio name="RWAAdvanced_4_1_answer" value='B' disabled
+				{% if RWAAdvanced_4_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$1.07 &times; (0.2108<font class="grade7Variables">x</font> + 1.17<font class="grade7Variables">y</font>)<br>
+				<input type=radio name="RWAAdvanced_4_1_answer" value='C' disabled
+				{% if RWAAdvanced_4_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$107 &times; (0.2108<font class="grade7Variables">x</font> + 0.0117<font class="grade7Variables">y</font>)&nbsp;&nbsp;
+				{% if RWAAdvanced_4_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RWAAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RWAAdvanced_4_1_answer" value='A'
+				{% if RWAAdvanced_4_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >$1.07 &times; (21.08<font class="grade7Variables">x</font> + 1.17<font class="grade7Variables">y</font>)<br>
+				<input type=radio name="RWAAdvanced_4_1_answer" value='B'
+				{% if RWAAdvanced_4_1_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >$1.07 &times; (0.2108<font class="grade7Variables">x</font> + 1.17<font class="grade7Variables">y</font>)<br>
+				 <input type=radio name="RWAAdvanced_4_1_answer" value='C'
+				{% if RWAAdvanced_4_1_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >$107 &times; (0.2108<font class="grade7Variables">x</font> + 0.0117<font class="grade7Variables">y</font>)			 
+			{% endif %}	
+		</div>
+
+		{% if RWAAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RWAAdvanced_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RWAAdvanced_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='RWAAdvanced_4_1_answer']").click(function()
+	{
+		question_id = "RWAAdvanced_4";
+		question_type = "RealWorldAlgebra"
+		answer_id = "RWAAdvanced_4_1_answer";
+		entered_answer = $("input:radio[name=RWAAdvanced_4_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	$("#RWAAdvanced_4_Submit").button({label:"Check Answers"});
+	$("#RWAAdvanced_4_Retry").button({label:"Retry"});
+	$("#RWAAdvanced_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RealWorldAlgebra"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RWAAdvanced_4"+"#%$"+"RWAAdvanced_4_1_answer"+"#%$"+$("input:radio[name=RWAAdvanced_4_1_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RWAAdvanced_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RWAAdvanced_4_1_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

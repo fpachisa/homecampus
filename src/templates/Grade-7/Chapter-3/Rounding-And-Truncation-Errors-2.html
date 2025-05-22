@@ -1,0 +1,22 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.3 What is Estimation?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:70%;">3.3 What is Estimation?</div>
+	{% endif %}
+	<div class="grade7PageMargin">
+		<p>The total percentage of population is only 99.9%. What is the logic behind the missing 0.1%?</p>
+		<p>When the numbers are rounded off too early in an intermediate step, we may not get an accurate answer.</p>
+		<p>The intermediate values (40.4%, 26.8% and 32.7%) are correct to 3 significant figures. The final answer that we get (99.9%) is correct to 3 significant figures. This is due to rounding error in the intermediate steps.</p>
+		<p>Hence, if an answer requires 3 significant figures, round off the intermediate values to 4 significant figures as shown below:</p>
+		<div style="margin-top:0px;display:inline-block;width:210px;">40.45% + 26.82% + 32.72%</div>
+		<div style="margin-top:0px;display:inline-block;">= 99.99%</div>
+		<br>
+		<div style="margin-top:0px;display:inline-block;width:210px;"></div>
+		<div style="margin-top:0px;display:inline-block;">= 100% (correct to 3 s.f.)</div>
+		<p><strong>Truncation</strong> refers to limiting the number of digits right of the decimal point.</p>
+		<p>E.g., if we truncate the numbers 7.321456723, 1.00984323 and 109.3476203 to 3 decimal places instead of rounding them off, we get 7.321, 1.009 and 109.347. The difference between the truncated number and the actual number is called truncation error. This error is more in magnitude than the rounding error.</p>
+	</div>
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+

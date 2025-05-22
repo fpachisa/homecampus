@@ -1,0 +1,128 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Home Campus - Primary Mathematics - Goals</title>
+<meta name="description" content="View and set goals for yourself or your kid and monitor the progress." />
+{% endblock %}
+{% block body %}
+	<link href="/stylesheets/Reports.css" rel="stylesheet" type="text/css"  />
+	<script src="/js/Goals.js" type="text/javascript"></script>
+<div style="background-image: url(/images/site/background.png);">	
+	<br>
+	<div id="NotesContent" style="min-height:500px;">
+		<br>
+  		<h1>View and Save Goals</h1>
+ 		<div id="ReportList" style="background-color:#DDE872;">
+		 <div><font style="font-weight:bold;color:#5E942A;">Select parameters to view goals:</font></div><br>
+		 <div >
+			 {% if IsParent %}
+				<font style="font-weight:bold;color:#5E942A;">Child:</font>
+				<select id="child">
+		   		{% for c in Children %}
+		          		<option value='{{c.id}}'>{{c.name}}</option>
+				{% endfor %}
+				</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			{% else %}
+		   		{% for c in Children %}
+		          		<input type="hidden" id="child" value='{{c.id}}'>
+				{% endfor %}
+			{% endif %}
+			<font style="font-weight:bold;color:#5E942A;">Level:</font>
+			<select id ='grade'>
+				<option value='4'>Primary 4 / Grade 4</option>
+				<option value='5'>Primary 5 / Grade 5</option>
+				<option value='6'>Primary 6 / Grade 6</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<font style="font-weight:bold;color:#5E942A;">Topic:</font>
+			<select id ='concept'>
+				<option value='P4DC'>Decimals</option>
+				<option value='P4FR'>Fractions</option>
+				<option value='P4MT'>Measurement</option>
+				<option value='P4WN'>Whole Numbers</option>
+				<option value='P4DA'>Data Analysis</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<button id="ViewGoals" style="float:right;margin-top:-5px;margin-right:8px;display:none"></button>				
+		</div>
+		<div id="InProgress"></div>				
+	</div>	
+<script type="text/javascript"> 
+	$("#child").change(function()
+	{
+		$("#ViewGoals").click();
+	});
+	$("#concept").change(function()
+			{
+				$("#ViewGoals").click();
+			});
+	$("#grade").change(function()
+			{	
+				$("#concept").html("");
+				if ($("#grade").val()==4)
+					{
+						$("<option value='P4DC'>Decimals</option>").appendTo("#concept");
+						$("<option value='P4FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P4MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P4WN'>Whole Numbers</option>").appendTo("#concept");
+						$("<option value='P4DA'>Data Analysis</option>").appendTo("#concept");
+					}
+				else if($("#grade").val()==5)
+					{
+						$("<option value='P5DA'>Data Analysis</option>").appendTo("#concept");
+						$("<option value='P5DC'>Decimals</option>").appendTo("#concept");
+						$("<option value='P5FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P5GT'>Geometry</option>").appendTo("#concept");
+						$("<option value='P5MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P5PR'>Percentage</option>").appendTo("#concept");
+						$("<option value='P5RT'>Ratio</option>").appendTo("#concept");
+						$("<option value='P5WN'>Whole Numbers</option>").appendTo("#concept");			
+					}
+				else if($("#grade").val()==6)
+					{
+						$("<option value='P6AG'>Algebra</option>").appendTo("#concept");
+						$("<option value='P6DA'>Data Analysis</option>").appendTo("#concept");
+						$("<option value='P6FR'>Fractions</option>").appendTo("#concept");
+						$("<option value='P6MT'>Measurement</option>").appendTo("#concept");
+						$("<option value='P6PR'>Percentage</option>").appendTo("#concept");
+						$("<option value='P6RT'>Ratio</option>").appendTo("#concept");
+						$("<option value='P6SP'>Speed</option>").appendTo("#concept");				
+					}
+
+				$("#ViewGoals").click();
+			}
+	);
+	
+	function setP5Concepts()
+	{
+		$("#concept").html("");
+		$("<option value='P5DA'>Data Analysis</option>").appendTo("#concept");
+		$("<option value='P5DC'>Decimals</option>").appendTo("#concept");
+		$("<option value='P5FR'>Fractions</option>").appendTo("#concept");
+		$("<option value='P5GT'>Geometry</option>").appendTo("#concept");
+		$("<option value='P5MT'>Measurement</option>").appendTo("#concept");
+		$("<option value='P5PR'>Percentage</option>").appendTo("#concept");
+		$("<option value='P5RT'>Ratio</option>").appendTo("#concept");
+		$("<option value='P5WN'>Whole Numbers</option>").appendTo("#concept");
+	}	
+	
+	function setP6Concepts()
+	{
+		$("#concept").html("");
+		$("<option value='P6AG'>Algebra</option>").appendTo("#concept");
+		$("<option value='P6DA'>Data Analysis</option>").appendTo("#concept");
+		$("<option value='P6FR'>Fractions</option>").appendTo("#concept");
+		$("<option value='P6MT'>Measurement</option>").appendTo("#concept");
+		$("<option value='P6PR'>Percentage</option>").appendTo("#concept");
+		$("<option value='P6RT'>Ratio</option>").appendTo("#concept");
+		$("<option value='P6SP'>Speed</option>").appendTo("#concept");
+	}
+</script>
+{% block goals %}
+<script type="text/javascript">
+	$("#ViewGoals").click();
+</script>
+{% endblock %}
+</div><br>
+{% endblock %}
+</div><br>

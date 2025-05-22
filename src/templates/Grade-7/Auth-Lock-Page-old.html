@@ -1,0 +1,84 @@
+<div style="height:470px;background-image: url(/images/g7_lock_background.png);background-repeat: no-repeat;">
+	<table class="grade7PlansTable">
+		<tr class="grade7PlansTableFirstRow" style="height:40px;vertical-align:middle;">
+			<th style="width:100px;"></th>
+			<th><strong>MEMBER</strong></th>
+			<th><strong>BOOK OWNER</strong></th>
+		</tr>
+		<tr style="height:10px;"></tr>
+		<tr>
+			<td class="grade7PlansTableLearnRow"><strong>LEARN</strong></td>
+			<td class="grade7PlansTableLearnRow"></td>
+			<td class="grade7PlansTableLearnRow"></td>
+		</tr>
+		<tr style="vertical-align:bottom;border-bottom: 1px solid black;">
+			<td class=""><font style="font-size:0.8em;"><strong>Concept Notes</strong></font></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="vertical-align:bottom;">
+			<td class=""><font style="font-size:0.8em;"><strong>Solved Examples</strong></font></td>
+			<td class=""><font style="font-size:0.8em;">Limited</font></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="height:10px;"></tr>
+		<tr>
+			<td class="grade7PlansTablePracticeRow"><strong>PRACTICE</strong></td>
+			<td class="grade7PlansTablePracticeRow"></td>
+			<td class="grade7PlansTablePracticeRow"></td>
+		</tr>
+		<tr style="vertical-align:bottom;border-bottom: 1px solid black;">
+			<td style="text-align:left;width:110px;"><font style="font-size:0.8em;"><strong>Practice Questions</strong></font></td>
+			<td class=""><font style="font-size:0.8em;">Limited</font></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="vertical-align:bottom;">
+			<td style="text-align:left;width:110px;"><font style="font-size:0.8em;"><strong>Detailed Solutions</strong></font></td>
+			<td class=""><font style="font-size:0.8em;">Limited</font></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="height:10px;"></tr>
+		<tr>
+			<td class="grade7PlansTableProgressRow"><strong>PROGRESS</strong></td>
+			<td class="grade7PlansTableProgressRow"></td>
+			<td class="grade7PlansTableProgressRow"></td>
+		</tr>
+		<tr style="vertical-align:bottom;border-bottom: 1px solid black;">
+			<td class=""><font style="font-size:0.8em;"><strong>Topical Tests</strong></font></td>
+			<td class=""><img src="/images/g7_incorrect.png"></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="vertical-align:bottom;border-bottom: 1px solid black;">
+			<td class=""><font style="font-size:0.8em;"><strong>Instant Grading</strong></font></td>
+			<td class=""><img src="/images/g7_incorrect.png"></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>	
+		<tr style="vertical-align:bottom;">
+			<td class=""><font style="font-size:0.8em;"><strong>Full Report</strong></font></td>
+			<td class=""><img src="/images/g7_incorrect.png"></td>
+			<td class=""><img src="/images/g7_correct.png"></td>
+		</tr>
+		<tr style="height:10px;"></tr>
+		<tr class="grade7PlansTableLastRow">
+			<td style="width:100px;"></td>
+			<td style="vertical-align:middle;"><a href="javascript:goToFreePractice()"><font>Practice Free Questions</font></a></td>
+			<td><button id="Pay" style="border:none;"></button></td>
+		</tr>
+	</table>
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>	
+
+<script>
+function goToFreePractice()
+	{
+		pageName = "Secondary-1-Grade-7-Mathematics#!Factors-and-Multiples-Easy-Questions-1";
+		window.location.href = pageName;
+		location.reload();
+	}
+$("#Pay").button({label:"<font style='font-size:0.8em;'>Own The Book</font>"});
+$("#Pay").click(function()
+		{
+			window.location.href = '/Subscribe/Grade7';
+		}
+	);	
+</script>

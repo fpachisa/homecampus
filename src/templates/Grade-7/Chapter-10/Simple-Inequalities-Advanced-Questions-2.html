@@ -1,0 +1,191 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">10.1 Introduction to Simple Inequalities</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:55%;">10.1 Introduction to Simple Inequalities</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:-10px;"><font class="grade7Variables">x</font> satisfies the inequalities </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-20px;">
+				<p style="line-height:20%;text-align:center;">&minus;<font class="grade7Variables">x</font><br>___<br></p>
+				<p style="line-height:20%;text-align:center;">&nbsp;2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:-10px;margin-left:5px;">&le; &minus;15 and 5<font class="grade7Variables">x</font> &lt; 175.</div>
+			<p style="margin-top:0px;">Find all the possible values of <font class="grade7Variables">x</font> if <font class="grade7Variables">x</font> is an integer.</p>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:5px;">Answer: &nbsp;<font class="grade7Variables">x</font> =
+				{% if C10SIAdvanced_3_answer_correct is defined %}
+					<input id="C10SIAdvanced_3_answer" value='{{C10SIAdvanced_3_answer}}' readonly style="width:150px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C10SIAdvanced_3_answer" value='{{C10SIAdvanced_3_answer}}' style="width:150px;text-align:center;">
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C10SIAdvanced_3_answer_correct is defined %}
+					{% if C10SIAdvanced_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C10SIAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="margin-left:95px;"><font style="font-size:0.8em">Enter the values separated by commas</font></div>			
+		</div>
+		
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:-10px;"><font class="grade7Variables">x</font> is a prime number such that &minus;2<font class="grade7Variables">x</font> &le; &minus;5 and </div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:-2px;">
+				<p style="line-height:20%;text-align:center;">&minus;<font class="grade7Variables">x</font><br>___<br></p>
+				<p style="line-height:20%;text-align:center;">&nbsp;2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:5px;">&ge; &minus;7.</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;margin-left:0px;">Find all the possible values of <font class="grade7Variables">x</font>.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:15px;">Answer: &nbsp;<font class="grade7Variables">x</font> =
+				{% if C10SIAdvanced_4_answer_correct is defined %}
+					<input id="C10SIAdvanced_4_answer" value='{{C10SIAdvanced_4_answer}}' readonly style="width:150px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C10SIAdvanced_4_answer" value='{{C10SIAdvanced_4_answer}}' style="width:150px;text-align:center;">
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C10SIAdvanced_4_answer_correct is defined %}
+					{% if C10SIAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C10SIAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="margin-left:95px;"><font style="font-size:0.8em">Enter the values separated by commas</font></div>			
+		</div>
+
+
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Find the smallest rational number <font class="grade7Variables">x</font> such that
+			</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:50px;margin-top:3px;">
+				<p style="line-height:20%;text-align:center;">4<font class="grade7Variables">x</font><br>__<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:15px;margin-left:5px;">&minus;</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:3px;">
+				<p style="line-height:20%;text-align:center;">6<font class="grade7Variables">x</font><br>__<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:15px;margin-left:12px;">&le; &nbsp; 2</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:3px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:15px;margin-left:5px;">+</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:3px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:5px;">Answer: &nbsp;<font class="grade7Variables">x</font> =
+				{% if C10SIAdvanced_5_answer_correct is defined %}
+					<input id="C10SIAdvanced_5_answer" value='{{C10SIAdvanced_5_answer}}' readonly style="width:45px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C10SIAdvanced_5_answer" value='{{C10SIAdvanced_5_answer}}' style="width:45px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if C10SIAdvanced_5_answer_correct is defined %}
+					{% if C10SIAdvanced_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C10SIAdvanced_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if C10SIAdvanced_3_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="C10SIAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:10px;margin-left:280px;"><button id="C10SIAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#C10SIAdvanced_3_answer").change(function()
+	{
+		question_id = "C10SIAdvanced_3";
+		question_type = "SimpleInequalities"
+		answer_id = "C10SIAdvanced_3_answer";
+		entered_answer = $("#C10SIAdvanced_3_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#C10SIAdvanced_4_answer").change(function()
+			{
+				question_id = "C10SIAdvanced_4";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIAdvanced_4_answer";
+				entered_answer = $("#C10SIAdvanced_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#C10SIAdvanced_5_answer").change(function()
+			{
+				question_id = "C10SIAdvanced_5";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIAdvanced_5_answer";
+				entered_answer = $("#C10SIAdvanced_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#C10SIAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#C10SIAdvanced_2_Retry").button({label:"Retry"});
+	$("#C10SIAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SimpleInequalities"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C10SIAdvanced_3"+"#%$"+"C10SIAdvanced_3_answer"+"#%$"+$("#C10SIAdvanced_3_answer").val();
+		answers = answers + "#%$"+"C10SIAdvanced_4"+"#%$"+"C10SIAdvanced_4_answer"+"#%$"+$("#C10SIAdvanced_4_answer").val();
+		answers = answers + "#%$"+"C10SIAdvanced_5"+"#%$"+"C10SIAdvanced_5_answer"+"#%$"+$("#C10SIAdvanced_5_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C10SIAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C10SIAdvanced_3_answer,C10SIAdvanced_4_answer,C10SIAdvanced_5_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,160 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.1 Distance, Time and Speed</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:62%;">6.1 Distance, Time and Speed</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Leo ran for half an hour to cover a distance of 5 km.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) His speed was
+			{% if SPDTSMedium_3_1_answer_correct is defined %}
+				<input id="SPDTSMedium_3_1_answer" value='{{SPDTSMedium_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPDTSMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_3_1_answer_correct and SPDTSMedium_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_3_1_answer" value='{{SPDTSMedium_3_1_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:20px;width:15px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Had he run at an additional speed of 1 km/h, how much less time would he take to cover the same distance? Give your answer in minutes.</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;	
+			{% if SPDTSMedium_3_2_answer_correct is defined %}
+				<input id="SPDTSMedium_3_2_answer" value='{{SPDTSMedium_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> minutes &nbsp;
+					{% if SPDTSMedium_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_3_2_answer_correct and SPDTSMedium_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_3_2_answer" value='{{SPDTSMedium_3_2_answer}}' style="width:50px;" > minutes &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Zoya walks 100 m at a speed of 2 m/s.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) Find the time taken by her to cover the distance.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;	
+			{% if SPDTSMedium_4_1_answer_correct is defined %}
+				<input id="SPDTSMedium_4_1_answer" value='{{SPDTSMedium_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> seconds &nbsp;
+					{% if SPDTSMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_4_1_answer_correct and SPDTSMedium_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_4_1_answer" value='{{SPDTSMedium_4_1_answer}}' style="width:50px;" > seconds &nbsp;
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:20px;width:15px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">At what speed must she walk to reach 10 seconds earlier?</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;	
+			{% if SPDTSMedium_4_2_answer_correct is defined %}
+				<input id="SPDTSMedium_4_2_answer" value='{{SPDTSMedium_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> m/s &nbsp;
+					{% if SPDTSMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSMedium_4_2_answer_correct and SPDTSMedium_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSMedium_4_2_answer" value='{{SPDTSMedium_4_2_answer}}' style="width:50px;" > m/s &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPDTSMedium_3_1_answer_correct is defined %}
+			<div style="margin-top:-10px;margin-left:340px;"><button id="SPDTS_Medium_2_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:15px;margin-left:220px;"><button id="SPDTS_Medium_2_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPDTSMedium_3_1_answer").change(function()
+	{
+		question_id = "SPDTSMedium_3";
+		question_type = "DistanceTimeSpeed"
+		answer_id = "SPDTSMedium_3_1_answer";
+		entered_answer = $("#SPDTSMedium_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPDTSMedium_3_2_answer").change(function()
+			{
+				question_id = "SPDTSMedium_3";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_3_2_answer";
+				entered_answer = $("#SPDTSMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSMedium_4_1_answer").change(function()
+			{
+				question_id = "SPDTSMedium_4";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_4_1_answer";
+				entered_answer = $("#SPDTSMedium_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSMedium_4_2_answer").change(function()
+			{
+				question_id = "SPDTSMedium_4";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSMedium_4_2_answer";
+				entered_answer = $("#SPDTSMedium_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#SPDTS_Medium_2_submit").button({label:"Check Answers"});
+	$("#SPDTS_Medium_2_retry").button({label:"Retry"});
+	$("#SPDTS_Medium_2_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "DistanceTimeSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPDTSMedium_3"+"#%$"+"SPDTSMedium_3_1_answer"+"#%$"+$("#SPDTSMedium_3_1_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_3"+"#%$"+"SPDTSMedium_3_2_answer"+"#%$"+$("#SPDTSMedium_3_2_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_4"+"#%$"+"SPDTSMedium_4_1_answer"+"#%$"+$("#SPDTSMedium_4_1_answer").val();
+		answers = answers + "#%$"+"SPDTSMedium_4"+"#%$"+"SPDTSMedium_4_2_answer"+"#%$"+$("#SPDTSMedium_4_2_answer").val();
+
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPDTS_Medium_2_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPDTSMedium_3_1_answer,SPDTSMedium_3_2_answer,SPDTSMedium_4_1_answer,SPDTSMedium_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

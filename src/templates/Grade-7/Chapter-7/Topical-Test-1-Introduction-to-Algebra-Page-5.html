@@ -1,0 +1,252 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#7B43A0;">Introduction to Algebra - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="IAG_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">7)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			Entry fee to a water park is $32 per adult and $18 per child.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">a)</div>
+			<div style="display:inline-block;width:370px;">Formulate an algebraic expression to calculate the revenue earned if <font class="grade7Variables">x</font> adults and <font class="grade7Variables">y</font> children visit the water park in a day.
+			</div>
+			<br>
+			<div style="display:inline-block;margin-left:30px;margin-top:10px;">Answer: &nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="IAGTT1_7_1_answer" value='{{IAGTT1_7_1_answer}}' readonly style="width:55px;background-color:#DFDFDF;text-align:center;"> 
+				{% else %}
+					<input id="IAGTT1_7_1_answer" value='{{IAGTT1_7_1_answer}}' style="width:55px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if IAGTT1_7_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_7_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_7_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 2)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 2)</font>
+				{% endif %}
+			</div>		
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">b)</div>
+			<div style="display:inline-block;width:370px;">Find the revenue collected in a day if 124 adults and 30 children visit the water park that day.
+			</div>
+			<br>
+			<div style="display:inline-block;margin-left:30px;margin-top:10px;">Answer: &nbsp;$</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="IAGTT1_7_2_answer" value='{{IAGTT1_7_2_answer}}' readonly style="width:35px;background-color:#DFDFDF;text-align:center;"> 
+				{% else %}
+					<input id="IAGTT1_7_2_answer" value='{{IAGTT1_7_2_answer}}' style="width:35px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if IAGTT1_7_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_7_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 1 / 1)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_7_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 1)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 1)</font>
+				{% endif %}
+			</div>		
+			
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">8)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			Ali is 2 years older than Brad. Find Ali's age given that
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">a)</div>
+			<div style="display:inline-block;width:370px;">Brad is <font class="grade7Variables">x</font> years old.
+			</div>
+			<br>
+			<div style="display:inline-block;margin-left:30px;margin-top:10px;">Answer: &nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="IAGTT1_8_1_answer" value='{{IAGTT1_8_1_answer}}' readonly style="width:35px;background-color:#DFDFDF;text-align:center;"> years 
+				{% else %}
+					<input id="IAGTT1_8_1_answer" value='{{IAGTT1_8_1_answer}}' style="width:35px;text-align:center;" > years
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if IAGTT1_8_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 1 / 1)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 1)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 1)</font>
+				{% endif %}
+			</div>		
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">b)</div>
+			<div style="display:inline-block;width:370px;">Brad is 12 years old.
+			</div>
+			<br>
+			<div style="display:inline-block;margin-left:30px;margin-top:10px;">Answer: &nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="IAGTT1_8_2_answer" value='{{IAGTT1_8_2_answer}}' readonly style="width:35px;background-color:#DFDFDF;text-align:center;"> years 
+				{% else %}
+					<input id="IAGTT1_8_2_answer" value='{{IAGTT1_8_2_answer}}' style="width:35px;text-align:center;" > years
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if IAGTT1_8_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_8_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 1 / 1)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_8_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 1)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 1)</font>
+				{% endif %}
+			</div>		
+			
+		</div>
+
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="IAG_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#IAG_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#IAG_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Introduction-to-Algebra');
+  	});	
+$("#IAG_TT_1_back").button({label:"<<"});
+$("#IAG_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-7/Topical-Test-1-Introduction-to-Algebra-Page-3.html';
+		rightPage = '/Grade-7/Chapter-7/Topical-Test-1-Introduction-to-Algebra-Page-4.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#IAGTT1_7_1_answer").change(function()
+		{
+			question_id = "IAGTT1_7";
+			test_id = '{{test_id}}';
+			answer_id = "IAGTT1_7_1_answer";
+			entered_answer = $("#IAGTT1_7_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#IAGTT1_7_2_answer").change(function()
+		{
+			question_id = "IAGTT1_7";
+			test_id = '{{test_id}}';
+			answer_id = "IAGTT1_7_2_answer";
+			entered_answer = $("#IAGTT1_7_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#IAGTT1_8_1_answer").change(function()
+		{
+			question_id = "IAGTT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "IAGTT1_8_1_answer";
+			entered_answer = $("#IAGTT1_8_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#IAGTT1_8_2_answer").change(function()
+		{
+			question_id = "IAGTT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "IAGTT1_8_2_answer";
+			entered_answer = $("#IAGTT1_8_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

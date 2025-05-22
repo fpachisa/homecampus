@@ -1,0 +1,228 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.2 Interpreting Algebraic Notations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:50%;">7.2 Interpreting Algebraic Notations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			Simplify the following:
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">a) 21<font class="grade7Variables">hm</font> &divide; 7<font class="grade7Variables">hmn</font> = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-20px;">
+				{% if IANEasy_4_1_answer_correct is defined or IANEasy_4_2_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_1_answer" value='{{IANEasy_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br>______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_2_answer" value='{{IANEasy_4_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_1_answer" value='{{IANEasy_4_1_answer}}' style="width:30px;text-align:center;" ><br>______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_2_answer" value='{{IANEasy_4_2_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANEasy_4_1_answer_correct is defined or IANEasy_4_2_answer_correct is defined %}
+					{% if IANEasy_4_1_answer_correct and IANEasy_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">b) <font class="grade7Variables">r</font>  &times; 6<font class="grade7Variables">s</font> &divide; 27<font class="grade7Variables">t</font> = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				{% if IANEasy_4_3_answer_correct is defined or IANEasy_4_4_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_3_answer" value='{{IANEasy_4_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br>______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_4_answer" value='{{IANEasy_4_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_3_answer" value='{{IANEasy_4_3_answer}}' style="width:30px;text-align:center;" ><br>______<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="IANEasy_4_4_answer" value='{{IANEasy_4_4_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if IANEasy_4_3_answer_correct is defined or IANEasy_4_4_answer_correct is defined %}
+					{% if IANEasy_4_3_answer_correct and IANEasy_4_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_4_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+			<br>					
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:20px;">c) 2<font class="grade7Variables">e</font> &times; 3<font class="grade7Variables">f</font> &times; 4<font class="grade7Variables">g</font> = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:5px;">
+				{% if IANEasy_4_5_answer_correct is defined %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+						<input id="IANEasy_4_5_answer" value='{{IANEasy_4_5_answer}}' readonly style="width:40px;background-color:#DFDFDF;">
+					</div>
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">
+						<input id="IANEasy_4_5_answer" value='{{IANEasy_4_5_answer}}' style="width:40px;" >				
+					</div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:10px;">
+				{% if IANEasy_4_5_answer_correct is defined %}
+					{% if IANEasy_4_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANEasy_4_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+				Is <font class="grade7Variables">r</font> &times; <font class="grade7Variables">r</font> &times; <font class="grade7Variables">r</font> equal to <font class="grade7Variables">r</font> + <font class="grade7Variables">r</font> + <font class="grade7Variables">r</font>?
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if IANEasy_5_answer_correct is defined %}
+				<input type=radio name="IANEasy_5_answer" value='True' disabled
+				{% if IANEasy_5_answer == 'True'%} 
+   					checked="checked"
+   				{%endif%}
+				 >True<br>
+				<input type=radio name="IANEasy_5_answer" value='False' disabled
+				{% if IANEasy_5_answer == 'False' %} 
+   					checked="checked"
+   				{%endif%}
+				 >False&nbsp;&nbsp;
+				{% if IANEasy_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{IANEasy_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="IANEasy_5_answer" value='True'
+				{% if IANEasy_5_answer == 'True' %} 
+   					checked="checked"
+   				{%endif%}
+				 >True<br>
+				<input type=radio name="IANEasy_5_answer" value='False'
+				{% if IANEasy_5_answer == 'False'%} 
+   					checked="checked"
+   				{%endif%}
+				 >False			 
+			{% endif %}	
+		</div>
+
+		{% if IANEasy_4_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="IANEasy_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="IANEasy_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#IANEasy_4_1_answer").change(function()
+	{
+		question_id = "IANEasy_4";
+		question_type = "AlgebraicNotations"
+		answer_id = "IANEasy_4_1_answer";
+		entered_answer = $("#IANEasy_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#IANEasy_4_2_answer").change(function()
+			{
+				question_id = "IANEasy_4";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_4_2_answer";
+				entered_answer = $("#IANEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_4_3_answer").change(function()
+			{
+				question_id = "IANEasy_4";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_4_3_answer";
+				entered_answer = $("#IANEasy_4_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANEasy_4_4_answer").change(function()
+			{
+				question_id = "IANEasy_4";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_4_4_answer";
+				entered_answer = $("#IANEasy_4_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+	$("#IANEasy_4_5_answer").change(function()
+			{
+				question_id = "IANEasy_4";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_4_5_answer";
+				entered_answer = $("#IANEasy_4_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("input[name='IANEasy_5_answer']").click(function()			
+			{
+				question_id = "IANEasy_5";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANEasy_5_answer";
+				entered_answer = $("input:radio[name=IANEasy_5_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#IANEasy_3_Submit").button({label:"Check Answers"});
+	$("#IANEasy_3_Retry").button({label:"Retry"});
+	$("#IANEasy_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicNotations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "IANEasy_4"+"#%$"+"IANEasy_4_1_answer"+"#%$"+$("#IANEasy_4_1_answer").val();
+		answers = answers + "#%$"+"IANEasy_4"+"#%$"+"IANEasy_4_2_answer"+"#%$"+$("#IANEasy_4_2_answer").val();
+		answers = answers + "#%$"+"IANEasy_4"+"#%$"+"IANEasy_4_3_answer"+"#%$"+$("#IANEasy_4_3_answer").val();
+		answers = answers + "#%$"+"IANEasy_4"+"#%$"+"IANEasy_4_4_answer"+"#%$"+$("#IANEasy_4_4_answer").val();
+		answers = answers + "#%$"+"IANEasy_4"+"#%$"+"IANEasy_4_5_answer"+"#%$"+$("#IANEasy_4_5_answer").val();
+		answers = answers + "#%$"+"IANEasy_5"+"#%$"+"IANEasy_5_answer"+"#%$"+$("input:radio[name=IANEasy_5_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#IANEasy_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "IANEasy_4_1_answer,IANEasy_4_2_answer,IANEasy_4_3_answer,";
+		answer_ids = answer_ids + "IANEasy_4_4_answer,IANEasy_4_5_answer,IANEasy_5_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

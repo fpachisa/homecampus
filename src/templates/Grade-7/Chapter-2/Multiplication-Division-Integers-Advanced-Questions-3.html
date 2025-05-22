@@ -1,0 +1,133 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.3 Multiplication and Division of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:45%;">2.3 Multiplication and Division of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mrs. Jones bought a TV from a store on a monthly instalment plan of $120 per month. She has paid off the first 3 instalments and owes $2040 to the store now. 
+			</div>
+		</div>
+		<br>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:20px;">a)</div>
+		<div style="display:inline-block;margin-top:20px;width:390px;vertical-align:top;">How many more instalments does she have to pay now?</div>		
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; 
+			{% if RNMDAdvanced_3_1_answer_correct is defined %}
+				<input id="RNMDAdvanced_3_1_answer" value='{{RNMDAdvanced_3_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_3_1_answer" value='{{RNMDAdvanced_3_1_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:20px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:390px;vertical-align:top;">How much will she owe the store half a year from now?</div>		
+		<div style="margin-left:60px;margin-top:20px;">Answer: $&nbsp;
+			{% if RNMDAdvanced_3_2_answer_correct is defined %}
+				<input id="RNMDAdvanced_3_2_answer" value='{{RNMDAdvanced_3_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_3_2_answer_correct and RNMDAdvanced_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_3_2_answer" value='{{RNMDAdvanced_3_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+		<div style="display:inline-block;margin-left:25px;width:15px;margin-top:20px;">c)</div>
+		<div style="display:inline-block;margin-top:20px;width:390px;vertical-align:top;">What was the cost of the TV?</div>		
+		<div style="margin-left:60px;margin-top:20px;">Answer: $&nbsp;
+			{% if RNMDAdvanced_3_3_answer_correct is defined %}
+				<input id="RNMDAdvanced_3_3_answer" value='{{RNMDAdvanced_3_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNMDAdvanced_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNMDAdvanced_3_3_answer_correct and RNMDAdvanced_3_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNMDAdvanced_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNMDAdvanced_3_3_answer" value='{{RNMDAdvanced_3_3_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}
+		</div>
+
+
+		{% if RNMDAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:15px;margin-left:320px;"><button id="RNMDAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNMDAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNMDAdvanced_3_1_answer").change(function()
+	{
+		question_id = "RNMDAdvanced_3";
+		question_type = "MultiplicationDivisionIntegers"
+		answer_id = "RNMDAdvanced_3_1_answer";
+		entered_answer = $("#RNMDAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNMDAdvanced_3_2_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_3";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_3_2_answer";
+				entered_answer = $("#RNMDAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNMDAdvanced_3_3_answer").change(function()
+			{
+				question_id = "RNMDAdvanced_3";
+				question_type = "MultiplicationDivisionIntegers"
+				answer_id = "RNMDAdvanced_3_3_answer";
+				entered_answer = $("#RNMDAdvanced_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNMDAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#RNMDAdvanced_3_Retry").button({label:"Retry"});
+	$("#RNMDAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "MultiplicationDivisionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNMDAdvanced_3"+"#%$"+"RNMDAdvanced_3_1_answer"+"#%$"+$("#RNMDAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_3"+"#%$"+"RNMDAdvanced_3_2_answer"+"#%$"+$("#RNMDAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"RNMDAdvanced_3"+"#%$"+"RNMDAdvanced_3_3_answer"+"#%$"+$("#RNMDAdvanced_3_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNMDAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNMDAdvanced_3_1_answer,RNMDAdvanced_3_2_answer,RNMDAdvanced_3_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

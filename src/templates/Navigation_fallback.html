@@ -1,0 +1,105 @@
+{% macro render_notification() %}
+<li class="homecampus-notification-bell"><a href="/Unfinished-Worksheets"><i class="fa fa-bell-o"></i></a> <span class="homecampus-notification-bell__tooltip">You Have Un-finished worksheets</span></li>
+{% endmacro %}
+
+{% macro render_tools(cssClass, btnClass="btn-navbar", listClass="", showBell= True) %}
+	{% if current_user -%}
+		<ul class="{{ cssClass }} l-in">
+			{% if current_user.IsParent %}
+				<li class="{{listClass}}"><a class="{{btnClass}}" href="/MyProfile">{{ current_user.first_name|e }}</a> 
+			{% else %}					
+			{# 26-07-2016 - Riyaz - Adding new notification here before displaying the student's name
+			 Only checking if the current_user is not a teacher coz it's sure that the user is not a parent #}					   
+			
+			{% if showBell == True and not current_user.IsTeacher and UnfinishedWorksheetsCount is defined and UnfinishedWorksheetsCount != 0 %}
+				{{ render_notification() }}
+			{% endif %}
+				<li class="{{listClass}}"><a class="{{btnClass}}" href="javascript:void(0);">{{ current_user.first_name|e }}</a>
+			{% endif %}
+				
+			{% if current_user.IsParent %}
+				{% if current_user.authorized %}
+					{% if TRIAL=="Y"%}
+						 </li><li class="{{listClass}}"><a class="{{btnClass}}" id="subscribeChild" href="/Subscribe">Subscribe</a>	                        	
+					{% endif %}
+				{% else %}
+					 </li><li class="{{listClass}}"><a class="{{btnClass}}" id="subscribeChild" href="/Subscribe">Subscribe</a>
+				{% endif %}				
+			{% elif current_user.IsTeacher %}
+				 </li><li class="{{listClass}}"><a class="{{btnClass}}" href="/Teacher/Manage_Classroom">Manage Classroom</a>
+			{% endif %}
+				
+			</li><li class="{{listClass}}"><a class="{{btnClass}}" href="{{ logout_url }}"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+				
+	{% else %}
+		 <ul class="{{ cssClass }} l-out">
+			<li class="{{listClass}}"><a id="signin-button" class="{{btnClass}}" href="{{ login_url }}">Sign In</a>
+			</li><li class="{{listClass}}"><a id="register-button" href="/Register" class="{{btnClass}}">Join</a></li>
+	{% endif %}
+				
+			<!-- FaceBook like button -->
+			<!-- <li class="fb-like" data-href="http://my.homecampus.com.sg" data-width="88" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></li> -->
+		</ul>
+
+{% endmacro %}
+
+<!-- START: facebook and google plugins-->
+<!-- div id="fb-root"></div-->
+<script>
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=921497507960485";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- NAVIGATION -->
+<nav class="header">
+	<div class="header__container">		
+		
+		<!-- Logo -->
+		<div class="header__element-1">
+			<a href="/"><img class="logo-img" src='/images/site/home_page_logo.png' /></a>
+			<a class="btn-menu" id="menu-opener" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+		</div>
+		
+		<!-- Navigation -->
+		<div class="header__element-2">
+			<ul class="nav-links">
+				{# </li> is like this for a reason!! #}
+				<li class="color-orange un-boxed" ><a href="/Primary_Grade_3_Mathematics" title="Grade 3 Math">Grade 3</a>
+    			</li><li class="color-peach un-boxed"><a href="/Primary_Grade_4_Mathematics" title="Grade 4 Math">Grade 4</a>
+    			</li><li class="color-red un-boxed"><a href="/Primary_Grade_5_Mathematics" title="Grade 5 Math">Grade 5</a>
+    			</li><li class="color-blue un-boxed"><a href="/Primary_Grade_6_Mathematics" title="Grade 6 Math">Grade 6</a>
+				</li><li class="color-violet un-boxed"><a href="/Secondary-1-Grade-7-Mathematics" title="Grade 7 Math">Grade 7</a>
+				</li><li class="color-pink un-boxed"><a href="/Progress">Report</a></li>
+				<!-- li class="icon"><a href="javascript:void(0);" id="menu-opener">&#9776;</a></li -->
+			</ul>
+		</div>
+		
+		<!-- Buttons -->
+		<div class="header__element-3">
+			{{ render_tools("header__tools") }}
+		</div>
+				
+	</div>
+</nav> <!-- End of NAVIGATION -->
+
+<aside class="mobile-menu">
+	<div class="mobile-menu__close"><a href="javascript:void(0)" class="menu-closer">&times;</a></div>
+	<ul class="mobile-menu__links">
+		<li class="color-orange boxed"><a href="/Primary_Grade_3_Mathematics" title="Grade 3 Math">Grade 3</a>
+		</li><li class="color-peach boxed"><a href="/Primary_Grade_4_Mathematics" title="Grade 4 Math">Grade 4</a>
+    	</li><li class="color-red boxed"><a href="/Primary_Grade_5_Mathematics" title="Grade 5 Math">Grade 5</a>
+    	</li><li class="color-blue boxed"><a href="/Primary_Grade_6_Mathematics" title="Grade 6 Math">Grade 6</a>
+		</li><li class="color-violet boxed"><a href="/Secondary-1-Grade-7-Mathematics" title="Grade 7 Math">Grade 7</a>
+		</li><li class="color-pink boxed"><a href="/Progress">Report</a></li>
+	</ul>
+	
+	<hr class="mobile-menu__separator" />
+	
+	{{ render_tools("mobile-menu__tools", listClass="color-green boxed", btnClass="", showBell=True) }}
+	
+</aside>

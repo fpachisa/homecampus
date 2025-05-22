@@ -1,0 +1,164 @@
+/*
+ * Style Definitions for Static Pages
+ */
+ 
+.sg-maths {
+	/* What_is_Singapore_Math namespace */
+	
+	.explain-example {
+		border: 1px solid #ddd;
+		padding: 15px;
+		.shadow-2dp();
+		margin: 15px 0;
+		
+		
+		&__ques {
+			font-weight: bold;
+			
+			&::before {
+				content: "Q.";
+			}
+		}
+		
+		&__ans {
+			&::before {
+				content: "Ans.";
+				font-weight: bold;
+				display:block;
+			}
+		}
+		
+		&__side {
+			font-size: 0.9em;
+			background-color: @brand-primary;
+			color: #fff;
+			margin: 15px -16px -16px;
+			padding: 15px;
+			box-shadow: 0px 0px 5px #ddd inset;
+			box-shadow: 0px 0px 5px rgba(0,0,0, 0.25) inset;
+		}
+	}
+	
+	.at-hc {
+		&__xtra-info {
+			.make-xs-column(12);
+			.make-md-column(3);
+			.pull-right;
+			font-size: 0.9em;
+			background-color: @brand-info;
+			color: #fff;
+			margin: 15px 0;
+			padding: 15px;
+			.shadow-2dp();
+		}
+		
+		&__base-info {
+			.make-xs-column(12);
+			.make-md-column(9);
+		}
+	}
+}
+
+
+.about-hc {
+	/* AboutHomeCampus namespace */
+	color: #454545;
+	
+	&__banner {
+		.make-xs-column(12);
+		.make-md-column(3);
+		.shadow-2dp();
+		position: relative;
+		@media screen and (min-width: @screen-md) {
+			position: fixed;
+			right:15px;
+		}
+		
+		margin-top: 15px;
+		background-color: lighten(@brand-primary, 5%);
+		color: #fff;
+		
+		> p {
+			line-height: 1.5em;
+			letter-spacing: 1.75px; 
+		}
+		
+		/* The Start :P */
+		&::before {
+			content: '\f005';	// fa-star
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.5em;
+			text-decoration: inherit;
+			color: yellow;
+			position: absolute;
+			top: -15px;
+			right: -11px;
+		}
+		
+	}
+	
+	
+	&__content {
+		.make-xs-column(12);
+		.make-md-column(8.9);
+		.make-md-column-offset(0.1);
+	}
+}
+
+
+.contact-us {
+	// Contact Us namespace
+	//position: relative;
+	
+	&__details {
+		.make-xs-column(12);
+		.make-md-column(5);
+		.make-md-column-offset(0.5);
+		border: 1px solid #ddd;
+		
+		&--means {
+			.mean {
+				margin: 15px 0;
+				display: table;
+				
+				i {
+					display: table-cell;
+					&::before {
+						display: block;
+						width: 25px;
+					}
+				}
+				span {
+					padding-left: 15px;
+					display: table-cell;
+				}
+			}
+		}
+	}
+	
+	&__feedback {
+		.make-xs-column(12);
+		.make-md-column(6);
+		.make-md-column-offset(0.25);
+		border: 1px solid #ddd;
+		.shadow-2dp();
+		margin-top:10px;
+		@media screen and (min-width: @screen-md){margin-top:0px;}
+	}
+	
+	.hut-window {
+		background-color: @brand-primary; //#2196F3;
+		color: #fff;
+		margin: -1px -16px 15px;
+		padding: 15px;
+	}
+	
+	.neutral-link {
+		// just a fancy class name :P
+		// resets Bootstrap's default styling
+		color: inherit;
+		
+	}
+}

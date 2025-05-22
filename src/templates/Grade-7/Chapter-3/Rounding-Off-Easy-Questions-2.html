@@ -1,0 +1,157 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Round off 0.0553 correct to:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 1 decimal place &nbsp;&nbsp;&nbsp;
+			Answer:
+			{% if AEROEasy_3_1_answer_correct is defined %}
+				<input id="AEROEasy_3_1_answer" value='{{AEROEasy_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROEasy_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AEROEasy_3_1_answer_correct and AEROEasy_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROEasy_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROEasy_3_1_answer" value='{{AEROEasy_3_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 3 decimal places &nbsp;&nbsp;&nbsp;
+			Answer:
+			{% if AEROEasy_3_2_answer_correct is defined %}
+				<input id="AEROEasy_3_2_answer" value='{{AEROEasy_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROEasy_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AEROEasy_3_2_answer_correct and AEROEasy_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROEasy_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROEasy_3_2_answer" value='{{AEROEasy_3_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>	
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Round off the following numbers to 4 decimal places:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 4.112551 &nbsp;&nbsp;
+			&#8776; &nbsp;&nbsp;
+			{% if AEROEasy_4_1_answer_correct is defined %}
+				<input id="AEROEasy_4_1_answer" value='{{AEROEasy_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROEasy_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AEROEasy_4_1_answer_correct and AEROEasy_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROEasy_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROEasy_4_1_answer" value='{{AEROEasy_4_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 9.000912 &nbsp;&nbsp;
+			&#8776; &nbsp;&nbsp;
+			{% if AEROEasy_4_2_answer_correct is defined %}
+				<input id="AEROEasy_4_2_answer" value='{{AEROEasy_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROEasy_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AEROEasy_4_2_answer_correct and AEROEasy_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROEasy_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROEasy_4_2_answer" value='{{AEROEasy_4_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		
+		{% if AEROEasy_3_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="AEROEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AEROEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AEROEasy_3_1_answer").change(function()
+	{
+		question_id = "AEROEasy_3";
+		question_type = "RoundingOff"
+		answer_id = "AEROEasy_3_1_answer";
+		entered_answer = $("#AEROEasy_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AEROEasy_3_2_answer").change(function()
+			{
+				question_id = "AEROEasy_3";
+				question_type = "RoundingOff"
+				answer_id = "AEROEasy_3_2_answer";
+				entered_answer = $("#AEROEasy_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AEROEasy_4_1_answer").change(function()
+			{
+				question_id = "AEROEasy_4";
+				question_type = "RoundingOff"
+				answer_id = "AEROEasy_4_1_answer";
+				entered_answer = $("#AEROEasy_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AEROEasy_4_2_answer").change(function()
+			{
+				question_id = "AEROEasy_4";
+				question_type = "RoundingOff"
+				answer_id = "AEROEasy_4_2_answer";
+				entered_answer = $("#AEROEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AEROEasy_2_Submit").button({label:"Check Answers"});
+	$("#AEROEasy_2_Retry").button({label:"Retry"});
+	$("#AEROEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RoundingOff"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AEROEasy_3"+"#%$"+"AEROEasy_3_1_answer"+"#%$"+$("#AEROEasy_3_1_answer").val();
+		answers = answers + "#%$"+"AEROEasy_3"+"#%$"+"AEROEasy_3_2_answer"+"#%$"+$("#AEROEasy_3_2_answer").val();
+		answers = answers + "#%$"+"AEROEasy_4"+"#%$"+"AEROEasy_4_1_answer"+"#%$"+$("#AEROEasy_4_1_answer").val();
+		answers = answers + "#%$"+"AEROEasy_4"+"#%$"+"AEROEasy_4_2_answer"+"#%$"+$("#AEROEasy_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AEROEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AEROEasy_3_1_answer,AEROEasy_3_2_answer,AEROEasy_4_1_answer,AEROEasy_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,135 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">During a practice session, an athlete made 5 attempts to complete a distance of 200 m in each attempt. The time of completion (in seconds) recorded in 5 attempts was 27.89, 28.13, 26.96, 26.24 and 27.45.  
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a)	Using a cluster value, estimate the total duration of the 5 attempts.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			Answer: &nbsp; 
+			{% if AESTAdvanced_1_1_answer_correct is defined %}
+				<input id="AESTAdvanced_1_1_answer" value='{{AESTAdvanced_1_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> seconds&nbsp;
+					{% if AESTAdvanced_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTAdvanced_1_1_answer_correct and AESTAdvanced_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTAdvanced_1_1_answer" value='{{AESTAdvanced_1_1_answer}}' style="width:30px;" > seconds&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b)	Find the average duration of the attempts.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			Answer: &nbsp; 
+			{% if AESTAdvanced_1_2_answer_correct is defined %}
+				<input id="AESTAdvanced_1_2_answer" value='{{AESTAdvanced_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> seconds&nbsp;
+					{% if AESTAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTAdvanced_1_2_answer_correct and AESTAdvanced_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTAdvanced_1_2_answer" value='{{AESTAdvanced_1_2_answer}}' style="width:50px;" > seconds&nbsp;
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">An American purchases a bag worth 350 pounds from London. The conversion rate is 1 Pound = 1.67224 US Dollars. Without using a calculator, estimate the price of the bag in US Dollars.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; $
+			{% if AESTAdvanced_2_answer_correct is defined %}
+				<input id="AESTAdvanced_2_answer" value='{{AESTAdvanced_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTAdvanced_2_answer_correct and AESTAdvanced_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTAdvanced_2_answer" value='{{AESTAdvanced_2_answer}}' style="width:40px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		{% if AESTAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:-15px;margin-left:340px;"><button id="AESTAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:10px;margin-left:280px;"><button id="AESTAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESTAdvanced_1_1_answer").change(function()
+	{
+		question_id = "AESTAdvanced_1";
+		question_type = "Estimation"
+		answer_id = "AESTAdvanced_1_1_answer";
+		entered_answer = $("#AESTAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESTAdvanced_1_2_answer").change(function()
+			{
+				question_id = "AESTAdvanced_1";
+				question_type = "Estimation"
+				answer_id = "AESTAdvanced_1_2_answer";
+				entered_answer = $("#AESTAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESTAdvanced_2_answer").change(function()
+			{
+				question_id = "AESTAdvanced_2";
+				question_type = "Estimation"
+				answer_id = "AESTAdvanced_2_answer";
+				entered_answer = $("#AESTAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESTAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#AESTAdvanced_1_Retry").button({label:"Retry"});
+	$("#AESTAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Estimation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESTAdvanced_1"+"#%$"+"AESTAdvanced_1_1_answer"+"#%$"+$("#AESTAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"AESTAdvanced_1"+"#%$"+"AESTAdvanced_1_2_answer"+"#%$"+$("#AESTAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"AESTAdvanced_2"+"#%$"+"AESTAdvanced_2_answer"+"#%$"+$("#AESTAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESTAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESTAdvanced_1_1_answer,AESTAdvanced_1_2_answer,AESTAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

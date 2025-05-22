@@ -1,0 +1,105 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:40%;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Multinational companies are offering growth opportunities to potential employees by designing business simulation games. The aim is to provide training related to business, leadership and other aspects. An employee participated in this program for 3 consecutive months starting January. His financial score in the game was &minus;$56048, $1789 and &minus;$1002, respectively.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) In which month did he get the best score?</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+		{% if RNNIAdvanced_3_1_answer_correct is defined %}
+			<input id="RNNIAdvanced_3_1_answer" value='{{RNNIAdvanced_3_1_answer}}' readonly style="width:70px;background-color:#DFDFDF;"> &nbsp;
+				{% if RNNIAdvanced_3_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not RNNIAdvanced_3_1_answer_correct and RNNIAdvanced_3_1_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNNIAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="RNNIAdvanced_3_1_answer" value='{{RNNIAdvanced_3_1_answer}}' style="width:70px;" > &nbsp;
+		{% endif %}
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) In which month did he get the worst score?</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+		{% if RNNIAdvanced_3_2_answer_correct is defined %}
+			<input id="RNNIAdvanced_3_2_answer" value='{{RNNIAdvanced_3_2_answer}}' readonly style="width:70px;background-color:#DFDFDF;"> &nbsp;
+				{% if RNNIAdvanced_3_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not RNNIAdvanced_3_2_answer_correct and RNNIAdvanced_3_2_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNNIAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="RNNIAdvanced_3_2_answer" value='{{RNNIAdvanced_3_2_answer}}' style="width:70px;" > &nbsp;
+		{% endif %}
+		</div>		
+
+		{% if RNNIAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="RNNIAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNNIAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNNIAdvanced_3_1_answer").change(function()
+	{
+		question_id = "RNNIAdvanced_3";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIAdvanced_3_1_answer";
+		entered_answer = $("#RNNIAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNNIAdvanced_3_2_answer").change(function()
+			{
+				question_id = "RNNIAdvanced_3";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIAdvanced_3_2_answer";
+				entered_answer = $("#RNNIAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	
+	$("#RNNIAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#RNNIAdvanced_3_Retry").button({label:"Retry"});
+	$("#RNNIAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "NumbersIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNNIAdvanced_3"+"#%$"+"RNNIAdvanced_3_1_answer"+"#%$"+$("#RNNIAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"RNNIAdvanced_3"+"#%$"+"RNNIAdvanced_3_2_answer"+"#%$"+$("#RNNIAdvanced_3_2_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNNIAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNNIAdvanced_3_1_answer,RNNIAdvanced_3_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

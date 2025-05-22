@@ -1,0 +1,211 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#E12958;">Algebraic Manipulations - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="AGM_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			Subtract
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">a)</div>
+			<div style="display:inline-block;width:370px;">
+			<div style="margin-top:-4px;">the sum of (<font class="grade7Variables">x</font><sup>2</sup> &minus; 2<font class="grade7Variables">x</font> + 7) and (&minus;2<font class="grade7Variables">x</font><sup>2</sup> + 3<font class="grade7Variables">x</font> &minus; 12) from the difference between (&minus;5<font class="grade7Variables">x</font> + 5<font class="grade7Variables">x</font><sup>2</sup>) and (&minus;8<font class="grade7Variables">x</font><sup>2</sup> &minus; 5<font class="grade7Variables">x</font>)</div>
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="AGMTT1_4_1_answer" value='A' disabled
+				{% if AGMTT1_4_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >14x<sup>2</sup> &minus; x + 5<br>
+				<input type=radio name="AGMTT1_4_1_answer" value='B' disabled
+				{% if AGMTT1_4_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >12x<sup>2</sup> + x + 5<br>				 
+				<input type=radio name="AGMTT1_4_1_answer" value='C' disabled
+				{% if AGMTT1_4_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >13x<sup>2</sup> &minus; x + 5&nbsp;&nbsp;
+				{% if AGMTT1_4_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>	
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="AGMTT1_4_1_answer" value='A'
+				{% if AGMTT1_4_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >14x<sup>2</sup> &minus; x + 5<br>
+				<input type=radio name="AGMTT1_4_1_answer" value='B'
+				{% if AGMTT1_4_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >12x<sup>2</sup> + x + 5<br>				 
+				<input type=radio name="AGMTT1_4_1_answer" value='C'
+				{% if AGMTT1_4_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >13x<sup>2</sup> &minus; x + 5<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+
+		<div style="margin-left:40px;margin-top:30px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">b)</div>
+			<div style="display:inline-block;width:370px;">
+			<div>the product of (5<font class="grade7Variables">t</font> + 12) and (&minus;3<font class="grade7Variables">t</font>) from the sum of (13<font class="grade7Variables">t</font><sup>2</sup> &minus; 7<font class="grade7Variables">t</font> + 12) and (&minus;2<font class="grade7Variables">t</font> &minus; 3<font class="grade7Variables">t</font><sup>2</sup> &minus; 21)</div>
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="AGMTT1_4_2_answer" value='A' disabled
+				{% if AGMTT1_4_2_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5t<sup>2</sup> &minus; 45t &minus; 9<br>
+				<input type=radio name="AGMTT1_4_2_answer" value='B' disabled
+				{% if AGMTT1_4_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >25t<sup>2</sup> + 27t &minus; 9<br>				 
+				<input type=radio name="AGMTT1_4_2_answer" value='C' disabled
+				{% if AGMTT1_4_2_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >25t<sup>2</sup> &minus; 27t + 9&nbsp;&nbsp;
+				{% if AGMTT1_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>	
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="AGMTT1_4_2_answer" value='A'
+				{% if AGMTT1_4_2_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5t<sup>2</sup> &minus; 45t &minus; 9<br>
+				<input type=radio name="AGMTT1_4_2_answer" value='B'
+				{% if AGMTT1_4_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >25t<sup>2</sup> + 27t &minus; 9<br>				 
+				<input type=radio name="AGMTT1_4_2_answer" value='C'
+				{% if AGMTT1_4_2_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >25t<sup>2</sup> &minus; 27t + 9<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="AGM_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#AGM_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#AGM_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Algebraic-Manipulations');
+  	});	
+$("#AGM_TT_1_back").button({label:"<<"});
+$("#AGM_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-8/Topical-Test-1-Algebraic-Manipulations-Page-1.html';
+		rightPage = '/Grade-7/Chapter-8/Topical-Test-1-Algebraic-Manipulations-Page-2.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("input[name='AGMTT1_4_1_answer']").click(function()
+		{
+			question_id = "AGMTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "AGMTT1_4_1_answer";
+			entered_answer = $("input:radio[name=AGMTT1_4_1_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='AGMTT1_4_2_answer']").click(function()		
+		{
+			question_id = "AGMTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "AGMTT1_4_2_answer";
+			entered_answer = $("input:radio[name=AGMTT1_4_2_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

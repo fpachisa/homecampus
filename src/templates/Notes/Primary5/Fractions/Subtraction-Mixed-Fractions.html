@@ -1,0 +1,114 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>How to Subtract Mixed Numbers and Fractions? - Home Campus</title>
+<meta name="keywords" content="subtract mixed numbers fractions grade 5 free worksheets">
+<meta name="description" content="How to Subtract Mixed Numbers and Fractions?" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">How to Subtract Mixed Numbers and Fractions?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(88, 215, 105);" href="/Learn/Subtract-Fractions-Calculator">Subtract Fractions Calculator</a></div>
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. The video below explains how to subtract mixed numbers.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/KtCuEoeKzeQ?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded"  allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				A mixed number or mixed fraction has two parts: a whole number and a proper fraction.<br /><br />
+				Mixed number &nbsp;=&nbsp; whole number &nbsp;+&nbsp; proper fraction
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(88, 215, 105);" href="/Learn/Subtract-Fractions-Calculator">Subtract Fractions Calculator</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;2. I have {{ mixNumGen(2,5,6) }} pepperoni pizzas and {{ mixNumGen(1,2,3) }} cheese pizzas. How many more pepperoni pizzas do I have than cheese pizzas?
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Pepperoni pizzas &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(2,5,6) }}<br />
+				Cheese pizzas &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(1,2,3) }}<br />
+				Pepperoni &nbsp;&minus;&nbsp; Cheese &nbsp;=>&nbsp;&nbsp; {{ mixNumGen(2,5,6) }} &nbsp;&minus;&nbsp; {{ mixNumGen(1,2,3) }} &nbsp;=&nbsp; ?<br />
+				
+				<img src="/images/notes/subtracting_mixed_numbers.png" alt="square metre or square meter" /><br />
+				
+				&nbsp;&nbsp;&nbsp; <b>{{ mixNumGen(2,5,6) }} &nbsp;&minus;&nbsp; {{ mixNumGen(1,2,3) }}</b> <br />
+				=&nbsp; {{ frGen("(2 x 6) + 5",6) }} &nbsp;&minus;&nbsp; {{ frGen("(1 x 3) + 2",3) }} &nbsp;&nbsp; (First, change both mixed numbers to improper fractions)<br />
+				=&nbsp; {{ frGen(17,6) }} &nbsp;&minus;&nbsp; {{ frGen(5,3) }}<br />
+				=&nbsp; {{ frGen("17 x 1","6 x 1") }} &nbsp;&minus;&nbsp; {{ frGen("5 x 2","3 x 2") }} &nbsp;&nbsp; (Second, change the fractions to like fractions)<br />
+				=&nbsp; {{ frGen(17,6) }} &nbsp;&minus;&nbsp; {{ frGen(10,6) }} &nbsp;&nbsp; (Next, subtract the fractions)<br />
+				=&nbsp; {{ frGen(7,6) }}<br />
+				=&nbsp; 1 + {{ frGen(1,6) }} &nbsp;&nbsp; (Finally, change the improper fraction to mixed number)<br />
+				=&nbsp; <b>{{ mixNumGen(1,1,6) }}</b><br />
+				I have &nbsp;<b>{{ mixNumGen(1,1,6) }}</b>&nbsp; more pepperoni pizzas than cheese pizzas.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Mixed_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;3. What is {{ mixNumGen(3,1,2) }} &nbsp;&minus;&nbsp; {{ frGen(1,5) }}?
+			</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				&nbsp;&nbsp;&nbsp; <b>{{ mixNumGen(3,1,2) }} &nbsp;&minus;&nbsp; {{ frGen(1,5) }}</b> <br />
+				=&nbsp; {{ frGen("(3 x 2) + 1",2) }} &nbsp;&minus;&nbsp; {{ frGen(1,5) }} &nbsp;&nbsp; (change mixed number to improper fraction)<br />
+				=&nbsp; {{ frGen(7,2) }} &nbsp;&minus;&nbsp; {{ frGen(1,5) }}<br />
+				=&nbsp; {{ frGen("7 x 5","2 x 5") }} &nbsp;&minus;&nbsp; {{ frGen("1 x 2","5 x 2") }} &nbsp;&nbsp; (change to like fractions)<br />
+				=&nbsp; {{ frGen(35,10) }} &nbsp;&minus;&nbsp; {{ frGen(2,10) }}<br />
+				=&nbsp; {{ frGen("35 - 2",10) }}<br />
+				=&nbsp; {{ frGen(33,10) }}<br />
+				=&nbsp; 3 + {{ frGen(3,10) }} &nbsp;&nbsp; (change the improper fraction to mixed number)<br />
+				=&nbsp; <b>{{ mixNumGen(3,3,10) }}</b><br />
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Add_Subtract_Mixed_Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a mixed number?","acceptedAnswer":{"@type":"Answer","text":"A mixed number or mixed fraction has two parts: a whole number and a proper fraction.\n\nMixed number  =  whole number  +  proper fraction "}},{"@type":"Question","name":"How do you subtract mixed numbers?","acceptedAnswer":{"@type":"Answer","text":"Step 1: change both mixed numbers to improper fractions\nStep 2: change the fractions to like fractions\nStep 3: subtract the two fractions\nStep 4: change the improper fraction to a mixed number"}},{"@type":"Question","name":"What is 2/6 as mixed number?","acceptedAnswer":{"@type":"Answer","text":"2/6 can be represented as 1/3 and it a proper fraction and it can't be represented as mixed number."}},{"@type":"Question","name":"What is 4/3 in mixed number?","acceptedAnswer":{"@type":"Answer","text":"4/3 can be represented as 1 1/3. So 1 is a whole number and 1/3 is a proper fraction. Together 1 1/3 is a mixed number which is equivalent to 4/3"}}]}</script>
+{% endblock %}

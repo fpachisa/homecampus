@@ -1,0 +1,214 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Home Campus - Primary Mathematics - Progress</title>
+<meta name="description" content="Learn primary school mathematics online. Monitor your progress." />
+{% endblock %}
+{% block header %}	    
+	<div class="main-page-class-banner">
+		<div>
+			<div style="display:inline-block;"><a href="/Primary_Grade_3_Mathematics"><img src="/images/site/grade_3_folder.png"></img></a></div>
+			<div style="display:inline-block;margin-left:-5px;"><a href="/Primary_Grade_4_Mathematics"><img src="/images/site/grade_4_folder.png"></img></a></div>
+			<div style="display:inline-block;margin-left:-5px;"><a href="/Primary_Grade_5_Mathematics"><img src="/images/site/grade_5_folder.png"></img></a></div>
+			<div style="display:inline-block;margin-left:-5px;"><a href="/Primary_Grade_6_Mathematics"><img src="/images/site/grade_6_folder.png"></img></a></div>
+			<div style="display:inline-block;margin-left:-5px;"><a href="/Progress"><img src="/images/site/report_folder_open.png"></img></a></div>
+		</div>
+	</div>
+{% endblock %}
+{% block body %}
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="/js/Reports.js" type="text/javascript"></script>
+	<script src="/js/Tests.js" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/jqModal.css"/>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/Reports.css"/>
+	<script src="/js/jqModal.js" type="text/javascript"></script>	
+	<script type="text/javascript">
+    // Create the data table.
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    //google.setOnLoadCallback(drawChart);
+    </script>
+	<link href="/stylesheets/Reports.css" rel="stylesheet" type="text/css"  />
+<div>
+	<div id="HomeContent" style="min-height:500px;">
+		{% if NoClassCreated == 'Y'%}
+			<div class="jqmWindow" id="CreateClassroomDialog" style="width:400px;">
+				<div style="margin-left:90px;margin-top:30px;">
+					<font class="legendText">&nbsp;&nbsp;&nbsp;You haven't created any classroom yet.<br><br>
+					&nbsp;&nbsp;&nbsp;<button id="CreateClassroom"></button></font><br>
+				</div>
+			</div>			
+			<script type="text/javascript">
+			$('#CreateClassroomDialog').jqm({modal:true});
+			$('#CreateClassroomDialog').jqmShow();
+			$("#CreateClassroom").button({label:"Create Classroom"});
+			$("#CreateClassroom").blur();
+			$("#CreateClassroom").click(function()
+	    		{
+					window.location.href = '/Teacher/Manage_Classroom';
+	    		}
+	    		); 		
+			</script>
+		{% elif NoStudentAdded %}
+			<div class="jqmWindow" id="AddStudentDialog" style="width:400px;">
+				<div style="margin-left:40px;margin-top:30px;">
+					<font class="legendText">&nbsp;&nbsp;&nbsp;You haven't added any students to the classroom.<br><br>
+					&nbsp;&nbsp;&nbsp;<button id="AddStudents"></button></font><br>
+				</div>
+			</div>			
+			<script type="text/javascript">
+			$('#AddStudentDialog').jqm({modal:true});
+			$('#AddStudentDialog').jqmShow();
+			$("#AddStudents").button({label:"Add Students"});
+			$("#AddStudents").blur();
+			$("#AddStudents").click(function()
+	    		{
+					window.location.href = '/Teacher/Manage_Classroom';
+	    		}
+	    		); 		
+			</script>			
+		{% else %}
+	   		<div id="ReportList" style="background-color:#DDE872;width:340px;">
+				<font style="font-weight:bold;color:#5E942A;">Class:</font>
+				<select id ='classname'>
+					{% for ci in ClassInfo %}
+						<option value='{{ci.class_name}}'>{{ci.class_name}}</option>
+					{% endfor %}
+				</select>					
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<button id="GenerateClassReport"></button>		   				   				
+			</div>			
+			<div id = 'ReportContent'>
+				<h3><b>Progress Report for Class {{class_name|safe}}:</b></h3>			
+				<div class="StudentReport">
+					<div style="padding-top:20px;cursor:pointer;">
+						{% for ci in ClassInfo %}
+							{% if ci.class_name == display_class_name %}
+								{% if ci.test_data|length == 0 %}
+									<font style="margin-left:50px;font-weight:bold;color:#5E942A;">No worksheets created yet.</font>
+								{% else %}
+									<font style="margin-left:50px;font-weight:bold;color:#5E942A;">Select Worksheet:</font>
+									<select id ='workseet_name'>
+									{% for wn in ci.test_data %}
+											<option value='{{wn.test_id}}'>{{wn.test_name}}</option>
+									{% endfor %}
+									</select>
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+					<br><br><br>
+					<div style="float:left">
+						<table class='Reports' style="margin-left:10px;cursor:pointer;">
+						<tr><th>No.</th><th>Student*</th><th>Status</th><th>Score</th><th>Complete Date</th></tr>
+							{% for st in StudentTestData %}
+								<tr id='{{st.student_username}}' onclick="StudentReport(this)">
+								<td>{{loop.index}}</td>
+								<td align='left'><font style="text-decoration:underline;font-weight:bold;">{{st.student_name}}</font></td>
+								{% if st.test_status is not defined or st.test_status == "New"%}
+									<td>Not Started</td><td> - </td><td>Not Applicable</td>
+								{% elif st.test_status == "InProgress"%}
+									<td>In Progress</td><td> - </td><td>Not Applicable</td>
+								{% else %}
+									<td>{{st.test_status}}</td><td>{{st.test_score}} %</td><td>{{st.complete_date}}</td>
+								{% endif %}
+								</tr>
+							{% endfor %}
+						</table>
+						<br>
+						<font style="margin-left:50px;">*Click on Student Name to get detailed report.</font>
+					</div>
+					<div id='StudentWorksheetScoreChart' style="margin-left:400px;"></div>
+					<br>
+					<br><br>
+				</div>
+				<div class="StudentReport" id="ConceptReport">
+					<div style="padding-top:20px;cursor:pointer;">
+						<font style="margin-left:50px;font-weight:bold;color:#5E942A;">Select Concept:</font>
+						<select id="ConceptList">						
+						{% for concept in CompleteConceptList %}
+							<option value='{{concept.concept_id}}'>{{concept.concept_name}}</option>
+						{% endfor %}
+						</select>
+					</div>
+					<br><br><br>
+					<div >
+						<table class='Reports' style="margin-left:10px;cursor:pointer;">
+						<tr><th rowspan=2>No.</th><th rowspan=2>Student Name*</th><th colspan=3>Problems Attempted</th><th rowspan=2>HC Score</th><th rowspan=2>Time Spent</th></tr>
+						<tr><th>Correct</th><th>Incorrect</th><th>All</th></tr>
+							{% for student in ClassStats %}
+								<tr id='{{student.student_username}}' onclick="StudentReport(this)">
+								<td>{{student.student_rollno}}</td>
+								<td align='left'><font style="text-decoration:underline;font-weight:bold;">{{student.student_name}}</font></td>
+								<td>{{student.correct}}</td><td>{{student.attempted - student.correct}}</td>
+								<td>{{student.attempted}}</td><td>{{student.HCScore}}</td><td>{{student.time_spent}}</td>
+								</tr>
+							{% endfor %}
+						</table>
+						<br>
+						<font style="margin-left:50px;">*Click on Student Name to get detailed report.</font>
+					</div><br>
+					<div id='StudentConceptScoreChart' style="margin-left:10px;"></div>
+					<br>
+					<br><br>
+				</div>				
+			</div>
+				{% if SubscribeMessage == 'Y'%}
+					<div class="jqmWindow" id="SubscribeDialog">
+						<div style="margin-left:90px;margin-top:30px;">
+							<font class="legendText" style="font-size:18px;color:#25acc3;">How well is your child performing?</font><br><br>
+							<font class="legendText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identify areas of strengths and weaknesses<br><br>
+							<button id="Subscribe"></button></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href='/Practice'><font style="font-size=0.5em;text-decoration:underline;">No, thanks</font></a>
+						</div>
+					</div>			
+					<script type="text/javascript">
+					$('#SubscribeDialog').jqm({modal:true});
+					$('#SubscribeDialog').jqmShow();
+					$("#Subscribe").button({label:"Yes, show me the detailed reports"});
+					$("#Subscribe").blur();
+					$("#Subscribe").click(function()
+			    		{
+							window.location.href = '/Subscribe';
+			    		}
+			    		); 		
+					</script>
+				{% endif %}		
+		
+	
+				<script type="text/javascript">
+					{{StudentWorksheetScore|safe}}
+					{{StudentConceptScoreChart|safe}}
+					$("#GenerateClassReport").button({label:"Generate Report"});
+					$("#classname").val('{{display_class_name}}')
+					$("#workseet_name").val('{{display_worksheet_id}}')
+					$("#ConceptList").val('{{display_concept_id}}')
+					var class_name = $("#classname").val();
+					var worksheet_id = $("#workseet_name").val();
+					var concept_id = $("#ConceptList").val();
+					$("#classname").change(function()
+					{
+						class_name = $("#classname").val();
+					});
+					$("#workseet_name").change(function()
+						{
+							worksheet_id = $("#workseet_name").val();
+							window.location.href = '/Teacher/Class_Report_Card?class_name='+class_name+'&worksheet_id='+worksheet_id;
+						});
+					$("#ConceptList").change(function()
+							{
+								concept_id = $("#ConceptList").val();
+								window.location.href = '/Teacher/Class_Report_Card?class_name='+class_name+'&concept_id='+concept_id+'#ConceptReport';
+							});										
+					$("#GenerateClassReport").click(function()
+			    		{
+							window.location.href = '/Teacher/Class_Report_Card?class_name='+class_name;
+			    		}
+			    		);
+		    		
+				</script>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

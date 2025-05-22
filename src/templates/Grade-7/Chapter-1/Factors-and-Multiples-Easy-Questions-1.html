@@ -1,0 +1,146 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.1 Factors and Multiples</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:70%;">1.1 Factors and Multiples</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">1)</font> &nbsp;List all the factors of each of the following numbers.
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;(Enter your answers separated by commas.)
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) 30:&nbsp;&nbsp;
+			{% if FMEasy_1_answer_correct is defined %}
+				<input id="FMEasy_1_answer" size=18 value='{{FMEasy_1_answer}}' readonly style="background-color:#DFDFDF;">
+					{% if FMEasy_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not FMEasy_1_answer_correct and FMEasy_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{FMEasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="FMEasy_1_answer" size=18 value='{{FMEasy_1_answer}}'>
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 48:&nbsp;&nbsp;
+			{% if FMEasy_2_answer_correct is defined %}
+				<input id="FMEasy_2_answer" size=18 value='{{FMEasy_2_answer}}' readonly style="background-color:#DFDFDF;">
+					{% if FMEasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not FMEasy_2_answer_correct and FMEasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{FMEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="FMEasy_2_answer" size=18 value='{{FMEasy_2_answer}}'>
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">c) 64:&nbsp;&nbsp;
+			{% if FMEasy_3_answer_correct is defined %}
+				<input id="FMEasy_3_answer" size=18 value='{{FMEasy_3_answer}}' readonly style="background-color:#DFDFDF;">
+					{% if FMEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not FMEasy_3_answer_correct and FMEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{FMEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="FMEasy_3_answer" size=18 value='{{FMEasy_3_answer}}'>
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">d) 89:&nbsp;&nbsp;
+			{% if FMEasy_4_answer_correct is defined %}
+				<input id="FMEasy_4_answer" size=18 value='{{FMEasy_4_answer}}' readonly style="background-color:#DFDFDF;">
+					{% if FMEasy_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not FMEasy_4_answer_correct and FMEasy_4_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{FMEasy_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="FMEasy_4_answer" size=18 value='{{FMEasy_4_answer}}'>
+			{% endif %}	
+		</div>
+		{% if FMEasy_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:80px;"><button id="retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:80px;"><button id="submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+
+
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#FMEasy_1_answer").change(function()
+	{
+		question_id = "FMEasy_1";
+		question_type = "FactorsMultiples"
+		answer_id = "FMEasy_1_answer";
+		entered_answer = $("#FMEasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#FMEasy_2_answer").change(function()
+			{
+				question_id = "FMEasy_2";
+				question_type = "FactorsMultiples"
+				answer_id = "FMEasy_2_answer";
+				entered_answer = $("#FMEasy_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#FMEasy_3_answer").change(function()
+			{
+				question_id = "FMEasy_3";
+				question_type = "FactorsMultiples"
+				answer_id = "FMEasy_3_answer";
+				entered_answer = $("#FMEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#FMEasy_4_answer").change(function()
+			{
+				question_id = "FMEasy_4";
+				question_type = "FactorsMultiples"
+				answer_id = "FMEasy_4_answer";
+				entered_answer = $("#FMEasy_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#submit").button({label:"Check Answers"});
+	$("#retry").button({label:"Retry"});
+	$("#submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "FactorsMultiples"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "FMEasy_1"+"#%$"+"FMEasy_1_answer"+"#%$"+$("#FMEasy_1_answer").val();
+		answers = answers + "#%$"+"FMEasy_2"+"#%$"+"FMEasy_2_answer"+"#%$"+$("#FMEasy_2_answer").val();
+		answers = answers + "#%$"+"FMEasy_3"+"#%$"+"FMEasy_3_answer"+"#%$"+$("#FMEasy_3_answer").val();
+		answers = answers + "#%$"+"FMEasy_4"+"#%$"+"FMEasy_4_answer"+"#%$"+$("#FMEasy_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "FMEasy_1_answer,FMEasy_2_answer,FMEasy_3_answer,FMEasy_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

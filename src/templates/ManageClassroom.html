@@ -1,0 +1,133 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Manage Your Primary / Elementary Maths Classroom at Home Campus</title>
+<meta name="description" content="Teachers can manage their Home Campus classrooms by creating classrooms and adding students" />
+{% endblock %}
+{% block body %}
+	<link href="/stylesheets/Reports.css" rel="stylesheet" type="text/css"  />
+	<div id="HomeContent" style="min-height:500px;">
+		<br>
+		<div style="width:780px;">
+		<form class="TeacherForm" method="post" action="{{ current_url }}" enctype="multipart/form-data"> 
+		<font style="color:#237caa;">Class Name:</font>
+		<input name="class_name" id="class_name" type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+		<font style="color:#237caa;">Skill Level:</font>
+		<select id ='class_skill' name='class_skill'>
+			<option value='P3'>Primary 3 / Grade 3</option>
+			<option value='P4'>Primary 4 / Grade 4</option>
+			<option value='P5'>Primary 5 / Grade 5</option>
+			<option value='P6'>Primary 6 / Grade 6</option>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;
+		<button id="CreateClassroom" name="CreateClassroom"></button><br><br>
+		<script type="text/javascript">
+			var class_name = new LiveValidation('class_name',{validMessage:" ",wait:10000,onlyOnSubmit:true});
+			class_name.add(Validate.Presence,{failureMessage:"Please enter a name for your class."});
+			//checking for duplicate class name
+	   		{% for c in ClassInfo %}
+	   			class_name.add(Validate.Exclusion,{within:['{{c.class_name}}'],failureMessage:"This class name already exists." });
+			{% endfor %}
+		</script>		
+		</form>
+		</div>
+		{% if ClassInfo|length != 0 %}		   				   				
+			<div style="padding-right:20px;width:760px;display:inline-block;">
+			<form class="TeacherForm" method="post" action="{{ current_url }}" enctype="multipart/form-data"> 
+			{% if ClassInfo|length == 1%}
+				<font style="color:#237caa;"><b>Class Name</b>: {{ClassInfo[0].class_name}}</font>
+				<input type="hidden" name="classname" id="classname" value='{{ClassInfo[0].class_name}}'>
+				<input type="hidden" name="student_skill" id="student_skill" value='{{ClassInfo[0].class_skill}}'>
+			{% else %}
+				<font style="color:#237caa;"><b>Class Name</b>: 
+					<select id="classname" name="classname">
+			   		{% for c in ClassInfo %}
+			          		<option value='{{c.class_name}}'>{{c.class_name}}</option>
+					{% endfor %}
+					</select>
+				</font>
+			{% endif %}
+			<br><br><br>
+			<table class='Reports' style="margin-left:40px;">
+			<tr><th style="width:50px;">S. No.</th><th style="width:150px;">First Name</th><th style="width:150px;">Last Name</th><th style="width:150px;">Username*</th></tr>
+			{% if StudentsInfo|length != 0%}
+				{% for s in StudentsInfo %}
+					{% if s.class_name == display_class %}
+						<tr>
+							<td>{{s.student_rollno}}</td>
+							<td>{{s.student_first_name}}</td>
+							<td>{{s.student_last_name}}</td>
+							<td>{{s.student_username}}</td>
+						</tr>
+					{% endif %}
+				{% endfor %}
+			</table><br>
+			<div style="margin-left:40px;">* Password is same as username unless changed.</div>
+			{% else %}
+				</table><br><br><div style="margin-left:40px;">Use below form to add students.</div>
+			{% endif %}
+			<br><br>
+
+			<table class='AddUser' style="margin-left:40px;">
+			<tr>
+				<td style="width:150px;"><font><b>First Name</b></font></td>
+				<td style="width:150px;"><font><b>Last Name</b></font></td>
+				<td style="width:150px;"></td>			
+			</tr>
+			<tr>
+				<td style="width:150px;"><input name="student_first_name" id="student_first_name" type="text"></td>
+				<td style="width:150px;"><input name="student_last_name" id="student_last_name" type="text"></td>
+				<td style="width:150px;"><button id="AddStudents" name="AddStudents"></button></td>
+			</tr>			
+			<tr>
+				<td style="width:150px;">&nbsp;</td>
+				<td style="width:150px;">&nbsp;</td>
+				<td style="width:150px;">&nbsp;</td>			
+			</tr>
+			</table>
+			<input type="hidden" name="subscription_available" id="subscription_available" value={{TotalSubscription-StudentSubscribed}}>
+			<br><br>
+			<script type="text/javascript">
+				var student_first_name = new LiveValidation('student_first_name',{validMessage:" ",wait:10000,onlyOnSubmit:true});
+				student_first_name.add(Validate.Presence,{failureMessage:"Please enter first name of the student."});
+				var student_last_name = new LiveValidation('student_last_name',{validMessage:" ",wait:10000,onlyOnSubmit:true});
+				student_last_name.add(Validate.Presence,{failureMessage:"Please enter last name of the student."});
+			</script>			
+			</form>
+			</div>
+			
+			<div class="TeacherForm" style="padding-right:20px;display:inline-block;vertical-align:top;">
+				<font style="color:#237caa;"><b>Subscription Status</b></font>
+				<br><br>
+				{% if current_user.authorized %}
+					Total Subscription : {{TotalSubscription}}<br><br>
+					Students Subscribed: {{StudentSubscribed}}<br><br>
+					{% if TotalSubscription - StudentSubscribed == 0%}
+						<button id="SubscribeStudents" name="SubscribeStudents"></button>
+					{% endif %}
+				{% else %}	
+					Each of your students can attempt 7 questions <br>and a worksheet on each topic for free.
+					<br><br>
+					<button id="SubscribeStudents" name="SubscribeStudents"></button>
+				{% endif %}
+
+				<br><br>
+			</div>
+		{% endif %}	   				
+	</div>	
+	<script type="text/javascript">
+		$("#CreateClassroom").button({label:"Create New Classroom"});
+		$("#AddStudents").button({label:"Add Students"});
+		$("#SubscribeStudents").button({label:"Give your students unlimited access"});
+		$("#class_skill").val('{{class_skill}}');
+		$("#classname").val('{{display_class}}');
+		$("#classname").change(function()
+			{
+				window.location.href = '/Teacher/Manage_Classroom?class_name='+$("#classname").val();
+			});
+		$("#SubscribeStudents").click(function() 
+		    {
+				window.location.href = '/Subscribe/Teacher';
+			});	
+	</script>	
+{% block content %}			
+{% endblock %}
+{% endblock %}

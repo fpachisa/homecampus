@@ -1,0 +1,146 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Evaluate each of the following and express your answers correct to 2 decimal places:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">a) </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">16<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">&nbsp;&nbsp; &#8776; &nbsp;&nbsp;		
+				{% if AEROMedium_1_1_answer_correct is defined %}
+					<input id="AEROMedium_1_1_answer" value='{{AEROMedium_1_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if AEROMedium_1_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% else %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AEROMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AEROMedium_1_1_answer" value='{{AEROMedium_1_1_answer}}' style="width:40px;" > &nbsp;
+				{% endif %}
+			</div>	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">b) </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">9<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">11<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">&nbsp;&nbsp; &#8776; &nbsp;&nbsp;		
+				{% if AEROMedium_1_2_answer_correct is defined %}
+					<input id="AEROMedium_1_2_answer" value='{{AEROMedium_1_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if AEROMedium_1_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% else %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AEROMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AEROMedium_1_2_answer" value='{{AEROMedium_1_2_answer}}' style="width:40px;" > &nbsp;
+				{% endif %}
+			</div>	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Evaluate and express your answer to the nearest 10:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">(&minus;14.5 + 0.5) &times; (&minus;35 + 10.5) &nbsp;&nbsp; &#8776; &nbsp;&nbsp;
+			{% if AEROMedium_2_answer_correct is defined %}
+				<input id="AEROMedium_2_answer" value='{{AEROMedium_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &nbsp;
+					{% if AEROMedium_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AEROMedium_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AEROMedium_2_answer" value='{{AEROMedium_2_answer}}' style="width:30px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		
+		{% if AEROMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="AEROMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AEROMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AEROMedium_1_1_answer").change(function()
+	{
+		question_id = "AEROMedium_1";
+		question_type = "RoundingOff"
+		answer_id = "AEROMedium_1_1_answer";
+		entered_answer = $("#AEROMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AEROMedium_1_2_answer").change(function()
+			{
+				question_id = "AEROMedium_1";
+				question_type = "RoundingOff"
+				answer_id = "AEROMedium_1_2_answer";
+				entered_answer = $("#AEROMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AEROMedium_2_answer").change(function()
+			{
+				question_id = "AEROMedium_2";
+				question_type = "RoundingOff"
+				answer_id = "AEROMedium_2_answer";
+				entered_answer = $("#AEROMedium_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AEROMedium_1_Submit").button({label:"Check Answers"});
+	$("#AEROMedium_1_Retry").button({label:"Retry"});
+	$("#AEROMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RoundingOff"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AEROMedium_1"+"#%$"+"AEROMedium_1_1_answer"+"#%$"+$("#AEROMedium_1_1_answer").val();
+		answers = answers + "#%$"+"AEROMedium_1"+"#%$"+"AEROMedium_1_2_answer"+"#%$"+$("#AEROMedium_1_2_answer").val();
+		answers = answers + "#%$"+"AEROMedium_2"+"#%$"+"AEROMedium_2_answer"+"#%$"+$("#AEROMedium_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AEROMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AEROMedium_1_1_answer,AEROMedium_1_2_answer,AEROMedium_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

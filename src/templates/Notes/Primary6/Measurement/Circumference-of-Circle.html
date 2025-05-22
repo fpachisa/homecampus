@@ -1,0 +1,228 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyNumGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;<span style="text-decoration:line-through">{{N}}</span><sup style="color:red">{{S}}</sup></td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyDenGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><sub style="color:red">{{S}}</sub><span style="text-decoration:line-through">{{D}}</span></td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>What is the Circumference of a Circle and How to Measure it? - Home Campus</title>
+<meta name="description" content="How to measure circumference of a circle? Circumference of a circle is caluclated as &pi; x diameter or 2 x &pi; x radius" />
+<meta name="keywords" content='circumference of circle, formula diameter of circle, radius, diameter, Primary 6, "grade 6 math", "Singapore math", "math for kids", elementary math, math tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">What is the Circumference of a Circle and How to Measure it?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(42, 215, 115);" href="/Learn/Calculator-Circumference-of-Circle-Grade-6-Elementary-Math">Circumference Calculator</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color:azure">
+		
+		<div class="concept-set__question">
+			<h4>What is the circumference of a circle?</h4>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				The perimeter of a circle is known as its circumference. <br />
+				
+				<img src="/images/notes/P6_circumference_of_circle_1.png" alt="circumference of circle" title="circumference of circle" /> <br />
+				
+				Trace the outline of a few circular objects of different sizes like a CD, a circular bottle lid, a frisbee, a round bowl and a key ring on paper and cut them along their circumference. Then, do the following:
+				<ol>
+					<li>Measure the <a href="/Learn/Primary-Grade-6/Measurement/Radius-and-Diameter-of-Circle">diameter of each circle</a> by folding in half.</li>
+					<li>Measure the circumference of each circle using a string.</li>
+					<li>Record both readings in a table as below.</li>
+				</ol>
+				
+				<img src="/images/notes/P6_circumference_of_circle_1b.png" alt="circumference of circle" title="circumference of circle" /> <br />
+				
+				As you will notice, the circumference of each object is about 3 times its diameter. <br />
+				
+				More precisely, the circumference of a circle is <b>{{ frGen(22,7) }}</b> times its diameter. <br />
+				
+				The value {{ frGen(22,7) }} is represented by <b>&pi;</b> and read as <b>pi</b>. <br />
+				
+				The approximate value of &pi; is <b>3.14</b>. 
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 160, 214);" href="/Free-Math-Worksheets/Circumference-of-Cirlce">FREE Circumference Worksheets</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<!-- Concept Explanation 2-->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: azure;">
+		
+		<div class="concept-set__question">
+			<h4>What is the formula to calculate circumference of a circle?</h4>
+		</div>
+
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Circumference  &nbsp;=&nbsp;  &pi; &times; Diameter <br />
+				Or,<br />
+				Circumference &nbsp;=&nbsp; &pi; &nbsp;&times;&nbsp; 2 &times; Radius &nbsp;=&nbsp; 2 &nbsp;&times;&nbsp; &pi; &nbsp;&times;&nbsp; Radius<br />
+			</div>
+		</div>
+	</div>
+</div><!-- End of concept -->
+<div style="text-align: center;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Circumference">Practice Unlimited Circumference Questions</a></div>
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Find the circumference of the circles below. </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				a) <img src="/images/notes/P6_circumference_of_circle_problem_1a.png" title="find circumference" alt="find circumference" /><br />
+				Diameter &nbsp;=&nbsp; 8 cm <br />
+				Circumference &nbsp;=&nbsp; &pi; &nbsp;&times;&nbsp; 8 cm &nbsp;=&nbsp; 3.14 &nbsp;&times;&nbsp; 8 cm &nbsp;=&nbsp; <b>25.12 cm</b>
+			</div>
+			<div class="col-10 col-off-1">
+				b) <img src="/images/notes/P6_circumference_of_circle_problem_1b.png" title="find circumference" alt="find circumference" />
+			</div>
+			<div class="col-4 col-off-1">
+				Radius &nbsp;=&nbsp; 21 cm <br /><br />
+				Circumference <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; &pi; &nbsp;&times;&nbsp; 21 cm <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; {{ frSimplifyDenGen(22,7,1) }} &nbsp;&times;&nbsp; <del>21</del><sup><font color=red>3</font></sup> cm <br />
+				=&nbsp; <b>132 cm</b>
+			</div>
+			<div class="col-3 hint-box">
+				When calculation is easy, we use {{ frGen(22,7) }} instead of 3.14 as the value of &pi;
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Circumference">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. Find the perimeters of the following figures. <br />
+				Round off your answers to 2 decimal places. </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				a) &nbsp; A semicircle of diameter 17.6 cm.<br />
+				<img src="/images/notes/P6_circumference_of_circle_problem_2a.png" title="find circumference" alt="find circumference" /><br />
+				Perimeter of a semicircle <br />
+				=&nbsp; Half the circumference of the circle &nbsp;+&nbsp; diameter <br />
+				=&nbsp; ( {{ frGen(1,2) }} &nbsp;&times;&nbsp; &pi; &nbsp;&times;&nbsp; 17.6) &nbsp;+&nbsp; 17.6 <br />
+				=&nbsp; ( {{ frGen(1,2) }} &nbsp;&times;&nbsp; 3.14 &nbsp;&times;&nbsp; 17.6) &nbsp;+&nbsp; 17.6 <br />
+				=&nbsp; 27.632 &nbsp;+&nbsp; 17.6 <br />
+				=&nbsp; 45.232 <br />
+				&asymp;&nbsp; 45.23 cm 
+			</div>
+			<div class="col-10 col-off-1">
+				b) &nbsp; A quadrant of radius 5 cm.<br />
+				<img src="/images/notes/P6_circumference_of_circle_problem_2b.png" title="find circumference" alt="find circumference" /><br />
+				Perimeter of a quadrant <br />
+				=&nbsp; A quarter of the circumference of circle &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; radius) <br />
+				=&nbsp; ( {{ frSimplifyDenGen(1,4,2) }} &nbsp;&times;&nbsp; <del>2</del><sup><font color=red>1</font></sup> &nbsp;&times;&nbsp; 3.14 &nbsp;&times;&nbsp; 5) &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; 5) <br />
+				=&nbsp; 7.85 &nbsp;+&nbsp; 10 <br />
+				=&nbsp; 17.85 cm 
+			</div>
+			<div class="col-10 col-off-1">
+				c) &nbsp; A three-quarter circle of radius 84 cm.<br />
+				<img src="/images/notes/P6_circumference_of_circle_problem_2c.png" title="find circumference" alt="find circumference" /><br />
+				Perimeter of {{ frGen(3,4) }} circle <br />
+				=&nbsp; {{ frGen(3,4) }} of the circumference of the circle &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; radius) <br />
+				=&nbsp; ( {{ frSimplifyDenGen(3,4,2) }} &nbsp;&times;&nbsp; <del>2</del><sup><font color=red>1</font></sup> &nbsp;&times;&nbsp; {{ frSimplifyDenGen(22,7,1) }} &nbsp;&times;&nbsp; <del>84</del><sup><font color=red>12</font></sup>) &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; 84) <br />
+				=&nbsp; ( {{ frSimplifyDenGen(3,2,1) }} &nbsp;&times;&nbsp; 1 &nbsp;&times;&nbsp; {{ frSimplifyNumGen(22,1,11) }} &nbsp;&times;&nbsp; 12) &nbsp;+&nbsp; 168 <br />
+				=&nbsp; 396 &nbsp;+&nbsp; 168 <br />
+				=&nbsp; 564 cm 
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Circumference">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Can a pizza of radius 12 cm fit into a plate that has a circumference of 100 cm? </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Circumference of pizza &nbsp;=&nbsp; 2 &nbsp;&times;&nbsp; 3.14 &nbsp;&times;&nbsp; 12 &nbsp;=&nbsp; 75.36 cm <br /><br />
+				
+				75.36 cm &nbsp;&lt;&nbsp; 100 cm <br /><br />
+				
+				Yes, the pizza can fit into the plate.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Circumference">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. The spoke of a wheel is 35 cm long. <br />
+			How far does the wheel travel in 1 rotation? <br />
+			Give your answer in metres. </h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_circumference_of_circle_problem_4.png" title="find circumference" alt="find circumference" /><br />
+				
+				Spoke of the wheel &nbsp;=&nbsp; Radius of the wheel <br /><br />
+				
+				1 rotation of the wheel	<br />
+				=&nbsp; Circumference of the wheel <br />
+				=&nbsp; 2 &nbsp;&times;&nbsp; {{ frSimplifyDenGen(22,7,1) }} &nbsp;&times;&nbsp; <del>35<sup><font color=red>5</font></sup></del> cm <br />
+				=&nbsp; 220 cm <br />
+				=&nbsp; 2.2 m <br /><br />
+				
+				The wheel travels <b>2.2 m</b> in 1 rotation.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Measurement_Circle_Circumference">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the circumference of a circle?","acceptedAnswer":{"@type":"Answer","text":"The perimeter of a circle is known as its circumference. "}},{"@type":"Question","name":"What is the formula to calculate circumference of a circle?","acceptedAnswer":{"@type":"Answer","text":"Circumference  =  π × Diameter \nCircumference  =  π  ×  2 × Radius  =  2  ×  π  ×  Radius"}}]}</script>
+
+{% endblock %}

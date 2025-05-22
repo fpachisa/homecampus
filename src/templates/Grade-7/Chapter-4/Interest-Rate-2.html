@@ -1,0 +1,24 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+	<div class="grade7PageMargin">
+		<div style="margin-top:20px;"><strong>In general,</strong></div>
+		<div class="grade7BlueSideBox" style="margin-top:30px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">Simple Interest = </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">Principal &times; Interest Rate &times; Time<br>________________________<br></p>
+				<p style="line-height:20%;text-align:center;">100<br></p>
+			</div>
+			<br>
+			<p>where,</p> 
+			<p>Principal = Amount borrowed/deposited</p>
+			<p>Interest Rate = Rate in percentage</p>
+			<p>Time = Number of years for which money is borrowed or deposited</p>							
+		</div>
+	</div>
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+

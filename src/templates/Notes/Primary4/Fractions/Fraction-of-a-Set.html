@@ -1,0 +1,213 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Fraction of a Set - Home Campus</title>
+<meta name="keywords" content="Perimeter, Square, Rectangle, Square Centimetres, Square Metres, word problems, problem sums, P3 maths, 3rd grade math, Area in Square Centimetres worksheets, free math worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, P3 math tuition, math tuition at home">
+<meta name="description" content="Perimeter of Squares and Rectangles" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Fraction of a Set</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>1. There are 7 fowls.<br />
+				4 out of the 7 fowls are chickens.<br />
+				What fraction of the fowls are chickens?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" >		
+				<img src="/images/notes/P4_Understanding_Fraction_of_a_Set_1.png" alt="square metre or square meter" /><br />
+				{{ frGen(4,7) }} of the fowls are chickens.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>2. There are 21 fowls.<br />
+				{{ frGen(4,7) }} of the fowls are chickens.<br />
+				How many chickens are there?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" >
+				Since the denominator is 7, divide the fowls into 7 equal groups.<br /><br />		
+				<img src="/images/notes/P4_Understanding_Fraction_of_a_Set_2.png" alt="square metre or square meter" /><br />
+				{{ frGen(4,7) }} of 21 = 12<br />
+				There are <b>12</b> chickens.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>3. What fraction of the set in each of the following is shaded?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" style="margin-bottom:40px;">
+				<b>a.</b> &nbsp;&nbsp; <img style="display:inline;" src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_1a.png" alt="square metre or square meter" /><br /><br />
+				The fraction of the set that is shaded &nbsp;=&nbsp; {{ frGen(2,5) }}
+			</div>
+			<div class="col-10 col-off-1" style="margin-bottom:40px;">
+				<b>b.</b> &nbsp;&nbsp; <img style="display:inline;" src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_1b.png" alt="square metre or square meter" /><br /><br />
+				The fraction of the set that is shaded &nbsp;=&nbsp; {{ frGen(2,3) }}
+			</div>
+			<div class="col-10 col-off-1" style="margin-bottom:40px;">
+				<b>c.</b> &nbsp;&nbsp; <img style="display:inline;" src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_1c.png" alt="square metre or square meter" /><br /><br />
+				The fraction of the set that is shaded &nbsp;=&nbsp; {{ frGen(2,4) }} &nbsp;=&nbsp;  {{frGen(1,2) }} 
+			</div>
+			<div class="col-10 col-off-1" style="margin-bottom:40px;">
+				<b>d.</b> &nbsp;&nbsp; <img style="display:inline;" src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_1d.png" alt="square metre or square meter" /><br /><br />
+				The fraction of the set that is shaded &nbsp;=&nbsp; {{ frGen(6,10) }} &nbsp;=&nbsp; {{ frGen(3,5) }}
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>4. Find the value of each of the following:</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" style="margin-bottom:20px;">
+				<b>a.</b> &nbsp;&nbsp; <b>{{ frGen(5,6) }} of 18</b><br /><br />
+				<div class="col-5">
+					<img style="display:inline;" src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_2.png" alt="square metre or square meter" />
+				</div>
+				<div class="col-4 hint-box" style="margin:10px;">
+					Divide 18 into 6 equal groups.<br />
+					Five groups are {{ frGen(5,6) }} of 18.
+				</div>
+				<div class="col-10">
+					&nbsp;&nbsp;&nbsp; {{ frGen(5,6) }} of 18<br />
+					=&nbsp; {{ frGen(5,6) }} &nbsp;&times;&nbsp; 18<br />
+					=&nbsp; {{ frGen("5 x 18",6) }}<br />
+					=&nbsp; {{ frGen(90,6) }}<br />
+					=&nbsp;&nbsp; 15
+				</div>
+			</div>
+			<div class="col-10 col-off-1" style="margin-bottom:10px;">
+				<b>b.</b> &nbsp;&nbsp; <b>{{ frGen(1,5) }} of 20</b><br />
+				<div class="col-10">
+					&nbsp;&nbsp;&nbsp; {{ frGen(1,5) }} of 20<br />
+					=&nbsp; {{ frGen(1,5) }} &nbsp;&times;&nbsp; 20<br />
+					=&nbsp; {{ frGen("1 x 5",20) }}<br />
+					=&nbsp; {{ frGen(5,20) }}<br />
+					=&nbsp;&nbsp;&nbsp;&nbsp; 4
+				</div>
+			</div>
+			<div class="col-10 col-off-1" style="margin-bottom:10px;">
+				<b>c.</b> &nbsp;&nbsp; <b>{{ frGen(1,4) }} of 7</b><br />
+				<div class="col-10">
+					&nbsp;&nbsp;&nbsp; {{ frGen(1,4) }} of 7<br />
+					=&nbsp; {{ frGen(1,4) }} &nbsp;&times;&nbsp; 7<br />
+					=&nbsp; {{ frGen("1 x 7",4) }}<br />
+					=&nbsp;&nbsp;&nbsp; {{ frGen(7,4) }}<br />
+					=&nbsp;&nbsp;&nbsp;&nbsp; 7 &divide; 4<br />
+					=&nbsp;&nbsp;&nbsp;&nbsp; 1.75
+				</div>
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>5. There were 10 children in the playground. 4 of them were playing hopscotch. What fraction of the children were not playing hopscotch? Give your answer in its simplest form.</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" >		
+				<img src="/images/notes/P4_Fraction_of_a_Set_Problem_Sum_3.png" alt="square metre or square meter" /><br />
+				6 out of 10 children were not playing hopscotch.<br />
+				{{ frGen(6,10) }} &nbsp;=&nbsp; {{ frGen(3,5) }}<br />
+				{{ frGen(3,5) }} of the children were not playing hopscotch.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Simplifying">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 5 -->
+
+{% endblock %}

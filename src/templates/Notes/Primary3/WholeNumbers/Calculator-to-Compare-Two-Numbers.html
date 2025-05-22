@@ -1,0 +1,115 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculator - Compare Two Numbers - Home Campus</title>
+<meta name="keywords" content="Find if a number is greater than, less than or equal to the other number">
+<meta name="description" content="Find if a number is greater than, less than or equal to the other number">
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Math-Calculators"><u>More Math Calculators</u></a></div>
+<h2 class="learn-heading">Number Comparison Calculator</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Primary-Grade-3/Whole-Numbers/Comparing-Ordering">Learn More</a></div>
+
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(210, 111, 215);" href="/Free-Math-Worksheets/Comparing-Ordering-Numbers-Worksheets">Download Free Worksheets</a></div>
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Which number is greater?</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter Number 1&nbsp;=&nbsp; <input id="number1" type="number" size=4><br><br>
+				Enter Number 2&nbsp;=&nbsp; <input id="number2" type="number" size=4><br><br>
+				<button class="btn-quiz" id="FindGreater" onclick="FindGreater()">Which Number is Greater?</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="greaterNumberDiv"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Calculator 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Which number is smaller?</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter Number 1&nbsp;=&nbsp; <input id="number3" type="number" size=4><br><br>
+				Enter Number 2&nbsp;=&nbsp; <input id="number4" type="number" size=4><br><br>
+				<button class="btn-quiz" id="FindSmaller" onclick="FindSmaller()">Which Number is Smaller?</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="smallerNumberDiv"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 2 -->
+
+
+<!-- Calculator 3 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Are the given two numbers equal?</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter Number 1&nbsp;=&nbsp; <input id="number5" type="number" size=4><br><br>
+				Enter Number 2&nbsp;=&nbsp; <input id="number6" type="number" size=4><br><br>
+				<button class="btn-quiz" id="FindEqual" onclick="FindEqual()">Are the Numbers Equal?</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="equalNumberDiv"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 3 -->
+
+<script>
+
+function FindGreater() {
+	var number1 = document.getElementById("number1").value;
+	var number2 = document.getElementById("number2").value;
+	
+	if (number1>number2){
+		document.getElementById("greaterNumberDiv").innerHTML = number1 + " is greater than "+ number2;
+	}
+	else if(number1<number2){
+		document.getElementById("greaterNumberDiv").innerHTML = number2 + " is greater than "+ number1;
+	}
+	else if(number1==number2){
+		document.getElementById("greaterNumberDiv").innerHTML = number2 + " is equal to "+ number1;
+	}
+}
+
+
+function FindSmaller() {
+	var number3 = document.getElementById("number3").value;
+	var number4 = document.getElementById("number4").value;
+	
+	if (number3<number4){
+		document.getElementById("smallerNumberDiv").innerHTML = number3 + " is smaller than "+ number4;
+	}
+	else if(number3>number4){
+		document.getElementById("smallerNumberDiv").innerHTML = number4 + " is smaller than "+ number3;
+	}
+	else if(number3==number4){
+		document.getElementById("smallerNumberDiv").innerHTML = number3 + " is equal to "+ number4;
+	}
+}
+
+
+
+function FindEqual() {
+	var number5 = document.getElementById("number5").value;
+	var number6 = document.getElementById("number6").value;
+	
+	if (number5==number6){
+		document.getElementById("equalNumberDiv").innerHTML = "YES, both numbers are equal!!";
+	}
+	else if(number5>number6){
+		document.getElementById("equalNumberDiv").innerHTML = number5 + " is greater than "+ number6;
+	}
+	else if(number5<number6){
+		document.getElementById("equalNumberDiv").innerHTML = number5 + " is smaller than "+ number6;
+	}
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which number is greater: 999 or 9999?","acceptedAnswer":{"@type":"Answer","text":"9999"}},{"@type":"Question","name":"Which number is smaller: 666 or 696?","acceptedAnswer":{"@type":"Answer","text":"666"}}]}</script>
+
+{% endblock %}

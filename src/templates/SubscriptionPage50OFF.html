@@ -1,0 +1,167 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+
+<div class="subscription-page">
+	{% if child_info | length == 0 %}
+	<div class="child-alert">
+		<div class="child-alert__container">
+			<h3>Alert!</h3>
+			<div>It seems that you haven't created any child account yet. Please create your child account first.</div>
+			<a class="btn btn-primary" href="/MyProfile">Add Child</a>
+		</div>
+	</div>
+	{% else %}	
+	
+	<div class="child-details">	
+		{% if child_info | length == 1%}
+			<form class="child-details__form" onsubmit="return false">
+				<div class="form-group">
+					<label class="control-label" for="username">Get subscription for</label>
+					<select class="form-control" name="username" id="username">
+						<option value="{{child_info[0][1]}}">{{child_info[0][0]}}</option>
+					</select>
+				</div>
+			</form>
+		{% else %}
+			<form class="child-details__form" onsubmit="return false">
+				<div class="form-group">
+					<label class="control-label" for="username">Get subscription for</label>
+					<select class="form-control" name="username" id="username">
+						{% for child in child_info %}
+							<option value='{{child[1]}}'>{{child[0]}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</form>
+		{% endif %}
+	</div>
+
+	<!-- Benefits -->
+	<div class="benefits">
+			<h2>1 million+ parents worldwide trust HomeCampus!</h2><br><br>
+	</div>	
+	<div class="plans">	
+		<!-- Plan 1 commented -->
+		<div class="plan">
+			<div class="plan__container free">
+			<br><br><br><br><br><br>
+			<strong style="color:red;">LIMTIED TIME 50% OFF ON ANNUAL PLAN</strong> 
+			</div>				
+		</div>
+		<!-- Plan 2 -->
+		<div class="plan">
+			<div class="plan__container annual">
+				<div class="plan__title"><h3>Annual Plan</h3></div>
+				<div class="plan__pricing"><span style="font-weight:normal; margin-right:10px;"><del><sup>$9.44</sup></del></span><span style="color:red;"><i class="fa fa-dollar"></i>4<sup>.72</sup></span><span style="font-size:12px;color:#555;">per month</span></div>
+				
+				<ul class="plan__features">
+					<li><i class="fa fa-check"></i> <strong>FREE</strong> access to all video tutorials and notes</li>
+					<li><i class="fa fa-check"></i> Practice <strong>UNLIMITED</strong> Questions per Topic</li>
+					<li><i class="fa fa-check"></i> Solve <strong>UNLIMITED</strong> Worksheets per Topic</li>
+					<li><i class="fa fa-check"></i> View detailed <strong>REPORTS</strong></li>
+				</ul>
+				
+				<a class="btn-primary" style="display:block;width:50%;margin:auto;" href="javascript:startAnnualSubscription()" >Subscribe Now!</a>
+			</div>		   
+		</div>
+
+		<!-- Plan 3 -->
+		<div class="plan">
+			<div class="plan__container monthly">
+				<div class="plan__title"><h3>Monthly Plan</h3></div>
+				<div class="plan__pricing"><i class="fa fa-dollar"></i>18<sup>.88</sup><span style="font-size:12px;color:#555;">per month</span></div>
+				
+				<ul class="plan__features">
+					<li><i class="fa fa-check"></i> <strong>FREE</strong> access to all video tutorials and notes</li>
+					<li><i class="fa fa-check"></i> Practice <strong>UNLIMITED</strong> Questions per Topic</li>
+					<li><i class="fa fa-check"></i> Solve <strong>UNLIMITED</strong> Worksheets per Topic</li>
+					<li><i class="fa fa-check"></i> View detailed <strong>REPORTS</strong></li>
+				</ul>
+				
+				<a class="btn-primary" style="display:block;width:50%;margin:auto;" href="javascript:startMonthlySubscription()" >Subscribe Now!</a>
+			</div>		   
+		</div>		
+	
+	<!-- END OF plans -->
+	</div>
+	
+	{% endif %}
+</div>
+
+<!-- Paypal NVP API -->
+<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+
+<script type="text/javascript">
+var dgFlow = new PAYPAL.apps.DGFlow({trigger:null,expType:"light"});
+
+// annualSubscription Handler
+function startAnnualSubscription() {
+	//period = $('input:radio[name=subscription_period]:checked').val();
+	var amount = parseFloat("56.64");
+	
+	if(isiApple()) {
+		var URLText = "/Subscribe/Start"
+		var data = {total_amount:amount, username:$("#username").val(), subscription_period:"annual"};
+		
+		$.ajax({
+			url: URLText,
+			data: data,
+			success: function(responseText) { location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token='+responseText; }
+		});
+	} else {
+		var URLText = "/Subscribe/Start"
+		var data = {total_amount:amount, username:$("#username").val(), subscription_period:"annual"};
+		$.ajax({
+			url: URLText,
+			data: data,
+			success: function(responseText) { dgFlow.startFlow('https://www.paypal.com/incontext?token='+responseText); }
+   	    });       			
+   	}
+}        	
+        	
+// monthly
+function startMonthlySubscription() {
+	//period = $('input:radio[name=subscription_period]:checked').val();
+	var amount = parseFloat("18.88");
+	
+	if(isiApple()) {
+		var URLText = "/Subscribe/Start"
+		var data = {total_amount:amount, username:$("#username").val(), subscription_period:"monthly"};
+		
+		$.ajax({
+			url: URLText,
+			data: data,
+			success: function(responseText) { location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&useraction=commit&token='+responseText; }
+		});
+	} else {
+		var URLText = "/Subscribe/Start"
+		var data = {total_amount:amount, username:$("#username").val(), subscription_period:"monthly"};
+		
+		$.ajax({
+			url: URLText,
+			data: data,
+			success: function(responseText) { dgFlow.startFlow('https://www.paypal.com/incontext?token='+responseText); }
+		});       			
+	}
+}        	
+
+// check for mobile device
+function isiApple() {
+	var ua = navigator.userAgent.toLowerCase();
+	
+	return (
+		//Detect iPhone
+		(navigator.platform.indexOf("iPhone") != -1) ||
+		
+		//Detect iPad
+		(navigator.platform.indexOf("iPad") != -1) ||
+		
+		//Detect iPod
+		(navigator.platform.indexOf("iPod") != -1) ||
+		
+		//Detect Android
+		(ua.indexOf("android") > -1)
+	);
+}       	        	
+</script>
+{% endblock %}

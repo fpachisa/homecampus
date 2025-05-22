@@ -1,0 +1,194 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Ratio and Fraction - Advanced Word Problems - Home Campus</title>
+<meta name="description" content="Ratio and Fraction" />
+<meta name="keywords" content='ratio and fraction, ratio to fraction, fraction to ratio, how to convert ratio to fraction, how to convert fraction to ratio, how to change ratio to fraction, how to change fraction to ratio, middle school math, sixth grade ratio, sixth grade fraction, 6th class maths, primary 6 maths, Singapore primary maths, online math help, USA math syllabus'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Ratio and Fraction</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Donald has 125 chickens, 50 turkeys and 25 ducks on his farm. <br />
+				a) &nbsp; What is the relation between the number of ducks and the number of turkeys? <br />
+				b) &nbsp; What fraction of the birds on the farm are chickens?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				a) <img src="/images/notes/P6_ratio_fraction_explanation_2.png" alt="ratio and fraction"/>
+			</div>
+			<div class="col-7 col-off-1">
+					In terms of ratio, we say, <br />
+						The ratio of the number of ducks to the number of turkeys is <b>1 : 2</b>.<br /><br />
+					
+					In terms of fraction, we say,<br />
+						The number of ducks is <b>{{ frGen (1,2) }}</b> of the number of turkeys.<br /><br />
+						
+					Both the things above tell us that, <br />
+						For every duck on the farm, there are 2 turkeys. 
+			</div>
+			<div class="col-2 hint-box">
+				<img src="/images/notes/P6_ratio_simplification_1.png" alt="ratio and fraction"/>
+			</div>
+
+			<div class="col-10 col-off-1">
+				b) <img src="/images/notes/P6_ratio_fraction_explanation_3.png" alt="ratio and fraction"/>
+			</div>
+			<div class="col-9 col-off-1">
+				125 &nbsp;+&nbsp; 50 &nbsp;+&nbsp; 25 &nbsp;=&nbsp; 200<br />
+				There are a total of 200 birds on the farm.<br /><br />
+				
+				125 : 200 &nbsp;=&nbsp; 5 : 8 <br />
+				The ratio of the number of chickens to the number of birds on the farm is <b>5 : 8</b>. <br /><br />
+				
+				This means, there are <b>5</b> chickens out of every <b>8</b> birds on the farm. <br /><br />
+  	
+				In terms of fraction, we say, <b>{{ frGen (5,8) }}</b> of the birds on the farm are chickens.
+			</div>
+			<div class="col-2 hint-box">
+				<img src="/images/notes/P6_ratio_simplification_2.png" alt="ratio and fraction"/>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. A certain departmental store rewards shoppers with points for shopping. <br />
+				Alyssa has &nbsp;&nbsp;&nbsp; {{ mixNumGen(1,2,3) }} as many points as Brendan.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_ratio_fraction_word_problem_1a.png" alt="ratio and fraction"/>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>a) &nbsp; What is the ratio of Alyssa's points to Brendan's points?</b><br />
+				<div class="col-10 col-off-1">
+					Alyssa's points : Brendan's points &nbsp;=&nbsp; 5 : 3
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>b) &nbsp; What is the ratio of Brendan's points to Alyssa's points?</b><br />
+				<div class="col-10 col-off-1">
+					Brendan's points : Alyssa's points &nbsp;=&nbsp; 3 : 5
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>c) &nbsp; What is the ratio of Alyssa's points to their total points?</b><br />
+				<div class="col-10 col-off-1">
+					Total points &nbsp;=&nbsp; 5 units &nbsp;+&nbsp; 3 units &nbsp;=&nbsp; 8 units <br />
+					Alyssa's points : Total points &nbsp;=&nbsp; 5 : 8
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>d) &nbsp; Express Brendan's points as a fraction of their total points.</b><br />
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/P6_ratio_fraction_word_problem_1d.png" alt="ratio and fraction"/><br />
+					Brendan's points are {{ frGen(3,8) }} of their total points.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>e) &nbsp; Express Brendan's points as a fraction of Alyssa's points.</b><br />
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/P6_ratio_fraction_word_problem_1e.png" alt="ratio and fraction"/><br />
+					Brendan's points are {{ frGen(3,5) }} of Alyssa's points.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>f) &nbsp; If they have a total of 72 points, how many points has Alyssa?</b><br />
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/P6_ratio_fraction_word_problem_1f.png" alt="ratio and fraction"/><br />
+					8 units &nbsp;=&nbsp; 72 <br />
+					1 unit &nbsp;&nbsp;=&nbsp; 9 <br />
+					5 units &nbsp;=&nbsp; 45 <br /><br />
+					
+					Alyssa has 45 points.
+				</div>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Jason has &nbsp;&nbsp;&nbsp; {{ mixNumGen(1,1,2) }} litres of lemonade and &nbsp;&nbsp;&nbsp; {{ frGen(3,4) }} litre of cider.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_ratio_fraction_word_problem_2.png" alt="ratio and fraction"/>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>a) &nbsp; How many times as much lemonade as cider does he have?</b><br />
+				<div class="col-10 col-off-1">
+					Quantity of lemonade : Quantity of cider <br />
+					=&nbsp; 6 : 3 <br />
+					=&nbsp; 2 : 1 <br /><br />
+					
+					He has 2 times as much lemonade as cider.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>b) &nbsp; Express the quantity of cider as a fraction of the quantity of lemonade.</b><br />
+				<div class="col-10 col-off-1">
+					Quantity of cider : Quantity of lemonade <br />
+					=&nbsp; 3 : 6 <br />
+					=&nbsp; 1 : 2 <br /><br />
+					
+					He has {{ frGen(1,2) }} as much cider as lemonade.
+				</div>
+			</div>
+			<div class="col-10 col-off-1">
+				<b>c) &nbsp; What is the ratio of the quantity of lemonade to the total quantity of beverages that Jason has?</b><br />
+				<div class="col-10 col-off-1">
+					Total &nbsp;=&nbsp; 6 units &nbsp;+&nbsp; 3 units &nbsp;=&nbsp; 9 units <br />
+					Quantity of lemonade : Total quantity of beverages <br />
+					=&nbsp; 6 : 9 <br />
+					=&nbsp; 2 : 3 <br /><br />
+					
+					The ratio of the quantity of lemonade to the total quantity of beverages that Jason has is 2 : 3.
+				</div>
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Ratio_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+{% endblock %}

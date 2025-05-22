@@ -1,0 +1,29 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+
+<div id="HomeContent" style="background-image:url(/images/site/HomeContent_1.png)"><!-- InstanceBeginEditable name="maincontent" -->
+	<div class="content">
+	    <h1>Tell a Friend about HomeCampus!!</h1>
+		<br>
+	    <form method="post" action="{{ current_url }}" enctype="multipart/form-data">
+	        <table class="RegistrationTable">
+			        <tr><td >{{ form.YourName.label }}:</td><td>{{ form.YourName() }}</td></tr>
+			        <tr><td >{{ form.FriendsName.label }}:</td><td>{{ form.FriendsName() }}</td></tr>
+			        <tr><td >{{ form.email.label }}:</td><td>{{ form.email() }}</td></tr>
+			        <tr><td colspan=2><br><button id="Submit" ></button></td></tr>             
+	        </table>
+            <script type="text/javascript"> 
+	            var email = new LiveValidation('email',{validMessage:" "});
+	            email.add(Validate.Presence,{failureMessage:"Please enter an email address."});
+	            email.add(Validate.Email,{failureMessage:"Please enter a valid email address."});
+	            var YourName = new LiveValidation('YourName',{validMessage:" "});
+	            YourName.add(Validate.Presence,{failureMessage:"Please enter your name."});                   		            
+	            var FriendsName = new LiveValidation('FriendsName',{validMessage:" "});
+	            FriendsName.add(Validate.Presence,{failureMessage:"Please enter your friend's name."}); 
+	            
+				$("#Submit").button({label:"Tell a Friend"});
+			</script> 
+	    </form>
+	</div>
+</div>
+{% endblock %}

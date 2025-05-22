@@ -1,0 +1,107 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.2 Addition and Subtraction of Integers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.2 Addition and Subtraction of Integers</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				It is a common observation these days that global warming has led to random temperature fluctuations. 
+				<div style="margin-top:10px;">
+				<i>On a certain day, a temperature of &minus;15&deg;C was recorded at 3.00 AM in a city. It rose by 10&deg;C at 10.00 AM. The heat reached its peak at 2.00 PM with the temperature reading up by 15&deg;C. Unexpected rainfall in the evening led to a fall of temperature by 26&deg;C. The same temperature continued till end of the day.</i>
+				</div> 				
+			</div>
+		</div>
+		<div style="margin-left:30px;margin-top:10px;">a) Temperature of the city at 10.00 AM was:
+			{% if RNASAdvanced_3_1_answer_correct is defined %}
+				<input id="RNASAdvanced_3_1_answer" value='{{RNASAdvanced_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNASAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASAdvanced_3_1_answer" value='{{RNASAdvanced_3_1_answer}}' style="width:30px;" > &deg;C&nbsp;
+			{% endif %}
+		</div>
+		<div style="margin-left:30px;margin-top:20px;">b) Minimum temperature recoded that day was:
+			<div style="margin-left:40px;margin-top:10px;">
+			{% if RNASAdvanced_3_2_answer_correct is defined %}
+				<input id="RNASAdvanced_3_2_answer" value='{{RNASAdvanced_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &deg;C&nbsp;
+					{% if RNASAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNASAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNASAdvanced_3_2_answer" value='{{RNASAdvanced_3_2_answer}}' style="width:30px;" > &deg;C&nbsp;
+			{% endif %}
+			</div>
+		</div>		
+		{% if RNASAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RNASAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RNASAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNASAdvanced_3_1_answer").change(function()
+	{
+		question_id = "RNASAdvanced_3";
+		question_type = "AdditionSubtractionIntegers"
+		answer_id = "RNASAdvanced_3_1_answer";
+		entered_answer = $("#RNASAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNASAdvanced_3_2_answer").change(function()
+			{
+				question_id = "RNASAdvanced_3";
+				question_type = "AdditionSubtractionIntegers"
+				answer_id = "RNASAdvanced_3_2_answer";
+				entered_answer = $("#RNASAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNASAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#RNASAdvanced_3_Retry").button({label:"Retry"});
+	$("#RNASAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AdditionSubtractionIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNASAdvanced_3"+"#%$"+"RNASAdvanced_3_1_answer"+"#%$"+$("#RNASAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"RNASAdvanced_3"+"#%$"+"RNASAdvanced_3_2_answer"+"#%$"+$("#RNASAdvanced_3_2_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNASAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNASAdvanced_3_1_answer,RNASAdvanced_3_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

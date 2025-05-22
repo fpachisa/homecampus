@@ -1,0 +1,155 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>How to Subtract Fractions? - Home Campus</title>
+<meta name="keywords" content="Subtract Fractions Equivalent LCM GCD">
+<meta name="description" content="How to Subtract Fraction?" />
+{% endblock %}
+{% block content %}
+
+	<!-- InstanceBeginEditable name="maincontent" -->
+	
+	<h2 class="learn-heading">How to Subtract Fractions?</h2>
+	
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Subtracting-Fractions">Practice Unlimited Questions</a></div>
+	<!-- Concept 1 Explanation -->
+	<div class="concept-set">
+		<div class="concept-set__container" style="background-color: rgb(191, 199, 255);">
+			
+			<div class="concept-set__question">
+				<h4>How to subtract fractions?</h4>
+			</div>
+						
+			<div class="concept-set__answer">					
+				<div class="col-11 col-off-1">
+					<strong>Step 1:</strong> Express the fractions using a common denominator. For this you need to find the lowest common denominator.<br>
+					<strong>Step 2:</strong> Create equivalent fractions by making the denominator common.<br>
+					<strong>Step 3:</strong> Subtract the numerators and leave the denominator as is.<br>
+					<strong>Step 4:</strong> <a href="/Learn/Primary-Grade-3/Simplifying-Fractions">Simplify fractions</a> if required.<br><br>
+					For better understanding follow the <a href="#Ques-3">word problem below.</a> 
+				</div>
+			</div>			
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(54, 215, 76);" href="/Learn/Subtract-Fractions-Calculator">Subtract Fractions Calculator</a></div>
+		</div>
+	</div><!-- End of concept 1 -->
+
+	<!-- QUES 1 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>
+				1. Subtract {{ frGen(2,5) }} from {{ frGen(3,5) }}.
+				</h4>
+			</div>
+
+			<div class="learn-set__answer">		
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_Subtraction_1.png" />
+				</div>
+				<div class="col-10 col-off-1" >
+					&nbsp;&nbsp; {{ frGen(3,5) }} &minus; {{ frGen(2,5) }} <br />
+					= {{ frGen("3 - 2",5) }} <br />
+					= {{ frGen(1,5) }} 
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/how-to-subtract-fractions-singapore-math-free-math-worksheets">Download Free Worksheets</a></div>
+		</div>
+	</div><!-- End of answer 1 -->
+
+
+	<!-- QUES 2 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4>
+				2. Mrs. Chopra had a cake.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp; She gave {{ frGen(1,2) }} of the cake to Nadia and {{ frGen(2,5) }} of the cake to Nancy.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp; Who received more? How much more?
+				</h4>
+			</div>
+			
+			<!-- Uncomment this once the video link is available 
+			<div class="learn-set__video">
+				<div>
+					<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+				</div>
+			</div>
+			 -->
+
+			<div class="learn-set__answer">		
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_Subtraction_2.png" />
+				</div>
+				<div class="col-10 col-off-1" >
+					When the fractions to be subtracted have different denominators, we must first change them to their equivalent fractions with the same denominator.<br /><br />
+					<b>Nadia:</b> {{ frGen(1,2) }} = {{ frGen(5,10) }} <br />
+					<b>Nancy:</b> {{ frGen(2,5) }} = {{ frGen(4,10) }} <br /><br />
+					
+					{{ frGen(5,10) }} is greater than {{ frGen(4,10) }}<br />
+					So, Nadia received more cake than Nancy.<br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(1,2) }} &minus; {{ frGen(2,5) }} <br />
+					= {{ frGen(5,10) }} &minus; {{ frGen(4,10) }} <br />
+					= {{ frGen(1,10) }} <br /><br />
+					
+					Nadia received {{ frGen(1,10) }} more of the cake than Nancy.
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Subtracting-Fractions">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 2 -->
+
+
+	<!-- QUES 3 -->
+	<div class="learn-set">
+		<div class="learn-set__container">
+			
+			<div class="learn-set__question" style="text-indent:0; padding-left:0;">
+				<h4 id="Ques-3">
+				3. Josh and Halle bought a pizza.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp; Josh ate {{ frGen(1,3) }} of the pizza and Halle ate {{ frGen(7,12) }} of the pizza.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp; What fraction of the pizza was left?
+				</h4>
+			</div>
+			
+			<!-- Uncomment this once the video link is available 
+			<div class="learn-set__video">
+				<div>
+					<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+				</div>
+			</div>
+			 -->
+
+			<div class="learn-set__answer">		
+				<div class="col-11 col-off-1">
+					<img src="/images/notes/P3FR_Subtraction_3.png" />
+				</div>
+				<div class="col-10 col-off-1" >
+					<b>Josh:</b> {{ frGen(1,3) }} = {{ frGen(4,12) }} <br />
+					<b>Halle:</b> {{ frGen(7,12) }} <br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; 1 &minus; {{ frGen(4,12) }} &minus; {{ frGen(7,12) }}<br />
+					= {{ frGen(12,12) }} &minus; {{ frGen(4,12) }} &minus; {{ frGen(7,12) }}<br />
+					= {{ frGen(1,12) }}<br /><br />
+					
+					{{ frGen(1,12) }} of the pizza was left.
+				</div>
+			</div>			 
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Subtracting-Fractions">Practice Unlimited Questions</a></div>
+		</div>
+	</div><!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to subtract fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Express the fractions using a common denominator. For this you need to find the lowest common denominator.<br>\nStep 2: Create equivalent fractions by making the denominator common.<br>\nStep 3: Subtract the numerators and leave the denominator as is.<br>\nStep 4: Simplify fractions if required."}},{"@type":"Question","name":"Subtract 1/4 from 2/3.","acceptedAnswer":{"@type":"Answer","text":"Step 1: Convert to same denominator.<br>\n1/4 = 3/12<br>\n2/3 = 8/12<br>\n\nStep 2: Subtract 8 from 3<br>\n\n(8-3)/12 = 5/12<br>\nHence, 2/3 - 1/4 = 5/12"}}]}</script>
+{% endblock %}

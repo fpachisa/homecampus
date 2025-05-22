@@ -1,0 +1,159 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:70%;">Speed - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">12)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Jen and Ken each have an identical wheel that they roll on the ground for 1 min 30 sec. Jen rolls her wheel at a uniform speed of 3 m/s while Ken rolls his at a uniform speed of 9 km/h. If both children maintain the uniform speed of their respective wheel for the entire duration,</div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:10px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:370px;vertical-align:top;">Who rolls their wheel further?</div>
+		<div style="margin-left:45px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="SPTT1_12_1_answer" value='Jen' disabled
+				{% if SPTT1_12_1_answer == 'Jen'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Jen &nbsp;
+				<input type=radio name="SPTT1_12_1_answer" value='Ken' disabled
+				{% if SPTT1_12_1_answer == 'Ken' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Ken&nbsp;&nbsp;
+
+				{% if SPTT1_12_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_12_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_12_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="SPTT1_12_1_answer" value='Jen'
+				{% if SPTT1_12_1_answer == 'Jen' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Jen &nbsp;
+				<input type=radio name="SPTT1_12_1_answer" value='Ken'
+				{% if SPTT1_12_1_answer == 'Ken' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Ken<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:20px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:370px;vertical-align:top;">How much further?</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_12_2_answer" size=3 value='{{SPTT1_12_2_answer}}' readonly style="background-color:#DFDFDF;"> m&nbsp;
+				{% if SPTT1_12_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_12_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_12_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_12_2_answer" size=3 value='{{SPTT1_12_2_answer}}'> m<font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">13)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">The approximate flight distance from New York to London is 3462 miles. A flight takes 6 hours 45 min to complete one-way journey from New York to London. What should be the speed of the flight in km/h such that it reaches the destination on time? Round off your answer to 2 decimal places. (Given, 1 mile = 1.6 km)</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_13_answer" size=3 value='{{SPTT1_13_answer}}' readonly style="background-color:#DFDFDF;"> km/h&nbsp;
+				{% if SPTT1_13_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_13_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_13_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_13_answer" size=3 value='{{SPTT1_13_answer}}'> km/h<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="SP_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+
+$("#SP_TT_1_Continue").button({label:">>"});
+$("#SP_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-7.html';
+		rightPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-8.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$';
+		answer_ids = 'SPTT1_10_1_answer'+separatorText+'SPTT1_10_2_answer'+separatorText+'SPTT1_11_answer'+separatorText;
+		answer_ids = answer_ids +'SPTT1_12_1_answer'+separatorText+'SPTT1_12_2_answer'+separatorText+'SPTT1_13_answer';
+
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("input[name='SPTT1_12_1_answer']").click(function()
+		{
+			question_id = "SPTT1_12";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_12_1_answer";
+			entered_answer = $("input:radio[name=SPTT1_12_1_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_12_2_answer").change(function()
+		{
+			question_id = "SPTT1_12";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_12_2_answer";
+			entered_answer = $("#SPTT1_12_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_13_answer").change(function()
+		{
+			question_id = "SPTT1_13";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_13_answer";
+			entered_answer = $("#SPTT1_13_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+</script>
+

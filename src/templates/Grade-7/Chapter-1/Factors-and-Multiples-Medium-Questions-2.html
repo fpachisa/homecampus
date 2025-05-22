@@ -1,0 +1,127 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#FBB113;">1.1 Factors and Multiples</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#FBB113;margin-left:70%;">1.1 Factors and Multiples</div>
+	{% endif %}
+	<div style="margin-left:20px;margin-top:20px;"><font class="grade7PracticeQuestionNumber">3 a)</font> List the first twelve multiples of 3.
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;(Enter your answers separated by commas.)
+	</div>
+	<div style="margin-left:60px;margin-top:10px;">
+		{% if FMMedium_6_answer_correct is defined %}
+			<input id="FMMedium_6_answer" size=18 value='{{FMMedium_6_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if FMMedium_6_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not FMMedium_6_answer_correct and FMMedium_6_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{FMMedium_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="FMMedium_6_answer" size=18 value='{{FMMedium_6_answer}}'>
+		{% endif %}	
+	</div>
+	<div style="margin-left:30px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">b)</font> List the first twelve multiples of 3.
+	</div>
+	<div style="margin-left:60px;margin-top:10px;">
+		{% if FMMedium_7_answer_correct is defined %}
+			<input id="FMMedium_7_answer" size=18 value='{{FMMedium_7_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if FMMedium_7_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not FMMedium_7_answer_correct and FMMedium_7_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{FMMedium_7_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="FMMedium_7_answer" size=18 value='{{FMMedium_7_answer}}'>
+		{% endif %}	
+	</div>
+	<div style="margin-left:30px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">c)</font> Find the first 3 multiples common to 3 and 4.
+	</div>
+	<div style="margin-left:65px;margin-top:10px;">
+		{% if FMMedium_8_answer_correct is defined %}
+			<input id="FMMedium_8_answer" size=18 value='{{FMMedium_8_answer}}' readonly style="background-color:#DFDFDF;">
+				{% if FMMedium_8_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% elif not FMMedium_8_answer_correct and FMMedium_8_answer_correct is defined %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{FMMedium_8_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+		{% else %}
+			<input id="FMMedium_8_answer" size=18 value='{{FMMedium_8_answer}}'>
+		{% endif %}	
+	</div>
+
+
+	{% if FMMedium_6_answer_correct is defined %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="retry_1" style="outline:none;"></button></div>
+	{% else %}
+		<div style="margin-top:20px;margin-left:300px;"><button id="submit_1" style="outline:none;"></button></div>
+	{% endif %}			
+	<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+<script>
+	$("#FMMedium_6_answer").change(function()
+	{
+		question_id = "FMMedium_6";
+		question_type = "FactorsMultiples"
+		answer_id = "FMMedium_6_answer";
+		entered_answer = $("#FMMedium_6_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#FMMedium_7_answer").change(function()
+			{
+				question_id = "FMMedium_7";
+				question_type = "FactorsMultiples"
+				answer_id = "FMMedium_7_answer";
+				entered_answer = $("#FMMedium_7_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#FMMedium_8_answer").change(function()
+			{
+				question_id = "FMMedium_8";
+				question_type = "FactorsMultiples"
+				answer_id = "FMMedium_8_answer";
+				entered_answer = $("#FMMedium_8_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+
+	$("#submit_1").button({label:"Check Answers"});
+	$("#retry_1").button({label:"Retry"});
+	$("#submit_1").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "FactorsMultiples"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "FMMedium_6"+"#%$"+"FMMedium_6_answer"+"#%$"+$("#FMMedium_6_answer").val();
+		answers = answers + "#%$"+"FMMedium_7"+"#%$"+"FMMedium_7_answer"+"#%$"+$("#FMMedium_7_answer").val();
+		answers = answers + "#%$"+"FMMedium_8"+"#%$"+"FMMedium_8_answer"+"#%$"+$("#FMMedium_8_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#retry_1").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "FMMedium_6_answer,FMMedium_7_answer,FMMedium_8_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

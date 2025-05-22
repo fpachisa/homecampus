@@ -1,0 +1,171 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">Study the following series of numbers and choose a general formula which represent the numbers in the series, in terms of constants a and b and variable z.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="">a) &minus;3(2)<sup>0</sup>, &minus;3(2)<sup>1</sup>, &minus;3(2)<sup>2</sup>, &minus;3(2)<sup>3</sup>, ...</div>		
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if EAEMedium_4_1_answer_correct is defined %}
+				<div><input type=radio name="EAEMedium_4_1_answer" value='A' disabled
+				{% if EAEMedium_4_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;a(b)<sup>z</sup>; where a = &minus;3, b = 2 and z = 1, 2, 3, 4, 5,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_1_answer" value='B' disabled
+				{% if EAEMedium_4_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)z; where a = &minus;3, b = 2 and z = 0, 1, 2, 3, 4,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_1_answer" value='C' disabled
+				{% if EAEMedium_4_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)<sup>z</sup>; where a = &minus;3, b = 2 and z = 0, 1, 2, 3, 4,...</div>
+				<div style="margin-top:10px;margin-left:30px;">
+					{% if EAEMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div><input type=radio name="EAEMedium_4_1_answer" value='A'
+				{% if EAEMedium_4_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;a(b)<sup>z</sup>; where a = &minus;3, b = 2 and z = 1, 2, 3, 4, 5,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_1_answer" value='B'
+				{% if EAEMedium_4_1_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)z; where a = &minus;3, b = 2 and z = 0, 1, 2, 3, 4,...</div>
+				 <div style="margin-top:10px;"><input type=radio name="EAEMedium_4_1_answer" value='C'
+				{% if EAEMedium_4_1_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)<sup>z</sup>; where a = &minus;3, b = 2 and z = 0, 1, 2, 3, 4,...</div> 
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="">b) 4(&minus;3)<sup>2</sup>, 4(&minus;3)<sup>4</sup> , 4(&minus;3)<sup>6</sup>, ...</div>		
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if EAEMedium_4_2_answer_correct is defined %}
+				<div><input type=radio name="EAEMedium_4_2_answer" value='A' disabled
+				{% if EAEMedium_4_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >a(&minus;b)<sup>z</sup>; where a = 4, b = -3 and z = 0, 1, 2, 3, 4,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_2_answer" value='B' disabled
+				{% if EAEMedium_4_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >a(&minus;b)<sup>2z</sup>; where a = 4, b = -3 and z = 1, 2, 3, 4, 5,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_2_answer" value='C' disabled
+				{% if EAEMedium_4_2_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)<sup>z</sup>; where a = 4, b = 3 and z = 1, 2, 3, 4, 5,...</div>
+				<div style="margin-top:10px;margin-left:30px;">
+					{% if EAEMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div><input type=radio name="EAEMedium_4_2_answer" value='A'
+				{% if EAEMedium_4_2_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >a(&minus;b)<sup>z</sup>; where a = 4, b = -3 and z = 0, 1, 2, 3, 4,...</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEMedium_4_2_answer" value='B'
+				{% if EAEMedium_4_2_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)<sup>2z</sup>; where a = 4, b = -3 and z = 1, 2, 3, 4, 5,...</div>
+				 <div style="margin-top:10px;"><input type=radio name="EAEMedium_4_2_answer" value='C'
+				{% if EAEMedium_4_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >a(b)<sup>z</sup>; where a = 4, b = 3 and z = 1, 2, 3, 4, 5,...</div>
+			{% endif %}	
+		</div>
+
+
+
+		{% if EAEMedium_4_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="EAEMedium_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="EAEMedium_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+
+	$("input[name='EAEMedium_4_1_answer']").click(function()
+	{
+		question_id = "EAEMedium_4";
+		question_type = "AlgebraicExpressions"
+		answer_id = "EAEMedium_4_1_answer";
+		entered_answer = $("input:radio[name=EAEMedium_4_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	
+	$("input[name='EAEMedium_4_2_answer']").click(function()
+	{
+		question_id = "EAEMedium_4";
+		question_type = "AlgebraicExpressions"
+		answer_id = "EAEMedium_4_2_answer";
+		entered_answer = $("input:radio[name=EAEMedium_4_2_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	$("#EAEMedium_4_Submit").button({label:"Check Answers"});
+	$("#EAEMedium_4_Retry").button({label:"Retry"});
+	$("#EAEMedium_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "EAEMedium_4"+"#%$"+"EAEMedium_4_1_answer"+"#%$"+$("input:radio[name=EAEMedium_4_1_answer]:checked").val();
+		answers = answers + "#%$"+"EAEMedium_4"+"#%$"+"EAEMedium_4_2_answer"+"#%$"+$("input:radio[name=EAEMedium_4_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#EAEMedium_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "EAEMedium_4_1_answer,EAEMedium_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

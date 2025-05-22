@@ -1,0 +1,169 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F693CD;">Linear Equations - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="C9LE_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">9)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			Find the value of the sum of two numbers such that the difference between half of the first number and <br>one-eighth of the second number is 15. The first number is 
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;"><font class="grade7Variables">n</font> and the second number is</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">8<font class="grade7Variables">n</font><br>___<br></p>
+				<p style="line-height:20%;text-align:center;">7<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">.</div>			
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">		
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;">Answer:&nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+						<input id="C9LETT1_9_answer" value='{{C9LETT1_9_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">	
+				{% else %}
+						<input id="C9LETT1_9_answer" value='{{C9LETT1_9_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if C9LETT1_9_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">10)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			A preschool distributed toys among its children on Children's Day. The number of toys was 20 more than twice the number of children in the preschool. 10 children did not receive the toys because they were absent. All the toys were distributed among the remaining number of children such that each child received 3 toys. Find the total number of children in the preschool.
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">		
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;">Answer:&nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+						<input id="C9LETT1_10_answer" value='{{C9LETT1_10_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> children
+				{% else %}
+						<input id="C9LETT1_10_answer" value='{{C9LETT1_10_answer}}' style="width:30px;text-align:center;" > children
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if C9LETT1_10_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+		
+
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="C9LE_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#C9LE_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#C9LE_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Linear-Equations');
+  	});	
+$("#C9LE_TT_1_back").button({label:"<<"});
+$("#C9LE_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-3.html';
+		rightPage = '/Grade-7/Chapter-9/Topical-Test-1-Linear-Equations-Page-4.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#C9LETT1_9_answer").change(function()
+		{
+			question_id = "C9LETT1_9";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_9_answer";
+			entered_answer = $("#C9LETT1_9_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 4;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#C9LETT1_10_answer").change(function()
+		{
+			question_id = "C9LETT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_10_answer";
+			entered_answer = $("#C9LETT1_10_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 4;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

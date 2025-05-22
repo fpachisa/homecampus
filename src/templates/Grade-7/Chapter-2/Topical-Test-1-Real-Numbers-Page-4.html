@@ -1,0 +1,231 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F36D27;margin-left:48%;">Rational and Real Numbers - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">Doris is selling homemade cookies at a rate of $2.50 per cookie. On a Monday morning, she made 110 cookies and put them on sale. She earned $200 in 8 days and found that she sold the same number of cookies each day. If she continued selling the same number of cookies each day, how many days will it take her to sell her stock of 110 cookies?</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;width:60px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="RRNTT1_5_answer" size=3 value='{{RRNTT1_5_answer}}' readonly style="background-color:#DFDFDF;"> days&nbsp;
+				{% if RRNTT1_5_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="RRNTT1_5_answer" size=3 value='{{RRNTT1_5_answer}}'> days <font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">6)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			Arrange the following numbers in decreasing order.<br>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">, &minus;1.5,&nbsp; <font style="font-size:1.6em;">(</font></div>
+			<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>
+			</div>									
+			<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:10px;"><font style="font-size:1.6em;">)</font></div>
+			<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:5px;"><div><sup>2</sup>, (&minus;1.5)<sup>2</sup></div></div>
+		</div>
+		<div style="margin-left:45px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="RRNTT1_6_answer" value='a' disabled
+				{% if RRNTT1_6_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;"> <div>&minus;1.5, &nbsp;(&minus;1.5)<sup>2</sup>,</div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">, <font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-5px;"><div><sup>2</sup></div></div><br>				 
+				<input type=radio name="RRNTT1_6_answer" value='b' disabled
+				{% if RRNTT1_6_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;"><font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-8px;"><div><sup>2</sup></div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">,</div>							
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;"><div>, (&minus;1.5)<sup>2</sup>, &minus;1.5</div></div><br>				 
+				<input type=radio name="RRNTT1_6_answer" value='c' disabled
+				{% if RRNTT1_6_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;"><div>(&minus;1.5)<sup>2</sup></div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">,</div>							
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:5px;">,</div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:5px;"><font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-5px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:5px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-3px;"><div><sup>2</sup></div></div>
+
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:5px;"><div>, &minus;1.5</div></div>				 
+				 &nbsp;
+				{% if RRNTT1_6_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore" style="margin-left:5px;margin-top:-10px;">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;margin-top:-10px;">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="RRNTT1_6_answer" value='a'
+				{% if RRNTT1_6_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;"> <div>&minus;1.5, &nbsp;(&minus;1.5)<sup>2</sup>,</div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">, <font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-5px;"><div><sup>2</sup></div></div><br>				 
+				<input type=radio name="RRNTT1_6_answer" value='b'
+				{% if RRNTT1_6_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;"><font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-8px;"><div><sup>2</sup></div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">,</div>							
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;"><div>, (&minus;1.5)<sup>2</sup>, &minus;1.5</div></div><br>
+				<input type=radio name="RRNTT1_6_answer" value='c'
+				{% if RRNTT1_6_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:-5px;"><div>(&minus;1.5)<sup>2</sup></div></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">,</div>							
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;">,</div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:0px;"><font style="font-size:1.6em;">(</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-10px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>									
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><font style="font-size:1.6em;">)</font></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:-8px;"><div><sup>2</sup></div></div>
+
+				<div style="display:inline-block;vertical-align:top;margin-left:-4px;margin-top:0px;"><div>, &minus;1.5</div></div>
+				 
+				 <font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="RRN_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+$("#RRN_TT_1_Continue").button({label:">>"});
+$("#RRN_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-2/Topical-Test-1-Real-Numbers-Page-5.html';
+		rightPage = '/Grade-7/Chapter-2/Topical-Test-1-Real-Numbers-Page-6.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$'
+		answer_ids = 'RRNTT1_4_answer'+separatorText+'RRNTT1_5_answer'+separatorText+'RRNTT1_6_answer'
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#RRNTT1_5_answer").change(function()
+		{
+			question_id = "RRNTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_5_answer";
+			entered_answer = $("#RRNTT1_5_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='RRNTT1_6_answer']").click(function()		
+		{
+			question_id = "RRNTT1_6";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_6_answer";
+			entered_answer = $("input:radio[name=RRNTT1_6_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+</script>
+

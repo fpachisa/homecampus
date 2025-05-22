@@ -1,0 +1,145 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplify(N,D,N1,N2,D1,D2) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;<span style="text-decoration:line-through">{{N}}</span><sup style="color:blue"> <span style="text-decoration:line-through">{{N1}}</span> </sup><sup style="color:red">{{N2}}</sup></td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>&nbsp;<span style="text-decoration:line-through">{{D}}</span><sup style="color:blue"> <span style="text-decoration:line-through">{{D1}}</span> </sup><sup style="color:red">{{D2}}</sup></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Fractions and Decimals - Home Campus</title>
+<meta name="keywords" content="fraction and decimals, problem sums, P3 maths, 3rd grade math, fraction worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, P3 math tuition, math tuition at home">
+<meta name="description" content="Fractions and Decimals are related to each other. Learn through video tutorial, practice exercises and worksheets." />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Fractions and Decimals</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Fraction and decimals are related to each other. The video below explains in detail.<br /><br /></h4>
+		</div>			
+		<div class="learn-set__video">
+			<div><embed src="https://www.youtube.com/v/9n2rytBo4Mk?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;2. Convert {{ frGen(3,4) }} to a decimal number.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/fractions_to_decimals.png" alt="fraction to decimal" /><br />
+			</div>
+			<div class="col-3 col-off-1">
+				&nbsp;&nbsp;&nbsp; <b>{{ frGen(3,4) }}</b> <br />
+				=&nbsp; {{ frGen("3 x 25","4 x 25") }}<br />
+				=&nbsp; {{ frGen(75,100) }}<br /><br />
+				=&nbsp; 75 &nbsp;&divide;&nbsp; 100<br /><br />
+				=&nbsp; <b>0.75</b>
+			</div>
+			<div class="col-6 hint-box" style="margin:10px;">
+				Change the fraction to a <b>decimal fraction</b>.<br /><br />
+				A decimal fraction is a fraction in which the denominator is a number related to 10.<br /><br />
+				<b><i>Example:</i></b> 10, 100, 1000, 10000; it's basically 1 followed by any number of zeroes.
+			</div>
+			<div class="col-10 col-off-1">
+				The fraction {{ frGen(3,4) }} is equal to the decimal number 0.75.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Convert 0.75 to a fraction.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/decimals_to_fractions.png" alt="decimal to fraction" /><br />
+			</div>
+			<div class="col-10 col-off-1">
+				&nbsp;&nbsp;&nbsp;&nbsp; <b>0.75</b> <br /><br />
+				=&nbsp; {{ frGen("0.75","1.00") }}<br /><br />
+				=&nbsp; {{ frGen("0.75 x 100","1.00 x 100") }}<br /><br />
+				=&nbsp; {{ frSimplify(75,100,15,3,20,4) }}<br /><br />
+				=&nbsp; <b>{{ frGen(3,4) }}</b><br /><br />
+
+				The decimal number 0.75 is equal to the fraction {{ frGen(3,4) }}.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. Change 2.625 to a fraction.</h4>
+		</div>			
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				&nbsp;&nbsp;&nbsp;&nbsp; <b>2.625</b> <br /><br />
+				=&nbsp; 2 &nbsp;+&nbsp; 0.625<br /><br />
+				=&nbsp; 2 &nbsp;+ {{ frGen("0.625","1.000") }}<br /><br />
+				=&nbsp; 2 &nbsp;+ {{ frSimplify(625,1000,125,5,200,8) }}<br /><br />
+				=&nbsp; 2 &nbsp;+ {{ frGen(5,8) }}<br /><br />
+				=&nbsp; <b>{{ mixNumGen(2,5,8) }}</b><br /><br />
+
+				The decimal number 2.625 is equal to the fraction&nbsp; {{ mixNumGen(2,5,8) }}.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Divide_Proper_Fraction_Whole_Number">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+
+{% endblock %}

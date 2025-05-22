@@ -1,0 +1,316 @@
+runtime: python27
+api_version: 1
+instance_class: F1
+threadsafe: false
+
+default_expiration: "1d"
+
+libraries:                                                                      
+- name: jinja2                                                                  
+  version: latest                                                               
+- name: markupsafe                                                              
+  version: latest
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  secure: always
+- url: /images
+  static_dir: images
+  secure: always
+- url: /images/.*
+  static_dir: images
+  secure: always
+- url: /js
+  static_dir: js
+  secure: always
+- url: /apple-touch-icon.png
+  static_files: images/apple-touch-icon.png
+  upload: images/apple-touch-icon.png
+- url: /apple-touch-icon-precomposed.png
+  static_files: images/apple-touch-icon.png
+  upload: images/apple-touch-icon.png
+- url: /favicon\.ico
+  static_files: images/site/favicon.ico
+  upload: images/site/favicon\.ico
+- url: /robots.txt
+  static_files: images/robots.txt
+  upload: images/robots.txt
+- url: /ads.txt
+  static_files: ads.txt
+  upload: ads.txt
+- url: /manifest.json
+  static_files: images/manifest.json
+  upload: images/manifest.json
+- url: /sitemap.xml
+  static_files: sitemap.xml
+  upload: sitemap.xml
+- url: /Download-Worksheets
+  static_dir: Worksheets
+  secure: always
+- url: /download-worksheets
+  static_dir: Worksheets
+  secure: always
+- url: /Worksheets/images
+  static_dir: Worksheets/images
+  secure: always
+
+- url: /Home_Campus_User_Guide.pdf
+  static_files: Home_Campus_User_Guide.pdf
+  upload: Home_Campus_User_Guide.pdf
+
+- url: /
+  script: HomePage.py
+  secure: always
+
+- url: /PSLE
+  script: HomePage.py
+  secure: always
+
+- url: /Learn.*
+  script: Learn.py
+  secure: always
+
+- url: /Notes.*
+  script: Notes.py
+  secure: always
+
+- url: /Register
+  script: Auth.py
+  secure: always
+
+- url: /AddChild
+  script: Auth.py
+  secure: always
+
+- url: /SignIn
+  script: Auth.py
+  secure: always
+
+- url: /ForgotPassword
+  script: Auth.py
+  secure: always
+
+- url: /ResetPassword
+  script: Auth.py
+  secure: always
+
+- url: /Practice.*
+  script: Practice.py
+  secure: always
+
+- url: /Progress.*
+  script: GenerateReport.py
+  secure: always
+
+- url: /auth/.*
+  script: Auth.py
+  secure: always
+
+- url: /P5/.*
+  script: Primary5Problems.py
+  secure: always
+
+- url: /P6/.*
+  script: Primary6Problems.py
+  secure: always
+  
+- url: /P4/.*
+  script: Primary4Problems.py
+  secure: always
+  
+- url: /P1/.*
+  script: Primary1Problems.py
+  secure: always
+  
+- url: /P3/.*
+  script: Primary3Problems.py
+  secure: always
+  
+- url: /Grade_3_Math_Practice/.*
+  script: Primary3Problems.py
+  secure: always
+  
+- url: /Grade_4_Math_Practice/.*
+  script: Primary4Problems.py
+  secure: always
+  
+- url: /Grade_5_Math_Practice/.*
+  script: Primary5Problems.py
+  secure: always
+  
+- url: /Grade_6_Math_Practice/.*
+  script: Primary6Problems.py
+  secure: always
+  
+- url: /submit
+  script: Submit.py
+  secure: always
+  
+- url: /Contact
+  script: Contact.py
+  secure: always
+  
+- url: /FAQs
+  script: Contact.py
+  secure: always
+  
+- url: /AboutHomeCampus
+  script: Contact.py
+  secure: always
+  
+- url: /Refer
+  script: Contact.py
+  secure: always
+  
+- url: /NewsLetter.*
+  script: NewsLetter.py
+  secure: always
+  
+- url: /Tests.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Goals.*
+  script: GenerateGoals.py
+  secure: always
+  
+- url: /PrivacyPolicy
+  script: Contact.py
+  secure: always
+  
+- url: /Disclaimer
+  script: Contact.py
+  secure: always
+  
+- url: /Subscribe.*
+  script: Subscribe.py
+  secure: always
+  
+- url: /Waiver/.*
+  script: Waiver.py
+  secure: always
+  
+- url: /MyProfile.*
+  script: Contact.py
+  secure: always
+  
+- url: /Benefits
+  script: Contact.py
+  secure: always
+  
+- url: /Elementary_Mathematics_Worksheets
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Grade_4_Math_Worksheets.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Grade_5_Math_Worksheets.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Grade_6_Math_Worksheets.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Grade_3_Math_Worksheets.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /Worksheets.*
+  script: GenerateWorksheets.py
+  secure: always
+  
+- url: /What_is_Singapore_Math
+  script: Contact.py
+  secure: always
+  
+- url: /MISC.*
+  script: Misc.py
+  secure: always
+  
+- url: /Communication.*
+  script: Communication.py
+  secure: always
+  
+- url: /Teacher/.*
+  script: Teacher.py
+  secure: always
+  
+- url: /Primary_.*
+  script: HomePage.py
+  secure: always
+  
+- url: /Secondary.*
+  script: HomePage.py
+  secure: always
+  
+- url: /Grade-7-Book.*
+  script: Grade7/Grade7.py
+  secure: always
+  
+- url: /Grade-7-Topical-Test.*
+  script: Grade7/Grade7Test.py
+  secure: always
+  
+- url: /Grade-7
+  script: Grade7/Grade7.py
+  secure: always
+  
+- url: /Unfinished-Worksheets
+  script: HomePage.py
+  secure: always
+  
+- url: /Explanation-Test
+  script: Misc.py
+  secure: always
+  
+#Let's Encrypt Handler -- added by riyaz
+- url: /.well-known/acme-challenge/
+  static_dir: letsencrypt
+
+# 06 Jan 2017 Extracting emails for PR
+- url: /task/extractEmails/.*
+  script: extractEmailsPR.py
+
+- url: /remote_api/.*
+  script: google.appengine.ext.remote_api.handler.application
+  secure: always
+  
+- url: /Math-Calculators
+  script: Learn.py
+  secure: always
+  
+- url: /Math-Worksheets
+  script: Learn.py
+  secure: always
+  
+- url: /math-worksheets
+  script: Learn.py
+  secure: always
+  
+- url: /Free-Math-Worksheets/.*
+  script: Learn.py
+  secure: always
+  
+- url: /.*free-math-worksheets.*
+  script: Learn.py
+  secure: always
+  
+- url: /What-are-Properties-of-Triangles
+  script: Learn.py
+  secure: always
+  
+- url: /Math-Glossary
+  script: Learn.py
+  secure: always
+
+- url: /Rectangle
+  script: Learn.py
+  secure: always
+
+- url: /Square
+  script: Learn.py
+  secure: always

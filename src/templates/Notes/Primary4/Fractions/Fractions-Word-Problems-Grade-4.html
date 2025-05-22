@@ -1,0 +1,344 @@
+{% macro frGen(N,D) %}
+<table style='display:inline-block;padding:0 6px;vertical-align:middle;'>
+	<tr style='text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% macro mixNumGenQ(W,N,D) %}
+&nbsp;&nbsp;&nbsp;&nbsp;<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">&nbsp;&nbsp;&nbsp;{{N}}</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Fractions Word Problems - Home Campus</title>
+<meta name="keywords" content="Perimeter, Square, Rectangle, Square Centimetres, Square Metres, word problems, problem sums, P3 maths, 3rd grade math, Area in Square Centimetres worksheets, free math worksheets, math homework help, free maths online, Singapore math, math models, elementary math, math tuition, P3 math tuition, math tuition at home">
+<meta name="description" content="Perimeter of Squares and Rectangles" />
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Word Problems</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>1. A farmer picked apples, bananas and oranges.<br />
+				He picked {{ mixNumGenQ(3,2,3) }} kg of apples, {{ mixNumGenQ(7,1,2) }} kg of bananas and {{ mixNumGenQ(9,1,3) }} kg of oranges.<br />
+				Find the mass of fruits he picked altogether.</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" >		
+				<img src="/images/notes/P4_Fractions_Word_Problems_1.png" alt="square metre or square meter" /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(3,2,3) }} &nbsp; + &nbsp; {{ mixNumGen(7,1,2) }} &nbsp; + &nbsp; {{ mixNumGen(9,1,3) }}<br />
+				=&nbsp; {{ frGen(11,3) }} &nbsp; + &nbsp; {{ frGen(15,2) }} &nbsp; + &nbsp; {{ frGen(28,3) }}<br />
+				=&nbsp; {{ frGen(22,6) }} &nbsp; + &nbsp; {{ frGen(45,6) }} &nbsp; + &nbsp; {{ frGen(56,6) }}<br />
+				=&nbsp; {{ frGen(123,6) }}<br />
+				=&nbsp;&nbsp; {{ mixNumGen(20,3,6) }}<br />
+				=&nbsp;&nbsp; {{ mixNumGen(20,1,2) }}<br /><br />
+				
+				The mass of fruits he picked altogether was &nbsp;<b>{{ mixNumGen(20,1,2) }} &nbsp;kg</b> .
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>2. Joshua jogged {{ mixNumGenQ(4,3,8) }} km altogether.<br />
+				He jogged {{ mixNumGenQ(1,1,2) }} km in the morning, &nbsp;&nbsp;&nbsp; {{ frGen(5,8) }} km in the afternoon and the rest of the distance in the evening.<br />
+				How far did he jog in the evening?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1" >		
+				<img src="/images/notes/P4_Fractions_Word_Problems_2.png" alt="square metre or square meter" /><br />
+				&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(1,1,2) }} &nbsp;&nbsp;+&nbsp; {{ frGen(5,8) }}<br />
+				=&nbsp; {{ frGen(3,2) }} &nbsp;+&nbsp; {{ frGen(5,8) }}<br />
+				=&nbsp; {{ frGen(12,8) }} &nbsp;+&nbsp; {{ frGen(5,8) }}<br />
+				=&nbsp; {{ frGen(17,8) }}<br />
+				=&nbsp;&nbsp; {{ mixNumGen(2,1,8) }}<br />
+				
+				He jogged &nbsp; {{ mixNumGen(2,1,8) }} &nbsp;km &nbsp;in the morning and afternoon altogether.<br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp; {{ mixNumGen(4,3,8) }} &nbsp;&nbsp;&minus;&nbsp;&nbsp; {{ mixNumGen(2,1,8) }}<br />
+				=&nbsp; {{ mixNumGen(2,2,8) }}<br />
+				=&nbsp; {{ mixNumGen(2,1,4) }}<br /><br />
+				
+				He jogged &nbsp; <b>{{ mixNumGen(2,1,4) }} &nbsp; km</b> &nbsp;in the evening.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>3. Alan made some lemonade.<br />
+				He gave 5 litres of it to his sister and kept the rest for himself.<br /> 
+				If he kept &nbsp;&nbsp;&nbsp;&nbsp; {{ frGen(3,5) }} of the lemonade for himself, how many litres of lemonade did he make?<br /> 
+				Express your answer as a mixed number.</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P4_Fractions_Word_Problems_3.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-10 col-off-2">
+				2 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> &nbsp; 5 litres<br />
+
+				1 unit &nbsp;&nbsp;&nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> {{ frGen(5,2) }} litres<br />
+
+				5 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> {{ frGen(5,2) }} litres &nbsp;&times;&nbsp; 5 &nbsp;&nbsp;=&nbsp; {{ frGen(25,2) }} litres &nbsp;=&nbsp; {{ mixNumGen(12,1,2) }} &nbsp;litres<br /><br />
+				
+				He made &nbsp;<b>{{ mixNumGen(12,1,2) }} &nbsp; litres</b> &nbsp;of lemonade.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>4. Shelly had {{ mixNumGenQ(3,1,2) }} kg of peanuts.<br />
+				She sold &nbsp;&nbsp;&nbsp; {{ frGen(5,7) }} of them.<br /> 
+				Find the mass of peanuts she had left.</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P4_Fractions_Word_Problems_4.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-10 col-off-2">
+				1 &nbsp;&minus;&nbsp; {{ frGen(5,7) }} &nbsp;=&nbsp; {{ frGen(2,7) }}<br />
+				She had {{ frGen(2,7) }} &nbsp;of the peanuts left.<br /><br />
+				
+				&nbsp; &nbsp; {{ frGen(2,7) }} &nbsp;of&nbsp; {{ mixNumGen(3,1,2) }} &nbsp;kg <br /> 
+				=&nbsp; {{ frGen(2,7) }} &nbsp;&times;&nbsp; {{ mixNumGen(3,1,2) }} &nbsp;kg <br />
+				=&nbsp; {{ frGen(2,7) }} &nbsp;&times;&nbsp; {{ frGen(7,2) }} &nbsp;kg <br />
+				=&nbsp; {{ frGen("2 x 7","7 x 2") }} kg <br />
+				=&nbsp;&nbsp; 1 kg <br /><br />
+				
+				The mass of peanuts she had left was <b>1 kg</b>.
+			</div>
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>5. Barry has 36 coins.<br />
+				{{ frGen(1,2) }} of them are Singapore coins, &nbsp;&nbsp;&nbsp; {{ frGen(1,3) }} of them are US coins and the rest are Indian coins.<br />
+				How many Indian coins does he have?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-6 col-off-1">
+				<img src="/images/notes/P4_Fractions_Word_Problems_5.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-4 hint-box" style="margin:10px;">
+				Change {{ frGen(1,2) }} and {{ frGen(1,3) }} to like fractions.<br />
+				{{ frGen(1,2) }} &nbsp;=&nbsp; {{ frGen(3,6) }}<br />
+				{{ frGen(1,3) }} &nbsp;=&nbsp; {{ frGen(2,6) }}
+			</div>
+			<div class="col-10 col-off-2">
+				6 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> 36<br />
+
+				1 unit &nbsp;&nbsp;&nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> 36 &nbsp;&divide;&nbsp; 6 &nbsp;=&nbsp; 6<br /><br />
+
+				He has <b>6</b> Indian coins.
+			</div>			
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>6. Mei had a piece of ribbon.<br />
+				She used &nbsp;&nbsp;&nbsp; {{ frGen(3,4) }} of it to make bows.<br />
+				She used 60 cm of the ribbon to make bows.<br />
+				Find the length of the ribbon she had at first.</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P4_Fractions_Word_Problems_6.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-10 col-off-2">
+				3 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> 60 cm<br />
+
+				1 unit &nbsp;&nbsp;&nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> 60 cm &nbsp;&divide;&nbsp; 3 &nbsp;=&nbsp; 20 cm<br />
+
+				4 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> 20 cm &nbsp;&times;&nbsp; 4 &nbsp;=&nbsp; 80 cm<br /><br />
+
+				She had <b>80 cm</b> of ribbon at first.
+			</div>			
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+			
+		<div class="learn-set__question">
+			<h4>7. Sam received $150 of pocket money.<br />
+				He spent &nbsp;&nbsp;&nbsp; {{ frGen(2,5) }} of it on a pair of shoes and &nbsp;&nbsp;&nbsp; {{ frGen(1,6) }} of the remaining on a watch.<br />
+				a. &nbsp; How much did the shoes cost?<br />
+				b. &nbsp; Find the sum of money he had left in the end?<br />
+				c. &nbsp; What fraction of his pocket money had he left?</h4>
+		</div>
+			
+		<!-- Uncomment this once the video link is available 
+		<div class="learn-set__video">
+			<div>
+				<embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" />
+			</div>
+		</div>
+		 -->
+
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P4_Fractions_Word_Problems_7.png" alt="square metre or square meter" />
+			</div>
+			<div class="col-10 col-off-2">
+				a. &nbsp; 5 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $150<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 unit &nbsp;&nbsp;&nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $150 &nbsp;&divide;&nbsp; 5 &nbsp;=&nbsp; $30<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $30 &nbsp;&times;&nbsp; 2 &nbsp;=&nbsp; $60<br /><br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The shoes cost &nbsp;<b>$60</b>.
+			</div>			
+			<div class="col-10 col-off-2">
+				b. &nbsp; $150 &nbsp;&minus;&nbsp; $60 &nbsp;=&nbsp; $90<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $90<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 unit &nbsp;&nbsp;&nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $90 &nbsp;&divide;&nbsp; 6 &nbsp;=&nbsp; $15<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 units &nbsp; <img src="/images/notes/right_arrow.png" style="display:inline;" /> $15 &nbsp;&times;&nbsp; 5 &nbsp;=&nbsp; $75<br /><br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; He had &nbsp;<b>$75</b>&nbsp; left in the end.
+			</div>			
+			<div class="col-10 col-off-2">
+				c. &nbsp; Sum of money left in the end &nbsp;=&nbsp; $75<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum of pocket money at first &nbsp;=&nbsp; $150<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fraction of pocket money left &nbsp;=&nbsp; {{ frGen(75,150) }} &nbsp;=&nbsp; {{ frGen(1,2) }}<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; He had <b>{{ frGen(1,2) }}</b> of his pocket money left.
+			</div>			
+		</div>			 
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Fractions_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 7 -->
+
+
+{% endblock %}

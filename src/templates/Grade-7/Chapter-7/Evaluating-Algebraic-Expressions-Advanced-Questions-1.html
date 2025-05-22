@@ -1,0 +1,155 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">7.3 Evaluating Algebraic Expressions and Formulae</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Jasmine makes a profit of (2<font class="grade7Variables">m</font> + 1)<font class="grade7Variables">n</font> cents by selling <font class="grade7Variables">n</font> oranges at (3<font class="grade7Variables">m</font> &minus; 1) cents each. How much did each orange cost her?
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if EAEAdvanced_1_answer_correct is defined %}
+					<input id="EAEAdvanced_1_answer" value='{{EAEAdvanced_1_answer}}' readonly style="width:35px;background-color:#DFDFDF;"> &cent;
+				{% else %}
+					<input id="EAEAdvanced_1_answer" value='{{EAEAdvanced_1_answer}}' style="width:35px;" > &cent;
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if EAEAdvanced_1_answer_correct is defined %}
+					{% if EAEAdvanced_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEAdvanced_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A wire in the form of a circular ring of radius <font class="grade7Variables">x</font> cm is reshaped into a square frame of side <font class="grade7Variables">y</font> cm. How is <font class="grade7Variables">x</font> related to <font class="grade7Variables">y</font>?
+			</div>
+		</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if EAEAdvanced_2_answer_correct is defined %}
+				<div style="display:inline-block;">
+					<div><input type=radio name="EAEAdvanced_2_answer" value='A' disabled
+					{% if EAEAdvanced_2_answer == 'A'%} 
+	   					checked="checked"
+	   				{%endif%}
+					 >2<font class="grade7Variables">y</font> &divide; &pi;</div>
+					<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='B' disabled
+					{% if EAEAdvanced_2_answer == 'B' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 ><font class="grade7Variables">y</font> &divide; &pi;</div>
+					<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='C' disabled
+					{% if EAEAdvanced_2_answer == 'C' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 >2<font class="grade7Variables">y</font> &times; &pi;</div>
+					<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='D' disabled
+					{% if EAEAdvanced_2_answer == 'D' %} 
+	   					checked="checked"
+	   				{%endif%}
+					 ><font class="grade7Variables">y</font> &times; &pi;</div>
+				 </div>			 
+				<div style="display:inline-block;margin-top:20px;margin-left:30px;">
+					{% if EAEAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{EAEAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+			{% else %}
+				<div><input type=radio name="EAEAdvanced_2_answer" value='A'
+				{% if EAEAdvanced_2_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >2<font class="grade7Variables">y</font> &divide; &pi;</div>
+				<div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='B'
+				{% if EAEAdvanced_2_answer == 'B'%} 
+   					checked="checked"
+   				{%endif%}
+				 ><font class="grade7Variables">y</font> &divide; &pi;</div>
+				 <div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='C'
+				{% if EAEAdvanced_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >2<font class="grade7Variables">y</font> &times; &pi;</div>
+				 <div style="margin-top:10px;"><input type=radio name="EAEAdvanced_2_answer" value='D'
+				{% if EAEAdvanced_2_answer == 'D'%} 
+   					checked="checked"
+   				{%endif%}
+				 ><font class="grade7Variables">y</font> &times; &pi;</div>				 
+			{% endif %}	
+		</div>
+
+		{% if EAEAdvanced_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="EAEAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="EAEAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#EAEAdvanced_1_answer").change(function()
+	{
+		question_id = "EAEAdvanced_1";
+		question_type = "AlgebraicExpressions"
+		answer_id = "EAEAdvanced_1_answer";
+		entered_answer = $("#EAEAdvanced_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='EAEAdvanced_2_answer']").click(function()
+			{
+				question_id = "EAEAdvanced_2";
+				question_type = "AlgebraicExpressions"
+				answer_id = "EAEAdvanced_2_answer";
+				entered_answer = $("input:radio[name=EAEAdvanced_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#EAEAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#EAEAdvanced_1_Retry").button({label:"Retry"});
+	$("#EAEAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicExpressions"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "EAEAdvanced_1"+"#%$"+"EAEAdvanced_1_answer"+"#%$"+$("#EAEAdvanced_1_answer").val();
+		answers = answers + "#%$"+"EAEAdvanced_2"+"#%$"+"EAEAdvanced_2_answer"+"#%$"+$("input:radio[name=EAEAdvanced_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#EAEAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "EAEAdvanced_1_answer,EAEAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

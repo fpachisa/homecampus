@@ -1,0 +1,29 @@
+{% extends 'PracticePageSkeleton.html' %}
+   
+   {% block content%}
+   		
+   		<div class="mcq__group">
+   			<div class="mcq__element">
+   				<input id="mc-1" type="radio" name="answer" value="{{value1}}" {% if answer_submitted == value1%}checked="checked"{%endif%}/>
+   				<label for="mc-1">{{answer1|safe}}</label>
+   			</div>
+   			
+   			<div class="mcq__element">
+   				<input id="mc-2" type="radio" name="answer" value="{{value2}}" {% if answer_submitted == value2%}checked="checked"{%endif%}/>
+   				<label for="mc-2">{{answer2|safe}}</label>
+   			</div>
+   		</div>
+   		
+   		<div class="mcq__group">
+   			<div class="mcq__element">
+   				<input id="mc-3" type="radio" name="answer" value="{{value3}}" {% if answer_submitted == value3%}checked="checked"{%endif%}/>
+   				<label for="mc-3">{{answer3|safe}}</label>   					
+   			</div>
+   			
+   			<div class="mcq__element">
+   				<input id="mc-4" type="radio" name="answer" value="{{value4}}" {% if answer_submitted == value4%}checked="checked"{%endif%}/>
+   				<label for="mc-4">{{answer4|safe}}</label>
+   			</div>
+   		</div>
+   			
+{% endblock %}

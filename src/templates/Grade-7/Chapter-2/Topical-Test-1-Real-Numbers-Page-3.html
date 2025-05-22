@@ -1,0 +1,148 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F36D27;">Rational and Real Numbers - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="RRN_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>		
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">
+		In an IQ Quiz competition, each correct answer is awarded 2 points while 1 point is deducted for each question answered incorrectly. The table below shows the performances of 3 teams.
+		<table style="border-collapse:collapse;margin-top:10px;margin-bottom:10px;">
+			<tr><td style="border:1px solid black;">Team</td><td style="border:1px solid black;"># of correct answers</td><td style="border:1px solid black;"># of incorrect answers</td></tr>
+			<tr><td style="border:1px solid black;">A</td><td style="border:1px solid black;">3</td><td style="border:1px solid black;">7</td></tr>
+			<tr><td style="border:1px solid black;">B</td><td style="border:1px solid black;">4</td><td style="border:1px solid black;">2</td></tr>
+			<tr><td style="border:1px solid black;">C</td><td style="border:1px solid black;">2</td><td style="border:1px solid black;">4</td></tr>
+		</table>
+		Rank the performance of each team in order on the basis of total points scored in the quiz starting from the team with the highest score.
+		</div>
+		<div style="margin-left:45px;margin-top:30px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="RRNTT1_4_answer" value='a' disabled
+				{% if RRNTT1_4_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >A, B, C<br>
+				<input type=radio name="RRNTT1_4_answer" value='b' disabled
+				{% if RRNTT1_4_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >B, C, A<br>
+				<input type=radio name="RRNTT1_4_answer" value='c' disabled
+				{% if RRNTT1_4_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >B, A, C&nbsp;&nbsp;
+				{% if RRNTT1_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRNTT1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="RRNTT1_4_answer" value='a'
+				{% if RRNTT1_4_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >A, B, C<br>
+				<input type=radio name="RRNTT1_4_answer" value='b'
+				{% if RRNTT1_4_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >B, C, A<br>
+				<input type=radio name="RRNTT1_4_answer" value='c'
+				{% if RRNTT1_4_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >B, A, C<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="RRN_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#RRN_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#RRN_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Real-Numbers');
+  	});	
+$("#RRN_TT_1_back").button({label:"<<"});
+$("#RRN_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-2/Topical-Test-1-Real-Numbers-Page-1.html';
+		rightPage = '/Grade-7/Chapter-2/Topical-Test-1-Real-Numbers-Page-2.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("input[name='RRNTT1_4_answer']").click(function()		
+		{
+			question_id = "RRNTT1_4";
+			test_id = '{{test_id}}';
+			answer_id = "RRNTT1_4_answer";
+			entered_answer = $("input:radio[name=RRNTT1_4_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

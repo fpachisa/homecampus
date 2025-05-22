@@ -1,0 +1,151 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.2 Interpreting Algebraic Notations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:50%;">7.2 Interpreting Algebraic Notations</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			Mike has <font class="grade7Variables">x</font> dollar-notes in denominations of $1, $2 and $5. There are <font class="grade7Variables">y</font> $1 notes, 4<font class="grade7Variables">y</font> $5 notes and the remaining are $2 notes. Find
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">a) the number of $2 notes in terms of <font class="grade7Variables">x</font> and <font class="grade7Variables">y</font></div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">Answer: </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				{% if IANAdvanced_3_1_answer_correct is defined %}
+					<input id="IANAdvanced_3_1_answer" value='{{IANAdvanced_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="IANAdvanced_3_1_answer" value='{{IANAdvanced_3_1_answer}}' style="width:50px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANAdvanced_3_1_answer_correct is defined %}
+					{% if IANAdvanced_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANAdvanced_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">the total value of all the notes if there are as many $1 notes as $2 notes in terms of <font class="grade7Variables">y</font></div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">Answer: $</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				{% if IANAdvanced_3_2_answer_correct is defined %}
+					<input id="IANAdvanced_3_2_answer" value='{{IANAdvanced_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="IANAdvanced_3_2_answer" value='{{IANAdvanced_3_2_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANAdvanced_3_2_answer_correct is defined %}
+					{% if IANAdvanced_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANAdvanced_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">c)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">the total value of all the notes in terms of <font class="grade7Variables">y</font> if there are 2 $2 notes for every 4 $5 notes.</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">Answer: $</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+				{% if IANAdvanced_3_3_answer_correct is defined %}
+					<input id="IANAdvanced_3_3_answer" value='{{IANAdvanced_3_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="IANAdvanced_3_3_answer" value='{{IANAdvanced_3_3_answer}}' style="width:30px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if IANAdvanced_3_3_answer_correct is defined %}
+					{% if IANAdvanced_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{IANAdvanced_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if IANAdvanced_3_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="IANAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="IANAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#IANAdvanced_3_1_answer").change(function()
+	{
+		question_id = "IANAdvanced_3";
+		question_type = "AlgebraicNotations"
+		answer_id = "IANAdvanced_3_1_answer";
+		entered_answer = $("#IANAdvanced_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#IANAdvanced_3_2_answer").change(function()
+			{
+				question_id = "IANAdvanced_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANAdvanced_3_2_answer";
+				entered_answer = $("#IANAdvanced_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#IANAdvanced_3_3_answer").change(function()
+			{
+				question_id = "IANAdvanced_3";
+				question_type = "AlgebraicNotations"
+				answer_id = "IANAdvanced_3_3_answer";
+				entered_answer = $("#IANAdvanced_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#IANAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#IANAdvanced_3_Retry").button({label:"Retry"});
+	$("#IANAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraicNotations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "IANAdvanced_3"+"#%$"+"IANAdvanced_3_1_answer"+"#%$"+$("#IANAdvanced_3_1_answer").val();
+		answers = answers + "#%$"+"IANAdvanced_3"+"#%$"+"IANAdvanced_3_2_answer"+"#%$"+$("#IANAdvanced_3_2_answer").val();
+		answers = answers + "#%$"+"IANAdvanced_3"+"#%$"+"IANAdvanced_3_3_answer"+"#%$"+$("#IANAdvanced_3_3_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#IANAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "IANAdvanced_3_1_answer,IANAdvanced_3_2_answer,IANAdvanced_3_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

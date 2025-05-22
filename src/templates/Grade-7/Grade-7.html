@@ -1,0 +1,37 @@
+{% extends 'MainPage-Grade-7.html' %}
+
+{% block body %}
+ <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/no-flexbox.css" />
+<![endif]-->
+<script type="text/javascript" src="/js/Grade7/Grade7.js"></script>
+<script type="text/javascript" src="/js/Grade7/Grade7_SumbitAnswer.js"></script>
+<script src="/js/LoginAsUser.js" type="text/javascript"></script>
+<script>
+	{% if pageRedirectName is defined %}
+			//loading the page from which the user signed in instead of going back to the first page
+			document.location = "/Secondary-1-Grade-7-Mathematics#!"+'{{pageRedirectName}}';
+	{% endif %}
+</script>
+<br>
+<div id="grade7TOCLink" style="text-align:center;display:none;"><a href="javascript:Grade7BookPageLoadByName('Table-Of-Contents')">Table of Contents</a></div>
+<div id="grade7BTOCLink" style="text-align:center;display:none;"><a href="javascript:Grade7BookPageLoadByName('Table-Of-Contents-7B-2')">Table of Contents</a></div>
+<div id="grade7CTOCLink" style="text-align:center;display:none;"><a href="javascript:Grade7BookPageLoadByName('Table-Of-Contents-7C')">Table of Contents</a></div>
+<div id="Grade7BookShelf" style="display:none;text-align:center;">
+	<div id="Grade7aCoverPageDesktop" class="Grade7aCoverPageDesktop" style="display:inline-block;"></div>
+	<div style="display:inline-block;width:60px;">&nbsp;</div>
+	<div id="Grade7bCoverPageDesktop" class="Grade7bCoverPageDesktop" style="display:inline-block;"></div>
+</div>
+<div id="Grade7PageContainer" class="Grade7PageContainer" style="display:none;">
+	<div class="IE-no-flex" style="margin-right:-0.086%">
+		<div id="leftPage" class="Grade7Pages"></div>
+		<div id="leftPageArrow"></div>
+    </div>
+    <div class="IE-no-flex" style="margin-left:0%">
+    	<div id="rightPage" class="Grade7Pages"></div>
+    	<div id="rightPageArrow"></div>
+    </div>	
+</div>
+<br><br>
+{% endblock %}
+

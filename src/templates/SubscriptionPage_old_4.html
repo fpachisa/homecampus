@@ -1,0 +1,252 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div style="background-image: url(/images/site/background.png);">
+<div id="HomeContent">
+<script type="text/javascript" src="/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript">
+	$(function() {
+    	$('#PayAsYouWish').lightBox();
+    	$('#PayAsYouWish_1').lightBox();
+    	$('#WhyPay').lightBox();
+		});
+</script>
+	{% if child_info | length == 0 %}
+		<link type="text/css" rel="stylesheet" href="/stylesheets/jqModal.css"/>
+		<script src="/js/jqModal.js" type="text/javascript"></script>
+		<div style="width:400px;" class="jqmWindow" id="CreateUser">
+			<div style="text-align:center;"><font class="legendText" style="font-size:18px;color:#25acc3;">Create your child account first.</font></div>
+			<div style="text-align:center;margin-top:20px;"><button id="AddUser" style="outline:none;"></button></div>
+		</div>
+		<script type="text/javascript">
+		$('#CreateUser').jqm({modal:true});
+		$('#CreateUser').jqmShow();
+		$("#AddUser").button({label:"Add Child"});
+		$("#AddUser").blur();
+		$("#AddUser").click(function()
+    		{
+				window.location.href = '/MyProfile';
+    		}
+    		); 		
+		</script>
+	{% else %}	
+	    <div style="display: inline-block;vertical-align:top;margin-left:100px;margin-top:30px;">
+	    <form id="SubscriptionPage">
+		<fieldset>
+				<legend><b><font style="font-size:18px;margin-left:100px;color:#25acc3;">Pay As You Wish</font></b> (<a id = "WhyPay" style="color:orange;text-decoration:underline;font-weight:bold;" href="/images/site/why_pay.png" title="Pay As You Wish!!">WHY PAY?</a>)</legend><br>
+				<div>
+				<fieldset>
+				{% if child_info | length == 1%}
+					<legend><b>Child Name:</b>  {{child_info[0][0]}}</legend>
+					<input type="hidden" id="username" value='{{child_info[0][1]}}'>
+				{% else %}
+					<legend><b>Child Name:</b></legend>
+					<select id ='username'>
+						{% for child in child_info %}
+							<option value='{{child[1]}}'>{{child[0]}}</option>
+						{% endfor %}
+					</select>
+				{% endif %}					
+				</fieldset><br>
+				<fieldset>
+					<div style="margin-left:10px;"><input id=subscription_amount name=subscription_amount type=text required size=4 style="text-align:right;background:#99FF33; border: 2px solid #15CA40;" placeholder='' value=4.88></div> 
+					<div id='FeeMessageCallout'>{{FeeMessage|safe}}</div>
+				</fieldset>
+				<fieldset>
+					<div id="annualRadio">
+						<div style=""><input type=radio name=subscription_period id=annual_radio  value='annual' checked style="outline: none;">Annual: <b>USD</b><input id="annual_amount" value=2.48 readonly size=4 style="background:#fff;font-weight:bold;" onfocus="this.blur()">/ MO</div>
+						<div id="annual_save_image" style="margin-left:200px;margin-top:-30px;"><img src="/images/site/annual_save.png"></div>
+					</div>
+					<div id="monthlyRadio" style="margin-top:10px;">
+						<input type=radio name=subscription_period id=monthly_radio value='monthly' style="outline: none;">Monthly: <b>USD</b><input id="monthly_amount" value=4.88 readonly size=4 style="background:#fff;font-weight:bold;" onfocus="this.blur()">/ MO
+					</div>
+				</fieldset>
+				<a href="javascript:startSubscription()" ><img src='https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif' border='0' /></a>&nbsp;&nbsp;&nbsp;&nbsp;<img src='/images/site/credit_card_logos.png' border='0' />
+				<br>
+					<div id="annualMessage"><font style="font-size:0.8em;">Billed annually. You may cancel it anytime.</font></div>
+					<div id="monthlyMessage" style="display:none;"><font style="font-size:0.8em;">Billed monthly. You may cancel it anytime.</font></div>   
+				</div>
+		</fieldset>
+	</form>
+	</div>
+	{% endif %}
+<div id="error_dialog" style="diplay:none"></div>
+<div id="apple_dialog" style="diplay:none;"></div>
+</div>
+		<script src ='https://www.paypalobjects.com/js/external/dg.js' type='text/javascript'></script>
+        <script type="text/javascript">
+		
+		$(document).ready(function() { $("#FeeMessageCallout").delay(1000).fadeIn(5000); });
+		
+			var dgFlow = new PAYPAL.apps.DGFlow({trigger:null,expType:"light"});
+        	function startSubscription()
+        	{
+        		period = $('input:radio[name=subscription_period]:checked').val();
+        		if (period=="monthly")
+        		{
+        			amount = parseFloat($("#monthly_amount").val());
+        			amount = amount.toFixed(2);
+        		}
+        		else
+        		{
+        			amount = parseFloat($("#annual_amount").val())*12;
+        			amount = amount.toFixed(2);
+        		}
+        		if(isiApple())
+        		{
+            		if (!isNaN(amount))
+            		{
+            			var URLText = "/Subscribe/Start"
+    	       			var data = {total_amount:amount,
+    	       						username:$("#username").val(),
+    	       						subscription_period:period};
+    	       			$.ajax(
+    	       			{
+    	       				url: URLText,
+    	       				data: data,
+    	       				success: function(responseText)
+    	    				{
+    	       					location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token='+responseText;
+    	    				}
+    	       			});
+            		}
+            		else
+            		{
+                		$("#error_dialog").dialog
+                		({
+                			autoOpen: true,
+                			title:"Oops..",
+                            position:"center",   			
+                			buttons:{"Ok": function(){$(this).dialog("close");}},
+                			modal:true,
+                			close:function(ev, ui) {$("#subscription_amount").focus();}
+                		});
+                		if ($("#subscription_amount").val().length == 0)
+                		{                		
+             				
+                			$("#error_dialog").html("<br>Please enter any amount you wish to pay.");
+                		}
+                		else
+                		{
+                			$("#error_dialog").html("<br>Please enter a number");
+                        }
+                	}
+            	}
+        		else //non-apple goes here
+        		{
+            		if (!isNaN(amount))
+            		{
+            			var URLText = "/Subscribe/Start"
+    	       			var data = {total_amount:amount,
+    	       						username:$("#username").val(),
+    	       						subscription_period:period};
+    	       			$.ajax(
+    	       			{
+    	       				url: URLText,
+    	       				data: data,
+    	       				success: function(responseText)
+    	    				{
+    	       					dgFlow.startFlow('https://www.paypal.com/incontext?token='+responseText);
+    	    				}
+    	       			});
+            		}
+            		else
+            		{
+                		$("#error_dialog").dialog
+                		({
+                			autoOpen: true,
+                			title:"Oops..",
+                            position:"center",   			
+                			buttons:{"Ok": function(){$(this).dialog("close");}},
+                			modal:true,
+                			close:function(ev, ui) {$("#subscription_amount").focus();}
+                		});
+                		if ($("#subscription_amount").val().length == 0)
+                		{                		
+             				
+                			$("#error_dialog").html("<br>Please enter any amount you wish to pay.");
+                		}
+                		else
+                		{
+                			$("#error_dialog").html("<br>Please enter a number");
+                        }
+                	}        			
+        		}
+            }
+        	$("#subscription_amount").change(function()
+        			{
+        				amount = parseFloat($("#subscription_amount").val());
+        				if (isNaN(amount))
+						{
+							amount = 4.88;
+							$("#monthlyRadio").show("fast");
+							$("#annual_save_image").show("fast");
+							annual_amount = (.5 * amount).toFixed(2);
+						}
+        				else
+        				{
+        					if (amount < 1.88)
+		        				{
+		        					amount = 1.88;
+		        					$("#monthlyRadio").hide("fast");
+		        					$('#annual_radio').attr('checked', true);
+		        					$("#monthlyMessage").hide("fast");
+		        					$("#annual_save_image").hide("fast");
+		        					$("#annualMessage").show("fast");
+		        					annual_amount = amount.toFixed(2);
+		                		}
+        					else if (amount>=1.88 && amount<=3.76)
+        						{
+        							$("#monthlyRadio").hide("fast");
+        							$('#annual_radio').attr('checked', true);
+                					$("#monthlyMessage").hide("fast");
+                					$("#annual_save_image").hide("fast");
+                					$("#annualMessage").show("fast");
+                					annual_amount = amount.toFixed(2);
+        						}
+        					else
+        						{
+        							$("#monthlyRadio").show("fast");
+        							$("#annual_save_image").show("fast");
+        							annual_amount = (.5 * amount).toFixed(2);
+        						}
+        				}
+        				
+        				$("#subscription_amount").val(amount.toFixed(2));
+        				$("#annual_amount").val(annual_amount);
+        				$("#monthly_amount").val(amount.toFixed(2));
+    					
+        			});
+        	
+        	$("input:radio[name=subscription_period]").click(function()
+        			{
+        				period = $('input:radio[name=subscription_period]:checked').val();
+        				if (period=="monthly")
+        				{
+        					$("#annualMessage").hide("fast");
+        					$("#monthlyMessage").show("fast");
+        				}
+        				else
+        				{
+        					$("#monthlyMessage").hide("fast");
+        					$("#annualMessage").show("fast");        					
+        				}
+        			});
+        	
+        	function isiApple()
+        	{
+        		var ua = navigator.userAgent.toLowerCase();
+        	    return (
+        	        //Detect iPhone
+        	        (navigator.platform.indexOf("iPhone") != -1) ||
+        	        //Detect iPad
+        	        (navigator.platform.indexOf("iPad") != -1) ||
+        	        //Detect iPod
+        	        (navigator.platform.indexOf("iPod") != -1) ||
+					//Detect Android
+        	        (ua.indexOf("android") > -1)
+        	    );
+        	}       	        	
+		</script>
+</div>
+{% endblock %}

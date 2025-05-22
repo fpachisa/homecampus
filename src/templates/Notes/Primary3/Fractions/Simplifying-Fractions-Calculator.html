@@ -1,0 +1,81 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Simplifying Fractions Calculator - Home Campus</title>
+<meta name="keywords" content="Calculate Simplified Fractions">
+<meta name="description" content="How to simplify fractions?" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">How to Simplify Fractions?</h2>
+
+
+<!-- Concept 1 Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(191, 199, 255);">
+		
+		<div class="concept-set__question">
+			<h4>How do you simplify a fraction?</h4>
+		</div>
+					
+		<div class="concept-set__answer">					
+			<div class="col-11 col-off-1">
+				To simplify a fraction, divide its numerator and denominator by the same number. Keep dividing numerator and denominator till they have a common factor. Once there are no more common factors between numerator and denominator, the fraction cannot be further simplified.
+			</div>
+		</div>			
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_3_Math_Practice/Simplifying-Fractions">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept 1 -->
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Simplifying Fractions: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter a Fraction&nbsp;=&nbsp; <input id="fraction" size=6><br><br>
+				<button class="btn-quiz" id="SimplifyFraction" onclick="SimplifyFraction()">Simplify Fraction</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="SimplifyFractionHTML"></div>
+		</div>
+		<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(215, 125, 215);" href="/how-to-simplify-fractions-free-math-worksheets">Download Free Worksheets</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<script>
+
+function SimplifyFraction() {
+	var fraction = document.getElementById("fraction").value;
+	var fractions = fraction.split("/");
+	var numerator = parseInt(fractions[0]);
+	var denominator = parseInt(fractions[1]);
+	var SimplifyFractionHTML = "";
+	var commonFactor = gcd(numerator,denominator);
+
+	if (isNaN(numerator) || isNaN(denominator))
+	{
+		document.getElementById("SimplifyFractionHTML").innerHTML = "<font color='red'>Please input correct fraction. For e.g. 4/16</font>"
+	}
+	else if(commonFactor==1){
+		document.getElementById("SimplifyFractionHTML").innerHTML = "Given fraction "+fraction+" is already in its <strong>simplest form</strong>";
+	}
+	else{
+		simplifiedNumerator = numerator / commonFactor;
+		simplifiedDenominator = denominator / commonFactor;
+		document.getElementById("SimplifyFractionHTML").innerHTML = "Given fraction "+fraction+" can be written in its <strong>simplest form as "+simplifiedNumerator+"/"+simplifiedDenominator+"</strong>";
+	}
+	
+}
+
+function gcd(k, n) {
+    return k ? gcd(n % k, k) : n;
+}
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you simplify a fraction?","acceptedAnswer":{"@type":"Answer","text":"To simplify a fraction, divide its numerator and denominator by the same number. Keep dividing numerator and denominator till they have a common factor. Once there are no more common factors between numerator and denominator, the fraction cannot be further simplified."}}]}</script>
+
+{% endblock %}

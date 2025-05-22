@@ -1,0 +1,50 @@
+<div style="height:460px;">
+	<div class="grade7TOC">TABLE OF CONTENTS</div>
+	<div id="grade7cTopics">
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 11</div>
+		<div class="grade7TOCChapterTopic" id="ChapterAPP" style="cursor:pointer;">Angles and Parallel Lines</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 12</div>
+		<div class="grade7TOCChapterTopic" id="ChapterTQP" style="cursor:pointer;">Triangles, Quadrilaterals and Polygons</div>		
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 13</div>
+		<div class="grade7TOCChapterTopic" id="ChapterFnG" style="cursor:pointer;">Functions and Graphs</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 14</div>
+		<div class="grade7TOCChapterTopic" id="ChapterAPPF" style="cursor:pointer;">Area and Perimeter of Plane Figures</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 15</div>
+		<div class="grade7TOCChapterTopic" id="ChapterVSA" style="cursor:pointer;">Volume and Surface Area of 3D Objects</div>
+		<br>
+		<div class="grade7TOCChapterNumber">Chapter 16</div>
+		<div class="grade7TOCChapterTopic" id="ChapterDH" style="cursor:pointer;">Data Handling</div>
+	</div>
+
+	<div style="display:none;cursor:pointer;color:grey;margin-top:30px;float:right;margin-right:40px;" id="backButton">Go back</div>
+	<div id="APPSubTopics" style="display:none;margin-top:10px;">
+		<div class="grade7TOCChapterTopic" style="display:inline-block;width:300px;"><a href="javascript:Grade7BookPageLoadByName('Angles-Parallel-Lines-Learning-Outcomes')">Angles and Parallel Lines</a></div>
+		<div class="grade7TOCChapterSubTopic"><a href="javascript:Grade7BookPageLoadByName('Points-Lines-Planes-1')">11.1 Points, Lines and Planes</a></div>
+		<div class="grade7TOCPracticeQuestions"><a href="javascript:Grade7BookPageLoadByName('Points-Lines-Planes-Easy-Questions-1')">Practice Questions</a></div>
+	</div>
+	
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>
+
+<script>
+$("#backButton").click(function()
+		{
+			$("#APPSubTopics").fadeOut();
+			
+			$("#backButton").fadeOut();
+			$("#grade7cTopics").delay(1000).fadeIn();
+		});
+	$("#ChapterAPP").click(function()
+		{
+			$("#grade7cTopics").fadeOut();
+			$("#APPSubTopics").delay(1000).fadeIn();
+			$("#backButton").delay(1000).fadeIn();
+			
+	  	});
+	
+</script>

@@ -1,0 +1,32 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div>
+<div id="HomeContent">
+	<br>
+    <form id="SubscriptionPage" method="post" action="{{ current_url }}" enctype="multipart/form-data" style="width:500px;">
+	<fieldset>
+		<legend><b><font style="font-size:18px;margin-left:100px;color:#25acc3;">Cancel Subscription</font></b> </legend><br>
+		{% if cancelled == "Y"%}
+		<legend>Your subscription has been cancelled and no further charges will be made to your account.<br>
+				You can still use all the features of Home Campus till the end of your subscription period.<br>
+				Thanks for your support.
+		</legend>
+		{% else %}
+			{% if child_info | length == 1%}
+				<legend><b>Child Name:</b>  {{child_info[0][0]}}</legend>
+				<input type="hidden" id="user_id" name="user_id" value='{{child_info[0][1]}}'>
+			{% else %}
+				<legend><b>Child Name:</b></legend>
+				<select id ='user_id' name='user_id'>
+					{% for child in child_info %}
+						<option value='{{child[1]}}'>{{child[0]}}</option>
+					{% endfor %}
+				</select>
+			{% endif %}					
+				<div><button type="submit" class="btn-primary">Cancel</button></div>
+		{% endif %}
+	</fieldset>
+</form>
+</div>
+</div>
+{% endblock %}

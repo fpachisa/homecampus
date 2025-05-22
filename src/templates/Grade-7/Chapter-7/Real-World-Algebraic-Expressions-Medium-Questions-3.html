@@ -1,0 +1,119 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:25%;">7.4 Translating Real-World Situations into Algebraic Expressions</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;">
+			<div style="display:inline-block;margin-top:0px;">A school project has <font class="grade7Variables">x</font> stages. The deadline for each stage is <font class="grade7Variables">y</font> days.
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">a)</div>
+		<div style="margin-left:0px;margin-top:10px;display:inline-block;width:360px;">Find the maximum number of days allowed to complete the project.</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp; 
+				{% if RWAMedium_4_1_answer_correct is defined %}
+					<input id="RWAMedium_4_1_answer" value='{{RWAMedium_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> days
+				{% else %}
+					<input id="RWAMedium_4_1_answer" value='{{RWAMedium_4_1_answer}}' style="width:30px;" > days
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAMedium_4_1_answer_correct is defined %}
+					{% if RWAMedium_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-left:0px;margin-top:20px;display:inline-block;width:360px;">The project entails a cost of $5 per day. Rama completes each stage 4 days before the deadline. Find the total cost incurred by Rama.
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;$
+				{% if RWAMedium_4_2_answer_correct is defined %}
+					<input id="RWAMedium_4_2_answer" value='{{RWAMedium_4_2_answer}}' readonly style="width:45px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RWAMedium_4_2_answer" value='{{RWAMedium_4_2_answer}}' style="width:45px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RWAMedium_4_2_answer_correct is defined %}
+					{% if RWAMedium_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RWAMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+
+		{% if RWAMedium_4_1_answer_correct is defined %}
+			<div style="margin-top:20px;margin-left:340px;"><button id="RWAMedium_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="RWAMedium_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#RWAMedium_4_1_answer").change(function()
+	{
+		question_id = "RWAMedium_4";
+		question_type = "RealWorldAlgebra"
+		answer_id = "RWAMedium_4_1_answer";
+		entered_answer = $("#RWAMedium_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RWAMedium_4_2_answer").change(function()
+			{
+				question_id = "RWAMedium_4";
+				question_type = "RealWorldAlgebra"
+				answer_id = "RWAMedium_4_2_answer";
+				entered_answer = $("#RWAMedium_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#RWAMedium_3_Submit").button({label:"Check Answers"});
+	$("#RWAMedium_3_Retry").button({label:"Retry"});
+	$("#RWAMedium_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RealWorldAlgebra"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RWAMedium_4"+"#%$"+"RWAMedium_4_1_answer"+"#%$"+$("#RWAMedium_4_1_answer").val();
+		answers = answers + "#%$"+"RWAMedium_4"+"#%$"+"RWAMedium_4_2_answer"+"#%$"+$("#RWAMedium_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RWAMedium_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RWAMedium_4_1_answer,RWAMedium_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

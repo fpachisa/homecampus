@@ -1,0 +1,156 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A ball covers 100 m in 8 seconds. Find the rate at which the ball moves in m/s.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if RATEEasy_1_answer_correct is defined %}
+					<input id="RATEEasy_1_answer" value='{{RATEEasy_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> m/s
+				{% else %}
+					<input id="RATEEasy_1_answer" value='{{RATEEasy_1_answer}}' style="width:30px;" > m/s
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEEasy_1_answer_correct is defined %}
+					{% if RATEEasy_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEEasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			A 250 gm cubical bottle of mayonnaise costs $7.50.
+		</div>
+		<br>
+		<div style="margin-left:60px;margin-top:20px;display:inline-block;width:15px;">a)</div>
+		<div style="margin-top:20px;display:inline-block;width:360px;vertical-align:top;">
+			Find the price of the sauce per gm.
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp; $
+				{% if RATEEasy_2_1_answer_correct is defined %}
+					<input id="RATEEasy_2_1_answer" value='{{RATEEasy_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> / gm
+				{% else %}
+					<input id="RATEEasy_2_1_answer" value='{{RATEEasy_2_1_answer}}' style="width:30px;" > / gm
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEEasy_2_1_answer_correct is defined %}
+					{% if RATEEasy_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:20px;display:inline-block;width:15px;">b)</div>
+		<div style="margin-top:20px;display:inline-block;width:360px;vertical-align:top;">
+			Find the mass of the mayonnaise per unit volume, if a side of the bottle is 8 cm long. Round off your answer to 2 decimal places.
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if RATEEasy_2_2_answer_correct is defined %}
+					<input id="RATEEasy_2_2_answer" value='{{RATEEasy_2_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> gm / cm<sup>3</sup>
+				{% else %}
+					<input id="RATEEasy_2_2_answer" value='{{RATEEasy_2_2_answer}}' style="width:30px;" > gm / cm<sup>3</sup>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEEasy_2_2_answer_correct is defined %}
+					{% if RATEEasy_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>		
+		
+		{% if RATEEasy_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RATEEasy_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RATEEasy_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATEEasy_1_answer").change(function()
+	{
+		question_id = "RATEEasy_1";
+		question_type = "Rate"
+		answer_id = "RATEEasy_1_answer";
+		entered_answer = $("#RATEEasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATEEasy_2_1_answer").change(function()
+			{
+				question_id = "RATEEasy_2";
+				question_type = "Rate"
+				answer_id = "RATEEasy_2_1_answer";
+				entered_answer = $("#RATEEasy_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATEEasy_2_2_answer").change(function()
+			{
+				question_id = "RATEEasy_2";
+				question_type = "Rate"
+				answer_id = "RATEEasy_2_2_answer";
+				entered_answer = $("#RATEEasy_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});	
+	$("#RATEEasy_1_Submit").button({label:"Check Answers"});
+	$("#RATEEasy_1_Retry").button({label:"Retry"});
+	$("#RATEEasy_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEEasy_1"+"#%$"+"RATEEasy_1_answer"+"#%$"+$("#RATEEasy_1_answer").val();
+		answers = answers + "#%$"+"RATEEasy_2"+"#%$"+"RATEEasy_2_1_answer"+"#%$"+$("#RATEEasy_2_1_answer").val();
+		answers = answers + "#%$"+"RATEEasy_2"+"#%$"+"RATEEasy_2_2_answer"+"#%$"+$("#RATEEasy_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEEasy_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEEasy_1_answer,";
+		answer_ids = answer_ids + "RATEEasy_2_1_answer,RATEEasy_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

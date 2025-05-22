@@ -1,0 +1,136 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:15px;display:inline-block;width:390px;vertical-align:top;">
+			<div>Estimate [(0.9901)<sup>2</sup> &times; <font style="font-size:1.1em;">&radic;</font><span style="text-decoration:overline">2512&nbsp;</span>] &divide; 101.98 correct to 1 significant figure.</div>
+
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp; 
+			{% if AESTEasy_3_answer_correct is defined %}
+				<input id="AESTEasy_3_answer" value='{{AESTEasy_3_answer}}' readonly style="width:35px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESTEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESTEasy_3_answer_correct and AESTEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESTEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESTEasy_3_answer" value='{{AESTEasy_3_answer}}' style="width:35px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Estimate and give the answer correct to 1 s.f.:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:20px;">a)</div>
+			<div style="display:inline-block;"><img src="/images/Grade7/G7_AE_Estimation_Easy_4a.png"></div>
+			<div style="display:inline-block;vertical-align:top;margin-top:10px;">&#8776; &nbsp;&nbsp;
+				{% if AESTEasy_4_1_answer_correct is defined %}
+					<input id="AESTEasy_4_1_answer" value='{{AESTEasy_4_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESTEasy_4_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESTEasy_4_1_answer_correct and AESTEasy_4_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESTEasy_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESTEasy_4_1_answer" value='{{AESTEasy_4_1_answer}}' style="width:40px;" > &nbsp;
+				{% endif %}
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b)	(60.134 &times; 4.86) &divide; 1.98
+			&#8776; &nbsp;&nbsp;	
+				{% if AESTEasy_4_2_answer_correct is defined %}
+					<input id="AESTEasy_4_2_answer" value='{{AESTEasy_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESTEasy_4_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESTEasy_4_2_answer_correct and AESTEasy_4_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESTEasy_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESTEasy_4_2_answer" value='{{AESTEasy_4_2_answer}}' style="width:50px;" > &nbsp;
+				{% endif %}		
+		</div>
+		
+		{% if AESTEasy_3_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="AESTEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESTEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESTEasy_3_answer").change(function()
+	{
+		question_id = "AESTEasy_3";
+		question_type = "Estimation"
+		answer_id = "AESTEasy_3_answer";
+		entered_answer = $("#AESTEasy_3_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	$("#AESTEasy_4_1_answer").change(function()
+			{
+				question_id = "AESTEasy_4";
+				question_type = "Estimation"
+				answer_id = "AESTEasy_4_1_answer";
+				entered_answer = $("#AESTEasy_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESTEasy_4_2_answer").change(function()
+			{
+				question_id = "AESTEasy_4";
+				question_type = "Estimation"
+				answer_id = "AESTEasy_4_2_answer";
+				entered_answer = $("#AESTEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#AESTEasy_2_Submit").button({label:"Check Answers"});
+	$("#AESTEasy_2_Retry").button({label:"Retry"});
+	$("#AESTEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Estimation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESTEasy_3"+"#%$"+"AESTEasy_3_answer"+"#%$"+$("#AESTEasy_3_answer").val();
+		answers = answers + "#%$"+"AESTEasy_4"+"#%$"+"AESTEasy_4_1_answer"+"#%$"+$("#AESTEasy_4_1_answer").val();
+		answers = answers + "#%$"+"AESTEasy_4"+"#%$"+"AESTEasy_4_2_answer"+"#%$"+$("#AESTEasy_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESTEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESTEasy_3_answer,AESTEasy_4_1_answer,AESTEasy_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

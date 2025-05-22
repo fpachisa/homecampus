@@ -1,0 +1,124 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">A traveler from Australia flew to the UK. Upon arriving at the destination, he went to Foreign Exchange A and exchanged 6500 Australian dollars (AUD) for British pounds (GBP) at the exchange rate of 1 AUD to 0.545 GBP. He spent 2112.50 GBP while in the UK. At the end of his stay he converted the remaining pounds to Euros (EUR) at the rate of 1 GBP to 1.283 EUR at Foreign Exchange B. Find:
+			</div>
+		</div>
+		<br>
+		<div style="margin-left:60px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">a)</div>
+		<div style="margin-top:10px;display:inline-block;width:360px;">
+			The sum of money in GBP received at Foreign Exchange A.
+		</div>			
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp; &pound;
+				{% if RATEAdvanced_4_1_answer_correct is defined %}
+					<input id="RATEAdvanced_4_1_answer" value='{{RATEAdvanced_4_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATEAdvanced_4_1_answer" value='{{RATEAdvanced_4_1_answer}}' style="width:50px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEAdvanced_4_1_answer_correct is defined %}
+					{% if RATEAdvanced_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEAdvanced_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:20px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-top:20px;display:inline-block;width:360px;">
+			The sum of money in EUR received at Foreign Exchange B.
+		</div>				
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp; &euro;
+				{% if RATEAdvanced_4_2_answer_correct is defined %}
+					<input id="RATEAdvanced_4_2_answer" value='{{RATEAdvanced_4_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATEAdvanced_4_2_answer" value='{{RATEAdvanced_4_2_answer}}' style="width:50px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEAdvanced_4_2_answer_correct is defined %}
+					{% if RATEAdvanced_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEAdvanced_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		
+		{% if RATEAdvanced_4_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RATEAdvanced_3_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RATEAdvanced_3_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATEAdvanced_4_1_answer").change(function()
+	{
+		question_id = "RATEAdvanced_4";
+		question_type = "Rate"
+		answer_id = "RATEAdvanced_4_1_answer";
+		entered_answer = $("#RATEAdvanced_4_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATEAdvanced_4_2_answer").change(function()
+			{
+				question_id = "RATEAdvanced_4";
+				question_type = "Rate"
+				answer_id = "RATEAdvanced_4_2_answer";
+				entered_answer = $("#RATEAdvanced_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	
+	$("#RATEAdvanced_3_Submit").button({label:"Check Answers"});
+	$("#RATEAdvanced_3_Retry").button({label:"Retry"});
+	$("#RATEAdvanced_3_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEAdvanced_4"+"#%$"+"RATEAdvanced_4_1_answer"+"#%$"+$("#RATEAdvanced_4_1_answer").val();
+		answers = answers + "#%$"+"RATEAdvanced_4"+"#%$"+"RATEAdvanced_4_2_answer"+"#%$"+$("#RATEAdvanced_4_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEAdvanced_3_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEAdvanced_4_1_answer,RATEAdvanced_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

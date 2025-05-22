@@ -1,0 +1,202 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">Evaluate:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">7<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:5px;"> &times; </div>			
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:5px;">2</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">7<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:5px;"> &divide; </div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-10px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">14<br></p>
+			</div>			
+			<div style="margin-left:0px;margin-top:10px;">Correct to 3 decimal places &nbsp; 
+				{% if AESFMedium_1_1_answer_correct is defined %}
+					<input id="AESFMedium_1_1_answer" value='{{AESFMedium_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFMedium_1_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFMedium_1_1_answer_correct and AESFMedium_1_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFMedium_1_1_answer" value='{{AESFMedium_1_1_answer}}' style="width:50px;" > &nbsp;
+				{% endif %}	
+			</div>			
+
+			<div style="margin-top:20px;">Correct to 3 s.f.: &nbsp; 
+				{% if AESFMedium_1_2_answer_correct is defined %}
+					<input id="AESFMedium_1_2_answer" value='{{AESFMedium_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFMedium_1_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFMedium_1_2_answer_correct and AESFMedium_1_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFMedium_1_2_answer" value='{{AESFMedium_1_2_answer}}' style="width:50px;" > &nbsp;
+				{% endif %}	
+			</div>			
+		</div>
+		<br>		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="">Evaluate 71.9896 &minus; 80.0092 and give your answer correct to 4 s.f.	</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+				{% if AESFMedium_2_answer_correct is defined %}
+					<input id="AESFMedium_2_answer" value='{{AESFMedium_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFMedium_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFMedium_2_answer_correct and AESFMedium_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFMedium_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFMedium_2_answer" value='{{AESFMedium_2_answer}}' style="width:50px;" > &nbsp;
+				{% endif %}	
+			</div>		
+		</div>
+		<br>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Mr. Alex bought a motorbike for $17 590. Round off the price of the motorbike accurate to:
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">a) Hundreds place &nbsp;&nbsp;&nbsp;
+			Answer: &nbsp; $ 
+			{% if AESFMedium_3_1_answer_correct is defined %}
+				<input id="AESFMedium_3_1_answer" value='{{AESFMedium_3_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESFMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESFMedium_3_1_answer_correct and AESFMedium_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESFMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESFMedium_3_1_answer" value='{{AESFMedium_3_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">b) 2 s.f. &nbsp;&nbsp;&nbsp;
+			Answer: &nbsp; $ 
+			{% if AESFMedium_3_2_answer_correct is defined %}
+				<input id="AESFMedium_3_2_answer" value='{{AESFMedium_3_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if AESFMedium_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESFMedium_3_2_answer_correct and AESFMedium_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESFMedium_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESFMedium_3_2_answer" value='{{AESFMedium_3_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		
+
+		
+		{% if AESFMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:-20px;margin-left:360px;"><button id="AESFMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:10px;margin-left:280px;"><button id="AESFMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESFMedium_1_1_answer").change(function()
+	{
+		question_id = "AESFMedium_1";
+		question_type = "SignificantFigures"
+		answer_id = "AESFMedium_1_1_answer";
+		entered_answer = $("#AESFMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESFMedium_1_2_answer").change(function()
+			{
+				question_id = "AESFMedium_1";
+				question_type = "SignificantFigures"
+				answer_id = "AESFMedium_1_2_answer";
+				entered_answer = $("#AESFMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFMedium_2_answer").change(function()
+			{
+				question_id = "AESFMedium_2";
+				question_type = "SignificantFigures"
+				answer_id = "AESFMedium_2_answer";
+				entered_answer = $("#AESFMedium_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFMedium_3_1_answer").change(function()
+			{
+				question_id = "AESFMedium_3";
+				question_type = "SignificantFigures"
+				answer_id = "AESFMedium_3_1_answer";
+				entered_answer = $("#AESFMedium_3_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFMedium_3_2_answer").change(function()
+			{
+				question_id = "AESFMedium_3";
+				question_type = "SignificantFigures"
+				answer_id = "AESFMedium_3_2_answer";
+				entered_answer = $("#AESFMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	
+	$("#AESFMedium_1_Submit").button({label:"Check Answers"});
+	$("#AESFMedium_1_Retry").button({label:"Retry"});
+	$("#AESFMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SignificantFigures"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESFMedium_1"+"#%$"+"AESFMedium_1_1_answer"+"#%$"+$("#AESFMedium_1_1_answer").val();
+		answers = answers + "#%$"+"AESFMedium_1"+"#%$"+"AESFMedium_1_2_answer"+"#%$"+$("#AESFMedium_1_2_answer").val();
+		answers = answers + "#%$"+"AESFMedium_2"+"#%$"+"AESFMedium_2_answer"+"#%$"+$("#AESFMedium_2_answer").val();
+		answers = answers + "#%$"+"AESFMedium_3"+"#%$"+"AESFMedium_3_1_answer"+"#%$"+$("#AESFMedium_3_1_answer").val();
+		answers = answers + "#%$"+"AESFMedium_3"+"#%$"+"AESFMedium_3_2_answer"+"#%$"+$("#AESFMedium_3_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESFMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESFMedium_1_1_answer,AESFMedium_1_2_answer,AESFMedium_2_answer,AESFMedium_3_1_answer,AESFMedium_3_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

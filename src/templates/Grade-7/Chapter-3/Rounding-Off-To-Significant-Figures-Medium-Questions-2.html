@@ -1,0 +1,125 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				Ashley, Brunett and Cynthia were studying together when they had the following conversation:
+				<p>Ashley: I have a doubt. How many significant figures does 9300 have?</p>
+				<p>Brunett: The number 9300 has 3 s.f.</p>
+				<p>Cynthia: No, the number 9300 has 2 s.f.</p>
+				<p>Brunett: I can prove my point by rounding off 9296 to 3 s.f.</p>
+				<p>Cynthia: Even I can prove that I am correct using the same example.</p>
+				<p>Who is correct?</p>			
+			</div>
+		</div>
+		<br>
+		<div style="display:inline-block;margin-left:60px;margin-top:10px;vertical-align:top;">
+			{% if AESFMedium_4_answer_correct is defined %}
+				<input type=radio name="AESFMedium_4_answer" value='a' disabled
+				{% if AESFMedium_4_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Brunett<br>
+				<input type=radio name="AESFMedium_4_answer" value='b' disabled
+				{% if AESFMedium_4_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Cynthia<br>
+				 <input type=radio name="AESFMedium_4_answer" value='c' disabled
+				{% if AESFMedium_4_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Both<br>
+				 <input type=radio name="AESFMedium_4_answer" value='d' disabled
+				{% if AESFMedium_4_answer == 'd'%} 
+   					checked="checked"
+   				{%endif%}
+				 >None&nbsp;&nbsp;
+				{% if AESFMedium_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{AESFMedium_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="AESFMedium_4_answer" value='a'
+				{% if AESFMedium_4_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Brunett<br>
+				<input type=radio name="AESFMedium_4_answer" value='b'
+				{% if AESFMedium_4_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Cynthia<br>			 
+				<input type=radio name="AESFMedium_4_answer" value='c'
+				{% if AESFMedium_4_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Both<br>			 
+				<input type=radio name="AESFMedium_4_answer" value='d'
+				{% if AESFMedium_4_answer == 'd'%} 
+   					checked="checked"
+   				{%endif%}
+				 >None			 
+			{% endif %}	
+		</div>
+		
+		
+		{% if AESFMedium_4_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:340px;"><button id="AESFMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="AESFMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='AESFMedium_4_answer']").click(function()			
+			{
+				question_id = "AESFMedium_4";
+				question_type = "SignificantFigures"
+				answer_id = "AESFMedium_4_answer";
+				entered_answer = $("input:radio[name=AESFMedium_4_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESFMedium_2_Submit").button({label:"Check Answers"});
+	$("#AESFMedium_2_Retry").button({label:"Retry"});
+	$("#AESFMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SignificantFigures"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESFMedium_4"+"#%$"+"AESFMedium_4_answer"+"#%$"+$("input:radio[name=AESFMedium_4_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESFMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESFMedium_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

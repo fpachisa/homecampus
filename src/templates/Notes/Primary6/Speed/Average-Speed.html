@@ -1,0 +1,169 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>What is Average Speed? - Home Campus</title>
+<meta name="description" content="Average Speed" />
+<meta name="keywords" content='"primary 6 maths", "grade 6 math", "Singapore math", "math for kids", elementary, math, story, problems, free, help, online, tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">What is Average Speed?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P6">
+		<div class="learn-set__question">
+			<h4>Important Formulas:</h4>
+		</div>		
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				<b>Average speed</b> &nbsp;=&nbsp; {{ frGen("Total distance travelled","Total time taken") }}<br /><br />
+				
+				<b>Total distance travelled</b> &nbsp;=&nbsp; Average speed &nbsp;&times;&nbsp; Total time taken<br /><br />
+				
+				<b>Total time taken</b> &nbsp;=&nbsp; {{ frGen("Total distance travelled","Average speed") }}
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. Understanding Average Speed</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				A car is going from City A to City B.<br />
+				It starts from City A at 9:00 am and travels the first 30 km at 30 km/h.<br />
+				Next, it is held in a traffic jam for {{ frGen(1,4) }} h.<br />
+				Finally, it travels the next 15 km at 20 km/h and arrives in City B at 11:00 am.<br /><br />
+				
+				<img src="/images/notes/P6_average_speed_explanation.png" alt="average speed"/><br />
+				<b>a) &nbsp; Does the car travel at the same speed throughout the journey?</b><br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No.<br /><br />
+					
+				<b>b) &nbsp; What is the average speed of the car for the journey?</b><br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total distance travelled by the car is 45 km.<br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Let's calculate the total time taken by the car to travel 45 km:<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken for the first 30 km &nbsp;--&gt;&nbsp; 1 h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time lost in the traffic jam &nbsp;--&gt;&nbsp; {{ frGen(1,4) }} h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time taken for the next 15 km &nbsp;--&gt;&nbsp; {{ frGen(3,4) }} h<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total time taken &nbsp;=&nbsp; 1 h &nbsp;+&nbsp; {{ frGen(1,4) }} h &nbsp;+&nbsp; {{ frGen(3,4) }} h &nbsp;=&nbsp; 2 h <br /><br />
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The car travelled a total distance of 45 km in a total of 2 h.<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It travelled an average of 22.5 km in 1 h.<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Its <b>average speed</b> for the journey is 22.5 km/h.<br />
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. An aeroplane takes &nbsp;&nbsp;&nbsp; {{ mixNumGen(5,1,2) }} hours to cover a distance of 4142 km.<br />
+			What is the average speed of the aeroplane?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Distance travelled &nbsp;=&nbsp; 4142 km	<br /><br />
+				
+				Time taken &nbsp;=&nbsp; {{ mixNumGen(5,1,2) }} h &nbsp;=&nbsp; {{ frGen(11,2) }} h<br /><br />
+				
+				<b>Average speed</b><br />
+				=&nbsp; 4142 km &nbsp;&divide;&nbsp;{{ frGen(11,2) }} h <br />
+				=&nbsp; 4142 km &nbsp;&times;&nbsp;{{ frGen(2,11) }} h <br />
+				=&nbsp; 753.1 km/h <br /><br />
+				
+				The average speed of the aeroplane is <b>753.1 km/h</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. Julie cycles at a speed of 215 m/min. <br />
+				How long does it take her to cycle a distance of 1500 m? <br />
+				Round off your answer to the nearest minute.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Speed &nbsp;=&nbsp; 215 m/min	<br /><br />
+				
+				Distance travelled &nbsp;=&nbsp; 1500 m<br /><br />
+				
+				<b>Time taken</b><br />
+				=&nbsp; 1500 m &nbsp;&divide;&nbsp;215 m/min <br />
+				=&nbsp; 6.97 min <br />
+				&asymp;&nbsp; 7 min <br /><br />
+				
+				It takes her about 7 <b>minutes</b>.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. A roller skater skates at an average speed of 35 km/h. <br />
+				Find the distance he covers in 15 minutes.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Speed &nbsp;=&nbsp; 35 km/h	<br /><br />
+				
+				Time taken &nbsp;=&nbsp; 15 min &nbsp;=&nbsp; {{ frGen(1,4) }} h<br /><br />
+				
+				<b>Distance covered</b> &nbsp;=&nbsp; 35 m/h &nbsp;&times;&nbsp; {{ frGen(1,4) }} h &nbsp;=&nbsp; 8.75 km <br /><br />
+				
+				He covers a distance of <b>8.75 km</b> in 15 minutes.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Speed_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula to calculate average speed?","acceptedAnswer":{"@type":"Answer","text":"Average speed  =  Total distance travelled / Total time taken"}},{"@type":"Question","name":"What is the formula for total distance travelled?","acceptedAnswer":{"@type":"Answer","text":"Total distance travelled  =  Average speed  ×  Total time taken"}},{"@type":"Question","name":"What is the formula for total time taken?","acceptedAnswer":{"@type":"Answer","text":"Total time taken  =  Total distance travelled / Average speed"}}]}</script>
+{% endblock %}

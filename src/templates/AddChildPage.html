@@ -1,0 +1,65 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div>
+<div id="NotesContent" ><!-- InstanceBeginEditable name="maincontent" -->
+    <br><br>
+    <div style="display:inline-block;vertical-align:top;">
+    <form id="SubscriptionPage" style="width:500px;" method="post" action="{{ current_url }}" enctype="multipart/form-data">           
+       	<div style="display: inline-block;">
+       	<fieldset>
+       		<legend><font style="color:#237caa">Child Particulars</font></legend>
+       		<fieldset>
+				<legend>First Name:</legend>
+				<input name="child_first_name" id="child_first_name" type="text" value='{{child_first_name}}'><br>
+				<legend>Last Name:</legend>
+				<input name="child_last_name" id="child_last_name" type="text" value='{{child_last_name}}'><br>
+				<legend>Skill Level:</legend>
+				<select id ='skill_grade' name='skill_grade'>
+					<option value='P4'>Primary 4 / Grade 4</option>
+					<option value='P5'>Primary 5 / Grade 5</option>
+					<option value='P6'>Primary 6 / Grade 6</option>
+				</select>
+				<legend>Username:</legend>
+				<input name="username" id="username" type="text" value='{{username}}'><br>
+				<legend>Password:</legend>
+				<input name="child_password" id="child_password" type="password"><br>
+			</fieldset>
+       	</fieldset>
+		</div>
+        <br>
+        <button id="register" style="margin-left:30px;" value="{{ _('Register') }}"></button><br><br>
+
+        <script type="text/javascript">
+        			$("#register").button({label:"Add Child"});
+        			$("#skill_grade").val('{{child_skill}}');
+			        var child_first_name = new LiveValidation('child_first_name',{validMessage:" ", wait:10000});
+					child_first_name.add(Validate.Presence,{failureMessage:"Please enter your child's first name."});
+					var child_last_name = new LiveValidation('child_last_name',{validMessage:" ", wait:10000});
+			        child_last_name.add(Validate.Presence,{failureMessage:"Please enter your child's last name."});
+        			var username = new LiveValidation('username',{validMessage:" ", wait:10000});
+		            username.add(Validate.Presence,{failureMessage:"Please enter desired username for your child."});
+		            username.add(Validate.Length,{tooShortMessage: "Username should be atleast 5 characters long.", minimum: 5});
+		            username.add(Validate.Exclusion,{within:["'"],partialMatch:true,failureMessage:"Username should not include ' symbol."});
+		            var parent_password = new LiveValidation('parent_password',{validMessage:" ", wait:10000});
+		            parent_password.add(Validate.Presence,{failureMessage:"Please enter a password."});                    		            
+		            var child_password = new LiveValidation('child_password',{validMessage:" ", wait:10000});
+		            child_password.add(Validate.Presence,{failureMessage:"Please enter a password."});
+		</script>		
+    </form>
+    </div>
+</div>
+</div>
+	<script src="/js/jquery.gritter.min.js"></script>
+	<script>
+	{% if registration_messages %}
+	 $.gritter.add({
+			// (string | mandatory) the heading of the notification
+			title: 'Registration Message!',
+			// (string | mandatory) the text inside the notification
+			text: '{{registration_messages|safe}}',
+			// (bool | optional) if you want it to fade out on its own or just sit there
+			sticky: true,
+		});
+	 {% endif %}
+	</script>
+{% endblock %}

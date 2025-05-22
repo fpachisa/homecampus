@@ -1,0 +1,209 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.1 Ratio</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.1 Ratio</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				Solve the following fractions:
+				<br>			
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">x + y</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y</font><br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">=</div>			
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+					<p style="line-height:20%;text-align:center;">8<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">and</div>			
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y + z</font><br>_____<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">z</font><br></p>
+				</div>				
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">=</div>			
+				<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+					<p style="line-height:20%;text-align:center;">6<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div>to find the ratio</div>
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;"><font class="grade7Variables">x : y : z</font> </div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;"> =
+				{% if RATIOAdvanced_3_1_a_answer_correct is defined or RATIOAdvanced_3_1_b_answer_correct is defined or RATIOAdvanced_3_1_c_answer_correct is defined %}
+					<input id="RATIOAdvanced_3_1_a_answer" value='{{RATIOAdvanced_3_1_a_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 
+					:
+					<input id="RATIOAdvanced_3_1_b_answer" value='{{RATIOAdvanced_3_1_b_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+					:
+					<input id="RATIOAdvanced_3_1_c_answer" value='{{RATIOAdvanced_3_1_c_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATIOAdvanced_3_1_a_answer" value='{{RATIOAdvanced_3_1_a_answer}}' style="width:30px;" > 
+					:
+					<input id="RATIOAdvanced_3_1_b_answer" value='{{RATIOAdvanced_3_1_b_answer}}' style="width:30px;" >
+					:
+					<input id="RATIOAdvanced_3_1_c_answer" value='{{RATIOAdvanced_3_1_c_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_3_1_a_answer_correct is defined or RATIOAdvanced_3_1_b_answer_correct is defined  or RATIOAdvanced_3_1_c_answer_correct is defined %}
+					{% if RATIOAdvanced_3_1_a_answer_correct and RATIOAdvanced_3_1_b_answer_correct and RATIOAdvanced_3_1_c_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_3_1_a_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				An artist mixed red and yellow colours in the ratio 5 : 4 to make orange. Then he mixed orange and green colours in the ratio 3 : 4 to make brown. If he made 210 ml of brown colour, what volume of red colour was used in it?
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">Red colour = 
+				{% if RATIOAdvanced_4_answer_correct is defined %}
+					<input id="RATIOAdvanced_4_answer" value='{{RATIOAdvanced_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> ml
+				{% else %}
+					<input id="RATIOAdvanced_4_answer" value='{{RATIOAdvanced_4_answer}}' style="width:30px;" > ml
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_4_answer_correct is defined %}
+					{% if RATIOAdvanced_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>		
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">5)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">
+				On a certain day, the exchange rate between Singapore dollars (SGD) and US dollars (USD) is 1 : 0.8. The exchange rate between Euros (EUR) and USD is 1 : 1.2. A man decides to import an electronic item worth 15000 Euros. What is the price of electronic item in SGD?
+			</div>
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:20px;margin-top:0px;">Price in SGD = 
+				{% if RATIOAdvanced_5_answer_correct is defined %}
+					<input id="RATIOAdvanced_5_answer" value='{{RATIOAdvanced_5_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> 
+				{% else %}
+					<input id="RATIOAdvanced_5_answer" value='{{RATIOAdvanced_5_answer}}' style="width:50px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:-10px;">
+				{% if RATIOAdvanced_5_answer_correct is defined %}
+					{% if RATIOAdvanced_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATIOAdvanced_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>
+		</div>
+
+		{% if RATIOAdvanced_3_1_a_answer_correct is defined %}
+			<div style="margin-top:-30px;margin-left:340px;"><button id="RATIOAdvanced_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-20px;margin-left:280px;"><button id="RATIOAdvanced_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATIOAdvanced_3_1_a_answer").change(function()
+	{
+		question_id = "RATIOAdvanced_3";
+		question_type = "Ratio"
+		answer_id = "RATIOAdvanced_3_1_a_answer";
+		entered_answer = $("#RATIOAdvanced_3_1_a_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOAdvanced_3_1_b_answer").change(function()
+	{
+		question_id = "RATIOAdvanced_3";
+		question_type = "Ratio"
+		answer_id = "RATIOAdvanced_3_1_b_answer";
+		entered_answer = $("#RATIOAdvanced_3_1_b_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATIOAdvanced_3_1_c_answer").change(function()
+		{
+			question_id = "RATIOAdvanced_3";
+			question_type = "Ratio"
+			answer_id = "RATIOAdvanced_3_1_c_answer";
+			entered_answer = $("#RATIOAdvanced_3_1_c_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	$("#RATIOAdvanced_4_answer").change(function()
+		{
+			question_id = "RATIOAdvanced_4";
+			question_type = "Ratio"
+			answer_id = "RATIOAdvanced_4_answer";
+			entered_answer = $("#RATIOAdvanced_4_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+	$("#RATIOAdvanced_5_answer").change(function()
+			{
+				question_id = "RATIOAdvanced_5";
+				question_type = "Ratio"
+				answer_id = "RATIOAdvanced_5_answer";
+				entered_answer = $("#RATIOAdvanced_5_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+					
+	$("#RATIOAdvanced_2_Submit").button({label:"Check Answers"});
+	$("#RATIOAdvanced_2_Retry").button({label:"Retry"});
+	$("#RATIOAdvanced_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Ratio"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATIOAdvanced_3"+"#%$"+"RATIOAdvanced_3_1_a_answer"+"#%$"+$("#RATIOAdvanced_3_1_a_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_3"+"#%$"+"RATIOAdvanced_3_1_b_answer"+"#%$"+$("#RATIOAdvanced_3_1_b_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_3"+"#%$"+"RATIOAdvanced_3_1_c_answer"+"#%$"+$("#RATIOAdvanced_3_1_c_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_4"+"#%$"+"RATIOAdvanced_4_answer"+"#%$"+$("#RATIOAdvanced_4_answer").val();
+		answers = answers + "#%$"+"RATIOAdvanced_5"+"#%$"+"RATIOAdvanced_5_answer"+"#%$"+$("#RATIOAdvanced_5_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATIOAdvanced_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATIOAdvanced_3_1_a_answer,RATIOAdvanced_3_1_b_answer,RATIOAdvanced_3_1_c_answer,";
+		answer_ids = answer_ids + "RATIOAdvanced_4_answer,RATIOAdvanced_5_answer,";
+
+
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

@@ -1,0 +1,160 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#79DA4D;">4.2 Rate</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#79DA4D;margin-left:85%;">4.2 Rate</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">Rachel worked for 7 hours a day and 6 days a week. Her weekly wage was $840.
+			</div>
+		</div>
+		<br>
+		<div style="margin-left:60px;margin-top:10px;display:inline-block;width:15px;">a)</div>
+		<div style="margin-top:10px;display:inline-block;width:360px;">
+			Find her hourly wage rate.
+		</div>			
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp; $
+				{% if RATEMedium_3_1_answer_correct is defined %}
+					<input id="RATEMedium_3_1_answer" value='{{RATEMedium_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATEMedium_3_1_answer" value='{{RATEMedium_3_1_answer}}' style="width:30px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEMedium_3_1_answer_correct is defined %}
+					{% if RATEMedium_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:60px;margin-top:10px;display:inline-block;width:15px;vertical-align:top;">b)</div>
+		<div style="margin-top:10px;display:inline-block;width:360px;vertical-align:top;">
+			Due to surplus labour supply, she is now required to work for only 5 hours a day and 5 days a week at the same hourly wage rate. What is her new weekly wage?
+		</div>			
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp; $
+				{% if RATEMedium_3_2_answer_correct is defined %}
+					<input id="RATEMedium_3_2_answer" value='{{RATEMedium_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="RATEMedium_3_2_answer" value='{{RATEMedium_3_2_answer}}' style="width:30px;" > 
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if RATEMedium_3_2_answer_correct is defined %}
+					{% if RATEMedium_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:20px;margin-top:25px;display:inline-block;width:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">4)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;margin-top:0px;">
+				<div>A swimming pool, 15 ft long, 9 ft wide and 6 ft deep was being filled by a pipe that delivered 25 litres of water in 20 seconds. How long did it take, in hours, to completely fill the pool? Given, 1 ft<sup>3</sup> = 28.3 litres.</div>
+			</div>
+		</div>
+		<br>	
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if RATEMedium_4_answer_correct is defined %}
+					<input id="RATEMedium_4_answer" value='{{RATEMedium_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> hours
+				{% else %}
+					<input id="RATEMedium_4_answer" value='{{RATEMedium_4_answer}}' style="width:40px;" > hours
+				{% endif %}
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:10px;margin-top:0px;">
+				{% if RATEMedium_4_answer_correct is defined %}
+					{% if RATEMedium_4_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RATEMedium_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		
+		{% if RATEMedium_3_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="RATEMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="RATEMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#79DA4D;color:#fff">{{page_number}}</div>
+<script>
+	$("#RATEMedium_3_1_answer").change(function()
+	{
+		question_id = "RATEMedium_3";
+		question_type = "Rate"
+		answer_id = "RATEMedium_3_1_answer";
+		entered_answer = $("#RATEMedium_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RATEMedium_3_2_answer").change(function()
+			{
+				question_id = "RATEMedium_3";
+				question_type = "Rate"
+				answer_id = "RATEMedium_3_2_answer";
+				entered_answer = $("#RATEMedium_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RATEMedium_4_answer").change(function()
+			{
+				question_id = "RATEMedium_4";
+				question_type = "Rate"
+				answer_id = "RATEMedium_4_answer";
+				entered_answer = $("#RATEMedium_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RATEMedium_2_Submit").button({label:"Check Answers"});
+	$("#RATEMedium_2_Retry").button({label:"Retry"});
+	$("#RATEMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "Rate"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RATEMedium_3"+"#%$"+"RATEMedium_3_1_answer"+"#%$"+$("#RATEMedium_3_1_answer").val();
+		answers = answers + "#%$"+"RATEMedium_3"+"#%$"+"RATEMedium_3_2_answer"+"#%$"+$("#RATEMedium_3_2_answer").val();
+		answers = answers + "#%$"+"RATEMedium_4"+"#%$"+"RATEMedium_4_answer"+"#%$"+$("#RATEMedium_4_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RATEMedium_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RATEMedium_3_1_answer,RATEMedium_3_2_answer,";
+		answer_ids = answer_ids + "RATEMedium_4_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

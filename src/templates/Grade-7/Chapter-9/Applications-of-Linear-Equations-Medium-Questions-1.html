@@ -1,0 +1,132 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F693CD;">9.3 Applications of Linear Equations</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F693CD;margin-left:60%;">9.3 Applications of Linear Equations</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">The number of girls who attended a career counselling session was four times the number of boys who attended the counselling. Each person was interviewed individually. After 250 girls and 60 boys had finished their turns, the number of girls left to be interviewed was thrice as many as the number of boys left. Form an equation in terms of the number of girls who attended the session and solve it.</div>
+		<div style="margin-left:60px;margin-top:15px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Number of girls = 
+				{% if C9ALEMedium_1_answer_correct is defined %}
+					<input id="C9ALEMedium_1_answer" value='{{C9ALEMedium_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="C9ALEMedium_1_answer" value='{{C9ALEMedium_1_answer}}' style="width:40px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:-10px;">
+				{% if C9ALEMedium_1_answer_correct is defined %}
+					{% if C9ALEMedium_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9ALEMedium_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			3 meteorite samples were tested in a laboratory. Sample A was twice as heavy as sample B. The mass of sample 
+			<div style="display:inline-block;vertical-align:top;margin-left:-2px;margin-top:5px;">C was 12</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-7px;">
+				<p style="line-height:20%;text-align:center;">1<br>_<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:5px;">kg more than twice that of sample A. Find</div>
+			<div>the mass of sample B, if the sum of the masses of</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">the 3 samples was</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">167<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">10<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:10px;">kg.</div>
+			<div>(Express your answer in decimal form)</div>
+			
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:25px;margin-top:0px;">Answer: &nbsp;
+				{% if C9ALEMedium_2_answer_correct is defined %}
+					<input id="C9ALEMedium_2_answer" value='{{C9ALEMedium_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;">&nbsp;kg
+				{% else %}
+					<input id="C9ALEMedium_2_answer" value='{{C9ALEMedium_2_answer}}' style="width:30px;text-align:center;" >&nbsp;kg
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:-10px;">
+				{% if C9ALEMedium_2_answer_correct is defined %}
+					{% if C9ALEMedium_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{C9ALEMedium_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>				
+		</div>
+
+
+		{% if C9ALEMedium_1_answer_correct is defined %}
+			<div style="margin-top:-20px;margin-left:340px;"><button id="C9ALEMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-20px;margin-left:280px;"><button id="C9ALEMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#EE1997;color:#fff">{{page_number}}</div>
+<script>
+$("#C9ALEMedium_1_answer").change(function()
+	{
+		question_id = "C9ALEMedium_1";
+		question_type = "ApplicationOfLinearEquations"
+		answer_id = "C9ALEMedium_1_answer";
+		entered_answer = $("#C9ALEMedium_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+$("#C9ALEMedium_2_answer").change(function()
+		{
+			question_id = "C9ALEMedium_2";
+			question_type = "ApplicationOfLinearEquations"
+			answer_id = "C9ALEMedium_2_answer";
+			entered_answer = $("#C9ALEMedium_2_answer").val();
+			student_id = '{{current_user.username}}';
+			Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+		});
+
+	$("#C9ALEMedium_1_Submit").button({label:"Check Answers"});
+	$("#C9ALEMedium_1_Retry").button({label:"Retry"});
+	$("#C9ALEMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "ApplicationOfLinearEquations"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C9ALEMedium_1"+"#%$"+"C9ALEMedium_1_answer"+"#%$"+$("#C9ALEMedium_1_answer").val();
+		answers = answers + "#%$"+"C9ALEMedium_2"+"#%$"+"C9ALEMedium_2_answer"+"#%$"+$("#C9ALEMedium_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C9ALEMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C9ALEMedium_1_answer,C9ALEMedium_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

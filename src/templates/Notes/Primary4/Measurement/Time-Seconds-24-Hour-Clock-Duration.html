@@ -1,0 +1,298 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Measuring Time: Seconds, 24-hour Clock and Duration - Home Campus</title>
+<meta name="keywords" content="Time Seconds 24-hour clock duration calculation">
+<meta name="description" content="Measuring Time in 24-hourc Clock, Calculating Seconds Minutes" />
+{% endblock %}
+{% block content %}
+	
+<h2 class="learn-heading">Measuring Time: Seconds, 24-hour Clock and Duration</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(27, 215, 38);" href="/Learn/Time-Duration-Calculator">Calculate Time Duration</a></div>
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>1. Minutes and Seconds</h4></div>			
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_clock_showing_hour_minute_second_hand.png" alt="how to read clock?" /><br />
+				
+				The second is a unit of measurement of time. It is smaller than the minute.<br />
+				We use the second to tell a moment of time more accurately or precisely.
+			</div>
+			<div class="col-4 col-off-1">
+				1 minute &nbsp;=&nbsp; 60 seconds<br />
+				1 min &nbsp;&nbsp;=&nbsp;&nbsp; 60 s<br /><br />
+			</div>
+			<div class="col-3 hint-box">
+				We use <b><i>h</i></b> to denote hour, <b><i>min</i></b> to denote minute and <b><i>s</i></b> to denote second.
+			</div>
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_clock_showing_different_times_in_1_minute.png" alt="what is a second?" /><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(27, 215, 38);" href="/Learn/Time-Units-Converter">Time Units Converter</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question"><h4>2. The 24-Hour Clock</h4></div>			
+		
+		<!--  
+		<div class="learn-set__video">
+			<div><embed src="http://www.youtube.com/v/PKY8cbq-qoY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /></div>
+		</div>
+		-->
+			
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				The following time line shows times in 24-hour clock and 12-hour clock.<br />
+				<img src="/images/notes/P4_time_line_showing_24_hour_and_12_hour_clocks.png" alt="how to read 24-hour clock?" /><br />
+				
+				Rachel leaves home for school at 6.45 in the morning.<br />
+				<img src="/images/notes/P4_time_24_hour_clock_explanation_1.png" alt="24-hour clock" />
+			</div>
+			<div class="col-7 col-off-1">
+				Using the 12-hour clock, we write this time as <b>6.45 a.m.</b> and read it as <b>six forty-five a.m.</b><br /><br />
+				Using the 24-hour clock, we write this time as <b>06 45</b> and read it as <b>zero six forty-five hours</b>.
+			</div>
+			<div class="col-3 hint-box">
+				<b><i>a.m.</i></b> is the period from midnight to noon.
+			</div>
+			<div class="col-11 col-off-1">
+				Rachel returns home from school at 2.25 in the afternoon.<br /><br />
+				<img src="/images/notes/P4_time_24_hour_clock_explanation_2.png" alt="24-hour clock explanation" /><br />
+			</div>
+			<div class="col-7 col-off-1">
+				Using the 12-hour clock, we write this time as <b>2.25 p.m.</b> and read it as <b>two twenty-five p.m.</b><br /><br />
+				Using the 24-hour clock, we write this time as <b>14 25</b> and read it as <b>fourteen twenty-five hours</b>.
+			</div>
+			<div class="col-3 hint-box">
+				<b><i>p.m.</i></b> is the period from noon to midnight.
+			</div>
+			<div class="col-10 hint-box">
+				<br />
+				<b>We add 12 hours to the 12-hour clock time in p.m. to change it to 24-hour clock time.</b><br />
+				<b><i>Example:</i></b> Express 3.45 p.m. using the 24-hour clock.<br />
+				3 &nbsp;+&nbsp; 12 &nbsp;=&nbsp; 15<br >
+				3.45 p.m. is 15 45 in the 24-hour clock.<br /><br />
+				
+				<b>We subtract 12 hours from 24-hour clock time to change it to the 12-hour clock time in p.m.</b><br />
+				<b><i>Example:</i></b> Express 20 30 using the 12-hour clock.<br />
+				20 &nbsp;&minus;&nbsp; 12 &nbsp;=&nbsp; 8<br />
+				20 30 is 8.30 p.m. in the 12-hour clock.
+				<br /><br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+      
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. In the clock below, where should the missing second hand be at?</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_clock_placing_second_hand_1a.png" alt="Calculating time duration and reading clock" /><br /><br />
+				
+				35 seconds later, the missing second hand of the clock will be at the position shown below (the green hand is the <i>second</i> hand).<br /><br />
+				<img src="/images/notes/P4_time_clock_placing_second_hand_1b.png" alt="Calculating time duration and reading clock" />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. Find the duration.</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_clock_finding_duration_2.png" alt="Calculating time duration and reading clock" /><br /><br />
+				
+				The first clock shows a time of 7.45 and 50 s. The second clock shows a time of 7.46 and 15 s.<br/><br />
+				From 7.45 and 50 s to 7.46, the duration is 10 s.<br />
+				From 7.46 to 7.46 and 15 s, the duration is 15 s.<br /><br />
+				10 s + 15 s = <b>25 s</b><br />
+				The duration between the two times is 25 s.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. The following table shows how Dennis spent last Sunday. Complete the table using the 24-hour clock or the 12-hour clock as appropriate.</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_clock_finding_duration_Problem5a.png" alt="Calculating time duration and reading clock" /><br /><br />
+				
+				Here's the completed table:<br /><br />
+				<img src="/images/notes/P4_time_clock_finding_duration_Problem5b.png" alt="Calculating time duration and reading clock" />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>6. Derek started typing a composition at 09 30 and finished typing at 10 45. How long did he take to type the composition?<br />
+				a) Express your answer in minutes.<br />
+    			b) Express your answer in hours and minutes.
+			</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_start_end_duration_word_problem_4.png" alt="Calculating time duration and conversion of minutes to seconds and hours" /><br /><br />
+				
+				a) From 09 30 to 10 45, the duration is 1 h 15 min.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Derek took 1 h 15 min to type the composition.<br /><br />
+				
+				b) From 09 30 to 10 45, the duration is 75 minutes.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Derek took 75 minutes to type the composition.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 6 -->
+
+
+<!-- QUES 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>7. Mikey entered the library at 16 45 and left 1 h 30 min later. At what time did he leave the library?<br />
+				a) Express your answer in 12-hour clock.<br />
+    			b) Express your answer in 24-hour clock.
+			</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-7 col-off-1">
+				<img src="/images/notes/P4_time_start_end_duration_word_problem_5.png" alt="Calculating time duration and converting between 12-hour clock and 24-hour clock" />
+			</div>
+			<div class="col-3 hint-box">
+				30 min = 15 min + 15 min
+			</div>
+			<div class="col-11 col-off-1">
+				a) 1 h 30 min after 16 45 is 18 15.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Using 24-hour clock, he left the library at 18 15.<br /><br />
+				
+				b) 18 15 is 6.15 p.m. in 12-hour clock.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Using 12-hour clock, he left the library at 6.15 p.m.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 7 -->
+
+
+<!-- QUES 8 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<h4>8. The train from Sunshine City to Moonlight City took {{ mixNumGen(2,1,2) }} h. If it left Sunshine City at 10.30 a.m., what time did it reach Moonlight City?<br />
+				a) Express your answer in 12-hour clock.<br />
+    			b) Express your answer in 24-hour clock.
+			</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-11 col-off-1">
+				<img src="/images/notes/P4_time_start_end_duration_word_problem_6.png" alt="Calculating time duration and converting between 12-hour clock and 24-hour clock" /><br />
+
+				&nbsp; 2 h after 10.30 a.m. is 12.30 p.m.<br />
+				{{ frGen(1,2) }} h after 12.30 p.m. is 1.00 p.m.<br /><br />
+				
+				a) {{ mixNumGen(2,1,2) }} h after 10.30 a.m. is 1.00 p.m.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Using 12-hour clock, the train reached Moonlight City at 1.00 p.m.<br /><br />
+				
+				b) 1.00 p.m. is 13 00 in 24-hour clock.<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Using 24-hour clock, the train reached Moonlight City at 13 00.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 8 -->
+
+
+<!-- QUES 9 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>9. Rayan took an overnight flight from Mumbai to Singapore.<br />
+				The flight took 5 h 40 min to arrive in Singapore at 04 15.<br />
+				At what time did the flight leave Mumbai?
+			</h4>
+		</div>			
+		
+		<div class="learn-set__answer">
+			<div class="col-7 col-off-1">
+				<img src="/images/notes/P4_time_start_end_duration_word_problem_7.png" alt="Calculating time duration and converting between 12-hour clock and 24-hour clock" />
+			</div>
+			<div class="col-3 hint-box">
+				Count backwards.
+			</div>
+			<div class="col-3 hint-box">
+				40 min = 15 min + 25 min
+			</div>
+			<div class="col-11 col-off-1">
+				5 h 40 min before 04 15 is 22 35.<br />
+				The flight left Mumbai at 22 35.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Measurement_24-Hour_Clock">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 9 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a second?","acceptedAnswer":{"@type":"Answer","text":"The second is a unit of measurement of time. It is smaller than the minute.<br><br>\n1 minute = 60 seconds"}},{"@type":"Question","name":"What is a.m.?","acceptedAnswer":{"@type":"Answer","text":"a.m. is the period from midnight to noon. "}},{"@type":"Question","name":"What is p.m.?","acceptedAnswer":{"@type":"Answer","text":"p.m. is the period from noon to midnight. "}}]}</script>
+
+{% endblock %}

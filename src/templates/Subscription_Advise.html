@@ -1,0 +1,29 @@
+{% block bottom %}
+	
+    <div style="margin-left:30px;margin-top:30px;">
+		<img src="/images/site/learning_is_every_childs_right.png">
+		<br><br>
+		<div style="margin-left:60px;margin-top:30px;">
+			<font class="legendText" >Only {{Ninja_max-Ninja_value}} more points to the next Ninja level... Don't give up now!!<br><br>
+			<button id="Subscribe"></button></font><a href='{{practice_page}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<font style="font-size=0.5em;text-decoration:underline;">No, thanks</font></a>
+		</div>
+	</div>
+	
+	
+	<!--below script is to create the jQuery button with defaul theming -->
+	<script type="text/javascript">
+		$("#Subscribe").button({label:"Yes, give me that chance"});
+		$("#Practice").button({label:"Practice Another Skill"});
+		$("#Subscribe").click(function()
+    		{
+				window.location.href = '/Subscribe';
+    		}
+    		);
+		$("#Practice").click(function()
+    		{
+				window.location.href = '{{practice_page}}';
+    		}
+    		);
+	</script>
+{% endblock %}

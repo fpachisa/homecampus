@@ -1,0 +1,127 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#7B43A0;">Introduction to Algebra - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="IAG_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;"><font class="grade7PracticeQuestionNumber">10)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			The equation, <font class="grade7Variables">v</font> = <font class="grade7Variables">u</font> + <font class="grade7Variables">at</font>, describes the motion of an object with respect to time
+			<div style="margin-top:10px;">Where,</div>
+			<div style="margin-top:10px;"><font class="grade7Variables">u</font> = initial speed of an object (m/s)</div>			
+			<div style="margin-top:10px;"><font class="grade7Variables">v</font> = final speed of an object (m/s)</div>
+			<div style="margin-top:10px;"><font class="grade7Variables">a</font> = acceleration (m/s<sup>2</sup>)</div>
+			<div style="margin-top:10px;"><font class="grade7Variables">t</font> = time (s)</div>
+			<div style="margin-top:10px;">A man was walking at a uniform speed of 1.5 m/s when he realized that he was late for work. He began to run at a uniform speed of 3 m/s to reach office on time. If he took 5 seconds to attain the final speed, find his acceleration.</div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:10px;margin-top:10px;">Acceleration &nbsp; = &nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="IAGTT1_10_answer" value='{{IAGTT1_10_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> m/s<sup>2</sup>
+				{% else %}
+					<input id="IAGTT1_10_answer" value='{{IAGTT1_10_answer}}' style="width:30px;text-align:center;" > m/s<sup>2</sup>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if IAGTT1_10_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 3 / 3)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{IAGTT1_10_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 3)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 3)</font>
+				{% endif %}
+			</div>		
+		</div>
+
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="IAG_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#IAG_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#IAG_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Introduction-to-Algebra');
+  	});	
+$("#IAG_TT_1_back").button({label:"<<"});
+$("#IAG_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-7/Topical-Test-1-Introduction-to-Algebra-Page-5.html';
+		rightPage = '/Grade-7/Chapter-7/Topical-Test-1-Introduction-to-Algebra-Page-6.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#IAGTT1_10_answer").change(function()
+		{
+			question_id = "IAGTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "IAGTT1_10_answer";
+			entered_answer = $("#IAGTT1_10_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

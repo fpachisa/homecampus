@@ -1,0 +1,176 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Weeks Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to weeks">
+<meta name="description" content="Converter Hours to Weeks" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Weeks?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Weeks Converter: </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToWeeks" onclick="ConvertToWeeks()">Convert To Weeks</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="WeeksAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			1 week &nbsp;=&nbsp; 7 days &nbsp;=&nbsp; 168 hours
+			<br><br>1 hour &nbsp;=&nbsp; 1 &nbsp;&divide;&nbsp; 168 &nbsp;=&nbsp; 0.00595 week
+			<br><br>To convert hours to weeks simply divide the hours by 168 to get weeks.			
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 700 hours to weeks.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Divide 700 by 168
+				<br><br>Total weeks in 700 hours &nbsp;=&nbsp; 700 &nbsp;&divide;&nbsp; 168 &nbsp;=&nbsp; 4.167
+				<br><br>Hence, there are <strong>4.167 weeks in 700 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 24 hours to weeks</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Divide 24 by 168
+				<br><br>Total weeeks in 24 hours &nbsp;=&nbsp; 24 &nbsp;&divide;&nbsp; 168 &nbsp;=&nbsp; 0.14286
+				<br><br>Hence, there is <strong>0.14286 week in 24 hours.</strong>
+			</div>
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliseconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times; 10<sup>-5</sup> decade<br><br>
+				1.1416 &times; 10<sup>-6</sup> century<br><br>
+				1.1416 &times; 10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+<!-- Hour Weeks Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Weeks Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Weeks Chart -->
+
+<script>
+
+function ConvertToWeeks() {
+	var hours = document.getElementById("hour").value;
+	var weeks = hours/168;
+	document.getElementById("WeeksAnswer").innerHTML = "There are "+weeks.toFixed(2)+" weeks in "+hours+" hours."
+}
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 0.00595 weeks<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/168).toFixed(4) + ' weeks<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/168).toFixed(4) + ' weeks<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/168).toFixed(4) + ' weeks<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + ((i+1)/168).toFixed(4) + ' weeks<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many hours are there in a week?","acceptedAnswer":{"@type":"Answer","text":"There are 168 hours in a week."}},{"@type":"Question","name":"How to convert hours to weeks?","acceptedAnswer":{"@type":"Answer","text":"Divide hours by 168 to convert it to weeks."}}]}</script>
+
+{% endblock %}

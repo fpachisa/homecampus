@@ -1,0 +1,243 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frGenDel1(N,D,Q) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><del>{{D}}</del><font color=red><sup>{{Q}}</sup></font></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frGenDel2(N,D,Q1,Q2) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td><del>{{N}}</del><font color=red><sup>{{Q1}}</sup></font></td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><del>{{D}}</del><font color=red><sup>{{Q2}}</sup></font></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>How to Convert Percentage to Fractions and Fractions to Percentage? - Home Campus</title>
+<meta name="description" content="Notes on How to Convert Percentages and Fractions based on Primary 5 syllabus set by MOE Singapore" />
+<meta name="keywords" content="convert, percentage, percent, fractions, maths sums, examples, maths worksheets, grade 5 math, P5 maths, Singapore maths, math home tuition">
+{% endblock %}
+{% block content %}
+      
+<!-- InstanceBeginEditable name="maincontent" -->
+
+<h2 class="learn-heading">How to Convert Percentage to Fractions and Fractions to Percentage?</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Fraction">Practice Unlimited Questions</a></div>
+
+
+<!-- Concept Covered -->
+<div class="concept-set">
+	<div class="concept-set__container" style="background-color: rgb(194, 237, 255);">			
+		<div class="concept-set__question">
+			<h4>Concepts Explained</h4>
+		</div>						
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1">
+				1. <a href="#concept-1">How to convert percentage to fractions?</a><br><br>
+				2. <a href="#concept-2">How to convert fractions to percentage?</a>
+			</div>							
+		</div>
+	</div>
+</div><!-- End of concept Covered-->
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P5">
+		
+		<div class="concept-set__question">
+			<h4>Converting a percent value to a fraction and vice versa</h4>
+		</div>
+
+		<div class="learn-set__video">
+			<div>
+				<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/lRYvtHyoDP0?html5=1" frameborder="0"> </iframe>
+				
+				<!-- <embed src="http://www.youtube.com/v/UbY_3OK0KaY?version=3&rel=0&showinfo=0&iv_load_policy=1&feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="380" height="242" /> -->
+			</div>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-11 col-off-1" style="margin-top: 2%;">
+				Percentages and fractions are related to each other and can be converted from one form to the other.<br />
+				The video tutorial above explains the steps in detail.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-1">
+				1.&nbsp; Following is a cookie box containing 100 assorted cookies of 4 different shapes.<br />
+				a)&nbsp; Find out the fraction of cookies that are heart-shaped.<br />
+				b)&nbsp; Find out the fraction of cookies that are round.<br />
+				c)&nbsp; Find out the fraction of cookies that are square-shaped.<br />
+				d)&nbsp; Find out the fraction of cookies that are star-shaped.
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/change_percentage_to_fraction.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					<b>Heart-shaped cookies</b><br />
+					=&nbsp; 10% of the box<br />
+					=&nbsp; 10 out of 100<br />
+					=&nbsp; {{ frGenDel2(10,100,1,10) }}<br />
+					=&nbsp; {{ frGen(1,10) }}
+				</div>
+				<div class="col-8 col-off-1 hint-box">
+					{{ frGen(1,10) }} of the cookies are heart-shaped.<br />
+					&nbsp; Or,<br />
+					&nbsp; 1 out of every 10 cookies in the cookie box is heart-shaped.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Round cookies</b><br />
+					=&nbsp; 25% of the box<br />
+					=&nbsp; 25 out of 100<br />
+					=&nbsp; {{ frGenDel2(25,100,1,4) }}<br />
+					=&nbsp; {{ frGen(1,4) }}
+				</div>
+				<div class="col-8 col-off-1 hint-box">
+					{{ frGen(1,4) }} of the cookies are round.<br />
+					&nbsp; Or,<br />
+					&nbsp; 1 out of every 4 cookies in the cookie box is round.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Square-shaped cookies</b><br />
+					=&nbsp; 30% of the box<br />
+					=&nbsp; 30 out of 100<br />
+					=&nbsp; {{ frGenDel2(30,100,3,10) }}<br />
+					=&nbsp; {{ frGen(3,10) }}
+				</div>
+				<div class="col-8 col-off-1 hint-box">
+					{{ frGen(3,10) }} of the cookies are square-shaped.<br />
+					&nbsp; Or,<br />
+					&nbsp; 3 out of every 10 cookies in the cookie box are square-shaped.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Star-shaped cookies</b><br />
+					=&nbsp; 35% of the box<br />
+					=&nbsp; 35 out of 100<br />
+					=&nbsp; {{ frGenDel2(35,100,7,20) }}<br />
+					=&nbsp; {{ frGen(7,20) }}
+				</div>
+				<div class="col-8 col-off-1 hint-box">
+					{{ frGen(7,20) }} of the cookies are star-shaped.<br />
+					&nbsp; Or,<br />
+					&nbsp; 7 out of every 20 cookies in the cookie box are star-shaped.
+				</div>
+
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4 id="concept-2">
+				2.&nbsp; Following is a cookie box containing 100 assorted cookies of 4 different shapes.<br />
+				a)&nbsp; Find out the percentage of cookies that are heart-shaped.<br />
+				b)&nbsp; Find out the percentage of cookies that are round.<br />
+				c)&nbsp; Find out the percentage of cookies that are square-shaped.<br />
+				d)&nbsp; Find out the percentage of cookies that are star-shaped.
+			</h4>
+		</div>
+
+		<div class="learn-set__answer">
+			<div class="learn-set__nest">					
+				<div class="col-10 col-off-1">
+					<img src="/images/notes/change_fraction_to_percentage.png" />
+				</div>
+				<div class="col-10 col-off-1">
+					<b>Heart-shaped cookies</b><br />
+					=&nbsp; {{ frGen(1,10) }} &nbsp;&nbsp;&nbsp; (using <b>Method 1</b>)<br />
+					=&nbsp; {{ frGen(1,10) }} &nbsp;&times;&nbsp; {{ frGen(10,10) }} (change denominator to 100)<br />
+					=&nbsp; {{ frGen(10,100) }}<br />
+					=&nbsp; 10%
+				</div>
+				<div class="col-7 col-off-1 hint-box">
+					10 out of 100 cookies in the cookie box are heart-shaped.<br />
+					&nbsp; Or,<br />
+					10% of the cookies are heart-shaped.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Round cookies</b><br />
+					=&nbsp; {{ frGen(1,4) }} &nbsp;&nbsp;&nbsp; (using <b>Method 1</b>)<br />
+					=&nbsp; {{ frGen(1,4) }} &nbsp;&times;&nbsp; {{ frGen(25,25) }} (change denominator to 100)<br />
+					=&nbsp; {{ frGen(25,100) }}<br />
+					=&nbsp; 25%
+				</div>
+				<div class="col-6 col-off-1 hint-box">
+					25 out of 100 cookies in the cookie box are round.<br />
+					&nbsp; Or,<br />
+					25% of the cookies are round.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Square-shaped cookies</b><br />
+					=&nbsp; {{ frGen(3,10) }} of 1 whole box &nbsp;&nbsp;&nbsp; (using <b>Method 2</b>)<br />
+					=&nbsp; {{ frGenDel1(3,10,1) }} &nbsp;&times;&nbsp; <del>100</del><font color=red><sup>10</sup></font>% &nbsp;&nbsp;&nbsp; (1 whole = 100%)<br />
+					=&nbsp; 30%
+				</div>
+				<div class="col-5 col-off-1 hint-box">
+					30% of the cookies are square-shaped.
+				</div>
+
+				<div class="col-10 col-off-1">
+					<b>Star-shaped cookies</b><br />
+					=&nbsp; {{ frGen(7,20) }} of 1 whole box &nbsp;&nbsp;&nbsp; (using <b>Method 3</b>)<br />
+					=&nbsp; 7 &nbsp;&divide;&nbsp; 20 of 1 whole box<br />
+					=&nbsp; 0.35 of 1 whole box<br />
+					=&nbsp; 0.35 &nbsp;&times;&nbsp; 100% &nbsp;&nbsp;&nbsp; (1 whole = 100%)<br />
+					=&nbsp; 35%
+				</div>
+				<div class="col-5 col-off-1 hint-box">
+					35% of the cookies are star-shaped.
+				</div>
+
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_5_Math_Practice/Express_as_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of answer 2 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to convert percentage to fractions?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Convert the percentage to fractions by creating denominator that is 100. Numerator will be the given percentage\nStep 2: Simply the fractions.\n\nFor e.g.: Convert 10% to fractions.\nStep 1: Create denominator that is 100. So the given percentage becomes 10/100\nStep 2: Simplify the fraction. 10/100 = 1/10"}},{"@type":"Question","name":"How to convert fractions to percentage?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Multiply the fraction by 100%\nStep 2: Simplify.\n\nFor e.g: Convert 1/10 to percentage.\nStep 1: Multiply by 100%. 100% x 1/10 = 100/10%\nStep 2: Simplify. 100/10% = 10%"}}]}</script>
+{% endblock %}

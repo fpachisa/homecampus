@@ -1,0 +1,95 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculator Times Table Multiplication Chart from 1 to 100 - Home Campus</title>
+<meta name="keywords" content="Times Table Multiplication Chart 1 to 100 Calculator">
+<meta name="description" content="Times Table Multiplication Chart 1 to 100 Calculator" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Math-Calculators"><u>More Math Calculators</u></a></div>
+<h2 class="learn-heading">Times Tables Calculator</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Learn/Times-Tables/Free-Printable-Chart-From-16-to-30">Get Printable Times Table</a></div>
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Generate Times Table for Number 2 - 100</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Enter a Number&nbsp;=&nbsp; <input id="number" type="number" size=4><br><br>
+				<button class="btn-quiz" id="GenerateTimesTable" onclick="GenerateTimesTable()">Generate Times Table</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1">
+				<input id="numberx1" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 1 &nbsp;=&nbsp; <input id="x1" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx2" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 2 &nbsp;=&nbsp; <input id="x2" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx3" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 3 &nbsp;=&nbsp; <input id="x3" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx4" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 4 &nbsp;=&nbsp; <input id="x4" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx5" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 5 &nbsp;=&nbsp; <input id="x5" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx6" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 6 &nbsp;=&nbsp; <input id="x6" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx7" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 7 &nbsp;=&nbsp; <input id="x7" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx8" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 8 &nbsp;=&nbsp; <input id="x8" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx9" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 9 &nbsp;=&nbsp; <input id="x9" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx10" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 10 &nbsp;=&nbsp; <input id="x10" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx11" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 11 &nbsp;=&nbsp; <input id="x11" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx12" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 12 &nbsp;=&nbsp; <input id="x12" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx13" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 13 &nbsp;=&nbsp; <input id="x13" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx14" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 14 &nbsp;=&nbsp; <input id="x14" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx15" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 15 &nbsp;=&nbsp; <input id="x15" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx16" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 16 &nbsp;=&nbsp; <input id="x16" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx17" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 17 &nbsp;=&nbsp; <input id="x17" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx18" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 18 &nbsp;=&nbsp; <input id="x18" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx19" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 19 &nbsp;=&nbsp; <input id="x19" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>
+				<input id="numberx20" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"> &nbsp;&times;&nbsp; 20 &nbsp;=&nbsp; <input id="x20" size=4 disabled style="text-align:center;background:rgb(169, 169, 169);border:0px;"><br><br>								
+			</div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<script>
+
+function GenerateTimesTable() {
+	document.getElementById("numberx1").value = document.getElementById("number").value;
+	document.getElementById("numberx2").value = document.getElementById("number").value;
+	document.getElementById("numberx3").value = document.getElementById("number").value;
+	document.getElementById("numberx4").value = document.getElementById("number").value;
+	document.getElementById("numberx5").value = document.getElementById("number").value;
+	document.getElementById("numberx6").value = document.getElementById("number").value;
+	document.getElementById("numberx7").value = document.getElementById("number").value;
+	document.getElementById("numberx8").value = document.getElementById("number").value;
+	document.getElementById("numberx9").value = document.getElementById("number").value;
+	document.getElementById("numberx10").value = document.getElementById("number").value;
+	document.getElementById("numberx11").value = document.getElementById("number").value;
+	document.getElementById("numberx12").value = document.getElementById("number").value;
+	document.getElementById("numberx13").value = document.getElementById("number").value;
+	document.getElementById("numberx14").value = document.getElementById("number").value;
+	document.getElementById("numberx15").value = document.getElementById("number").value;
+	document.getElementById("numberx16").value = document.getElementById("number").value;
+	document.getElementById("numberx17").value = document.getElementById("number").value;
+	document.getElementById("numberx18").value = document.getElementById("number").value;
+	document.getElementById("numberx19").value = document.getElementById("number").value;
+	document.getElementById("numberx20").value = document.getElementById("number").value;	
+	document.getElementById("x1").value = document.getElementById("number").value * 1;
+	document.getElementById("x2").value = document.getElementById("number").value * 2;
+	document.getElementById("x3").value = document.getElementById("number").value * 3;
+	document.getElementById("x4").value = document.getElementById("number").value * 4;
+	document.getElementById("x5").value = document.getElementById("number").value * 5;
+	document.getElementById("x6").value = document.getElementById("number").value * 6;
+	document.getElementById("x7").value = document.getElementById("number").value * 7;
+	document.getElementById("x8").value = document.getElementById("number").value * 8;
+	document.getElementById("x9").value = document.getElementById("number").value * 9;
+	document.getElementById("x10").value = document.getElementById("number").value * 10;
+	document.getElementById("x11").value = document.getElementById("number").value * 11;
+	document.getElementById("x12").value = document.getElementById("number").value * 12;
+	document.getElementById("x13").value = document.getElementById("number").value * 13;
+	document.getElementById("x14").value = document.getElementById("number").value * 14;
+	document.getElementById("x15").value = document.getElementById("number").value * 15;
+	document.getElementById("x16").value = document.getElementById("number").value * 16;
+	document.getElementById("x17").value = document.getElementById("number").value * 17;
+	document.getElementById("x18").value = document.getElementById("number").value * 18;
+	document.getElementById("x19").value = document.getElementById("number").value * 19;
+	document.getElementById("x20").value = document.getElementById("number").value * 20;	
+}
+
+</script>
+
+{% endblock %}

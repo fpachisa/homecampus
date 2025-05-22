@@ -1,0 +1,134 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.1 Distance, Time and Speed</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:62%;">6.1 Distance, Time and Speed</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">The circumference of the Earth at the equator is 40075 km. Earth completes one rotation about its axis in 24 hours. What is the speed of an object placed on the surface of the earth at the equator?</div>
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;width:15px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:380px;vertical-align:top;">Give your answer in km/h. Round off your answer to the nearest whole number.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if SPDTSAdvanced_1_1_answer_correct is defined %}
+				<input id="SPDTSAdvanced_1_1_answer" value='{{SPDTSAdvanced_1_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPDTSAdvanced_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSAdvanced_1_1_answer_correct and SPDTSAdvanced_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSAdvanced_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSAdvanced_1_1_answer" value='{{SPDTSAdvanced_1_1_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;width:15px;">b)</div>
+		<div style="display:inline-block;margin-top:10px;width:380px;vertical-align:top;">Give your answer in km/sec. Round off your answer to 2 decimal places.</div>
+		<div style="margin-left:60px;margin-top:10px;">Answer:&nbsp;
+			{% if SPDTSAdvanced_1_2_answer_correct is defined %}
+				<input id="SPDTSAdvanced_1_2_answer" value='{{SPDTSAdvanced_1_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/sec &nbsp;
+					{% if SPDTSAdvanced_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSAdvanced_1_2_answer_correct and SPDTSAdvanced_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSAdvanced_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSAdvanced_1_2_answer" value='{{SPDTSAdvanced_1_2_answer}}' style="width:50px;" > km/sec &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Ralph covered a certain distance on his bike in 2 hours at a speed of <font class="grade7Variables">x</font> km/h. Had he increased the speed of his bike by 5 m/s, he would have saved 30 minutes. Find the value of <font class="grade7Variables">x</font>.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;"><font class="grade7Variables">x</font>&nbsp;=&nbsp;
+			{% if SPDTSAdvanced_2_answer_correct is defined %}
+				<input id="SPDTSAdvanced_2_answer" value='{{SPDTSAdvanced_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPDTSAdvanced_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPDTSAdvanced_2_answer_correct and SPDTSAdvanced_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPDTSAdvanced_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPDTSAdvanced_2_answer" value='{{SPDTSAdvanced_2_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPDTSAdvanced_1_1_answer_correct is defined %}
+			<div style="margin-top:0px;margin-left:320px;"><button id="SPDTS_Advanced_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:15px;margin-left:220px;"><button id="SPDTS_Advanced_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPDTSAdvanced_1_1_answer").change(function()
+	{
+		question_id = "SPDTSAdvanced_1";
+		question_type = "DistanceTimeSpeed"
+		answer_id = "SPDTSAdvanced_1_1_answer";
+		entered_answer = $("#SPDTSAdvanced_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPDTSAdvanced_1_2_answer").change(function()
+			{
+				question_id = "SPDTSAdvanced_1";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSAdvanced_1_2_answer";
+				entered_answer = $("#SPDTSAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPDTSAdvanced_2_answer").change(function()
+			{
+				question_id = "SPDTSAdvanced_2";
+				question_type = "DistanceTimeSpeed"
+				answer_id = "SPDTSAdvanced_2_answer";
+				entered_answer = $("#SPDTSAdvanced_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#SPDTS_Advanced_1_submit").button({label:"Check Answers"});
+	$("#SPDTS_Advanced_1_retry").button({label:"Retry"});
+	$("#SPDTS_Advanced_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "DistanceTimeSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPDTSAdvanced_1"+"#%$"+"SPDTSAdvanced_1_1_answer"+"#%$"+$("#SPDTSAdvanced_1_1_answer").val();
+		answers = answers + "#%$"+"SPDTSAdvanced_1"+"#%$"+"SPDTSAdvanced_1_2_answer"+"#%$"+$("#SPDTSAdvanced_1_2_answer").val();
+		answers = answers + "#%$"+"SPDTSAdvanced_2"+"#%$"+"SPDTSAdvanced_2_answer"+"#%$"+$("#SPDTSAdvanced_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPDTS_Advanced_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPDTSAdvanced_1_1_answer,SPDTSAdvanced_1_2_answer,SPDTSAdvanced_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

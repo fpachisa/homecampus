@@ -1,0 +1,213 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro mixNumGen(W,N,D) %}
+<table style='display:inline-block;vertical-align:middle;'>
+	<tr style='text-align: center;'>
+		<td rowspan="2" style="padding-right:4px;">{{W}}</td>
+		<td style="border-bottom:1px solid">{{N}}</td>
+	</tr>
+	<tr>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Divide a Proper Fraction by a Proper Fraction - Home Campus</title>
+<meta name="description" content="Dividing a Proper Fraction by a Proper Fraction." />
+<meta name="keywords" content="fraction, division, proper fraction, primary 6, sixth grade, elementary 6, K-12, Singapore maths tuition, online maths test, online maths tutor">
+{% endblock %}
+{% block content %}
+	
+<!-- InstanceBeginEditable name="maincontent" -->
+	
+<h2 class="learn-heading">Divide a Proper Fraction by a Proper Fraction</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P6">
+		
+		<div class="concept-set__question">
+			<h4>How to divide a proper fraction by a proper fraction?</h4>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				Dividing a fraction by another fraction is the same as multiplying the first fraction by the inverse of the second fraction. Here are the steps:<br /><br />
+				
+				<b>Step 1:</b> &nbsp; Change &nbsp;&divide;&nbsp; to &nbsp;&times;&nbsp;.<br />
+				<b>Step 2:</b> &nbsp; Invert the second fraction.<br />
+				<b>Step 3:</b> &nbsp; Simplify the expression.<br /><br />
+				
+				<b><i>Example:</i></b><br />
+				Divide {{ frGen(4,9) }} by {{ frGen(2,3) }}.<br />
+				
+				{{ frGen(4,9) }} &nbsp;&divide;&nbsp; {{ frGen(2,3) }} &nbsp;=&nbsp; {{ frGen(4,9) }} &nbsp;&times;&nbsp; {{ frGen(3,2) }} &nbsp;=&nbsp; {{ frGen(2,3) }}<br />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<!-- QUES 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>1. If a pizza is cut into quarters, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_1.png" alt="dividing a fraction by a fraction"/><br />
+				1 &nbsp;&divide;&nbsp; {{ frGen(1,4) }} &nbsp;=&nbsp; 4<br /><br />
+				
+				You get <b>4</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 1 -->
+
+
+<!-- QUES 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>2. If you have half a pizza and you cut that into quarters, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_2.png" alt="dividing a fraction by a fraction"/><br />
+				{{ frGen(1,2) }} &nbsp;&divide;&nbsp; {{ frGen(1,4) }} &nbsp;=&nbsp; 2<br /><br />
+				
+				You get <b>2</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 2 -->
+
+
+<!-- QUES 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>3. If you have &nbsp;&nbsp; {{ frGen(2,3) }} of a pizza that you cut into one-sixths, how many slices do you get?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_3.png" alt="dividing a fraction by a fraction"/><br />
+				{{ frGen(2,3) }} &nbsp;&divide;&nbsp; {{ frGen(1,6) }} &nbsp;=&nbsp; 4<br /><br />
+				
+				You get <b>4</b> slices.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 3 -->
+
+
+
+<!-- QUES 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>4. Ray has &nbsp;&nbsp;&nbsp; {{ frGen(5,6) }} litre of tea in a kettle. <br />
+				He pours &nbsp;&nbsp;&nbsp; {{ frGen(1,12) }} litre of tea into each of some teacups.<br />
+				How many teacups does he fill?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_4.png" alt="dividing a fraction by a fraction"/><br />
+				&nbsp;&nbsp;&nbsp; {{ frGen(5,6) }} &nbsp;&divide;&nbsp; {{ frGen(1,12) }} <br />
+				=&nbsp; {{ frGen(5,6) }} &nbsp;&times;&nbsp; {{ frGen(12,1) }} <br />
+				=&nbsp; 10<br /><br />
+				
+				She fills <b>10</b> teacups.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 4 -->
+  
+
+<!-- QUES 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>5. Maya had &nbsp;&nbsp;&nbsp; {{ frGen(3,4) }} kg of rice. <br />
+				She packed the rice into bags of &nbsp;&nbsp;&nbsp; {{ frGen(1,10) }} kg each.<br />
+				a) &nbsp; How many bags did she make?<br />
+				b) &nbsp; How much rice was left unpacked?<br />
+				c) &nbsp; How much more rice does she need to make another bag of &nbsp;&nbsp;&nbsp; {{ frGen(1,10) }} kg?</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_5.png" alt="dividing a fraction by a fraction"/><br />
+				a) &nbsp;&nbsp;&nbsp; {{ frGen(3,4) }} &nbsp;&divide;&nbsp; {{ frGen(1,10) }} <br />
+				&nbsp;&nbsp;&nbsp; =&nbsp; {{ frGen(3,4) }} &nbsp;&times;&nbsp; {{ frGen(10,1) }} <br />
+				&nbsp;&nbsp;&nbsp; =&nbsp; {{ frGen(30,4) }}<br />
+				&nbsp;&nbsp;&nbsp; =&nbsp; {{ mixNumGen(6,1,2) }}<br /><br />
+				
+				&nbsp;&nbsp;&nbsp; She made <b>6</b> bags.<br /><br />
+				
+				b) &nbsp;&nbsp;&nbsp; 6 &nbsp;&times;&nbsp; {{ frGen(1,10) }} &nbsp;=&nbsp; {{ frGen(3,5) }}<br /><br />
+				&nbsp;&nbsp;&nbsp; There was {{ frGen(3,5) }} kg of rice in 6 bags altogether.<br /><br />
+				
+				&nbsp;&nbsp;&nbsp; {{ frGen(3,4) }} &nbsp;&minus;&nbsp; {{ frGen(3,5) }} &nbsp;=&nbsp; {{ frGen(1,20) }}<br />
+				&nbsp;&nbsp;&nbsp; There was <b>{{ frGen(1,20) }}</b> kg rice that was left unpacked.<br /><br />
+				
+				c) <img src="/images/notes/dividing_fraction_by_fraction_6.png" alt="dividing a fraction by a fraction"/><br />
+				&nbsp;&nbsp;&nbsp; {{ frGen(1,10) }} &nbsp;&minus;&nbsp; {{ frGen(1,20) }} &nbsp;=&nbsp; {{ frGen(1,20) }}<br />
+				&nbsp;&nbsp;&nbsp; She needs <b>{{ frGen(1,20) }}</b> kg more rice to make another bag of {{ frGen(1,10) }} kg.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 5 -->
+
+
+<!-- QUES 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>6. A rectangular piece of land &nbsp;&nbsp;&nbsp; {{ frGen(1,3) }} km long has an area of &nbsp;&nbsp;&nbsp; {{ frGen(1,12) }} km<sup>2</sup>.<br />
+				Find the length of fence needed to border the land.</h4>
+		</div>			
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/dividing_fraction_by_fraction_7.png" alt="dividing a fraction by a fraction"/><br />
+				&nbsp;&nbsp;&nbsp; Area of the rectangular land &nbsp;=&nbsp; length &nbsp;&times;&nbsp; breadth <br />
+				&nbsp; &nbsp;&nbsp; {{ frGen(1,12) }} km<sup>2</sup> &nbsp;=&nbsp; {{ frGen(1,3) }} km &nbsp;&times;&nbsp; breadth<br /><br />
+				
+				&nbsp; &nbsp;&nbsp;&nbsp; <b>Breadth</b> <br />
+				=&nbsp; {{ frGen(1,12) }} &nbsp;&divide;&nbsp; {{ frGen(1,3) }} <br />
+				=&nbsp;  {{ frGen(1,12) }} &nbsp;&times;&nbsp; {{ frGen(3,1) }} <br />
+				=&nbsp; <b>{{ frGen(1,4) }}</b> km <br /><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp; <b>Border or Perimeter</b> <br />
+				=&nbsp; (2 &nbsp;&times;&nbsp; length) &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; breadth) <br />
+				=&nbsp; (2 &nbsp;&times;&nbsp; {{ frGen(1,3) }}) &nbsp;+&nbsp; (2 &nbsp;&times;&nbsp; {{ frGen(1,4) }}) <br />
+				=&nbsp; {{ frGen(2,3) }} &nbsp;+&nbsp; {{ frGen(1,2) }} <br />
+				=&nbsp; {{ frGen(7,6) }} km <br />
+				=&nbsp; {{ mixNumGen(1,1,6) }} km<br /><br />
+				
+				The length of fence needed to border the land is &nbsp; <b>{{ mixNumGen(1,1,6) }}</b> &nbsp; km.
+			</div>
+		</div>		
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div> <!-- End of answer 6 -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to divide a proper fraction by a proper fraction?","acceptedAnswer":{"@type":"Answer","text":"Dividing a fraction by another fraction is the same as multiplying the first fraction by the inverse of the second fraction. Here are the steps:\n\nStep 1:   Change  ÷  to  × .\nStep 2:   Invert the second fraction.\nStep 3:   Simplify the expression."}}]}</script>
+{% endblock %}

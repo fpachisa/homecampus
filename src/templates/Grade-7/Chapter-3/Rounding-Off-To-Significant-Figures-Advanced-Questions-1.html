@@ -1,0 +1,170 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:40%;">3.2 Rounding Off Numbers to Significant Figures</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Advanced</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			The number 172X is equal to 1730, correct to 3 significant figures. Find the value of X if 172X is a perfect cube.			
+			<div style="margin-left:20px;margin-top:10px;">X &nbsp; = &nbsp; 
+				{% if AESFAdvanced_1_answer_correct is defined %}
+					<input id="AESFAdvanced_1_answer" value='{{AESFAdvanced_1_answer}}' readonly style="width:20px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFAdvanced_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFAdvanced_1_answer_correct and AESFAdvanced_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFAdvanced_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFAdvanced_1_answer" value='{{AESFAdvanced_1_answer}}' style="width:20px;" > &nbsp;
+				{% endif %}	
+			</div>					
+		</div>
+		<br>		
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:30px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="">The population of a city is 245.3 thousand.</div>
+			<div style="margin-left:0px;margin-top:10px;">a) How many significant figures are there in this number?</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer:
+				{% if AESFAdvanced_2_1_answer_correct is defined %}
+					<input id="AESFAdvanced_2_1_answer" value='{{AESFAdvanced_2_1_answer}}' readonly style="width:20px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFAdvanced_2_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFAdvanced_2_1_answer_correct and AESFAdvanced_2_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFAdvanced_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFAdvanced_2_1_answer" value='{{AESFAdvanced_2_1_answer}}' style="width:20px;" > &nbsp;
+				{% endif %}	
+			</div>
+			<div style="margin-left:0px;margin-top:10px;">b) Write this number correct to 3 significant figures.</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer:
+				{% if AESFAdvanced_2_2_answer_correct is defined %}
+					<input id="AESFAdvanced_2_2_answer" value='{{AESFAdvanced_2_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+						{% if AESFAdvanced_2_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not AESFAdvanced_2_2_answer_correct and AESFAdvanced_2_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{AESFAdvanced_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% else %}
+					<input id="AESFAdvanced_2_2_answer" value='{{AESFAdvanced_2_2_answer}}' style="width:50px;" > &nbsp;
+				{% endif %}	
+			</div>					
+		</div>
+		<br>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">5 boxes have a total mass of 1.02 kg. Find the average mass of each box correct to 2 significant figures.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer: &nbsp;  
+			{% if AESFAdvanced_3_answer_correct is defined %}
+				<input id="AESFAdvanced_3_answer" value='{{AESFAdvanced_3_answer}}' readonly style="width:35px;background-color:#DFDFDF;"> kg&nbsp;
+					{% if AESFAdvanced_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not AESFAdvanced_3_answer_correct and AESFAdvanced_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{AESFAdvanced_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="AESFAdvanced_3_answer" value='{{AESFAdvanced_3_answer}}' style="width:35px;" > kg&nbsp;
+			{% endif %}	
+		</div>
+
+		
+		{% if AESFAdvanced_1_answer_correct is defined %}
+			<div style="margin-top:-20px;margin-left:360px;"><button id="AESFAdvanced_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:10px;margin-left:280px;"><button id="AESFAdvanced_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+<script>
+	$("#AESFAdvanced_1_answer").change(function()
+	{
+		question_id = "AESFAdvanced_1";
+		question_type = "SignificantFigures"
+		answer_id = "AESFAdvanced_1_answer";
+		entered_answer = $("#AESFAdvanced_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#AESFAdvanced_1_2_answer").change(function()
+			{
+				question_id = "AESFAdvanced_1";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_1_2_answer";
+				entered_answer = $("#AESFAdvanced_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFAdvanced_2_1_answer").change(function()
+			{
+				question_id = "AESFAdvanced_2";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_2_1_answer";
+				entered_answer = $("#AESFAdvanced_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFAdvanced_2_2_answer").change(function()
+			{
+				question_id = "AESFAdvanced_2";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_2_2_answer";
+				entered_answer = $("#AESFAdvanced_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#AESFAdvanced_3_answer").change(function()
+			{
+				question_id = "AESFAdvanced_3";
+				question_type = "SignificantFigures"
+				answer_id = "AESFAdvanced_3_answer";
+				entered_answer = $("#AESFAdvanced_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#AESFAdvanced_1_Submit").button({label:"Check Answers"});
+	$("#AESFAdvanced_1_Retry").button({label:"Retry"});
+	$("#AESFAdvanced_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SignificantFigures"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "AESFAdvanced_1"+"#%$"+"AESFAdvanced_1_answer"+"#%$"+$("#AESFAdvanced_1_answer").val();
+		answers = answers + "#%$"+"AESFAdvanced_2"+"#%$"+"AESFAdvanced_2_1_answer"+"#%$"+$("#AESFAdvanced_2_1_answer").val();
+		answers = answers + "#%$"+"AESFAdvanced_2"+"#%$"+"AESFAdvanced_2_2_answer"+"#%$"+$("#AESFAdvanced_2_2_answer").val();
+		answers = answers + "#%$"+"AESFAdvanced_3"+"#%$"+"AESFAdvanced_3_answer"+"#%$"+$("#AESFAdvanced_3_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#AESFAdvanced_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "AESFAdvanced_1_answer,AESFAdvanced_1_2_answer,AESFAdvanced_2_1_answer,AESFAdvanced_2_2_answer,AESFAdvanced_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

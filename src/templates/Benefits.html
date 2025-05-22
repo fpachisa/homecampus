@@ -1,0 +1,118 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+
+<script type="text/javascript" src="/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript">
+$(function() {
+    $('#benefits a').lightBox();
+});
+</script>
+<div>
+<br>
+<div id="NotesContent" style="padding-left:30px;padding-right:20px;padding-top:20px;">
+<br />
+<h1 style="padding-top:10px;padding-bottom:10px;border-bottom-style:dotted;border-width:1px;">Benefits of Signing Up</h1>
+<div id="benefits" style="padding-left:10px;">
+<div style="position:fixed;margin-left:600px;"><button id="subscribe"></button></div>
+<h2 style="font-size: 1.3em;">Various modes of learning</h2>
+<div style="padding-left:20px;">
+	<ul style="list-style-image:url(/images/Benefits/checkmark.png);">
+	<li style="margin-bottom:15px;">Understand all elementary math concept through videos and written notes<br />
+	<div style="text-align:center;display:inline-block;margin-left:50px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/learn_1a.png" title="Learn through videos"><img src="/images/Benefits/learn_1a_thumb.png"/></a><p><font style="font-size:10px;">Learn through videos</font></p></div>
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/learn_1b.png" title="Learn through notes"><img src="/images/Benefits/learn_1b_thumb.png" /></a><p><font style="font-size:10px;">Learn through notes</font></p></div>	
+	</li>
+	<li style="margin-bottom:15px;">Each concept is broken into bite-sized pieces for easy digestion<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/learn_2.png" title="Topics broken into skills"><img src="/images/Benefits/learn_2_thumb.png" /></a><p><font style="font-size:10px;">Topics broken into skills</font></p></div>
+	</li>
+	</ul>
+</div>
+
+<h2 style="font-size: 1.3em;">Unlimited practice problems with detailed solutions</h2>
+<div style="padding-left:20px;">
+	<ul style="list-style-image:url('/images/Benefits/checkmark.png');">
+	<li style="margin-bottom:15px;">Solve from a pool of unlimited computer-generated single- and multi-step questions<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/practice_1.png" title="Wide variety of sums"><img src="/images/Benefits/practice_1_thumb.png" /></a><p><font style="font-size:10px;">Wide variety of sums</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Get access to unlimited story questions or word problems<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/practice_2.png" title="Questions include problem sums"><img src="/images/Benefits/practice_2_thumb.png" /></a><p><font style="font-size:10px;">Questions include problem sums</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Concepts on each elementary math topic organized by grade level<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/practice_3.png" title="Different skills for different grades"><img src="/images/Benefits/practice_3_thumb.png" /></a><p><font style="font-size:10px;">Different skills for different grades</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Detailed step-by-step solutions<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/practice_4.png" title="Detailed step-by-step solutions"><img src="/images/Benefits/practice_4_thumb.png" /></a><p><font style="font-size:10px;">Explanations included</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">View your progress on the fly<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/practice_5.png" title="View your progress on the fly"><img src="/images/Benefits/practice_5_thumb.png" /></a><p><font style="font-size:10px;">Monitor progress</font></p></div>
+	</li>
+	</ul>
+</div>
+
+<h2 style="font-size: 1.3em;">Testing knowledge with topical worksheets</h2>
+<div style="padding-left:20px;">
+	<ul style="list-style-image:url('/images/Benefits/checkmark.png');">
+	<li style="margin-bottom:15px;">Create unique worksheets for each of your children<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/test_1a.png" title="Create your own customized worksheets"><img src="/images/Benefits/test_1a_thumb.png" /></a><p><font style="font-size:10px;">Create customized worksheets</font></p></div>
+	<div style="text-align:center;display:inline-block;margin-left:50px;margin-top:15px;margin-bottom:20px;width:200px;vertical-align:bottom;">
+	<a href="/images/Benefits/test_1b.png" title="Unique worksheets for each child"><img src="/images/Benefits/test_1b_thumb.png" /></a><p><font style="font-size:10px;">Unique worksheets for each child</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Solve as many worksheets as you want on any topic<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/test_2.png" title="Solve as many worksheets as you want on any topic"><img src="/images/Benefits/test_2_thumb.png" /></a><p><font style="font-size:10px;">Solve infinite worksheets</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Review instant results with detailed solutions<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/test_3.png" title="Review results with detailed solutions"><img src="/images/Benefits/test_3_thumb.png" /></a><p><font style="font-size:10px;">Instant results with explanations</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Monitor each of your children's progress separately<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/test_4.png" title="Monitor each of your children's progress separately"><img src="/images/Benefits/test_4_thumb.png" /></a><p><font style="font-size:10px;">Monitor progress</font></p></div>
+	</li>
+	</ul>
+</div>
+
+<h2 style="font-size: 1.3em;">Ability to set goals</h2>
+<div style="padding-left:20px;">
+	<ul style="list-style-image:url('/images/Benefits/checkmark.png');">
+	<li style="margin-bottom:15px;">Set targets to allow learning at your child's own pace<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/goals.png" title="Set targets to allow learning at your child's own pace"><img src="/images/Benefits/goals_thumb.png" /></a><p><font style="font-size:10px;">Set learning goals</font></p></div>
+	</li>
+	</ul>
+</div>
+
+<h2 style="font-size: 1.3em;">Monitoring progress with advanced reporting tools</h2>
+<div style="padding-left:20px;">
+	<ul style="list-style-image:url('/images/Benefits/checkmark.png');">
+	<li style="margin-bottom:15px;">Get insightful details into your child's performance<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/report_1.png" title="Get insightful details into your child's performance"><img src="/images/Benefits/report_1_thumb.png" /></a><p><font style="font-size:10px;">Tables, charts and graphs</font></p></div>
+	</li>
+	<li style="margin-bottom:15px;">Identify your child's strengths and weaknesses<br />
+	<div style="text-align:center;display:inline-block;margin-left:30px;margin-top:15px;margin-bottom:20px;vertical-align:bottom;">
+	<a href="/images/Benefits/report_2.png" title="Identify your child's strengths and weaknesses"><img src="/images/Benefits/report_2_thumb.png" /></a><p><font style="font-size:10px;">Detailed analytics</font></p></div>
+	</li>
+	</ul>
+</div>
+</div>	
+</div><br>
+</div>
+<script type="text/javascript">
+
+$("#subscribe").button({label:"Subscribe Now"});
+$("#subscribe").click(function(){
+		window.location.href = "/Subscribe";
+	});
+
+</script>
+{% endblock %}

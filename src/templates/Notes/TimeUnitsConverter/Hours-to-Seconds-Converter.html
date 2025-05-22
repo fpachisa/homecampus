@@ -1,0 +1,185 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Seconds Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to seconds">
+<meta name="description" content="Converter Hours to Seconds" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Seconds?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Convert Hours to Seconds:</h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToSeconds" onclick="ConvertToSeconds()">Convert To Seconds</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="SecondsAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			<h4><strong>1 hour &nbsp;=&nbsp; 3600 seconds.</strong>
+				<br><br>To convert hours to  seconds simply multiply the hours by 3600 to get seconds.
+				<br><br>1 hour &nbsp;=&nbsp; 60 minutes
+				<br><br>1 minute &nbsp;=&nbsp; 60 seconds
+				<br><br>So, 1 hour &nbsp;=&nbsp; 60 &nbsp;&times;&nbsp; 60 &nbsp;=&nbsp; 3600 seconds				  
+			</h4>
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 4 hours to seconds.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiply 4 by 3600
+				<br><br>Total seconds in 4 hours &nbsp;=&nbsp; 4 &nbsp;&times;&nbsp; 3600 &nbsp;=&nbsp; 14,400
+				<br><br>Hence, there are <strong>14,400 seconds in 4 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 0.005 hours to seconds</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Multiply 0.005 by 3600
+				<br><br>Total seconds in 0.005 hours &nbsp;=&nbsp; 0.005 &nbsp;&times;&nbsp; 3600 &nbsp;=&nbsp; 18
+				<br><br>Hence, there are <strong>18 seconds in 0.005 hours.</strong>
+			</div>
+		</div>							
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliSeconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times;10<sup>-5</sup> decade<br><br>
+				1.1416 &times;10<sup>-6</sup> century<br><br>
+				1.1416 &times;10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+
+<!-- Hour Seconds Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Seconds Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Seconds Chart -->
+
+
+<script>
+
+function ConvertToSeconds() {
+	var hours = document.getElementById("hour").value;
+	var seconds = hours*3600;
+	document.getElementById("SecondsAnswer").innerHTML = "There are "+seconds+" seconds in "+hours+" hours."
+}
+
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 3600 seconds<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600 + ' seconds<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600 + ' seconds<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600 + ' seconds<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600 + ' seconds<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many seconds are there in an hour?","acceptedAnswer":{"@type":"Answer","text":"1 hour has 3600 seconds."}},{"@type":"Question","name":"How to convert hours to seconds?","acceptedAnswer":{"@type":"Answer","text":"Multiply hours by 3600 to convert it to seconds."}}]}</script>
+
+
+{% endblock %}

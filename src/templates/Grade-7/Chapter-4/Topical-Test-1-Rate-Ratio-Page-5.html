@@ -1,0 +1,218 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#79DA4D;">Rate, Ratio and Proportion - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="RRP_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">10)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			An international school, having a total of 118 students, had kids of 3 races - Indian, Chinese and Caucasians. The ratio of the number of Indian students to that of Chinese students was 1 : 5. There were 36 fewer Caucasian students than Chinese students. Find the number of students of each race.
+		</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Indian students = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_10_1_answer" value='{{RRPTT1_10_1_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> &nbsp;
+			{% else %}
+				<input id="RRPTT1_10_1_answer" value='{{RRPTT1_10_1_answer}}' style="width:30px;">  <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_10_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+			<div style="display:inline-block;margin-top:10px;">Chinese students = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_10_2_answer" value='{{RRPTT1_10_2_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> &nbsp;
+			{% else %}
+				<input id="RRPTT1_10_2_answer" value='{{RRPTT1_10_2_answer}}' style="width:30px;">  <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:10px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_10_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+			<div style="display:inline-block;margin-top:10px;">Caucasian students = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_10_3_answer" value='{{RRPTT1_10_3_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> &nbsp;
+			{% else %}
+				<input id="RRPTT1_10_3_answer" value='{{RRPTT1_10_3_answer}}' style="width:30px;">  <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:10px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_10_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_10_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:5px;">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">11)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			I had a collection of shirts and T-shirts in the ratio of 3 : 1. Their total number was 28. I gave away an equal number of shirts and T-shirts to a charity. The new ratio of the number of shirts to T-shirts that I have now is 9:2. How many shirts and T-shirts do I have now?
+		</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_11_answer" value='{{RRPTT1_11_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> &nbsp;
+			{% else %}
+				<input id="RRPTT1_11_answer" value='{{RRPTT1_11_answer}}' style="width:30px;">  <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_11_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="RRP_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#RRP_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#RRP_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Rate-Ratio');
+  	});	
+$("#RRP_TT_1_back").button({label:"<<"});
+$("#RRP_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-3.html';
+		rightPage = '/Grade-7/Chapter-4/Topical-Test-1-Rate-Ratio-Page-4.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#RRPTT1_10_1_answer").change(function()
+		{
+			question_id = "RRPTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_10_1_answer";
+			entered_answer = $("#RRPTT1_10_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_10_2_answer").change(function()
+		{
+			question_id = "RRPTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_10_2_answer";
+			entered_answer = $("#RRPTT1_10_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_10_3_answer").change(function()
+		{
+			question_id = "RRPTT1_10";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_10_3_answer";
+			entered_answer = $("#RRPTT1_10_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_11_answer").change(function()
+		{
+			question_id = "RRPTT1_11";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_11_answer";
+			entered_answer = $("#RRPTT1_11_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

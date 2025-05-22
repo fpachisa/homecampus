@@ -1,0 +1,212 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#79DA4D;">Rate, Ratio and Proportion - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;">
+		<div style="display:inline-block;"><button id="RRP_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br><br>
+	{% endif %}
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:10px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:10px;vertical-align:top;">
+			The ratio of the heights of two buildings A and B is 11 : 12. If A is 770 m tall, how tall is B?
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_1_answer" value='{{RRPTT1_1_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> m&nbsp;
+			{% else %}
+				<input id="RRPTT1_1_answer" value='{{RRPTT1_1_answer}}' style="width:30px;"> m <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% endif %}
+			</div>				
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:20px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:20px;vertical-align:top;">
+			Ahmed owned shares of two different companies, P and Q such that the ratio of the number of shares of P to that of Q was in the ratio 3 : 7. He sold 5 shares of Q and bought 3 more shares of P. The new ratio of the number of shares of P to that of Q was 1 : 1. Find the number of shares of each company he had at first.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;">Shares of P at first = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_2_1_answer" value='{{RRPTT1_2_1_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> 
+			{% else %}
+				<input id="RRPTT1_2_1_answer" value='{{RRPTT1_2_1_answer}}' style="width:30px;">  <font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% endif %}
+			</div>
+			<br>
+			<div style="display:inline-block;margin-top:20px;">Shares of Q at first = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_2_2_answer" value='{{RRPTT1_2_2_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> 
+			{% else %}
+				<input id="RRPTT1_2_2_answer" value='{{RRPTT1_2_2_answer}}' style="width:30px;"> <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;margin-top:20px;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% endif %}
+			</div>										
+		</div>
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;vertical-align:top;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			Mike types 1.5 times faster than John. They type 15000 words together in an hour. Find the typing speed of John per min.
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;">Answer = &nbsp;
+			{% if test_status == 'Completed' %}
+				<input id="RRPTT1_3_answer" value='{{RRPTT1_3_answer}}' readonly style="background-color:#DFDFDF;width:30px;"> words/min
+			{% else %}
+				<input id="RRPTT1_3_answer" value='{{RRPTT1_3_answer}}' style="width:30px;"> words/min <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;">
+			{% if test_status == 'Completed' %}				
+				{% if RRPTT1_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{RRPTT1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% endif %}
+			</div>									
+		</div>
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<script>
+
+$("#RRP_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#RRP_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Rate-Ratio');
+  	});	
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#RRPTT1_1_answer").change(function()
+	{
+		question_id = "RRPTT1_1";
+		test_id = '{{test_id}}';
+		answer_id = "RRPTT1_1_answer";
+		entered_answer = $("#RRPTT1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		question_marks = 1;
+		elapsed_time = total_seconds_elapsed;
+		Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+	});
+$("#RRPTT1_2_1_answer").change(function()
+		{
+			question_id = "RRPTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_2_1_answer";
+			entered_answer = $("#RRPTT1_2_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_2_2_answer").change(function()
+		{
+			question_id = "RRPTT1_2";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_2_2_answer";
+			entered_answer = $("#RRPTT1_2_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#RRPTT1_3_answer").change(function()
+		{
+			question_id = "RRPTT1_3";
+			test_id = '{{test_id}}';
+			answer_id = "RRPTT1_3_answer";
+			entered_answer = $("#RRPTT1_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

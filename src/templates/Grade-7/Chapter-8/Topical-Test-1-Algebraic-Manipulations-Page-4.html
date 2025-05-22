@@ -1,0 +1,250 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#E12958;margin-left:58%;">Algebraic Manipulations - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:10px;margin-top:13px;"><font class="grade7PracticeQuestionNumber">5</font></div>
+		<div style="display:inline-block;width:390px;margin-top:8px;vertical-align:top;">
+			<div>a) Subtract 3<font class="grade7Variables">p</font><sup>3</sup> + 2<font class="grade7Variables">p</font><sup>2</sup> &minus; 7<font class="grade7Variables">p</font> +7 from 8<font class="grade7Variables">p</font><sup>2</sup> &minus; 2<font class="grade7Variables">p</font><sup>3</sup> + <font class="grade7Variables">p</font> &minus;5</div>
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="AGMTT1_5_1_answer" value='A' disabled
+				{% if AGMTT1_5_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5p<sup>3</sup> &minus; 6p<sup>2</sup> &minus; 8p + 12<br>
+				<input type=radio name="AGMTT1_5_1_answer" value='B' disabled
+				{% if AGMTT1_5_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5p<sup>3</sup> &minus; 6p<sup>2</sup> &minus; 8p &minus; 12<br>				 
+				<input type=radio name="AGMTT1_5_1_answer" value='C' disabled
+				{% if AGMTT1_5_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5p<sup>3</sup> + 6p<sup>2</sup> + 8p &minus; 12&nbsp;&nbsp;
+				{% if AGMTT1_5_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_5_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>	
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AGMTT1_5_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="AGMTT1_5_1_answer" value='A'
+				{% if AGMTT1_5_1_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >5p<sup>3</sup> &minus; 6p<sup>2</sup> &minus; 8p + 12<br>
+				<input type=radio name="AGMTT1_5_1_answer" value='B'
+				{% if AGMTT1_5_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5p<sup>3</sup> &minus; 6p<sup>2</sup> &minus; 8p &minus; 12<br>				 
+				<input type=radio name="AGMTT1_5_1_answer" value='C'
+				{% if AGMTT1_5_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;5p<sup>3</sup> + 6p<sup>2</sup> + 8p &minus; 12<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		<div style="margin-left:30px;margin-top:20px;">
+			<div style="display:inline-block;width:15px;vertical-align:top;">b)</div>
+			<div style="display:inline-block;width:370px;">
+			<div>Subtract 9 from a number <font class="grade7Variables">n</font>, multiply the difference by 4 and add (2<font class="grade7Variables">n</font> &minus; 1) to the result.</div>
+			</div>
+			<div style="display:inline-block;margin-left:15px;margin-top:10px;">Answer: &nbsp;</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">
+				{% if test_status == 'Completed' %}
+					<input id="AGMTT1_5_2_answer" value='{{AGMTT1_5_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;text-align:center;">
+				{% else %}
+					<input id="AGMTT1_5_2_answer" value='{{AGMTT1_5_2_answer}}' style="width:50px;text-align:center;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if AGMTT1_5_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{AGMTT1_5_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 2 / 2)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{AGMTT1_5_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 2)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 2)</font>
+				{% endif %}
+			</div>		
+			
+		</div>
+
+
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">6)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			The average working hours of <font class="grade7Variables">x</font> clerks and <font class="grade7Variables">y</font> managers at a company is 48 hours per week. If the average working hours of the clerks is (2<font class="grade7Variables">h</font> + 20) hours, find the average working hours of the managers.
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='A' disabled
+				{% if AGMTT1_6_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">28<font class="grade7Variables">x</font> + 48<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y</font><br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='B' disabled
+				{% if AGMTT1_6_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">48<font class="grade7Variables">x</font> + 28<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">x</font><br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='C' disabled
+				{% if AGMTT1_6_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">48<font class="grade7Variables">x</font> + 48<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y</font><br></p>
+				</div>							 
+			
+				{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='A'
+				{% if AGMTT1_6_answer == 'A' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">28<font class="grade7Variables">x</font> + 48<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y</font><br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='B'
+				{% if AGMTT1_6_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">48<font class="grade7Variables">x</font> + 28<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">x</font><br></p>
+				</div>
+				<br>			 
+				<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<input type=radio name="AGMTT1_6_answer" value='C'
+				{% if AGMTT1_6_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;vertical-align:top;margin-left:2px;margin-top:-12px;">
+					<p style="line-height:20%;text-align:center;">48<font class="grade7Variables">x</font> + 48<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">xh</font><br>_______________<br></p>
+					<p style="line-height:20%;text-align:center;"><font class="grade7Variables">y</font><br></p>
+				</div>							 
+
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if test_status == 'Completed' %}
+					{% if AGMTT1_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{AGMTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{AGMTT1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+		
+			
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="AGM_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+$("#AGM_TT_1_Continue").button({label:">>"});
+$("#AGM_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-8/Topical-Test-1-Algebraic-Manipulations-Page-5.html';
+		rightPage = '/Grade-7/Chapter-8/Topical-Test-1-Algebraic-Manipulations-Page-6.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$'
+		answer_ids = 'AGMTT1_4_1_answer'+separatorText+'AGMTT1_4_2_answer'+separatorText+'AGMTT1_5_1_answer'+separatorText+'AGMTT1_5_2_answer'+separatorText
+		answer_ids = answer_ids + 'AGMTT1_6_answer'
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("input[name='AGMTT1_5_1_answer']").click(function()
+		{
+			question_id = "AGMTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "AGMTT1_5_1_answer";
+			entered_answer = $("input:radio[name=AGMTT1_5_1_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+$("#AGMTT1_5_2_answer").change(function()
+		{
+			question_id = "AGMTT1_5";
+			test_id = '{{test_id}}';
+			answer_id = "AGMTT1_5_2_answer";
+			entered_answer = $("#AGMTT1_5_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 1;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='AGMTT1_6_answer']").click(function()
+		{
+			question_id = "AGMTT1_6";
+			test_id = '{{test_id}}';
+			answer_id = "AGMTT1_6_answer";
+			entered_answer = $("input:radio[name=AGMTT1_6_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+</script>
+

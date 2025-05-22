@@ -1,0 +1,168 @@
+/*
+ * Worksheets
+ */
+ 
+.worksheet-container {
+	.make-row(); 	
+}
+
+.worksheet {
+	.make-xs-column(12);
+	//border: 1px solid blue;
+	.make-row();
+	margin: 0;
+	
+	&__create-new {
+		.make-sm-column(6);
+		.make-sm-column-offset(3);
+		padding: 15px;
+		border: 1px solid #ddd;
+		text-align:center;
+		
+		h3 {
+			margin: 0;
+			text-align: center;
+			color: #222;
+			
+			a {
+				text-decoration: none;
+				color: #222;
+				
+				&:hover, &:active, &:focus { color: #000; }
+			}
+		}
+		
+		> * {
+			margin: 8px 0;
+		}
+		
+		select {
+			.form-control;
+			width: 25%;
+			display: inline-block;
+		}
+	}
+	
+	&-details {
+		.make-xs-column(12);
+		.make-row();
+		//border: 1px solid green;
+		margin: 0;
+		padding: 0;
+		
+		&__section {
+			.make-xs-column(12);
+			.make-sm-column(6);
+			//border: 1px solid violet;
+			
+			@media screen and (max-width: @screen-xs-max) {
+				padding:0;
+			}
+			 
+			h3 {
+				padding-bottom: 5px;
+				border-bottom: 1px solid #ddd;
+			}
+		}
+	}
+	
+	&-report {
+		.table;
+		.table-hover;
+		
+		thead {
+			background-color: @brand-primary;
+			color: #fff;
+		}
+		tbody {
+			tr {
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+		&__container {
+			.table-responsive;
+		}
+	}
+}
+
+.unfinished-worksheets-table {
+	.make-xs-column(12);
+	.make-sm-column(6);
+	padding:0;
+	
+	overflow: auto;
+	table {
+		.table;
+		.table-hover;
+		
+		thead {
+			background-color: @brand-primary;
+			color: #fff;
+		}
+	}
+	
+	a {
+		font-weight: 700;
+	}
+}
+
+
+// Modify .problem when displayed as worksheet
+// @see PracticePage.less #141 for more details
+//---------------------------------------------
+.is-worksheet-container {
+	.make-sm-column-offset(3);
+	
+	.problem__container {
+		border-top: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+
+//Question Indicator
+//------------------
+.question-indicator {
+	//.make-xs-column(12);
+	.make-row();
+	margin:0;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-bottom:0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	
+	> a {
+		min-width: percentage(0.5 / @grid-columns);
+		padding: 5px;
+		margin: 5px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		
+		&:hover, &:focus, &:active { text-decoration: none; }
+	}
+	
+	&__active {
+		border: 1px solid transparent;
+		font-weight: 900;
+		border-bottom-color: #337ab7;
+		
+	}
+	
+	&__unattempted {
+		background-color: @brand-danger;
+		color: #fff;
+		&:hover, &:focus, &:active { color: #fff; }
+	}
+	
+	&__attempted {
+		background-color: @brand-primary;
+		color: #fff;
+		&:hover, &:focus, &:active { color: #fff; }
+	}
+}
+
+

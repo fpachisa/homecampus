@@ -1,0 +1,269 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.4 Rational Numbers and Real Numbers</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:50%;">2.4 Rational Numbers and Real Numbers</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:10px;">Practice - Medium</div>
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Evaluate and express the answers in decimals:
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;">a) 1</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>		
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">&minus;</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:0px;">
+				<p style="line-height:20%;">&minus;1<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">6<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">=</div>
+			
+				{% if RNRNMedium_1_1_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-top:3px;margin-left:4px;">
+					<input id="RNRNMedium_1_1_answer" value='{{RNRNMedium_1_1_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if RNRNMedium_1_1_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not RNRNMedium_1_1_answer_correct and RNRNMedium_1_1_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{RNRNMedium_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+				{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">	
+					<input id="RNRNMedium_1_1_answer" value='{{RNRNMedium_1_1_answer}}' style="width:40px;" > &nbsp;
+				</div>
+				{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;">b)</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>
+			</div>		
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">&times;</div>		
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:0px;">
+				<p style="line-height:20%;text-align:center;">2.55<br>____<br></p>
+				<p style="line-height:20%;text-align:center;">2.5<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">=</div>
+				{% if RNRNMedium_1_2_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-top:3px;margin-left:4px;">	
+					<input id="RNRNMedium_1_2_answer" value='{{RNRNMedium_1_2_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if RNRNMedium_1_2_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not RNRNMedium_1_2_answer_correct and RNRNMedium_1_2_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{RNRNMedium_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+				{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:4px;">	
+					<input id="RNRNMedium_1_2_answer" value='{{RNRNMedium_1_2_answer}}' style="width:40px;" > &nbsp;
+				</div>
+				{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:0px;"><div>c) &pi;<sup>2</sup></div></div>
+			<div style="display:inline-block;vertical-align:top;margin-top:18px;margin-left:4px;">&times; [ 2 + </div>				
+			<div style="display:inline-block;vertical-align:top;margin-left:4px;margin-top:6px;">
+				<p style="line-height:20%;text-align:center;">5<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">22<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:18px;margin-left:0px;">]</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:18px;margin-left:4px;">=</div>
+			
+				{% if RNRNMedium_1_3_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-top:8px;margin-left:4px;">	
+					<input id="RNRNMedium_1_3_answer" value='{{RNRNMedium_1_3_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if RNRNMedium_1_3_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not RNRNMedium_1_3_answer_correct and RNRNMedium_1_3_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{RNRNMedium_1_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+				{% else %}				
+				<div style="display:inline-block;vertical-align:top;margin-top:18px;margin-left:4px;">	
+					<input id="RNRNMedium_1_3_answer" value='{{RNRNMedium_1_3_answer}}' style="width:40px;" > &nbsp;
+				</div>
+				{% endif %}
+		</div>
+		<div style="margin-left:60px;margin-top:0px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:32px;margin-left:0px;">d)</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:2px;margin-left:0px;"><img src="/images/Grade7/G7_RN_Rational_Numbers_Medium_1d.png"></div>					
+			<div style="display:inline-block;vertical-align:top;margin-top:32px;margin-left:4px;">=</div>
+			
+				{% if RNRNMedium_1_4_answer_correct is defined %}
+				<div style="display:inline-block;vertical-align:top;margin-top:22px;margin-left:4px;">
+					<input id="RNRNMedium_1_4_answer" value='{{RNRNMedium_1_4_answer}}' readonly style="width:40px;background-color:#DFDFDF;"> &nbsp;
+						{% if RNRNMedium_1_4_answer_correct %}
+							<img src="/images/g7_correct.png">
+						{% elif not RNRNMedium_1_4_answer_correct and RNRNMedium_1_4_answer_correct is defined %}
+							<img src="/images/g7_incorrect.png">
+						{% endif %}
+						<a href ="javascript:ShowExplanation('{{RNRNMedium_1_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				</div>
+				{% else %}
+				<div style="display:inline-block;vertical-align:top;margin-top:32px;margin-left:4px;">	
+					<input id="RNRNMedium_1_4_answer" value='{{RNRNMedium_1_4_answer}}' style="width:40px;" > &nbsp;
+				</div>
+				{% endif %}
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Jennifer cut a cake into 3 parts such that her sister</div>
+			<br>
+			<div style="display:inline-block;vertical-align:top;margin-top:5px;">received</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-7px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>				
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:5px;">of the cake and her brother received</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-7px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>				
+			</div>
+			<br>			 
+			<div>of the cake. She kept the remaining cake for herself. What fraction of the cake did she get?</div>		
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-left:0px;margin-top:10px;">Answer:</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-20px;">
+				<p style="line-height:20%;text-align:center;">
+					{% if RNRNMedium_2_1_answer_correct is defined %}
+						&nbsp; <input id="RNRNMedium_2_1_answer" value='{{RNRNMedium_2_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					{% else %}
+						<input id="RNRNMedium_2_1_answer" value='{{RNRNMedium_2_1_answer}}' style="width:30px;" >
+					{% endif %}
+				<br>_____<br></p>
+				<p style="line-height:20%;text-align:center;">
+					{% if RNRNMedium_2_2_answer_correct is defined %}
+						&nbsp; <input id="RNRNMedium_2_2_answer" value='{{RNRNMedium_2_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"> &nbsp;
+					{% else %}
+						<input id="RNRNMedium_2_2_answer" value='{{RNRNMedium_2_2_answer}}' style="width:30px;" >
+					{% endif %}
+				<br></p>				
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:12px;margin-left:5px;">
+				{% if RNRNMedium_2_1_answer_correct is defined %}
+					{% if RNRNMedium_2_1_answer_correct and RNRNMedium_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNRNMedium_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		
+		{% if RNRNMedium_1_1_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:340px;"><button id="RNRNMedium_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-40px;margin-left:280px;"><button id="RNRNMedium_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNRNMedium_1_1_answer").change(function()
+	{
+		question_id = "RNRNMedium_1";
+		question_type = "RationalRealNumbers"
+		answer_id = "RNRNMedium_1_1_answer";
+		entered_answer = $("#RNRNMedium_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNRNMedium_1_2_answer").change(function()
+			{
+				question_id = "RNRNMedium_1";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNMedium_1_2_answer";
+				entered_answer = $("#RNRNMedium_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNRNMedium_1_3_answer").change(function()
+			{
+				question_id = "RNRNMedium_1";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNMedium_1_3_answer";
+				entered_answer = $("#RNRNMedium_1_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNRNMedium_1_4_answer").change(function()
+			{
+				question_id = "RNRNMedium_1";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNMedium_1_4_answer";
+				entered_answer = $("#RNRNMedium_1_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNRNMedium_2_1_answer").change(function()
+			{
+				question_id = "RNRNMedium_2";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNMedium_2_1_answer";
+				entered_answer = $("#RNRNMedium_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNRNMedium_2_2_answer").change(function()
+			{
+				question_id = "RNRNMedium_2";
+				question_type = "RationalRealNumbers"
+				answer_id = "RNRNMedium_2_2_answer";
+				entered_answer = $("#RNRNMedium_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNRNMedium_1_Submit").button({label:"Check Answers"});
+	$("#RNRNMedium_1_Retry").button({label:"Retry"});
+	$("#RNRNMedium_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "RationalRealNumbers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNRNMedium_1"+"#%$"+"RNRNMedium_1_1_answer"+"#%$"+$("#RNRNMedium_1_1_answer").val();
+		answers = answers + "#%$"+"RNRNMedium_1"+"#%$"+"RNRNMedium_1_2_answer"+"#%$"+$("#RNRNMedium_1_2_answer").val();
+		answers = answers + "#%$"+"RNRNMedium_1"+"#%$"+"RNRNMedium_1_3_answer"+"#%$"+$("#RNRNMedium_1_3_answer").val();
+		answers = answers + "#%$"+"RNRNMedium_1"+"#%$"+"RNRNMedium_1_4_answer"+"#%$"+$("#RNRNMedium_1_4_answer").val();
+		answers = answers + "#%$"+"RNRNMedium_2"+"#%$"+"RNRNMedium_2_1_answer"+"#%$"+$("#RNRNMedium_2_1_answer").val();
+		answers = answers + "#%$"+"RNRNMedium_2"+"#%$"+"RNRNMedium_2_2_answer"+"#%$"+$("#RNRNMedium_2_2_answer").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNRNMedium_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNRNMedium_1_1_answer,RNRNMedium_1_2_answer,RNRNMedium_1_3_answer,RNRNMedium_1_4_answer,";
+		answer_ids = answer_ids + "RNRNMedium_2_1_answer,RNRNMedium_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

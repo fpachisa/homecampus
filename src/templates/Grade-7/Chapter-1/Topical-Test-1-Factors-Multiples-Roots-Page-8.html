@@ -1,0 +1,167 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;margin-left:44%;">Factors, Multiples and Roots - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:10px;display:inline-block;"><font class="grade7PracticeQuestionNumber">13)</font></div>
+		<div style="margin-top:10px;display:inline-block;width:360px;vertical-align:top;">Rayan has three numbered balls. Two of the balls are numbered 18 and 35 while the third ball is numbered n. Find the smallest value of n such that the LCM of the three numbers is 3150.</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:80px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_13_answer" size=3 value='{{FMRTT1_13_answer}}' readonly style="background-color:#DFDFDF;">&nbsp;
+				{% if FMRTT1_13_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_13_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_13_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="FMRTT1_13_answer" size=3 value='{{FMRTT1_13_answer}}'><font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;"><font class="grade7PracticeQuestionNumber">14)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:360px;vertical-align:top;">Dina has two unequal pieces of wire. She bends one of them into a rectangle (3<sup>3</sup> &times; 5 &times; 7) cm by (3 &times; 5<sup>3</sup> &times; 7) cm. She bends the other piece of wire into a square that has the same area as the rectangle. What was the combined length of the original two pieces of wire?</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:80px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_14_answer" size=3 value='{{FMRTT1_14_answer}}' readonly style="background-color:#DFDFDF;"> cm&nbsp;
+				{% if FMRTT1_14_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_14_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_14_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="FMRTT1_14_answer" size=3 value='{{FMRTT1_14_answer}}'> cm<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;"><font class="grade7PracticeQuestionNumber">15)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:360px;vertical-align:top;">Alex works the night shift once every 10 days, Bella works the night shift once every 14 days while Charles works the night shift once every 35 days. If the three of them worked the night shift together today, how many days later will they work the night shift together next?</div>
+		<div style="margin-left:50px;margin-top:10px;">
+			<div style="display:inline-block;width:80px;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="FMRTT1_15_answer" size=3 value='{{FMRTT1_15_answer}}' readonly style="background-color:#DFDFDF;"> days&nbsp;
+				{% if FMRTT1_15_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{FMRTT1_15_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="FMRTT1_15_answer" size=3 value='{{FMRTT1_15_answer}}'> days<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="FMR_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="FMR_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#FMR_TT_1_Submit").button({label:"Submit"});
+$("#FMR_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#FMR_TT_1_Done").button({label:"Done"});
+$("#FMR_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+$("#FMRTT1_13_answer").change(function()
+		{
+			question_id = "FMRTT1_13";
+			test_id = '{{test_id}}';
+			answer_id = "FMRTT1_13_answer";
+			entered_answer = $("#FMRTT1_13_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#FMRTT1_14_answer").change(function()
+		{
+			question_id = "FMRTT1_14";
+			test_id = '{{test_id}}';
+			answer_id = "FMRTT1_14_answer";
+			entered_answer = $("#FMRTT1_14_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#FMRTT1_15_answer").change(function()
+		{
+			question_id = "FMRTT1_15";
+			test_id = '{{test_id}}';
+			answer_id = "FMRTT1_15_answer";
+			entered_answer = $("#FMRTT1_15_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'FMRTT1_12_1_answer'+separatorText+'FMRTT1_12_2_answer'+separatorText+'FMRTT1_12_3_answer'+separatorText+'FMRTT1_13_answer'+separatorText;
+	answer_ids = answer_ids + 'FMRTT1_14_answer'+separatorText+'FMRTT1_15_answer';	
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+

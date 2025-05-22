@@ -1,0 +1,35 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#7B43A0;">3.1 What is Rounding Off?</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#7B43A0;margin-left:65%;">3.1 What is Rounding Off?</div>
+	{% endif %}
+	<div class="grade7PageMargin">	
+		<div class="grade7YellowSideBox" style="margin-top:20px;">
+			<strong>Rules of rounding off whole numbers...</strong>
+			<ul>
+				<li>
+					<strong>Round up:</strong> If the digit to the right of rounding digit is 5, 6, 7, 8 or 9, add one to the rounding digit. All the digits to the right of the rounding digit are changed to 0.
+				</li>
+				<li style="margin-top:10px;">	
+					<strong>Round down:</strong> If the digit to the right of rounding digit is 0, 1, 2, 3 or 4, keep the rounding digit unchanged. All the digits to the right of it are changed to 0.
+				</li>
+			</ul>
+		</div>
+		<div style="margin-top:30px;width:90px;display:inline-block;"><font class="grade7ExampleNumber">Example 1:</font></div>
+		<div style="margin-top:30px;display:inline-block;width:310px;vertical-align:top;">The population of the world in the year 2014 was 7,211,239,210. What is the population correct to the nearest: 
+			<div style="margin-top:5px;">a)	100 &nbsp; b) 10000 &nbsp; c) million</div>
+		</div>
+		<br>
+		<div style="margin-top:15px;width:90px;display:inline-block;"><font class="grade7ExampleSolution">Solution 1:</font></div>
+		<div style="margin-top:15px;display:inline-block;width:310px;vertical-align:top;">
+			<div>a)	7 211 239 <font style="color:red;">2</font>10</div>
+			<div>Rounding digit is digit in the hundreds place which is 2.</div>
+			<div style="margin-top:10px;">Digit to the right of rounding digit = 1</div>
+			<div style="margin-top:10px;">Since 1 &lt; 5, the rounding digit is unchanged.</div>
+			<div style="margin-top:10px;">&there4;The population is 7 211 239 200, correct to the nearest 100.</div>
+		</div>		
+	</div>
+</div>
+<div class="{{page_class}}" style="background-color:#7B43A0;color:#fff">{{page_number}}</div>
+

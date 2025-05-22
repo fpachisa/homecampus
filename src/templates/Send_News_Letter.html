@@ -1,0 +1,33 @@
+{% extends 'MainPage.html' %}
+{% block body %}
+<div style="background-image: url(/images/site/background.png);">
+<div id="NotesContent" style="width:90%;min-height:720px;" >
+	<br><br>
+    <form id="SubscriptionPage" method="post" action="{{ current_url }}" enctype="multipart/form-data">
+	<fieldset>
+		<legend>Send Newsletter:</legend>
+		<ol>		
+			<li>
+				<fieldset>
+				<legend>From date:</legend>
+				<input id=date1 name=date1 type=text>
+				</fieldset>
+			</li>
+			<li>
+				<fieldset>
+				<legend>To date:</legend>
+				<input id=date2 name=date2 type=text>
+				</fieldset>
+			</li>
+			<li>
+				<button id="SendLetter" ></button>
+			</li>
+		</ol>		
+	</fieldset>
+<script type="text/javascript">              		            
+	$("#SendLetter").button({label:"Send News Letter"});
+</script> 
+</form>
+</div>
+</div>
+{% endblock %}

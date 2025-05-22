@@ -1,0 +1,195 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Hours to Milliseconds Conversion - Home Campus</title>
+<meta name="keywords" content="Convert hours to Milliseconds">
+<meta name="description" content="Converter Hours to Milliseconds" />
+{% endblock %}
+{% block content %}
+	
+<div style="margin: 10px;"><a href="/Learn/Time-Units-Converter"><u>Time</u></a> >> <a href="/Learn/Hours-Unit-Converter"><u>Hours Converter</u></a></div>
+<h2 class="learn-heading">How to Convert Hours to Milliseconds?</h2>
+
+
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Convert Hours to Milliseconds:</h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Number of hours&nbsp;=&nbsp; <input id="hour" type="number" size=4><br><br>
+				<button class="btn-quiz" id="ConvertToMilliseconds" onclick="ConvertToMilliseconds()">Convert To Milliseconds</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="MillisecondsAnswer"></div>
+		</div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+
+<!-- Concept 1 -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(255, 228, 243);">
+		<div class="concept-set__question">
+			<h4><strong>1 hour &nbsp;=&nbsp; 3,600,000 or 3.6 &times; 10<sup>6</sup> milliseconds.</strong>
+				<br><br>To convert hours to  milliseconds simply multiply the hours by 3600000 to get milliseconds.
+				<br><br>1 hour &nbsp;=&nbsp; 60 minutes
+				<br><br>1 minute &nbsp;=&nbsp; 60 seconds
+				<br><br>1 second &nbsp;=&nbsp; 1000 milliseconds
+				<br><br>So, 1 hour &nbsp;=&nbsp; 60 &nbsp;&times;&nbsp; 60 &nbsp;&times;&nbsp; 1000 &nbsp;=&nbsp; 3600000 milliseconds				  
+			</h4>
+		</div>
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+
+<!-- Examples -->
+<div class="concept-set">
+	<div class="concept-set__container"  style="background-color: rgb(218, 250, 255);">
+		<div class="concept-set__question">
+			<strong>Example 1: convert 8 hours to milliseconds.</strong>
+		</div>
+		<div class="concept-set__answer">	
+			<div class="col-10 col-off-1">
+				Multiply 8 by 3600000
+				<br><br>Total milliseconds in 8 hours &nbsp;=&nbsp; 8 &nbsp;&times;&nbsp; 3600000 &nbsp;=&nbsp; 28,800,000
+				<br><br>Hence, there are <strong>28,800,000 milliseconds in 8 hours.</strong>
+			</div>				  
+		</div>	
+		<div class="concept-set__question">		
+			<strong>Example 2: convert 0.00008 hours to milliseconds</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Multiply 0.00008 by 3600000
+				<br><br>Total milliseconds in 0.00008 hours &nbsp;=&nbsp; 0.00008 &nbsp;&times;&nbsp; 3600000 &nbsp;=&nbsp; 288
+				<br><br>Hence, there are <strong>288 milliseconds in 0.00008 hours.</strong>
+			</div>
+		</div>							
+		<div class="concept-set__question">		
+			<strong>Fun Fact:</strong>
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">			
+				Sound can travel approximately 100 metres in 288 milliseconds. Usain Bolt took 9580 milliseconds in the world record breaking race in 2009 to complete his 100 metres.
+			</div>
+		</div>							
+
+	</div>
+</div> <!-- End of Concept 1 -->
+
+
+<!-- Concept 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>1 Hour &nbsp;= </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				60 minutes<br><br>
+				3600 seconds<br><br>
+				3,600,000 milliseconds or 3.6 &times; 10<sup>6</sup> milliseconds<br><br>
+				0.04167 day<br><br>
+				0.00595 week<br><br>
+				0.00137 month<br><br>
+				0.000114 year<br><br>
+				1.1416 &times;10<sup>-5</sup> decade<br><br>
+				1.1416 &times;10<sup>-6</sup> century<br><br>
+				1.1416 &times;10<sup>-7</sup> millennium<br><br>
+				3.6 &times; 10<sup>9</sup> microseconds<br><br>
+				3.6 &times; 10<sup>12</sup> nanoseconds<br><br>
+				3.6 &times; 10<sup>15</sup> picoseconds<br><br>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of concept 2 -->
+
+
+
+<!-- Hour Milliseconds Chart -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question">
+			<h4>Hours to Milliseconds Conversion Chart </h4>
+		</div>			
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR1C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR1C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+		<div class="concept-set__answer">
+			<div class="col-4 col-off-1" id="HourR2C1" style="background-color: rgb(255, 212, 206);">
+			</div>
+			<div class="col-4 col-off-2" id="HourR2C2" style="background-color: rgb(245, 255, 202);">
+			</div>			
+		</div>
+	</div>
+</div> <!-- End of Hour Milliseconds Chart -->
+
+
+<script>
+
+function ConvertToMilliseconds() {
+	var hours = document.getElementById("hour").value;
+	var milliseconds = hours*3600000;
+	document.getElementById("MillisecondsAnswer").innerHTML = "There are "+milliseconds+" milliseconds in "+hours+" hours."
+}
+
+
+/* Generating Hours Row 1 Column 1 */
+
+var HourR1C1HTML = '<br>1 Hour &nbsp;=&nbsp; 3600000 milliseconds<br><br/>';
+
+for (var i = 1; i < 300; i++) {
+    HourR1C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000 + ' milliseconds<br/><br/>';
+  }
+document.getElementById("HourR1C1").innerHTML = HourR1C1HTML;
+
+/* R1C1 Ends */
+
+
+/* Generating Hours Row 1 Column 2 */
+
+var HourR1C2HTML = '<br>';
+
+for (var i = 300; i < 600; i++) {
+    HourR1C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000 + ' milliseconds<br/><br/>';
+  }
+document.getElementById("HourR1C2").innerHTML = HourR1C2HTML;
+
+/* R1C2 Ends */
+
+
+/* Generating Hours Row 2 Column 1 */
+
+var HourR2C1HTML = '<br>';
+
+for (var i = 600; i < 900; i++) {
+    HourR2C1HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000 + ' milliseconds<br/><br/>';
+  }
+document.getElementById("HourR2C1").innerHTML = HourR2C1HTML;
+
+/* R2C1 Ends */
+
+
+/* Generating Hours Row 2 Column 2 */
+
+var HourR2C2HTML = '<br>';
+
+for (var i = 900; i < 1200; i++) {
+    HourR2C2HTML += (i+1)+ ' Hours &nbsp;=&nbsp; ' + (i+1)*3600000 + ' milliseconds<br/><br/>';
+  }
+document.getElementById("HourR2C2").innerHTML = HourR2C2HTML;
+
+/* R2C2 Ends */
+
+
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many milliseconds are there in an hour?","acceptedAnswer":{"@type":"Answer","text":"1 hour has 3,600,000 milliseconds."}},{"@type":"Question","name":"How to convert hours to milliseconds?","acceptedAnswer":{"@type":"Answer","text":"Multiply hours by 3600000 to convert it to milliseconds."}}]}</script>
+
+
+{% endblock %}

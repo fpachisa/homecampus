@@ -1,0 +1,76 @@
+{% extends 'MainPage.html' %}
+{% block title %}
+<title>Learn Primary / Elementary Mathematics Online with Home Campus</title>
+<meta name="description" content="Learn primary school mathematics online. Watch videos on all primary mathematics concepts." />
+{% endblock %}
+{% block body %}
+	<script src="/js/Learn.js" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/jquery.ymenu.css">
+	<script type="text/javascript" src="/js/jquery.ymenu.js"></script>
+ <div id="HomeContent">
+ <p style="text-align:center;"><font style="font-size:1.7em;color: #2A916A;">WATCH and LEARN !!</font></p>
+ 	<div id="VideoListDisplay">
+        <div class="LearnFirstRowConceptListDisplay">	
+	   	<p><img alt="Whole Numbers" src="/images/site/whole_numbers_box.png"></p>
+	   		<ol>
+    			<li class="file" id="P4WNFactorsMultiples"><a href="/Learn/Primary-Grade-4/Whole-Numbers/Factors-Multiples">Factors and Multiples</a></li>
+    			<li class="file" id="P4WNUpto100000"><a href="/Learn/Primary-Grade-4/Whole-Numbers/Numbers-Up-to-100000">Numbers up to 100000</a></li>
+    			<li class="file" id="P4WNMultiplyDivide"><a href="/Learn/Primary-Grade-4/Whole-Numbers/Multiplication-Division-by-1-and-2-Digit-Numbers">Multiplication and Division</a></li>
+    			<li class="file" id="P4WNWordProblems"><a href="/Learn/Primary-Grade-4/Whole-Numbers/Word-Problems">Word Problems</a></li>
+			</ol>
+   		</div>
+        <div class="LearnFirstRowConceptListDisplay" style="width:400px;">	
+	   	<p><img alt="Fractions" src="/images/site/fractions_box.png"></p>	
+	   		<ol>
+    			<li class="file" id="P4FractionsOfSet"><a href="/Learn/Primary-Grade-4/Fractions/Fraction-of-a-Set">Fraction of a Set</a></li>
+    			<li class="file" id="P4FractionsWordProblems"><a href="/Learn/Primary-Grade-4/Fractions/Fractions-Word-Problems-Grade-4">Word Problems</a></li>   			
+			</ol>
+   		</div>
+        <div class="LearnFirstRowConceptListDisplay" style="width:300px;margin-left:30px;">	
+	   	<p><img alt="Decimals" src="/images/site/decimals_box.png"></p>	
+	   		<ol>
+				<li class="file" id="P4Decimal10s100s1000s"><a href="/Learn/Primary-Grade-4/Decimal/Understanding-Tenths-Hundredths-Thousandths">Tenths, Hundredths and Thousandths</a></li>
+				<li class="file" id="P4DecimalAddition"><a href="/Learn/Primary-Grade-4/Decimal/Decimals-Addition">Addition</a></li>
+				<li class="file" id="P4DecimalSubtraction"><a href="/Learn/Primary-Grade-4/Decimal/Decimals-Subtraction">Subtraction</a></li>
+				<li class="file" id="P4DecimalMultiplication"><a href="/Learn/Primary-Grade-4/Decimal/Decimals-Multiplication">Multiplication</a></li>
+				<li class="file" id="P4DecimalDivision"><a href="/Learn/Primary-Grade-4/Decimal/Decimals-Division">Division</a></li>
+				<li class="file" id="P4DecimalWordProblems"><a href="/Learn/Primary-Grade-4/Decimal/Word-Problems">Word Problems</a></li>
+            </ol>
+   		</div>
+   		<div class="LearnFirstRowConceptListDisplay" style="width:400px;">	
+	   	<p><img alt="Geometry" src="/images/site/geometry_box.png"></p>	
+	   		<ol>
+				<li class="file" id="P4GeometryParallelPerpendicular"><a href="/Learn/Primary-Grade-4/Geometry/Perpendicular-and-Parallel-Lines">Perpendicular and Parallel Lines</a></li>
+				<li class="file" id="P4GeometryUnderstandingAngles"><a href="/Learn/Primary-Grade-4/Geometry/What-is-an-angle-how-to-measure-it">What is an Angle?</a></li>
+				<li class="file" id="P4GeometryDrawingAngles"><a href="/Learn/Primary-Grade-4/Geometry/Drawing-Angles">How to Draw Angles?</a></li>
+				<li class="file" id="P4GeometryAnglesTurnsDirections"><a href="/Learn/Primary-Grade-4/Geometry/Angles-Turns-and-Directions">Angles, Turns and Directions</a></li>
+				<li class="file" id="P4GeometryQuadrilateral"><a href="/Learn/Primary-Grade-4/Geometry/Quadrilaterals-Rectangles-and-Squares">Quadrilaterals: Rectangles and Squares</a></li>
+				<li class="file" id="P4GeometrySymmetry"><a href="/Learn/Primary-Grade-4/Geometry/Symmetric-Figures-Shapes-and-Patterns">Symmetric Figures, Shapes and Patterns</a></li>
+			</ol>
+   		</div>   		   		
+        <div class="LearnFirstRowConceptListDisplay" style="width:400px;">	
+	   	<p><img alt="Measurement" src="/images/site/measurement_box.png"></p>
+            <ol>
+				<li class="file" id="P4MeasurementRectangleSquare"><a href="/Learn/Primary-Grade-4/Measurement/Area-and-Perimeter-of-Rectangles-and-Squares">Area and Perimeter of Rectangles and Squares</a></li>
+				<li class="file" id="P4MeasurementTime"><a href="/Learn/Primary-Grade-4/Measurement/Time-Seconds-24-Hour-Clock-Duration">Time: Seconds, 24-hour Clock and Duration</a></li>
+            </ol>
+   		</div>   		        
+        <div class="LearnFirstRowConceptListDisplay" style="width:250px;">		
+	   	<p><img alt="Data Analysis" src="/images/site/data_analysis_box.png"></p>	
+	   		<ol>
+				<li class="file" id="P4DataAnalysisTablesBar"><a href="/Learn/Primary-Grade-4/Data-Analysis/Tables-and-Bar-Graphs">Tables and Bar Graphs</a></li>
+				<li class="file" id="P4DataAnalysisLineGraphs"><a href="/Learn/Primary-Grade-4/Data-Analysis/Line-Graphs">Line Graphs</a></li>
+            </ol>
+   		</div>
+ 	</div>
+</div>
+{% block content %}			
+    <div id="mainContent" style="display:none">
+        <!--Display this when there is no notes icon to align the video in the frame -->
+        <div style="margin-top:38px" id ="DummyNotes" display:none></div>
+        <div class = "NotesLink" id="NotesLink"></div>
+        <div class="homeVideo" id ="HomeTV" ></div>              
+    </div>
+    <script type="text/javascript">{{VideoCall|safe}}</script>
+{% endblock %}
+{% endblock %}

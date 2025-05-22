@@ -1,0 +1,136 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#F693CD;margin-left:62%;">Linear Equations - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="margin-top:40px;">	
+			<div style="margin-top:10px;">Find the total resistance offered by the resistors in the part of the circuit shown below:</div>
+			<div style="margin-top:10px;"><img src="/images/Grade7/G7_LE_TT9_12c.png"></div>
+			
+		</div>				
+		<div style="margin-left:60px;margin-top:30px;">		
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;vertical-align:top;">Answer:</div>
+			<div style="display:inline-block;margin-left:5px;margin-top:-20px;">
+				{% if test_status == 'Completed' %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_12_1_answer" value='{{C9LETT1_12_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br>_____<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_12_2_answer" value='{{C9LETT1_12_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;text-align:center;"><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;"></div>			
+				{% else %}
+					<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:0px;">
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_12_1_answer" value='{{C9LETT1_12_1_answer}}' style="width:30px;text-align:center;" ><br>_____<br></p>
+						<p style="line-height:20%;text-align:center;"><input id="C9LETT1_12_2_answer" value='{{C9LETT1_12_2_answer}}' style="width:30px;text-align:center;" ><br></p>
+					</div>
+					<div style="display:inline-block;margin-left:5px;margin-top:40px;"></div>
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:0px;margin-top:10px;vertical-align:top;">&#8486;</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:10px;vertical-align:top;">
+				{% if test_status == 'Completed' %}
+					{% if C9LETT1_12_1_answer_correct and C9LETT1_12_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_12_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 4 / 4)</font>
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+						<a href ="javascript:ShowExplanation('{{C9LETT1_12_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+						<font class="grade7TestScore" style="margin-left:10px;">(Mark: 0 / 4)</font>
+					{% endif %}
+				{% else %}
+					<font class="grade7TestMark">(Mark: 4)</font>
+				{% endif %}
+			</div>								
+		</div>
+
+				
+	</div>
+	<div id="explain_dialog"></div>
+	<div id="submit_dialog"></div>
+</div>
+
+{% if test_status != 'Completed' and not current_user.IsParent %}
+	<div class="grade7TestForwardButton"><button id="C9LE_TT_1_Submit" style="outline:none;"></button></div>
+{% else %}
+	<div class="grade7TestForwardButton"><button id="C9LE_TT_1_Done" style="outline:none;"></button></div>
+{% endif %}
+<script>
+
+$("#C9LETT1_12_1_answer").change(function()
+		{
+			question_id = "C9LETT1_12";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_12_1_answer";
+			entered_answer = $("#C9LETT1_12_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 4;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#C9LETT1_12_2_answer").change(function()
+		{
+			question_id = "C9LETT1_12";
+			test_id = '{{test_id}}';
+			answer_id = "C9LETT1_12_2_answer";
+			entered_answer = $("#C9LETT1_12_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 0;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+$("#C9LE_TT_1_Submit").button({label:"Submit"});
+$("#C9LE_TT_1_Submit").click(function()
+	{
+		showSubmitDialog();		
+  	});
+$("#C9LE_TT_1_Done").button({label:"Done"});
+$("#C9LE_TT_1_Done").click(function()
+	{
+		location.reload();		
+  	});	
+
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+$("#submit_dialog").dialog
+({
+	autoOpen: false,
+	title:"Submit Test",
+    position:"center",   			
+	buttons:{"Yes": function(){callGrade7SubmitTest();},"No": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function showSubmitDialog(htmlText)
+{
+	$("#submit_dialog").html("Are you sure you want to submit the test?");
+	$("#submit_dialog").dialog("open");	
+}
+function callGrade7SubmitTest()
+{
+	$("#submit_dialog").dialog("close");
+	test_id = '{{test_id}}';
+	student_id = '{{current_user.username}}';
+	//saving all un-attempted questions in the database on ">>" click.
+	separatorText = '#%$'
+	answer_ids = 'C9LETT1_12_1_answer'+separatorText+'C9LETT1_12_2_answer';
+	Grade7SubmitTest(test_id,student_id,total_seconds_elapsed,answer_ids);
+}
+
+</script>
+
+

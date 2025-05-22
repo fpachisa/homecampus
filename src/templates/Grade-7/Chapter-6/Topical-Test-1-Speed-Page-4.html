@@ -1,0 +1,178 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:70%;">Speed - Topical Test</div>
+	<div class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">8)</font></div>
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">Shawn lives 1400 m from his school. Every day he leaves home at 7:30 am and cycles to school at a uniform speed of 18 km/h. On a certain day he left home at the usual time and cycled to school at a uniform speed of 6 m/s. </div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:10px;">a)</div>
+		<div style="display:inline-block;margin-top:10px;width:370px;vertical-align:top;">Did he arrive at his school early or late that day?</div>
+		<div style="margin-left:45px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="SPTT1_8_1_answer" value='early' disabled
+				{% if SPTT1_8_1_answer == 'early'%} 
+   					checked="checked"
+   				{%endif%}
+				 >early &nbsp;
+				<input type=radio name="SPTT1_8_1_answer" value='late' disabled
+				{% if SPTT1_8_1_answer == 'late' %} 
+   					checked="checked"
+   				{%endif%}
+				 >late&nbsp;&nbsp;
+
+				{% if SPTT1_8_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_8_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="SPTT1_8_1_answer" value='early'
+				{% if SPTT1_8_1_answer == 'early' %} 
+   					checked="checked"
+   				{%endif%}
+				 >early &nbsp;
+				<input type=radio name="SPTT1_8_1_answer" value='late'
+				{% if SPTT1_8_1_answer == 'late' %} 
+   					checked="checked"
+   				{%endif%}
+				 >late<font class="grade7TestMark">(Mark: 2)</font>		 
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:30px;width:15px;margin-top:20px;">b)</div>
+		<div style="display:inline-block;margin-top:20px;width:370px;vertical-align:top;">By how many seconds did he reach the school early or late that day? Round off your answer to the nearest whole number.</div>
+		<div style="margin-left:50px;margin-top:20px;">
+			<div style="display:inline-block;">Answer: </div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="SPTT1_8_2_answer" size=3 value='{{SPTT1_8_2_answer}}' readonly style="background-color:#DFDFDF;"> seconds&nbsp;
+				{% if SPTT1_8_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_8_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_8_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="SPTT1_8_2_answer" size=3 value='{{SPTT1_8_2_answer}}'> seconds<font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">9)</font></div>		
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">A monkey and a dog were playing together when they spotted a stick placed at a distance of 50 m. Both animals ran towards it. The monkey ran at a speed of 40 km/h. The speed of the dog was 10m/s. Who got the stick if they both ran at their respective uniform speeds?</div>
+		<div style="margin-left:45px;margin-top:10px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="SPTT1_9_answer" value='monkey' disabled
+				{% if SPTT1_9_answer == 'monkey'%} 
+   					checked="checked"
+   				{%endif%}
+				 >monkey &nbsp;
+				<input type=radio name="SPTT1_9_answer" value='dog' disabled
+				{% if SPTT1_9_answer == 'dog' %} 
+   					checked="checked"
+   				{%endif%}
+				 >dog&nbsp;&nbsp;
+
+				{% if SPTT1_9_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>
+
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{SPTT1_9_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="SPTT1_9_answer" value='monkey'
+				{% if SPTT1_9_answer == 'monkey' %} 
+   					checked="checked"
+   				{%endif%}
+				 >monkey &nbsp;
+				<input type=radio name="SPTT1_9_answer" value='dog'
+				{% if SPTT1_9_answer == 'dog' %} 
+   					checked="checked"
+   				{%endif%}
+				 >dog<font class="grade7TestMark">(Mark: 3)</font>		 
+			{% endif %}	
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="SP_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+
+$("#SP_TT_1_Continue").button({label:">>"});
+$("#SP_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-5.html';
+		rightPage = '/Grade-7/Chapter-6/Topical-Test-1-Speed-Page-6.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$';
+		answer_ids = 'SPTT1_6_answer'+separatorText+'SPTT1_7_1_answer'+separatorText+'SPTT1_7_2_answer'+separatorText;
+		answer_ids = answer_ids +'SPTT1_8_1_answer'+separatorText+'SPTT1_8_2_answer'+separatorText+'SPTT1_9_answer';
+
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("input[name='SPTT1_8_1_answer']").click(function()
+		{
+			question_id = "SPTT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_8_1_answer";
+			entered_answer = $("input:radio[name=SPTT1_8_1_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#SPTT1_8_2_answer").change(function()
+		{
+			question_id = "SPTT1_8";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_8_2_answer";
+			entered_answer = $("#SPTT1_8_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='SPTT1_9_answer']").click(function()
+		{
+			question_id = "SPTT1_9";
+			test_id = '{{test_id}}';
+			answer_id = "SPTT1_9_answer";
+			entered_answer = $("input:radio[name=SPTT1_9_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+</script>
+

@@ -1,0 +1,112 @@
+{% extends 'NotesPage.html' %}
+{% block title %}
+<title>Calculator to Calculate Area and Perimeter of Rectangles and Squares - Home Campus</title>
+<meta name="keywords" content="Area Perimeter Calculator">
+<meta name="description" content="Calculate Area and Perimeter of Squares and Rectangles" />
+{% endblock %}
+{% block content %}
+	
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Math-Calculators">More Math Calculators</a></div>
+<h2 class="learn-heading">Area and Perimeter of Rectangles and Squares Calculator</h2>
+<!-- Calculator 1 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Area of a Rectangle</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the area of a rectangle &nbsp;=&nbsp; Length &times; Breadth<br><br>
+			</div>
+			<div class="col-10 col-off-1">
+				Length of the rectangle&nbsp;=&nbsp; <input id="length" type="number" size=4> &nbsp;cm<br><br>
+				Breadth of the rectangle&nbsp;=&nbsp; <input id="breadth"  type="number" size=4> &nbsp;cm<br><br>
+				<button class="btn-quiz" id="calcRectArea" onclick="calcRectArea()">Calculate Area</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="rectArea"></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(213, 143, 215);" href="/Free-Math-Worksheets/Area-of-Rectangles">Download FREE Worksheets</a></div>
+	</div>
+</div> <!-- End of calculator 1 -->
+
+<!-- Calculator 2 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Area of a Square</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the area of a square &nbsp;=&nbsp; Length &times; Length &nbsp;=&nbsp; (Length)<sup>2</sup><br><br>
+			</div>
+			<div class="col-10 col-off-1">
+				Length of any side of the square&nbsp;=&nbsp; <input id="squareSide" type="number" size=4> &nbsp;cm<br><br>
+				<button class="btn-quiz" id="calcSquareArea" onclick="calcSquareArea()">Calculate Area of the Square</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="squareArea"></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Area_Rectangle_Squares">Practice Unlimited Area Questions</a></div>
+	</div>
+</div> <!-- End of calculator 2 -->
+
+<!-- Calculator 3 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Perimeter of a Rectangle</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the perimeter of a Rectangle &nbsp;=&nbsp; Length &nbsp;+&nbsp; Breadth &nbsp;+&nbsp; Length &nbsp;+&nbsp; Breadth<br><br>
+				= &nbsp;2&nbsp;&times;&nbsp;(Length &nbsp;+&nbsp; Breadth)
+			</div>
+			<div class="col-10 col-off-1">
+				Length of the rectangle&nbsp;=&nbsp; <input id="lengthPeri" type="number" size=4> &nbsp;cm<br><br>
+				Breadth of the rectangle&nbsp;=&nbsp; <input id="breadthPeri"  type="number" size=4> &nbsp;cm<br><br>
+				<button class="btn-quiz" id="calcRectPeri" onclick="calcRectPeri()">Calculate Perimeter of the Rectangle</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="rectPeri"></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:rgb(213, 143, 215);" href="/Free-Math-Worksheets/Perimeter-of-Rectangles">Download FREE Worksheets</a></div>
+	</div>
+</div> <!-- End of calculator 3 -->
+
+<!-- Calculator 4 -->
+<div class="concept-set">
+	<div class="concept-set__container">
+		<div class="concept-set__question"><h4>Calculate the Perimeter of a Square</h4></div>			
+		<div class="concept-set__answer">
+			<div class="col-10 col-off-1">
+				Formula for the perimeter of a Square &nbsp;=&nbsp; Length &nbsp;+&nbsp; Length &nbsp;+&nbsp; Length &nbsp;+&nbsp; Length<br><br>
+				= &nbsp;4&nbsp;&times;&nbsp;(Side of a Square)
+			</div>
+			<div class="col-10 col-off-1">
+				Side of the square&nbsp;=&nbsp; <input id="sidePeri" type="number" size=4> &nbsp;cm<br><br>
+				<button class="btn-quiz" id="calcSQPeri" onclick="calcSQPeri()">Calculate Perimeter of the Square</button><br><br> 
+			</div>
+			<div class="col-10 col-off-1" id="SQPeri"></div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_4_Math_Practice/Perimeter_Rectangle_Squares">Practice Unlimited Perimeter Questions</a></div>
+	</div>
+</div> <!-- End of calculator 4 -->
+
+
+<script>
+
+function calcRectArea() {
+	var area = document.getElementById("length").value * document.getElementById("breadth").value;
+	document.getElementById("rectArea").innerHTML = "Area of the rectangle &nbsp;=&nbsp; "+area+ " cm<sup>2</sup"; 
+}
+function calcSquareArea() {
+	var squareArea = document.getElementById("squareSide").value * document.getElementById("squareSide").value;
+	document.getElementById("squareArea").innerHTML = "Area of the Square &nbsp;=&nbsp; "+squareArea+ " cm<sup>2</sup"; 
+}
+function calcRectPeri() {
+	var lengthPeri = document.getElementById("lengthPeri").value;
+	var breadtPeri = document.getElementById("breadthPeri").value;
+	var rectPeri = 2*lengthPeri+2*breadtPeri;
+	document.getElementById("rectPeri").innerHTML = "Perimeter of the Rectangle &nbsp;=&nbsp; "+rectPeri+ " cm"; 
+}
+function calcSQPeri() {
+	var sidePeri = document.getElementById("sidePeri").value;
+	var SQPeri = 4*sidePeri;
+	document.getElementById("SQPeri").innerHTML = "Perimeter of the Square &nbsp;=&nbsp; "+SQPeri+ " cm"; 
+}
+
+</script>
+
+{% endblock %}

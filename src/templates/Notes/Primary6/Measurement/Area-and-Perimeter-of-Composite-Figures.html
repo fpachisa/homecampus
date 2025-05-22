@@ -1,0 +1,357 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyNumGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;<span style="text-decoration:line-through">{{N}}</span><sup style="color:red">{{S}}</sup></td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyDenGen(N,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>&nbsp;{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td><sub style="color:red">{{S}}</sub><span style="text-decoration:line-through">{{D}}</span></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% macro frSimplifyNumDenGen(N,P,D,S) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td><sub style="color:red">{{P}}</sub><span style="text-decoration:line-through">{{N}}</span></td>
+	</tr>
+	<tr style='text-align: center;'>
+		<td><sub style="color:red">{{S}}</sub><span style="text-decoration:line-through">{{D}}</span></td>
+	</tr>
+</table>
+{% endmacro %}
+
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Area and Perimeter of Composite Figures | Home Campus</title>
+<meta name="description" content="Area and Perimeter of Composite Figures" />
+<meta name="keywords" content='area of composite figures, perimeter of composite figures, circle, semicircle, quadrant, square, rectangle, triangle, right triangle, isosceles triangle, Primary 6, "grade 6 math", "Singapore math", "math for kids", elementary math, math tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+
+<h2 class="learn-heading">Area and Perimeter of Composite Figures</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>      
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>1. The figure below is made of two identical rectangles and two identical quadrants. Find the perimeter of the shaded part.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_1.png" alt="find perimeter of shaded part" title="find perimeter of shaded part" />
+			</div>
+			<div class="col-3 col-off-1 hint-box">
+				Breadth of rectangle<br>= 1 cm + 0.6 cm <br>= 1.6 cm
+			</div>
+			<div class="col-10 col-off-1">
+				Perimeter contributed by top rectangle
+				<br>= &nbsp;0.6 + 2.4 + 1.6
+				<br>= &nbsp;4.6 cm
+			</div>			
+			<div class="col-10 col-off-1">
+				Perimeter contributed by bottom rectangle
+				<br>= &nbsp;0.6 + 2.4 + 1.6
+				<br>= &nbsp;4.6 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by left quadrant
+				<br>= &nbsp;{{ frSimplifyDenGen(1,4,2) }} &times; <del>2</del><sup><font color=red>1</font></sup>&times; 3.14 &times; 1
+				<br>= &nbsp;1.57 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by right quadrant
+				<br>= &nbsp;{{ frSimplifyDenGen(1,4,2) }} &times; <del>2</del><sup><font color=red>1</font></sup>&times; 3.14 &times; 1
+				<br>= &nbsp;1.57 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter of shaded part
+				<br>= &nbsp;Perimeter contributed by top rectangle
+				<br>+ &nbsp;Perimeter contributed by left quadrant
+				<br>+ &nbsp;Perimeter contributed by bottom rectangle
+				<br>+ &nbsp;Perimeter contributed by right quadrant
+				<br><br>= &nbsp;4.6 + 1.57 + 4.6 + 1.57
+				<br>= &nbsp;<strong>12.34 cm</strong>
+			</div>	
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+<!-- Problem 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>2. The figure below shows two identical quadrants in two identical squares and a rectangle joining them to form a butterfly. Find the perimeter of the shaded butterfly.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_2.png" alt="find perimeter of shaded butterfly" title="find perimeter of shaded butterfly" />
+			</div>
+			<div class="col-10 col-off-1">
+				Perimeter contributed by 1 square
+				<br>= &nbsp;2 + 2
+				<br>= &nbsp;4 cm
+			</div>			
+			<div class="col-10 col-off-1">
+				Perimeter contributed by 1 quadrant
+				<br>= &nbsp;{{ frSimplifyDenGen(1,4,1) }} &times; <del>2</del><sup><font color=red>1</font></sup>&times; 3.14 &times; <del>2</del><sup><font color=red>1</font></sup>
+				<br>= &nbsp;1.57 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by rectangle
+				<br>= &nbsp;0.2 + 2 + 0.2 + 2
+				<br>= &nbsp;4.4cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter of shaded butterfly
+				<br>= &nbsp;2 &times; Perimeter contributed by 1 square
+				<br>+ &nbsp;2 &times; Perimeter contributed by 1 quadrant
+				<br>+ &nbsp;Perimeter contributed by rectangle
+				<br><br>= &nbsp;(2 &times; 4) + (2 &times; 3.14) + 4.4
+				<br>= &nbsp;8 + 6.28 + 4.4
+				<br>= &nbsp;<strong>18.68 cm</strong>
+			</div>	
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+<!-- Problem 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>3. Maddie joined 3 semicircles and a rectangle to form the shape of an umbrella. Find the area of the shaded umbrella.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_3.png" alt="find area of shaded umbrella" title="find area of shaded umbrella" />
+			</div>			
+			<div class="col-10 col-off-1">
+				Area of big semicircle
+				<br>= &nbsp;{{ frSimplifyDenGen(1,2,1) }} &times; {{ frSimplifyNumDenGen(22,11,7,1) }} &times; <del>7</del><sup><font color=blue>1</font></sup>&times; 7
+				<br>= &nbsp;77 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of medium semicircle
+				<br>= &nbsp;{{ frGen(1,2) }} &times; 3.14 &times; 5 &times; 5
+				<br>= &nbsp;39.25 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of small semicircle
+				<br>= &nbsp;{{ frGen(1,2) }} &times; 3.14 &times; 3 &times; 3
+				<br>= &nbsp;14.13 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of rectangle
+				<br>= &nbsp;10 &times; 2
+				<br>= &nbsp;20 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of shaded umbrella
+				<br>= &nbsp;Area of big semicircle 
+				<br>+ &nbsp;Area of rectangle
+				<br>+ &nbsp;Area of medium semicircle
+				<br>- &nbsp;Area of small semicircle
+				<br><br>= &nbsp;77 + 20 + 39.25 − 14.13
+				<br>= &nbsp;<strong>122.12 cm<sup>2</sup></strong>
+			</div>	
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+<!-- Problem 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>4. Find the area of the shaded heart formed by 2 semicircles and a square.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_4.png" alt="find area of shaded heart" title="find area of shaded heart" />
+			</div>			
+			<div class="col-3 col-off-1 hint-box">
+				Radius of semicircle<br>= 12 cm &divide; 2  <br>= 6 cm
+			</div>
+			<div class="col-10 col-off-1">
+				Area of two semicircles
+				<br>= Area of 1 circle
+				<br>= 3.14 &times; 6 &times; 6
+				<br>= &nbsp;113.04 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of square
+				<br>= &nbsp;12 &times; 12
+				<br>= &nbsp;144 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of shaded heart
+				<br>= &nbsp;Area of 2 semicircles
+				<br>+ &nbsp;Area of square
+				<br><br>= &nbsp;113.04 + 144
+				<br>= &nbsp;<strong>257.04 cm<sup>2</sup></strong>
+			</div>	
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+<!-- Problem 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>5. Find the area of the figure below formed by 2 identical three-quarter circles, 2 isosceles right-angled triangles and a square.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_5.png" alt="find area of shaded composite figure" title="find area of shaded composite figure" />
+			</div>			
+			<div class="col-3 col-off-1 hint-box">
+				Radius of circle<br>= 8 cm - 4 cm  <br>= 4 cm
+			</div>
+			<div class="col-10 col-off-1">
+				Area of 1 three-quarter circle	
+				<br>= &nbsp;{{ frSimplifyDenGen(3,4,1) }} &times; 3.14 &times; <del>4</del><sup><font color=red>1</font></sup>&times; 4
+				<br>= &nbsp;37.68 cm<sup>2</sup>
+			</div>	
+			<div class="col-4 col-off-1 hint-box">
+				Height of right isosceles triangle<br>= Base of right isosceles triangle  <br>= 4 + 10 cm = 14 cm
+			</div>
+			<div class="col-10 col-off-1">
+				Area of big isosceles right triangle	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,2,1) }} &times; <del>14</del><sup><font color=red>7</font></sup>&times; 14
+				<br>= &nbsp;98 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of small isosceles right triangle	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,2,1) }} &times; <del>8</del><sup><font color=red>7</font></sup>&times; 8
+				<br>= &nbsp;32 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of square
+				<br>= &nbsp;8 &times; 8
+				<br>= &nbsp;64 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				<strong>Area of shaded figure</strong>
+				<br>= &nbsp;2 &times; Area of 1 three-quarter circle
+				<br>+ &nbsp;Area of big isosceles triangle
+				<br>+ &nbsp;Area of small isosceles triangle
+				<br>+ &nbsp;Area of square
+				<br><br>= &nbsp;(2 &times; 37.68) + 98 + 32 + 64
+				<br>= &nbsp;75.36 + 98 + 32 + 64
+				<br>= &nbsp;<strong>269.36 cm<sup>2</sup></strong>
+			</div>	
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+<!-- Problem 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		
+		<div class="learn-set__question">
+			<h4>6. Find the area and perimeter of the shaded figure below.</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				<img src="/images/notes/P6_area_perimeter_composite_figure_problem_6.png" alt="find area and perimeter of shaded figure" title="find area and perimeter of shaded figure" />
+			</div>			
+			<div class="col-3 col-off-1 hint-box">
+				Diameter of semicircle<br>= 2.8 + 1.4 + 2.8 <br>= 7 cm
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>PERIMETER</strong>
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by 1 semicircle	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,2,1) }} &times; {{ frSimplifyNumDenGen(22,11,7,1) }} &times; <del>7</del><sup><font color=red>1</font></sup>
+				<br>= &nbsp;11 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by 1 quadrant	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,4,1) }} &times; <del>2</del><sup><font color=red>1</font></sup> &times; {{ frSimplifyNumDenGen(22,11,7,1) }} &times; <del>2.8</del><sup><font color=red>0.4</font></sup>
+				<br>= &nbsp;4.4 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				Perimeter contributed by rectangle	
+				<br>= &nbsp;3.5 + 3.5 cm
+				<br>= &nbsp;7 cm
+			</div>	
+			<div class="col-10 col-off-1">
+				<strong>Perimeter of shaded figure</strong>
+				<br>= &nbsp;2 &times; Perimeter contributed by 1 semicircle
+				<br>+ &nbsp;4 &times; Perimeter contributed by 1 quadrant
+				<br>+ &nbsp;Perimeter contributed by rectangle
+				<br><br>= &nbsp;(2 &times; 11) + (4 &times; 4.4) + 7
+				<br>= &nbsp;22 + 17.6 + 7
+				<br>= &nbsp;<strong>46.6 cm</strong>
+			</div>	
+
+			<div class="col-3 col-off-1 hint-box">
+				Radius of semicircle<br>= 7 cm &divide; 2 <br>= 3.5 cm
+			</div>
+			<div class="col-10 col-off-1">
+				<strong>AREA</strong>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of 1 semicircle	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,2,1) }} &times; {{ frSimplifyNumDenGen(22,11,7,1) }} &times; <del>3.5</del><sup><font color=red>0.5</font></sup> &times; 3.5
+				<br>= &nbsp;19.25 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of 1 square	
+				<br>= &nbsp;2.8 &times; 2.8
+				<br>= &nbsp;7.84 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				Area of 1 quadrant	
+				<br>= &nbsp;{{ frSimplifyDenGen(1,4,1) }} &times; {{ frSimplifyDenGen(22,7,1) }} &times; <del>2.8</del><sup><font color=red>0.7</font></sup> &times; <del>2.8</del><sup><font color=red>0.4</font></sup>
+				<br>= &nbsp;6.16 cm<sup>2</sup>
+			</div>	
+			<div class="col-3 col-off-1 hint-box">
+				Length of rectangle<br>= 3.5 + 2.8 + 2.8 <br>= 9.1 cm
+			</div>
+			<div class="col-10 col-off-1">
+				Area of rectangle	
+				<br>= &nbsp;9.1 &times; 1.4
+				<br>= &nbsp;12.74 cm<sup>2</sup>
+			</div>	
+			<div class="col-10 col-off-1">
+				<strong>Area of shaded figure</strong>
+				<br>= &nbsp;2 &times; Area contributed by 1 semicircle
+				<br>+ &nbsp;4 &times; (Area of 1 square − Area of 1 quadrant)
+				<br>+ &nbsp;Area of rectangle
+				<br><br>= &nbsp;(2 &times; 19.25) + (4 &times; (7.84 − 6.16))+ 12.74
+				<br>= &nbsp;38.5 + 6.72 + 12.74
+				<br>= &nbsp;<strong>57.96 cm<sup>2</sup></strong>
+			</div>		
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Area_Perimeter_of_Composite_Figures">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+{% endblock %}

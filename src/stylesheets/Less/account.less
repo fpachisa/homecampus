@@ -1,0 +1,225 @@
+/*
+ * The Sign-in / register popup styles
+ */
+ 
+ 
+.account-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: @account-modal-index;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	display: none;
+	opacity: 0;
+}
+
+.account-modal {
+	position:relative;
+	background-color: #fefefe;
+	margin: -500px auto 20px auto;
+	padding: 15px;
+	display: block;
+	border-radius:2px;
+	.shadow-4dp();
+	
+	width: 50%;	//for tablets
+	@media screen and (min-width: @screen-md-min){
+		width: 25%;
+	}
+}
+
+.account-modal-title {
+	width:100%;
+	display: inline-block;
+	margin-top: -15px;
+}
+
+.account-modal-close {
+	position:absolute;
+	top:0;
+	right:0;
+	padding: 5px 7px;
+	text-align: right;
+	width:20%;
+	display: inline-block;
+	
+	a {
+		color: #777;
+		cursor: pointer;
+		
+		&:hover {
+			color: #333; 
+			text-decoration: none;
+		}
+	}
+}
+
+.error-hint {
+	display: none; //hidden by default
+	color: @brand-danger;
+	font-size: 12px;
+	font-size: 0.9em;
+	font-weight: 900;
+}
+
+.has-error {
+	input {
+		border:1px solid red !important;
+	}
+	.error-hint {
+		display: inline;
+	}
+}
+
+//** Sign-in Page
+//===============
+.HC-SignIn {
+	.make-row();
+	
+	&__container {
+		.make-xs-column(12);		//full width on mobiles
+		
+		//tablets and desktops
+		.make-sm-column(6);
+		.make-sm-column-offset(3);
+				
+		&--body {
+			.panel;
+			.panel-default;
+			padding: 20px;
+			.shadow-2dp();
+			
+			> h2 {
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+
+//** Sign-in Form
+//===============
+.sign-in-form {
+	> div {
+		.form-group;
+		
+		> input {
+			.form-control;
+		}
+	}
+	
+	&__ctrl {		
+		margin-bottom: 0 !important;
+		> * {
+			display: inline-block !important;
+			width: 49%;
+			text-align: center;
+		}
+	}
+}	//form
+
+
+//** Register Form
+//================
+.HC-Register {
+	.make-row();
+	
+	&__container {
+		.make-xs-column(12);		//full width on mobiles
+		
+		//tablets and desktops
+		.make-sm-column(6);
+		.make-sm-column-offset(3);
+				
+		&--body {
+			.panel;
+			.panel-default;
+			padding: 20px;
+			.shadow-2dp();
+			
+			> h2 {
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+//** Register Form
+//================
+.register-form {
+	
+	> div {
+		.form-group;
+		> input {
+			.form-control;
+		}
+	}
+	
+	&__ctrl {		
+		margin-bottom: 0 !important;	//was causing increase in height of the popup
+		
+		&--a {
+			display: inline-block;
+			width: 49%;
+			
+			&.right {
+				text-align: right;
+			}
+		}
+	}	
+}
+
+
+//** XTRA **
+//==========
+.or-separator {
+	width: 100%;
+	height: 10px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	margin: 10px 0 20px 0;
+	
+	& span {
+		padding: 0 10px;
+		color: #bbb;
+		background-color: #FFF;
+	}
+	
+	&.no-pop {
+		& span {
+			background-color: @brand-primary;
+			color: #fff;
+		}
+	}
+}	//separator
+
+
+.social-login {
+	> * {
+		width: 44%;
+		
+		&:first-child {
+			margin-right: 3% !important;
+		}
+	
+		&:last-child {
+			margin-left: 3% !important;
+		}
+	}
+}	//social
+
+.popup-xtra {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	background: #eee;
+	padding: 5px;
+}

@@ -1,0 +1,230 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">10.1 Introduction to Simple Inequalities</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:55%;">10.1 Introduction to Simple Inequalities</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Represent the following variables using inequalities:
+			</div>
+		</div>
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;vertical-align:top;">a)</div>
+		<div style="display:inline-block;width:360px;margin-top:10px;">The average birth weight, <font class="grade7Variables">w</font> kg, of a full term newborn is typically in the range of 2.7 kg to 4.6 kg.</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_2_1_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_2_1_answer" value='A' disabled
+				{% if C10SIEasy_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &ge; <font class="grade7Variables">w</font> &le; 4.6<br>
+				<input type=radio name="C10SIEasy_2_1_answer" value='B' disabled
+				{% if C10SIEasy_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &le; <font class="grade7Variables">w</font> &le; 4.6<br>
+				<input type=radio name="C10SIEasy_2_1_answer" value='C' disabled
+				{% if C10SIEasy_2_1_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &ge; <font class="grade7Variables">w</font> &ge; 4.6
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_2_1_answer" value='A'
+				{% if C10SIEasy_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &ge; <font class="grade7Variables">w</font> &le; 4.6<br>
+				<input type=radio name="C10SIEasy_2_1_answer" value='B'
+				{% if C10SIEasy_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &le; <font class="grade7Variables">w</font> &le; 4.6<br>
+				<input type=radio name="C10SIEasy_2_1_answer" value='C'
+				{% if C10SIEasy_2_1_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;2.7 &ge; <font class="grade7Variables">w</font> &ge; 4.6
+			{% endif %}	
+		</div>
+
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;vertical-align:top;">b)</div>
+		<div style="display:inline-block;width:360px;margin-top:10px;">The annual school fee, $<font class="grade7Variables">r</font>, next year will be at least 20% more than the current annual school fee, $<font class="grade7Variables">f</font>.</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_2_2_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_2_2_answer" value='A' disabled
+				{% if C10SIEasy_2_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &gt; 20% &times; <font class="grade7Variables">f</font><br>
+				<input type=radio name="C10SIEasy_2_2_answer" value='B' disabled
+				{% if C10SIEasy_2_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &ge; 1.2<font class="grade7Variables">f</font><br>
+				<input type=radio name="C10SIEasy_2_2_answer" value='C' disabled
+				{% if C10SIEasy_2_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &gt; <font class="grade7Variables">f</font>
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_2_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_2_2_answer" value='A'
+				{% if C10SIEasy_2_2_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &gt; 20% &times; <font class="grade7Variables">f</font><br>
+				<input type=radio name="C10SIEasy_2_2_answer" value='B'
+				{% if C10SIEasy_2_2_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &ge; 1.2<font class="grade7Variables">f</font><br>
+				<input type=radio name="C10SIEasy_2_2_answer" value='C'
+				{% if C10SIEasy_2_2_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">r</font> &gt; <font class="grade7Variables">f</font>
+			{% endif %}	
+		</div>
+
+
+		<div style="display:inline-block;margin-left:40px;margin-top:10px;vertical-align:top;">c)</div>
+		<div style="display:inline-block;width:360px;margin-top:10px;">My height, <font class="grade7Variables">h</font> cm, is not less than 147 cm but not more than 155 cm.</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if C10SIEasy_2_3_answer_correct is defined %}
+			<div style="display:inline-block;">			
+				<input type=radio name="C10SIEasy_2_3_answer" value='A' disabled
+				{% if C10SIEasy_2_3_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">h</font> &gt; 147 &lt; 155<br>
+				<input type=radio name="C10SIEasy_2_3_answer" value='B' disabled
+				{% if C10SIEasy_2_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;147 &gt; <font class="grade7Variables">h</font> &lt; 155<br>
+				<input type=radio name="C10SIEasy_2_3_answer" value='C' disabled
+				{% if C10SIEasy_2_3_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;147 &lt; <font class="grade7Variables">h</font> &lt; 155
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:10px;">
+				{% if C10SIEasy_2_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{C10SIEasy_2_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="C10SIEasy_2_3_answer" value='A'
+				{% if C10SIEasy_2_3_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;<font class="grade7Variables">h</font> &gt; 147 &lt; 155<br>
+				<input type=radio name="C10SIEasy_2_3_answer" value='B'
+				{% if C10SIEasy_2_3_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;147 &gt; <font class="grade7Variables">h</font> &lt; 155<br>
+				<input type=radio name="C10SIEasy_2_3_answer" value='C'
+				{% if C10SIEasy_2_3_answer == 'C'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&nbsp;147 &lt; <font class="grade7Variables">h</font> &lt; 155
+			{% endif %}	
+		</div>
+
+
+		{% if C10SIEasy_2_1_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="C10SIEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="C10SIEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='C10SIEasy_2_1_answer']").click(function()
+	{
+		question_id = "C10SIEasy_2";
+		question_type = "SimpleInequalities"
+		answer_id = "C10SIEasy_2_1_answer";
+		entered_answer = $("input:radio[name=C10SIEasy_2_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='C10SIEasy_2_2_answer']").click(function()
+			{
+				question_id = "C10SIEasy_2";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIEasy_2_2_answer";
+				entered_answer = $("input:radio[name=C10SIEasy_2_2_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='C10SIEasy_2_3_answer']").click(function()
+			{
+				question_id = "C10SIEasy_2";
+				question_type = "SimpleInequalities"
+				answer_id = "C10SIEasy_2_3_answer";
+				entered_answer = $("input:radio[name=C10SIEasy_2_3_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+	$("#C10SIEasy_2_Submit").button({label:"Check Answers"});
+	$("#C10SIEasy_2_Retry").button({label:"Retry"});
+	$("#C10SIEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "SimpleInequalities"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "C10SIEasy_2"+"#%$"+"C10SIEasy_2_1_answer"+"#%$"+$("input:radio[name=C10SIEasy_2_1_answer]:checked").val();
+		answers = answers + "#%$"+"C10SIEasy_2"+"#%$"+"C10SIEasy_2_2_answer"+"#%$"+$("input:radio[name=C10SIEasy_2_2_answer]:checked").val();
+		answers = answers + "#%$"+"C10SIEasy_2"+"#%$"+"C10SIEasy_2_3_answer"+"#%$"+$("input:radio[name=C10SIEasy_2_3_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#C10SIEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "C10SIEasy_2_1_answer,C10SIEasy_2_2_answer,C10SIEasy_2_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

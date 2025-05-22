@@ -1,0 +1,220 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:40%;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Fill in the blanks with '<' or '>'.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">a) &minus; 7 
+			{% if RNNIEasy_3_1_answer_correct is defined %}
+				<input id="RNNIEasy_3_1_answer" value='{{RNNIEasy_3_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 4&nbsp;
+					{% if RNNIEasy_3_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_3_1_answer_correct and RNNIEasy_3_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_3_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_3_1_answer" value='{{RNNIEasy_3_1_answer}}' style="width:30px;" > 4&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">b) 0 
+			{% if RNNIEasy_3_2_answer_correct is defined %}
+				<input id="RNNIEasy_3_2_answer" value='{{RNNIEasy_3_2_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &minus;12&nbsp;
+					{% if RNNIEasy_3_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_3_2_answer_correct and RNNIEasy_3_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_3_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_3_2_answer" value='{{RNNIEasy_3_2_answer}}' style="width:30px;" > &minus;12&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">c) 0.9 
+			{% if RNNIEasy_3_3_answer_correct is defined %}
+				<input id="RNNIEasy_3_3_answer" value='{{RNNIEasy_3_3_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> 0.07&nbsp;
+					{% if RNNIEasy_3_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_3_3_answer_correct and RNNIEasy_3_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_3_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_3_3_answer" value='{{RNNIEasy_3_3_answer}}' style="width:30px;" > 0.07&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;display:inline-block;margin-top:20px;width:35px;">d) &minus;</div>
+		<div style="width:30px;display:inline-block;vertical-align:top;margin-left:-10px;margin-top:7px;">
+			<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+			<p style="line-height:20%;text-align:center;">3<br></p>
+		</div>
+		<div style="display:inline-block;">
+			{% if RNNIEasy_3_4_answer_correct is defined %}
+				<input id="RNNIEasy_3_4_answer" value='{{RNNIEasy_3_4_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &nbsp;
+			{% else %}
+				<input id="RNNIEasy_3_4_answer" value='{{RNNIEasy_3_4_answer}}' style="width:30px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="width:30px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:7px;">
+			<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+			<p style="line-height:20%;text-align:center;">2<br></p>
+		</div>
+		<div style="display:inline-block;">
+			{% if RNNIEasy_3_4_answer_correct is defined %}
+				{% if RNNIEasy_3_4_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNNIEasy_3_4_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% endif %}		
+		</div>
+		<br>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:35px;"><font class="grade7PracticeQuestionNumber">4 a)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">If a clockwise rotation of 45&deg; is denoted by +45&deg;, an anticlockwise rotation of 56&deg; is denoted by
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			{% if RNNIEasy_4_1_answer_correct is defined %}
+				<input id="RNNIEasy_4_1_answer" value='{{RNNIEasy_4_1_answer}}' readonly style="width:30px;background-color:#DFDFDF;"> &deg;&nbsp;
+					{% if RNNIEasy_4_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_4_1_answer_correct and RNNIEasy_4_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_4_1_answer" value='{{RNNIEasy_4_1_answer}}' style="width:30px;" > &deg;&nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:35px;text-align:right;"><font class="grade7PracticeQuestionNumber">b)&nbsp;</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">If 4 hours ahead of Greenwich Mean Time is denoted by GMT+4, 3 hours behind Greenwich Mean Time is denoted by 
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			{% if RNNIEasy_4_2_answer_correct is defined %}
+				<input id="RNNIEasy_4_2_answer" value='{{RNNIEasy_4_2_answer}}' readonly style="width:70px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNNIEasy_4_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_4_2_answer_correct and RNNIEasy_4_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_4_2_answer" value='{{RNNIEasy_4_2_answer}}' style="width:70px;" > &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if RNNIEasy_3_1_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:280px;"><button id="RNNIEasy_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-10px;margin-left:280px;"><button id="RNNIEasy_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNNIEasy_3_1_answer").change(function()
+	{
+		question_id = "RNNIEasy_3";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIEasy_3_1_answer";
+		entered_answer = $("#RNNIEasy_3_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNNIEasy_3_2_answer").change(function()
+			{
+				question_id = "RNNIEasy_3";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_3_2_answer";
+				entered_answer = $("#RNNIEasy_3_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_3_3_answer").change(function()
+			{
+				question_id = "RNNIEasy_3";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_3_3_answer";
+				entered_answer = $("#RNNIEasy_3_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_3_4_answer").change(function()
+			{
+				question_id = "RNNIEasy_3";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_3_4_answer";
+				entered_answer = $("#RNNIEasy_3_4_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_4_1_answer").change(function()
+			{
+				question_id = "RNNIEasy_4";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_4_1_answer";
+				entered_answer = $("#RNNIEasy_4_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_4_2_answer").change(function()
+			{
+				question_id = "RNNIEasy_4";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_4_2_answer";
+				entered_answer = $("#RNNIEasy_4_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNNIEasy_2_Submit").button({label:"Check Answers"});
+	$("#RNNIEasy_2_Retry").button({label:"Retry"});
+	$("#RNNIEasy_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "NumbersIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNNIEasy_3"+"#%$"+"RNNIEasy_3_1_answer"+"#%$"+$("#RNNIEasy_3_1_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_3"+"#%$"+"RNNIEasy_3_2_answer"+"#%$"+$("#RNNIEasy_3_2_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_3"+"#%$"+"RNNIEasy_3_3_answer"+"#%$"+$("#RNNIEasy_3_3_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_3"+"#%$"+"RNNIEasy_3_4_answer"+"#%$"+$("#RNNIEasy_3_4_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_4"+"#%$"+"RNNIEasy_4_1_answer"+"#%$"+$("#RNNIEasy_4_1_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_4"+"#%$"+"RNNIEasy_4_2_answer"+"#%$"+$("#RNNIEasy_4_2_answer").val();
+		
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNNIEasy_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNNIEasy_3_1_answer,RNNIEasy_3_2_answer,RNNIEasy_3_3_answer,RNNIEasy_3_4_answer,RNNIEasy_4_1_answer,RNNIEasy_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

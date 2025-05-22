@@ -1,0 +1,183 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#E12958;">8.3 Factorization</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#E12958;margin-left:77%;">8.3 Factorization</div>
+	{% endif %}
+		<div style="margin-left:40px;margin-top:30px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:5px;margin-left:0px;">e)</div>
+			<div style="display:inline-block;vertical-align:top;margin-left:5px;margin-top:-5px;">
+				<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">7<br></p>
+			</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:0px;">[4<font class="grade7Variables">p</font> &minus; 5(14 &minus; 2<font class="grade7Variables">p</font>)]</div>				
+		</div>
+		<div style="margin-left:60px;margin-top:10px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAMedium_1_5_answer_correct is defined %}
+					<input id="ALFAMedium_1_5_answer" value='{{ALFAMedium_1_5_answer}}' readonly style="width:45px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAMedium_1_5_answer" value='{{ALFAMedium_1_5_answer}}' style="width:45px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAMedium_1_5_answer_correct is defined %}
+					{% if ALFAMedium_1_5_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAMedium_1_5_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+		<div style="margin-left:40px;margin-top:20px;">
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:0px;">f)</div>
+			<div style="display:inline-block;vertical-align:top;margin-top:7px;margin-left:0px;">&minus;2{3(<font class="grade7Variables">y</font> + <font class="grade7Variables">z</font>) &minus; 4[<font class="grade7Variables">z</font> &minus; 5(3<font class="grade7Variables">y</font> &minus; 2<font class="grade7Variables">z</font>)]}</div>		
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">
+			<div style="display:inline-block;margin-left:5px;margin-top:10px;">Answer: &nbsp;
+				{% if ALFAMedium_1_6_answer_correct is defined %}
+					<input id="ALFAMedium_1_6_answer" value='{{ALFAMedium_1_6_answer}}' readonly style="width:75px;background-color:#DFDFDF;">
+				{% else %}
+					<input id="ALFAMedium_1_6_answer" value='{{ALFAMedium_1_6_answer}}' style="width:75px;" >
+				{% endif %}
+			</div>
+			<div style="display:inline-block;margin-left:10px;margin-top:0px;">
+				{% if ALFAMedium_1_6_answer_correct is defined %}
+					{% if ALFAMedium_1_6_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% else %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{ALFAMedium_1_6_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+				{% endif %}
+			</div>			
+		</div>
+
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			Factorise each of the following linear expressions completely:
+		</div>
+			
+		<div style="margin-left:40px;margin-top:10px;">a) 2<font class="grade7Variables">p</font>(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font>) &minus; 3(<font class="grade7Variables">b</font> + <font class="grade7Variables">a</font>)</div>
+		<div style="margin-left:65px;margin-top:10px;">
+			{% if ALFAMedium_2_1_answer_correct is defined %}
+			<div style="display:inline-block;">	
+				<input type=radio name="ALFAMedium_2_1_answer" value='A' disabled
+				{% if ALFAMedium_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >(<font class="grade7Variables">b</font> + <font class="grade7Variables">a</font>)(3 &minus; 2<font class="grade7Variables">p</font>)<br>
+				<input type=radio name="ALFAMedium_2_1_answer" value='B' disabled
+				{% if ALFAMedium_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >(2<font class="grade7Variables">p</font> &minus; 3)(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font>)<br>
+				<input type=radio name="ALFAMedium_2_1_answer" value='C' disabled
+				{% if ALFAMedium_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >(2<font class="grade7Variables">p</font> &minus; 3)(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font>)(<font class="grade7Variables">b</font> + <font class="grade7Variables">a</font>)
+			</div>
+			<div style="display:inline-block;margin-top:-10px;margin-left:20px;">	
+				{% if ALFAMedium_2_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{ALFAMedium_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			</div>
+			{% else %}
+				<input type=radio name="ALFAMedium_2_1_answer" value='A'
+				{% if ALFAMedium_2_1_answer == 'A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >(<font class="grade7Variables">b</font> + <font class="grade7Variables">a</font>)(3 &minus; 2<font class="grade7Variables">p</font>)<br>
+				<input type=radio name="ALFAMedium_2_1_answer" value='B'
+				{% if ALFAMedium_2_1_answer == 'B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >(2<font class="grade7Variables">p</font> &minus; 3)(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font>)<br>
+				<input type=radio name="ALFAMedium_2_1_answer" value='C'
+				{% if ALFAMedium_2_1_answer == 'C' %} 
+   					checked="checked"
+   				{%endif%}
+				 >(2<font class="grade7Variables">p</font> &minus; 3)(<font class="grade7Variables">a</font> + <font class="grade7Variables">b</font>)(<font class="grade7Variables">b</font> + <font class="grade7Variables">a</font>)
+			{% endif %}	
+		</div>
+
+		{% if ALFAMedium_1_5_answer_correct is defined %}
+			<div style="margin-top:30px;margin-left:340px;"><button id="ALFAMedium_2_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:30px;margin-left:280px;"><button id="ALFAMedium_2_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#E12958;color:#fff">{{page_number}}</div>
+<script>
+
+	$("#ALFAMedium_1_5_answer").change(function()
+	{
+		question_id = "ALFAMedium_1";
+		question_type = "AlgebraFactorisation"
+		answer_id = "ALFAMedium_1_5_answer";
+		entered_answer = $("#ALFAMedium_1_5_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#ALFAMedium_1_6_answer").change(function()
+			{
+				question_id = "ALFAMedium_1";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAMedium_1_6_answer";
+				entered_answer = $("#ALFAMedium_1_6_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("input[name='ALFAMedium_2_1_answer']").click(function()
+			{
+				question_id = "ALFAMedium_2";
+				question_type = "AlgebraFactorisation"
+				answer_id = "ALFAMedium_2_1_answer";
+				entered_answer = $("input:radio[name=ALFAMedium_2_1_answer]:checked").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+	$("#ALFAMedium_2_Submit").button({label:"Check Answers"});
+	$("#ALFAMedium_2_Retry").button({label:"Retry"});
+	$("#ALFAMedium_2_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "AlgebraFactorisation"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "ALFAMedium_1"+"#%$"+"ALFAMedium_1_5_answer"+"#%$"+$("#ALFAMedium_1_5_answer").val();
+		answers = answers + "#%$"+"ALFAMedium_1"+"#%$"+"ALFAMedium_1_6_answer"+"#%$"+$("#ALFAMedium_1_6_answer").val();
+		answers = answers + "#%$"+"ALFAMedium_2"+"#%$"+"ALFAMedium_2_1_answer"+"#%$"+$("input:radio[name=ALFAMedium_2_1_answer]:checked").val();
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#ALFAMedium_2_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "ALFAMedium_1_5_answer,ALFAMedium_1_6_answer,ALFAMedium_2_1_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>

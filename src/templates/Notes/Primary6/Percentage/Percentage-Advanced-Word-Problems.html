@@ -1,0 +1,279 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Percentage: Advanced Word Problems | Home Campus</title>
+<meta name="description" content="Percentage: Advanced Word Problems" />
+<meta name="keywords" content='PSLE, maths, primary 6 maths, grade 6 math, sixth grade math, elementary mathematics, percentage, word problems, Singapore maths models, home tutor, percentage worksheets'>
+{% endblock %}
+{% block content %}
+
+<h2 class="learn-heading">Finding Percentage Increase and Decrease</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+
+<!-- Problem 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 1: Justin bought a T-shirt at 12% off and received an additional membership discount of $7. If the T-shirt cost him $15, what was the original price of the T-shirt?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_11.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				$15 &nbsp;+&nbsp; $7 &nbsp;=&nbsp; $22<br><br>
+				The cost of the T-shirt before the membership discount was $22.<br><br>
+				100% &nbsp;&minus;&nbsp; 12% &nbsp;=&nbsp; 88%<br><br>
+				88%	&nbsp;&#8594;&nbsp; $22<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen("$22",88)}}<br><br>
+				100% &nbsp;&#8594;&nbsp; {{frGen("$22",88)}} &nbsp;&times;&nbsp; 100<br><br>
+				= &nbsp; $25<br><br>
+				The original price of the T-shirt was <strong>$25</strong>.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 2: 40% of the 7920 visitors to an amusement park were children. 25% of the children and {{frGen(1,3)}}	of the adults were repeat visitors. How many percent of the visitors were visiting the amusement park for the first time?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_21.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				40% of 7920	&nbsp;=&nbsp; {{frGen(40,100)}} &nbsp;&times;&nbsp; 7920<br><br>
+				= &nbsp; 3168<br><br>
+				There were <strong>3168</strong> children visiting the amusement park.<br><br>
+				7920 &nbsp;&minus;&nbsp; 3168 &nbsp;=&nbsp; 4752<br><br>
+				There were <strong>4752</strong> adults visiting the amusement park.
+			</div>
+			<div class="col-10 col-off-1">
+				25% of 3168	&nbsp;=&nbsp; {{frGen(25,100)}} &nbsp;&times;&nbsp; 3168<br><br>
+				= &nbsp; 792<br><br>
+				<strong>792</strong> children were repeat visitors.
+			</div>
+			<div class="col-10 col-off-1">
+				{{frGen(1,3)}} of 4752 &nbsp;=&nbsp; {{frGen(1,3)}} &nbsp;&times;&nbsp; 4752<br><br>
+				= &nbsp; 1584<br><br>
+				<strong>1584</strong> adults were repeat visitors.
+			</div>
+			<div class="col-10 col-off-1">
+				792 &nbsp;+&nbsp; 1584 &nbsp;=&nbsp; 2376<br><br>
+				There were <strong>2376</strong> repeat visitors.
+			</div>
+			<div class="col-10 col-off-1">
+				7920 &nbsp;&minus;&nbsp; 2376 &nbsp;=&nbsp; 5544<br><br>
+				There were <strong>5544</strong> first-time visitors.
+			</div>
+			<div class="col-10 col-off-1">
+				{{frGen(5544,7920)}} &nbsp;&times;&nbsp; 100% &nbsp;=&nbsp; 70%<br><br>
+				<strong>70%</strong> of the visitors were visiting the amusement park for the first time.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 3: Sarah had 55 cards. She gave 20% of them to her sister, 25% of the remaining to her brother and the rest to her best friend. How many percent of the cards did she give to her best friend?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_31.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Number of cards she gave to her sister &nbsp;=&nbsp; 20% of 55<br><br>
+				= &nbsp; {{frGen(20,100)}} &nbsp;&times;&nbsp; 55<br><br>
+				= &nbsp; 11
+			</div>
+			<div class="col-10 col-off-1">
+				Number of cards left for her brother and best friend &nbsp;=&nbsp; 55 &nbsp;&minus;&nbsp; 11<br><br>
+				= &nbsp; 44
+			</div>
+			<div class="col-10 col-off-1">
+				Number of cards she gave to her brother	&nbsp;=&nbsp; 25% of 44<br><br>
+				= &nbsp; {{frGen(25,100)}} &nbsp;&times;&nbsp; 44<br><br>
+				= &nbsp; 11
+			</div>
+			<div class="col-10 col-off-1">
+				Number of cards she gave to her best friend	&nbsp;=&nbsp; 44 &nbsp;&minus;&nbsp; 11<br><br>
+				= &nbsp; 33
+			</div>
+			<div class="col-10 col-off-1">
+				Percentage of cards she gave to her best friend	  &nbsp;=&nbsp;  {{frGen(33,55)}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 60%<br><br>
+				She gave <strong>60%</strong> of the total cards to her best friend.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 4: 80% of the children in a class have pets. 45% of them have dogs, 40% have cats and the rest have birds. If 3 children in the class have birds, how many children are there in the class?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_41.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				100% &nbsp;&minus;&nbsp; 45% &nbsp;&minus;&nbsp; 40% &nbsp;=&nbsp; 15%<br><br>
+				<strong>15%</strong> of the children who have pets have birds.
+			</div>
+			<div class="col-10 col-off-1">
+				15% &nbsp;&#8594;&nbsp; 3<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen(3,15)}}<br><br>
+				100% &nbsp;&#8594;&nbsp; {{frGen(3,15)}} &nbsp;&times;&nbsp; 100<br><br>
+				= &nbsp; 20<br><br>
+				There are <strong>20</strong> children in the class who have pets.
+			</div>
+			<div class="col-10 col-off-1">
+				80% &nbsp;&#8594;&nbsp; 20<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen(20,80)}}<br><br>
+				100% &nbsp;&#8594;&nbsp; {{frGen(20,80)}} &nbsp;&times;&nbsp; 100<br><br>
+				= &nbsp; 25<br><br>
+				There are <strong>25</strong> children in the class.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 5: A movie rental shop has 1375 movies for children. 40% of the movies are rated G while the rest are rated PG. The shop adds a few more G-rated movies to its collection increasing the number of G-rated movies to 45%. How many G-rated movies are added?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_51.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				100% &nbsp;&minus;&nbsp; 40% &nbsp;=&nbsp; 60%<br><br>
+				Before, the percentage of movies that are PG-rated is <strong>60%</strong>.
+			</div>
+			<div class="col-10 col-off-1">
+				Number of PG-rated movies &nbsp;=&nbsp; 60% of 1375<br><br>
+				= &nbsp; 60% &nbsp;&times;&nbsp; 1375<br><br>
+				{{frGen(60,100)}} &nbsp;&times;&nbsp; 1375<br><br>
+				= &nbsp; 825<br><br>
+				The number of PG-rated movies in the shop is <strong>825</strong>.
+			</div>
+			<div class="col-10 col-off-1">
+				100% &nbsp;&minus;&nbsp; 45% &nbsp;=&nbsp; 55%<br><br>
+				After more G-rated movies are added, the percentage of movies that are PG-rated <strong>reduces to 55%</strong>.
+			</div>
+			<div class="col-10 col-off-1">
+				Now,<br><br>
+				55% &nbsp;&#8594;&nbsp; 825<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen(825,55)}} &nbsp;=&nbsp; 15<br><br>
+				100% &nbsp;&#8594;&nbsp; 15 &times; 100 &nbsp;=&nbsp; 1500<br><br>
+				There are now a total of <strong>1500</strong> movies.				
+			</div>
+			<div class="col-10 col-off-1">
+				Number of additional G-rated movies	&nbsp;=&nbsp; 1500 &nbsp;&minus;&nbsp; 1375<br><br>
+				= &nbsp; 125<br><br>
+				There are <strong>125</strong> G-rated movies added.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 6 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 6: Alice organized a yard sale of her old books on Saturday and Sunday, and expected to sell an equal number of books on each day. However, due to heavy rains on Saturday she could sell only 20% of her books that day. She managed to sell the rest of them on Sunday. Had she sold 36 more books on Saturday, she would have met her expectation. Find the number of books she sold altogether.<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_61.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				100% &nbsp;&divide;&nbsp; 2	&nbsp;=&nbsp; 50%<br><br>
+				50% &nbsp;&minus;&nbsp; 20% &nbsp;=&nbsp; 30%<br><br>
+				She had to sell 30% more books on Saturday to meet her expectation.
+			</div>
+			<div class="col-10 col-off-1">
+				30% &nbsp;&#8594;&nbsp; 36<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen(36,30)}}<br><br>
+				100% &nbsp;&#8594;&nbsp; {{frGen(36,30)}} &times; 100%<br><br>
+				= &nbsp; 120<br><br>
+				She sold <strong>120</strong> books altogether.				
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 7 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 7: Grandma let Jon and Ron share her collection of seashells between them. Jon being the older of the two demanded a bigger share and took 160 seashells. Soon he realized he was being unfair. So, he gave 32 of his seashells to Ron which increased the number of seashells that Ron got by 25%. How many seashells were there in grandma's collection?<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_71.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				25% of Ron's seashells &nbsp;&#8594;&nbsp; 32<br><br>
+				1% of Ron's seashells &nbsp;&#8594;&nbsp; {{frGen(32,25)}}<br><br>
+				100% of Ron's seashells &nbsp;&#8594;&nbsp; {{frGen(32,25)}} &times; 100%<br><br>
+				= &nbsp; 128<br><br>
+				Total number of seashells &nbsp;=&nbsp; 160 &nbsp;+&nbsp; 128<br><br>
+				= &nbsp; 288<br><br>
+				There were <strong>288</strong> seashells in grandma's collection.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 8 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 8: Erica has a sum of money that she is using to buy blouses at a clothing store. If she buys 2 similar blouses she will be short of 20% of the cost. If she buys 1 blouse she will have $45 left. Find the cost of each blouse.<br /><br />
+				<img src="/images/notes/percentage_advanced_word_problem_81.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				30% of the cost of 2 blouses &nbsp;&#8594;&nbsp; $45<br><br>
+				1% of the cost of 2 blouses &nbsp;&#8594;&nbsp; {{frGen("$45",30)}}<br><br>
+				100% of the cost of 2 blouses &nbsp;&#8594;&nbsp; {{frGen("$45",30)}} &times; 100%<br><br>
+				= &nbsp; $150<br><br>
+				Cost of 1 blouse &nbsp;=&nbsp;  $150 &nbsp;&divide;&nbsp; 2 &nbsp;=&nbsp; $75<br><br>
+				The cost of each blouse is <strong>$75</strong>.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Word_Problems">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+{% endblock %}

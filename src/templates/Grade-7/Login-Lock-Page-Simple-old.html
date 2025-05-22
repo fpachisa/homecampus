@@ -1,0 +1,22 @@
+<div style="height:280px;">
+	<div style="text-align:center;margin-top:200px;"><button id="ownTheBook"></button></div>
+	<div style="text-align:center;margin-top:30px;">Or...</div>
+	<div style="text-align:center;margin-top:30px;"><a href="javascript:goToNextTopic('{{nextFreeTopic}}')">Learn next free topic</a></div>
+</div>
+<div class="{{page_class}}" style="background-color:#FBB113;color:#fff">{{page_number}}</div>	
+
+<script>
+function goToNextTopic(pageName)
+	{
+		pageName = "/Secondary-1-Grade-7-Mathematics#!"+pageName;
+		window.location.href = pageName;
+		location.reload();
+	}
+$("#ownTheBook").button({label:"<font style='font-size:0.8em;'>Own The Book</font>"});
+$("#ownTheBook").click(function()
+		{
+			pageName = "/SignIn?continue=%2FSecondary-1-Grade-7-Mathematics?pageName="+'{{currentPageName}}';
+			window.location.href = pageName;
+		}
+	);	
+</script>

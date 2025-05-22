@@ -1,0 +1,153 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:40%;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A hotel building has 10 storeys such that 3 of them are below the ground level. How is each storey numbered using positive and negative numbers, assuming the ground level is numbered 0? (Type your answer separated by commas)
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Storeys above ground:&nbsp;
+			{% if RNNIEasy_1_1_answer_correct is defined %}
+				<input id="RNNIEasy_1_1_answer" value='{{RNNIEasy_1_1_answer}}' readonly style="width:150px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNNIEasy_1_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_1_1_answer_correct and RNNIEasy_1_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_1_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_1_1_answer" value='{{RNNIEasy_1_1_answer}}' style="width:150px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Storeys below ground:&nbsp;
+			{% if RNNIEasy_1_2_answer_correct is defined %}
+				<input id="RNNIEasy_1_2_answer" value='{{RNNIEasy_1_2_answer}}' readonly style="width:150px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNNIEasy_1_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_1_2_answer_correct and RNNIEasy_1_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_1_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_1_2_answer" value='{{RNNIEasy_1_2_answer}}' style="width:150px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">John received a salary hike of $900 on account of good performance. On the other hand, his colleague Mike got a reduction in salary by an amount of $500 on account of high absenteeism. Express the changes in the salaries of John and Mike using positive and negative numbers.
+			</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Salary of John:&nbsp;$
+			{% if RNNIEasy_2_1_answer_correct is defined %}
+				<input id="RNNIEasy_2_1_answer" value='{{RNNIEasy_2_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNNIEasy_2_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_2_1_answer_correct and RNNIEasy_2_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_2_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_2_1_answer" value='{{RNNIEasy_2_1_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Salary of Mike:&nbsp;$
+			{% if RNNIEasy_2_2_answer_correct is defined %}
+				<input id="RNNIEasy_2_2_answer" value='{{RNNIEasy_2_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> &nbsp;
+					{% if RNNIEasy_2_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not RNNIEasy_2_2_answer_correct and RNNIEasy_2_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{RNNIEasy_2_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="RNNIEasy_2_2_answer" value='{{RNNIEasy_2_2_answer}}' style="width:50px;" > &nbsp;
+			{% endif %}	
+		</div>
+
+		{% if RNNIEasy_1_1_answer_correct is defined %}
+			<div style="margin-top:-30px;margin-left:340px;"><button id="RNNIEasy_1_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:0px;margin-left:280px;"><button id="RNNIEasy_1_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("#RNNIEasy_1_1_answer").change(function()
+	{
+		question_id = "RNNIEasy_1";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIEasy_1_1_answer";
+		entered_answer = $("#RNNIEasy_1_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#RNNIEasy_1_2_answer").change(function()
+			{
+				question_id = "RNNIEasy_1";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_1_2_answer";
+				entered_answer = $("#RNNIEasy_1_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_2_1_answer").change(function()
+			{
+				question_id = "RNNIEasy_2";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_2_1_answer";
+				entered_answer = $("#RNNIEasy_2_1_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#RNNIEasy_2_2_answer").change(function()
+			{
+				question_id = "RNNIEasy_2";
+				question_type = "NumbersIntegers"
+				answer_id = "RNNIEasy_2_2_answer";
+				entered_answer = $("#RNNIEasy_2_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	
+	$("#RNNIEasy_1_Submit").button({label:"Check Answers"});
+	$("#RNNIEasy_1_Retry").button({label:"Retry"});
+	$("#RNNIEasy_1_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "NumbersIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNNIEasy_1"+"#%$"+"RNNIEasy_1_1_answer"+"#%$"+$("#RNNIEasy_1_1_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_1"+"#%$"+"RNNIEasy_1_2_answer"+"#%$"+$("#RNNIEasy_1_2_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_2"+"#%$"+"RNNIEasy_2_1_answer"+"#%$"+$("#RNNIEasy_2_1_answer").val();
+		answers = answers + "#%$"+"RNNIEasy_2"+"#%$"+"RNNIEasy_2_2_answer"+"#%$"+$("#RNNIEasy_2_2_answer").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNNIEasy_1_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNNIEasy_1_1_answer,RNNIEasy_1_2_answer,RNNIEasy_2_1_answer,RNNIEasy_2_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

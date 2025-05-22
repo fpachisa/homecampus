@@ -1,0 +1,147 @@
+/**
+ * Subscription Page styles
+ */
+
+.subscription-page {
+	.make-row();
+	
+	.child-details {
+		.make-xs-column(12);
+		
+		&__form {	
+			.form-horizontal;		
+			.make-sm-column(6);
+			.make-xs-column(12);
+			
+			label { .make-sm-column(4);text-align:left !important; }
+			select { .make-sm-column(8); }
+		}
+	}
+	
+	.benefits {
+		.make-xs-column(12);
+		.text-center;
+	}
+	
+	.plan {
+		.make-sm-column(4);
+		.make-xs-column(12);
+		margin: 15px 0;
+		
+		@media screen and (min-width: @screen-md){
+			margin: 0;
+		}
+		
+		&__title {
+			padding: 15px;
+			margin: -16px -16px 0;		// 15px padding + 1px border = 16px (-)
+			text-transform: uppercase;
+			font-weight: bold;
+			.text-center;
+			
+			h3 {
+				margin: 0;
+				font-weight: bold;
+			}	
+		}
+		
+		&__container {
+			padding: 15px;
+			position: relative;
+			overflow: hidden;
+			.shadow-4dp();
+			
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				border-right: 30px solid transparent;
+				border-bottom: 30px solid transparent;
+			}
+			
+			@media screen and (min-width: @screen-sm){ min-height: 350px; }
+			
+			&.free {
+				&:before {
+					border-left: 30px solid darken(#eee, 10%);
+					border-top: 30px solid darken(#eee, 10%);	
+				}
+			}
+		
+			&.annual {
+				background-color: #fff;
+				z-index: 2;
+				&:before {
+					border-left: 30px solid darken(#FDD835, 10%);
+					border-top: 30px solid darken(#FDD835, 10%);	
+				}
+				@media screen and (min-width: @screen-sm){ transform: scale(1.2, 1.2); }
+			}
+		
+			&.monthly {
+				&:before {
+					border-left: 30px solid darken(@brand-primary, 10%);
+					border-top: 30px solid darken(@brand-primary, 10%);	
+				}
+			}	
+		}
+		
+		&__features {
+			list-style: none;
+			padding: 0;
+			i {
+				color: @brand-success;
+			}
+		}
+		
+		&__pricing {
+			font-weight: bold;
+			font-size: 75px;
+			
+			i, sup {
+				font-size: 25px;
+			}
+			
+			i {
+				vertical-align: super;
+			}
+			.text-center;
+		}
+		
+		&__note {
+			font-size: 0.75em;
+			color: #999;
+		}
+	}
+	
+	.plans {
+		.make-row();
+		.make-xs-column(12);
+		margin: 25px 0 40px 0;		//giving bottom-margin here to push the footer down!, dirty-fix need to replace with some better alternative
+	}
+	
+	.child-alert {
+		.make-sm-column(6);
+		.make-sm-column-offset(3);
+		.make-xs-column(12);
+		
+		
+		&__container{
+			padding: 15px;
+			.shadow-2dp();
+		}
+		
+		h3 {
+			margin:-15px -15px 15px;
+			padding: 15px;
+			color: darken(@brand-primary, 20%);
+			background-color: lighten(@brand-primary, 50%);
+		}
+		
+		.btn {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,367 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#F36D27;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#F36D27;margin-left:40%;">2.1 Negative Numbers, Integers and Number Line</div>
+	{% endif %}
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:35px;"><font class="grade7PracticeQuestionNumber">4</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Arrange each of the following in ascending order.
+			</div>
+		</div>
+		<div style="display:inline-block;margin-left:45px;margin-top:20px;width:15px;">a)</div>
+		<div style="display:inline-block;margin-top:20px;width:350px;vertical-align:top;">
+			0, &minus;3, &minus;9, 12, 15
+		</div>
+		<div style="margin-left:55px;margin-top:10px;">
+			{% if RNNIMedium_4_1_answer_correct is defined %}
+				<input type=radio name="RNNIMedium_4_1_answer" value='-3,-9,0,12,15' disabled
+				{% if RNNIMedium_4_1_answer == '-3,-9,0,12,15'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;3, &minus;9, 0, 12, 15<br>
+				<input type=radio name="RNNIMedium_4_1_answer" value='-9,-3,0,12,15' disabled
+				{% if RNNIMedium_4_1_answer == '-9,-3,0,12,15' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;9, &minus;3, 0, 12, 15<br>
+				<input type=radio name="RNNIMedium_4_1_answer" value='0,-3,-9,12,15' disabled
+				{% if RNNIMedium_4_1_answer == '0,-3,-9,12,15' %} 
+   					checked="checked"
+   				{%endif%}
+				 >0, &minus;3, &minus;9, 12, 15&nbsp;&nbsp;
+				{% if RNNIMedium_4_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNNIMedium_4_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input type=radio name="RNNIMedium_4_1_answer" value='-3,-9,0,12,15'
+				{% if RNNIMedium_4_1_answer == '-3,-9,0,12,15' %} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;3, &minus;9, 0, 12, 15<br>
+				<input type=radio name="RNNIMedium_4_1_answer" value='-9,-3,0,12,15'
+				{% if RNNIMedium_4_1_answer == '-9,-3,0,12,15'%} 
+   					checked="checked"
+   				{%endif%}
+				 >&minus;9, &minus;3, 0, 12, 15<br>
+				 <input type=radio name="RNNIMedium_4_1_answer" value='0,-3,-9,12,15'
+				{% if RNNIMedium_4_1_answer == '0,-3,-9,12,15'%} 
+   					checked="checked"
+   				{%endif%}
+				 >0, &minus;3, &minus;9, 12, 15			 
+			{% endif %}	
+		</div>
+		<div style="display:inline-block;margin-left:45px;margin-top:30px;width:15px;">b)</div>
+		<div style="display:inline-block;margin-top:30px;width:350px;vertical-align:top;">
+			<div style="display:inline-block;">&minus;3</div>
+			<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+				<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">2<br></p>
+			</div>
+			<div style="display:inline-block;">,</div>
+			<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+				<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">5<br></p>
+			</div>
+			<div style="display:inline-block;">, &minus;</div>
+			<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+				<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">4<br></p>
+			</div>
+			<div style="display:inline-block;">, 3.1, </div>
+			<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+				<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>
+			<div style="display:inline-block;">, &minus;</div>
+			<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+				<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+				<p style="line-height:20%;text-align:center;">3<br></p>
+			</div>											
+		</div>
+		<div style="margin-left:55px;margin-top:10px;">
+			{% if RNNIMedium_4_2_answer_correct is defined %}
+				<div style="margin-top:10px;">
+				<div style="display:inline-block;"><input type=radio name="RNNIMedium_4_2_answer" value='a' disabled
+				{% if RNNIMedium_4_2_answer == 'a'%} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;">&minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>				
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<div style="display:inline-block;">, 3.1</div>
+				<br>
+				</div>
+				<div style="margin-top:10px;">				 
+				<div style="display:inline-block;"><input type=radio name="RNNIMedium_4_2_answer" value='b' disabled
+				{% if RNNIMedium_4_2_answer == 'b' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;">&minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>				
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<div style="display:inline-block;">, 3.1</div>
+				<br>
+				</div>
+				<div style="margin-top:10px;">
+				<input type=radio name="RNNIMedium_4_2_answer" value='c' disabled
+				{% if RNNIMedium_4_2_answer == 'c' %} 
+   					checked="checked"
+   				{%endif%}
+				 >
+				<div style="display:inline-block;">3.1</div>
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<br>
+				</div>				 
+				{% if RNNIMedium_4_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+				{% endif %}
+				<a href ="javascript:ShowExplanation('{{RNNIMedium_4_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<div style="margin-top:10px;">
+				<div style="display:inline-block;"><input type=radio name="RNNIMedium_4_2_answer" value='a'
+				{% if RNNIMedium_4_2_answer == 'a' %} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;">&minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<div style="display:inline-block;">, 3.1</div>
+				<br>
+				</div>
+				<div style="margin-top:10px;">				 
+				<div style="display:inline-block;"><input type=radio name="RNNIMedium_4_2_answer" value='b'
+				{% if RNNIMedium_4_2_answer == 'b'%} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;">&minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>				
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>				
+				<div style="display:inline-block;">, 3.1</div>
+				<br>
+				</div>
+				<div style="margin-top:10px;">
+				 <div style="display:inline-block;"><input type=radio name="RNNIMedium_4_2_answer" value='c'
+				{% if RNNIMedium_4_2_answer == 'c'%} 
+   					checked="checked"
+   				{%endif%}
+				 ></div>
+				<div style="display:inline-block;">3.1</div>
+				<div style="display:inline-block;">,</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">7<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">5<br></p>
+				</div>
+				<div style="display:inline-block;">, </div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">2<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:0px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">10<br>___<br></p>
+					<p style="line-height:20%;text-align:center;">3<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-2px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">3<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">4<br></p>
+				</div>
+				<div style="display:inline-block;">, &minus;3</div>
+				<div style="width:20px;display:inline-block;vertical-align:top;margin-left:-5px;margin-top:-14px;">
+					<p style="line-height:20%;text-align:center;">1<br>__<br></p>
+					<p style="line-height:20%;text-align:center;">2<br></p>
+				</div>																				
+				<br>
+				</div>				 			 
+			{% endif %}	
+		</div>
+
+
+
+
+		{% if RNNIMedium_4_1_answer_correct is defined %}
+			<div style="margin-top:10px;margin-left:340px;"><button id="RNNIMedium_4_Retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:20px;margin-left:280px;"><button id="RNNIMedium_4_Submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#F36D27;color:#fff">{{page_number}}</div>
+<script>
+	$("input[name='RNNIMedium_4_1_answer']").click(function()
+	{
+		question_id = "RNNIMedium_4";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIMedium_4_1_answer";
+		entered_answer = $("input:radio[name=RNNIMedium_4_1_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("input[name='RNNIMedium_4_2_answer']").click(function()
+	{
+		question_id = "RNNIMedium_4";
+		question_type = "NumbersIntegers"
+		answer_id = "RNNIMedium_4_2_answer";
+		entered_answer = $("input:radio[name=RNNIMedium_4_2_answer]:checked").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+
+	
+	$("#RNNIMedium_4_Submit").button({label:"Check Answers"});
+	$("#RNNIMedium_4_Retry").button({label:"Retry"});
+	$("#RNNIMedium_4_Submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "NumbersIntegers"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "RNNIMedium_4"+"#%$"+"RNNIMedium_4_1_answer"+"#%$"+$("input:radio[name=RNNIMedium_4_1_answer]:checked").val();
+		answers = answers + "#%$"+"RNNIMedium_4"+"#%$"+"RNNIMedium_4_2_answer"+"#%$"+$("input:radio[name=RNNIMedium_4_2_answer]:checked").val();
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#RNNIMedium_4_Retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "RNNIMedium_4_1_answer,RNNIMedium_4_2_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

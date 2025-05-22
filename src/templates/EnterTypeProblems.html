@@ -1,0 +1,12 @@
+{% extends 'PracticePageSkeleton.html' %}
+   
+   {% block content%}	
+   <div>
+   	<b>Answer: </b>
+   	<b>{% if dollar_unit is not none and dollar_unit != "None" %} {{dollar_unit|safe}} {% endif %} </b>
+   	
+   	<input size=4 onkeypress="this.size=this.value.length+1;" class="answer-box" type="text" id="answer" {% if answer_submitted is not none and answer_submitted != "None" %} value="{{answer_submitted|safe}}" {%endif%} />
+    
+    <b> {% if unit is not none and unit != "None" %} {{unit|safe}} {% endif %} </b>
+   </div>
+   {% endblock %}

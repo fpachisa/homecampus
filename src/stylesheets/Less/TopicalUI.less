@@ -1,0 +1,105 @@
+/*
+ * The Experimental UI for Home Campus
+ * 
+ * @created on 25-Aug-2016
+ */
+.topical-ui {
+	.make-row();
+	margin-top: -15px; //remove top-padding from main.main
+	
+	/* Heading */
+	&__heading {
+		text-align: center;
+		background-color: @brand-primary;
+		color: #fff;
+		margin:0;
+		padding:15px 0;
+		
+		@media screen and (min-width: @screen-sm-min){
+			line-height: 20px;
+		}
+	}
+	
+	/* The Prime content Area */
+	&__prime {
+		.make-xs-column(12);
+		.make-md-column(9);
+		padding:0;
+		float: right !important;
+	}
+	
+	/* The SideBar */
+	&__sidebar {
+		.make-xs-column(12);
+		.make-md-column(3);
+		padding:0;
+		background-color: #eee;
+		float: left;
+		position: relative;
+		//height: 100%;
+		
+		&.fixed {
+			position: fixed;
+			top:0;
+			left:0;
+			//height: 100%;
+		}
+	}
+	
+	/* The Links */
+	&__links {
+		
+		h3 {
+			text-align: center;
+			line-height: 20px;
+			margin:0;
+			padding:15px 0;
+			border: 1px solid #ddd;
+			border-left:0;
+			border-right: 0;
+			cursor: pointer;
+		}
+		
+		ul {
+			list-style:none;
+			padding:0;
+			margin:0;
+			height: 0;
+			overflow: hidden;
+			
+			li {
+				//text-align: center;
+				cursor: pointer;
+				padding: 0 10px;
+				
+				&.active {
+					//box-shadow: 1px -1px #ddd inset;
+					background-color: #ccc;
+				}
+			
+				&:hover:not(.active){
+					background-color: #ddd;
+				}
+				
+				a {
+					color: #777;
+					text-decoration: none;
+					&:hover, 
+					&:focus,
+					&:active {
+						color: #777;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		
+		&.active {
+			ul {
+				height: auto;
+			}
+			
+			h3{ background-color: #bbb;border:0}
+		}
+	}
+}

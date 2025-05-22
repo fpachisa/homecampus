@@ -1,0 +1,144 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#7B43A0;margin-left:48%;">Approximation and Estimation - Topical Test</div>
+	<div class="grade7PageMargin" style="clear:both;">
+		<div style="display:inline-block;margin-left:20px;margin-top:30px;"><font class="grade7PracticeQuestionNumber">9)</font></div>
+		<div style="display:inline-block;width:380px;margin-top:30px;vertical-align:top;">
+			The diagram shows a land containing identical blocks of apartments such that each block has a length of <br>65.57 m and a breadth of 38.9 m. 
+			<div style="margin-top:10px;margin-left:10px;"><img src="/images/Grade7/G7_AE_TT1_9.png"></div>
+		</div>
+		<div style="margin-left:40px;margin-top:10px;">
+			<div style="display:inline-block;width:15px;">a)</div>
+			<div style="display:inline-block;width:360px;vertical-align:top;">
+				 Estimate the area of the land to 1 s.f.
+			</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+			{% if test_status == 'Completed' %}
+				<input id="AETT1_9_1_answer" value='{{AETT1_9_1_answer}}' readonly style="background-color:#DFDFDF;width:40px;"> m<sup>2</sup>&nbsp;
+				{% if AETT1_9_1_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				<input id="AETT1_9_1_answer" value='{{AETT1_9_1_answer}}' style="width:40px;"> m<sup>2</sup> <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>
+			<div style="display:inline-block;width:15px;margin-top:20px;">b)</div>
+			<div style="display:inline-block;width:360px;vertical-align:top;margin-top:20px;">
+				Use a calculator to find the actual value, correct to 2 decimal places.
+			</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+			{% if test_status == 'Completed' %}
+				<input id="AETT1_9_2_answer" value='{{AETT1_9_2_answer}}' readonly style="background-color:#DFDFDF;width:60px;"> m<sup>2</sup>&nbsp;
+				{% if AETT1_9_2_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 1 / 1)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 1)</font>					
+				{% endif %}
+			{% else %}
+				<input id="AETT1_9_2_answer" value='{{AETT1_9_2_answer}}' style="width:60px;"> m<sup>2</sup> <font class="grade7TestMark">(Mark: 1)</font>
+			{% endif %}
+			</div>					
+			<div style="display:inline-block;width:15px;margin-top:20px;">c)</div>
+			<div style="display:inline-block;width:360px;vertical-align:top;margin-top:20px;">
+				Find the magnitude of round off error.
+			</div>
+			<div style="margin-left:20px;margin-top:10px;">Answer: &nbsp; 
+			{% if test_status == 'Completed' %}
+				 <input id="AETT1_9_3_answer" value='{{AETT1_9_3_answer}}' readonly style="background-color:#DFDFDF;width:60px;"> m<sup>2</sup> &nbsp;
+				{% if AETT1_9_3_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 2 / 2)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{AETT1_9_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 2)</font>					
+				{% endif %}
+			{% else %}
+				 <input id="AETT1_9_3_answer" value='{{AETT1_9_3_answer}}' style="width:60px;"> m<sup>2</sup> <font class="grade7TestMark">(Mark: 2)</font>
+			{% endif %}
+			</div>					
+		</div>
+		
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+<div class="grade7TestForwardButton"><button id="AE_TT_1_Continue" style="outline:none;"></button></div>
+<script>
+$("#AE_TT_1_Continue").button({label:">>"});
+$("#AE_TT_1_Continue").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-3/Topical-Test-1-Approximation-Estimation-Page-7.html';
+		rightPage = '/Grade-7/Chapter-3/Topical-Test-1-Approximation-Estimation-Page-8.html';
+		//saving all un-attempted questions in the database on ">>" click.
+		separatorText = '#%$'
+		answer_ids = 'AETT1_8_answer'+separatorText+'AETT1_9_1_answer'+separatorText+'AETT1_9_2_answer'+separatorText
+		answer_ids = answer_ids +'AETT1_9_3_answer'
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,answer_ids);
+  	});
+
+$("#AETT1_9_1_answer").change(function()
+		{
+			question_id = "AETT1_9";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_9_1_answer";
+			entered_answer = $("#AETT1_9_1_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#AETT1_9_2_answer").change(function()
+		{
+			question_id = "AETT1_9";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_9_2_answer";
+			entered_answer = $("#AETT1_9_2_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("#AETT1_9_3_answer").change(function()
+		{
+			question_id = "AETT1_9";
+			test_id = '{{test_id}}';
+			answer_id = "AETT1_9_3_answer";
+			entered_answer = $("#AETT1_9_3_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 2;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+		
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:500
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+</script>
+

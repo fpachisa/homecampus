@@ -1,0 +1,33 @@
+    <h1>Sign in</h1>
+    <form id="login" method="post" action="{{ current_url }}" enctype="multipart/form-data">
+        <div style="border:2px solid #90C84C;padding:15px 15px 15px 15px;margin-right:200px;margin-left:30px;">       
+        <font class="RegistrationText">Username:</font><input name="username" id="username" type="text" placeholder="Enter username" autofocus><br><br>
+        <font class="RegistrationText">Password:</font><input name="password" id="password" type="password" placeholder="Enter password"><br><br>
+        <button id="SignIn"></button>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/ForgotPassword" class="RegistrationText">Forgot password?</a>
+        </div>
+        <script type="text/javascript"> 
+		            var username = new LiveValidation('username',{validMessage:" ", wait:10000});
+		            username.add(Validate.Presence,{failureMessage:"Please enter your username first."});		            
+		            var password = new LiveValidation('password',{validMessage:" ", wait:10000});
+		            password.add(Validate.Presence,{failureMessage:"Please enter a password."});                   		            
+
+					$("#SignIn").button({label:"Sign In"});
+		</script>            
+
+    </form>
+
+    <p class="RegistrationText">Don't have an account? <a href="/Register">Create a new one</a>.</p>
+	<script src="/js/jquery.gritter.min.js"></script>
+	<script>
+	{% if login_error %}
+	 $.gritter.add({
+			// (string | mandatory) the heading of the notification
+			title: 'Login Error!',
+			// (string | mandatory) the text inside the notification
+			text: '{{login_error}}',
+			// (bool | optional) if you want it to fade out on its own or just sit there
+			sticky: true,
+		});
+	 {% endif %}
+	</script>

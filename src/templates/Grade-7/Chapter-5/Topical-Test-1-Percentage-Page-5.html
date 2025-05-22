@@ -1,0 +1,163 @@
+<div style="height:480px;">
+	<div class="grade7PageHeader" style="color:#FBB113;">Percentage - Topical Test</div>
+	{% if test_status != 'Completed' %}
+	<div style="float:right;margin-right:10px;display:inline-block;">
+		<div style="display:inline-block;"><button id="PR_TT_1_Pause" style="outline:none;"></button></div>
+		<div id="TestTimer" style="display:inline-block;"></div>
+	</div>
+	<br>
+	{% endif %}
+	<div style="clear:both;" class="grade7PageMargin">
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">11)</font></div>		
+		<div style="display:inline-block;margin-top:20px;width:380px;vertical-align:top;">A jar of lollipops has 50 pieces with each piece being sold for $2. A mischievous kid steals 60% of the lollipops. How much money can be collected by selling the remaining lollipops?</div>
+		<div style="margin-left:50px;margin-top:30px;">
+			<div style="display:inline-block;">Answer: $</div>
+			<div style="display:inline-block;"> 
+			{% if test_status == 'Completed' %}
+				<input id="PRTT1_11_answer" size=3 value='{{PRTT1_11_answer}}' readonly style="background-color:#DFDFDF;"> &nbsp;
+				{% if PRTT1_11_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>					
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_11_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+			{% else %}
+				<input id="PRTT1_11_answer" size=3 value='{{PRTT1_11_answer}}'><font class="grade7TestMark">(Mark: 3)</font>
+			{% endif %}
+			</div>				
+		</div>
+		<div style="margin-left:20px;margin-top:30px;display:inline-block;width:25px;"><font class="grade7PracticeQuestionNumber">12)</font></div>		
+		<div style="display:inline-block;margin-top:30px;width:380px;vertical-align:top;">Two teams competed in an IQ quiz. Team A was given 140 questions while Team B was given 100 questions. The error rate (i.e. wrong answers) was 20% in the case of Team B. If Team A answered 35 questions incorrectly, and the team with the higher success rate won the quiz, which team got the trophy?</div>
+		<div style="margin-left:45px;margin-top:20px;">
+			{% if test_status == 'Completed' %}
+				<input type=radio name="PRTT1_12_answer" value='Team A' disabled
+				{% if PRTT1_12_answer == 'Team A'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Team A<br>
+				<input type=radio name="PRTT1_12_answer" value='Team B' disabled
+				{% if PRTT1_12_answer == 'Team B'%} 
+   					checked="checked"
+   				{%endif%}
+				 >Team B&nbsp;&nbsp;
+
+				{% if PRTT1_12_answer_correct %}
+					<img src="/images/g7_correct.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_12_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>					
+					<font class="grade7TestScore">(Mark: 3 / 3)</font>
+				{% else %}
+					<img src="/images/g7_incorrect.png">
+					<a href ="javascript:ShowExplanation('{{PRTT1_12_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+					<font class="grade7TestScore">(Mark: 0 / 3)</font>					
+				{% endif %}
+				
+			{% else %}
+				<input type=radio name="PRTT1_12_answer" value='Team A'
+				{% if PRTT1_12_answer == 'Team A' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Team A<br>
+				<input type=radio name="PRTT1_12_answer" value='Team B'
+				{% if PRTT1_12_answer == 'Team B' %} 
+   					checked="checked"
+   				{%endif%}
+				 >Team B<font class="grade7TestMark">(Mark: 3)</font>		 
+			{% endif %}	
+		</div>
+
+
+	</div>
+	<div id="explain_dialog"></div>
+</div>
+	<div class="grade7TestBackButton"><button id="PR_TT_1_back" style="outline:none;"></button></div>
+<script>
+
+$("#PR_TT_1_Pause").button({label:"Pause"});
+var total_seconds_elapsed = {{elapsed_time_seconds}};
+$("#PR_TT_1_Pause").click(function()
+	{
+		Grade7SaveTestTime('{{test_id}}',total_seconds_elapsed,'{{current_user.username}}','Topical-Test-1-Percentage');
+  	});	
+$("#PR_TT_1_back").button({label:"<<"});
+$("#PR_TT_1_back").click(function()
+	{
+		test_id = '{{test_id}}';
+		student_id = '{{student_id}}';
+		leftPage = '/Grade-7/Chapter-5/Topical-Test-1-Percentage-Page-3.html';
+		rightPage = '/Grade-7/Chapter-5/Topical-Test-1-Percentage-Page-4.html';
+		Grade7SaveAndLoadTest(test_id,student_id,leftPage,rightPage,total_seconds_elapsed,'');		
+  	});
+
+$("#PRTT1_11_answer").change(function()
+		{
+			question_id = "PRTT1_11";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_11_answer";
+			entered_answer = $("#PRTT1_11_answer").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+$("input[name='PRTT1_12_answer']").click(function()
+		{
+			question_id = "PRTT1_12";
+			test_id = '{{test_id}}';
+			answer_id = "PRTT1_12_answer";
+			entered_answer = $("input:radio[name=PRTT1_12_answer]:checked").val();
+			student_id = '{{current_user.username}}';
+			question_marks = 3;
+			elapsed_time = total_seconds_elapsed;
+			Grade7SaveTestAnswer(test_id,question_id,answer_id,entered_answer,student_id,question_marks,elapsed_time);
+		});
+
+
+
+if ('{{test_status}}' != 'Completed')
+{
+	TestTimer();
+	clearInterval(timeVar);
+	var timeVar=setInterval(function(){TestTimer()},1000);
+}
+function TestTimer()
+{
+	function pretty_time_string(num)
+	{
+	return ( num < 10 ? "0" : "" ) + num;   
+	}
+	total_seconds_elapsed = total_seconds_elapsed + 1;
+	display_seconds = total_seconds_elapsed;
+	hours = Math.floor(display_seconds / 3600);
+	display_seconds = display_seconds % 3600;
+	minutes = Math.floor(display_seconds / 60);
+	display_seconds = display_seconds % 60;
+	var seconds = Math.floor(display_seconds);
+	hours = pretty_time_string(hours);
+	minutes = pretty_time_string(minutes);
+	seconds = pretty_time_string(display_seconds);
+	var currentTimeString = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("TestTimer").innerHTML=currentTimeString;
+}
+
+$("#explain_dialog").dialog
+({
+	autoOpen: false,
+	title:"Explanation",
+    position:"center",   			
+	buttons:{"Ok": function(){$(this).dialog("close");}},
+	modal:true,
+	width:600
+});
+function ShowExplanation(htmlText)
+{
+	$("#explain_dialog").html(htmlText);
+	$("#explain_dialog").addClass("ExplanationFont");
+	$("#explain_dialog").dialog("open");	
+}
+
+
+</script>
+

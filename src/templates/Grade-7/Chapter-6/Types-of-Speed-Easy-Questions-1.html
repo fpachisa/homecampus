@@ -1,0 +1,137 @@
+<div style="height:480px;">
+	{% if page_number % 2 == 0 %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;">6.2 Types of Speed and Unit Conversions</div>
+	{% else %}
+		<div class="grade7PageHeader" style="color:#3DD2CD;margin-left:50%;">6.2 Types of Speed and Unit Conversions</div>
+	{% endif %}
+		<div class="grade7TopicName" style="margin-top:20px;">Practice - Easy</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">1)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Julie covered a distance of 5 km. For the first half, she jogged at a speed of 2.5 m/s and for the second half she ran at a speed of 5 m/s. What was her average speed for the whole distance? Give your answer correct to 2 decimal places.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPTUCEasy_1_answer_correct is defined %}
+				<input id="SPTUCEasy_1_answer" value='{{SPTUCEasy_1_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> m/s &nbsp;
+					{% if SPTUCEasy_1_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCEasy_1_answer_correct and SPTUCEasy_1_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCEasy_1_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCEasy_1_answer" value='{{SPTUCEasy_1_answer}}' style="width:50px;" > m/s &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">2)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">A bus left Boston at 7:30 AM and arrived at New York City at 11:15 AM. The speed of the bus was 110 km/h for 2 hours. It covered the rest of the journey at a speed of 80 km/h. Find the average speed of the bus.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPTUCEasy_2_answer_correct is defined %}
+				<input id="SPTUCEasy_2_answer" value='{{SPTUCEasy_2_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km/h &nbsp;
+					{% if SPTUCEasy_2_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCEasy_2_answer_correct and SPTUCEasy_2_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCEasy_2_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCEasy_2_answer" value='{{SPTUCEasy_2_answer}}' style="width:50px;" > km/h &nbsp;
+			{% endif %}	
+		</div>
+		<div style="margin-left:20px;margin-top:20px;display:inline-block;width:20px;"><font class="grade7PracticeQuestionNumber">3)</font></div>
+		<div style="margin-top:20px;display:inline-block;width:390px;vertical-align:top;">
+			<div style="display:inline-block;vertical-align:top;margin-top:0px;">Ms. Rosy took 40 min to reach her office at an average speed of 50 km/h. Find the distance covered by her. Give your answer correct to 2 decimal places.</div>
+		</div>
+		<div style="margin-left:60px;margin-top:20px;">Answer:&nbsp;
+			{% if SPTUCEasy_3_answer_correct is defined %}
+				<input id="SPTUCEasy_3_answer" value='{{SPTUCEasy_3_answer}}' readonly style="width:50px;background-color:#DFDFDF;"> km &nbsp;
+					{% if SPTUCEasy_3_answer_correct %}
+						<img src="/images/g7_correct.png">
+					{% elif not SPTUCEasy_3_answer_correct and SPTUCEasy_3_answer_correct is defined %}
+						<img src="/images/g7_incorrect.png">
+					{% endif %}
+					<a href ="javascript:ShowExplanation('{{SPTUCEasy_3_answer_explain}}')">&nbsp;&nbsp;<img src="/images/g7_explanation.png"></a>
+			{% else %}
+				<input id="SPTUCEasy_3_answer" value='{{SPTUCEasy_3_answer}}' style="width:50px;" > km &nbsp;
+			{% endif %}	
+		</div>
+
+
+		{% if SPTUCEasy_1_answer_correct is defined %}
+			<div style="margin-top:-40px;margin-left:320px;"><button id="SPTUC_Easy_1_retry" style="outline:none;"></button></div>
+		{% else %}
+			<div style="margin-top:-20px;margin-left:280px;"><button id="SPTUC_Easy_1_submit" style="outline:none;"></button></div>
+		{% endif %}			
+		<div id="explain_dialog"></div>	
+</div>
+<div class="{{page_class}}" style="background-color:#3DD2CD;color:#fff">{{page_number}}</div>
+<script>
+	$("#SPTUCEasy_1_answer").change(function()
+	{
+		question_id = "SPTUCEasy_1";
+		question_type = "TypesOfSpeed"
+		answer_id = "SPTUCEasy_1_answer";
+		entered_answer = $("#SPTUCEasy_1_answer").val();
+		student_id = '{{current_user.username}}';
+		Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+	});
+	$("#SPTUCEasy_2_answer").change(function()
+			{
+				question_id = "SPTUCEasy_2";
+				question_type = "TypesOfSpeed"
+				answer_id = "SPTUCEasy_2_answer";
+				entered_answer = $("#SPTUCEasy_2_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+	$("#SPTUCEasy_3_answer").change(function()
+			{
+				question_id = "SPTUCEasy_3";
+				question_type = "TypesOfSpeed"
+				answer_id = "SPTUCEasy_3_answer";
+				entered_answer = $("#SPTUCEasy_3_answer").val();
+				student_id = '{{current_user.username}}';
+				Grade7SaveAnswer(question_id,question_type,answer_id,entered_answer,student_id);
+			});
+
+
+
+	$("#SPTUC_Easy_1_submit").button({label:"Check Answers"});
+	$("#SPTUC_Easy_1_retry").button({label:"Retry"});
+	$("#SPTUC_Easy_1_submit").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		question_type = "TypesOfSpeed"
+		//getting question id, answer id and entered answer in form of a string
+		var answers = "SPTUCEasy_1"+"#%$"+"SPTUCEasy_1_answer"+"#%$"+$("#SPTUCEasy_1_answer").val();
+		answers = answers + "#%$"+"SPTUCEasy_2"+"#%$"+"SPTUCEasy_2_answer"+"#%$"+$("#SPTUCEasy_2_answer").val();
+		answers = answers + "#%$"+"SPTUCEasy_3"+"#%$"+"SPTUCEasy_3_answer"+"#%$"+$("#SPTUCEasy_3_answer").val();
+
+
+		Grade7SubmitAnswer(student_id,question_type,answers);
+	});
+	$("#SPTUC_Easy_1_retry").click(function(){
+		//#%$ is a string separator
+		student_id = '{{current_user.username}}';
+		answer_ids = "SPTUCEasy_1_answer,SPTUCEasy_2_answer,SPTUCEasy_3_answer";
+		Grade7ClearAnswer(student_id,answer_ids);
+	});
+	$("#explain_dialog").dialog
+	({
+		autoOpen: false,
+		title:"Explanation",
+        position:"center",   			
+		buttons:{"Ok": function(){$(this).dialog("close");}},
+		modal:true,
+		width:500
+	});
+	function ShowExplanation(htmlText)
+	{
+		$("#explain_dialog").html(htmlText);
+		$("#explain_dialog").addClass("ExplanationFont");
+		$("#explain_dialog").dialog("open");	
+	}
+</script>
+
+

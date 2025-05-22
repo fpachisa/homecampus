@@ -1,0 +1,183 @@
+{% macro frGen(N,D) %}
+<table style='display:inline;padding:0 6px;'>
+	<tr style='padding: 0 5px;text-align: center;border-bottom: 1px solid;'>
+		<td>{{N}}</td>
+	</tr> 
+	<tr style='text-align: center;'>
+		<td>{{D}}</td>
+	</tr>
+</table>
+{% endmacro %}
+{% extends 'NotesPage.html' %}
+
+{% block title %}
+<title>Finding Percentage Increase and Decrease | Home Campus</title>
+<meta name="description" content="Finding Percentage Increase and Decrease" />
+<meta name="keywords" content='percentage, increase, decrease, "primary 6 maths", "grade 6 math", "Singapore math", "math for kids", elementary, math, story, problems, free, help, games, online, tuition, homeschooling'>
+{% endblock %}
+{% block content %}
+      
+
+<h2 class="learn-heading">Finding Percentage Increase and Decrease</h2>
+<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+
+<!-- Concept Explanation -->
+<div class="concept-set">
+	<div class="concept-set__container P6">
+		
+		<div class="concept-set__question">
+			<h4>Formulas for Percentage Increase and Decrease:</h4>
+		</div>
+
+		<div class="concept-set__answer">					
+			<div class="col-10 col-off-1" style="margin-top: 2%;">
+				Percentage increase<br><br>
+				=&nbsp; {{frGen("amount increased","initial quantity")}} &nbsp;&times;&nbsp; 100%<br><br>
+				Percentage decrease<br><br>
+				=&nbsp; {{frGen("amount decreased","initial quantity")}} &nbsp;&times;&nbsp; 100%
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Divide_Proper_Fraction_by_Proper_Fraction">Practice Unlimited Questions</a></div>
+	</div>
+</div><!-- End of concept -->
+
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				There are 10 children in each group below.<br><br>
+				<img src="/images/notes/percentage_increase_decrease_explanation_1.png" /><br /><br />
+				2 more children join Group A.<br><br>
+				The number of children in Group A increases by 2.<br><br>
+				Percentage increase	 &nbsp;=&nbsp;  {{frGen(2,10)}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 20%<br><br>
+				There are now 20% more children in Group A than before.<br><br>
+				<img src="/images/notes/percentage_increase_decrease_explanation_2.png" />
+			</div>
+			<div class="col-10 col-off-1">
+				3 children from Group B leave the group.<br><br>
+				The number of children in Group B decreases by 3.<br><br>
+				Percentage decrease	 &nbsp;=&nbsp;  {{frGen(3,10)}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 30%<br><br>
+				There are now 30% fewer children in Group B than before.<br><br>
+				<img src="/images/notes/percentage_increase_decrease_explanation_3.png" />
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 1 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 1: Lisa's salary was raised from $4000 to $4800 per month. What was the percentage increase in her monthly salary?<br /><br />
+				<img src="/images/notes/percentage_increase_decrease_word_problem_11.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Percentage increase	 &nbsp;=&nbsp; 	{{frGen("$800","$4000")}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 	20%<br><br>
+				The percentage increase in her monthly salary was 20%.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 2 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 2: The price of a chair was reduced from $270 to $189 in a sale. Find the percentage discount on the chair.<br /><br />
+				<img src="/images/notes/percentage_increase_decrease_word_problem_21.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				Decrease in price &nbsp;=&nbsp;  $270 &nbsp;&minus;&nbsp; $189<br><br>
+ 	 			= &nbsp; $81<br><br>
+				Percentage decrease	 &nbsp;=&nbsp; 	{{frGen("$81","$270")}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 30%<br><br>
+				The percentage discount on the chair was 30%.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 3 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 3: Joey had a leaky water bottle that leaked 15 ml of water every 10 minutes. What was the percentage decrease in the water in the bottle 1 hour after the bottle was filled up to 450 ml?<br /><br />
+				<img src="/images/notes/percentage_increase_decrease_word_problem_31.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				10 minutes &nbsp;&#8594;&nbsp; 15 ml<br><br>
+				1 minute &nbsp;&#8594;&nbsp; {{frGen(15,10)}} ml<br><br>
+				60 minutes &nbsp;&#8594;&nbsp; {{frGen(15,10)}} ml &nbsp;&times;&nbsp; 60<br><br>
+				= &nbsp; 90 ml<br><br>
+				After 1 hour 90 ml of water had leaked from the bottle.<br><br>
+				Percentage decrease	 &nbsp;=&nbsp; 	{{frGen(90,450)}} &nbsp;&times;&nbsp; 100%<br><br>
+				= &nbsp; 20%<br><br>
+				The percentage decrease in the water after 1 hour was 20%.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 4 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 4: Due to some roadworks on the usual route from home to school, Peggy has to take another route to school which is 7% longer. This increase in distance is 126 m. What is the length of the new route?<br /><br />
+				<img src="/images/notes/percentage_increase_decrease_word_problem_41.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				7%	&nbsp;&#8594;&nbsp; 126	m<br><br>
+				1% &nbsp;&#8594;&nbsp; {{frGen(126,7)}} m<br><br>
+				= &nbsp; 18 m<br><br>
+				107% &nbsp;&#8594;&nbsp; 18 m &nbsp;&times;&nbsp; 107<br><br>
+ 				= &nbsp; 1926 m<br><br>
+				The length of the new route is 1926 m.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<!-- Problem 5 -->
+<div class="learn-set">
+	<div class="learn-set__container">
+		<div class="learn-set__question">
+			<h4>
+				Word Problem 5: Sue bought a piece of cloth 140 cm long. After washing it, the cloth shrank by 4% along its length. What is the length of the cloth now?<br /><br />
+				<img src="/images/notes/percentage_increase_decrease_word_problem_51.png" />
+			</h4>
+		</div>
+		<div class="learn-set__answer">
+			<div class="col-10 col-off-1">
+				100% &nbsp;&minus;&nbsp; 4%	 &nbsp;=&nbsp; 	96%<br><br>
+				96% of 140 cm &nbsp;=&nbsp; {{frGen(96,100)}} &nbsp;&times;&nbsp; 140 cm<br><br>
+				= 134.4 cm<br><br>
+				The length of the cloth is 134.4 cm now.
+			</div>
+		</div>
+	<div style="text-align: center;padding:10px;"><a class="btn-primary btn-embossed btn-block-xs" style="background-color:#D7120F;" href="/Grade_6_Math_Practice/Percentage_Increase_Decrease">Practice Unlimited Questions</a></div>
+	</div>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the formula for percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Percentage increase =  (amount increased / initial quantity)  ×  100%"}},{"@type":"Question","name":"What is the formula for percentage decrease?","acceptedAnswer":{"@type":"Answer","text":"Percentage decrease =  (amount decreased / initial quantity)  ×  100%"}}]}</script>
+
+{% endblock %}
