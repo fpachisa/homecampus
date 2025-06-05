@@ -11,6 +11,6 @@ def redirect_page():
     browse the site without being forwarded to ``homecampus.com.sg``.
     """
     if current_app.debug:
-        return render_template('MainPage.html')
+        return render_template('HomePage.html')
     return render_template('RedirectPage.html', section='content')
 
