@@ -1,45 +1,81 @@
 # HomeCampus
 
-HomeCampus is an educational platform. (Further details about its specific functionality will be added as more information is gathered).
+HomeCampus is an online school of mathematics that allows students to learn, practice and track their progress. The code in this repository powers the web portal where parents and teachers can manage accounts, generate worksheets and monitor results.
+
+## Table of Contents
+- [Project Status](#project-status)
+- [Features](#features)
+- [Directory Overview](#directory-overview)
+- [Setup](#setup)
+- [Running the Application](#running-the-application)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Project Status
 
-This project is currently undergoing a migration from Python 2 (using the Tipfy framework and older Google App Engine APIs) to Python 3 (using Flask and newer Google Cloud services like Cloud NDB and Cloud Storage).
+The platform was originally built for Python 2 on Google App Engine using the Tipfy framework. Work is underway to migrate the application to Python 3 with Flask and newer Google Cloud services (Cloud NDB, Cloud Storage, etc.). Many modules still contain legacy Python 2 code and may not run under a pure Python 3 environment.
 
-## Key Technologies
+## Features
 
-- Python 3
-- Flask (web framework, replacing Tipfy)
-- Jinja2 (template engine)
-- Werkzeug (WSGI utilities)
-- Google Cloud NDB (database models, replacing `google.appengine.ext.db`)
-- Google Cloud Storage (file storage, replacing `cloudstorage`)
-- WTForms (forms handling)
+- **Structured syllabus** with notes and video tutorials across multiple grade levels.
+- **Practice exercises** that are automatically graded.
+- **Worksheet generation** for offline practice and homework.
+- **Progress reports** for parents and teachers to monitor strengths and weaknesses.
+- **Account management** for both parents and teachers to manage child profiles.
 
-## Setup and Installation
+## Directory Overview
 
-(Specific setup instructions will be added here as the migration progresses.)
+```
+src/
+├── app.yaml               # Google App Engine configuration (currently python27)
+├── Database/              # Datastore models and utilities
+├── templates/             # Jinja2 HTML templates
+├── Grade7/                # Grade specific handlers and content
+├── ...                    # Additional handlers for learning, practice and reports
+```
 
-### Dependencies
+See `src/PYTHON3_DEPENDENCY_ANALYSIS.md` for details on libraries and the migration plan.
 
-Key Python dependencies are listed in `src/PYTHON3_DEPENDENCY_ANALYSIS.md`.
-(Instructions for installing dependencies, e.g., using `pip install -r requirements.txt`, will be added once `requirements.txt` is finalized.)
+## Setup
 
-## Running the Project
+1. **Clone the repository**
 
-(Specific instructions for running the project, including local development server commands, will be added here as the migration progresses.)
+   ```bash
+   git clone https://github.com/yourusername/homecampus.git
+   cd homecampus
+   ```
+
+2. **Create a Python 3 virtual environment**
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies**
+
+   A final `requirements.txt` file has not yet been published. You can install the core libraries listed in `src/PYTHON3_DEPENDENCY_ANALYSIS.md`:
+
+   ```bash
+   pip install Flask Flask-WTF Jinja2 Werkzeug google-cloud-ndb google-cloud-storage wtforms
+   ```
+
+## Running the Application
+
+Until all modules are ported to Python 3, the legacy Python 2 code can be run using the Google App Engine SDK:
+
+```bash
+dev_appserver.py src/app.yaml
+```
+
+As the migration progresses a Flask development server will replace the App Engine runtime for local testing.
 
 ## Contributing
 
-We welcome contributions to HomeCampus! If you'd like to contribute, please follow these general guidelines:
-
-1. **Fork the repository:** Start by forking the main HomeCampus repository to your own GitHub account.
-2. **Create a new branch:** For each new feature or bug fix, create a new branch in your forked repository. This helps keep your changes organized. Use a descriptive branch name (e.g., `feature/new-login-system` or `fix/issue-123`).
-3. **Make your changes:** Implement your feature or fix the bug in your branch.
-4. **Write clear commit messages:** Commit your changes with clear and concise messages that explain the purpose of the commit.
-5. **Add tests (recommended):** If you're adding a new feature or fixing a bug, consider adding unit tests or integration tests to ensure your changes work as expected and to prevent regressions.
-6. **Submit a pull request:** Once your changes are complete and tested, submit a pull request from your branch to the main HomeCampus repository. Provide a clear description of your changes in the pull request.
+1. **Fork the repository** and create a new branch for each change.
+2. **Make your edits** and commit with clear messages.
+3. **Open a pull request** describing your contribution. Adding tests is encouraged.
 
 ## License
 
-Please specify the project license here. For example, MIT License, Apache License 2.0, etc.
+Specify the project license here (e.g. MIT, Apache 2.0).
