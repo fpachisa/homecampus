@@ -90,6 +90,138 @@ Primary3 = {
                 "2-Step Word Problems Involving the Four Operations (&plus;, &minus;, &times; and &divide;)", "P3WN", 11
             ],
         #----- END of CH - 1 -----#
+
+        # Chapter - 2 MONEY
+        "Addition-of-Money": [
+                "/Money/Addition_Of_Money.html", "/Money_Addition", "/Money_Addition", "",
+                "Addition of Money", "P3MO", 1
+            ],
+        "Subtraction-of-Money": [
+                "/Money/Subtraction_Of_Money.html", "/Money_Subtraction", "/Money_Subtraction", "",
+                "Subtraction of Money", "P3MO", 2
+            ],
+        "Money-Word-Problems": [
+                "/Money/Money_Word_Problems.html", "/Money_Word_Problems", "/Money_Word_Problems", "",
+                "Money Word Problems", "P3MO", 3
+            ],
+
+        # Chapter - 3 TIME
+        "Telling-Time": [
+                "/Time/Telling_Time.html", "/Telling_Time", "/Telling_Time", "",
+                "Telling Time", "P3TI", 1
+            ],
+        "Time-Conversion-Hours-Minutes": [
+                "/Time/Hours_and_Minutes.html", "/Time_Conversion_Hours_Minutes", "/Time_Conversion_Hours_Minutes", "",
+                "Hours and Minutes", "P3TI", 2
+            ],
+        "Time-Addition": [
+                "/Time/Time_Addition.html", "/Time_Addition", "/Time_Addition", "",
+                "Addition of Time", "P3TI", 3
+            ],
+        "Time-Subtraction": [
+                "/Time/Time_Subtraction.html", "/Time_Subtraction", "/Time_Subtraction", "",
+                "Subtraction of Time", "P3TI", 4
+            ],
+        "Time-Finding-Duration-Start-Finish": [
+                "/Time/Time_Duration.html", "/Time_Duration", "/Time_Duration", "",
+                "Duration, Start and Finish Times", "P3TI", 5
+            ],
+        "Time-Problem-Sums": [
+                "/Time/Time_Word_Problems.html", "/Time_Word_Problems", "/Time_Word_Problems", "",
+                "Time Word Problems", "P3TI", 6
+            ],
+
+        # Chapter - 4 LENGTH, MASS AND VOLUME
+        "Metres-Centimetres": [
+                "/LengthMassVolume/Metres_Centimetres.html", "/Metres_Centimetres", "/Metres_Centimetres", "",
+                "Metres and Centimetres", "P3LMV", 1
+            ],
+        "KiloMetres-Metres": [
+                "/LengthMassVolume/KiloMetres_Metres.html", "/Kilometres_Metres", "/Kilometres_Metres", "",
+                "Kilometres and Metres", "P3LMV", 2
+            ],
+        "Kilograms-Grams": [
+                "/LengthMassVolume/Kilograms_Grams.html", "/Kilograms_Grams", "/Kilograms_Grams", "",
+                "Kilograms and Grams", "P3LMV", 3
+            ],
+        "Litres-Millilitres": [
+                "/LengthMassVolume/Litres_Millilitres.html", "/Litres_Millilitres", "/Litres_Millilitres", "",
+                "Litres and Millilitres", "P3LMV", 4
+            ],
+        "Length-Mass-Volume-1-Step-Story-Sums": [
+                "/LengthMassVolume/1_Step_Story_Sums.html", "/Length_Mass_Volume_1-Step_Word_Problems", "/Length_Mass_Volume_1-Step_Word_Problems", "",
+                "1-Step Word Problems", "P3LMV", 5
+            ],
+        "Length-Mass-Volume-2-Step-Story-Sums": [
+                "/LengthMassVolume/2_Step_Story_Sums.html", "/Length_Mass_Volume_2-Step_Word_Problems", "/Length_Mass_Volume_2-Step_Word_Problems", "",
+                "2-Step Word Problems", "P3LMV", 6
+            ],
+
+        # Chapter - 5 FRACTIONS
+        "Equivalent-Fractions": [
+                "/Fractions/Equivalent_Fractions.html", "/Equivalent-Fraction", "/Equivalent-Fraction", "",
+                "Equivalent Fractions", "P3FR", 2
+            ],
+        "Simplifying-Fractions": [
+                "/Fractions/Simplifying_Fractions.html", "/Simplifying-Fractions", "/Simplifying-Fractions", "",
+                "How to Simplify Fractions?", "P3FR", 3
+            ],
+        "Comparing-and-Ordering-Fractions": [
+                "/Fractions/Comparing_Ordering_Fractions.html", "/Comparing-and-Ordering-Fractions", "/Comparing-and-Ordering-Fractions", "",
+                "Comparing and Ordering Fractions", "P3FR", 4
+            ],
+        "Adding-Fractions": [
+                "/Fractions/Addition_Fractions.html", "/Adding-Fractions", "/Adding-Fractions", "",
+                "How to Add Fractions?", "P3FR", 5
+            ],
+        "Subtracting-Fractions": [
+                "/Fractions/Subtracting_Fractions.html", "/Subtracting-Fractions", "/Subtracting-Fractions", "",
+                "How to Subtract Fractions?", "P3FR", 6
+            ],
+
+        # Chapter - 6 AREA AND PERIMETER
+        "Area-in-Square-Units": [
+                "/AreaPerimeter/Area_Square_Units.html", "/Area_in_Square_Units", "/Area_in_Square_Units", "",
+                "Area in Square Units", "P3AP", 1
+            ],
+        "Area-in-Square-Centimetres-Square-Metres": [
+                "/AreaPerimeter/Area_Square_CM_Square_M.html", "/Area_in_Square_cm_Square_m", "/Area_in_Square_cm_Square_m", "",
+                "Area in Square cm and Square m", "P3AP", 2
+            ],
+        "Area-of-Squares-and-Rectangles": [
+                "/AreaPerimeter/Area_Square_Rectangle.html", "/Area_of_Squares_Rectangles", "/Area_of_Squares_Rectangles", "",
+                "Area of Squares and Rectangles", "P3AP", 3
+            ],
+        "Perimeter-of-Squares-and-Rectangles": [
+                "/AreaPerimeter/Perimeter_Square_Rectangle.html", "/Perimeter_of_Squares_Rectangles", "/Perimeter_of_Squares_Rectangles", "",
+                "Perimeter of Squares and Rectangles", "P3AP", 4
+            ],
+        "Area-Perimeter-Problem-Sums": [
+                "/AreaPerimeter/Area_Perimeter_Word_Problems.html", "/Area_Perimeter_Word_Problems", "/Area_Perimeter_Word_Problems", "",
+                "Area and Perimeter Word Problems", "P3AP", 5
+            ],
+
+        # Chapter - 7 ANGLES
+        "Identifying-Angles-in-Figures": [
+                "/Angles/Identifying_Angles.html", "/Identifying_Angles_in_Figures", "/Identifying_Angles_in_Figures", "",
+                "Identifying Angles in a Figure", "P3AN", 1
+            ],
+        "Right-Angles": [
+                "/Angles/Right_Angles.html", "/Right_Angles", "/Right_Angles", "",
+                "Right Angles", "P3AN", 2
+            ],
+
+        # Chapter - 8 BAR GRAPHS
+        "Bar-Graphs": [
+                "/BarGraphs/Bar_Graphs.html", "/Bar_Graphs", "/Bar_Graphs", "",
+                "Reading and Interpreting Bar Graphs", "P3BG", 1
+            ],
+
+        # Chapter - 9 PERPENDICULAR & PARALLEL LINES
+        "Identifying-Perpendicular-Parallel-Lines": [
+                "/PerpendicularParallel/Perpendicular_Parallel.html", "/Identifying_Perpendicular_Parallel_Lines", "/Identifying_Perpendicular_Parallel_Lines", "",
+                "Perpendicular and Parallel Lines", "P3PP", 1
+            ],
         
         
     }
@@ -123,7 +255,51 @@ LinkMap_P3 = [
            ("Addition", "/Learn/Primary-Grade-3/Time-Subtraction"), ("Subtraction", "/Learn/Primary-Grade-3/Time-Subtraction"),
            ("Duration, Start and Finish Times", "/Learn/Primary-Grade-3/Time-Subtraction"), ("Word Problems", "/Learn/Primary-Grade-3/Time-Subtraction")
           ]
-          )
+         ),
+        ( "P3LMV", "Length, Mass and Volume",
+          [
+           ("Metres and Centimetres", "/Learn/Primary-Grade-3/Metres-Centimetres"),
+           ("Kilometres and Metres", "/Learn/Primary-Grade-3/KiloMetres-Metres"),
+           ("Kilograms and Grams", "/Learn/Primary-Grade-3/Kilograms-Grams"),
+           ("Litres and Millilitres", "/Learn/Primary-Grade-3/Litres-Millilitres"),
+           ("1-Step Word Problems", "/Learn/Primary-Grade-3/Length-Mass-Volume-1-Step-Story-Sums"),
+           ("2-Step Word Problems", "/Learn/Primary-Grade-3/Length-Mass-Volume-2-Step-Story-Sums")
+          ]
+        ),
+        ( "P3FR", "Fractions",
+          [
+           ("Equivalent Fractions", "/Learn/Primary-Grade-3/Equivalent-Fractions"),
+           ("Simplifying Fractions", "/Learn/Primary-Grade-3/Simplifying-Fractions"),
+           ("Comparing and Ordering", "/Learn/Primary-Grade-3/Comparing-and-Ordering-Fractions"),
+           ("Addition", "/Learn/Primary-Grade-3/Adding-Fractions"),
+           ("Subtraction", "/Learn/Primary-Grade-3/Subtracting-Fractions")
+          ]
+        ),
+        ( "P3AP", "Area and Perimeter",
+          [
+           ("Square Units", "/Learn/Primary-Grade-3/Area-in-Square-Units"),
+           ("Square cm and Square m", "/Learn/Primary-Grade-3/Area-in-Square-Centimetres-Square-Metres"),
+           ("Area of Squares and Rectangles", "/Learn/Primary-Grade-3/Area-of-Squares-and-Rectangles"),
+           ("Perimeter of Squares and Rectangles", "/Learn/Primary-Grade-3/Perimeter-of-Squares-and-Rectangles"),
+           ("Word Problems", "/Learn/Primary-Grade-3/Area-Perimeter-Problem-Sums")
+          ]
+        ),
+        ( "P3AN", "Angles",
+          [
+           ("Identifying Angle", "/Learn/Primary-Grade-3/Identifying-Angles-in-Figures"),
+           ("Right Angles", "/Learn/Primary-Grade-3/Right-Angles")
+          ]
+        ),
+        ( "P3BG", "Bar Graphs",
+          [
+           ("Reading and Interpreting Bar Graphs", "/Learn/Primary-Grade-3/Bar-Graphs")
+          ]
+        ),
+        ( "P3PP", "Perpendicular & Parallel Lines",
+          [
+           ("Indentifying Perpendicular Lines", "/Learn/Primary-Grade-3/Identifying-Perpendicular-Parallel-Lines")
+          ]
+        )
     ]
 # End of Link Mapping for Sidebar PRIMARY - 3
 #---------------------------------
@@ -149,6 +325,4 @@ class Grade3Mapper:
             'selfAtPosition': data[6]
         }        
         return data[0], obj #data[0] is filename
-        
-    
-    
+
