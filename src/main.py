@@ -3,6 +3,8 @@ from flask_session import Session
 from auth_routes import auth_bp, login_manager
 from redirect_routes import redirect_bp
 from contact_routes import contact_bp
+from static_routes import static_bp
+
 
 
 def create_app():
@@ -16,6 +18,8 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(redirect_bp)
     app.register_blueprint(contact_bp)
+    app.register_blueprint(static_bp)
+
     return app
 
 
