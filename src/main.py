@@ -6,6 +6,7 @@ from contact_routes import contact_bp
 from static_routes import static_bp
 
 
+
 def create_app():
     app = Flask(__name__, template_folder='templates')
     app.secret_key = 'HOMECAMPUS25'
@@ -18,6 +19,7 @@ def create_app():
     app.register_blueprint(redirect_bp)
     app.register_blueprint(contact_bp)
     app.register_blueprint(static_bp)
+
     return app
 
 
