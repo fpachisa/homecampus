@@ -5,8 +5,6 @@ from redirect_routes import redirect_bp
 from contact_routes import contact_bp
 from static_routes import static_bp
 
-
-
 def create_app():
     app = Flask(__name__, template_folder='templates')
     app.secret_key = 'HOMECAMPUS25'
