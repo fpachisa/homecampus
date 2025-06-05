@@ -7,6 +7,7 @@ from static_routes import static_bp
 from grade_routes import grade_bp
 from learn_routes import learn_bp
 
+
 def create_app():
     app = Flask(__name__, template_folder='templates')
     app.secret_key = 'HOMECAMPUS25'
@@ -21,6 +22,7 @@ def create_app():
     app.register_blueprint(static_bp)
     app.register_blueprint(grade_bp)
     app.register_blueprint(learn_bp)
+
 
     return app
 
