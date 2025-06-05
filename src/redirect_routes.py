@@ -13,3 +13,4 @@ def redirect_page():
     if current_app.debug:
         return render_template('MainPage.html')
     return render_template('RedirectPage.html', section='content')
+
